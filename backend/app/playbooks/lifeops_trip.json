@@ -1,0 +1,44 @@
+{
+  "id": "lifeops_trip",
+  "name": "LifeOps · Trip Planner & Watch",
+  "ecosystem": "A",
+  "lens": "go",
+  "description": "Plan a multi-day trip under a budget: flights + hotels + local context, then watch prices and re-plan when they move.",
+  "keywords": ["trip", "travel", "flight", "flights", "hotel", "vacation", "itinerary", "days", "fly", "visit", "holiday", "weekend", "getaway"],
+  "examples": ["Plan a 4-day Tokyo trip under $1,200, flights + hotel", "Weekend in Paris from New York under $900"],
+  "slots": {
+    "origin": {"type": "city", "default": "New York"},
+    "destination": {"type": "city", "default": "Tokyo"},
+    "days": {"type": "int", "default": 4},
+    "budget": {"type": "money", "default": 1200},
+    "adults": {"type": "int", "default": 1},
+    "lead_days": {"type": "int", "default": 30}
+  },
+  "engines": [
+    {"engine": "google_flights", "category": "flight", "purpose": "Round-trip fares (best + other flights, price insights)",
+     "params": {"departure_id": "{origin_iata}", "arrival_id": "{destination_iata}", "outbound_date": "{outbound_date}", "return_date": "{return_date}", "currency": "USD", "hl": "en", "adults": "{adults}", "type": "1"}},
+    {"engine": "google_flights", "category": "flight", "purpose": "Same route sorted by price (independent corroboration pass)",
+     "params": {"departure_id": "{origin_iata}", "arrival_id": "{destination_iata}", "outbound_date": "{outbound_date}", "return_date": "{return_date}", "currency": "USD", "hl": "en", "adults": "{adults}", "type": "1", "sort_by": "2"}},
+    {"engine": "google_hotels", "category": "hotel", "purpose": "Hotel rates for the stay window",
+     "params": {"q": "{destination} hotels", "check_in_date": "{outbound_date}", "check_out_date": "{return_date}", "adults": "{adults}", "currency": "USD", "gl": "us", "hl": "en", "sort_by": "8"}},
+    {"engine": "google_maps", "category": "place", "purpose": "Map-verified hotel reputation (cross-source rating check)",
+     "params": {"q": "hotels in {destination}", "type": "search", "hl": "en"}},
+    {"engine": "google_finance", "category": "fx", "purpose": "Live FX rate for local spend estimate", "essential": false,
+     "params": {"q": "USD-{currency_code}", "hl": "en"}}
+  ],
+  "fallback_engines": [
+    {"engine": "google_flights", "category": "flight", "purpose": "Re-plan: flexible dates (+2 days) to escape a price spike",
+     "params": {"departure_id": "{origin_iata}", "arrival_id": "{destination_iata}", "outbound_date": "{outbound_date_flex}", "return_date": "{return_date_flex}", "currency": "USD", "hl": "en", "adults": "{adults}", "type": "1"}},
+    {"engine": "google_hotels", "category": "hotel", "purpose": "Re-plan: wider hotel search, lowest price first",
+     "params": {"q": "{destination} budget hotels", "check_in_date": "{outbound_date}", "check_out_date": "{return_date}", "adults": "{adults}", "currency": "USD", "gl": "us", "hl": "en", "sort_by": "3"}}
+  ],
+  "dimensions": {
+    "price": {"weight": 0.42, "direction": "min", "label": "Total price"},
+    "time": {"weight": 0.18, "direction": "min", "label": "Travel time"},
+    "reputation": {"weight": 0.22, "direction": "max", "label": "Hotel reputation"},
+    "risk": {"weight": 0.12, "direction": "min", "label": "Risk (stops / anomalies)"},
+    "compliance": {"weight": 0.06, "direction": "max", "label": "Within budget"}
+  },
+  "bundle": true,
+  "actions": ["booking_flow", "calendar_invite", "document", "watch", "notify"]
+}

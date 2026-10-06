@@ -1,0 +1,28 @@
+{
+  "id": "pro_supplier",
+  "name": "Pro · Supplier Sourcing & RFQ",
+  "ecosystem": "A",
+  "lens": "pro",
+  "description": "Source and compare bulk suppliers on unit price, MOQ and reputation across marketplaces; draft an RFQ for approval.",
+  "keywords": ["supplier", "suppliers", "bulk", "wholesale", "moq", "source", "sourcing", "procurement", "vendor", "vendors", "rfq", "manufacturer", "units", "oem"],
+  "examples": ["Source 3 reliable suppliers for bulk Bluetooth earbuds, compare price/MOQ/reviews"],
+  "slots": {"product": {"type": "text", "default": "Bluetooth earbuds"}, "count": {"type": "int", "default": 3}, "quantity": {"type": "int", "default": 500}},
+  "engines": [
+    {"engine": "google", "category": "supplier", "purpose": "Wholesale / manufacturer discovery", "params": {"q": "{product} wholesale supplier bulk MOQ", "gl": "us", "hl": "en", "num": "10"}},
+    {"engine": "google_shopping", "category": "product", "purpose": "Bulk/lot offers & price anchors", "params": {"q": "{product} bulk lot wholesale", "gl": "us", "hl": "en"}},
+    {"engine": "amazon", "category": "product", "purpose": "Amazon Business price anchors", "params": {"k": "{product} bulk pack", "amazon_domain": "amazon.com"}},
+    {"engine": "ebay", "category": "product", "purpose": "Wholesale lots on eBay", "params": {"_nkw": "{product} wholesale lot", "ebay_domain": "ebay.com"}},
+    {"engine": "google_news", "category": "news", "purpose": "Supplier risk signals (recalls, disputes)", "essential": false, "params": {"q": "{product} supplier recall OR lawsuit", "gl": "us", "hl": "en"}}
+  ],
+  "fallback_engines": [
+    {"engine": "google", "category": "supplier", "purpose": "Re-plan: OEM / factory direct", "params": {"q": "{product} OEM factory manufacturer", "gl": "us", "hl": "en", "num": "10"}}
+  ],
+  "dimensions": {
+    "price": {"weight": 0.35, "direction": "min", "label": "Unit price"},
+    "moq": {"weight": 0.15, "direction": "min", "label": "MOQ"},
+    "reputation": {"weight": 0.30, "direction": "max", "label": "Reviews / reputation"},
+    "risk": {"weight": 0.15, "direction": "min", "label": "Risk signals"},
+    "compliance": {"weight": 0.05, "direction": "max", "label": "Verified (≥2 sources)"}
+  },
+  "actions": ["email_rfq", "document", "watch", "notify"]
+}

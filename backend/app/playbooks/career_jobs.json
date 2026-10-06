@@ -1,0 +1,25 @@
+{
+  "id": "career_jobs",
+  "name": "Career Grid · Job Match",
+  "ecosystem": "B",
+  "lens": "go",
+  "description": "Find and rank job openings, enrich with hiring signals from news and skill demand from Trends; prep an application.",
+  "keywords": ["job", "jobs", "hiring", "career", "role", "position", "engineer", "developer", "remote", "apply", "salary", "recruiter", "candidates"],
+  "examples": ["Remote senior React developer jobs", "Data scientist jobs in Berlin"],
+  "slots": {"role": {"type": "text", "default": "Senior React Developer"}, "location": {"type": "text", "default": "United States"}},
+  "engines": [
+    {"engine": "google_jobs", "category": "job", "purpose": "Live job postings", "params": {"q": "{role}", "location": "{location}", "hl": "en"}},
+    {"engine": "google_news", "category": "news", "purpose": "Hiring & funding signals", "essential": false, "params": {"q": "{role} hiring funding", "gl": "us", "hl": "en"}},
+    {"engine": "google_trends", "category": "trend", "purpose": "Skill demand trend", "essential": false, "params": {"q": "{role_keyword}", "data_type": "TIMESERIES", "date": "today 12-m"}}
+  ],
+  "fallback_engines": [
+    {"engine": "google_jobs", "category": "job", "purpose": "Re-plan: remote roles", "params": {"q": "{role} remote", "hl": "en", "ltype": "1"}}
+  ],
+  "dimensions": {
+    "salary": {"weight": 0.30, "direction": "max", "label": "Salary"},
+    "freshness": {"weight": 0.25, "direction": "max", "label": "Freshness"},
+    "fit": {"weight": 0.30, "direction": "max", "label": "Role fit"},
+    "risk": {"weight": 0.15, "direction": "min", "label": "Risk"}
+  },
+  "actions": ["application", "document", "calendar_invite", "notify"]
+}

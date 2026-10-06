@@ -1,0 +1,26 @@
+{
+  "id": "lifeops_deals",
+  "name": "LifeOps · Deal Hunter",
+  "ecosystem": "A",
+  "lens": "go",
+  "description": "Find the best verified price for a product across Google Shopping, Amazon, Walmart and eBay; watch for drops.",
+  "keywords": ["buy", "cheapest", "deal", "deals", "price", "product", "best", "headphones", "laptop", "shopping", "discount", "under", "order"],
+  "examples": ["Find the best deal on Sony WH-1000XM5 headphones", "Cheapest 27 inch 4K monitor with good reviews"],
+  "slots": {"product": {"type": "text", "default": "Sony WH-1000XM5"}, "budget": {"type": "money", "default": null}},
+  "engines": [
+    {"engine": "google_shopping", "category": "product", "purpose": "Merchant offers across the web", "params": {"q": "{product}", "gl": "us", "hl": "en"}},
+    {"engine": "amazon", "category": "product", "purpose": "Amazon listings", "params": {"k": "{product}", "amazon_domain": "amazon.com"}},
+    {"engine": "walmart", "category": "product", "purpose": "Walmart listings", "params": {"query": "{product}"}},
+    {"engine": "ebay", "category": "product", "purpose": "eBay listings (new + used)", "essential": false, "params": {"_nkw": "{product}", "ebay_domain": "ebay.com"}}
+  ],
+  "fallback_engines": [
+    {"engine": "google_shopping_light", "category": "product", "purpose": "Re-plan: broader shopping sweep", "params": {"q": "{product} best price", "gl": "us", "hl": "en"}}
+  ],
+  "dimensions": {
+    "price": {"weight": 0.45, "direction": "min", "label": "Price"},
+    "reputation": {"weight": 0.30, "direction": "max", "label": "Rating × reviews"},
+    "risk": {"weight": 0.20, "direction": "min", "label": "Risk (unverified / anomaly)"},
+    "compliance": {"weight": 0.05, "direction": "max", "label": "Within budget"}
+  },
+  "actions": ["booking_flow", "watch", "document", "notify"]
+}
