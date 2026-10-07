@@ -166,6 +166,30 @@ class Store:
         rows = [r for r in self.tables[table].values() if all(r.get(k) == v for k, v in eq.items())]
         return sorted(rows, key=lambda r: -float(r.get("created_at") or 0))[:limit]
 
+    # ------------------------------------------------- playbooks (pgvector)
+    async def sync_playbooks(self, playbooks: dict[str, dict], vecs: dict[str, list[float]]) -> bool:
+        """Upsert the Playbook library + embeddings into Supabase so intent
+        classification can run as a pgvector similarity query."""
+        if not self.s.has_supabase:
+            return False
+        try:
+            rows = [{"id": pid, "name": pb["name"], "lens": pb.get("lens"), "spec": pb, "embedding": vecs.get(pid)}
+                    for pid, pb in playbooks.items()]
+            await self._sb("POST", "playbooks", json=rows, prefer="resolution=merge-duplicates,return=minimal")
+            return True
+        except Exception:
+            return False
+
+    async def match_playbooks(self, qvec: list[float], k: int = 10) -> dict[str, float] | None:
+        """RPC public.match_playbooks -> {playbook_id: cosine similarity}."""
+        if not self.s.has_supabase:
+            return None
+        try:
+            rows = await self._sb("POST", "rpc/match_playbooks", json={"query_embedding": qvec, "match_count": k})
+            return {r["id"]: float(r["similarity"]) for r in rows or []} or None
+        except Exception:
+            return None
+
     # -------------------------------------------------------- price history
     async def record_price(self, key: str, price: float) -> None:
         self.price_history[key].append((time.time(), price))

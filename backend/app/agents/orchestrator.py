@@ -14,10 +14,13 @@ from typing import Any
 from ..models import DecisionGraph, DecisionNode, EngineCall
 from ..playbooks import PLAYBOOKS, playbook_text
 from ..services.events import bus
-from ..services.geo import lookup
+from ..services.geo import resolve
 from ..services.llm import embedder, llm
+from ..services.serpapi import CreditMeter
+from ..services.store import store
 
 _PB_VECS: dict[str, list[float]] = {}
+_PB_SYNCED = {"ok": False}
 
 
 async def _pb_vectors() -> dict[str, list[float]]:
@@ -25,6 +28,8 @@ async def _pb_vectors() -> dict[str, list[float]]:
         ids = list(PLAYBOOKS)
         vecs = await embedder.embed([playbook_text(PLAYBOOKS[i]) for i in ids])
         _PB_VECS.update(dict(zip(ids, vecs)))
+    if not _PB_SYNCED["ok"] and store.backend == "supabase-pgvector":
+        _PB_SYNCED["ok"] = await store.sync_playbooks(PLAYBOOKS, _PB_VECS)
     return _PB_VECS
 
 
@@ -33,15 +38,17 @@ async def classify(prompt: str, lens: str, forced: str | None = None) -> tuple[s
         return forced, [{"id": forced, "score": 1.0, "name": PLAYBOOKS[forced]["name"]}]
     qv = (await embedder.embed([prompt], task="RETRIEVAL_QUERY"))[0]
     vecs = await _pb_vectors()
+    # Supabase pgvector similarity (match_playbooks RPC) when available, else in-process cosine
+    remote = await store.match_playbooks(qv, k=len(PLAYBOOKS)) if _PB_SYNCED["ok"] else None
     pl = prompt.lower()
     words = set(re.findall(r"[a-z0-9]+", pl))
     scores = []
     for pid, pb in PLAYBOOKS.items():
-        cos = sum(a * b for a, b in zip(qv, vecs[pid]))
+        cos = remote[pid] if remote and pid in remote else sum(a * b for a, b in zip(qv, vecs[pid]))
         kw = sum(1 for k in pb["keywords"] if (k in words if " " not in k else k in pl))
         lens_bias = 0.08 if pb["lens"] == lens else 0.0
         scores.append({"id": pid, "name": pb["name"], "score": round(cos * 0.5 + min(kw, 5) * 0.16 + lens_bias, 4),
-                       "cosine": round(cos, 4), "keyword_hits": kw})
+                       "cosine": round(cos, 4), "keyword_hits": kw, "vector_backend": "pgvector" if remote else "local"})
     scores.sort(key=lambda x: -x["score"])
     return scores[0]["id"], scores
 
@@ -122,12 +129,13 @@ async def fill_slots(pid: str, prompt: str, session_id: str) -> dict[str, Any]:
     return slots
 
 
-def _derive(pid: str, slots: dict[str, Any]) -> dict[str, Any]:
+async def _derive(pid: str, slots: dict[str, Any], session_id: str = "", meter: CreditMeter | None = None) -> dict[str, Any]:
     d = dict(slots)
     today = datetime.utcnow().date()
     if pid == "lifeops_trip":
-        d["origin_iata"], _ = lookup(slots.get("origin"))
-        d["destination_iata"], d["currency_code"] = lookup(slots.get("destination"))
+        # offline table first; unknown cities resolved via SerpApi google_flights_autocomplete (live mode)
+        d["origin_iata"], _ = await resolve(slots.get("origin"), session_id, meter)
+        d["destination_iata"], d["currency_code"] = await resolve(slots.get("destination"), session_id, meter)
         days = int(slots.get("days") or 4)
         out = today + timedelta(days=int(slots.get("lead_days") or 30))
         d["outbound_date"] = out.isoformat()
@@ -162,13 +170,13 @@ def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0) -> lis
 
 
 async def plan(prompt: str, lens: str, session_id: str, forced: str | None = None,
-               priorities: dict[str, float] | None = None) -> DecisionGraph:
+               priorities: dict[str, float] | None = None, meter: CreditMeter | None = None) -> DecisionGraph:
     bus.publish(session_id, "agent.start", {"agent": "orchestrator", "label": "Classifying intent"}, agent="orchestrator")
     pid, scores = await classify(prompt, lens, forced)
     bus.publish(session_id, "orchestrator.intent", {"playbook_id": pid, "playbook": PLAYBOOKS[pid]["name"],
                                                      "scores": scores[:5]}, agent="orchestrator")
     slots = await fill_slots(pid, prompt, session_id)
-    vars_ = _derive(pid, slots)
+    vars_ = await _derive(pid, slots, session_id, meter)
     pb = PLAYBOOKS[pid]
     weights = {k: v["weight"] for k, v in pb["dimensions"].items()}
     if priorities:

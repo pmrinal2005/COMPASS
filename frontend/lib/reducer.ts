@@ -125,7 +125,7 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
         ...n,
         calls,
         callOrder: order,
-        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'request', callId: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose }].slice(-200),
+        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'request' as const, callId: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose }].slice(-200),
       }
     }
 
@@ -141,7 +141,7 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
         calls,
         callOrder: order,
         credits: d.credits ?? s.credits,
-        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'cached', callId: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose }].slice(-200),
+        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'cached' as const, callId: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose }].slice(-200),
       }
     }
 
@@ -154,7 +154,7 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
         logs: [
           ...s.logs,
           {
-            seq: e.seq, ts: e.ts, kind: 'response', callId: d.call_id, engine: d.engine, ms: d.ms, results: d.results,
+            seq: e.seq, ts: e.ts, kind: 'response' as const, callId: d.call_id, engine: d.engine, ms: d.ms, results: d.results,
             status: d.status, mode: d.mode, searchId: d.search_id, raw: d.raw,
           },
         ].slice(-200),
@@ -166,7 +166,7 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       return {
         ...n,
         calls: prev ? { ...s.calls, [d.call_id]: { ...prev, status: 'error', error: d.error } } : s.calls,
-        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'error', callId: d.call_id, engine: d.engine, error: d.error }].slice(-200),
+        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'error' as const, callId: d.call_id, engine: d.engine, error: d.error }].slice(-200),
       }
     }
 

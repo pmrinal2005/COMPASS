@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import asyncio
 import time
-from typing import Any, TypedDict
+from typing import TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
@@ -81,7 +81,8 @@ def _stage(sid: str, stage: str, extra: dict | None = None) -> None:
 async def node_plan(state: State) -> State:
     sid = state["session_id"]
     _stage(sid, "plan")
-    g = await orchestrator.plan(state["prompt"], state.get("lens", "go"), sid, state.get("forced_playbook"), state.get("priorities"))
+    g = await orchestrator.plan(state["prompt"], state.get("lens", "go"), sid, state.get("forced_playbook"), state.get("priorities"),
+                                meter=rt(sid).meter)
     return {"graph": g.model_dump(), "pending_calls": [c.model_dump() for c in g.calls], "replans": 0, "replan_history": [],
             "candidates": [], "context": {}, "call_log": []}
 

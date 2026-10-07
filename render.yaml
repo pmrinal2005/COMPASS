@@ -1,0 +1,62 @@
+# Render Blueprint — COMPASS backend (native Python buildpack, NO Dockerfile).
+# New > Blueprint > pick this repo. Secrets marked sync:false are entered in the dashboard.
+services:
+  - type: web
+    name: compass-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && (python -m playwright install chromium || echo "playwright browser install skipped")
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: /opt/render/project/src/backend/.playwright
+      - key: CRON_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGINS
+        value: "*"            # tighten to https://<your-app>.vercel.app
+      - key: SERPAPI_KEY
+        sync: false           # empty => Demo Mode (zero credits)
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: LANGFUSE_PUBLIC_KEY
+        sync: false
+      - key: LANGFUSE_SECRET_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: NOTIFY_EMAIL_TO
+        sync: false
+
+# Optional: Render native cron (Render bills cron jobs separately — not part of the free tier).
+# The $0 default scheduler is .github/workflows/watch-cron.yml. To use Render cron instead, uncomment:
+#  - type: cron
+#    name: compass-watch-tick
+#    runtime: python
+#    schedule: "*/15 * * * *"
+#    rootDir: backend
+#    buildCommand: pip install httpx==0.28.1
+#    startCommand: python -c "import os,httpx;print(httpx.post(os.environ['COMPASS_API_URL'].rstrip('/')+'/api/watch/tick',headers={'x-cron-secret':os.environ['CRON_SECRET']},timeout=120).text[:500])"
+#    envVars:
+#      - key: COMPASS_API_URL
+#        sync: false
+#      - key: CRON_SECRET
+#        sync: false

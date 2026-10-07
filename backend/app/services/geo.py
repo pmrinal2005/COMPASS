@@ -27,3 +27,38 @@ def lookup(city: str | None) -> tuple[str, str]:
         if k in c:
             return v
     return (city.strip()[:3].upper(), "USD")
+
+
+_RESOLVED: dict[str, tuple[str, str]] = {}
+
+
+async def resolve(city: str | None, session_id: str = "", meter=None) -> tuple[str, str]:
+    """Offline table first. For unknown cities in live mode, ask SerpApi's
+    Google Flights Autocomplete API (engine=google_flights_autocomplete):
+    `suggestions[].airports[].id` holds the IATA code (documented shape)."""
+    if not city:
+        return lookup(city)
+    c = city.strip().lower()
+    if c in _RESOLVED:
+        return _RESOLVED[c]
+    if c in CITIES or any(k in c for k in CITIES):
+        return lookup(city)
+    from ..config import get_settings
+    s = get_settings()
+    if s.is_demo or meter is None or meter.remaining <= 0:
+        return lookup(city)
+    import asyncio
+
+    from .serpapi import serp
+    try:
+        res = await serp.search("google_flights_autocomplete", {"q": city.strip(), "hl": "en", "gl": "us"},
+                                session_id=session_id or "geo", call_id="call_geo_" + c.replace(" ", "_")[:20],
+                                sem=asyncio.Semaphore(1), meter=meter, purpose=f"Resolve airport for '{city}'")
+        for sug in res["data"].get("suggestions", []):
+            for ap in sug.get("airports") or []:
+                if ap.get("id"):
+                    _RESOLVED[c] = (ap["id"], "USD")
+                    return _RESOLVED[c]
+    except Exception:
+        pass
+    return lookup(city)

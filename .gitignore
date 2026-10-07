@@ -1,33 +1,37 @@
-# prod
-dist/
-
-# dev
-.yarn/
-!.yarn/releases
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
-.idea/workspace.xml
-.idea/usage.statistics.xml
-.idea/shelf
-
-# deps
+# ---- Node / Next.js
 node_modules/
-.wrangler
+.next/
+out/
+*.tsbuildinfo
+.vercel
 
-# env
+# ---- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# ---- env / secrets
 .env
+.env.local
+.env.*.local
 .env.production
-.dev.vars
 
-# logs
+# ---- logs / pm2
 logs/
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pm2/
+pids/
+*.pid
 
-# misc
+# ---- misc
 .DS_Store
+.idea/
+.vscode/*
+!.vscode/launch.json
+*.tar.gz
+*.zip
+*.bak
