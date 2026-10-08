@@ -1,0 +1,1427 @@
+{
+  "search_metadata": {
+    "id": "6abff358507c172b5fab4202",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/PlGKGXpLfRnRVD6-1_jOGb3tiVD2fLcG2Aw0fZxGpig/6abff358507c172b5fab4202.json",
+    "markdown_endpoint": "https://serpapi.com/searches/PlGKGXpLfRnRVD6-1_jOGb3tiVD2fLcG2Aw0fZxGpig/6abff358507c172b5fab4202.md",
+    "created_at": "2026-10-02 18:09:28 UTC",
+    "processed_at": "2026-10-02 18:09:28 UTC",
+    "airbnb_url": "https://www.airbnb.com/s/Austin--TX/homes?currency=USD",
+    "raw_html_file": "https://serpapi.com/searches/PlGKGXpLfRnRVD6-1_jOGb3tiVD2fLcG2Aw0fZxGpig/6abff358507c172b5fab4202.html",
+    "prettify_html_file": "https://serpapi.com/searches/PlGKGXpLfRnRVD6-1_jOGb3tiVD2fLcG2Aw0fZxGpig/6abff358507c172b5fab4202.prettify",
+    "total_time_taken": 0.9
+  },
+  "search_parameters": {
+    "engine": "airbnb",
+    "q": "Austin, TX",
+    "airbnb_domain": "airbnb.com",
+    "currency": "USD"
+  },
+  "search_information": {
+    "total_results": 6036,
+    "query_displayed": "Austin, TX"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "listing_id": "23860926",
+      "title": "Home in Austin",
+      "name": "Colorful East Austin Bungalow | Patio | Walkable",
+      "description": "Walkable East Austin with a screened porch",
+      "link": "https://www.airbnb.com/rooms/23860926?check_in=2026-12-06&check_out=2026-12-11",
+      "rating": 4.95,
+      "reviews": 723,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$725",
+      "extracted_price": 725,
+      "old_price": "$997",
+      "extracted_old_price": 997,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $145.00",
+          "price": "$725.00",
+          "extracted_price": 725.0,
+          "old_price": "$997.00",
+          "extracted_old_price": 997.0
+        }
+      ],
+      "price_disclaimers": [
+        "Meshelle recently lowered the price for these dates (from the average rate for the past 60 nights)."
+      ],
+      "check_in_date": "2026-12-06",
+      "check_out_date": "2026-12-11",
+      "details": [
+        "3 bedrooms",
+        "4 beds",
+        "2 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 4,
+      "bathrooms": 2,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.2563,
+        "longitude": -97.7
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/0ca54888-c33c-48aa-8a15-8ecae6fbdf05.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/0ca54888-c33c-48aa-8a15-8ecae6fbdf05.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/b3d93fd0-6919-480b-be6f-67114995f3fa.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-23860926/original/e37ed832-a1f3-499e-ad37-78da626b0ec0.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/f9b45ea5-e773-4ed9-86df-f174bf2d7b83.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/12e45c71-dc5d-4dce-860a-a538bccc43c2.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-23860926/original/7120ce5b-ca95-4d7b-866b-538f09edbdd8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/945f3833-6dc0-468d-a7be-2948f7fe7a3a.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/ed1b747d-5c0c-4709-951e-fd32a5c25f94.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/128c5fac-0ed4-4cc4-b9ac-69ae285995db.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/a88af9b3-fa70-43eb-bcf0-255493320589.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/eaf6ede7-c0d6-4708-9767-2adfc571858b.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/a9660d75-f659-466b-967f-784020fcf485.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/da01a12c-56d8-4bc5-931b-dfe6d4e53207.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/4b807829-534a-4318-b03b-e9ede8e0ff04.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/bbe10b6e-4c22-4672-b1fe-5b3d2f9c3d04.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/45f74ad2-b1d3-4f10-8089-9d1dbf9d7d41.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/fa51a596-2fd7-4cb2-8982-59b24cb4d9cc.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/c8e8f717-e740-462f-b00c-449eafb3ff32.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/440ec5e9-79e2-4546-857b-b502c420eeaa.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/0d8777b0-bbe4-4635-95e0-6af72ba1e98b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-23860926/original/9082cfbf-40aa-42ea-979b-53df81118eae.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-23860926/original/621d70be-08ce-4b5d-ade6-e8ec788ac91f.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/bcd4a70c-5009-4e7e-91d0-fe05302e55b0.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/3b5e93de-df6d-4c71-a17e-d5a194eb05cd.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/f58a8e94-8025-4823-b107-8fa183d38dc3.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/6169ecab-235c-4100-9bb4-27577126c795.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/4ed82f51-3849-4351-a704-cf0fff88af42.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-23860926/original/c39a7dec-9b1a-49b8-8424-6607a08821bc.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-23860926/original/7407d045-9f93-43d5-b802-6b438858ad29.jpeg"
+      ]
+    },
+    {
+      "position": 2,
+      "listing_id": "1516344059006265040",
+      "title": "Home in Austin",
+      "name": "5BR Downtown Luxury Oasis: Pool, Spa & Rooftop Bar",
+      "description": "Rooftop bar and pool, 2 blocks from Rainey",
+      "link": "https://www.airbnb.com/rooms/1516344059006265040?check_in=2026-12-13&check_out=2026-12-18",
+      "rating": 4.97,
+      "reviews": 78,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$2,170",
+      "extracted_price": 2170,
+      "old_price": "$3,422",
+      "extracted_old_price": 3422,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $684.40",
+          "price": "$3,422.00",
+          "extracted_price": 3422.0
+        },
+        {
+          "description": "Early booking discount",
+          "price": "-$1,252.00",
+          "extracted_price": -1252.0
+        },
+        {
+          "description": "Price after discount",
+          "price": "$2,170.00",
+          "extracted_price": 2170.0
+        }
+      ],
+      "check_in_date": "2026-12-13",
+      "check_out_date": "2026-12-18",
+      "details": [
+        "5 bedrooms",
+        "8 beds",
+        "4.5 baths"
+      ],
+      "bedrooms": 5,
+      "beds": 8,
+      "bathrooms": 4.5,
+      "highlights": [
+        "Book early to save",
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.25496,
+        "longitude": -97.73195
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/1e02dd3a-2911-475b-8566-8288da327efa.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/1e02dd3a-2911-475b-8566-8288da327efa.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/06ed5786-c9b7-4db1-ae2c-80847b0e935a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/f9668fbe-9e38-492e-8fb9-f7d392ae4ef8.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/be4d045f-2c94-4c6e-be48-94883fe33347.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/f437317c-dcc5-41ab-904e-83fb987ed261.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/caddc22d-b76d-4ded-a6f2-db9da2bbd55c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/6fe7ff92-d956-4223-aabb-c4414b63e978.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/7985df88-309e-42af-be71-627b166288c6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/4351db21-f98c-4e5b-98fa-6e1bbe8a6732.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/604a0444-9dc3-40f0-bec4-b25d335168d8.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/38a3e0b9-b6eb-4d5c-9831-5b5515552613.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/c401797d-3f39-4716-8c3d-9db6d93b2717.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/d9cb1dce-bcf2-4793-a08a-616ff906e4ad.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/77b8202f-7bab-424a-90c3-48267c4ce8e8.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/0038715c-0af8-4985-b6fb-2b940cce375c.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/16b9c33f-106e-4a68-81b9-12716e090a58.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/692bdf44-3f5f-4823-8946-7c0ef9fa2303.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/dcbd8ff0-5e36-4cbb-b535-697491aea5e0.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/122b42ac-843f-49bd-8671-a28a4f62e275.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTUxNjM0NDA1OTAwNjI2NTA0MA==/original/d9bbd203-0101-4c4e-8204-331ad7f9aa62.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/9e68ee46-5d97-4f45-bc58-ab4f1127bceb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/7d0844bc-dc27-4eb3-8ff6-30215d2d1440.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/fd21ef69-c78e-401c-8c67-6de551d8707f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/094bdcba-6b79-4029-8268-96bfdc94ac4c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/dba70a6c-c2dc-49ca-b369-3c02d384c88d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/bae08163-ece9-4da4-85a6-0304072e63a6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/701ab258-b32c-47e8-9e9d-22d35fff1813.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/6e6f4700-dcab-4f96-96e8-d6de21bf9730.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516344059006265040/original/d3f1ade7-3cd8-4114-abdf-32437c22c291.jpeg"
+      ]
+    },
+    {
+      "position": 3,
+      "listing_id": "1516509370603548960",
+      "title": "Home in Austin",
+      "name": "Luxe Rainey DTown Oasis | Private Pool + Hot Tub",
+      "description": "Private pool and hot tub near Rainey",
+      "link": "https://www.airbnb.com/rooms/1516509370603548960?check_in=2026-11-29&check_out=2026-12-04",
+      "rating": 4.95,
+      "reviews": 63,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$1,582",
+      "extracted_price": 1582,
+      "old_price": "$2,476",
+      "extracted_old_price": 2476,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $495.20",
+          "price": "$2,476.00",
+          "extracted_price": 2476.0
+        },
+        {
+          "description": "Early booking discount",
+          "price": "-$894.00",
+          "extracted_price": -894.0
+        },
+        {
+          "description": "Price after discount",
+          "price": "$1,582.00",
+          "extracted_price": 1582.0
+        }
+      ],
+      "check_in_date": "2026-11-29",
+      "check_out_date": "2026-12-04",
+      "details": [
+        "3 bedrooms",
+        "7 beds",
+        "3.5 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 7,
+      "bathrooms": 3.5,
+      "highlights": [
+        "Book early to save",
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.25642,
+        "longitude": -97.73184
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/58fa07e9-f065-426c-a39d-aa66d133116e.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/58fa07e9-f065-426c-a39d-aa66d133116e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/fc9f5355-613e-4755-b832-31e13a4a3924.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/f7fef85f-1c00-423a-a624-d3e0088c893b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/6bbbfc5d-f404-4b9a-9610-675c7e400d13.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/23a96dc4-77fc-4816-aacc-96edd8c7b847.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/845470a0-cda2-48e2-88a3-8d32f3e41782.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/1ca13845-9211-468c-b51b-9b4962e4a011.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/f555a86e-8f1e-497c-9aa6-24e99f7434a7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/db7af3f7-dcf9-4f7b-8a2b-04987dbd2c47.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/91e68dfb-fb6d-4556-8a97-078ec9a54e0a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/569e65f4-f9d6-46b5-a9f8-9d735accd034.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/fbf514fd-92ab-47cc-bf19-950bf6a14f3d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/720d8454-c77b-4c16-be23-dd5eddb30ad1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/20e5bc20-fd93-48e3-9c7d-aec76f0e4dc6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/b322f7a3-353a-40d8-94fa-a69fb3a34ecb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/ae66b956-6dd0-4826-81f4-5f55560da61a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/a8c64114-fce4-4412-8ada-88701db5eca9.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/35dca79e-1d48-4118-ac7f-4e837e7da040.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/999ed326-b977-47bc-a7b9-6bd23de78810.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/a2d689de-ab23-4044-8653-be5ad5974465.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/74264254-bb44-4ee1-9200-f3b6675a05ad.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/73fca4c2-b203-4a8a-9344-bc70be448b25.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/b492bfd0-5e30-421b-80d5-43de29a70355.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/7a858936-6e69-4e6c-a456-5ea3ffd087b1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/4b5ce877-0874-4f63-8fa3-c05dfd736f6f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/b42fc1e3-3d95-4677-a44e-8dcb0e5722c6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/0ff37a12-a030-4b86-bde7-5035e2dd681f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/0ac1466e-1e22-4432-bef1-32b9f4af6ee1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1516509370603548960/original/a82f45cc-dacf-4cf1-82de-440a04a2c539.jpeg"
+      ]
+    },
+    {
+      "position": 4,
+      "listing_id": "592265060291319011",
+      "title": "Home in Austin",
+      "name": "Calming Space | Trendy East ATX | Walk to Coffee",
+      "description": "Fast Wi-Fi and natural light in East Austin",
+      "link": "https://www.airbnb.com/rooms/592265060291319011?check_in=2026-11-15&check_out=2026-11-20",
+      "rating": 4.92,
+      "reviews": 412,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$767",
+      "extracted_price": 767,
+      "old_price": "$855",
+      "extracted_old_price": 855,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $153.40",
+          "price": "$767.00",
+          "extracted_price": 767.0,
+          "old_price": "$854.50",
+          "extracted_old_price": 854.5
+        }
+      ],
+      "price_disclaimers": [
+        "Ryan recently lowered the price for these dates (from the average rate for the past 60 nights)."
+      ],
+      "check_in_date": "2026-11-15",
+      "check_out_date": "2026-11-20",
+      "details": [
+        "3 bedrooms",
+        "3 beds",
+        "2 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 2,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.27616,
+        "longitude": -97.71862
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/f5d95f68-d626-4c1d-af4c-298ff7cdd7f6.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/f5d95f68-d626-4c1d-af4c-298ff7cdd7f6.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/cb89784a-645d-4766-9e0a-51625017cfba.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/13b4f28e-8534-4139-b850-0199ed6dd1b6.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/efa19e7d-e741-4f55-98b2-410bb04dce17.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/81b0513e-9c8b-451a-9b10-5266144086e0.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/ce6ab156-0ab8-4c4f-9e16-7a0f989b2ba8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/20ffce84-1052-4a4f-b14a-47c10810535b.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/447ec3f3-c60b-45b9-9aca-39240c39c5ad.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/f0b3c6a1-ea06-4e75-97df-cf2592d41953.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/a8a33be1-3cfc-4099-b0b1-e3311f225882.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/fe8a19c4-3058-43b2-9464-6c02829f1f08.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/c87a70d2-0282-4ee9-9690-945a99f90b82.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/b23dd728-bcfc-4bfc-81b5-ce737d0de29c.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/2fb0f404-459f-4504-a33a-5159ed9c7daa.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/94e6aeb8-c552-4052-93f4-e75d3dfed62d.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/b34fd8d2-6ee9-4a88-90e5-183cf83b4a54.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/218ae7c9-c752-4431-9c75-ad3592647912.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/169ebb18-95d1-49f8-b1ba-3ea8dd46cf33.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/1d0883a2-9949-4093-9dbe-c575db953da8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/efb79ae7-3fc4-48d0-8780-418fdc49a9b7.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/fd288282-9cf6-412d-a3f1-c8017e69152c.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/152e2725-0d63-4017-bd38-03a7a2ce431a.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/47e5a938-397e-454e-b7da-e33675345777.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/bac8a038-e836-4d49-ab61-50a7c1657aac.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/40c42138-e856-4c49-bd63-0f53bad9fce4.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/3e3a6c50-2682-4a9f-b739-53f68ef35ab7.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/e71d803e-0190-4e9c-bad7-287b556eb83d.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/4b2a762e-9cab-458a-b258-3b63e04941eb.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-592265060291319011/original/5317a2ab-695d-42d8-b608-f68c2d15e711.jpeg"
+      ]
+    },
+    {
+      "position": 5,
+      "listing_id": "1674833575946093753",
+      "title": "Home in West Lake Hills",
+      "name": "Yaupon Valley Treehouse - West Lake Hills",
+      "description": "Limestone treehouse in the canopy",
+      "link": "https://www.airbnb.com/rooms/1674833575946093753?check_in=2027-01-09&check_out=2027-01-14",
+      "rating": 5.0,
+      "reviews": 4,
+      "price": "$1,728",
+      "extracted_price": 1728,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $345.60",
+          "price": "$1,728.00",
+          "extracted_price": 1728.0
+        }
+      ],
+      "check_in_date": "2027-01-09",
+      "check_out_date": "2027-01-14",
+      "details": [
+        "3 bedrooms",
+        "6 beds",
+        "2 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 6,
+      "bathrooms": 2,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.2933,
+        "longitude": -97.814
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/3966bbd3-d4e4-426f-8a13-45938b93494e.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/3966bbd3-d4e4-426f-8a13-45938b93494e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/c0c14114-eb2f-4bfd-9e5c-eeac8ee2ddbf.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/cfa42083-1f28-4267-8597-b58fb417fcbe.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/53e6a8d6-80ef-4a73-a809-c13ea455f56f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/75be4a8d-4159-49d8-b054-1bd90b75a9c8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/e51b505f-3bd8-4959-a5bd-41fe6a8ec00a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/b1ae58e6-7121-4768-96da-ae89a51cd74c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/5f9c887a-c894-47b8-ae7a-40ad7c82f153.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/646cdb1d-d05a-4edd-bdac-19b69a3afbe0.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/9e1acb57-9e31-4f39-bda4-50af3f16514a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/040ae50c-90d7-47d3-8844-f44698086201.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/7a43388d-2f27-4b4c-912c-9b197796120f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/bfbb986f-00e2-42d9-850d-f7031b09afb5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/1a9917b6-62f8-42b3-8b02-ce6ab7dd742e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/9c60d4b7-621f-4f6c-b8ad-8f0b55bd3aba.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/bc8adb08-02e6-46a9-b7e2-576f09d7a0ba.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/f395a60a-4313-40f5-882a-8dac40660324.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/91435e1d-af8c-4e16-a9ee-26cf0da17396.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/851cf092-3205-49ad-affc-efe7dd58910a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/967f4e23-dfe6-4654-8d36-7bf1538772a7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/5442e19f-4dd2-4065-b3d7-0d7df7fa9840.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/55f5b1f4-e4ee-4fa5-bd7d-a3abad763b59.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/b3454357-aed1-420c-a07c-7a93c7796ca2.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/dbbd809d-a919-4ec5-b843-4c1e6fa988c8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/495ddec8-c8be-4c22-bc7e-49234a665a59.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/d97722d5-ddf9-42de-bcd0-e1c62062fe67.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/2ceef2f8-b55e-450a-994c-29f0b3547868.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/eb6611e3-81ce-4be1-abac-67c554cae06a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1674833575946093753/original/11097a5c-368d-4f87-93b4-762cde3d4c1b.jpeg"
+      ]
+    },
+    {
+      "position": 6,
+      "listing_id": "52491022",
+      "title": "Home in Austin",
+      "name": "Home Away from Home in South Austin w patio",
+      "description": "Fire pit and hammock in South Austin",
+      "link": "https://www.airbnb.com/rooms/52491022?check_in=2026-11-01&check_out=2026-11-06",
+      "rating": 4.98,
+      "reviews": 206,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$850",
+      "extracted_price": 850,
+      "old_price": "$968",
+      "extracted_old_price": 968,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $170.00",
+          "price": "$850.00",
+          "extracted_price": 850.0,
+          "old_price": "$968.00",
+          "extracted_old_price": 968.0
+        }
+      ],
+      "price_disclaimers": [
+        "Carissa recently lowered the price for these dates (from the average rate for the past 60 nights)."
+      ],
+      "check_in_date": "2026-11-01",
+      "check_out_date": "2026-11-06",
+      "details": [
+        "3 bedrooms",
+        "3 queen beds",
+        "2 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 2,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.18069,
+        "longitude": -97.81557
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/45381c91-f5df-46e4-8f50-e05be3a8e882.jpg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/45381c91-f5df-46e4-8f50-e05be3a8e882.jpg",
+        "https://a0.muscache.com/im/pictures/d6e6d345-dab7-4405-85be-8d815fc490f4.jpg",
+        "https://a0.muscache.com/im/pictures/4936faa1-365d-4075-98ce-676de4e93136.jpg",
+        "https://a0.muscache.com/im/pictures/340c4110-2712-45d4-8f0a-098f4a56d164.jpg",
+        "https://a0.muscache.com/im/pictures/adb22148-f80a-43d1-9756-d98440949191.jpg",
+        "https://a0.muscache.com/im/pictures/daf32d48-44da-45b0-af8a-6bba18c4b2bf.jpg",
+        "https://a0.muscache.com/im/pictures/9348ee30-6334-42f6-8f03-962bf4b178da.jpg",
+        "https://a0.muscache.com/im/pictures/239a2d9d-2407-4a65-85af-d6cc90ca30ed.jpg",
+        "https://a0.muscache.com/im/pictures/44fb0ce8-6691-47f8-94af-49c578f0c5c9.jpg",
+        "https://a0.muscache.com/im/pictures/8ad4cd79-0fcc-4857-ad19-0d646e89ec9f.jpg",
+        "https://a0.muscache.com/im/pictures/cc3acab6-efbd-493c-9985-ef131ab87d9c.jpg",
+        "https://a0.muscache.com/im/pictures/ce88b0c9-8fc2-4c4b-a5f4-d9df4bd71822.jpg",
+        "https://a0.muscache.com/im/pictures/001acaf1-087c-4c7f-9f48-992b8886ba9a.jpg",
+        "https://a0.muscache.com/im/pictures/4fc3dacd-ef9a-472e-a829-22a4f86037ef.jpg"
+      ]
+    },
+    {
+      "position": 7,
+      "listing_id": "991490301492908742",
+      "title": "Farm stay in Del Valle",
+      "name": "Modern, Private Guest Ranch Near COTA & Austin",
+      "description": "Hilltop ranch with a pool and saloon",
+      "link": "https://www.airbnb.com/rooms/991490301492908742?check_in=2026-10-31&check_out=2026-11-05",
+      "rating": 4.98,
+      "reviews": 66,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$4,896",
+      "extracted_price": 4896,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $979.20",
+          "price": "$4,896.00",
+          "extracted_price": 4896.0
+        }
+      ],
+      "check_in_date": "2026-10-31",
+      "check_out_date": "2026-11-05",
+      "details": [
+        "7 bedrooms",
+        "5 baths"
+      ],
+      "bedrooms": 7,
+      "bathrooms": 5,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.1316,
+        "longitude": -97.6286
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/341b0551-2c76-418f-b1dc-14b2ffea3abe.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/341b0551-2c76-418f-b1dc-14b2ffea3abe.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/2da0f9b0-6761-4951-bf9c-b9a71395a5e0.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/1483c5cd-63be-4329-85e4-20d903820b72.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/eac91956-8880-4d21-a32c-e85207126c78.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/d505d6de-ffa0-425f-8c71-3c289f0b0fb9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/ba6f56c3-f0cb-4c62-9bf8-6bd52ccf6001.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/6ab8ec3f-8b7f-4847-b772-f2bd9f98b5c2.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/d80e7ce1-b8ed-4d48-ae48-37882b7d5223.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/98b7ab21-b9d7-44e4-a413-3016a2ddd801.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/4071feec-b3ce-40db-827d-965600f72d01.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/2f12169a-beca-45f4-804f-029aba1dd2a8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/456a4776-34a9-4921-90a1-e8c59681c00f.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/28ac956f-eda9-41e0-9f6b-127fa76c5fdc.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/cf4387cd-0ca1-40d5-b3da-999add804383.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/378fcde2-1435-4b14-b640-85af44f55010.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/1a6fba95-ac77-4462-a436-bbc72d5b0396.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/939308cc-e7c3-4ca2-b646-0911bb2f47f8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/c6a04392-22e0-48d9-84c0-987487547912.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/d2c12537-ffc2-443b-9fe5-2a01295da186.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/88cf972d-8812-405f-9678-f26ef187032f.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/8b4ea801-9b2d-4d63-b850-85e26c413b47.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/a86e036a-6046-46db-9a4f-8094d59af3bf.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/0d6c242c-689d-4215-bfdf-f5db4ff641d8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/07a772f2-9da1-43cf-88c6-bd98f0fa3d6b.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/d94b1b00-a8a1-465e-8c57-97d42260ecf2.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/09568e73-71be-4d06-a785-ca140b109e27.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/f1e4f729-649b-491a-9c1d-e7c3f1710107.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/b7d582ec-d657-4396-972d-d5e503beca03.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-991490301492908742/original/15447454-d293-485d-8fd1-352e871ef23b.jpeg"
+      ]
+    },
+    {
+      "position": 8,
+      "listing_id": "1204308083987365259",
+      "title": "Home in Austin",
+      "name": "Designer Home w/Hot Tub + Movie Room Near East 6th",
+      "description": "Hot tub and movie room near East 6th",
+      "link": "https://www.airbnb.com/rooms/1204308083987365259?check_in=2026-11-08&check_out=2026-11-13",
+      "rating": 4.95,
+      "reviews": 169,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$1,450",
+      "extracted_price": 1450,
+      "old_price": "$2,267",
+      "extracted_old_price": 2267,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $453.40",
+          "price": "$2,267.00",
+          "extracted_price": 2267.0
+        },
+        {
+          "description": "Early booking discount",
+          "price": "-$817.60",
+          "extracted_price": -817.6
+        },
+        {
+          "description": "Price after discount",
+          "price": "$1,449.40",
+          "extracted_price": 1449.4
+        }
+      ],
+      "check_in_date": "2026-11-08",
+      "check_out_date": "2026-11-13",
+      "details": [
+        "3 bedrooms",
+        "10 beds",
+        "3.5 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 10,
+      "bathrooms": 3.5,
+      "highlights": [
+        "Book early to save",
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.2626,
+        "longitude": -97.7132
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1204308083987365259/original/274aaca4-1b55-48b7-af3f-d43cf1f7416e.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1204308083987365259/original/274aaca4-1b55-48b7-af3f-d43cf1f7416e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/149cabd6-c148-4458-9e4c-e821dc971439.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/8b3d5931-a49e-4f00-8185-66596e4dc1c8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/d41f323a-e2e3-43fb-9fa2-bdb5b4a5448b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/2f62268b-1964-4bb6-9d10-275eb23fb030.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/d21413cb-a8ac-4b76-ad2d-da2756842ffc.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/1938385d-4820-496d-98a8-76a909bdb5cb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/a5cab2e2-1dd2-4bf4-9b51-01c83395dc6a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/905d9032-c09d-4a0e-a708-f4e18f90003e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/faafc9d8-9871-4a43-bd99-3d1a65e63f8e.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1204308083987365259/original/d03e3381-f8f2-4ca6-bed4-51a918983e6c.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1204308083987365259/original/595762e1-a189-4936-a5da-720d002e3878.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1204308083987365259/original/a6702c8f-197d-43ff-9cea-01d59ce46d9d.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1204308083987365259/original/c1e05583-0c69-4403-9a52-a5d59dd2a424.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/d9d60bd0-2453-41d5-8a59-c1287c4250c5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/457d1077-82cf-4d2c-9f37-40d568d6e88e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/d1670add-19b3-4b8b-ac55-e15b17a849be.jpeg",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1204308083987365259/original/659d3628-f655-454a-8ed9-720ab34d946a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/1d8fba2d-57e9-4c6d-a339-a15e636914be.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/2756cef4-11c7-4820-91c5-6f0817952aea.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/0e8eb0a7-5c08-4fba-a0e3-4b9245f9f371.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/c0bfa674-5529-49ef-98c2-22756aaeec71.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/64a3da13-7c69-43d2-b777-5e8a72401de7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/dec3b6be-5657-4b33-b605-699495a2b632.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/f6226aaf-abfc-4af6-8d4f-bc0d1031554a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/7ed0467b-9966-45f1-8561-b64ff9e164c0.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/f02847ae-c93c-4d37-986e-befdc5d887a1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/1bf903dd-a149-4448-ae1c-e19cb78874be.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwNDMwODA4Mzk4NzM2NTI1OQ%3D%3D/original/9a3cef23-171e-415b-8fba-59b0377d6bf7.jpeg"
+      ]
+    },
+    {
+      "position": 9,
+      "listing_id": "1757028796889463934",
+      "title": "Home in Austin",
+      "name": "B - Townhome near COTA, ATX Airport, & Concourse P",
+      "description": "Pool and backyard, 4 miles from COTA",
+      "link": "https://www.airbnb.com/rooms/1757028796889463934?check_in=2026-11-29&check_out=2026-12-04",
+      "rating": 4.9,
+      "reviews": 10,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$779",
+      "extracted_price": 779,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $155.80",
+          "price": "$779.00",
+          "extracted_price": 779.0
+        }
+      ],
+      "check_in_date": "2026-11-29",
+      "check_out_date": "2026-12-04",
+      "details": [
+        "3 bedrooms",
+        "3 queen beds",
+        "2.5 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 2.5,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.1493,
+        "longitude": -97.5959
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/29dffad8-1d95-4972-91f1-f4a1325c8fe7.png",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/29dffad8-1d95-4972-91f1-f4a1325c8fe7.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/f5b5f33b-489c-428e-b724-ea15e0ea341c.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/c1cfe743-2191-49f9-a68b-2bc2c288f3fb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/63108ea3-9967-43a3-98d4-de185cc37be4.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/c7f4f502-3d45-48c7-b226-2c0ecf8308b8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/72e4a2dd-2d83-4714-9833-9b531e5eaedf.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/063b37a0-3147-4392-afa2-6c09a37238d2.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/97635a43-32fe-4ca1-8da4-4513faac30b7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/7d136292-d864-459e-b118-3895d817abf6.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/d68dddf5-75c9-41c1-810f-9375083cc993.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/7a4d7a4d-a2ad-4a4a-a39b-196a28cab285.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/2d78b6ed-ea85-4e7d-9797-0d61c884942e.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/cca3eee0-8dba-4b13-903b-3ca3f8d02ca5.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/50a78ab7-0667-41cd-9b22-68c23d092b4a.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/a9edcff8-5624-4d39-b288-224420b181da.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/cbba82b6-0f0b-4f2c-979a-324a2530d2e2.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/3c36185d-7b00-45ce-b853-ba355ae6b872.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/71666dae-6503-49a4-870a-b107e533b547.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/69f9095f-08ba-461a-9495-1eb37f8e7d97.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/86a208ca-a987-4f32-b626-40e9c598e6c8.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/e887a1f8-4a4f-4097-8458-7ab4fb16bd0e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/ed28ac9b-639c-40cf-9328-a3cfde4b1770.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/65570212-05da-4295-9971-6f154944eecb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1546597807669244125/original/a91a3219-2f39-468b-9938-f3a533307d8b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/eb1babf7-c500-4e11-82e5-08706f4d1851.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1757028796889463934/original/ca644ab1-a273-4114-b82c-5e3cb8031cef.jpeg"
+      ]
+    },
+    {
+      "position": 10,
+      "listing_id": "1166865229781865319",
+      "title": "Hotel in Austin",
+      "name": "Near Q2 Stadium with On-site Dining & Indoor Pool",
+      "description": "Heated indoor pool and on-site dining",
+      "link": "https://www.airbnb.com/rooms/1166865229781865319?check_in=2026-10-02&check_out=2026-10-07",
+      "rating": 4.69,
+      "reviews": 329,
+      "price": "$476",
+      "extracted_price": 476,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $99.63",
+          "price": "$498.13",
+          "extracted_price": 498.13
+        },
+        {
+          "description": "Long stay discount",
+          "price": "-$22.85",
+          "extracted_price": -22.85
+        },
+        {
+          "description": "Price after discount",
+          "price": "$475.28",
+          "extracted_price": 475.28
+        }
+      ],
+      "check_in_date": "2026-10-02",
+      "check_out_date": "2026-10-07",
+      "details": [
+        "1 bedroom",
+        "2 beds",
+        "1 bath"
+      ],
+      "bedrooms": 1,
+      "beds": 2,
+      "bathrooms": 1,
+      "gps_coordinates": {
+        "latitude": 30.40031,
+        "longitude": -97.67661
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1166865229781865319/original/6512945f-41dd-4f8b-89df-d5c5ed5d26cd.png",
+      "images": [
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1166865229781865319/original/6512945f-41dd-4f8b-89df-d5c5ed5d26cd.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/85a134e3-436f-4b83-95cb-0a9eb32aea7f.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/10aebace-ffd8-4e6a-80f7-2992a8f3d113.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/aa841390-f766-4af1-8801-c84bfc87e1f4.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/f5dbbd2c-6a39-4d3b-bf33-2adb7190a52a.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/a59afe53-4ea7-453d-bcaa-d7ddf692c150.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/276e961b-dfea-4f6b-a4a8-8cba4722ca9e.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/32fe669e-35ac-4fd2-bb55-9ed62a47d575.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/35c03cea-83d7-4d0e-98e0-d3240966f11a.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/8359d568-7435-4749-b67f-dadec4a1e89e.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/1c2d5e43-9f85-4668-85c6-9f7b3e98dfe4.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/13d6905f-cac3-4b84-9672-626f07af7cc1.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/6c275df6-24d6-4619-ad59-aa445c055524.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/d2f5567b-1344-470d-934a-c9ed2769ae4e.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/a3139141-e528-49c3-bdb7-f42c7c047781.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/1e076c5e-1547-440f-8234-1167a2ec1f85.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1166865229781865319/original/3f76bc2e-97a5-45ba-a1a0-c0aec4fc1b62.png",
+        "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1166865229781865319/original/6d7c8c23-4009-4c67-b061-57fd995373c5.png"
+      ]
+    },
+    {
+      "position": 11,
+      "listing_id": "1704452615554844556",
+      "title": "Home in Austin",
+      "name": "Luxury New Build | Backyard Oasis | UT & Downtown ",
+      "description": "New build with a private backyard",
+      "link": "https://www.airbnb.com/rooms/1704452615554844556?check_in=2026-11-29&check_out=2026-12-04",
+      "rating": 5.0,
+      "reviews": 18,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$897",
+      "extracted_price": 897,
+      "old_price": "$982",
+      "extracted_old_price": 982,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $196.40",
+          "price": "$982.00",
+          "extracted_price": 982.0
+        },
+        {
+          "description": "Early booking discount",
+          "price": "-$85.20",
+          "extracted_price": -85.2
+        },
+        {
+          "description": "Price after discount",
+          "price": "$896.80",
+          "extracted_price": 896.8
+        }
+      ],
+      "check_in_date": "2026-11-29",
+      "check_out_date": "2026-12-04",
+      "details": [
+        "2 bedrooms",
+        "2 queen beds",
+        "2.5 baths"
+      ],
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 2.5,
+      "highlights": [
+        "Book early to save",
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.2716,
+        "longitude": -97.7212
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/91c118cb-0014-45c7-9c84-fbba72d59df8.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/91c118cb-0014-45c7-9c84-fbba72d59df8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/5b357104-796a-4909-b408-07eefaf8e995.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/f58b704a-6e60-48f4-ae3f-a2765535ec46.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/93df8d3d-1329-4a99-98dd-f651762fa2b2.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/6a22ea10-c351-4221-ad2c-96154ccd3df6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/a00e9a8a-5175-44a4-841a-0e14039cc6b7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/7444ff77-7fc5-47be-9810-7d50fb701687.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/32a0026b-d739-4712-857a-4134d243b352.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/0344f6ec-c0d3-471d-8db5-31e808eac0b8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/348ebe56-8196-4d1a-92e1-7d1bb63284a5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/46b22992-0281-40fd-9463-bc2b34efeee9.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/59078df1-74c6-448b-b81c-e4cc51d69d07.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/bd0541c0-e96b-4def-970e-09a8cd518ed9.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/b115761a-7bfe-4042-9ec4-e3ed3147f28e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/835a1ecd-f2b7-4097-85e4-082ada4167a1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/ccc750e2-0c2c-48a1-a20e-9baeece634a1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/c8db856c-648d-4d04-8460-3f70cc790d7f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/c98056b9-8ac9-4ec7-bd59-966a50b6c627.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/564485c3-68a4-4d79-afe6-420c9caa1186.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/35e7e81b-b32f-4028-ae90-02ec29903e37.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/24778801-c236-41b7-a5dd-7733e1464abc.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/b2c12cf9-96bc-4e8f-b37b-c944a2cb40da.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/482ab3c6-72a4-478a-9c62-7b910fb0910e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/5b93ecf2-b709-4c6c-833a-6a7f5c2aa6e0.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/c5c24e27-50b3-42d3-8eae-aa99ac790137.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/ea27f7b1-471a-4d15-b3b6-67d186655888.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/8ae65847-63e6-4173-8409-f60ad1b63208.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/1b048bb6-23b2-4eba-b338-2475574c10cf.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1704452615554844556/original/b01a35df-49cd-4a12-907c-ae3b6696bbfe.jpeg"
+      ]
+    },
+    {
+      "position": 12,
+      "listing_id": "1748477252951323824",
+      "title": "Home in Austin",
+      "name": "4BR Yoda Home by UT, DT| King Beds Sleep10",
+      "description": "East Austin home with a fire pit",
+      "link": "https://www.airbnb.com/rooms/1748477252951323824?check_in=2026-11-01&check_out=2026-11-06",
+      "rating": 5.0,
+      "reviews": 6,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$864",
+      "extracted_price": 864,
+      "old_price": "$939",
+      "extracted_old_price": 939,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $187.80",
+          "price": "$939.00",
+          "extracted_price": 939.0
+        },
+        {
+          "description": "Early booking discount",
+          "price": "-$75.90",
+          "extracted_price": -75.9
+        },
+        {
+          "description": "Price after discount",
+          "price": "$863.10",
+          "extracted_price": 863.1
+        }
+      ],
+      "check_in_date": "2026-11-01",
+      "check_out_date": "2026-11-06",
+      "details": [
+        "4 bedrooms",
+        "7 beds",
+        "2.5 baths"
+      ],
+      "bedrooms": 4,
+      "beds": 7,
+      "bathrooms": 2.5,
+      "highlights": [
+        "Book early to save",
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.2789,
+        "longitude": -97.7167
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/0fa129f3-ba5e-4627-9d8e-fc29647984a7.png",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/0fa129f3-ba5e-4627-9d8e-fc29647984a7.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/16a99231-65ff-4cae-b30d-29305d20b33b.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/1e6d94e4-7c94-43f8-a726-e974c5d35dc9.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/3a33c6f4-3c35-4950-a602-ea2cf8fe9170.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/95e7fe1a-f80c-4093-accf-9b9fcf77a0bc.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/c2390537-30ed-49f7-8ef6-f08a0b62a7b6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/95d934a0-26d0-4e96-9744-5bc50b86d0c3.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/bb153d3a-a19c-426d-90c8-6920aa5965f4.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/eb2d1653-df78-4c3b-b4b1-63d8fa2c3454.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/1c4ce75d-596a-46df-9059-1bcf517f6e08.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/9402143e-8a5e-44e0-bddd-0b325d95087a.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/3b2e6681-2011-4760-bdaa-56c2db0dd0c7.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/93c53a8a-fbce-4292-9e34-3af827da808f.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/cd629314-6e34-49c1-9a7e-3b9e02940b7b.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/8fbb3257-1f59-4b86-987b-db0473c0a6e3.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/c9f893a4-174c-4863-a3b8-54ccfd9decec.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/921f451b-fc63-496d-a723-0fd10b1fecd8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/032e898e-183b-4489-b889-2437f7f99796.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/360beab4-992e-4119-8004-966c8a529331.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/83c290b5-2d51-4500-a64e-64dda3d0b69f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/b26def31-ad11-44cd-be63-039205ee3a68.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/b3081aec-10f7-45d0-93ed-2d1dbc73b908.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/db3bf275-f301-4dad-8a2c-6653571db7b6.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/c70e7371-8df7-4791-9022-8527b3386911.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/2a2f014b-f6cf-417c-9fff-e0c5f060edfa.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/ed568fd6-d002-4e20-8df7-3fe60e841b98.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/f72bb310-8b33-459d-9447-052f09dd257d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1748477252951323824/original/5453e900-fbde-414d-8716-f971cacb36c5.jpeg"
+      ]
+    },
+    {
+      "position": 13,
+      "listing_id": "1721866581707097558",
+      "title": "Home in Austin",
+      "name": "White House | 2.5 Acres | Sleeps 13",
+      "description": "French-inspired retreat on 2.5 wooded acres",
+      "link": "https://www.airbnb.com/rooms/1721866581707097558?check_in=2026-10-29&check_out=2026-11-03",
+      "rating": 5.0,
+      "reviews": 3,
+      "price": "$3,072",
+      "extracted_price": 3072,
+      "old_price": "$3,790",
+      "extracted_old_price": 3790,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $758.00",
+          "price": "$3,790.00",
+          "extracted_price": 3790.0
+        },
+        {
+          "description": "Long stay discount",
+          "price": "-$718.20",
+          "extracted_price": -718.2
+        },
+        {
+          "description": "Price after discount",
+          "price": "$3,071.80",
+          "extracted_price": 3071.8
+        }
+      ],
+      "check_in_date": "2026-10-29",
+      "check_out_date": "2026-11-03",
+      "details": [
+        "5 bedrooms",
+        "7 beds",
+        "4.5 baths"
+      ],
+      "bedrooms": 5,
+      "beds": 7,
+      "bathrooms": 4.5,
+      "highlights": [
+        "Extended stay discount",
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.39217,
+        "longitude": -97.91435
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/d39d092d-c0ae-449a-be56-ed23e37e2fa4.png",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/d39d092d-c0ae-449a-be56-ed23e37e2fa4.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/ab6c24d6-2430-4941-a7bd-8a0144c9eb1e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/43c7a9f8-8cb4-4d89-a958-bb5be17ba39d.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/d1e1c17c-58b5-457f-a4b6-ed1b24eb4115.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/10d09294-ac68-454c-9327-9f7d125c0e79.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/95a8f58a-7543-44d7-98d7-a2b1c0e73464.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/8b07578f-8b42-477a-a2c1-044f0eabff84.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/367e1557-b49b-4bb6-9680-5a3ee43787d6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/42b3b417-5bb0-40cf-a812-8774af32d2a1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/590a666d-9c60-4189-8b70-39b6d8c0db13.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/050f6285-c828-413a-a4e9-7249383f26d4.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/81be899c-b0bf-4515-af5a-011047c5aaf5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/36833b20-89c2-488d-aa58-678a2ee84b83.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/3d5b4726-4eed-4321-b59c-d8a405f38c77.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/9b43d015-63b8-4106-a799-255a9fd4283f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/739dc4a5-1a7b-4859-9673-6cf345888d9c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/5bb670f1-8ba8-4171-bd24-dec5ca76e11f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/36f81713-5e20-48a9-9a19-f38f4c6c897e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/9bc0902a-e8aa-45cc-b681-546c1cf69d8e.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/d52b2185-cbbf-43a1-a328-c14b19af9d73.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/051d646b-c0f1-476a-b271-974bf87b0cc3.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/60e7b26c-d93b-482f-b2c4-9e8ce1ec5dc9.png",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/dc2f9ac2-cb5b-4b7d-941f-c7cb41ca2934.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/fdeac753-bdbc-4c12-866c-f24717396a41.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/66db228d-afa2-4a9c-97dc-37ef6d907bfb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/a0741a24-02fc-4bfd-b36f-d84735d2a05d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/4c4a0981-24ab-4eed-8d32-9be60dbf3ccf.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/f586ac82-b43f-4fe7-a3a9-fdecb35856ba.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1721866581707097558/original/9a287e71-5cae-4ba4-b4a0-8ae325c487de.jpeg"
+      ]
+    },
+    {
+      "position": 14,
+      "listing_id": "16534724",
+      "title": "Guesthouse in Austin",
+      "name": "Honey Cloud Studio Casita on East Side",
+      "description": "Swedish modern casita with vaulted pine ceilings",
+      "link": "https://www.airbnb.com/rooms/16534724?check_in=2026-11-28&check_out=2026-12-03",
+      "rating": 4.93,
+      "reviews": 537,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$535",
+      "extracted_price": 535,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $107.00",
+          "price": "$535.00",
+          "extracted_price": 535.0
+        }
+      ],
+      "check_in_date": "2026-11-28",
+      "check_out_date": "2026-12-03",
+      "details": [
+        "1 bedroom",
+        "2 beds",
+        "1 bath"
+      ],
+      "bedrooms": 1,
+      "beds": 2,
+      "bathrooms": 1,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.25369,
+        "longitude": -97.72676
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/5d7642c4-c713-4474-8c42-b258cac02d7c.jpg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/5d7642c4-c713-4474-8c42-b258cac02d7c.jpg",
+        "https://a0.muscache.com/im/pictures/0a315004-15ef-491f-a9a4-10e14ba1bd94.jpg",
+        "https://a0.muscache.com/im/pictures/eea5089c-fecf-417a-b8ff-bb063e414593.jpg",
+        "https://a0.muscache.com/im/pictures/e130c005-2e4d-44ac-b496-247babddb3a2.jpg",
+        "https://a0.muscache.com/im/pictures/bbd1fde9-a580-4bb4-a9b8-2388d7e323d4.jpg",
+        "https://a0.muscache.com/im/pictures/5c5a1f92-16fa-4d41-a79d-926060dda5d4.jpg",
+        "https://a0.muscache.com/im/pictures/c421a10d-105c-4a3a-92e3-c9ffbcdc0866.jpg",
+        "https://a0.muscache.com/im/pictures/904d5693-e386-4e7d-b9ae-75d1f5429c82.jpg",
+        "https://a0.muscache.com/im/pictures/bab75766-a9cf-444a-b85a-b15ac91fd567.jpg",
+        "https://a0.muscache.com/im/pictures/ad74f8ee-12bc-4726-b23b-37d09e5707fa.jpg",
+        "https://a0.muscache.com/im/pictures/b01d1f73-4879-4766-803b-e3063c2b76e8.jpg",
+        "https://a0.muscache.com/im/pictures/75715797-18e3-4ff9-8725-1c9476bddae0.jpg",
+        "https://a0.muscache.com/im/pictures/49f4282a-1eb1-438c-a4f6-ce54260ff51b.jpg",
+        "https://a0.muscache.com/im/pictures/593fe4f5-4b44-419c-b3d9-d5e0af46e554.jpg",
+        "https://a0.muscache.com/im/pictures/dd991d36-36c3-4237-b884-62c19cd7ad1a.jpg",
+        "https://a0.muscache.com/im/pictures/2f753b6d-aa36-41c7-b1c4-a11555fdd10c.jpg",
+        "https://a0.muscache.com/im/pictures/7fdeb5c6-1e69-4426-87e3-7ef34583ec09.jpg",
+        "https://a0.muscache.com/im/pictures/25a13d9f-7dd4-4379-a297-4d978853e358.jpg",
+        "https://a0.muscache.com/im/pictures/1d8eca9c-6cea-49f0-ac0c-e82ba2dfefa9.jpg",
+        "https://a0.muscache.com/im/pictures/54bbe9e5-f570-4225-a6c5-3a360eea273c.jpg",
+        "https://a0.muscache.com/im/pictures/d776b0eb-405f-44f2-86da-556716bfc8a8.jpg",
+        "https://a0.muscache.com/im/pictures/062022c9-7936-43f4-a0a8-b8bac206147e.jpg",
+        "https://a0.muscache.com/im/pictures/7bec6f6d-eb03-41f4-b9b0-49ab090743f0.jpg",
+        "https://a0.muscache.com/im/pictures/73d71a15-66da-4fb0-8f75-65b2406ddfb8.jpg",
+        "https://a0.muscache.com/im/pictures/fb905fd8-b692-4338-a261-106e30098b10.jpg",
+        "https://a0.muscache.com/im/pictures/80ddfa54-ee7f-48dc-a609-bc745a80c914.jpg",
+        "https://a0.muscache.com/im/pictures/1fc622fa-8fe7-4e94-b39c-a380b1959bb7.jpg",
+        "https://a0.muscache.com/im/pictures/3ba7f915-0a97-4fd0-8fa5-1537e639f604.jpg",
+        "https://a0.muscache.com/im/pictures/167e43fd-1175-4578-8d45-7141cbc71529.jpg"
+      ]
+    },
+    {
+      "position": 15,
+      "listing_id": "1734136649905860614",
+      "title": "Home in Austin",
+      "name": "Bluebird East ATX | Sleeps 6, 3B/2.5B | Walk to UT",
+      "description": "Walk to East Austin restaurants and bars",
+      "link": "https://www.airbnb.com/rooms/1734136649905860614?check_in=2026-10-03&check_out=2026-10-08",
+      "price": "$896",
+      "extracted_price": 896,
+      "old_price": "$1,174",
+      "extracted_old_price": 1174,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $234.80",
+          "price": "$1,174.00",
+          "extracted_price": 1174.0
+        },
+        {
+          "description": "Last-minute discount",
+          "price": "-$278.32",
+          "extracted_price": -278.32
+        },
+        {
+          "description": "Price after discount",
+          "price": "$895.68",
+          "extracted_price": 895.68
+        }
+      ],
+      "check_in_date": "2026-10-03",
+      "check_out_date": "2026-10-08",
+      "details": [
+        "3 bedrooms",
+        "3 beds",
+        "2.5 baths"
+      ],
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 2.5,
+      "gps_coordinates": {
+        "latitude": 30.2762,
+        "longitude": -97.7213
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/3034a26d-79f8-420b-94a7-9ab11c7fac73.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/3034a26d-79f8-420b-94a7-9ab11c7fac73.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/3d29c9b6-2c9b-43f0-980e-ef45e963fd57.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/7a8604c4-6b58-4e06-9ce7-8c4da31a05ba.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/9feb2561-33ae-4d26-b23f-1646704f80ee.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/65c82ba3-7caa-4ca6-91ce-cd7127bd53eb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/c7d89c96-c7c7-4af9-903f-2b90d55a44f0.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/623f483a-562f-46e0-b889-ce1eb879deee.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/cc892e11-e0e0-47dd-bc8f-9cd1af7387fd.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/47e29997-d632-4702-96a3-a58c22d7f588.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/4d58e87f-382a-4139-a5cf-6517a4381a64.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/c906b017-ec45-44e4-8eb7-e2522704b63c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/7af615d4-17bf-4555-8043-a31e001674bb.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/734284db-9a4a-4bf2-a4ad-3e74593302f1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/e30e3002-ecc9-4b1b-8ac9-ddd36ec1c3d4.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/97ea3be3-decf-423c-a1a6-4e07fc0afb14.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/241fd11f-1658-4575-bf93-4365ef6942a8.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/1d41a508-a007-4159-b74a-0873893f04ca.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/c6c0f0a2-1ab2-468e-a1ca-749b81851574.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/97b73d61-55f2-4d71-9220-d3f4daed39dc.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/22f5d3c5-5e52-434b-92e6-a8b698f303fe.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/bee92645-b4b9-4dcb-90a5-1149c2dd145c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/1fdcbf7b-7f85-4246-a894-5fe93f2a5f17.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/383a364d-28f0-4a93-a57e-4373632f68b7.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/a7729a0c-a79d-4be2-bca7-8d67484fd076.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/540fd3a6-b041-4758-8480-f271628ab31f.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/a4c09a4c-ff34-4add-bdb6-08f99c8435be.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/456060d7-5ce3-483a-9206-4276899d0ed4.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/d1c30754-3652-45bc-b1a8-a74444fb3198.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-1734136649905860614/original/d026d0ca-373b-45aa-9c4e-a4df90c34419.jpeg"
+      ]
+    },
+    {
+      "position": 16,
+      "listing_id": "889843382811703189",
+      "title": "Home in Austin",
+      "name": "Near Downtown~Pool on 2 Acres~Pickleball~Sleeps 22",
+      "description": "Pool and pickleball court on 2 acres",
+      "link": "https://www.airbnb.com/rooms/889843382811703189?check_in=2026-11-29&check_out=2026-12-04",
+      "rating": 4.94,
+      "reviews": 145,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$2,055",
+      "extracted_price": 2055,
+      "old_price": "$2,800",
+      "extracted_old_price": 2800,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $560.00",
+          "price": "$2,800.00",
+          "extracted_price": 2800.0
+        },
+        {
+          "description": "Long stay discount",
+          "price": "-$745.20",
+          "extracted_price": -745.2
+        },
+        {
+          "description": "Price after discount",
+          "price": "$2,054.80",
+          "extracted_price": 2054.8
+        }
+      ],
+      "check_in_date": "2026-11-29",
+      "check_out_date": "2026-12-04",
+      "details": [
+        "6 bedrooms",
+        "13 beds",
+        "4 baths"
+      ],
+      "bedrooms": 6,
+      "beds": 13,
+      "bathrooms": 4,
+      "gps_coordinates": {
+        "latitude": 30.26583,
+        "longitude": -97.81272
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/adcd5eb5-bd2e-44d0-8bd0-8b8689a8df73.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/adcd5eb5-bd2e-44d0-8bd0-8b8689a8df73.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/274d7150-c9d9-4dbf-a2d0-f10182332cc8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/d9f61d52-56a6-4e25-b17e-53960e86395e.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/0e78bb6f-598f-4127-9d5b-2a9d64858b0f.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/c9d0cbb3-c27f-453f-bbb1-ad80b5d40cb4.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/7c29b6a9-074d-4de8-b76f-0c71ef6135f9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/69ab410d-cfb5-4473-afc7-9a71fdee6806.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/e0cf7f1e-37b3-473a-9262-02e50fd1ef88.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/98ebb227-39c5-4add-a400-964d9472861e.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/e9eae8b9-d948-4fe5-a2c4-c472c95a4f27.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/4ea894ba-6af0-4020-8ad9-6fa18dacca7c.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/cbc6f8c7-7eb8-4f6e-87f5-c97b9b6f38c8.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/faf8ae7f-1d7e-453a-b155-71fefee37bd3.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/ccfd9e1f-331e-4538-92fc-d9e85630e678.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/6bc0550c-8645-4bba-815b-c71855eb106d.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/0a374bd9-fd6f-4189-8766-cb9e1af82f64.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/f823e8ef-182a-49e5-baaa-4248f32436fb.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/88a6e6ae-9a61-426c-aefd-3196f354a4ce.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/f62b233d-6e09-4451-8195-1a33f1fa68c5.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/78d313d6-12af-490d-877a-a8bab660bb11.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/342b4331-06b8-4270-bc37-50eda570625a.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/735bf5af-d407-4071-88e0-f60ea020edb6.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/2a46d22a-00a7-494f-bd18-1202e63daed6.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/adf43020-42b3-4928-9257-9a6c3fa020a9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/418dcf24-160a-49d6-9f41-c35fd8041158.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/ed114ab4-e203-4265-8c0b-70ab33441dd9.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/6cadfe40-71f3-4729-bec2-c3c1f0dca935.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/f3e8302a-b5a1-4425-92d1-e7a711bc3081.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-889843382811703189/original/bec7bcba-e78e-45eb-a875-622ae8a0f4fc.jpeg"
+      ]
+    },
+    {
+      "position": 17,
+      "listing_id": "607789673878508156",
+      "title": "Guesthouse in Austin",
+      "name": "Sunny Backyard One Bedroom Apartment in Hyde Park",
+      "description": "Private patio and fire pit in Hyde Park",
+      "link": "https://www.airbnb.com/rooms/607789673878508156?check_in=2026-10-11&check_out=2026-10-16",
+      "rating": 4.98,
+      "reviews": 359,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$702",
+      "extracted_price": 702,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $140.40",
+          "price": "$702.00",
+          "extracted_price": 702.0
+        }
+      ],
+      "check_in_date": "2026-10-11",
+      "check_out_date": "2026-10-16",
+      "details": [
+        "1 bedroom",
+        "1 bed",
+        "1 bath"
+      ],
+      "bedrooms": 1,
+      "beds": 1,
+      "bathrooms": 1,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.30033,
+        "longitude": -97.7328
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/37dda128-e8b6-46b2-86ac-246b6e6c31d6.jpeg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/37dda128-e8b6-46b2-86ac-246b6e6c31d6.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/251cfd27-6c36-4570-8437-5a9110be7b71.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/67c1dfe8-5f49-4bd6-8b41-f89c57725898.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/c892de4f-bff9-4668-bead-9ee1493bf03e.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-607789673878508156/original/7025d40e-8607-49a2-abc2-a5fc0435de6a.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-607789673878508156/original/455b2e65-1edd-4828-a047-1645c4cff239.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-607789673878508156/original/c9556381-85ce-4145-9a82-4f3bed9c7b7e.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-607789673878508156/original/a606d859-39c5-449f-8f53-c077d5963d55.jpeg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-607789673878508156/original/0d4409c2-8ae7-48aa-8630-ed999b07c5a1.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/b7c453d9-57e6-456e-97fc-495360bbc7c5.jpeg",
+        "https://a0.muscache.com/im/pictures/8bdd56d0-60c2-485e-babf-1ab63ac25432.jpg",
+        "https://a0.muscache.com/im/pictures/miso/Hosting-607789673878508156/original/1896d016-4cae-4c17-b98f-2267eb850df3.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/805cf3ee-5d4a-4b0a-84c9-c4e00f4d93c5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/48bc6e3d-2a4b-40a5-a03f-9b41316ddfcc.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/cd1c6832-123a-47e9-afd1-6285c5136a5d.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/96785b6e-828f-4837-966a-73da694f5947.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/1a244dea-55db-49e1-be07-887ed9f48b8c.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/6739c3e4-8184-453e-84f6-c957c94ee6c5.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/77d74d41-73ca-4dfe-870b-7d80249a1928.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/c35516e6-47e8-46e9-9f65-761b3bc4f036.jpeg",
+        "https://a0.muscache.com/im/pictures/hosting/Hosting-607789673878508156/original/b022d5d0-a10d-40a3-8f3f-e2e48494a3b6.jpeg"
+      ]
+    },
+    {
+      "position": 18,
+      "listing_id": "20886470",
+      "title": "Bungalow in Austin",
+      "name": "Upson House",
+      "description": "Century-old craftsman near Barton Springs",
+      "link": "https://www.airbnb.com/rooms/20886470?check_in=2026-11-17&check_out=2026-11-22",
+      "rating": 4.98,
+      "reviews": 124,
+      "badges": [
+        "Guest favorite"
+      ],
+      "price": "$1,362",
+      "extracted_price": 1362,
+      "price_qualifier": "for 5 nights",
+      "price_breakdown": [
+        {
+          "description": "5 nights x $272.40",
+          "price": "$1,362.00",
+          "extracted_price": 1362.0
+        }
+      ],
+      "check_in_date": "2026-11-17",
+      "check_out_date": "2026-11-22",
+      "details": [
+        "2 bedrooms",
+        "2 beds",
+        "1 bath"
+      ],
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 1,
+      "highlights": [
+        "Free cancellation"
+      ],
+      "free_cancellation": true,
+      "gps_coordinates": {
+        "latitude": 30.27901,
+        "longitude": -97.77002
+      },
+      "thumbnail": "https://a0.muscache.com/im/pictures/7b69a937-201b-473d-a373-365191a6dc98.jpg",
+      "images": [
+        "https://a0.muscache.com/im/pictures/7b69a937-201b-473d-a373-365191a6dc98.jpg",
+        "https://a0.muscache.com/im/pictures/a98457e3-924d-4f3e-9cba-aba7a09d2745.jpg",
+        "https://a0.muscache.com/im/pictures/a9a504aa-1ad2-41f9-aac0-36623021a23e.jpg",
+        "https://a0.muscache.com/im/pictures/7ce3430e-b937-483c-8d0e-eb681a535c4e.jpg",
+        "https://a0.muscache.com/im/pictures/7981e179-0cf7-4eb6-a6e5-b02f812f7bc2.jpg",
+        "https://a0.muscache.com/im/pictures/48decc79-2f84-4226-a514-dc133ef99e61.jpg",
+        "https://a0.muscache.com/im/pictures/9185e96f-48cc-4f8e-8eb9-f190e4844c22.jpg",
+        "https://a0.muscache.com/im/pictures/e71f567b-acc0-426a-a941-ce724aef4edc.jpg",
+        "https://a0.muscache.com/im/pictures/f0613fcf-5ae4-42dc-884f-07fcdb3b5ba6.jpg",
+        "https://a0.muscache.com/im/pictures/deb88174-a72a-4f42-8a63-728bab562dda.jpg",
+        "https://a0.muscache.com/im/pictures/d4e15c13-4c0b-4a19-aaa4-5bde617d43c0.jpg",
+        "https://a0.muscache.com/im/pictures/d61bdec8-6c61-4517-a60e-e4769fb5dcd0.jpg",
+        "https://a0.muscache.com/im/pictures/7b504a67-f199-4f62-89ec-bbd6a2bcfae8.jpg",
+        "https://a0.muscache.com/im/pictures/305729ba-c38d-4162-86e0-723fe5d933aa.jpg",
+        "https://a0.muscache.com/im/pictures/51b4bd01-3623-46c8-968d-fc8064bd69ed.jpg",
+        "https://a0.muscache.com/im/pictures/e7242b1e-3125-45a6-8020-4365c33b517a.jpg",
+        "https://a0.muscache.com/im/pictures/39777927-f4e6-4ab1-9ad0-3f2edea44be4.jpg",
+        "https://a0.muscache.com/im/pictures/4d672e89-026c-48a3-90e4-252346a6ad11.jpg",
+        "https://a0.muscache.com/im/pictures/8eb59d48-04f3-48e1-a461-146f71e8802f.jpg",
+        "https://a0.muscache.com/im/pictures/e849cff1-0c18-4176-846d-43ea3b389744.jpg",
+        "https://a0.muscache.com/im/pictures/d739413b-81a8-408f-acbf-01811afcd938.jpg",
+        "https://a0.muscache.com/im/pictures/9751eddb-2b70-4363-8176-6df4f9f5adcf.jpg",
+        "https://a0.muscache.com/im/pictures/5f57813b-0bf3-4675-906f-ab86e9b00376.jpg",
+        "https://a0.muscache.com/im/pictures/bc765da6-3708-4933-9f09-d8651dff4d77.jpg",
+        "https://a0.muscache.com/im/pictures/30496115-756c-4843-b8eb-761fd1a1e5a7.jpg",
+        "https://a0.muscache.com/im/pictures/fc7a4bcc-b335-4cc0-83de-c841f00c8f2a.jpg",
+        "https://a0.muscache.com/im/pictures/97fe8f2a-895d-44cf-8a66-83c2f03e740e.jpg",
+        "https://a0.muscache.com/im/pictures/ba258b5e-4e46-40b7-afbf-a1a6f2732c61.jpg",
+        "https://a0.muscache.com/im/pictures/b8df22ba-65b0-4ae2-b089-44a3a8323f38.jpg"
+      ]
+    }
+  ],
+  "serpapi_pagination": {
+    "current": 1,
+    "next": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=2&q=Austin%2C+TX",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=2&q=Austin%2C+TX",
+      "3": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=3&q=Austin%2C+TX",
+      "4": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=4&q=Austin%2C+TX",
+      "5": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=5&q=Austin%2C+TX",
+      "6": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=6&q=Austin%2C+TX",
+      "7": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=7&q=Austin%2C+TX",
+      "8": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=8&q=Austin%2C+TX",
+      "9": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=9&q=Austin%2C+TX",
+      "10": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=10&q=Austin%2C+TX",
+      "11": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=11&q=Austin%2C+TX",
+      "12": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=12&q=Austin%2C+TX",
+      "13": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=13&q=Austin%2C+TX",
+      "14": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=14&q=Austin%2C+TX",
+      "15": "https://serpapi.com/search.json?airbnb_domain=airbnb.com&currency=USD&engine=airbnb&page=15&q=Austin%2C+TX"
+    }
+  }
+}

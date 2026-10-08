@@ -1,0 +1,2651 @@
+{
+  "search_metadata": {
+    "id": "6a276f1c1748c01a3d0994a2",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/0tuvoPD9rK17yioA1U6exA/6a276f1c1748c01a3d0994a2.json",
+    "created_at": "2026-06-09 01:40:44 UTC",
+    "processed_at": "2026-06-09 01:40:44 UTC",
+    "google_maps_url": "https://www.google.com/maps/search/Coffee/@40.7455096,-74.0083012,14z/?hl=en",
+    "raw_html_file": "https://serpapi.com/searches/0tuvoPD9rK17yioA1U6exA/6a276f1c1748c01a3d0994a2.html",
+    "prettify_html_file": "https://serpapi.com/searches/0tuvoPD9rK17yioA1U6exA/6a276f1c1748c01a3d0994a2.prettify",
+    "total_time_taken": 0.84
+  },
+  "search_parameters": {
+    "engine": "google_maps",
+    "type": "search",
+    "q": "Coffee",
+    "ll": "@40.7455096,-74.0083012,14z",
+    "google_domain": "google.com",
+    "hl": "en"
+  },
+  "search_information": {
+    "local_results_state": "Results for exact spelling",
+    "query_displayed": "Coffee"
+  },
+  "local_results": [
+    {
+      "position": 1,
+      "title": "Shambhu Coffee & Gelato",
+      "place_id": "ChIJC8vfEbJRwokRxWSkJ-0WeAo",
+      "data_id": "0x89c251b211dfcb0b:0xa7816ed27a464c5",
+      "data_cid": "754378145412703429",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251b211dfcb0b%3A0xa7816ed27a464c5&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c251b211dfcb0b%3A0xa7816ed27a464c5&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.716051,
+        "longitude": -74.0647086
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJC8vfEbJRwokRxWSkJ-0WeAo",
+      "provider_id": "/g/11njwsrj39",
+      "rating": 5,
+      "reviews": 26,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "667 Grand St Unit B, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closes soon · 10 PM · Opens 6 AM Tue",
+      "hours": "Closes soon · 10 PM · Opens 6 AM Tue",
+      "operating_hours": {
+        "monday": "6 AM–10 PM",
+        "tuesday": "6 AM–10 PM",
+        "wednesday": "6 AM–10 PM",
+        "thursday": "6 AM–10 PM",
+        "friday": "6 AM–10 PM",
+        "saturday": "7 AM–10 PM",
+        "sunday": "7 AM–10 PM"
+      },
+      "phone": "(201) 238-0037",
+      "extensions": [
+        {
+          "service_options": [
+            "Curbside pickup",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFuandzcmozORgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHn5idbvDLM2O7K26DGOohe6QdQjy41PYU_lRiLTsbFwQzD7DkTaoU4qJ-MVIaGi_OCAR7gsUftFrKRV25aTiKV4raE5WaOMUIIUpZ1br3s9wCqWFxvsNeHi2VC1yVtdWzVrGtwfcAbpkXD=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/kaU7KnicHcTNboIwAADgJ6r8CJKZeCB0IENECC26iymlQgej2HYyfcmd9zYmfofv_6_TelJrwxi65aIVoh3Yj2KSilGzUS-o-DbaSQGqgDL8wz7v_e3o8qa-wV1qZ15ir2CUiY6t8ib_ujvW4YTOQ8F3parDOX9AD_YlEci5foAUxyTi5yzwC69V6KJDmRTYdknJE-xI8u5WJEtRHKPp06rlUr3NwbUKf29qz7bcxoF1x7qpHlhGer5Qv576I9zMlmmaoHtNwfgET8FHSw"
+    },
+    {
+      "position": 2,
+      "title": "Kọ Cafe (Ko Cafe)",
+      "place_id": "ChIJp2T_o5hRwokRtmnUqhndnEc",
+      "data_id": "0x89c25198a3ff64a7:0x479cdd19aad469b6",
+      "data_cid": "5160242375369714102",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25198a3ff64a7%3A0x479cdd19aad469b6&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25198a3ff64a7%3A0x479cdd19aad469b6&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7157906,
+        "longitude": -74.0677908
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJp2T_o5hRwokRtmnUqhndnEc",
+      "provider_id": "/g/11tc13s44q",
+      "rating": 4.9,
+      "reviews": 125,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Cafe",
+      "types": [
+        "Cafe"
+      ],
+      "type_id": "cafe",
+      "type_ids": [
+        "cafe"
+      ],
+      "address": "722 Grand St, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Tue",
+      "hours": "Closed · Opens 8 AM Tue",
+      "operating_hours": {
+        "monday": "8 AM–4 PM",
+        "tuesday": "8 AM–4 PM",
+        "wednesday": "8 AM–4 PM",
+        "thursday": "8 AM–4 PM",
+        "friday": "8 AM–4 PM",
+        "saturday": "9 AM–4 PM",
+        "sunday": "Closed"
+      },
+      "phone": "(551) 310-4631",
+      "website": "https://linktr.ee/kocafe",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Black-owned"
+          ]
+        },
+        {
+          "service_options": [
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection",
+            "Live music",
+            "Live performances"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Prepared foods",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy"
+          ]
+        },
+        {
+          "crowd": [
+            "Groups"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        },
+        {
+          "payments": [
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "Kids' menu"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF0YzEzczQ0cRgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Had a delicious coffee and a perfectly prepared tuna melt.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGaWHMyO_4kbNpcsVgpdBINWGysGm73lC3xLmcH9QNl9ZdIqg1BcCNAtjkABAcLqDZRoLiOSaIjOJ39Gcke1u48IQmlxXAwWBcDCQfdygOT7DHEkC5pG7BIeoutirVNEWjJRBPtaG9qL4B2JKaNpVqUrHGnXm2RR6ez4Si-JGya9dHxuqDqDnBf=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/-wvzQ3icHcTNToMwAADgJ2LAYCImHihdCohFmINlF4OlK_9toWSwN_VNPJr4Hb6f31opMb_oel9bO8Y56-ky04nwUdFR7QgfdCZmTUx83XQvrmxYo7II3rfky-6-sSBzzkQFQlygbUaDY_W-tcYDCdwU9-61CiUzAfGxp9rOAx6JJbxmPG6SUxm2SWS5iHTUXOznMB369eLdC0Cgn96qjSWfDgyOnX8QyAEh5YtqphwfizbKwIcqkStjG-yjtxKLXJ6nAI2XYZ9lT_RhnxotQlvpVsG6SCjhCG6vd9MwDK3-n2jjH854VXM"
+    },
+    {
+      "position": 3,
+      "title": "Hidden Grounds Chai & Coffee House",
+      "place_id": "ChIJm80YXABRwokRt5SISvQ7--s",
+      "data_id": "0x89c251005c18cd9b:0xebfb3bf44a8894b7",
+      "data_cid": "17004250738475963575",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251005c18cd9b%3A0xebfb3bf44a8894b7&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c251005c18cd9b%3A0xebfb3bf44a8894b7&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.719984499999995,
+        "longitude": -74.06654309999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJm80YXABRwokRt5SISvQ7--s",
+      "provider_id": "/g/11wbfwrct6",
+      "rating": 4.7,
+      "reviews": 102,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Bakery",
+        "Cafe",
+        "Coffee roastery"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "bakery",
+        "cafe",
+        "coffee_roasters"
+      ],
+      "address": "144 Summit Ave Retail A, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Tue",
+      "hours": "Closed · Opens 7 AM Tue",
+      "operating_hours": {
+        "monday": "7 AM–6 PM",
+        "tuesday": "7 AM–6 PM",
+        "wednesday": "7 AM–6 PM",
+        "thursday": "7 AM–6 PM",
+        "friday": "7 AM–6 PM",
+        "saturday": "8 AM–6 PM",
+        "sunday": "8 AM–6 PM"
+      },
+      "phone": "(201) 903-7084",
+      "website": "https://www.thehiddengrounds.com/",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Asian-owned",
+            "Identifies as women-owned",
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Curbside pickup",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection",
+            "Live performances"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Quick bite",
+            "Small plates"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking",
+            "Paid street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF3YmZ3cmN0NhgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Excellent coffee, cold brew, full espresso service\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEhUi-8TPT7Uz1vhLbE7e_CY-ZsJvJvmuKGOKxyPVDWjyZBWM1e9Ftq9biaC0KjIjBj-8VVduKQbPV6jR_vWcNzwtiNIWg9WPLUrXo_W3qfQJ2Io2aR2cB2k8N_MG3rHfG87UIm7nTtK-HQ=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/lGj-InicHcRJDoIwAADAF1W2RMDEg7ggVLEYoOqFSK2UKlRpweWTnv2NiXOY74cpdZMjTbsya1AKUV5pJ2lLRKNoowZE1Fp5k4BIILUJiuLLZM7SCjgJSuz0bfRsVcxtmk_34CDDPuzrDvob-HyhbIb56-DhtUHdhbq7RXWc6pAH3OPAybJTB-MCZUO-zXtMovdDVVGASxejVdruRI6t-zkOzUCYx61JPPPiRPnat9rl2XfsNKjtJlEQLOPxw9B1HbD_BDQ_fP9Gdw"
+    },
+    {
+      "position": 4,
+      "title": "Fusion Cafe Premium Coffee Shop",
+      "place_id": "ChIJ251ovzBRwokRFi-52jUJeyI",
+      "data_id": "0x89c25130bf689ddb:0x227b0935dab92f16",
+      "data_cid": "2484589746332446486",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25130bf689ddb%3A0x227b0935dab92f16&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25130bf689ddb%3A0x227b0935dab92f16&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7157218,
+        "longitude": -74.0667034
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ251ovzBRwokRFi-52jUJeyI",
+      "provider_id": "/g/11s890qbjk",
+      "rating": 4.7,
+      "reviews": 21,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Cafe",
+      "types": [
+        "Cafe"
+      ],
+      "type_id": "cafe",
+      "type_ids": [
+        "cafe"
+      ],
+      "address": "703 Grand St, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7:30 AM Tue",
+      "hours": "Closed · Opens 7:30 AM Tue",
+      "operating_hours": {
+        "monday": "7:30 AM–4:30 PM",
+        "tuesday": "7:30 AM–4:30 PM",
+        "wednesday": "7:30 AM–4:30 PM",
+        "thursday": "7:30 AM–4:30 PM",
+        "friday": "7:30 AM–4:30 PM",
+        "saturday": "7:30 AM–2 PM",
+        "sunday": "Closed"
+      },
+      "phone": "(201) 360-2374",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Latino-owned"
+          ]
+        },
+        {
+          "service_options": [
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great dessert",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFzODkwcWJqaxgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Excellent service and good coffee, the coconut fusion is extraordinary.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHu4Fag1MirAzI7Naw39OQaYf6CnEnB8X3FwX04tFUMSveDJZf30USkX8OD9dwsPi5plWqZeKqLh_Z-BFK8XJ3EYaPqaATvz3PkosmzBe5eeDMsOENQUfhYrY27ayriLiRRrAej=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/e943THicHcTbboIwGADgJ6rUVScu2UURyDxw0hGBm6VhPxTBFtoqGS_oM_g2JvsuvueDG9PrD8vqOJnVUtYd3DSoUgoDwsxKebXqXqNSI23ROExa-nVb-KyeB42i03YVspGso4Tl1ftGeMKxM-KPGV4YPw1Od3B3RUVwemozO3LXv6OOm2XfnYcC9sOB_xTI8fd2tiNezuKB0e_7ROJW6uvkwBLADXTkhUla8Vzlbyv2p5pDczwqCpfPcY4xRvz_EokXAy1EWA"
+    },
+    {
+      "position": 5,
+      "title": "Bleu Coffee",
+      "place_id": "ChIJd83z3CJZwokRY3MfmCGkSyU",
+      "data_id": "0x89c25922dcf3cd77:0x254ba421981f7363",
+      "data_cid": "2687422066849706851",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25922dcf3cd77%3A0x254ba421981f7363&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25922dcf3cd77%3A0x254ba421981f7363&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7213642,
+        "longitude": -74.0638158
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJd83z3CJZwokRY3MfmCGkSyU",
+      "provider_id": "/g/11fnq3lj3d",
+      "rating": 4.8,
+      "reviews": 280,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Coffee store"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "coffee_store"
+      ],
+      "address": "56 Beacon Way Lobby, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Tue",
+      "hours": "Closed · Opens 7 AM Tue",
+      "operating_hours": {
+        "monday": "7 AM–4 PM",
+        "tuesday": "7 AM–4 PM",
+        "wednesday": "7 AM–4 PM",
+        "thursday": "7 AM–4 PM",
+        "friday": "7 AM–4 PM",
+        "saturday": "7 AM–5 PM",
+        "sunday": "7 AM–5 PM"
+      },
+      "phone": "(201) 565-2758",
+      "website": "http://bleucoffee.com/",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as Black-owned"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Curbside pickup",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Quick bite",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "accessibility": [
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFmbnEzbGozZBgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Excellent coffee, very clean space, and respectful staff.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwxg3gRAdhJmOPOvpMgsnjZfxPIY7hTkp-kK459N-IQVRe987rj7vfgi0CMQD56GISm0Ej_09sm2hSwzU9BhXYPuO2Bz2o4I6QIM3MFWO06DMWr-KBoYKqqleKJrYRc-xBIz0=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/tWmdUXicHcRJDoIwAADAFxUqKIiJB1A0lZTVDS8eamllK1IQwgP9g78xcQ7z_fCua-RKVUuuK0wIVtJe0paIuqN1pxBRqayRgEggVTv0o8J2h5HpLLYf_FAFYfBuMJN1fsvGEKUmPxYNKLz5wvIBis4xtZZmm5vvjD3hBkfbhbFHSQXd_A4tWWk8GaaT5fBrGvaB5kyamCMjQljHu0sAjS2-tMBzROq9XiX1Dm0aEzA6aILrYQYhBPw_AfUPy3JCuw"
+    },
+    {
+      "position": 6,
+      "title": "Snapdragon Coffee & Social",
+      "place_id": "ChIJ_WKaffBRwokReKqSrC1-vIo",
+      "data_id": "0x89c251f07d9a62fd:0x8abc7e2dac92aa78",
+      "data_cid": "9997004007489579640",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251f07d9a62fd%3A0x8abc7e2dac92aa78&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c251f07d9a62fd%3A0x8abc7e2dac92aa78&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7211432,
+        "longitude": -74.0700186
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ_WKaffBRwokReKqSrC1-vIo",
+      "provider_id": "/g/11ffvvjzc8",
+      "rating": 4.8,
+      "reviews": 548,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Bagel shop",
+        "Coffee store",
+        "Event venue",
+        "Internet cafe",
+        "Pastry shop",
+        "Tea house"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "bagel_shop",
+        "coffee_store",
+        "event_venue",
+        "internet_cafe",
+        "pastry_shop",
+        "tea_house"
+      ],
+      "address": "190 Monticello Ave, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Tue",
+      "hours": "Closed · Opens 8 AM Tue",
+      "operating_hours": {
+        "monday": "8 AM–5:30 PM",
+        "tuesday": "8 AM–5:30 PM",
+        "wednesday": "8 AM–5:30 PM",
+        "thursday": "8 AM–5:30 PM",
+        "friday": "8 AM–6:30 PM",
+        "saturday": "8 AM–6:30 PM",
+        "sunday": "8 AM–5:30 PM"
+      },
+      "phone": "(201) 878-3413",
+      "website": "http://www.snapdragonjc.com/",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as women-owned"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Curbside pickup",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection",
+            "Live performances"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Organic dishes",
+            "Prepared foods",
+            "Quick bite",
+            "Small plates",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dinner",
+            "Catering",
+            "Dessert",
+            "Seating",
+            "Table service"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students",
+            "Family-friendly",
+            "Groups",
+            "LGBTQ+ friendly"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking",
+            "Paid street parking",
+            "Usually somewhat difficult to find a space"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "delivery": true
+      },
+      "user_review": "\"Eclectic decor, delicious coffee, really friendly staff.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFvn9fqmCSi5OjHeWZ2gvKikmVlokDHZsCWN_f-PdKUxvRjsx42SbbeyDmpSdoform1IGGkXs7WEFBAgyQiYcaoHM7YDdmzHZl7C9Fm5HYmIm24peIjtNf7IA2YAdvVHv7BYJpEag=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/a6FLjHicHcTdboIwGADQJ6ogYhpNdlFBLDNjKlFWbhYtpfx9tLNdp77hHsG3WbJzcZ6_jbXaLD1vaGYTqZQcxLcRV65GK0Y74Qo8qQ3iBhmP7LJ9TxI3LuoviPJ2_t5RUZSBdNu2h9Og-piWJiqyzxrtqu3x5g6duYVBfrmIeww6r1StrjBNN5v-w-BinayIvO9bxs-KvmEWV_Cg5YCjRQJzyiCFINQi7WxW45QEjFTuRB1esVe9PsuXn6nv-6j5n6PxD33HRko"
+    },
+    {
+      "position": 7,
+      "title": "modcup coffee co.",
+      "place_id": "ChIJRRJAXABRwokRT6Y7oK1bE14",
+      "data_id": "0x89c251005c401245:0x5e135bada03ba64f",
+      "data_cid": "6778862665398462031",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251005c401245%3A0x5e135bada03ba64f&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c251005c401245%3A0x5e135bada03ba64f&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.711728699999995,
+        "longitude": -74.06271029999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJRRJAXABRwokRT6Y7oK1bE14",
+      "provider_id": "/g/11nj116tw6",
+      "rating": 4.8,
+      "reviews": 6,
+      "unclaimed_listing": true,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "360 Communipaw Ave, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7:30 AM Tue",
+      "hours": "Closed · Opens 7:30 AM Tue",
+      "operating_hours": {
+        "monday": "7:30 AM–4 PM",
+        "tuesday": "7:30 AM–4 PM",
+        "wednesday": "7:30 AM–4 PM",
+        "thursday": "7:30 AM–4 PM",
+        "friday": "7:30 AM–4 PM",
+        "saturday": "7:30 AM–4 PM",
+        "sunday": "7:30 AM–4 PM"
+      },
+      "extensions": [
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        }
+      ],
+      "user_review": "\"Firstly, the service was great and the barista was very kind and helpful.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHBdOAhMtbZdzLbowh3fz2wpndKbYCi7548tQFwh9RGXeweMzfBC9fkvumTi4Zf7frsZBHAB_aaGyMe3l1hazNfR1yQCObploZDt6oYtJ2SOqirZ_b464eR-HJM1BaOh6-XzQMRl9osW8Tr=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/c4IvHnicHcTBboIwAADQL6qAIMqSHSiLELeKIMm0F0KhpcRKkVYb-5M7-zdLfIf3-uNaT-rDcQT3F72UvaB3RedWjpqOetHKq9NPCrQKKCc-7ItLnMEujznSBHf2h0jDfWaXZhq7b3JOhvUq2Ohia3hUpidqKLIMJhG7PO7XaggwW7NZYZjFsG6a9ImoLzze2D0rvWeR5GQSEn_pUJ71bnnMb8OMaxKEAS1BtkMebHIegpMtUCkiqX431fxpPNd1AX_fgvEfGedIDg"
+    },
+    {
+      "position": 8,
+      "title": "Jasmine Cafe House",
+      "place_id": "ChIJp7t2KwpXwokRRWG7JAhR9qk",
+      "data_id": "0x89c2570a2b76bba7:0xa9f6510824bb6145",
+      "data_cid": "12247065332098490693",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2570a2b76bba7%3A0xa9f6510824bb6145&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c2570a2b76bba7%3A0xa9f6510824bb6145&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.732161399999995,
+        "longitude": -74.0725815
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJp7t2KwpXwokRRWG7JAhR9qk",
+      "provider_id": "/g/11yt69c5_l",
+      "rating": 5,
+      "reviews": 18,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "950 West Side Ave, Jersey City, NJ 07306",
+      "country": "United States",
+      "open_state": "Open · Closes 11 PM",
+      "hours": "Open · Closes 11 PM",
+      "operating_hours": {
+        "monday": "7 AM–11 PM",
+        "tuesday": "7 AM–11 PM",
+        "wednesday": "7 AM–11 PM",
+        "thursday": "7 AM–11 PM",
+        "friday": "7 AM–12 AM",
+        "saturday": "8 AM–12 AM",
+        "sunday": "8 AM–10 PM"
+      },
+      "phone": "(201) 469-1402",
+      "website": "http://jasminecafehouse.com/",
+      "extensions": [
+        {
+          "service_options": [
+            "Curbside pickup",
+            "Delivery",
+            "Drive-through",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "popular_for": [
+            "Solo dining"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "drive_through": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF5dDY5YzVfbBgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Great coffee, cozy atmosphere, and super friendly service.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGitOIZKLjqPja_NgEOZTHm6F3bbBVhSbYgMI-lQf5AtIxPNPUxKe3ABnvMcD3LABwsxTLvftRiIqDREwsofGXXOGp45aLXAAxKsya1evzNbi1vHkjzsH6voSR3SbFUkoNZtG_GLGksgGiq=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/9LinD3icHcTPboIwHADgJ6pAmB5MPJSohVALgi6Mi6FNKf-ksF9XmC-5895myb7D9_vTGDPB3nGGxt8ordUgv0B-Cj0aOZqN0E9HTYAEIHBwyq49Jq1JojKm3Zx21YOpU1Lewufu7HMevDc5_1CXCA3XeotNtKYsva-x9HEw2os4-hQHC6w3amuTtdF8zE4L6JoURUKmt21FC4zXGL4rT9oX461nw757QbizOs_8nJ_vvWalIQ9CSQ-KtPNh8VzXRc3_Ao1_4SRIoQ"
+    },
+    {
+      "position": 9,
+      "title": "3 Coffee Beans",
+      "place_id": "ChIJ-fSiiM1QwokRu9C-bhb0Zwg",
+      "data_id": "0x89c250cd88a2f4f9:0x867f4166ebed0bb",
+      "data_cid": "605721052089077947",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c250cd88a2f4f9%3A0x867f4166ebed0bb&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c250cd88a2f4f9%3A0x867f4166ebed0bb&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7241421,
+        "longitude": -74.0648418
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ-fSiiM1QwokRu9C-bhb0Zwg",
+      "provider_id": "/g/1td_cln9",
+      "rating": 4.6,
+      "reviews": 108,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Mexican restaurant",
+      "types": [
+        "Mexican restaurant",
+        "Delivery Restaurant"
+      ],
+      "type_id": "mexican_restaurant",
+      "type_ids": [
+        "mexican_restaurant",
+        "meal_delivery"
+      ],
+      "address": "658 Montgomery St, Jersey City, NJ 07306",
+      "country": "United States",
+      "open_state": "Closes soon · 10 PM · Opens 11 AM Tue",
+      "hours": "Closes soon · 10 PM · Opens 11 AM Tue",
+      "operating_hours": {
+        "monday": "11 AM–10 PM",
+        "tuesday": "11 AM–10 PM",
+        "wednesday": "11 AM–10 PM",
+        "thursday": "11 AM–10 PM",
+        "friday": "11 AM–10 PM",
+        "saturday": "11 AM–10 PM",
+        "sunday": "Closed"
+      },
+      "phone": "(201) 984-0212",
+      "website": "https://3-coffeebeansrestaurant.square.site/",
+      "extensions": [
+        {
+          "service_options": [
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Solo dining"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Quick bite",
+            "Small plates"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Lunch",
+            "Dinner",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EiUKI-ICIDIeEhciFdLX29IPDwoLL2cvMXRkX2NsbjkYADoDCPAN&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"They keep it simple and it works love it at 3 coffee beans !\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH_kzTcP4wvO8hAmrW97fiG0aK166co7odOCqO41hOQvArSdt-XbUBIQdbPoDdj4i4JSd5kcADlNO43y9sx5oPWmSjXt6rCQDN-umZGxiZqGyV_M_krp0r-IyYAlaa5iQbBYZ0HU1-ovUw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/vxshP3icHcTdboIwGADQJ6qUWHAu2UWVBN0ySsOYyg2BllHk58O2guwhd7-3WbJzcX5_lLWjeXacTq1XNUDdVXdTaQGDrQa7EtA79WiQMMg4NI54Sw95-_0hYjJP7EnRXp-2m68mxMWb6_sCNiDZ_saIqxifqE6kRecy3R25LGMI5JU05DWRXito0EWMrJeteXgQn_rkera-3vMgQvc-Cx9NdguXz_w9b_WINTouF9oVhdfwcnfJ8CF1EUzp_DK7GGOk_hdo-AM2Dkbb"
+    },
+    {
+      "position": 10,
+      "title": "Hybrid Coffee & Kitchen - The Heights",
+      "place_id": "ChIJ95kGTYpXwokR_pX2T33QRX0",
+      "data_id": "0x89c2578a4d0699f7:0x7d45d07d4ff695fe",
+      "data_cid": "9026850264765076990",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2578a4d0699f7%3A0x7d45d07d4ff695fe&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c2578a4d0699f7%3A0x7d45d07d4ff695fe&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.748163399999996,
+        "longitude": -74.0419436
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ95kGTYpXwokR_pX2T33QRX0",
+      "provider_id": "/g/11y0ntqv_2",
+      "rating": 4.9,
+      "reviews": 25,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Bakery",
+        "Cafe",
+        "Dessert shop",
+        "Restaurant"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "bakery",
+        "cafe",
+        "dessert_shop",
+        "restaurant"
+      ],
+      "address": "573 Palisade Ave, Jersey City, NJ 07307",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Tue",
+      "hours": "Closed · Opens 7 AM Tue",
+      "operating_hours": {
+        "monday": "7 AM–4 PM",
+        "tuesday": "7 AM–4 PM",
+        "wednesday": "7 AM–4 PM",
+        "thursday": "7 AM–4 PM",
+        "friday": "7 AM–4 PM",
+        "saturday": "8 AM–4 PM",
+        "sunday": "Closed"
+      },
+      "phone": "(201) 993-9028",
+      "website": "http://www.hybridcoffee.co/",
+      "extensions": [
+        {
+          "service_options": [
+            "Curbside pickup",
+            "No-contact delivery",
+            "Delivery",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Small plates"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Catering",
+            "Dessert",
+            "Seating",
+            "Table service"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly"
+          ]
+        },
+        {
+          "payments": [
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF5MG50cXZfMhgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Great coffee, fire food options, and quality service.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJ5a0N93rqGMrX4MclbFxTauRGtX27WxI-HM-ErjZ-y47ThF11BvoP-e6LLZtrROC28iDg4NpX14yf3hFif2E9O5pEA5FZVFOKn_C18JzcrpbcsCkzowvk05Wmzwbt1GHAZyIFk84oeoj3=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/nuaNUXicHcRLjoIwAADQE1VaKIomLhik-APUmIGwmUhTqYK0tlWES87a25j4Fu_9z42RemZZDXdGlRBVwx6aKSpaw1ozouJmVVIDqoG2_F2yr_1o7Z5gMnXUPYpVjmPalOR1PD0OkcntSfZagWUMQnUtQI8nR04Q-nmKHWDj7bYw6pAGtndZVDiROcL92eHkcrbDaerK0HdJ8UvSTfsXIG89UCVLqoN6EN2zhm52G7rSoGjpF_2K1B4WTFydeYcghIB_p6D9AM0sRbo"
+    },
+    {
+      "position": 11,
+      "title": "Crema",
+      "place_id": "ChIJXUHm8dNQwokRv2qjE0wO2aY",
+      "data_id": "0x89c250d3f1e6415d:0xa6d90e4c13a36abf",
+      "data_cid": "12022656400152029887",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c250d3f1e6415d%3A0xa6d90e4c13a36abf&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c250d3f1e6415d%3A0xa6d90e4c13a36abf&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.723837499999995,
+        "longitude": -74.070464
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJXUHm8dNQwokRv2qjE0wO2aY",
+      "provider_id": "/g/11gdm2v_02",
+      "rating": 4.8,
+      "reviews": 383,
+      "price": "$1–20",
+      "extracted_price": 1,
+      "type": "Espresso bar",
+      "types": [
+        "Espresso bar",
+        "Breakfast restaurant",
+        "Ice cream shop"
+      ],
+      "type_id": "espresso_bar",
+      "type_ids": [
+        "espresso_bar",
+        "breakfast_restaurant",
+        "ice_cream_shop"
+      ],
+      "address": "1 Duncan Ave, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7:30 AM Tue",
+      "hours": "Closed · Opens 7:30 AM Tue",
+      "operating_hours": {
+        "monday": "7:30 AM–7 PM",
+        "tuesday": "7:30 AM–7 PM",
+        "wednesday": "7:30 AM–7 PM",
+        "thursday": "7:30 AM–7 PM",
+        "friday": "7:30 AM–7 PM",
+        "saturday": "8:30 AM–7 PM",
+        "sunday": "8:30 AM–7 PM"
+      },
+      "phone": "(551) 689-5229",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great dessert",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Healthy options",
+            "Quick bite",
+            "Small plates",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dessert",
+            "Seating",
+            "Table service"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trending",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Tourists"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking",
+            "Usually difficult to find a space"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible parking lot"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFnZG0ydl8wMhgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Coffee and pastries are on point and the owner is incredibly nice.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHqpmSpo4t4pj470EnELynINKtgBF-fcey3LTVcrbazs0uCTINZL5dH_U3cpGhj7vh_PRYF5Zk0EzusC1nDCIEzOYnNVmzN0Fxuwo38oRO88Zkt1wYScCI6NaroNIuyWgHe_xmU4Q=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/vZpx2HicHcRdDoIgAADgE5E4rVxbD2WaLEf_Nn1xRQTLBBLI9IYdodu09T183w83RumJ4zy4N2BSsge1mjZECkOFGRBZO0xpQDTQzmyDt9Useap6r6RvfHX3xzASUdoJhFeGzWNwI7Tz0kNGmsu519CGB4SLdHhNyqNH1JLfxy9ebnZ5PCwqGPVWh65YhCjq17nAWd1jGL9tK71A7tZBUFTGbfM9CdEInxuJke1OLKHluz7622nrQggB_0-A-AEgRkYG"
+    },
+    {
+      "position": 12,
+      "title": "Haraz Coffee House",
+      "place_id": "ChIJ748f5D9ZwokRNXAVDq2Zzr0",
+      "data_id": "0x89c2593fe41f8fef:0xbdce99ad0e157035",
+      "data_cid": "13677038086915452981",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2593fe41f8fef%3A0xbdce99ad0e157035&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c2593fe41f8fef%3A0xbdce99ad0e157035&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7253393,
+        "longitude": -74.00377759999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ748f5D9ZwokRNXAVDq2Zzr0",
+      "provider_id": "/g/11ltcywj5q",
+      "rating": 4.5,
+      "reviews": 698,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "210 Spring St, New York, NY 10012",
+      "country": "United States",
+      "open_state": "Open · Closes 12 AM",
+      "hours": "Open · Closes 12 AM",
+      "operating_hours": {
+        "monday": "8 AM–12 AM",
+        "tuesday": "8 AM–12 AM",
+        "wednesday": "8 AM–12 AM",
+        "thursday": "8 AM–12 AM",
+        "friday": "8 AM–1 AM",
+        "saturday": "8 AM–1 AM",
+        "sunday": "8 AM–12 AM"
+      },
+      "phone": "(347) 917-4815",
+      "website": "http://harazcoffeehouse.com/",
+      "extensions": [
+        {
+          "service_options": [
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Tourists"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "accessibility": [
+            "Wheelchair accessible parking lot"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFsdGN5d2o1cRgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The coffee was rich and bold, perfectly dark-roasted, just how I like it.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhH7qb95yX9wWuKJZPa2q7Z8SVxuTM8NvNwmCaLkrnXMndTV4l1RjfUDDjPO2whRsqj18F30fR6OurCL0T3gUmHmm5Wx9vMxQYvk5XdlLlyKop3wonuidbojzdc5FmPsBN1_11l67ez2szWNADfqQvtfG5YwCl8aoR-NxPt-_-hvduKQ0RaA3vBC=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/OBjUVnicHcTbckNAAADQLxKWCDrTB2HSTF0iKiF5yYh1qSyLveFP-yd97EzPw_n5bSgdyJsso0bb1BjXqGSknArc07KnmwJ3cj0QaZjwvMi2D7duczTGp6UvmSVS5n3eo1wdjbv5dZ1ZEpghD0Xn5P5r6rOgh8l1i0DcVhfXbaOTKpqYjC0wD5pSxbsTmxxfSbT60h27Tk9niwfz-cZfegaRjxYPD5rAPfuGT9yusNAPXUT2IXgAgHZGuapkTUPbrcYzp9WHfhMOMnMcS-EcUekhNRwy76zEua3xvfMugKIoUvN_IfV_Pm9Wjw"
+    },
+    {
+      "position": 13,
+      "title": "KokoRo Bubble Tea & Craft Coffee Latte",
+      "place_id": "ChIJcdffCsdRwokR-8VwLn0vU7o",
+      "data_id": "0x89c251c70adfd771:0xba532f7d2e70c5fb",
+      "data_cid": "13426127128818140667",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251c70adfd771%3A0xba532f7d2e70c5fb&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c251c70adfd771%3A0xba532f7d2e70c5fb&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.711278199999995,
+        "longitude": -74.0582766
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJcdffCsdRwokR-8VwLn0vU7o",
+      "provider_id": "/g/11mzckm36d",
+      "rating": 5,
+      "reviews": 10,
+      "type": "Cafe",
+      "types": [
+        "Cafe",
+        "Bubble tea store",
+        "Coffee store"
+      ],
+      "type_id": "cafe",
+      "type_ids": [
+        "cafe",
+        "bubble_tea_store",
+        "coffee_store"
+      ],
+      "address": "68 Monitor St, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 9 AM Tue",
+      "hours": "Closed · Opens 9 AM Tue",
+      "operating_hours": {
+        "monday": "Closed",
+        "tuesday": "9 AM–7 PM",
+        "wednesday": "9 AM–7 PM",
+        "thursday": "9 AM–7 PM",
+        "friday": "9 AM–8 PM",
+        "saturday": "9 AM–8 PM",
+        "sunday": "9 AM–8 PM"
+      },
+      "extensions": [
+        {
+          "service_options": [
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great tea selection"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFtemNrbTM2ZBgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Great flavors and sweet employees!\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhHZkebh1z4ikDoX5Y8d5LQKAfoURsaRwixD9sIQaQJLwp6eHR8cfWXnvyFRgUjs0DnmQOgOSvw65D4UVQ9TgEXmVtTm3lMn3K9llINmQtnJB553LjmFrz1at3ba9ttNtzewFfKAvH10k8c_6r6Yak6zzDPJu_fhSlMUOvYIvH9EIEgfsnOYt9cZtA=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/lk89kHicHcTbboIwAADQL0IgXAJL9sAChJuyojjwxWAtrdILoRWUP_VX9rRk5-G8f4lSo_zQdUqsDRYCU_SQaIKCK8TVBgqm41Fq4ySeLz0ornZIktOALsRc7dsQisZpvatTgDzoRV3Jrlpuz9CXKehAViyji5LKg_1Pw-dXXOH6Lo2QM1Dicj8vrhPa9RH4Bxw17KgOzKJbbuU-pemOAcWzL8exijuLp9XslHXpfKV2akVL3OfBnJjG4MGzO7ltN7jrGn5nj3NP9nRbl3ObzokfpRHuJS9b5cOTCj4X0zAMjfwPNf4HBZpXjg"
+    },
+    {
+      "position": 14,
+      "title": "Hybrid Coffee & Kitchen – Downtown",
+      "place_id": "ChIJU5MEEWZRwokRE8bl3VuUrJ0",
+      "data_id": "0x89c2516611049353:0x9dac945bdde5c613",
+      "data_cid": "11361619082234676755",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2516611049353%3A0x9dac945bdde5c613&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c2516611049353%3A0x9dac945bdde5c613&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.722912099999995,
+        "longitude": -74.0422803
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJU5MEEWZRwokRE8bl3VuUrJ0",
+      "provider_id": "/g/11ng7_s1cn",
+      "rating": 4.8,
+      "reviews": 602,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Breakfast restaurant",
+        "Brunch restaurant",
+        "Cafe",
+        "Lunch restaurant",
+        "Pastry shop",
+        "Restaurant"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "breakfast_restaurant",
+        "brunch_restaurant",
+        "cafe",
+        "lunch_restaurant",
+        "pastry_shop",
+        "restaurant"
+      ],
+      "address": "398 Manila Ave, Jersey City, NJ 07302",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Tue",
+      "hours": "Closed · Opens 8 AM Tue",
+      "operating_hours": {
+        "monday": "8 AM–4 PM",
+        "tuesday": "8 AM–4 PM",
+        "wednesday": "8 AM–4 PM",
+        "thursday": "8 AM–4 PM",
+        "friday": "8 AM–4 PM",
+        "saturday": "8 AM–4 PM",
+        "sunday": "Closed"
+      },
+      "phone": "(201) 993-9028",
+      "website": "http://www.hybridcoffee.co/",
+      "description": "Hip cafe serving snacks & coffees. Trendy cafe providing coffees & smoothies, plus light meals like avocado toast & acai bowls.",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Healthy options",
+            "Prepared foods",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Catering",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "Tourists"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs",
+            "Kids' menu"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed",
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "accessibility": [
+            "Wheelchair accessible parking lot"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFuZzdfczFjbhgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Coffee, homemade pastries, and avocado toast are out of this world.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfddVGQHm8DEfNUC7YL6sggUUmX-D-1bAkFGL1_6PZttHMMT3ynzwHm97ntpXzBS3Qe48WBx9TbK-hFNe9pET6eNT3-rtgQ88hzvx_ECs1_u60_gprm0EhL2ra6gTYrcdhTdol=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/RfEwe3icHcTbCoIwAADQL1rOjKVBD1orIZOk2e1Faq4Nche2dfMH-4b-Jug8nO9HeG_cJAg6EQ241rxjd8cs1coz5QdUy4AbB6gDLkg3ZXVL8bVtd8sql_EcX8t6Nj4WyHFe1_IA5iC8pLfFsggbtDl5n6_XJHqr_pnLZKy8OfTZNqrYKN5nr4RcVkAsSpYYTBArSQSs51Uci_7xavDMhc0dwYYbKyEWxdCeESdHS1tBWt1NnyGEEIj_FKgf4X1D5Q"
+    },
+    {
+      "position": 15,
+      "title": "Crepeccino",
+      "place_id": "ChIJHXhg8_9XwokRj0TOGskyT4Y",
+      "data_id": "0x89c257fff360781d:0x864f32c91ace448f",
+      "data_cid": "9678009963562026127",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c257fff360781d%3A0x864f32c91ace448f&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c257fff360781d%3A0x864f32c91ace448f&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7341793,
+        "longitude": -74.0592118
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJHXhg8_9XwokRj0TOGskyT4Y",
+      "provider_id": "/g/11lnx3_7_g",
+      "rating": 4.6,
+      "reviews": 188,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Breakfast restaurant",
+        "Brunch restaurant",
+        "Cafe",
+        "Creperie",
+        "Dessert shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "breakfast_restaurant",
+        "brunch_restaurant",
+        "cafe",
+        "creperie",
+        "dessert_shop"
+      ],
+      "address": "586 Summit Ave, Jersey City, NJ 07306",
+      "country": "United States",
+      "open_state": "Open · Closes 12 AM",
+      "hours": "Open · Closes 12 AM",
+      "operating_hours": {
+        "monday": "7 AM–12 AM",
+        "tuesday": "7 AM–12 AM",
+        "wednesday": "7 AM–12 AM",
+        "thursday": "7 AM–12 AM",
+        "friday": "7 AM–12 AM",
+        "saturday": "8 AM–12 AM",
+        "sunday": "8 AM–12 AM"
+      },
+      "phone": "(201) 272-1632",
+      "website": "https://crepeccino.square.site/",
+      "extensions": [
+        {
+          "service_options": [
+            "Curbside pickup",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great dessert",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Late-night food",
+            "Organic dishes",
+            "Prepared foods",
+            "Private dining room",
+            "Quick bite",
+            "Small plates",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dinner",
+            "Catering",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "College students"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFsbngzXzdfZxgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The coffee was absolutely perfect, and the snacks were fresh and delicious.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEs62xmSBEH3K7hAedkMQhOLgIsDtIWAC2uVGFwNI3aNhLXr144rhBJ0gPTV9h-oh73kOaz5DJs-v0TcseOi3PrIP4R1stAi1LDlFsgWFXg77lkzJ7J4xZQpJGw2jk1c9uDwD2UJGF-AiQ8=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/RpVHL3icHcTdTsIwGADQJypr12mFxIti2Vid-1EE4h2pTTs61mVfxwgv6bVvY-K5OL8_NoQBVlHUWbow3ptOT6BH5fug-7BQ_hKZAZACBBGvy8bxDTzGt8vHerOlr8xy_e3eGlsVJgcR8gN_iad9ls5lTk-lLY4jSZLRriU29W6_tMhbRl11uj8ICeiKdwp01dJ6zOvknUDgLSlEl4I5pEfDWOfuksnk9tUMMpvjsyNqOYlZxJ8ySxFvm6fnmWCMkf1fof4P5LhFHQ"
+    },
+    {
+      "position": 16,
+      "title": "Bleu Coffee",
+      "place_id": "ChIJOx_I5mZRwokRDMynEXlohd4",
+      "data_id": "0x89c25166e6c81f3b:0xde85687911a7cc0c",
+      "data_cid": "16034336917519059980",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25166e6c81f3b%3A0xde85687911a7cc0c&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25166e6c81f3b%3A0xde85687911a7cc0c&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7219623,
+        "longitude": -74.04043709999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJOx_I5mZRwokRDMynEXlohd4",
+      "provider_id": "/g/11sdb8g2lh",
+      "rating": 4.8,
+      "reviews": 557,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "175 2nd St, Jersey City, NJ 07302",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Tue",
+      "hours": "Closed · Opens 7 AM Tue",
+      "operating_hours": {
+        "monday": "7 AM–5 PM",
+        "tuesday": "7 AM–5 PM",
+        "wednesday": "7 AM–5 PM",
+        "thursday": "7 AM–5 PM",
+        "friday": "7 AM–5 PM",
+        "saturday": "7 AM–5 PM",
+        "sunday": "7 AM–5 PM"
+      },
+      "phone": "(201) 614-5645",
+      "website": "http://bleucoffee.com/",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Curbside pickup",
+            "No-contact delivery",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Catering",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Tourists",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "curbside_pickup": true,
+        "no_contact_delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFzZGI4ZzJsaBgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The coffee is truly delicious - rich, smooth, and perfectly brewed.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEi3btchO9VLV4x3v7heocUbdeZ5gvTJIne3ZMGVRh0rv0-yTSA_O_OP5xHLDZqlinUBgF6todzG9xxz5b9Kb1AlnHKbOrxdUMNt9LTZgqLQRBSsxYyZG9hT82TyS5CHdGIVAUVYQ=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/ZYcYAXicHcRRbsIgAADQE2HRriom-8BNW2e11lIS-TGBEjBW0IId9YY7wm6zZO_j_f5o7-9uEUWtjkfKWtXKp5OdsMZL40fC3iJ1d0A44CJ82JdXvLrE3AtdIJrTtxD3My2tqHkjWaJ68rUxMma7lB417HoIBlLhc3EuDknI8k_2aC-mXqr11NvmlaIQXglHWz7Grcm2vOhCU-_2HuWEqUdeHpeVC6eBpUiT-YQMVfKRNemG4pqeyvfvMYQQ6P8FMH8O30Vt"
+    },
+    {
+      "position": 17,
+      "title": "Kaffa Espresso Bar",
+      "place_id": "ChIJKUsl0gNRwokRKcEX2z_zyuA",
+      "data_id": "0x89c25103d2254b29:0xe0caf33fdb17c129",
+      "data_cid": "16198026465375666473",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25103d2254b29%3A0xe0caf33fdb17c129&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25103d2254b29%3A0xe0caf33fdb17c129&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7234809,
+        "longitude": -74.0494149
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJKUsl0gNRwokRKcEX2z_zyuA",
+      "provider_id": "/g/11kbnysznk",
+      "rating": 4.9,
+      "reviews": 204,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "276 Newark Ave, Jersey City, NJ 07302",
+      "country": "United States",
+      "open_state": "Closed · Opens 8 AM Tue",
+      "hours": "Closed · Opens 8 AM Tue",
+      "operating_hours": {
+        "monday": "8 AM–4 PM",
+        "tuesday": "8 AM–4 PM",
+        "wednesday": "8 AM–4 PM",
+        "thursday": "8 AM–4 PM",
+        "friday": "8 AM–4 PM",
+        "saturday": "8 AM–5 PM",
+        "sunday": "8 AM–5 PM"
+      },
+      "phone": "(201) 388-0777",
+      "website": "https://www.kaffaespressobar.com/",
+      "extensions": [
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance"
+          ]
+        },
+        {
+          "offerings": [
+            "Alcohol",
+            "Coffee",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Bar onsite",
+            "Restroom"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking",
+            "Paid street parking",
+            "Usually somewhat difficult to find a space"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "service_options": [
+            "Delivery"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": false
+      },
+      "user_review": "\"Nice coffee and atmosphere, relaxing music and very clean.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGjr9glaBiEODGKQ6NKxHUUMR2kZXbyjNTyG7dHvIsOkDUobz8JcPe0OTihzqOQAbuYJsPOQXkDE5cnaIqXgVEdu8cdKC0Glz0kRj1oj9ZELmBpaCV3oMEOhaPF-mbQYrfgvuw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/t2JGFnicHcRJDoIwAADAF1WKxjXxgFBRUEqJEPQGBVspUKTgwgP9g78xcQ7z_fCua9RK00o-GTEpWZn3Km-prLu87kZUVhprFKAKKM3wPSIMu2iXrEw2N4Qt2yUzz33twvAYjMUlTt-Fd3rb82z32CssrFCmw8Khfg7x6caHOyZG2p8d5WMSCwtNaZ3s7zGLUNYvaOaa0C4HKIJCl8Xygg7VpknMaCKPCPPE34IqJef2yh79c_3UIYSA_6eg_gE_V0UQ"
+    },
+    {
+      "position": 18,
+      "title": "Treehouse Coffee Shop",
+      "place_id": "ChIJPeifMIFRwokR8RirpfShwJM",
+      "data_id": "0x89c25181309fe83d:0x93c0a1f4a5ab18f1",
+      "data_cid": "10646687591227398385",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c25181309fe83d%3A0x93c0a1f4a5ab18f1&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c25181309fe83d%3A0x93c0a1f4a5ab18f1&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.7161034,
+        "longitude": -74.0859352
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJPeifMIFRwokR8RirpfShwJM",
+      "provider_id": "/g/11fn5qgmtf",
+      "rating": 4.8,
+      "reviews": 280,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "434A West Side Ave, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Tue",
+      "hours": "Closed · Opens 7 AM Tue",
+      "operating_hours": {
+        "monday": "7 AM–5 PM",
+        "tuesday": "7 AM–5 PM",
+        "wednesday": "7 AM–5 PM",
+        "thursday": "7 AM–5 PM",
+        "friday": "7 AM–5 PM",
+        "saturday": "7 AM–5 PM",
+        "sunday": "7 AM–5 PM"
+      },
+      "phone": "(201) 434-8733",
+      "website": "http://treehousejc.com/",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Identifies as women-owned",
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Fast service",
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Quick bite",
+            "Vegan options",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "accessibility": [
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        },
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFmbjVxZ210ZhgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"The service is always great and their coffee is consistently delicious.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_uSLeLFfCKSumkrWHaasnHzJAZQlr7FVt1-Na3FJaI1k0C1b5aRRuuIpxo_--EoHaRWc2gPFK9vPGVr2XUXViert_tRSNKOjqrz3BMkkm9KR0IvWPz3AAEQeqzSpt1FEWMqVMsA=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/-07-t3icHcRdboIwAADgE1VayWJcsofOUEEEoUQgeyG1qbAVKPRHF27oEbyNid_D93x01k7m0_P6zl-1SrW9cEZorkYrRrviavDayQBugPFwluYSB40rjuJIrru4cIPUVciYGcPlgH_yXm9IaRFImU8OLEIS7tDlg1HqXDT9qwaAQIWMVnzdZiTe3rJ9qdf1uS5_hbaNpUUan_5mvfjfiZTDNqYwulXZ4mMc5GJeiskiElTJXCYGf90RhBB07zkYX-sCRU8"
+    },
+    {
+      "position": 19,
+      "title": "Cafe Lafayette",
+      "place_id": "ChIJPaS-q6xRwokRQcBmn5qLRCk",
+      "data_id": "0x89c251acabbea43d:0x29448b9a9f66c041",
+      "data_cid": "2973655150186905665",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c251acabbea43d%3A0x29448b9a9f66c041&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c251acabbea43d%3A0x29448b9a9f66c041&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.712069,
+        "longitude": -74.058464
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJPaS-q6xRwokRQcBmn5qLRCk",
+      "provider_id": "/g/11h_1zb3x3",
+      "rating": 4.6,
+      "reviews": 359,
+      "price": "$10–20",
+      "extracted_price": 10,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop",
+        "Cafe"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop",
+        "cafe"
+      ],
+      "address": "74 Maple St, Jersey City, NJ 07304",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Wed",
+      "hours": "Closed · Opens 7 AM Wed",
+      "operating_hours": {
+        "monday": "7 AM–4 PM",
+        "tuesday": "Closed",
+        "wednesday": "7 AM–4 PM",
+        "thursday": "7 AM–4 PM",
+        "friday": "7 AM–4 PM",
+        "saturday": "8 AM–5 PM",
+        "sunday": "8 AM–5 PM"
+      },
+      "phone": "(814) 830-3333",
+      "extensions": [
+        {
+          "service_options": [
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection",
+            "Serves local specialty"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Lunch",
+            "Solo dining",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "accessibility": [
+            "Wheelchair accessible entrance",
+            "Wheelchair accessible restroom",
+            "Wheelchair accessible seating"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Comfort food",
+            "Healthy options",
+            "Quick bite",
+            "Small plates",
+            "Vegetarian options"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Brunch",
+            "Lunch",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Quiet",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "Groups"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids",
+            "High chairs"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed inside",
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "planning": [
+            "Accepts reservations"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFoXzF6YjN4MxgAOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Delicious coffee, great food and an awesome indoor space/outside seating.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhEqMEx3_28qOMX3PWj9aF-_N5Cw0sSYY8g1YJ6kn_DJqjdwHu9hhDsVNJnL0bNYTnaskplzZkAV13DId97XsK__TUwWRP05Jq9qTloWKABj3ESQsiilzV5m52kJkQmhk37tj-CvfhYThfZpNOfSM1gvBmws1lMjAMZwIF4TfiImL91STCP_iHiq=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/LcInG3icHcRLcoIwAADQEyFBpEpnukDAEQREoSBsMpZfICEhBo31pr1Jl53pW7yfXzTPk3hXVYL0RcdYR5q7aG4Vo3ND50XFRrWbhDLd2PNbtYJ65SCXh-5Th8sNP4YXPc4H87pTYGTYEoikKDadVvhvmELH50Mt93cTIUdkkU8D8BUVKb0KPJFXia1M0x2vNtcXcYAw_ZT5OQaGz02eEpYfrO2gu8lJ9D15ZcZoLLGPTyPC-noeFPvRoiJFbTlFxzYJte6xHaXQSDhYYSm93Spte28MTC1J7Rj2-55_SA0AoKD_K4X-AZQdVYU"
+    },
+    {
+      "position": 20,
+      "title": "Treehouse Coffee Shop",
+      "place_id": "ChIJmxnOKYJXwokRjTFiPIg96kQ",
+      "data_id": "0x89c2578229ce199b:0x44ea3d883c62318d",
+      "data_cid": "4965849194467307917",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x89c2578229ce199b%3A0x44ea3d883c62318d&engine=google_maps_reviews&hl=en",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x89c2578229ce199b%3A0x44ea3d883c62318d&engine=google_maps_photos&hl=en",
+      "gps_coordinates": {
+        "latitude": 40.726990799999996,
+        "longitude": -74.05046039999999
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJmxnOKYJXwokRjTFiPIg96kQ",
+      "provider_id": "/g/11v0_0cj_v",
+      "rating": 4.8,
+      "reviews": 108,
+      "price": "$1–10",
+      "extracted_price": 1,
+      "type": "Coffee shop",
+      "types": [
+        "Coffee shop"
+      ],
+      "type_id": "coffee_shop",
+      "type_ids": [
+        "coffee_shop"
+      ],
+      "address": "205 Brunswick St, Jersey City, NJ 07302",
+      "country": "United States",
+      "open_state": "Closed · Opens 7 AM Tue",
+      "hours": "Closed · Opens 7 AM Tue",
+      "operating_hours": {
+        "monday": "7 AM–5 PM",
+        "tuesday": "7 AM–5 PM",
+        "wednesday": "7 AM–5 PM",
+        "thursday": "7 AM–5 PM",
+        "friday": "7 AM–5 PM",
+        "saturday": "7 AM–5 PM",
+        "sunday": "7 AM–5 PM"
+      },
+      "phone": "(201) 272-6911",
+      "website": "http://treehousejc.com/",
+      "extensions": [
+        {
+          "from_the_business": [
+            "Small business"
+          ]
+        },
+        {
+          "service_options": [
+            "Outdoor seating",
+            "Delivery",
+            "Onsite services",
+            "Takeout",
+            "Dine-in"
+          ]
+        },
+        {
+          "highlights": [
+            "Great coffee",
+            "Great tea selection"
+          ]
+        },
+        {
+          "popular_for": [
+            "Breakfast",
+            "Good for working on laptop"
+          ]
+        },
+        {
+          "offerings": [
+            "Coffee",
+            "Quick bite"
+          ]
+        },
+        {
+          "dining_options": [
+            "Breakfast",
+            "Dessert",
+            "Seating"
+          ]
+        },
+        {
+          "amenities": [
+            "Gender-neutral restroom",
+            "Restroom",
+            "Wi-Fi",
+            "Free Wi-Fi"
+          ]
+        },
+        {
+          "atmosphere": [
+            "Casual",
+            "Cozy",
+            "Trendy"
+          ]
+        },
+        {
+          "crowd": [
+            "Family-friendly",
+            "LGBTQ+ friendly",
+            "Transgender safespace"
+          ]
+        },
+        {
+          "payments": [
+            "Credit cards",
+            "Debit cards",
+            "NFC mobile payments"
+          ]
+        },
+        {
+          "children": [
+            "Good for kids"
+          ]
+        },
+        {
+          "parking": [
+            "Free street parking"
+          ]
+        },
+        {
+          "pets": [
+            "Dogs allowed outside"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "accessibility": [
+            "Wheelchair accessible parking lot"
+          ]
+        },
+        {
+          "dining_options": [
+            "Table service"
+          ]
+        }
+      ],
+      "service_options": {
+        "dine_in": true,
+        "takeout": true,
+        "delivery": true
+      },
+      "order_online": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF2MF8wY2pfdhgCOgMI8A0%3D&hl=en-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=HW8navv-MbSJi-gPhKeoiQI&ei=HW8navv-MbSJi-gPhKeoiQI&fo_s=OA,SOE&opi=79508299&orderType=2&ebb=1&cs=0&foub=mcpp",
+      "user_review": "\"Great coffee and great location with excellent service.\"",
+      "thumbnail": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhH7V65TvHubwXfmBqJHWPGhHD75OuOQtLMp9tUlYwAzDBHpOnOjI88xbYSPwWuOvtz004-S01_IrJ9mU6-qRn0E7IIa7HitzNNyoLSJbt3ql2B1hZ7onWZtrI2Oc4rDXZmqksJxsyEvAAYrStS2EKxWwe4QCYbtHgeffnu_3jPuvps_0368Alb_=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/XH_m-3icHcRLUoMwAADQE1HCp0CdcQHCGBBLW6wUNowgECskIR9-N_UmLp3xLd7PLxKC8gdV7ZGx6wjp-kbyhtUEiwaLXU0GtaNcoYwsq-rGn6aPoP1u7d8mKKv51g7eGMHs9Iygb-8TmZxF_EoP4trns7v5HqQJTu6h4yxVnp7mTCaT2AAwlRRoZciiw3C1lPGCQWCH4YcNv8R2PK4kTqNKGGOvexoqbIKzQrBQT2qT-bdiGL95tPA1mFw3Z6lI9eBlyebGPD_llYBd07ZYlsb9JCfKS2BYjttX5eOsAQAU9H-t4D_PC1Y7"
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&ll=%4040.7455096%2C-74.0083012%2C14z&q=Coffee&start=20&type=search"
+  }
+}

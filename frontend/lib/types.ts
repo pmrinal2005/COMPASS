@@ -148,6 +148,18 @@ export interface Account {
   this_hour_searches?: number; last_hour_searches?: number; account_rate_limit_per_hour?: number
 }
 
+export interface IntentScore { id: string; name: string; score: number; cosine: number; keyword_hits: number; vector_backend?: string }
+
+export interface WatchRecord {
+  id: string; label: string; engine: string; metric?: 'price' | 'rating' | 'position'; target_title?: string | null; target_domain?: string | null
+  baseline_price?: number | null; last_price?: number | null; threshold_pct: number; cadence_minutes: number; active?: boolean
+  last_checked?: number | null; alerts?: number; history?: { ts: number; price: number | null }[]; session_id?: string | null
+}
+export interface WatchTick {
+  id: string; label: string; metric?: 'price' | 'rating' | 'position'; price?: number | null; baseline?: number | null; change_pct: number; z?: number
+  triggered: boolean; matched?: string | null; replan?: string
+}
+
 export interface Credits {
   budget: number
   spent: number
@@ -164,7 +176,7 @@ export interface SessionState {
   replay: boolean
   agents: Record<AgentName, AgentStatus>
   agentLabel: Partial<Record<AgentName, string>>
-  intent?: { playbook_id: string; playbook: string; scores: any[] }
+  intent?: { playbook_id: string; playbook: string; scores: IntentScore[] }
   graph?: DecisionGraph
   calls: Record<string, CallState>
   callOrder: string[]
@@ -188,8 +200,8 @@ export interface SessionState {
   caveat?: string | null
   budgetPrompt?: { calls: number; essential: number; credits: Credits } | null
   disruption?: any
-  watches: any[]
-  watchTicks: any[]
+  watches: WatchRecord[]
+  watchTicks: WatchTick[]
   rehydrated?: boolean
   error?: string
   events: CompassEvent[]

@@ -1,0 +1,617 @@
+{
+  "search_metadata": {
+    "id": "695927508c24bd247f1be7d7",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/8085d8bcb20d0701/695927508c24bd247f1be7d7.json",
+    "created_at": "2026-01-03 14:27:28 UTC",
+    "processed_at": "2026-01-03 14:27:28 UTC",
+    "tripadvisor_url": "https://www.tripadvisor.com/Search?q=Rome&ssrc=a&geo=1&offset=0&limit=30",
+    "raw_html_file": "https://serpapi.com/searches/8085d8bcb20d0701/695927508c24bd247f1be7d7.html",
+    "prettify_html_file": "https://serpapi.com/searches/8085d8bcb20d0701/695927508c24bd247f1be7d7.prettify",
+    "total_time_taken": 0.88
+  },
+  "search_parameters": {
+    "engine": "tripadvisor",
+    "q": "Rome",
+    "tripadvisor_domain": "www.tripadvisor.com",
+    "ssrc": "a",
+    "offset": 0,
+    "limit": 30
+  },
+  "places": [
+    {
+      "position": 1,
+      "title": "Rome",
+      "place_type": "GEO",
+      "place_id": "187791",
+      "link": "https://www.tripadvisor.com/Tourism-g187791-Rome_Lazio-Vacations.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=187791&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Rome wasn't built in a day--and you'll need much more than a day to take in this timeless city. The city is a real-life collage of piazzas, open-air markets, and astonishing historic sites. Toss a coin into the Trevi Fountain, contemplate the Colosseum and the Pantheon, and sample a perfect espresso or gelato before spending an afternoon shopping at the Campo de’Fiori or Via Veneto. Enjoy some of the most memorable meals of your life here, too, from fresh pasta to succulent fried artichokes or a tender oxtail stew.\r\n",
+      "location": "Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f7/4e/3d/rome.jpg"
+    },
+    {
+      "position": 2,
+      "title": "Rome: Colosseum, Roman Forum and Palatine Hill Guided Tour",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "11449756",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d11449756-Rome_Colosseum_Roman_Forum_and_Palatine_Hill_Guided_Tour-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=11449756&tripadvisor_domain=www.tripadvisor.com",
+      "description": "The Colosseum is one of Rome’s most popular landmarks, but visualizing the ruin in its ancient heyday isn’t always easy. Understand the arena’s significance to Roman history during this guided tour, which also includes visits to nearby Palatine Hill and the Roman Forum. Prefer a self-guided option? Then opt for an audio guide and tour the iconic monument at your own pace.",
+      "rating": 4.5,
+      "reviews": 6294,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/fc/0f/d0/caption.jpg",
+      "highlighted_review": {
+        "text": "It was fascinating to find out how ancient Rome morphed into modern Rome.",
+        "highlighted_texts": [
+          "Rome",
+          "Rome."
+        ],
+        "mention_count": 1259
+      }
+    },
+    {
+      "position": 3,
+      "title": "Hilton Rome Airport Hotel",
+      "place_type": "ACCOMMODATION",
+      "place_id": "228406",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g656615-d228406-Reviews-Hilton_Rome_Airport_Hotel-Fiumicino_Province_of_Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=228406&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Hilton Rome Airport is directly connected to Leonardo da Vinci Fiumicino Airport via a covered overpass with a moving walkway, just 7 minutes walking ditance. Stylishly appointed and modern in design, this contemporary hotel offers upscale amenities, fine dining and warm hospitality, supported by friendly and professional Hilton Team Members. 35 minutes from downtown Rome, free wi-fi Internet access in public areas, swimming pool with Jacuzzi and Fitness Centre featuring the latest generation of cardio and strength training equipment, will help you to feel your best during the stay. 517 stylish and soundproof guest rooms including 108 Executive Rooms and 15 Suites with access to the Executive Lounge (serving complimentary breakfast and refreshments all day). On site Le Colonne Restaurant serving Buffet breakfast, lunch and dinner and Caffe Tevere Bistro with a delicious selection of pizzas, pastas, burgers and creative salads. A Kids Menu is also available, offering chicken nuggets, mini burgers and ice cream. An In-Room Dining menu is located in each guest room and offers a variety of food and beverage items for you to enjoy. Hilton Rome Airport is located 8 miles from the Parco de Medici business district and 6.5 miles from Fiera di Roma Exhibition Centre. Parco Leonardo shopping mall is just one train stop from the Airport station.",
+      "rating": 3.5,
+      "reviews": 6626,
+      "location": "Fiumicino, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/dd/38/57/exterior.jpg",
+      "highlighted_review": {
+        "text": "We enjoyed the express train to Rome Terminal.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 2330
+      }
+    },
+    {
+      "position": 4,
+      "title": "Rome Cavalieri, A Waldorf Astoria Hotel",
+      "place_type": "ACCOMMODATION",
+      "place_id": "190138",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d190138-Reviews-Rome_Cavalieri_A_Waldorf_Astoria_Hotel-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=190138&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Overlooking the panorama that has inspired visitors for centuries is Rome's most prestigious address – the Rome Cavalieri hotel. Though only minutes from the city's great monuments, the Rome Cavalieri has the tranquility of an oasis. Enclosed in fifteen acres of lush Mediterranean parklands, this luxury hotel is a calm retreat in the heart of the Eternal City, an elegant refuge where time slows and hearts quicken.The first hotel in Europe to be part of the exclusive Waldorf Astoria Hotels & Resorts, the Rome Cavalieri hotel is more than just a 5–star property. It's the pre-eminent luxury hotel in Rome, with an art collection that outshines many museums, a Grand Spa that would be the envy of a prestige health resort, and standards of luxury that set it apart from other Rome hotels. The Rome Cavalieri brings new meaning to notions of Italian style, and new purpose to the fine art of exclusive hospitality.",
+      "rating": 4.5,
+      "reviews": 7636,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/e8/68/a5/pool.jpg",
+      "highlighted_review": {
+        "text": "Outstanding Property in Rome!!",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 3849
+      }
+    },
+    {
+      "position": 5,
+      "title": "Crowne Plaza Rome - St. Peter's By IHG",
+      "place_type": "ACCOMMODATION",
+      "place_id": "229422",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d229422-Reviews-Crowne_Plaza_Rome_St_Peter_s_By_IHG-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=229422&tripadvisor_domain=www.tripadvisor.com",
+      "description": "An upscale hotel with a tranquil garden, an outdoor pool and convenient transport links to Rome's historic heart. Crowne Plaza® Rome - St. Peter's hotel offers guests easy access to the city centre via the scheduled shuttle service or public transport just outside the hotel. If you're travelling to or from Fiumicino Airport (FCO), reserve your seat on our shuttle bus or book a private transfer. Closest metro station Cornelia is just over 1 km from the hotel. World-famous attractions such as Rome's Vatican Museums and the Sistine Chapel - home to Michelangelo's spectacular frescoes - are all within reach. The hotel is just steps away from Villa Pamphili city park and a few minutes from the old neighbourhood of Trastevere. Business travellers have access to a 24-hour Business Centre and 13 modern meeting rooms. Our dedicated Crowne Plaza Meetings Director takes care of all your event needs. The hotel offers free high speed Wi-Fi.",
+      "rating": 4.2,
+      "reviews": 5377,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/c9/12/ff/pool-view.jpg",
+      "highlighted_review": {
+        "text": "If we return to Rome we would definitely return!",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1873
+      }
+    },
+    {
+      "position": 6,
+      "title": "Winner 2025 Rome Twilight Trastevere Food Tour by Eating Europe",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "19350162",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d19350162-Winner_2025_Rome_Twilight_Trastevere_Food_Tour_by_Eating_Europe-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=19350162&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Embark on a food tour through Rome's Trastevere neighborhood to discover its vibrant culinary scene. Enjoy exclusive access to iconic venues, including the famous Da Enzo Restaurant. Savor DOC Prosecco, ancient Roman recipes, handmade cookies, porchetta, street food like supplí, and classic pasta dishes plus gourmet gelato.",
+      "rating": 4.9,
+      "reviews": 3363,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/fc/c8/05/caption.jpg",
+      "highlighted_review": {
+        "text": "We got to enjoy some of Rome's best food and wine and many dishes I never",
+        "highlighted_texts": [
+          "Rome's"
+        ],
+        "mention_count": 1256
+      }
+    },
+    {
+      "position": 7,
+      "title": "Rome by Golf Cart Private Tour: Beyond the Landmarks",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "11455545",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d11455545-Rome_by_Golf_Cart_Private_Tour_Beyond_the_Landmarks-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=11455545&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Experience more than 2,500 years of history—and see the best of Rome's attractions—on this private tour. Roam the streets of this city in a comfortable, covered, street-legal golf cart. This family-friendly sightseeing tour offers a narrated journey of the palaces, monuments, churches, fountains, and statues that define the rich heritage of Italy's capital. Plus, the itinerary is customized to your preferences, so you can see the sights that interest you most.",
+      "rating": 5,
+      "reviews": 1901,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/94/59/97/caption.jpg",
+      "highlighted_review": {
+        "text": "“Rolling Rome Tours and Rentals”\n\n⭐️⭐️⭐️⭐️⭐️ An Unforgettable Rome Experience",
+        "highlighted_texts": [
+          "Rome",
+          "Rome"
+        ],
+        "mention_count": 1400
+      }
+    },
+    {
+      "position": 8,
+      "title": "The Westin Excelsior, Rome",
+      "place_type": "ACCOMMODATION",
+      "place_id": "203080",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d203080-Reviews-The_Westin_Excelsior_Rome-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=203080&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Our hotel is one of the city's most imposing palaces, rich in history and located on one of the most celebrated and talked about streets of Rome and close to Rome's main attractions: the legendary Via Veneto, nestled between the Spanish Steps and the Borghese Gardens Gallery. The Westin Excelsior’s magnificent and imposing dome unveils the most spectacular and opulent suite in Europe – the unparalleled Villa La Cupola offering the ultra-elite a truly ‘Roman Emperor‘ experience. Set on two floors, the suite combines breathtaking views of the city with sumptuous splendours throughout.",
+      "rating": 4.1,
+      "reviews": 3346,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/9a/5e/07/exterior.jpg",
+      "highlighted_review": {
+        "text": "Its location is within walking distance of many of Rome's must-see attractions",
+        "highlighted_texts": [
+          "Rome's"
+        ],
+        "mention_count": 1423
+      }
+    },
+    {
+      "position": 9,
+      "title": "Rome's Ultimate Free Walking Tours",
+      "place_type": "ATTRACTION",
+      "place_id": "6721782",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g187791-d6721782-Reviews-Rome_s_Ultimate_Free_Walking_Tours-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=6721782&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Welcome to Rome's Ultimate Free Walking Tour. For ten years we have been providing unforgettable experiences for you in the form of free guided walking tours through the city and an engaging nightlife. Our guides are experienced, educated, charismatic and enjoy doing one thing above all others, sharing their love for the Eternal City. romesultimatefreetour.com",
+      "rating": 4.9,
+      "reviews": 1843,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/74/e3/40/rome-s-ultimate-free.jpg",
+      "highlighted_review": {
+        "text": "Despite this being our 3rd day in Rome and seeing the major attractions",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1102
+      }
+    },
+    {
+      "position": 10,
+      "title": "Rome: Trastevere Food tour with Free-Flowing Fine Wine",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "13147246",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d13147246-Rome_Trastevere_Food_tour_with_Free_Flowing_Fine_Wine-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=13147246&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Get to know Rome's popular Trastevere neighborhood through its food and wine—and discover bites and restaurants you'd otherwise miss—on this half-day walking tour. With just a small group for company, visit local-favorite venues for multiple tastings, including cheese, ham, pizza, pasta, and aged balsamic vinegar. Explore Trastevere’s cobblestone streets between sampling local wines and beers. Save room for the tour’s final bite: traditional gelato.",
+      "rating": 5,
+      "reviews": 2097,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/a1/0f/83/caption.jpg",
+      "highlighted_review": {
+        "text": "I am a 56-year-old female American traveler in Rome who had a few days",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 651
+      }
+    },
+    {
+      "position": 11,
+      "title": "Rome Food Tour: Unlimited Tastings with Fine Wine & Barolo",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "11459952",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d11459952-Rome_Food_Tour_Unlimited_Tastings_with_Fine_Wine_Barolo-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=11459952&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Step away from the crowds in Rome's historic center—and explore the lesser-known neighborhood of Prati, known for its excellent dining scene—on this small-group walking and tasting tour. Discover locals-only gourmet shops and eateries with your foodie guide, and sample a wide variety of specialties. Feast on artisan charcuterie and cheeses, Roman pizza by the slice, classic pasta dishes, and Italian wine as you learn about the city's culinary culture.",
+      "rating": 5,
+      "reviews": 1997,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/f4/b6/da/caption.jpg",
+      "highlighted_review": {
+        "text": "We had the best time during our Rome Food Tour !",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 780
+      }
+    },
+    {
+      "position": 12,
+      "title": "Anantara Palazzo Naiadi Rome Hotel",
+      "place_type": "ACCOMMODATION",
+      "place_id": "275876",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d275876-Reviews-Anantara_Palazzo_Naiadi_Rome_Hotel-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=275876&tripadvisor_domain=www.tripadvisor.com",
+      "description": "The 5* Anantara Palazzo Naiadi Rome Hotel is located within walking distance of the central Termini railway station in the impressive setting of Piazza della Repubblica. Set in Rome’s main tourist district, the hotel is close to local visitor attractions including Piazza di Spagna, Trevi Fountain and the main Opera House. The hotel offers 232 elegantly styled rooms with a range of suites to choose from, along with complimentary access to the gym, spa and rooftop plunge pool. Guests can enjoy a range of dining options with a buffet breakfast and a menu of gourmet-style Italian and Mediterranean dishes served in the hotel’s two main restaurants. Any dietary requirements can be catered for upon request. The hotel’s Posh Sky Terrace Bar Lounge & Restaurant allows guests to dine with panoramic views of Rome’s skyline, while a range of signature cocktails are served in both The Lobby Bar and Champagnerie. Business events and wedding receptions can be held.",
+      "rating": 4.4,
+      "reviews": 4081,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/f8/ae/9b/anantara-palazzo-naiadi.jpg",
+      "highlighted_review": {
+        "text": "This was our first visit to the wonderful city of Rome, and we chose to",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1578
+      }
+    },
+    {
+      "position": 13,
+      "title": "Civitavecchia Cab Service - Tour",
+      "place_type": "ATTRACTION",
+      "place_id": "4049590",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g194743-d4049590-Reviews-Civitavecchia_Cab_Service_Tour-Civitavecchia_Province_of_Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=4049590&tripadvisor_domain=www.tripadvisor.com",
+      "description": "We provide a private tour of the city of Rome, carefully organized for cruisers, starting from CIVITAVECCHIA (port of Rome) that guarantees a good outlook of Rome and its major sites.",
+      "rating": 4.7,
+      "reviews": 1681,
+      "location": "Civitavecchia, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c0/46/30/civitavecchia-cab-service.jpg",
+      "highlighted_review": {
+        "text": "We had 3 trips - from the airport to our hotel in Rome, from the Rome hotel",
+        "highlighted_texts": [
+          "Rome",
+          "Rome"
+        ],
+        "mention_count": 689
+      }
+    },
+    {
+      "position": 14,
+      "title": "Rome in Limo - Tours & Excursions",
+      "place_type": "ATTRACTION",
+      "place_id": "1739408",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g187791-d1739408-Reviews-Rome_in_Limo_Tours_Excursions-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=1739408&tripadvisor_domain=www.tripadvisor.com",
+      "description": "We specialize in custom-made tours in Rome and throughout Italy. We employ only professionals, which allows us to provide the best quality of experience for our customers. The mandate of our company is focused on the satisfaction of our customers since we only aspire to the highest service standards. We believe that the best advertising is a happy customer; someone who will recommend us to their family and friends and will use our services again in the future. Our services: guided tours, private tours, visits to the city, gastronomic tours, walking tours, excursions on land, wine tours in Rome and throughout Italy. For your comfort and enjoyment, we offer luxury sedans, vans, and minibusses, accompanied by expert drivers who want your experience in Italy to be memorable. At your request, we offer licensed tour guides with an exceptional knowledge of Italian culture, art, and historical sites.",
+      "rating": 5,
+      "reviews": 5631,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/73/0b/84/trevi-fountain.jpg",
+      "highlighted_review": {
+        "text": "toured Pisa and Florence; continued with Mauricio for a day exploring Rome’s",
+        "highlighted_texts": [
+          "Rome’s"
+        ],
+        "mention_count": 4294
+      }
+    },
+    {
+      "position": 15,
+      "title": "New Rome Free Tour",
+      "place_type": "ATTRACTION",
+      "place_id": "1549786",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g187791-d1549786-Reviews-New_Rome_Free_Tour-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=1549786&tripadvisor_domain=www.tripadvisor.com",
+      "description": "New Rome Free Tour offer you the original and oldest, since 2009, free walking tour of Rome to discover the secrets of the Eternal City, the atmosphere, the architecture, the culture, food, the people; it doesn't matter your travel budget. There's no better way to see it than on foot. We offer five daily free tours: Ancient Rome, City Center, Vatican and food tours ( freeromefoodtour.com) 365 days a year hail, rain or shine. Reservation is required and mandatory.",
+      "rating": 4.7,
+      "reviews": 3786,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ab/9b/56/fontana-di-trevi-rome.jpg",
+      "highlighted_review": {
+        "text": "I had the tour (Ancient Rome Free Walking Tour - morning in English) with",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 2545
+      }
+    },
+    {
+      "position": 16,
+      "title": "Hilton Garden Inn Rome Airport",
+      "place_type": "ACCOMMODATION",
+      "place_id": "630201",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g656615-d630201-Reviews-Hilton_Garden_Inn_Rome_Airport-Fiumicino_Province_of_Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=630201&tripadvisor_domain=www.tripadvisor.com",
+      "description": "The hotel is located on the Leonardo da Vinci Fiumicino airport platform in front of Cargo City. A complimentary Airport Shuttle service is provided from the hotel to/from the airport from 5 AM to 1 AM. The service is operated by a yellow, Orange, Blue & Green Bus with \"Easy Parking\" Logos on both sides. Please look for \"Airport Shuttle\" Signs. Free wi-fi Internet access is available throughout the hotel and free 24-hour Business Centre with high speed Internet access and remote printing facilities. All 282 guestrooms at the Hilton Garden Inn Rome Airport have modern decor and soundproofed windows. Each includes a private bathroom with a hairdryer. Self-adjusting Garden Sleep System beds with duvets and ergonomic Mirra chair. In-room safe, individual climate control, reading lamps, two telephones and tea and coffee making facilities. This is 100% non smoking Hotel. For guests who smokes the Hotel has designed smoking areas outside the building to accommodate their needs. There is a room recovery fee of 150 €uro for guests who do not comply in order to cover the extensive cost of restoring guest rooms to a smoke-free condition. On-site restaurant serving buffet breakfast, lunch and dinner and offering traditional Italian/International cuisine and a Lounge Bar featuring plasma screens and offering cocktails, sandwiches, salads and more. Guests can use the microwave room to prepare ready-to-cook meals sold at Pavilion Pantry shop. The hotel is a 2-minute drive from the A91 Highway for easy connections to the EUR business district. Trains to Fiera Roma and central Rome leave from the airport train station, and the ride takes around 30 minutes.",
+      "rating": 3.8,
+      "reviews": 3341,
+      "location": "Fiumicino, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/95/c7/02/hilton-garden-inn-rome.jpg",
+      "highlighted_review": {
+        "text": "Airport to Hilton Garden Inn Rome Airport.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 955
+      }
+    },
+    {
+      "position": 17,
+      "title": "Cipasso",
+      "place_type": "EATERY",
+      "place_id": "14121704",
+      "link": "https://www.tripadvisor.com/Restaurant_Review-g187791-d14121704-Reviews-Cipasso-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=14121704&tripadvisor_domain=www.tripadvisor.com",
+      "rating": 4.9,
+      "reviews": 3999,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/81/25/70/il-nostro-chef-adriano.jpg",
+      "highlighted_review": {
+        "text": "The second best restaurant in Rome during our stay.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 745
+      }
+    },
+    {
+      "position": 18,
+      "title": "Rome on a Golf Cart Semi-Private Tour Max 6 with Private Option",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "17460629",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d17460629-Rome_on_a_Golf_Cart_Semi_Private_Tour_Max_6_with_Private_Option-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=17460629&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Hop on a golf cart for a comprehensive, small-group tour of Rome in a short amount of time. Stay out from behind glass bus windows, but also off your feet; this is a great option for those who have trouble walking long distances. Combine the blockbuster sites with some hidden gems and listen to your guide's commentary on Rome's history, culture, and modern life.",
+      "rating": 5,
+      "reviews": 2394,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/7b/b6/d5/caption.jpg",
+      "highlighted_review": {
+        "text": "What really set this tour apart was his deep knowledge and passion for Rome's",
+        "highlighted_texts": [
+          "Rome's"
+        ],
+        "mention_count": 1586
+      }
+    },
+    {
+      "position": 19,
+      "title": "Rome Chauffeur",
+      "place_type": "ATTRACTION",
+      "place_id": "6571852",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g187791-d6571852-Reviews-Rome_Chauffeur-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=6571852&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Legendary Rome Chauffeur Service​ ​ provid​es quality and reliable private Cruise Port and Airport Transfers, Day Tours in Rome and beyond, and Shore excursions from Civitavecchia, Livorno, La Spezia and Naples cruise ports in deluxe vehicles driven by dedicated by our team of professional chauffeurs. We are at your service to welcome you to Rome, and to help turn your holiday in Italy into the trip of a lifetime.",
+      "rating": 5,
+      "reviews": 2030,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/cf/10/3c/rome-chauffeur-day-tours.jpg",
+      "highlighted_review": {
+        "text": "Thank you Rome Chauffer!!!",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1226
+      }
+    },
+    {
+      "position": 20,
+      "title": "Real Rome Tours",
+      "place_type": "ATTRACTION",
+      "place_id": "1036389",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g187791-d1036389-Reviews-Real_Rome_Tours-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=1036389&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Real Rome Tours specializes in unforgettable private tours of Rome, tailored exclusively to you. From the Colosseum to the Vatican and beyond, our expert local guides bring the Eternal City to life with passion, knowledge, and engaging storytelling. We remove the stress of planning so you can enjoy a seamless Roman holiday, with every detail arranged to suit your pace and interests. Whether it’s exploring ancient wonders, hidden gems, or vibrant neighborhoods, our private tours ensure a more personal, flexible, and memorable experience of Rome. With Real Rome Tours, it’s not just sightseeing — it’s your own story of Rome, told by those who know it best.",
+      "rating": 4.9,
+      "reviews": 2533,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/32/e8/fe/expert-tour-guide-and.jpg",
+      "highlighted_review": {
+        "text": "Real Rome Tours put together an amazing customized tour of Rome for myself",
+        "highlighted_texts": [
+          "Rome",
+          "Rome"
+        ],
+        "mention_count": 1902
+      }
+    },
+    {
+      "position": 21,
+      "title": "Eyes of Rome",
+      "place_type": "ATTRACTION",
+      "place_id": "1870138",
+      "link": "https://www.tripadvisor.com/Attraction_Review-g187791-d1870138-Reviews-Eyes_of_Rome-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=1870138&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Visit Rome in the company of its most passionate admirers, us! Your Roman adventure is sure to be unforgettable with Eyes of Rome, a creative club of independent tour guides! You set the pace of the tour with your private guide, personally selected for you from our small team of enthusiastic professionals. You'll be captivated as your passionate guide helps bring Rome to life with a tour that is customized to your interests and energy level. We offer city walking tours, but we also provide bike and segway tours, and car services. We will accompany you off the beaten paths, to discover the historical and cultural heritage, sharing also the most local aspects of the Eternal City, like the arts & crafts, the food & wine and the best music, theatre and sport events.",
+      "rating": 5,
+      "reviews": 3861,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/9e/ff/f2/eyes-of-rome-private.jpg",
+      "highlighted_review": {
+        "text": "We ran through Rome and stopped at a lot of sites and learned so much!",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1635
+      }
+    },
+    {
+      "position": 22,
+      "title": "Rome Times Hotel",
+      "place_type": "ACCOMMODATION",
+      "place_id": "3964772",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d3964772-Reviews-Rome_Times_Hotel-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=3964772&tripadvisor_domain=www.tripadvisor.com",
+      "description": "The Rome Times Hotel is located in the heart of the city, in the middle of Via Nazionale known for shopping, less than 10 minutes walk from Trevi Fountain, Piazza di Spagna and the Coliseum. The hotel offers its guests a contemporary design and all rooms are bright and spacious with wooden floors, air conditioning and every possible comfort. Everything, from furniture to ambient lighting, has been specifically designed for the Rome Times Hotel, creating an exclusive and modern hotel.",
+      "rating": 4.4,
+      "reviews": 2369,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/79/09/4d/rome-times-hotel.jpg",
+      "highlighted_review": {
+        "text": "The Rome Times Hotel is nestled in a side road and is almost evenly spaced",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 904
+      }
+    },
+    {
+      "position": 23,
+      "title": "Rome Marriott Grand Hotel Flora",
+      "place_type": "ACCOMMODATION",
+      "place_id": "203139",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d203139-Reviews-Rome_Marriott_Grand_Hotel_Flora-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=203139&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Rome Marriott Grand Hotel Flora - il cuore di Via Veneto batte in altoImmerse in your personal \"Dolce Vita\" at the Rome Marriott Grand Hotel Flora, right on top of the noble Via Veneto and next door to the Villa Borghese gardens.This gracious edifice with the stylish decor capturing the grandeur of Neoclassicism is exclusively designed for those looking for refined luxury in an atmosphere of sophistication and the highest level of welcoming hospitality anticipating every need of today's business or leisure traveller.Just sink back in the timeless elegance of the superbly appointed rooms and relax, or delight in the culinary highlights of the Mediterranean cuisine at the restaurant The Cabiria. The adjoining bar is the ideal place to meet, to see, or be seen, or to take in the flamboyant atmosphere of Via Veneto.The rooftop Ailanto is the perfect setting for wedding receptions and exclusive celebrations, or simply for admiring the enchanting view over the roofs of the Eternal city.Rome Marriott Grand Hotel Flora - right on the top.",
+      "rating": 4.2,
+      "reviews": 2147,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/5b/18/60/caption.jpg",
+      "highlighted_review": {
+        "text": "I have stayed at over a dozen hotels in Rome over the years.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 956
+      }
+    },
+    {
+      "position": 24,
+      "title": "Hotel Indigo Rome - St. George By IHG",
+      "place_type": "ACCOMMODATION",
+      "place_id": "634943",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d634943-Reviews-Hotel_Indigo_Rome_St_George_By_IHG-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=634943&tripadvisor_domain=www.tripadvisor.com",
+      "rating": 4.6,
+      "reviews": 2240,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/a9/9b/90/caption.jpg",
+      "highlighted_review": {
+        "text": "We stayed at hotel indigo Rome in October.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1054
+      }
+    },
+    {
+      "position": 25,
+      "title": "Le Méridien Visconti Rome",
+      "place_type": "ACCOMMODATION",
+      "place_id": "205160",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d205160-Reviews-Le_Meridien_Visconti_Rome-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=205160&tripadvisor_domain=www.tripadvisor.com",
+      "rating": 4.2,
+      "reviews": 2951,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/dc/e0/3f/king-city-view-guest.jpg",
+      "highlighted_review": {
+        "text": "I would stay here again when in Rome.",
+        "highlighted_texts": [
+          "Rome."
+        ],
+        "mention_count": 1023
+      }
+    },
+    {
+      "position": 26,
+      "title": "The St. Regis Rome",
+      "place_type": "ACCOMMODATION",
+      "place_id": "203087",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d203087-Reviews-The_St_Regis_Rome-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=203087&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Introduced to Rome society in 1894, the architecturally iconic St. Regis Rome is located in one of the city’s most impressive palazzos. The pioneer St. Regis in Europe and a social beacon for Romans and international travelers, the hotel has emerged to define a new era of luminosity. Blending a noble heritage with fearless, elegant interiors has transformed this grand dame into a supremely luxurious and artful residence. High-ceilinged and light-filled, the guestrooms and suites are styled with luxurious Rubelli fabrics, handmade glass and collectable curios – effortlessly sophisticated and distinctively urbane. A contemporary take on a historic address, St. Regis Rome has shed its former bearing and stepped out, into the limelight to truly own Rome. Radiant and luminous, it combines fearless elegance, disruptive artistry and discerning enlightenment.",
+      "rating": 4.5,
+      "reviews": 2715,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/d4/fd/43/hotel-entrance.jpg",
+      "highlighted_review": {
+        "text": "We stayed at The St Regis Rome to celebrate our 10th wedding anniversary",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1339
+      }
+    },
+    {
+      "position": 27,
+      "title": "Albergo del Senato",
+      "place_type": "ACCOMMODATION",
+      "place_id": "191099",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d191099-Reviews-Albergo_del_Senato-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=191099&tripadvisor_domain=www.tripadvisor.com",
+      "description": "Finding an ideal romantic hotel in Rome does not have to be difficult. Welcome to Albergo del Senato, a nice option for travelers like you. For those interested in checking out popular landmarks while visiting Rome, Albergo del Senato is located a short distance from Palatine Hill (0.8 mi) and Villa Borghese (1.3 mi). You’ll enjoy relaxing rooms that offer a flat screen TV, air conditioning, and a minibar, and you can stay connected during your stay as Albergo Del Senato Rome offers guests free wifi. The hotel features a 24 hour front desk, a rooftop terrace, and a concierge. Plus, Rome Senato Hotel offers free breakfast, providing a pleasant respite from your busy day. If you’re looking for something to do, Colosseum (1.0 mi), Trastevere (1.0 mi), and Pantheon (0.0 mi) are a nice way to spend some time, and they are all within walking distance of Albergo Del Senato Rome. Albergo del Senato looks forward to welcoming you on your visit to Rome.",
+      "rating": 4.8,
+      "reviews": 4884,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/53/47/c9/superior-double-room.jpg",
+      "highlighted_review": {
+        "text": "They had not been to Rome before and they loved their visit.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 2646
+      }
+    },
+    {
+      "position": 28,
+      "title": "Room Mate Collection Mia, Rome Colosseum",
+      "place_type": "ACCOMMODATION",
+      "place_id": "252244",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d252244-Reviews-Room_Mate_Collection_Mia_Rome_Colosseum-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=252244&tripadvisor_domain=www.tripadvisor.com",
+      "description": "The Capo d'Africa Hotel is an elegant and welcoming Boutique Hotel, located next to the Colosseum , with a breathtaking view from our roof garden. On the top floor, the Hotel's 2014 new service: L'Attico bistrot. Situated on the panoramic room with a double facade overlooking the two terraces, the restaurant offers a Roman cuisine reinterpreted in modern key. During Spring and Summer time the guests are welcome to enjoy a relaxing drink or a delicacy in the magic atmosphere of \"La Terrazza\" bar, situated on the roof garden. In the Hall, besides the reception, there is a Centrum Bar and a cosy lounge. When you enter the hotel, you can immediately admire the hotel's symbol: a wall of rubber roses (\"Il cespuglio\") created by the artist Paolo Canevari. The 65 rooms, arranged on three floors, are immersed in the warm shades of ochre, sand and yellow saffron . Capo d'Africa has three multi-functional and day-light conferences rooms able to seat up to 60 people and a gym provided with modern exercise equipments. L' Attico bistrot is open from 7.00 Pm to 11.00 Pm, from Monday to Saturday. The Chef prepares appetizing dishes from the Roman and Italian cuisine reinterpreted in a modern key, all strictly home-made express and creative, in line with the fresh and modern style of the Hotel Capo d'Africa. Selected ingredients and high quality products are the basis of our menu. The service is provided on the panoramic room with a double facade overlooking the two terraces.",
+      "rating": 4.5,
+      "reviews": 2636,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/f5/b6/50/capo-d-africa-hotel-colosseo.jpg",
+      "highlighted_review": {
+        "text": "Rome Mate Collection Mia was recommended by a Roman friend of a friend.",
+        "highlighted_texts": [
+          "Rome"
+        ],
+        "mention_count": 1148
+      }
+    },
+    {
+      "position": 29,
+      "title": "Kolbe Hotel Rome",
+      "place_type": "ACCOMMODATION",
+      "place_id": "208553",
+      "link": "https://www.tripadvisor.com/Hotel_Review-g187791-d208553-Reviews-Kolbe_Hotel_Rome-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=208553&tripadvisor_domain=www.tripadvisor.com",
+      "rating": 4.4,
+      "reviews": 3124,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/f3/1d/d9/kolbe-triple.jpg",
+      "highlighted_review": {
+        "text": "A very calm and peaceful setting for our visit to Rome.",
+        "highlighted_texts": [
+          "Rome."
+        ],
+        "mention_count": 1204
+      }
+    },
+    {
+      "position": 30,
+      "title": "Colosseum & Ancient Rome with Arena Floor Option I Max 6 People",
+      "place_type": "ATTRACTION_PRODUCT",
+      "place_id": "11803777",
+      "link": "https://www.tripadvisor.com/AttractionProductReview-g187791-d11803777-Colosseum_Ancient_Rome_with_Arena_Floor_Option_I_Max_6_People-Rome_Lazio.html",
+      "serpapi_link": "https://serpapi.com/search.json?place_id=11803777&tripadvisor_domain=www.tripadvisor.com",
+      "description": "The Colosseum is one of Rome’s most iconic landmarks— but understanding its history isn’t easy without a guide leading the way. On this small-group tour, listen to stories of emperors and gladiators as you tour the ancient arena, with optional arena floor access. Then, head to the nearby Roman Forum and Palatine Hill to complete your tour of Ancient Rome.",
+      "rating": 5,
+      "reviews": 2065,
+      "location": "Rome, Lazio, Italy",
+      "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/10/b6/7c/caption.jpg",
+      "highlighted_review": {
+        "text": "and surrounding area played in Rome's glory days.",
+        "highlighted_texts": [
+          "Rome's"
+        ],
+        "mention_count": 633
+      }
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=tripadvisor&limit=30&offset=30&q=Rome&ssrc=a&tripadvisor_domain=www.tripadvisor.com"
+  }
+}

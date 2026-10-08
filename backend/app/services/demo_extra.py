@@ -293,7 +293,7 @@ def tripadvisor(p: dict, drift_r: random.Random | None = None) -> dict:
             if drift_r is not None:
                 rating = max(2.5, min(5.0, rating + drift_r.choice([-0.5, 0, 0, 0.5])))
             places.append({"position": len(places) + 1, "title": _vary(v["name"], "tripadvisor", r), "place_id": 13_000_000 + r.randint(1, 999_999),
-                           "place_type": "RESTAURANT", "link": f"https://www.tripadvisor.com/Restaurant_Review-{r.randint(10**5, 10**6)}-Reviews.html",
+                           "place_type": "EATERY", "link": f"https://www.tripadvisor.com/Restaurant_Review-{r.randint(10**5, 10**6)}-Reviews.html",
                            "rating": rating, "reviews": int(v["base_reviews"] * r.uniform(0.7, 2.4)), "location": city,
                            "description": f"{v['word']} favorite on {v['street']}."})
     if ssrc == "A":
@@ -319,7 +319,7 @@ def events(p: dict, drift_r: random.Random | None = None) -> dict:
                     "address": [venue, city], "link": f"https://events.example.com/{hashlib.md5((k + city).encode()).hexdigest()[:8]}",
                     "description": f"{k} featuring local artists and vendors in {city}.",
                     "ticket_info": [{"source": "Eventbrite", "link": "https://www.eventbrite.com/", "link_type": "tickets"}],
-                    "venue": {"name": venue, "rating": round(r.uniform(4.0, 4.9), 1), "reviews": r.randint(40, 2400)},
+                    "venue": {"name": venue, "rating": round(r.uniform(4.0, 4.9), 1), "reviews": r.randint(40, 2400)},     # docs show venue as str OR object
                     "thumbnail": ""})
     return {"events_results": out, "search_information": {"events_results_state": "Results for exact spelling"}}
 
@@ -352,6 +352,8 @@ def airbnb(p: dict) -> dict:
 
 def demo_extra(engine: str, p: dict, drift_r: random.Random | None) -> dict | None:
     """Return a payload for an engine handled here, else None."""
+    if engine == "google" and _q(p, "q").lower().startswith("events in"):
+        return events(p, drift_r)                        # events_results block of the Google Search API (google_events is deprecated)
     if engine in ("bing", "duckduckgo", "yahoo", "yandex", "baidu", "naver"):
         return serp(engine, p, drift_r)
     if engine == "google_ai_mode":

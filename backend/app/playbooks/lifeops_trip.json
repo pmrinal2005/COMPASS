@@ -135,9 +135,9 @@
       }
     },
     {
-      "engine": "google_events",
+      "engine": "google",
       "category": "event",
-      "purpose": "Events during the stay (what to do)",
+      "purpose": "Events during the stay: events_results of the Google Search API (google_events is deprecated)",
       "essential": false,
       "params": {
         "q": "Events in {destination}",

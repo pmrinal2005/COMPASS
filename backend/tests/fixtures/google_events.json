@@ -1,0 +1,551 @@
+{
+  "search_metadata": {
+    "id": "6959279d8c24bd247f1be7e6",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/93ade1f1ca0cfb15/6959279d8c24bd247f1be7e6.json",
+    "created_at": "2026-01-03 14:28:45 UTC",
+    "processed_at": "2026-01-03 14:28:45 UTC",
+    "google_events_url": "https://www.google.com/search?q=Events+in+Austin&ibp=htl;events",
+    "raw_html_file": "https://serpapi.com/searches/93ade1f1ca0cfb15/6959279d8c24bd247f1be7e6.html",
+    "total_time_taken": 0.88
+  },
+  "search_parameters": {
+    "q": "Events in Austin",
+    "engine": "google_events"
+  },
+  "search_information": {
+    "events_results_state": "Results for exact spelling"
+  },
+  "events_results": [
+    {
+      "title": "GRYFFIN with AVELLO at The Concourse Project",
+      "date": {
+        "start_date": "Jan 3",
+        "when": "Sat, 03 Jan, 21:00–23:00 GMT-6"
+      },
+      "address": [
+        "The Concourse Project, 8509 Burleson Rd",
+        "Austin, TX, United States"
+      ],
+      "link": "https://www.statesman.com/austin360/things-to-do/?_evDiscoveryPath=/event/1037031425n-avello",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=tE5YNtsmmZgonT8MpBjhnAM2aisnQqPAgdHbxW3ttowwR158SWpkBCJrxOQIVcQ2xhTbGvWJAw422-QdsVUeN1mRJprFy6TiLq81-L4kdJ6_yajRkhw",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b1316e46d40b:0x8c69c5b81db8e737?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIAxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b1316e46d40b%3A0x8c69c5b81db8e737&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "RealMusic Events presents.... ::: GRYFFIN ::: Support: AVELLO at The Concourse Project 8509 Burleson Rd, Building 1 Austin, TX 78719 . . 18+ Welcome // 9pm - 2am Tix on sale Tues 11/4 @ 12pm...",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/418LdPWSwUjzvU1bKoquSx",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Tix4cause.com",
+          "link": "https://www.tix4cause.com/event/gryffin/7587915",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Eventim.us",
+          "link": "https://www.eventim.us/event/GRYFFIN-with-AVELLO-at-The-Concourse-Project/668198",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Premiumseatsusa.com",
+          "link": "https://www.premiumseatsusa.com/concerts/techno-electronic/gryffin/7587915",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Seetickets.us",
+          "link": "https://wl.seetickets.us/event/GRYFFIN-with-AVELLO-at-The-Concourse-Project/668198?afflky=TheConcourseProject",
+          "link_type": "tickets"
+        }
+      ],
+      "venue": {
+        "name": "The Concourse Project",
+        "rating": 4.5,
+        "reviews": 1291,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=The+Concourse+Project&ludocid=10117835432427841335&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRARNsgl_wnvT1JQWsdQTRRYnRAa1IcHcSdXa7lPn5fx90Avx9OrbOgsso&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT14azEw3S0tVtaKriaW2RmTmf-FRQCffR-4ca_VFto67yBhr9KDzu7-Sl8FA&s=10"
+    },
+    {
+      "title": "Uncle Lucius",
+      "date": {
+        "start_date": "Jan 3",
+        "when": "Sat, 03 Jan, 22:00 – Sun, 04 Jan, 01:00 GMT-6"
+      },
+      "address": [
+        "The Continental Club, 1315 S Congress Ave",
+        "Austin, TX, United States"
+      ],
+      "link": "https://open.spotify.com/concert/6uNkwReVL14c1xaswptKcE",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=bOoJj3QukruLQqxX4R4f4OXVq03z1WVGcZtacu0CJ6wJlxZJIDP9JMDor_JWhpNywaL3AIIPgwBMHyyqhq2KA-Gjq-f5vreuzvlXNFMUUhhePhbuKbY",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b4fdbac94625:0x9a4922e26f855ca4?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQICxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b4fdbac94625%3A0x9a4922e26f855ca4&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Find tickets for Uncle Lucius at Continental Club in Austin on 1/3/2026 at 10:00 PM",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/6uNkwReVL14c1xaswptKcE",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Eventbrite.com",
+          "link": "https://www.eventbrite.com/e/1975380633651",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Austin American-Statesman",
+          "link": "https://www.statesman.com/things-to-do/events/?_evDiscoveryPath=/event%2F107629455n-uncle-lucius",
+          "link_type": "more info"
+        },
+        {
+          "source": "Viagogo",
+          "link": "https://www.viagogo.com/Concert-Tickets/E-159966696",
+          "link_type": "more info"
+        },
+        {
+          "source": "StubHub",
+          "link": "https://www.stubhub.com/uncle-lucius-austin-tickets-1-3-2026/event/159966696/?backUrl=%2Funcle-lucius-tickets%2Fperformer%2F731414%2Fplano-city%2F5466",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "The Continental Club",
+        "rating": 4.7,
+        "reviews": 2226,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=The+Continental+Club&ludocid=11117455511069744292&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMh9wcioKuOp5oh9T558MupokZsc0aGKy-8J7WFs_ftxslPggYKpfMAgY&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNDPwtxAnRgduzx50pyKkZTFyXDAyFTP-U17axt9YS_vnIgo999ZtsWz9CDg&s=10"
+    },
+    {
+      "title": "Jesse Royal Concert",
+      "date": {
+        "start_date": "Apr 16",
+        "when": "Thu, 16 Apr, 19:00 – Fri, 17 Apr, 21:00 GMT-5"
+      },
+      "address": [
+        "Auditorium Shores at Town Lake Metropolitan Park, 900 W Riverside Dr",
+        "Austin, TX, United States"
+      ],
+      "link": "https://www.austintexas.org/event/austin-reggae-festival/383745/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=g_34B4nCI0Ayssq_3fJ7qLVbvI5cxhIQVvknb2ERoGDn3iMG5uFIdCMAytsGK77fwnUziqz7FZde556XyNpaTFmSA5pM559FzVzB8g4C3RudH58Y97k",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b505427ff849:0x571b464a04766230?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIExAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b505427ff849%3A0x571b464a04766230&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "The Austin reggae community converged for the first time on May 7th 1994, at Auditorium Shores in downtown Austin, Texas to pay tribute to the late great Bob Marley. In the spirit of Bob Marley...",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/1I83yj3PTvopGbnALdMfIx",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Austin, TX",
+          "link": "https://www.austintexas.org/event/austin-reggae-festival/383745/",
+          "link_type": "more info"
+        },
+        {
+          "source": "AXS",
+          "link": "https://www.axs.com/events/1246682/austin-reggae-festival-3-day-pass-417-419-stephen-marley-original-koff-tickets",
+          "link_type": "more info"
+        },
+        {
+          "source": "Event Live",
+          "link": "https://www.eventliveus.com/event/10226/rrutx26",
+          "link_type": "more info"
+        },
+        {
+          "source": "Shazam",
+          "link": "https://www.shazam.com/song/1236308285/always-be-around",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Auditorium Shores at Town Lake Metropolitan Park",
+        "rating": 4.7,
+        "reviews": 4691,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=Auditorium+Shores+at+Town+Lake+Metropolitan+Park&ludocid=6276687789387309616&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTV58qQ6sQ4HfmsQwUl0wUGbQFPNx24DXU-QI_P4sIaISYVukqVS9Xe1k&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwkYbJEGGohXmDqcvPDHsG8SlDbRVf9Id8stXwZuBR1g&s"
+    },
+    {
+      "title": "Cosmic Gate (18+ Event)",
+      "date": {
+        "start_date": "Jan 10",
+        "when": "Sat, 10 Jan, 22:00–23:30 GMT-6"
+      },
+      "address": [
+        "The Concourse Project, 8509 Burleson Rd",
+        "Austin, TX, United States"
+      ],
+      "link": "https://open.spotify.com/concert/7rTcqPeHhrBktcOJN0b4KR",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=tE5YNtsmmZgonT8MpBjhnAM2aisnQqPAgdHbxW3ttowwR158SWpkBCJrxOQIVcQ2xhTbGvWJAw422-QdsVUeN1mRJprFy6TiLq81-L4kdJ6_yajRkhw",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b1316e46d40b:0x8c69c5b81db8e737?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIGxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b1316e46d40b%3A0x8c69c5b81db8e737&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Find tickets for Cosmic Gate at The Concourse Project in Austin on 1/10/2026 at 10:00 PM",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/7rTcqPeHhrBktcOJN0b4KR",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Eventim.us",
+          "link": "https://wl.eventim.us/event/Cosmic-Gate-at-The-Concourse-Project/661693",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Lusg.net",
+          "link": "https://ticketnetwork.lusg.net/c/266168/132208/2322?prodsku=7344198&u=https%3A%2F%2Fwww.ticketnetwork.com%2Fen%2Fp%2F7344198&intsrc=CATF_896?irpid=266168&utm_medium=affiliate&utm_source=impact_Wcities&irgwc=1&subid1=eventseeker",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Premiumseatsusa.com",
+          "link": "https://www.premiumseatsusa.com/concerts/techno-electronic/cosmic-gate/7344198",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Seetickets.us",
+          "link": "https://wl.seetickets.us/event/Cosmic-Gate-at-The-Concourse-Project/661693?afflky=TheConcourseProject",
+          "link_type": "tickets"
+        }
+      ],
+      "venue": {
+        "name": "The Concourse Project",
+        "rating": 4.5,
+        "reviews": 1291,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=The+Concourse+Project&ludocid=10117835432427841335&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPtREZs_eOjLUwE1BcTxQvaPuMcqlhYgF3KL_bYsQFD8z57vTRdqk9SVc&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYFR7InaVHgWwFcdSsF8ouTO8H0HXbPeZesnHylfhPgy9ccV7EZIdZbEZqLg&s=10"
+    },
+    {
+      "title": "Boogie T",
+      "date": {
+        "start_date": "Jan 23",
+        "when": "Fri, 23 Jan, 21:00–22:30 GMT-6"
+      },
+      "address": [
+        "The Concourse Project, 8509 Burleson Rd",
+        "Austin, TX, United States"
+      ],
+      "link": "https://www.statesman.com/austin360/things-to-do/?_evDiscoveryPath=/event/1182323s-boogie-t-18-event-",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=tE5YNtsmmZgonT8MpBjhnAM2aisnQqPAgdHbxW3ttowwR158SWpkBCJrxOQIVcQ2xhTbGvWJAw422-QdsVUeN1mRJprFy6TiLq81-L4kdJ6_yajRkhw",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b1316e46d40b:0x8c69c5b81db8e737?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIIxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b1316e46d40b%3A0x8c69c5b81db8e737&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Born and raised in Louisiana, Brock Thornton aka Boogie T, has risen from the bayou to bring the low end. Since the tender age of eight, he’s expressed his creativity through writing and playing...",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/3V6uW0GkRhOGFADx0cpGTR",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Eventim.us",
+          "link": "https://www.eventim.us/event/Boogie-T-Odyssey-Tour-AUSTIN/667936",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Ticketmaster.com",
+          "link": "https://ticketmaster.evyy.net/c/6580072/271177/4272?u=https%3A%2F%2Fwww.ticketmaster.com%2Fevent%2FZ7r9jZ1A7qf7Z&utm_medium=affiliate",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Prked.com",
+          "link": "https://prked.com/event/boogie-t-parking-austin-concourse-project-01-23-2026/Z7r9jZ1A7qf7Z",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Premiumseatsusa.com",
+          "link": "https://www.premiumseatsusa.com/concerts/techno-electronic/boogie-t/7491166",
+          "link_type": "tickets"
+        }
+      ],
+      "venue": {
+        "name": "The Concourse Project",
+        "rating": 4.5,
+        "reviews": 1291,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=The+Concourse+Project&ludocid=10117835432427841335&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzchq1b8v3d8ufSn0XBWLCE312GqfqluXKPJwFjhH9gqgtL2Wup9Lc0bc&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3oZqrw5Ex6hLdbgiuWUkll8oXGfYBpUpSp8VnAU1uCLGzEVkBFpPU9raWVA&s=10"
+    },
+    {
+      "title": "Free Week: Candy Riot, Cloud Companion, Alma Muñeca, Almost Heaven",
+      "date": {
+        "start_date": "Jan 10",
+        "when": "Sat, 10 Jan, 21:00 – Sun, 11 Jan, 00:00 GMT-6"
+      },
+      "address": [
+        "Stubb's Bar-B-Q, 801 Red River St",
+        "Austin, TX, United States"
+      ],
+      "link": "https://do512.com/events/2026/1/10/free-week-w-candy-riot-cloud-companion-alma-muneca-almost-heaven-tickets",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=sO1tIgT44xBGqmOqbEGSrj1GZ9jyaNzM3ZbNsddEf3zoUJJRScVfQy8dWeJ7o-xdSdyciSDwQGyvaYEfJBTXm3sJwvvyeu4dWw9Odj27dKoOTfAQDTg",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b5a427aa5c49:0x8bf465f43c0f1f77?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIKxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b5a427aa5c49%3A0x8bf465f43c0f1f77&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "A Beloved Austin Music Tradition Founded in 2003 at the legendary Emo’s located near the intersection of 6th and Red River Street, Free Week was created to keep clubs’ lights on and staff working...",
+      "ticket_info": [
+        {
+          "source": "Redriverculturaldistrict.org",
+          "link": "https://redriverculturaldistrict.org/free-week/",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Live Nation",
+          "link": "https://www.livenation.com/artist/K8vZ917rLdf/alma-muneca-events",
+          "link_type": "more info"
+        },
+        {
+          "source": "Do512",
+          "link": "https://do512.com/events/2026/1/10/free-week-w-candy-riot-cloud-companion-alma-muneca-almost-heaven-tickets",
+          "link_type": "more info"
+        },
+        {
+          "source": "AARP Local",
+          "link": "https://local.aarp.org/event/free-week-candy-riot-cloud-companion-alma-muneca-almost-heaven-2026-01-10-tm-austin-tx.html",
+          "link_type": "more info"
+        },
+        {
+          "source": "Relix Austin Event Calendar",
+          "link": "http://austin-shows.relix.com/events/2026/1/10/free-week-w-candy-riot-cloud-companion-alma-muneca-almost-heaven-tickets",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Stubb's Bar-B-Q",
+        "rating": 4.3,
+        "reviews": 6746,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=Stubb%27s+Bar-B-Q&ludocid=10084797565243432823&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHDNlH63v_277FLRXxRBgYK9pP_C8sKBjLjmGl5Z2Vzo3uU19EI8hBCE&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBPCtdwvDq6f0e_MTygHeS95i522Aoqcpt1zwxJTo2yPSBI5wkaw8BP5a27w&s=10"
+    },
+    {
+      "title": "Jai Wolf",
+      "date": {
+        "start_date": "Jan 17",
+        "when": "Sat, 17 Jan, 22:00 – Sun, 18 Jan, 01:00 GMT-6"
+      },
+      "address": [
+        "Kingdom, 505 E 7th St",
+        "Austin, TX, United States"
+      ],
+      "link": "https://open.spotify.com/concert/141kJmhifkOlqCbYq81jiu",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=MrpZDBzsL61qyvq6X3GXvCR0Lq8PpdULKFWfaH6fp3kjSAm-qbXzKsaZV8pXTkNglKHt5AYRimKMIMD_ks5CUOqCcaHKzoLpuDwjC-C7-jCnZYmgUWY",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b5083410fc11:0x34771e972985b70?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIMxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b5083410fc11%3A0x34771e972985b70&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Find tickets for Jai Wolf at Kingdom Nightclub in Austin on 1/17/2026 at 10:00 PM",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/141kJmhifkOlqCbYq81jiu",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Etix.com",
+          "link": "http://www.etix.com/ticket/p/36332022/jai-wolf-austin-kingdom-nightclub-sd-presents",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Tix4cause.com",
+          "link": "https://www.tix4cause.com/event/jai-wolf/7416900",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Premiumseatsusa.com",
+          "link": "https://www.premiumseatsusa.com/concerts/techno-electronic/jai-wolf/7416900",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Stubhub.com",
+          "link": "https://www.stubhub.com/_C-39477?pcid=PSUSAEVECONALLEF426C5CF9E&ps_p=8&ps_placement=eventfeed&ps=vn-150043379%7Cev-159432826%7Ccy-427&ps_ev=159432826",
+          "link_type": "tickets"
+        }
+      ],
+      "venue": {
+        "name": "Kingdom",
+        "rating": 4.1,
+        "reviews": 389,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=Kingdom&ludocid=236282752924146544&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDwR9gBwxhnP9RzzVr_ONS5LwOTGP5SEBJCNPNrsZ9gdT_bnA6yCNvGs&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0sIWQv64Wwm2iuT9q6aF_0y38804ZbjV-MOtDiao7rJpwS4Pr8l20G1cgA&s=10"
+    },
+    {
+      "title": "Eddie Izzard",
+      "date": {
+        "start_date": "Feb 7",
+        "when": "Sat, 07 Feb, 14:00–15:30 GMT-6"
+      },
+      "address": [
+        "State Theatre, 719 Congress Ave.",
+        "Austin, TX, United States"
+      ],
+      "link": "https://open.spotify.com/concert/1N3swjR5j4OVb0whI5rAVw",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=h5FkgrV15SsJLNuLifKbGvFyy_S7y8r-6_Iq_0JZ1etJPdUynXVdpKCalMQ7xqToKM95wD3nBBWNnNpBXdR6wsuvCegAi371MWzmwkKUoexAcDTrKwk",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b509fb62dd35:0x2e05bd15cd4b9520?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIOxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b509fb62dd35%3A0x2e05bd15cd4b9520&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Find tickets for Eddie Izzard at State Theatre in Austin on 2/7/2026 at 2:00 PM",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/1N3swjR5j4OVb0whI5rAVw",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Premiumseatsusa.com",
+          "link": "https://www.premiumseatsusa.com/concerts/comedy/eddie-izzard/7559766",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Seatgeek.com",
+          "link": "https://seatgeek.com/eddie-izzard-tickets/comedy/2026-02-07-2-pm/17984992?gclsrc=%7BGOOGLE-ADS-CLICK-SOURCE%7D&refob=mta&ref_price=213.50",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Vividseats.com",
+          "link": "https://www.vividseats.com/eddie-izzard-tickets-austin-state-theatre-austin-2-7-2026--theater-comedy/production/6297452",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Do512",
+          "link": "https://do512.com/events/2026/2/7/eddie-izzard-the-tragedy-of-hamlet-1762973745",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "State Theatre",
+        "rating": 4.6,
+        "reviews": 208,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=State+Theatre&ludocid=3316264601964483872&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKH8jmqWP6ms1VNG1Iwd7r8vfTlFxIeO61k-twtbEfiNRMke5fzV-Layo&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQjbOBqtaBGQ4Pp6IVpEC9HKVcAkFigBoGAcONE-5RE2pJrt6qmPslai7wew&s=10"
+    },
+    {
+      "title": "Itzhak Perlman @ Dell Hall, Long Center",
+      "date": {
+        "start_date": "Mar 22",
+        "when": "Sun, 22 Mar, 14:00–15:30 GMT-5"
+      },
+      "address": [
+        "The Long Center for the Performing Arts, 701 W Riverside Dr",
+        "Austin, TX, United States"
+      ],
+      "link": "https://www.austintexas.org/event/itzhak-perlman-in-recital/390166/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=3Eb1_6d_fKnkLDKze8PGIGZMj_f5rWvN_lmKFevFhxz4WQtp41sKEvbWKpJkUuwNXtP4RKSyzlbb2y4-EaohHOky1wgRvhbcEXsWaaW8_HSmt8iERT8",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b504febb0b39:0xd41d7a37bd8f6b60?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQIQxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b504febb0b39%3A0xd41d7a37bd8f6b60&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "No violinist more beautifully captures and conveys the joy of music than Itzhak Perlman, the undeniable reigning virtuoso of violin. In this extraordinary recital, he is joined by his musical...",
+      "ticket_info": [
+        {
+          "source": "Spotify.com",
+          "link": "https://open.spotify.com/concert/1PwDpicCJf8AbiQXC0Xj6F",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Tix4cause.com",
+          "link": "https://www.tix4cause.com/event/itzhak-perlman/7406118",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Thelongcenter.org",
+          "link": "https://my.thelongcenter.org/3875",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Vividseats.com",
+          "link": "https://www.vividseats.com/itzhak-perlman-tickets-austin-long-center-for-the-performing-arts---dell-hall-3-22-2026--concerts-classical/production/6000631",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Austin, TX",
+          "link": "https://www.austintexas.org/event/itzhak-perlman-in-recital/390166/",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "The Long Center for the Performing Arts",
+        "rating": 4.7,
+        "reviews": 1378,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=The+Long+Center+for+the+Performing+Arts&ludocid=15284507090187414368&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhk3cf9kSRYSfWnkFIJLsWZ8JBkurWMYKsWiF5ltrHNL7K0D4bH1x9NUc&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd248bQRI9VdTdvwBzcVWz1BrcEzkfXTtbf8qhkstcrQ&s=10"
+    },
+    {
+      "title": "St. Louis City SC at Austin FC",
+      "date": {
+        "start_date": "May 3",
+        "when": "Sun, 03 May, 16:30–18:30 GMT-5"
+      },
+      "address": [
+        "Q2 Stadium, 10414 Mc Kalla Pl",
+        "Austin, TX, United States"
+      ],
+      "link": "https://local.aarp.org/event/austin-fc-vs-st-louis-city-sc-2026-05-03-tm-austin-tx.html",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=HEPQCXj71PraLESpylMka0O86jrVLGkuuBqFrYl9rpj4j8hKUb23hc4tvRLbV_hPWgtcpcoS3eW6-xdBCzvd402O9kADdCwBtSsHXoR1axWsKhwb2d0",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644cbd96a7af0dd:0x79427365a674ed87?sa=X&ved=2ahUKEwid2L-myu-RAxU_PrkGHcPsI_gQ9eIBegQISxAA",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644cbd96a7af0dd%3A0x79427365a674ed87&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Attend the Austin FC vs. St. Louis City SC event in Austin, TX at the Q2 Stadium, in Austin located at 10414 McKalla Place. The event starts at 6:00 P.M. on Sunday, May 3, 2026. We want to hear...",
+      "ticket_info": [
+        {
+          "source": "Tix4cause.com",
+          "link": "https://www.tix4cause.com/event/austin-fc-vs-st-louis-city-sc/7577239",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Koobit.com",
+          "link": "https://www.koobit.com/visit?sem=619049&su=/austin-vs-st-louis-e121267",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Seatgeek.com",
+          "link": "https://seatgeek.com/austin-fc-tickets/mls/2026-05-03-4-30-pm/17921655?gclsrc=%7BGOOGLE-ADS-CLICK-SOURCE%7D&refob=mta&ref_price=41.93",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Ticketmaster.com",
+          "link": "https://www.ticketmaster.com/event/Z7r9jZ1A7roZU",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Stubhub.com",
+          "link": "https://www.stubhub.com/_C-286499?pcid=PSUSAEVECONALLEF426C5CF9E&ps_p=8&ps_placement=eventfeed&ps=vn-93784%7Cev-159920080%7Ccy-427&ps_ev=159920080",
+          "link_type": "tickets"
+        }
+      ],
+      "venue": {
+        "name": "Q2 Stadium",
+        "rating": 4.8,
+        "reviews": 2647,
+        "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&q=Q2+Stadium&ludocid=8737673107473755527&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyTBTEA5yo-QxdWL4Tx0jAr-RXBJc1dXFCUMlvixhz4mxuEjPgY0ee49E&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVQRzeGHYF5ADgoFuslgXuuZpMpUiwmjzzpib2VSZnaQ&s=10"
+    }
+  ]
+}

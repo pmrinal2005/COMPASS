@@ -1,0 +1,1238 @@
+{
+  "search_metadata": {
+    "id": "6a79f801a618223e8a154acd",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/u21uo3k1VzXRMTYKS_Jkkw/6a79f801a618223e8a154acd.json",
+    "created_at": "2026-08-10 16:10:41 UTC",
+    "processed_at": "2026-08-10 16:10:41 UTC",
+    "naver_url": "https://search.naver.com/search.naver?query=Coffee",
+    "raw_html_file": "https://serpapi.com/searches/u21uo3k1VzXRMTYKS_Jkkw/6a79f801a618223e8a154acd.html",
+    "total_time_taken": 0.93
+  },
+  "search_parameters": {
+    "query": "Coffee",
+    "engine": "naver",
+    "device": "desktop"
+  },
+  "ads_results": [
+    {
+      "title": "마케토: 냉동 생지 / 커피",
+      "description": "믿을 수 있는 원두 납품 업체, 차별화된 맛",
+      "site": "mercatomall.co.kr/",
+      "link": "https://ader.naver.com/v1/l2vmYjLSYoZiEJkpSizpKJHBXkpmy4tbqNRpMjjmCmV0w0KFHNEYq7jN-IQxQZgX2zhRJ47ULD2twj4XJVz1QMx3-mIpnVwNZEoNG-D_Jg9sN1UKGO-BTz0J1c1EEOqCOXx49Nrpa24C2bxS-Nzg00P8V-RJO9ijVtQ6OPZcE1Hm1e4pkeiG8YxwfKK6RQis7WhCdWREBuiw8vXcziybA6P22oajKIzAoSaVfk8E8c4=?c=naver.search.pc.plsearch&t=0",
+      "thumbnails": [
+        "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfMjI5/MDAxNzM5MzE4NjU3Nzg1.3RmiKbI4TDIUzY5JXjiXLp833jthS11RsM40FGnQR9Ag.qlutp79A2lLtgN_itqyOvFhUEgBxjAJL6WiFkPGTiC8g.PNG/3260252-1209e314-e1f5-413f-ab2d-e17e3f6eca26.png?type=f160_160",
+        "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfNjgg/MDAxNzM5MzE4NjU3Nzk4.nPa8fPwIIYD6IEEA00p97ejIt4Dt_Nm52wUH7gT-YcMg.EMhLY5KANB9_NuNERpNDCKYb4rFniq5nA3A4SZjj9Skg.PNG/3260252-335a5b65-42b6-4919-a071-9f5864212a66.png?type=f160_160",
+        "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfMjgg/MDAxNzM5MzE4NjU3ODIz.c8pIDcf9W_mxouF4vf_QbLo8DZg_ZT_aywZWB2zeYHkg.EzU_aM7GZTKG1fvGGKOJc4WPiIebukcZkmY1SFvF22gg.PNG/3260252-2b2a30b1-e421-4de6-bd19-dca5abe7cec8.png?type=f160_160"
+      ],
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfMjI5/MDAxNzM5MzE4NjU3Nzg1.3RmiKbI4TDIUzY5JXjiXLp833jthS11RsM40FGnQR9Ag.qlutp79A2lLtgN_itqyOvFhUEgBxjAJL6WiFkPGTiC8g.PNG/3260252-1209e314-e1f5-413f-ab2d-e17e3f6eca26.png?type=f160_160"
+    },
+    {
+      "title": "세계 최초 3kg 원두",
+      "description": "로스티카만의 노하우 담긴 원두커피, 실패없는 카페 창업 솔루션",
+      "site": "smartstore.naver.com/roastica",
+      "link": "https://ader.naver.com/v1/l2vmYjLSYoZiEJkpSizpKJHBXkpmy4tbqNRpMjjmCmVlsPNtqKxKf91ume53dwvo2oypL943s955muBoiqBZAwOTHU8H2UjKIhYBZQnHLMJ0gDZqAL50cJfafv4kZByhBywWiKD_v6Xanb-bUq2nnWAg6805fm0aFSkRpI8lxXDRpoDxmaReQwavtHQ6YbFKdH_wgphNYpTq5HrlCy-xaU2t-Z4eMesgy6_12PT0-So9pNZZUPWTSD31K4-1ykoI?c=naver.search.pc.plsearch&t=0",
+      "thumbnails": [
+        "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfMjc3/MDAxNzM5MzE4Mzk3OTg1.vDcmE5k5bSQOTcDlUIFzSZbhFJEQV7x52-cJI_WJWDgg.34TVCZ0vat8WgXUOwQEb2wrONpuGQqcCHQ5vlflSRQ4g.JPEG/3260252-11e7bcb4-a653-46b5-b764-828909f1c809.jpeg?type=f160_160",
+        "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfNDIg/MDAxNzM5MzE4Mzk3OTkw.0OHjLOHkvfjoZ1L_5YDP5hCKHEXzIHq0vcpyG4XX9nEg.BaU-XpHTahFFfu3pLhSNoCVYkONHI1aAfSlxM_yNKUAg.JPEG/3260252-57f73c68-4751-4cf5-8420-4af60fb8c371.jpeg?type=f160_160",
+        "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfMTc5/MDAxNzM5MzE4Mzk4MDA2.yrGOlLBQoU4QKRgaM0uHHBRNNp_dqKki629s71Wcci0g.XFZqAZ4NdNDzc_v8XzCAyV8IiWiWAEPi0y54jax_DDUg.JPEG/3260252-5bda61c9-d64c-4be8-8f39-76d68bf43753.jpeg?type=f160_160"
+      ],
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNTAyMTJfMjc3/MDAxNzM5MzE4Mzk3OTg1.vDcmE5k5bSQOTcDlUIFzSZbhFJEQV7x52-cJI_WJWDgg.34TVCZ0vat8WgXUOwQEb2wrONpuGQqcCHQ5vlflSRQ4g.JPEG/3260252-11e7bcb4-a653-46b5-b764-828909f1c809.jpeg?type=f160_160"
+    },
+    {
+      "title": "NEW 돌체구스토 네오",
+      "sub_title": "아이스 아메리카노",
+      "description": "매일 마시는 아이스 아메리카노, 네스카페 돌체구스토 네오와 함께 집에서도 간편하게",
+      "site": "brand.naver.com/nestlestore",
+      "link": "https://ader.naver.com/v1/SFcvrIRN3_82Ot4HuJ2R7n2pVT7Ln9a1qPozb7zhzRjtyyn9Xt62LP6fWJMcbpgyQTLJqoP-A-o3zOR03o2t0oBwp5RoKeD1v_YY2dYmWa5xSTbmB3-QFpl8rZG1pgZI1V5p4HtjzaMqtrjRPuOgXPq5vn-6CulVjsCeyGUca8X9CUXD5CjeNFZxnuerfIC98Ma7fUsjZz4q0-IJISh-qef43zRqYjQv2NMhn4NWrWB0iBDCBkqtBt5wKED2Os1pNLAS1LgrY_Cy54pPbJdqsOxEiSsYy14hNj0r8dC-G3reke9iZjB0w0euzhDelYriWqlLwEP_OC8MAXug-C2k1w9pk_cUbaGgJp9e4OXUEK0klCs-z9Kwep3kIrIYjujRVU3gzi4gHxC3voOwuxBm5rnxcQ6aWwhd0XT1D_q9pUbo1hUsmJyz0PMqWPCyg4YH?c=naver.search.pc.plsearch&t=0",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjA1MjRfNTYg/MDAxNzc5NjMyMTQyOTc2.P6cRnhsZfm7kMmytJx8ZTFjsMsg0XvqTnt61rOstkjkg.6iyU5mJwgBxiciLhCnNP6lKixw-vW-GJZMnkrgvTTqkg.JPEG/3374500-c87eda95-83b5-4be8-a50a-f7c529ba327a.jpg?type=f160_160"
+    },
+    {
+      "title": "대세는 홈카페 로스팅 원두",
+      "sub_title": "콜롬비아 수프리모 커피 고급스러운 풍미 가득 느껴봐",
+      "description": "맛도 가격도 꽉 잡은 원두커피, 틈커피 사무실 원두 교체 계획 중? 맛좋은 틈커피 추천해요",
+      "site": "smartstore.naver.com/teumcoffee",
+      "link": "https://ader.naver.com/v1/_KqV-loWCiTLHF8KorloqX3m1EzYlG_oua--DcK1_ZDd_zu19HO_-XMYzlSg2nqUSiGs7zRIk3z3jDQAHwcAjQfBKYh_0tVDeBNibVczuwuz3nx5RpVtUMAjbpVNpoL0Ov-oDme6TFi7wz89hLouPufanrOxHZNSeDGude3sDyNw9WRcNiCfVGf7znCkaeNAz4JOxiXDBKoMT6GpyO52eRaqePuyQZ7XoXEwSbC1kw9JMLtQN54XQdtl3BfRQdMz8tJNcgf9TFsUaRio4f2uOvuPy676aRc9ih9XI-K2_j3IOLwRM7kxLsLgnf0BMXy-Dy64lrVfT3BKXUGtDQ9vkZyVE9V78cEIqzlAUC1hzGP2hZz3XOwueX6arQHr0Z7a01cdQDomPyjrjYk8jR1GbgBiGz3dXv6cbR3hvq-mkeI=?c=naver.search.pc.plsearch&t=0",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjA0MjVfMjMg/MDAxNzc3MTIyODkyMzAx.a9VuAS_wC99uaYMy2ll8u-6X72OcRn8j4-Cmn5MXuxog.1imCPPci9weZayARJ8MNd-8BCn4gpXvQRnsDf0WjZXkg.JPEG/1176258-22178c3d-b786-4391-ac97-24df1c50703f.jpg?type=f160_160"
+    },
+    {
+      "title": "매일 만나는 커피의 행복",
+      "sub_title": "매일 직접 내리는 드립백 스페셜티 원두의 싱글오리진",
+      "description": "신선한생두, 투명한 정보공개, 맞춤형로스팅, 롬빈로스터즈를 만나보세요",
+      "site": "smartstore.naver.com/rombean",
+      "link": "https://ader.naver.com/v1/YXp_gY_3NUNbWSsIxqdb8wcA-0wmL5tQHGchvd1_-Zkg-mjw--cfcZBiBqEjGCZCExXuGQpiY8pN8Jk_fVqIy9Nl9k253gU5LeM4r6IopJKtltxHoBKFFpS3QrCZfJMU-3Z2z82qqQem7XBhVCPgnyP-xt7N9MYSjz5EG-0eQGqznROxLtNUTubOwCFbdS-k3B2LNv4-Fgx6fedX4xw_QZ_BMz-iQjHHBjzZ5mZ_QaE4rOYKyqXfHgGr1Sae4sOP?c=naver.search.pc.plsearch&t=0",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjA0MTZfMTc4/MDAxNzc2MzA2ODI5MTgw.NsTkGjLiBLO4g-d2yu7hJB-ot-K8fyi_gq3hxtGDvNIg.6Z5kmx0J2ZnzvHOKipsdMn2s7mmLjHQa9adBy32GNLgg.JPEG/4183133-a3b0e22d-ca27-42c0-9945-41e9ca6981fe.jpg?type=f160_160"
+    },
+    {
+      "title": "맛있는 커피원두 찾으시나요?",
+      "sub_title": "소이로커피공장 매일 오전 신선한 원두를 당일로스팅",
+      "description": "당일로스팅 원두가 아니면 절대 배송하지 않습니다! 재주문률이 높은 단 한가지 이유, 탄맛 없는 프리미엄 로스팅!",
+      "site": "smartstore.naver.com/soirocoffee",
+      "link": "https://ader.naver.com/v1/MCy1JjdoHPzBnOY9MAVidFCoOmHBefvMmzwilueYjLX8frE5-wnqbZuTfr4SyK0Gg5dypxRpVV5746EQJeHP_XrVguErLn3fHqxYH4UWL1lPBQc4jEX_4VGWMGKNV6aqyHU3hF_Qa5DArAoThYkyQvtajt_S_OKzwIltuvFamVJHFwdCue6Ssi7t2--8chCzzdQX3AXtD4Rlc3F8VJTNBp2EARmR39uSxqAb9Qrbz8WKLvPFZGAO-c6NsH418l5FvQstSSRDwdopZVu1NsfpSZgZ49UFSrWIE2nm6iMFi5nEV3qXKf5iMiwoGayBp0NLPHmRD9TOmAEu_zQ0fHnrFlovXOrrjwlahUvdaniWmi14MYVgDqYrdx4-dwBQNVJ7vmGUQMTXAc1k0jE3Cx8qCQ==?c=naver.search.pc.plsearch&t=0",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjAxMDZfMjI1/MDAxNzY3Njk5MTg0NTkw.5-F--O3mB3GPv_gNFKedmS8UlZ8aa-FGpDfPXXTtyuog.zOkBklAhEBIamIncGBXZAWmUKE-WCRVt0JFDgq91BEUg.PNG/4143027-45804685-d319-4ff9-b106-bd025f3606c7.png?type=f160_160"
+    },
+    {
+      "title": "네스프레소 공식스토어",
+      "description": "ONLY 일주일, 공식스토어에서 만나는 메가 위크 혜택! 오리지널 커피 9%할인 멤버십 등급별 추가 쿠폰 증정",
+      "site": "brand.naver.com/nespressokorea",
+      "link": "https://ader.naver.com/v1/xCoqZan1O5T2RNXUCaXBEMhIUzU9bCq_v82cg4kAn5adhkGts_RQ5rTmRwgZEkq07QkVpQmldodpmUnDLEL48hhbmIWJwiwG3PoBC8hmNy-UwtoPfrp0vEIDlzKFpyKqg2HFJNjNqoY7uIItjGdW_0QgZVSh_3WInAoTk6e3r_mYLOprD2-M7qCD2H_h6EH8r5M6dHgTMnnPQ2N0L-Rl8Silrm8KByntsBXED9FfqPEKQX5x7ZdI-Mhl8wEZSBFA53A5gPT3_G9vYzgyQeug80uyWeSO1XRH5tsTRRN4RgJtPCse9jyNJViGmnXfx9CcL3xZwSjiqvEhHHGDL6k63MMPuoYcJk-Gwv9BVh4TaB7HVFF3vEXvv3zcb8ELtObJSVg1bU3QeStCX2U_EDt97w==?c=naver.search.pc.plsearch&t=0",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjA3MTNfNCAg/MDAxNzgzOTM5OTk1MzQ2.AYG64pJnoCNMzDwblkzDUEMnVP6aHdSrcPIMD2Jv4o4g.uaMSFDxEzCLnWMVUh3m3hElNv65-9_boOce76EMC9Rgg.PNG/380937-6307e3c8-e923-4b89-9d59-0b8d33ed15cf.png?type=f160_160"
+    },
+    {
+      "title": "카페전용 원두 죠커피 3kg",
+      "sub_title": "첫 구매 무료배송!",
+      "description": "카페나 사무실, 레스토랑에서도 인기가 좋은 대용량 원두커피! 5개이상 구매시 5% 추가증정! 10개이상 구매시 1개 무료증정! 공식스토어혜택!",
+      "site": "smartstore.naver.com/joecoffee",
+      "link": "https://ader.naver.com/v1/3UXrcLmaUQqVokPMf03_sclSXC2Uf6bW6KHjhhmEf6u88DaqIic8ejrDN2JpJc6Duya8oOTUdiwuhv0A68mxy1PNCJK-6k3SqDh_4SBL0im1K3YezYsPPFD68YrjfFmSLOTBW9IlmgFPnCuDx8jmnLbdQy0E_xz4RVC0j4nHQOiV29JUCgY9BOIWkxbKnW37KL1icKXr-ptIKLTDBRoqhg80Sfh227s_kCyflzU-pKFwZZNJVvn4I02jYGcPhQ6U0hBZfwBvRWim5XBvruFX2WO3hANET-3rqbPZZrbkBo4=?c=naver.search.pc.plsearch&t=0"
+    },
+    {
+      "title": "착한가격 커피",
+      "description": "고소한 풍미 가득한 커피원두, 사무실, 홈카페용 추천원두! 카페에서 맛보던 커피 착한가격 도매가로 만나보세요!",
+      "site": "smartstore.naver.com/backdangcoffee",
+      "link": "https://ader.naver.com/v1/vtBvq2QhLtzppr9M0EiGJkSkp9vqyHlYcRvWxw1MhHSqft2sv8L2jYFkSlAc8Iv_iiMpyGs2nWufNZsm7FDExBvXd3RYECv9XbrxP5cBnvI0lCBumwW2bUHz7kZAVcVhPKIootaHW_cRMYHUDYQyFrM4m2TIVoNGX69JkBqI2HabbJlIK7OR8dI4yv8AbCVA9cGwvca7hx0ugzwmzoSWOvtzt6Sg7RwNibNdWF66UrWD-tVYPFf2yyxvw_EYuFaDpr1xH8qRDWKvnZf44CjDK4BgBGQCKGctsJrHkHz8BClOCXu0G4hryaPQDQsA7tpgs7-rVL5-2L38QrFxK58JnbaqZvFRHzXGZ0ZAIpKHFpKh6FZgLBM6vdh7EL-qK4JWkR6cJ2K7L5eSVCw_UmIHxiDYF3K29jL8hT5lYJzS58E=?c=naver.search.pc.plsearch&t=0"
+    },
+    {
+      "title": "사무실 블랙커피는, 카피나",
+      "sub_title": "71원으로 즐기는 아메리카노",
+      "description": "가성비 만점, 찬물에도 잘 녹아요! 고품격 다이어트커피, 클린원두 방탄커피!",
+      "site": "smartstore.naver.com/healthouse",
+      "link": "https://ader.naver.com/v1/Nwh9oglz0Fm7Q7cRhU18gZ4lw9wwgzerbSfame0uKMRWwMwnpU-1pYaw--ya3BIjMvTfY2CheHnipD8EvON_EWQftNfs_KQiOLFODwHcnrcc_rl39KDBEfiJ6PMSax_4IK5u-ENnvRQbNZHfWGr0dxKsJTWwul9DhdJB-pTJJ4a-e3-pXPmI0wJ4lo6Nd9wUSV1H_U97LBV9_2poqYZRHf5SyQwJ3mWxBdUZYDDPZ8QXOYtH3Nn5w1Gu5oOQ-rOMHqkUtGLgOpTYY2TfHQsNry90xuaWKMxD74wlZzbOtqB9vBP3E6IGymWbi1fKO110OQ6fi_mLjGHPP-DTSm2dn7ZFRddC5a4uPfF01FiN7ajEp2TOh8mLvdd4Ou6zIsaF_CNTmpRrSyAf4vW-l2TGTRr7d5wGyoxJMsHydXEwEksF5-P6rs1_VHcxA-owK8ke8HbLBrUnw764sm0vsjoeIQ==?c=naver.search.pc.plsearch&t=0"
+    }
+  ],
+  "dictionary_result": {
+    "title": "coffee새 창 열림",
+    "link": "https://en.dict.naver.com/#/entry/enko/cd608510128445c8aa7da62f6f168345",
+    "pronunciations": [
+      {
+        "text": "미국식 [│kɔːfi; │kɑːfi]"
+      },
+      {
+        "text": "영국식 [│kɒfi]"
+      }
+    ],
+    "definitions": [
+      {
+        "position": 1,
+        "description": "커피(콩이나 가루)"
+      },
+      {
+        "position": 2,
+        "description": "커피(음료)"
+      },
+      {
+        "position": 3,
+        "description": "커피 한 잔"
+      }
+    ],
+    "other_meanings": {
+      "title": "영어사전 다른 뜻 1새 창 열림",
+      "link": "https://en.dict.naver.com/#/search?range=word&query=coffee"
+    }
+  },
+  "song_results": {
+    "title": "Coffee",
+    "type": "노래",
+    "singer": "beabadoobee",
+    "date": "2017.11.04.",
+    "link": "https://vibe.naver.com/track/39626434",
+    "thumbnail": "https://search.pstatic.net/common?type=n&size=174x174&quality=95&direct=true&src=https%3A%2F%2Fmusicmeta-phinf.pstatic.net%2Falbum%2F004%2F430%2F4430735.jpg%3Ftype%3Dr204Fll%26v%3D20240212012528",
+    "lyrics": "Don't stay awake for too long Don't go to bed I'll make a cup of coffee for your head I'll get you up and going out of bed And I promise that one day I'll feel fine And I promise that one day I'll feel alright And I'll make a cup of coffee with the right amount of sugar How you like it And I'll make a cup of coffee with the right amount of sugar How you like it How you like it Don't know how long I'll stay for It's okay, I'll knock on your door Won't you come down and get me? I like it when you hold me tight You make me feel nice The green in your eyes Makes me feel warm inside And I'll make a cup of coffee with the right amount of sugar How you like it And I'll make a cup of coffee with the right amount of sugar How you like it How you like it Yeah"
+  },
+  "place_results": [
+    {
+      "position": 1,
+      "name": "카페다락",
+      "type": "카페",
+      "link": "https://map.naver.com/p/search/coffee/place/479911735?placePath=%2Fphoto%3Fbk_query%3Dcoffee%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=bk_query%3Dcoffee%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3DCoffee%26x%3D%26y%3D&searchType=place"
+    },
+    {
+      "position": 2,
+      "name": "투썸플레이스 광화문점",
+      "type": "카페",
+      "link": "https://map.naver.com/p/search/coffee/place/1766489447?placePath=%2Fphoto%3Fbk_query%3Dcoffee%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=bk_query%3Dcoffee%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3DCoffee%26x%3D%26y%3D&searchType=place"
+    },
+    {
+      "position": 3,
+      "name": "스타벅스 무교동점",
+      "type": "카페",
+      "link": "https://map.naver.com/p/search/coffee/place/11684710?placePath=%2Fphoto%3Fbk_query%3Dcoffee%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=bk_query%3Dcoffee%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3DCoffee%26x%3D%26y%3D&searchType=place"
+    },
+    {
+      "position": 4,
+      "name": "투썸플레이스 서소문점",
+      "type": "카페",
+      "link": "https://map.naver.com/p/search/coffee/place/12952314?placePath=%2Fphoto%3Fbk_query%3Dcoffee%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=bk_query%3Dcoffee%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3DCoffee%26x%3D%26y%3D&searchType=place"
+    },
+    {
+      "position": 5,
+      "name": "테라로사 청계광장점",
+      "type": "카페",
+      "link": "https://map.naver.com/p/search/coffee/place/1052650858?placePath=%2Fphoto%3Fbk_query%3Dcoffee%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=bk_query%3Dcoffee%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3DCoffee%26x%3D%26y%3D&searchType=place"
+    },
+    {
+      "position": 6,
+      "name": "알레그리아 광화문 케이스퀘어시티점",
+      "type": "카페",
+      "link": "https://map.naver.com/p/search/coffee/place/1052955898?placePath=%2Fphoto%3Fbk_query%3Dcoffee%26entry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=bk_query%3Dcoffee%26entry%3Dpll%26fromNxList%3Dtrue%26originalQuery%3DCoffee%26x%3D%26y%3D&searchType=place"
+    }
+  ],
+  "inline_images_results": [
+    {
+      "image_id": "image_sas:web_252055e0606b04aa5791bcb58537d497",
+      "title": "Coffee beans around a cup of coffee 이미지 (533726779) - 게티이미지뱅크 Coffee beans around a cup of coffee",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.10.10.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/15/440/208/0/533726779.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/15/440/208/0/533726779.jpg",
+      "link": "http://www.gettyimagesbank.com/i/533726779",
+      "color": "#E1B785",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/533726779",
+      "width": 507,
+      "height": 338,
+      "thumbnail_width": 340,
+      "thumbnail_height": 227,
+      "rank": 1,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_4a8ee38df4dd3b97ba7587e744e6a825",
+      "title": "Cup of coffee with coffee bean on wood 이미지 (497611020) - 게티이미지뱅크 Cup of coffee with coffee bean on wood",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.10.31.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/15/943/703/0/497611020.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/15/943/703/0/497611020.jpg",
+      "link": "http://www.gettyimagesbank.com/i/497611020",
+      "color": "#BDB8CE",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/497611020",
+      "width": 508,
+      "height": 338,
+      "thumbnail_width": 340,
+      "thumbnail_height": 226,
+      "rank": 2,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_1b725848b9575e55dcee1d07d6dafb4c",
+      "title": "Steaming Hot Cup of Black Coffee Isolated on White Background... Hot Cup of Black Coffee Isolated on White Background for free",
+      "source": "vecteezy.com",
+      "where": "웹",
+      "date": "2026.02.26.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://static.vecteezy.com/system/resources/previews/058/432/314/non_2x/steaming-hot-cup-of-black-coffee-isolated-on-white-background-free-png.png&type=a340",
+      "original": "https://static.vecteezy.com/system/resources/previews/058/432/314/non_2x/steaming-hot-cup-of-black-coffee-isolated-on-white-background-free-png.png",
+      "link": "https://www.vecteezy.com/png/58432314-steaming-hot-cup-of-black-coffee-isolated-on-white-background",
+      "color": "#AAbDD0",
+      "tld": "vecteezy.com",
+      "article_id": "webhttps://www.vecteezy.com/png/58432314-steaming-hot-cup-of-black-coffee-isolated-on-white-background",
+      "width": 980,
+      "height": 980,
+      "thumbnail_width": 340,
+      "thumbnail_height": 340,
+      "rank": 3,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_2a8d28c2aa5972361ff50334018f2c8e",
+      "title": "Coffee cup with beans 이미지 (486109808) - 게티이미지뱅크 Coffee cup with beans",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.10.12.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/15/340/876/0/486109808.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/15/340/876/0/486109808.jpg",
+      "link": "http://www.gettyimagesbank.com/i/486109808",
+      "color": "#B5B68F",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/486109808",
+      "width": 509,
+      "height": 339,
+      "thumbnail_width": 340,
+      "thumbnail_height": 226,
+      "rank": 4,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_2fdd7f7e9ba67f13184c79ebab0d5f06",
+      "title": "Coffee cup and coffee beans on old wooden table 이미지... 게티이미지뱅크 Coffee cup and coffee beans on old wooden table",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.10.11.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/15/446/161/0/477428810.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/15/446/161/0/477428810.jpg",
+      "link": "http://www.gettyimagesbank.com/i/477428810",
+      "color": "#AAbDD0",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/477428810",
+      "width": 509,
+      "height": 339,
+      "thumbnail_width": 340,
+      "thumbnail_height": 226,
+      "rank": 5,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_a05237b18de558375eb73f7111b45895",
+      "title": "Cup of coffee on grunge table 이미지 (450586405) - 게티이미지뱅크 Cup of coffee on grunge table",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.10.06.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/13/916/144/0/450586405.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/13/916/144/0/450586405.jpg",
+      "link": "http://www.gettyimagesbank.com/i/450586405",
+      "color": "#E1B785",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/450586405",
+      "width": 507,
+      "height": 338,
+      "thumbnail_width": 340,
+      "thumbnail_height": 227,
+      "rank": 6,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_db7d97b475157a54f0e046232ce0228c",
+      "title": "Good morning - coffee | 음료",
+      "source": "pinterest.com",
+      "where": "웹",
+      "date": "2020.03.17.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://i.pinimg.com/736x/21/72/0b/21720b2f36b7d440859ed6b3351df97b--good-morning-coffee-coffee-break.jpg&type=a340",
+      "original": "https://i.pinimg.com/736x/21/72/0b/21720b2f36b7d440859ed6b3351df97b--good-morning-coffee-coffee-break.jpg",
+      "link": "https://www.pinterest.com/pin/746542075705419348/",
+      "color": "#DB9D8F",
+      "tld": "pinterest.com",
+      "article_id": "webhttps://www.pinterest.com/pin/746542075705419348/",
+      "width": 736,
+      "height": 1104,
+      "thumbnail_width": 340,
+      "thumbnail_height": 510,
+      "rank": 7,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:blog_8b291cf53ebf1395236af32d68f9d803",
+      "title": "런던카페 Tap Coffee",
+      "source": "CafeCurator",
+      "where": "네이버 블로그",
+      "date": "2018.03.06.",
+      "profile_image": "https://search.pstatic.net/common/?src=http://blogpfthumb.phinf.naver.net/20120720_147/cafecurator_1342767550244_r0q8a8_JPG/크기변환_IMG_1805.JPG&type=f80_80",
+      "thumbnail": "https://search.pstatic.net/common/?src=http://blogfiles.naver.net/MjAxODAxMThfMjM1/MDAxNTE2MjY3MzM2MDUx.nfYqNuH_smSknPYJaeCiRxzE4c9-2ghjHn3ixkmFxvMg.6uf5FJauIEiQZas6Alo3MrSZRWMuOjpIulQW9KLDzZMg.JPEG.cafecurator/P20180113_130822159_0DCD4E60-00D9-47AB-B11C-BDABD65ACA4F.JPG&type=a340",
+      "original": "http://blogfiles.naver.net/MjAxODAxMThfMjM1/MDAxNTE2MjY3MzM2MDUx.nfYqNuH_smSknPYJaeCiRxzE4c9-2ghjHn3ixkmFxvMg.6uf5FJauIEiQZas6Alo3MrSZRWMuOjpIulQW9KLDzZMg.JPEG.cafecurator/P20180113_130822159_0DCD4E60-00D9-47AB-B11C-BDABD65ACA4F.JPG",
+      "link": "https://blog.naver.com/cafecurator/221223152966",
+      "color": "#E1B785",
+      "tld": "blog.naver.com",
+      "article_id": "blog58898756|9|221223152966",
+      "width": 4032,
+      "height": 3024,
+      "thumbnail_width": 340,
+      "thumbnail_height": 255,
+      "rank": 8,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_30bb29364b43b3889960ce2197eecff0",
+      "title": "White cup on the background of coffee beans | 유토이미지 | 상세페이지 | 베이직샵 | 사진 | 19822232",
+      "source": "utoimage.com",
+      "where": "웹",
+      "date": "2023.06.21.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://image.utoimage.com/preview/cp864374/2016/03/201603007009_500.jpg&type=a340",
+      "original": "https://image.utoimage.com/preview/cp864374/2016/03/201603007009_500.jpg",
+      "link": "https://www.utoimage.com/?m=goods.photo_view&idx=19822232",
+      "color": "#E1B785",
+      "tld": "utoimage.com",
+      "article_id": "webhttps://www.utoimage.com/?m=goods.photo_view&idx=19822232",
+      "width": 500,
+      "height": 753,
+      "thumbnail_width": 340,
+      "thumbnail_height": 512,
+      "rank": 9,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_f3c4c8629d1444eaa938791749226fa4",
+      "title": "morning coffee | Express.co.uk Scientist names the time you should be drinking your morning coffee",
+      "source": "express.co.uk",
+      "where": "웹",
+      "date": "2025.03.17.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://cdn.images.express.co.uk/img/dynamic/14/1200x630/6027520.jpg&type=l340_165",
+      "original": "https://cdn.images.express.co.uk/img/dynamic/14/1200x630/6027520.jpg",
+      "link": "https://www.express.co.uk/life-style/food/2028142/scientist-names-time-you-should-drinking-your-morning-coffee",
+      "color": "#E1B785",
+      "tld": "express.co.uk",
+      "article_id": "webhttps://www.express.co.uk/life-style/food/2028142/scientist-names-time-you-should-drinking-your-morning-coffee",
+      "width": 1200,
+      "height": 630,
+      "thumbnail_width": 340,
+      "thumbnail_height": 165,
+      "rank": 10,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_ea7f47c39fe66d4cebf989e3ade870d5",
+      "title": "6 Must-Try Saint Louis Coffee Shops | The Odyssey Online 6 Must-Try Saint Louis Coffee Shops",
+      "source": "theodysseyonline.com",
+      "where": "웹",
+      "date": "2025.05.27.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://www.theodysseyonline.com/media-library/image.jpg?id=14579719&width=700&quality=80&type=a340",
+      "original": "https://www.theodysseyonline.com/media-library/image.jpg?id=14579719&width=700&quality=80",
+      "link": "https://www.theodysseyonline.com/6-saint-louis-coffee-shops",
+      "color": "#E1B785",
+      "tld": "theodysseyonline.com",
+      "article_id": "webhttps://www.theodysseyonline.com/6-saint-louis-coffee-shops",
+      "width": 700,
+      "height": 700,
+      "thumbnail_width": 340,
+      "thumbnail_height": 340,
+      "rank": 11,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_efb69e1771c5f0a72a6ab2b3437fcfd1",
+      "title": "Amazing Coffee (Ginger fever) by Tian Jiaying | Burpple Read Tian Jiaying's review of The Hangar",
+      "source": "burpple.com",
+      "where": "웹",
+      "date": "2018.08.21.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://burpple-2.imgix.net/foods/2f6940fba7b848b142601662840_original.?w=645&dpr=1&fit=crop&q=80&type=a340",
+      "original": "https://burpple-2.imgix.net/foods/2f6940fba7b848b142601662840_original.?w=645&dpr=1&fit=crop&q=80",
+      "link": "https://www.burpple.com/f/Wk-GBV9d",
+      "color": "#BDB8CE",
+      "tld": "burpple.com",
+      "article_id": "webhttps://www.burpple.com/f/Wk-GBV9d",
+      "width": 645,
+      "height": 645,
+      "thumbnail_width": 340,
+      "thumbnail_height": 340,
+      "rank": 12,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_3a229fbd961d2c82892af522e7872626",
+      "title": "Red cup with hot coffee and roasted coffee beans 이미지... 게티이미지뱅크 Red cup with hot coffee and roasted coffee beans",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.11.01.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/15/199/451/0/501578790.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/15/199/451/0/501578790.jpg",
+      "link": "http://www.gettyimagesbank.com/i/501578790",
+      "color": "#DB9D8F",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/501578790",
+      "width": 508,
+      "height": 339,
+      "thumbnail_width": 340,
+      "thumbnail_height": 227,
+      "rank": 13,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_5f2efffd926abaaf26b4d26336d55dc1",
+      "title": "Coffee Beans 이미지 (100394682) - 게티이미지뱅크 Coffee Beans",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.11.01.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/09/743/960/0/100394682.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/09/743/960/0/100394682.jpg",
+      "link": "http://www.gettyimagesbank.com/i/100394682",
+      "color": "#AAbDD0",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/100394682",
+      "width": 506,
+      "height": 338,
+      "thumbnail_width": 340,
+      "thumbnail_height": 227,
+      "rank": 14,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_0692435e2c2c86a2911347df65686f85",
+      "title": "cup of coffee, coffee beans,cracker background. 이미지 (492586046) - 게티이미지뱅크 cup of coffee, coffee beans...",
+      "source": "gettyimagesbank.com",
+      "where": "웹",
+      "date": "2016.10.31.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=http://imagescdn.gettyimagesbank.com/500/15/791/361/0/492586046.jpg&type=a340",
+      "original": "http://imagescdn.gettyimagesbank.com/500/15/791/361/0/492586046.jpg",
+      "link": "http://www.gettyimagesbank.com/i/492586046",
+      "color": "#AAbDD0",
+      "tld": "gettyimagesbank.com",
+      "article_id": "webhttp://www.gettyimagesbank.com/i/492586046",
+      "width": 339,
+      "height": 509,
+      "thumbnail_width": 340,
+      "thumbnail_height": 511,
+      "rank": 15,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_f48f749053cb20c06bff88ecfa880b23",
+      "title": "380,033 Latte Coffee Stock Photos - Free & Royalty-Free Stock Photos from Dreamstime",
+      "source": "dreamstime.com",
+      "where": "웹",
+      "date": "2016.07.09.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://thumbs.dreamstime.com/b/cup-hot-latte-art-coffee-close-up-96129572.jpg&type=a340",
+      "original": "https://thumbs.dreamstime.com/b/cup-hot-latte-art-coffee-close-up-96129572.jpg",
+      "link": "https://www.dreamstime.com/photos-images/latte-coffee.html",
+      "color": "#DB9D8F",
+      "tld": "dreamstime.com",
+      "article_id": "webhttps://www.dreamstime.com/photos-images/latte-coffee.html",
+      "width": 800,
+      "height": 534,
+      "thumbnail_width": 340,
+      "thumbnail_height": 227,
+      "rank": 16,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_7934048e603a253673ed3baf06f6f1ba",
+      "title": "Coffee Beans :: Behance Coffee Beans",
+      "source": "behance.net",
+      "where": "웹",
+      "date": "2022.10.07.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://mir-s3-cdn-cf.behance.net/project_modules/1400/59b640141340367.6251e75167d73.png&type=a340",
+      "original": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/59b640141340367.6251e75167d73.png",
+      "link": "https://www.behance.net/gallery/141340367/Coffee-Beans",
+      "color": "#E1B785",
+      "tld": "behance.net",
+      "article_id": "webhttps://www.behance.net/gallery/141340367/Coffee-Beans",
+      "width": 1400,
+      "height": 1800,
+      "thumbnail_width": 340,
+      "thumbnail_height": 437,
+      "rank": 17,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:news_a62849431b05d6e5b69ededcb6d77705",
+      "title": "Creative Ways to Celebrate National Coffee Day 2024 at Home: Brewing Tips, Tasting Ideas, and More",
+      "source": "econotimes.com",
+      "where": "포토뉴스",
+      "date": "2024.09.27.",
+      "thumbnail": "https://search.pstatic.net/common/?src=http://imgnews.naver.net/image/5831/2024/09/27/0000030362_001_20240927065213160.jpeg&type=a340",
+      "original": "http://imgnews.naver.net/image/5831/2024/09/27/0000030362_001_20240927065213160.jpeg",
+      "link": "https://www.econotimes.com/Creative-Ways-to-Celebrate-National-Coffee-Day-2024-at-Home-Brewing-Tips-Tasting-Ideas-and-More-1688716",
+      "color": "#DB9D8F",
+      "tld": "econotimes.com",
+      "article_id": "news58310000030362",
+      "width": 1024,
+      "height": 614,
+      "thumbnail_width": 340,
+      "thumbnail_height": 204,
+      "rank": 18,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_98ab8dc5f184f66131f4904505225404",
+      "title": "A White Cup on Coffee Beans from a Knitted Bag with a Burnt Wooden Background. Vertical Stock Image - Image of gourmet, drink...",
+      "source": "dreamstime.com",
+      "where": "웹",
+      "date": "2026.06.08.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://thumbs.dreamstime.com/b/white-cup-coffee-beans-knitted-bag-burnt-wooden-background-vertical-toned-close-up-171378641.jpg&type=a340",
+      "original": "https://thumbs.dreamstime.com/b/white-cup-coffee-beans-knitted-bag-burnt-wooden-background-vertical-toned-close-up-171378641.jpg",
+      "link": "https://www.dreamstime.com/white-cup-coffee-beans-knitted-bag-burnt-wooden-background-vertical-toned-close-up-image171378641",
+      "color": "#C2C7CC",
+      "tld": "dreamstime.com",
+      "article_id": "webhttps://www.dreamstime.com/white-cup-coffee-beans-knitted-bag-burnt-wooden-background-vertical-toned-close-up-image171378641",
+      "width": 600,
+      "height": 900,
+      "thumbnail_width": 340,
+      "thumbnail_height": 510,
+      "rank": 19,
+      "is_gif": false
+    },
+    {
+      "image_id": "image_sas:web_f22c1ab9d35335b20b03cd4e181ae8ce",
+      "title": "Fresh Roasted Coffee Beans Background Stock Photo - Image: 98048315 Fresh Roasted Coffee Beans Background",
+      "source": "dreamstime.com",
+      "where": "웹",
+      "date": "2017.08.22.",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https://thumbs.dreamstime.com/b/fresh-roasted-coffee-beans-background-photo-image-food-beverage-98048315.jpg&type=a340",
+      "original": "https://thumbs.dreamstime.com/b/fresh-roasted-coffee-beans-background-photo-image-food-beverage-98048315.jpg",
+      "link": "https://www.dreamstime.com/stock-photo-fresh-roasted-coffee-beans-background-photo-image-food-beverage-image98048315",
+      "color": "#E1B785",
+      "tld": "dreamstime.com",
+      "article_id": "webhttps://www.dreamstime.com/stock-photo-fresh-roasted-coffee-beans-background-photo-image-food-beverage-image98048315",
+      "width": 600,
+      "height": 900,
+      "thumbnail_width": 340,
+      "thumbnail_height": 510,
+      "rank": 20,
+      "is_gif": false
+    }
+  ],
+  "web_results": [
+    {
+      "position": 1,
+      "title": "커피 - 나무위키",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fnamu.wiki%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "나무위키",
+      "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC",
+      "displayed_link": "namu.wiki",
+      "snippet": "Coffee 커피나무의 씨앗(원두)을 볶고 갈아서 추출한 음료다. 색이 어둡고, 쓴 맛과 고소한 향, 약간의 산미를 가지고 있어 그 특유의 풍미를 즐기기 위한 기호식품으로서 전 세계에서 문화권을 불문하고 사랑받고 있다. 또한 인간이 섭취 시 각성 효과를 주는 카페인이 들어 있어 잠을 깨기 위한 용도로 널리 음용되고 있다...",
+      "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fi.namu.wiki%2Fi%2FTJ2S7OjGghZz9-weVWcfWMStWAnmfwETnPV_vL1NnmkUBqUiDQvKOJ0XtbLF3Fo7-MF7LKNSCjn35PrdMXklaw.webp&type=fff208_208_ar",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "개요새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-1"
+        },
+        {
+          "position": 2,
+          "title": "커피 품종새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-2"
+        },
+        {
+          "position": 3,
+          "title": "역사새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-3"
+        },
+        {
+          "position": 4,
+          "title": "특징새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-4"
+        },
+        {
+          "position": 5,
+          "title": "생산지새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-5"
+        },
+        {
+          "position": 6,
+          "title": "맛있는 원두의 기준새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-6"
+        },
+        {
+          "position": 7,
+          "title": "싱글 오리진 vs. 블렌딩새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-7"
+        },
+        {
+          "position": 8,
+          "title": "가공 및 제조새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-8"
+        },
+        {
+          "position": 9,
+          "title": "향미새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-9"
+        },
+        {
+          "position": 10,
+          "title": "추출 방법새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC#s-10"
+        }
+      ],
+      "related_documents": [
+        {
+          "position": 1,
+          "title": "커피 & 바닐라 - 나무위키새 창 열림",
+          "link": "https://namu.wiki/w/%EC%BB%A4%ED%94%BC%20%26%20%EB%B0%94%EB%8B%90%EB%9D%BC",
+          "snippet": "2019년7월 4일부터 2019년9월 5일까지 방영된 MBS 드라마특구 드라마.",
+          "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fi.namu.wiki%2Fi%2F4vwKeZPTcrW-2QHjzwfF-OAltaP30Hy4sq2iuPP-LlzfwZkZUY_W7-BBjN4ar5Ngm-OUQQNzfoWW99w6oV5BBA.webp&type=fff174_174"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "title": "커피 - 위키백과 한국어",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fko.wikipedia.org%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "위키백과 한국어",
+      "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC",
+      "displayed_link": "ko.wikipedia.org",
+      "snippet": "커피 ( 영어: coffee , 咖啡, 珈琲, 가배, 문화어: 흑차, 검은차), 커피차 또는 커피음료 ( 영어: coffee beverage )는 커피 나무 열매의 씨(커피콩)를 볶아 가루로 낸 것을 따뜻한 물과 차가운 물 또는 증기로 우려내어 마시는, 쓴맛이 나는 짙은 갈색의 음료이다. 색이 어둡고 쓴맛이 있으며 약산성인 커피는 주로 카페인 함량으로 인해 인간에게 자극 효과를 준다. 전세계 뜨거운 음료 시장....",
+      "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe4%2FLatte_and_dark_coffee.jpg%2F250px-Latte_and_dark_coffee.jpg&type=fff208_208_ar",
+      "additional": [
+        {
+          "position": 1,
+          "title": "원산지",
+          "value": "예멘 (음료), 에티오피아 (식물)"
+        },
+        {
+          "position": 2,
+          "title": "종류",
+          "value": "핫(hot) 또는, 콜드(cold). 보통은 핫."
+        },
+        {
+          "position": 3,
+          "title": "출시 연도",
+          "value": "15세기"
+        }
+      ],
+      "related_results": [
+        {
+          "position": 1,
+          "title": "재배 지역새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%9E%AC%EB%B0%B0_%EC%A7%80%EC%97%AD"
+        },
+        {
+          "position": 2,
+          "title": "어원새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%96%B4%EC%9B%90"
+        },
+        {
+          "position": 3,
+          "title": "역사새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%97%AD%EC%82%AC"
+        },
+        {
+          "position": 4,
+          "title": "커피 작물새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%BB%A4%ED%94%BC_%EC%9E%91%EB%AC%BC"
+        },
+        {
+          "position": 5,
+          "title": "커피 하위품종새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%BB%A4%ED%94%BC_%ED%95%98%EC%9C%84%ED%92%88%EC%A2%85"
+        },
+        {
+          "position": 6,
+          "title": "가공새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EA%B0%80%EA%B3%B5"
+        },
+        {
+          "position": 7,
+          "title": "추출 방식에 따른 커피 분류새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%B6%94%EC%B6%9C_%EB%B0%A9%EC%8B%9D%EC%97%90_%EB%94%B0%EB%A5%B8_%EC%BB%A4%ED%94%BC_%EB%B6%84%EB%A5%98"
+        },
+        {
+          "position": 8,
+          "title": "바리에이션 커피새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EB%B0%94%EB%A6%AC%EC%97%90%EC%9D%B4%EC%85%98_%EC%BB%A4%ED%94%BC"
+        },
+        {
+          "position": 9,
+          "title": "커피와 사회새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%BB%A4%ED%94%BC%EC%99%80_%EC%82%AC%ED%9A%8C"
+        },
+        {
+          "position": 10,
+          "title": "커피 관련 직업새 창 열림",
+          "link": "https://ko.wikipedia.org/wiki/%EC%BB%A4%ED%94%BC#%EC%BB%A4%ED%94%BC_%EA%B4%80%EB%A0%A8_%EC%A7%81%EC%97%85"
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "title": "coffee - 교양영어사전2",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fterms.naver.com%2Ffavicon.ico%3F240711071403&type=f30_30_png_expire24",
+      "source": "네이버 지식백과",
+      "link": "https://terms.naver.com/entry.naver?docId=2076503&cid=41810&categoryId=41812",
+      "displayed_link": "terms.naver.com",
+      "snippet": "'커피'라는 말의 어원에는 여러 설이 있으나, 영어의 coffee, 불어의 cafe는 커피를 의미하는 아랍어의 '까흐와(qahwah)'에서 유래했다는 설과 커피의 원산지인 에티오피아의 커피 재배 지역인 카파(Kaffa)에서 유래했다는 설이 유력하다. 오늘날 커피는 세계 70여 개국에서 재배되는데, 2011년 세계시장 점유율 기준으로 커피(green coffee) 생산을 가장 많이...",
+      "thumbnail": "https://search.pstatic.net/common?src=https%3A%2F%2Fdbscthumb-phinf.pstatic.net%2F2474_000_1%2F20140527122006718_M6BRTOZM4.jpg%2Fhb12_98_i1.jpg%3Ftype%3Dw450_fst_n&type=fff208_208_ar"
+    },
+    {
+      "position": 4,
+      "title": "Coffee - 위키피디아 영어",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fen.wikipedia.org%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "위키피디아 영어",
+      "link": "https://en.wikipedia.org/wiki/Coffee",
+      "displayed_link": "en.wikipedia.org",
+      "snippet": "Coffee is a beverage brewed from roasted ground coffee beans . Darkly colored and bitter , coffee has a stimulating effect on humans due to its caffeine content, but decaffeinated coffee is also commercially available. There are also various coffee substitutes . Coffee production begins when the seeds from coffee cherries, the Coffea plant's fruits, are separated to produce unroasted green coffee ...",
+      "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe4%2FLatte_and_dark_coffee.jpg%2F250px-Latte_and_dark_coffee.jpg&type=fff208_208_ar",
+      "additional": [
+        {
+          "position": 1,
+          "title": "Type",
+          "value": "Usually hot; can be iced"
+        },
+        {
+          "position": 2,
+          "title": "Origin",
+          "value": "Yemen"
+        },
+        {
+          "position": 3,
+          "title": "Introduced",
+          "value": "15th century"
+        },
+        {
+          "position": 4,
+          "title": "Color",
+          "value": "Black, dark brown, light brown, beige"
+        }
+      ],
+      "related_results": [
+        {
+          "position": 1,
+          "title": "Etymology새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Etymology"
+        },
+        {
+          "position": 2,
+          "title": "History새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#History"
+        },
+        {
+          "position": 3,
+          "title": "Biology새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Biology"
+        },
+        {
+          "position": 4,
+          "title": "Cultivation and production새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Cultivation_and_production"
+        },
+        {
+          "position": 5,
+          "title": "Processing새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Processing"
+        },
+        {
+          "position": 6,
+          "title": "Preparation새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Preparation"
+        },
+        {
+          "position": 7,
+          "title": "Economics새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Economics"
+        },
+        {
+          "position": 8,
+          "title": "Composition새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Composition"
+        },
+        {
+          "position": 9,
+          "title": "Research새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Research"
+        },
+        {
+          "position": 10,
+          "title": "Society and culture새 창 열림",
+          "link": "https://en.wikipedia.org/wiki/Coffee#Society_and_culture"
+        }
+      ]
+    },
+    {
+      "position": 5,
+      "title": "다낭에서 제일 입맛에 맞은 카페 KITE COFFEE",
+      "source_icon": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMzExMTZfMTQg%2FMDAxNzAwMTA2MjQ0MTU3.BNdfmy6QQgzkFuZKi7IvGtzpYTrNbYs7JxZpyV_bzcEg.IhGua6OQ8K71Bb0-H7sGDLcH6VCIVDJ0x0usxoHqUbsg.PNG%2FexternalFile.png&type=f54_54",
+      "source": "다낭 도깨비 - 베트남 다낭자유여행 ,다낭여행,맛집,호텔리조트새 창 열림2,101만 인용",
+      "link": "https://cafe.naver.com/happyibook/6226118?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImhhcHB5aWJvb2siLCJhcnRpY2xlSWQiOjYyMjYxMTgsImlzc3VlZEF0IjoxNzg2Mzc4MjQzMDE2fQ.rzjV5mUr4qzKWSUAcy_4qGhBLr5CPPADBWKBSnzrPNs",
+      "snippet": "KITE COFFEE & SOUVENIRS 마지막날 공항기기전 밤.. 갑자기 커피를 먹어야겠다는....... !!! 이리 걷고 저리 걷다가 발견한 카페였어요 난안먹을꺼야!!하다가 짝지가 먹는거 보고 맛있겠는데? 부랴부랴 주문했어요ㅎㅎㅎ 밤에 커피안먹는데 지금 아니면 못먹겠다싶어 먹었습니다ㅎ 카페를 몇군데 못갔었는데 전 여기가 젤 맛이 좋았어요!",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyNjA4MDRfNTcg%2FMDAxNzg1ODA5MDQ3OTk0.qiJx2Um39nJK2BxZaNA-LUO3dT49I_nAsZqfEv9LMFQg.H-RC4_q0uPigsmb-uwuOjuwd6XP7w5sKwrrs9Uddab0g.JPEG%2F1785808956310.jpg%7C575x435&type=ff192_192"
+    },
+    {
+      "position": 6,
+      "title": "방탄커피 효능 효과 및 주의점",
+      "source_icon": "https://search.pstatic.net/common/?src=https%3A%2F%2Fhomebuilder-phinf.pstatic.net%2FMjAyMjAyMDFfMTY0%2FMDAxNjQzNzE0MjgxMzQ0.hYm9t5NjXwwczU2y1Fpql4d9Py0uOP9lVNP6M4Wf1kkg.AYxLZ--WfZSfA12CB5jCN1uxTfXONj7SKqpiE5wsbmIg.JPEG%2F1643714281310_E5B79388-19F3-4D07-9284-20E758C37734.jpeg&type=f54_54",
+      "source": "건강을 지키는 방법들새 창 열림",
+      "link": "https://blog.naver.com/cera23/224299298669",
+      "snippet": "방탄커피 효능 효과 및 주의점, 무조건 다이어트 음료로만 보기 어려운 이유 다이어트와 간헐적 단식 이야기가 나오면 함께 언급되는 음료 가운데 하나가 바로 방탄커피다. 일반 커피에 버터나 MCT오일 같은 지방 성분을 넣어 마시는 방식으로 알려져 있으며, 공복감 조절과 에너지 유지 이야기가 함께 나오면서 관심을 가지는 사람들이 많다. 특히 아침 식사를 대신하는...",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA1MjhfMTgg%2FMDAxNzc5OTYzNDk1NTc1.tL_XgefN6fQOaQTVSdFh5mz9odFxZ6E5Soz2iX1Oj8kg.z7rR2BFk89tdCz9yynwpPS_DPCnbcRiKlLmwd9LBRmYg.JPEG%2FIMG%25A3%25DF2895.JPG%23640x343&type=ff192_192"
+    },
+    {
+      "position": 7,
+      "title": "[수안커피컴퍼니 커피하우스] 부산 동래 분위기 좋고 커피가 맛있는 대형카페",
+      "source_icon": "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogpfthumb-phinf.pstatic.net%2FMjAyNjA2MjVfOTkg%2FMDAxNzgyMzg3MTU3NDY3.1fiYeZinlx-86YZRXyUx4hHqyzmY3sMYsSjBM2WLKVEg.7D2Wy2C19ZndrJYx29UeUyseb6It3uWq0VhihS_tqSQg.PNG%2FprofileImage.png&type=f54_54",
+      "source": "도리도링새 창 열림",
+      "link": "https://blog.naver.com/iousek2121/224348590168",
+      "snippet": "부산 동래에 위치한 ' 수안커피컴퍼니 커피하우스 ' 대형 카페인 줄만 알고 방문했지만 카페 분위기와 커피가 너무 맛있어서 감탄했던 방문 후기 알려드리겠습니다 ! 주소 : 부산 동래구 수안동 110-1 < 영업시간 > 커피하우스 : 월 ~ 일 / 10시 ~ 22시 ( 21시 20분 라스트 오더 ) 플래그십 스토어 : 11시 ~ 18시 전화번호 : 1877-8358 < 편의시설 > 남 / 여 화장실 구분 로스터리...",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTZfMTIx%2FMDAxNzg0MTgxMTI2MjYy.hQkdlZko_b4JaybfJW4QQHwyHsWRJ3PqQNMME8C4CaIg.k93cdL6SM42Zx4OqKm5Jxgz_yJS16Zoc-5oduD0TOg4g.PNG%2F%25C1%25A6%25B8%25F1%25C0%25BB_%25C0%25D4%25B7%25C2%25C7%25D8%25C1%25D6%25BC%25BC%25BF%25E4._%252812%2529.png%231080x1080&type=f250_208",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "새 창 열림",
+          "link": "https://blog.naver.com/iousek2121/224348590168",
+          "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTZfMTIx%2FMDAxNzg0MTgxMTI2MjYy.hQkdlZko_b4JaybfJW4QQHwyHsWRJ3PqQNMME8C4CaIg.k93cdL6SM42Zx4OqKm5Jxgz_yJS16Zoc-5oduD0TOg4g.PNG%2F%25C1%25A6%25B8%25F1%25C0%25BB_%25C0%25D4%25B7%25C2%25C7%25D8%25C1%25D6%25BC%25BC%25BF%25E4._%252812%2529.png%231080x1080&type=f250_208"
+        },
+        {
+          "position": 2,
+          "title": "새 창 열림",
+          "link": "https://blog.naver.com/iousek2121/224348590168",
+          "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTZfMTUz%2FMDAxNzg0MTgxNjU3MzU2.qONJjkha9kEC6xbFjNrvt2Jbzeb60APzIlJAJSN7IZAg.ze_APvbtnSyHXl8sNq-DotOXrkbgLQxrqgx-nNcMWz8g.JPEG%2FKakaoTalk_20260716_143236886_27.jpg%231932x2577&type=f250_208"
+        },
+        {
+          "position": 3,
+          "title": "새 창 열림",
+          "link": "https://blog.naver.com/iousek2121/224348590168",
+          "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTZfMTAy%2FMDAxNzg0MTgxNjI1NTAy.aClnehit0wzOTGQe0nj_MxEfB85Skd_Ud-H0UcLyIB0g.uiylVRkY4TfwfZBZKlldgT4FI6qmpxj5k1_XDTjTtsUg.JPEG%2FKakaoTalk_20260716_143236886_26.jpg%234284x5712&type=f250_208"
+        },
+        {
+          "position": 4,
+          "title": "새 창 열림",
+          "link": "https://blog.naver.com/iousek2121/224348590168",
+          "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTZfMTA1%2FMDAxNzg0MTgxOTU3ODgw.k9zhDbErtqNX-94Tf7aTJN9kU9b4sxNSYp6GbCn7Tcwg.CZEGyIzp6H3F_XLwfTqI53rjCsAgB2meGu9laxsrK1Eg.JPEG%2FKakaoTalk_20260716_143236886_25.jpg%232192x2500&type=f250_208"
+        },
+        {
+          "position": 5,
+          "title": "새 창 열림",
+          "link": "https://blog.naver.com/iousek2121/224348590168",
+          "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTZfMjA3%2FMDAxNzg0MTgyMTI5NDM5.XJ3H9iQWLIC1Pmth75CY96_XFZTx5WKw3AiCADg530Ig.q3-qP-EeSqv3KQEIciCeSG_6kJs5uWgZLqxj3AQGFX8g.JPEG%2FKakaoTalk_20260716_143236886_24.jpg%232191x2337&type=f250_208"
+        }
+      ]
+    },
+    {
+      "position": 8,
+      "title": "후쿠오카 FUK COFFEE 파크점 후기｜푸딩 맛집, 오호리공원 근처 카페 추천",
+      "source_icon": "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogpfthumb-phinf.pstatic.net%2FMjAyNjA1MjBfNDUg%2FMDAxNzc5MjA5MTI2ODAx.Q1JPJZny73K45bi8luEmLMEnxeTEokdxU7jUZtYHuTUg.EKfkYi-B7brzoDfHYrsC7xN2kTLITIQyFd3CO2r1OtQg.PNG%2FChatGPT_Image_2026%2525EB%252585%252584_5%2525EC%25259B%252594_20%2525EC%25259D%2525BC_%2525EC%252598%2525A4%2525EC%2525A0%252584_01_07_53.png%2FChatGPT%252BImage%252B2026%2525EB%252585%252584%252B5%2525EC%25259B%252594%252B20%2525EC%25259D%2525BC%252B%2525EC%252598%2525A4%2525EC%2525A0%252584%252B01_07_53.png&type=f54_54",
+      "source": "sweetcocoa님의 블로그새 창 열림",
+      "link": "https://blog.naver.com/sweet_cocoa_/224352331433",
+      "snippet": "'FUK COFFEE 파크점' 매장 정보 위치: 1 Chome-4-20 Arato, Chuo Ward, Fukuoka, 810-0062 일본 ⏰영업시간: 매일 08:00-20:00 ✅휴무일: 없음 ✅웨이팅 여부: 바로 입장 카드 결제: 가능 ⬇️구글 맵 'FUK COFFEE 파크점' 매장 모습 훅커피 파크점으로 가는 길에 만난 건물들. 일본 느낌 나면서 예뻐서 찍어봤어요. 길따라 걷다보니 도착한 훅커피 파크점! 간판이 크게 있거나 하지 않아서...",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjBfODUg%2FMDAxNzg0NTM3MTkzNzUw.u2En8xbrTL9DWsd4j9bsgoUdurNUMbR7NzI0peltVtQg.z0cjWcKG6CQDEzWynvCOfA8NXMKZWzdspzzDVOmBV1og.JPEG%2Fcopy%25A3%25DF4CBBA24B%25A3%25ADB1C1%25A3%25AD4147%25A3%25ADABE0%25A3%25AD9D3D746881DD.jpeg%23900x900&type=ff192_192"
+    },
+    {
+      "position": 9,
+      "title": "[바딘] 하노이 카페 Ι 감각적인 공간과 수준 높은 스페셜티 커피를 함께 즐기고 싶다면 \"에브리하....",
+      "source_icon": "https://search.pstatic.net/common/?src=https%3A%2F%2Fblogpfthumb-phinf.pstatic.net%2FMjAyNjAzMTJfMTg4%2FMDAxNzczMzIyNjMxMzUz.WY0e13qdzGy5KJjE25GjhSOfgZGWy0Asb70OdSz6GT8g.bN02MIPtsamesWIo9LT5vRAGG2t59DxVlmsQ9d0CL9Ug.JPEG%2F%2525ED%252599%252594%2525EB%2525A9%2525B4_%2525EC%2525BA%2525A1%2525EC%2525B2%252598_2026-03-12_203658.jpg%2F%2525ED%252599%252594%2525EB%2525A9%2525B4%252B%2525EC%2525BA%2525A1%2525EC%2525B2%252598%252B2026-03-12%252B203658.jpg&type=f54_54",
+      "source": "오늘도 로그인, 나의 하노이새 창 열림",
+      "link": "https://blog.naver.com/hano2an/224350217331",
+      "snippet": "\"에브리하프 커피 로스터스\" (EVERY HALF COFFEE ROASTERS) 는 베트남을 대표하는 스페셜티 커피 로스터리 브랜드 중 하나로, 직접 원두를 로스팅하고 각 원산지의 개성을 살린 커피를 선보이는 곳 이다. 하노이에는 여러 지점이 있으나, 나는 최근 갔었던 \"피엔\" (PHIEN) 카페 옆에 위치한 지점을 방문했으며 (Every Half Coffee Roasters - Ngọc Hà 지점) \"\" \"\" \"피엔...",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MThfMTk3%2FMDAxNzg0MzQzODQ3MTgw.5AD8CQi80Z5OK8--Ov14mTOaxskBamAA5Pyj9CqgW3sg.JSDugCmp_OI5EZXEvu-7u1V1oe8ZQGE9sYSHoyg-JNYg.PNG%2Fimage.png%23571x566&type=ff192_192"
+    },
+    {
+      "position": 10,
+      "title": "APOC COFFEE",
+      "source_icon": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2F20110529_287%2F0_1306678650587_ka1jbe_jpg%2F122.jpg&type=f54_54",
+      "source": "네일동 : 일본여행카페새 창 열림",
+      "link": "https://cafe.naver.com/jpnstory/4337127?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6ImpwbnN0b3J5IiwiYXJ0aWNsZUlkIjo0MzM3MTI3LCJpc3N1ZWRBdCI6MTc4NjM3ODI0MzAxNn0.KAl3XckTYxTDFYhMB9Biq58UszbdiHPegTf5Hf11tzw",
+      "snippet": "상점명 : APOC COFFEE 3. 지역 : 후쿠오카 4. 상점위치 : 5. 분위기 : 좁은공간에 사람이 가득차서 시끌벅적한 소리가 많이나는데 카페 분위기자체는 나쁘지않아요 치즈케이크 전문점같아요 와라비모찌와 검은깨 치즈케이크와 아아 마셨어용 케이크밑부분이 타르트같아요~ 도장깨기하고 싶었던 카페!! 한국인은 없어서 현지느낌나네용!",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyNjA3MTlfMTU1%2FMDAxNzg0NDQ4OTYwNTA3.u_pL6pcLoHV5IwYk53SvCZTdu868Lv1m_I6dgm7_beYg.wBvgdzvHSW8JDr_udewBtP9pdwgBdWSccvALEHShT04g.JPEG%2F1280_20260719_170726.jpg%7C1280x960&type=ff192_192"
+    },
+    {
+      "position": 11,
+      "title": "일상) 우리집이 씨씨씨피 커피집 cccp coffee - 코코넛 커피 만들기",
+      "source_icon": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyMzExMTZfMTQ4%2FMDAxNzAwMTA2MTU0OTY0.QjFFkXX4p5kuSIrXU1WW47R3J13D2WWjiyKq3H5KiB0g.s3pb_t6KqPTU_t4_zDiz57nV25NGkd1xC_wcnrihVZIg.PNG%2FexternalFile.png&type=f54_54",
+      "source": "나트랑 도깨비 - 베트남 나트랑 자유여행,무이네,달랏,맛집,호텔새 창 열림",
+      "link": "https://cafe.naver.com/zzop/4124752?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inp6b3AiLCJhcnRpY2xlSWQiOjQxMjQ3NTIsImlzc3VlZEF0IjoxNzg2Mzc4MjQzMDE3fQ.55mxxIKQwRRVEYw2PnD8ED3B4J-bd_QRD9Kwk8pIyAs",
+      "snippet": "코코넛 커피 만들기를 해봤습니다. 우선 커피 한 잔 내려주고 믹서기에 얼음 원하는 만큼 코코넛 파우더 5스푼 넣어줬어요. 그리고 우유 숟가락으로 2,3스푼 정도 넣고 갈갈~ ✔️ 얼음과... 커피가 뜨거워서 그런지 코코넛 스무디 아래 부분 많이 녹아버리네요.. 다음에는 얼음 더 넣어야 겠어요! 그래도 이번 것이 맛은 더 있었어요 이건 저번에 만든건데 이때는 우유 많이...",
+      "thumbnail": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAyNjA3MTdfMjAy%2FMDAxNzg0MjYxODk4MjI0.E2aS1siv_x_rK5Uu_v3tx19vZVbJV4afhmHb6Xfrw04g.vW1Jy9z5F7g1D8IwwVcw0kPBLmichEtUM14RRxOeOuIg.JPEG%2F1280_1784260979749.jpg%7C1280x1707&type=ff192_192",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "RE컵이 러시아산이라서 더 코드가 맞는데요 cccp소련연방 머시기 잖아유ㅋ 시원하게 한잔 얻어먹고싶네유 그나저나 닌자 다지기 부럽다요새 창 열림",
+          "link": "https://cafe.naver.com/zzop/4124752?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inp6b3AiLCJhcnRpY2xlSWQiOjQxMjQ3NTIsImlzc3VlZEF0IjoxNzg2Mzc4MjQzMDE3fQ.55mxxIKQwRRVEYw2PnD8ED3B4J-bd_QRD9Kwk8pIyAs"
+        },
+        {
+          "position": 2,
+          "title": "RE전 예전에 코코넛밀크로 만들어봤는디 설거지 거리가 가득해서..새 창 열림",
+          "link": "https://cafe.naver.com/zzop/4124752?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inp6b3AiLCJhcnRpY2xlSWQiOjQxMjQ3NTIsImlzc3VlZEF0IjoxNzg2Mzc4MjQzMDE3fQ.55mxxIKQwRRVEYw2PnD8ED3B4J-bd_QRD9Kwk8pIyAs"
+        },
+        {
+          "position": 3,
+          "title": "RE코코넛 스무디 커피 저한잔 주문할게요 ♀️ ♀️ ♀️ 코코넛 가루를 사야하는군요 맛있어보여요새 창 열림",
+          "link": "https://cafe.naver.com/zzop/4124752?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inp6b3AiLCJhcnRpY2xlSWQiOjQxMjQ3NTIsImlzc3VlZEF0IjoxNzg2Mzc4MjQzMDE3fQ.55mxxIKQwRRVEYw2PnD8ED3B4J-bd_QRD9Kwk8pIyAs"
+        },
+        {
+          "position": 4,
+          "title": "RE와우 싱크로율 좋은데요~? 나트랑 생각나면 이렇게 함 먹어봐야겠네요 ㅎㅎ새 창 열림",
+          "link": "https://cafe.naver.com/zzop/4124752?art=ZXh0ZXJuYWwtc2VydmljZS1uYXZlci1zZWFyY2gtY2FmZS1wcg.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYWZlVHlwZSI6IkNBRkVfVVJMIiwiY2FmZVVybCI6Inp6b3AiLCJhcnRpY2xlSWQiOjQxMjQ3NTIsImlzc3VlZEF0IjoxNzg2Mzc4MjQzMDE3fQ.55mxxIKQwRRVEYw2PnD8ED3B4J-bd_QRD9Kwk8pIyAs"
+        }
+      ]
+    },
+    {
+      "position": 12,
+      "title": "9 Health Benefits of Coffee: What the Science Says",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimages-prod.healthline.com%2Fhlcmsresource%2Fimages%2Ffrontend-static%2Ffavicon%2Fhl-logo-logomark-circle-black.ico&type=f30_30_png_expire24",
+      "source": "Healthline",
+      "link": "https://www.healthline.com/nutrition/top-evidence-based-health-benefits-of-coffee",
+      "displayed_link": "www.healthline.com",
+      "snippet": "Coffee is a major source of antioxidants. It's health benefits may include improved brain function and a lower risk of several diseases.",
+      "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FYCiSnK3DAzA%2Fmaxresdefault.jpg&type=f368_208"
+    },
+    {
+      "position": 13,
+      "title": "커피 : 알라딘",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimage.aladin.co.kr%2Fimg%2Fhome%2Faladin.ico&type=f30_30_png_expire24",
+      "source": "알라딘",
+      "link": "https://www.aladin.co.kr/home/wcoffeemain.aspx",
+      "displayed_link": "www.aladin.co.kr",
+      "snippet": "인터넷 서점. 종이책과 ebook, 중고상품, 음반, 블루레이, 굿즈, 커피를 판매합니다. 전국 각지에 중고매장을 운영 중입니다.",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "에티오피아 G1 시다모 보나새 창 열림",
+          "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393554767",
+          "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimage.aladin.co.kr%2Fproduct%2F39355%2F47%2Fcover500%2Fp402939012_1.jpg&type=fff208_208_ar"
+        },
+        {
+          "position": 2,
+          "title": "블렌드 다크새 창 열림",
+          "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398821579",
+          "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimage.aladin.co.kr%2Fproduct%2F39882%2F15%2Fcover500%2Fp232939420_1.jpg&type=fff208_208_ar"
+        },
+        {
+          "position": 3,
+          "title": "과테말라 우에우에테낭고 디카페인새 창 열림",
+          "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=250928228",
+          "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimage.aladin.co.kr%2Fproduct%2F25092%2F82%2Fcover500%2Fp922832713_1.jpg&type=fff208_208_ar"
+        },
+        {
+          "position": 4,
+          "title": "에티오피아 예가체프 G1 게뎁 첼첼레새 창 열림",
+          "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=392438766",
+          "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimage.aladin.co.kr%2Fproduct%2F39243%2F87%2Fcover500%2Fp362939814_1.jpg&type=fff208_208_ar"
+        },
+        {
+          "position": 5,
+          "title": "블렌드 오렌지선셋새 창 열림",
+          "link": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355895261",
+          "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fimage.aladin.co.kr%2Fproduct%2F35589%2F52%2Fcover500%2Fp872938427_1.jpg&type=fff208_208_ar"
+        },
+        {
+          "position": 6,
+          "title": "더보기새 창 열림",
+          "link": "https://www.aladin.co.kr/home/wcoffeemain.aspx"
+        }
+      ]
+    },
+    {
+      "position": 14,
+      "title": "커피 - 옥션",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fwww.auction.co.kr%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "옥션",
+      "link": "https://www.auction.co.kr/n/list?category=38250000",
+      "displayed_link": "www.auction.co.kr",
+      "snippet": "필더컵커피생두 1Kg 뉴크롭 30여종 베트남G1외 · 15,800원 · 최대 790원 적립 · 후기 61"
+    },
+    {
+      "position": 15,
+      "title": "커피가 몸에 좋은 이유, 그리고 맛과 멋의 세계",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fgradium.co.kr%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "그라디움",
+      "link": "https://gradium.co.kr/coffee-benefits/",
+      "displayed_link": "gradium.co.kr",
+      "snippet": "2022.01.21.",
+      "thumbnail": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fgradium.co.kr%2Fwp-content%2Fuploads%2Fcoffee-3-1.jpg&type=fff208_208_ar"
+    },
+    {
+      "position": 16,
+      "title": "확실하게 잠 깨는 얼음커피 Iced Coffee",
+      "source_icon": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fyt3.ggpht.com%2Fq2d-DLtvnFVHM7i8NEGm9KCBL6vJjPAPUlQom0jylcQQm7LkX9tVJmA-Vsc4MgJVLLI3tdZ9%3Ds800-c-k-c0x00ffffff-no-rj&type=f70_70",
+      "source": "외줄집사 Singleline_cafe새 창 열림",
+      "link": "https://www.youtube.com/watch?v=US2cbQKt1Yg",
+      "snippet": "#커피 #커피타임 #coffee #latte #coffeetime",
+      "thumbnail": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FUS2cbQKt1Yg%2Fmaxresdefault.jpg&type=f368_208"
+    },
+    {
+      "position": 17,
+      "title": "미국 커피 C 가격",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fkr.investing.com%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "인베스팅닷컴",
+      "link": "https://kr.investing.com/commodities/us-coffee-c",
+      "displayed_link": "kr.investing.com",
+      "snippet": "전일 종가 : 313.65, 금일 시가 : 306.55, 거래량 : 20,432, 1년 변동률 : 2.1173%, 결제일 : 2026-12-18, 결제 방식 : 실물인수도, 만기월 : 2026년 12월, 최종 롤오버일 : 2026-08-02, 계약 단위 : 37,500파운드, 틱 크기 : 0.05, 틱 가치 : 18.75, 티커 : KC, 포인트가치 : 1=$375, 개월 : HKNUZ"
+    },
+    {
+      "position": 18,
+      "title": "그림책 큐레이터의 리빙 갤러리 - 커피 블로그",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fssl.pstatic.net%2Fstatic%2Fblog%2Ficon%2Ffavicon.ico&type=f30_30_png_expire24",
+      "source": "네이버 블로그",
+      "link": "https://blog.naver.com/goktlee",
+      "displayed_link": "blog.naver.com",
+      "snippet": "약 7.1천 명의 구독자를 보유한 그림책 큐레이터의 리빙 갤러리(goktlee)의 블로그. 약 1.8천 건의 게시물이 있습니다. 그림책 큐레이터 엄마의 예쁘고 맛있고 건강하게 즐기는 리빙 이야기. 상노 잘되는 최적지수 블로그.협업 제안은 이메일로 *******@naver.com",
+      "thumbnail": "https://search.pstatic.net/common?src=https%3A%2F%2Fblogpfthumb-phinf.pstatic.net%2FMjAyNDEyMDRfNzkg%2FMDAxNzMzMjg0NDc4NDc4.JBoGKn08KRyn-sJK0GVXOpG7puz5hNJjTE6u6I9cuGIg.7jQG18FwHG3oJVyJcTozCOpx2GoQpK2r1cJtJpihH2Ag.PNG%2F%2525EC%2525BB%2525A4%2525ED%252594%2525BC%2525EB%25258B%252598_%2525EB%2525B8%252594%2525EB%2525A1%25259C%2525EA%2525B7%2525B8%2525EB%25258C%252580%2525EB%2525AC%2525B8.png%2F%2525EC%2525BB%2525A4%2525ED%252594%2525BC%2525EB%25258B%252598%252B%2525EB%2525B8%252594%2525EB%2525A1%25259C%2525EA%2525B7%2525B8%2525EB%25258C%252580%2525EB%2525AC%2525B8.png&type=fff208_208_ar",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "인스타그램새 창 열림",
+          "link": "https://www.instagram.com/bthe1all4one/"
+        },
+        {
+          "position": 2,
+          "title": "아산 브런치 카페 이너프레임, 신정호 브런치 맛집으로 자주 찾는 이유블로그2주 전새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224359646477",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjdfODMg%2FMDAxNzg1MTQ2MDY4NDQ4.lI0vYOQCDPa5NtmrwqC5mzx5PUIgookhfw4D32fyodYg.07erB10uCZtoyRupgQdQx7eZyTzHpNUZn_oU7Ekz5KIg.JPEG%2F900_20260727_160002.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 3,
+          "title": "초등 독해문제집 바빠 초등 독해 여름방학 완북하기 좋은 독해교재 추천블로그3주 전새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224354161838",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MjJfMzkg%2FMDAxNzg0Njg4NTUyNTMz.fgiMJ2LuwsE5Fe2RkspgnM0i1g41dVHVMYOfIhWfRhEg.htkLERu__gNv34OAQQ50xFKE8_6KHHL3eurZHHi_cXUg.JPEG%2F1784688552014.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 4,
+          "title": "초등 동화책 추천 사고뭉치 소방관 오케이 3 다시 일어서는 용기를 배우는 성장동화블로그3주 전새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224351222932",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTlfMTc0%2FMDAxNzg0NDU3NjY2NTEy.0zaR14oJAPGRMHZkDhdmqTkei7MoPY25SZH5n0g1SU0g.B2sCTXLRz0pQH4x3dj8oNASsx7DpPLHWHJX0lZEDl1Mg.JPEG%2F1784457666086.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 5,
+          "title": "초등 과학책 추천, 발명 원리를 만화로 배우는 캣슈타인 박사의 냥냥 호기심 펀치 6블로그3주 전새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224351154337",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTlfMjk2%2FMDAxNzg0NDQ5NDM2NTA2.t-q-KS2mVzkzhLbZ7gvQiE7h7d1WB5u7JX6Xwyspa9sg.7UCNJL2BXulJiZEnpqnnbBK5NxVnmJLEomlk6tIBR5Ig.JPEG%2F900_1784449436113.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 6,
+          "title": "초등추천도서, 추리동화 코드 탐정단과 수상한 박물관 1블로그3주 전새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224350965587",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTlfOTEg%2FMDAxNzg0NDMyNDYwNDQ5.G0jPsW33TDDWnmfHvqOEnl1Q9RwXdReGX2QgjH1y7sgg.-DDebcuuNRSPDTKqUJClWi64RCw5KJLyMkN2U8rRmGQg.JPEG%2F900_1784432459882.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 7,
+          "title": "초등 과학동화 추천 똥 박사와 수상한 자판기블로그2026.07.10.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224342579720",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MTBfMTg1%2FMDAxNzgzNjY0MDQwNzg0.Q6UE8IsJQuIvnn9uR5M-WRirlZLJrOPg92a1CWpZ4fgg.pgy0uj45bT5DUGbN117KJr1QNVVRhjMRIzpX-nS5nhYg.JPEG%2F900_1783664040259.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 8,
+          "title": "초등 독해력 키우기, 요약부터 추론까지 비문학 독해 공부하는 방법블로그2026.07.09.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224341721233",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MDlfMTYx%2FMDAxNzgzNTg5NjkzNzcw.AgxT3cHVwQxxjK6sx_9sEUD4un9tXQZuwupk3syT9Fgg.mOeJbFNi6nBow-g8TBRpzcEEDlKGQv-1dYbQF7ZQ_s4g.JPEG%2F1783589693421.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 9,
+          "title": "초등 문해력 키우는 독서습관 어린이잡지 독서평설 추천블로그2026.07.08.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224340637861",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MDhfMzMg%2FMDAxNzgzNTA0ODEzODIx.kYyLmf50RBP4ufY9wihShoJRvh3Ky78NWV36M-2bJ5Ug.KRXv6C_tTW9kf7-Gt8113JRu68CChHFyVGP0JCIcF6kg.JPEG%2F1783504813432.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 10,
+          "title": "초등수학문제집 추천 수비수학 개념편 2학년 기본실력 다지기블로그2026.07.03.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224335257288",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA3MDNfMTk4%2FMDAxNzgzMDU0NzEyNjgw.HNT2dUiq46WPsKdJwMu6TpyYLQ_Z2KSynF6utJfZGWgg.GiHrmmmGPKMjPtcj42WOCfM3a75Ii_HPKxa2IDPRB0gg.JPEG%2F1783054712412.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 11,
+          "title": "초등독해문제집 추천 여름방학 EBS 초등 4주 완성 독해력 후기블로그2026.06.28.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224329569368",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA2MjhfMjgw%2FMDAxNzgyNjQ1ODg5NjM3.eBZNFPpKo_g7pKeq5KS8z0Pd9nTVRax9dbxPpI0pakkg.15A3FmrCyFHcAuw71QtqNzNjhKF4Kc0yWjMjPxBhcTEg.JPEG%2F1782645886538.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 12,
+          "title": "초등추천도서 정재승의 인간탐구보고서 특별편블로그2026.06.26.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224328086516",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA2MjZfMTc2%2FMDAxNzgyNDU3NDYyNTI3.kjA7pxv6Rn4mrRZzDWwXDtO08Hktt3RI9Bwq3revvVEg.CF7MHie9RQtgOWM4E9xqutX9z6h6zkTdpNa4whsZl64g.JPEG%2F1782457462132.jpg&type=fff404_270&refresh=true"
+        },
+        {
+          "position": 13,
+          "title": "초등과학실험 키트로 배우는 과학 원리 팩토사이언스 에디슨블로그2026.06.26.새 창 열림",
+          "link": "https://blog.naver.com/goktlee/224328059443",
+          "thumbnail": "https://search.pstatic.net/common?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA2MjZfMjcx%2FMDAxNzgyNDU1MTU5MDYy.-sZrawQVuyk6Mn5CrZ8NrjGzHXSY3OEqxjrLWS8X2Eog.5UHG70Rq2Tco0yi-sxwIjFzOAw7by5mIzI2WWhWrq8kg.JPEG%2F900_20260622_164311.jpg&type=fff404_270&refresh=true"
+        }
+      ]
+    },
+    {
+      "position": 19,
+      "title": "COFFEE BEAN KOREA",
+      "source_icon": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fwww.coffeebeankorea.com%2Fimages%2Ffavicon-16x16.png&type=f30_30_png_expire24",
+      "source": "COFFEEBEANKOREA",
+      "link": "https://www.coffeebeankorea.com/",
+      "displayed_link": "www.coffeebeankorea.com",
+      "snippet": "The Coffee Bean & Tea Leaf 커피빈코리아",
+      "related_results": [
+        {
+          "position": 1,
+          "title": "매장 찾기새 창 열림",
+          "link": "https://www.coffeebeankorea.com/store/store.asp"
+        },
+        {
+          "position": 2,
+          "title": "에스프레소 음료새 창 열림",
+          "link": "https://www.coffeebeankorea.com/menu/list.asp?category=13"
+        },
+        {
+          "position": 3,
+          "title": "신음료새 창 열림",
+          "link": "https://www.coffeebeankorea.com/menu/list.asp?category=32"
+        },
+        {
+          "position": 4,
+          "title": "푸드새 창 열림",
+          "link": "https://www.coffeebeankorea.com/menu/list.asp?category=4"
+        },
+        {
+          "position": 5,
+          "title": "기타 제조 음료새 창 열림",
+          "link": "https://www.coffeebeankorea.com/menu/list.asp?category=24"
+        },
+        {
+          "position": 6,
+          "title": "티 라떼새 창 열림",
+          "link": "https://www.coffeebeankorea.com/menu/list.asp?category=17"
+        }
+      ]
+    }
+  ],
+  "shopping_results": [
+    {
+      "position": 1,
+      "title": "[네스프레소] 정품 네스프레소 오리지널 캡슐 오리지널 베스트셀러 셀렉션 15종",
+      "link": "https://ader.naver.com/v1/vmQUtpRGxol15yEzsJ3dJgx_0md6Ihrpdrs4uBbeR-_pPAWoIfC4JXOBIWncEeF6PVQ5giQzywcxlXFHvQsLDj7PfDFw8hT10_Xou9mUElOvfOcIJVElIi2eeoUCK3s-SEndfJvkx_IYaDQY1fEoaNcKtVKv2zo0HyZXVS8MDEygftWVrQfdktQdGTddr_hMwo_g9VXagC7rP_zotUOhVJXbsJ-kqvagkGhaHYTjwMmxVMsGp0RBouh7L7xxieZgUQ0iVYgD3VoDxndYXy5lAc5GFH_c1Vcu6HXEZEHfBWbC9GzvzxL9TFgFOo7Q61QAkp3WGihsVyahL_G2YAMa3-ygQBfQ85ipPayHI5klAD_XsQ18lhC10YWkWgcz9mWpqPk0v-Yke2zzrY2CLK9F7BCltiyf6Lx08d135AQ3IetBvP-mTkA2xIfdweTiLz86ad81RpLrXfjJtk6WElrTDoQK6nEmlV1g47NKnO6ibytRsJhNnq25HOt_1nDto56ni1THnVNW_tMUzwYflNnZdw==?c=naver.search.pc.npla&t=0&ui=GUIDE",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjA1MjBfNzAg/MDAxNzc5MjM3NzI1MTUw.lUPBqs2-Jr1HhapRcaCHJvvH_10uZ8HAqw6wdFDrZpUg.7CjE6VthV61q0QeavdptjzH8Dct5FYKoxcaurv8l6sEg.PNG/380937-4fecd31b-24e3-431c-81c9-e1d879019dd2.png?type=f300",
+      "price": 97000,
+      "stores": "네스프레소 공식홈"
+    },
+    {
+      "position": 2,
+      "title": "[네스프레소] 정품 버츄오 베스트 셀렉션 100팩",
+      "link": "https://ader.naver.com/v1/oD_pDcrLpF5bcNjU-p7piDUMR8p5sNoeF8Cuc8gabzew00Hhv4VoourD5qR8hO5q2pd9zsCCdb_xhNCFc_RYE-WmxsclFBcvzOlXrvBwtJF1uv0JbRO9atLVfDjJSVmtO_RSGYRllBproBLWjx2WnLoaQAtTi6R3Eu0jWT4UCYzURAF6_n-Ofs3I7UEXhEFjrmJEO0aSiGKo6Gkzj0MB-OXIKwmj959D_b-Bn-kKRSCK8cx_Z_3dOe4t-XNlg3Ox_8YZjMTwPycfaU8gI8uuTD8Kn2QJv9xL58bJA5F2PjqFTDnd6WSBji2emtkfCeI6qKflG7RXnSiM1XK9miM4NKiLrZlBztu2VBFL-HkEregLTdMFaHjJNGgwM2xw4NqXYBmGBrl8j7N3G0IFE89cyBY3-1vCcsFkneb93TxtDtyGDE8IP_nl8uwHbJfmBDSBmpMU0MCoM8XKS2dcz19jSp6nj9lL8LWfUcrDtxnQD-CnDBHKtYctcjEfbSNttfZLRmaIJ2O3-Mhw9bLIAfXLuQ==?c=naver.search.pc.npla&t=0&ui=GUIDE",
+      "thumbnail": "https://searchad-phinf.pstatic.net/MjAyNjA1MjlfMzAw/MDAxNzgwMDE2NzQxNzk1.vTvvb3w3oV95kg1wkzKipYvLgq1Nhjpqa8ok9fJW8lsg.r3ik7xF6l7GqoaRSGbuAH-TTSgHA7c9HLFv_g3dPubwg.PNG/380937-0d910476-1f1a-43e5-bdeb-72b82e6ec333.png?type=f300",
+      "price": 94300,
+      "stores": "네스프레소 공식홈"
+    },
+    {
+      "position": 3,
+      "title": "[슈퍼적립]스타벅스 네스프레소 캡슐 대표5종2세트(하우스 리스트레토 파이크 에스프 헤이즐)",
+      "link": "https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=88048418020&cat_id=50009600&query=Coffee&t=msnfhdr9&h=972f53576974fceb398d9ffa5ed13ec031165c48&frm=NVSCSPN",
+      "thumbnail": "https://shopping-phinf.pstatic.net/main_8804841/88048418020.30.jpg?type=f300",
+      "price": 89900,
+      "rating": 4.92,
+      "reviews": 49000,
+      "stores": "네슬레공식몰"
+    },
+    {
+      "position": 4,
+      "title": "동서식품 맥심 모카골드 마일드 12g , 200개입, 1개",
+      "link": "https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=59845338200&cat_id=50002606&query=Coffee&t=msnfhdto&h=6c17791b4bcfa766cb88015c8033f361fa418bd3&frm=NVSCPRO",
+      "thumbnail": "https://shopping-phinf.pstatic.net/main_5984533/59845338200.20260429173556.jpg?type=f300",
+      "price": 23600,
+      "rating": 4.87,
+      "reviews": 210000,
+      "stores": "판매처 11,560"
+    },
+    {
+      "position": 5,
+      "title": "네스프레소 호환 일리 인텐소 10캡슐 외 61종",
+      "link": "https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=82330465832&cat_id=50009600&query=Coffee&t=msnfhdtp&h=b49e4155124c5738ef3ad1553067f5d4e932e165&frm=NVSCPRO",
+      "thumbnail": "https://shopping-phinf.pstatic.net/main_8233046/82330465832.109.jpg?type=f300",
+      "price": 9900,
+      "rating": 4.92,
+      "reviews": 320000,
+      "stores": "illy store"
+    },
+    {
+      "position": 6,
+      "title": "일리캡슐 커피 인텐소 18캡슐 외 41종",
+      "link": "https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=83667841828&cat_id=50009600&query=Coffee&t=msnfhdtq&h=e468f3091d4afe81bf55d9e987fb6bd0c7534eb3&frm=NVSCPRO",
+      "thumbnail": "https://shopping-phinf.pstatic.net/main_8366784/83667841828.67.jpg?type=f300",
+      "price": 18800,
+      "rating": 4.92,
+      "reviews": 66000,
+      "stores": "일리천국"
+    },
+    {
+      "position": 7,
+      "title": "일리 네스프레소캡슐 호환커피 인텐소 10캡슐 외 106종",
+      "link": "https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=80344738963&cat_id=50009600&query=Coffee&t=msnfhdtq&h=0a4b23840f310aebccb9e4ab07020e8bbf946cf8&frm=NVSCPRO",
+      "thumbnail": "https://shopping-phinf.pstatic.net/main_8034473/80344738963.89.jpg?type=f300",
+      "price": 9900,
+      "rating": 4.9,
+      "reviews": 120000,
+      "stores": "일리천국"
+    },
+    {
+      "position": 8,
+      "title": "일리 캡슐 커피 인텐소 18캡슐 팩 외 38종",
+      "link": "https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=85797914253&cat_id=50009600&query=Coffee&t=msnfhdtr&h=c0e302bde45d8ce42a6e8b6a4a0b9b103f4b6ada&frm=NVSCPRO",
+      "thumbnail": "https://shopping-phinf.pstatic.net/main_8579791/85797914253.22.jpg?type=f300",
+      "price": 18800,
+      "rating": 4.93,
+      "reviews": 77000,
+      "stores": "illy store"
+    }
+  ],
+  "ai_briefing": {
+    "serpapi_link": "https://serpapi.com/search.json?engine=naver_ai_overview&query=Coffee"
+  },
+  "pagination": {
+    "next": "https://search.naver.com/search.naver?nso=&page=2&qdt=0&query=Coffee&sm=tab_pge&ssc=tab.ur.all&start=1",
+    "other_pages": {
+    }
+  },
+  "serpapi_pagination": {
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=naver&page=2&query=Coffee&start=1",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=naver&page=2&query=Coffee&start=1"
+  }
+}

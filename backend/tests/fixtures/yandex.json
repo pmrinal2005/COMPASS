@@ -1,0 +1,185 @@
+{
+  "search_metadata": {
+    "id": "695928798c24bd247f1be807",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/29b85c993ba06d41/695928798c24bd247f1be807.json",
+    "created_at": "2026-01-03 14:32:25 UTC",
+    "processed_at": "2026-01-03 14:32:25 UTC",
+    "yandex_url": "https://yandex.com/search/?text=Coffee&lang=en&lr=84",
+    "raw_html_file": "https://serpapi.com/searches/29b85c993ba06d41/695928798c24bd247f1be807.html",
+    "total_time_taken": 0.92
+  },
+  "search_parameters": {
+    "text": "Coffee",
+    "engine": "yandex",
+    "lang": "en",
+    "lr": "84",
+    "yandex_domain": "yandex.com",
+    "device": "desktop"
+  },
+  "search_information": {
+    "within": null,
+    "organic_results_state": "Results for exact spelling",
+    "query_displayed": "Coffee"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Coffees of the World: 66 Coffee Types | TasteAtlas",
+      "link": "https://www.tasteatlas.com/coffee",
+      "displayed_link": "tasteatlas.com › coffee",
+      "snippet": "Everything about coffees. What's the best, the worst and the most popular coffee in the world? Discover national, regional and local coffee varieties around the world."
+    },
+    {
+      "position": 2,
+      "title": "Coffee - Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Coffee",
+      "displayed_link": "en.wikipedia.org › Coffee",
+      "snippet": "Coffee is a beverage brewed from roasted, ground coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans..."
+    },
+    {
+      "position": 3,
+      "title": "Coffee • The Nutrition Source",
+      "link": "https://nutritionsource.hsph.harvard.edu/food-features/coffee/",
+      "displayed_link": "nutritionsource.hsph.harvard.edu › food-features",
+      "snippet": "Coffee and Health. Coffee is an intricate mixture of more than a thousand chemicals. [1] The cup of coffee you order from a coffee shop is likely different from the..."
+    },
+    {
+      "position": 4,
+      "title": "The History of Coffee | Origin of Coffee - YouTube",
+      "link": "https://www.youtube.com/watch?v=wuIiy5c_iHw",
+      "displayed_link": "youtube.com › watch",
+      "snippet": "#Coffee #HistoryExplained #ExploreModeCoffee is the second most popular beverage in the world second only to water. In the U.S. alone, more than 450 million ...Duration 10 minutes 1 second375K viewsPublished on12 Sep 2019"
+    },
+    {
+      "position": 5,
+      "title": "6 Science-Backed Health Benefits Of Coffee – Forbes Health",
+      "link": "https://www.forbes.com/health/nutrition/coffee-health-benefits/",
+      "displayed_link": "forbes.com › health › nutrition › coffee-health",
+      "snippet": "Table of Contents6 Health Benefits of Coffee, According To ExpertsWhat Are the Drawbacks of Coffee?"
+    },
+    {
+      "position": 6,
+      "title": "Different Types of Coffee, Roasts, and Drinks",
+      "link": "https://www.allrecipes.com/article/types-of-coffee/",
+      "displayed_link": "allrecipes.com › article › types-of-coffee",
+      "snippet": "That's why we're doing a deep dive into different kinds of coffee, from beans and roasts, to classic drinks and inventive recipes."
+    },
+    {
+      "position": 7,
+      "title": "The History Of Coffee Origins and Coffee Story | Nescafé IN",
+      "link": "https://www.nescafe.com/in/coffee-culture/knowledge/coffee-history",
+      "displayed_link": "nescafe.com › in › coffee-culture › knowledge › coffee",
+      "snippet": "Coffee origins - Starting in Ethiopia and moving its way across the globe, coffee has an extensive history and interesting coffee story that dates back as far as 800 AD."
+    },
+    {
+      "position": 8,
+      "title": "freepik.com/free-photos-vectors/coffee",
+      "link": "https://www.freepik.com/free-photos-vectors/coffee",
+      "displayed_link": "freepik.com › free-photos-vectors › coffee",
+      "snippet": "Links to the page contain: Coffee vector created by pch.vector -www.freepik.com...."
+    },
+    {
+      "position": 9,
+      "title": "COFFEE Definition & Meaning - Merriam-Webster",
+      "link": "https://www.merriam-webster.com/dictionary/coffee",
+      "displayed_link": "merriam-webster.com › dictionary › coffee",
+      "snippet": "The meaning of COFFEE is a beverage made by percolation, infusion, or decoction from the roasted and ground seeds of a coffee plant."
+    },
+    {
+      "position": 10,
+      "title": "coffee - Wiktionary, the free dictionary",
+      "link": "https://en.wiktionary.org/wiki/coffee",
+      "displayed_link": "en.wiktionary.org › wiki › coffee",
+      "snippet": "The great use of coffee in France is supposed to have abated the prevalency of the gravel, for where coffee is used as a constant beverage, the gravel and the gout are..."
+    }
+  ],
+  "knowledge_graph": {
+    "title": "Coffee",
+    "header_images": [
+      "https://avatars.mds.yandex.net/get-entity_search/1545396/807605499/SUx182_2x",
+      "https://avatars.mds.yandex.net/get-entity_search/2327175/1212659445/SUx182",
+      "https://avatars.mds.yandex.net/get-entity_search/1244778/1222766576/SUx182",
+      "https://avatars.mds.yandex.net/get-entity_search/1981853/1194783675/SUx182",
+      "https://avatars.mds.yandex.net/get-entity_search/5509992/1229021866/SUx182",
+      "https://avatars.mds.yandex.net/get-entity_search/5283930/1202341942/SUx182",
+      "https://avatars.mds.yandex.net/get-entity_search/7751290/1227278609/SUx182",
+      "https://avatars.mds.yandex.net/get-entity_search/5734168/983980527/SUx182"
+    ],
+    "description": "Beverage brewed from roasted, ground coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content, but decaffeinated coffee is also commercially available. There are also various coffee substitutes.",
+    "source": {
+      "name": "en.wikipedia.org",
+      "link": "http://en.wikipedia.org/wiki/Coffee"
+    },
+    "see_also": [
+      {
+        "name": "Kopi Luwak",
+        "link": "https://yandex.com/search/?lr=84&text=Kopi%20Luwak&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCglydXc0MDI0ODISDnJ1dzQzOTEwOmFzc29jGAN6CFNlZSBhbHNv2gtKAQ",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/10640679/1169513556/S88x88Smart_2x"
+      },
+      {
+        "name": "Coffee bean",
+        "link": "https://yandex.com/search/?lr=84&text=Coffee%20bean&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCglydXcyNzk2MDgSDnJ1dzQzOTEwOmFzc29jGAN6CFNlZSBhbHNvrJzmqQ",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/5505928/1227085870/S88x88Smart_2x"
+      },
+      {
+        "name": "Tea",
+        "link": "https://yandex.com/search/?lr=84&text=Organic%20Tea&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCghydXc4MjYxNxIOcnV3NDM5MTA6YXNzb2MYA3oIU2VlIGFsc2_1eHMM",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/1671503/1229041576/S88x88Smart_2x"
+      },
+      {
+        "name": "Espresso",
+        "link": "https://yandex.com/search/?lr=84&text=Caffe%20Espresso&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCglydXczODkwMDUSDnJ1dzQzOTEwOmFzc29jGAN6CFNlZSBhbHNvpG5_kQ",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/5449393/1227423906/S88x88Smart_2x"
+      },
+      {
+        "name": "Cappuccino",
+        "link": "https://yandex.com/search/?lr=84&text=Dry%20cappuccino&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCgpydXcxMzg1ODUyEg5ydXc0MzkxMDphc3NvYxgDeghTZWUgYWxzb_GqkXE",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/4964907/1230423928/S88x88Smart_2x"
+      },
+      {
+        "name": "Latte",
+        "link": "https://yandex.com/search/?lr=84&text=Cafe%20latte&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCgpydXcyNzM1MTQzEg5ydXc0MzkxMDphc3NvYxgDeghTZWUgYWxzbyfNrvc",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/2327175/1227437370/S88x88Smart_2x"
+      },
+      {
+        "name": "Instant coffee",
+        "link": "https://yandex.com/search/?lr=84&text=Instant%20coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCghydXc5NTM5OBIOcnV3NDM5MTA6YXNzb2MYA3oIU2VlIGFsc29Ofba9",
+        "image": "https://avatars.mds.yandex.net/get-entity_search/5283930/1229049239/S88x88Smart_2x"
+      },
+      {
+        "name": "Caffè Americano",
+        "link": "https://yandex.com/search/?lr=84&text=Caff%C3%A8%20Americano&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCgpydXcyOTc4NjkwEg5ydXc0MzkxMDphc3NvYxgDeghTZWUgYWxzby7NNX8"
+      },
+      {
+        "name": "Flat white",
+        "link": "https://yandex.com/search/?lr=84&text=Flat%20white&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCgpydXczNTI0MDEzEg5ydXc0MzkxMDphc3NvYxgDeghTZWUgYWxzbz3WCkg"
+      },
+      {
+        "name": "Raph Coffee",
+        "link": "https://yandex.com/search/?lr=84&text=Raf%20coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&noreask=1&ento=0oCgpydXc3NjA4MzI4Eg5ydXc0MzkxMDphc3NvYxgDeghTZWUgYWxzb121l3o"
+      }
+    ]
+  },
+  "pagination": {
+    "current": 1,
+    "next": "https://yandex.com/search/?lr=84&text=Coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&p=1&rnd=49832",
+    "other_pages": {
+      "2": "https://yandex.com/search/?lr=84&text=Coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&p=1",
+      "3": "https://yandex.com/search/?lr=84&text=Coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&p=2",
+      "4": "https://yandex.com/search/?lr=84&text=Coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&p=3",
+      "5": "https://yandex.com/search/?lr=84&text=Coffee&win=614&lang=en&msid=1767450747229146-10463814238228418245-balancer-l7leveler-kubr-yp-sas-356-BAL-673&p=4"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=yandex&lang=en&lr=84&p=1&text=Coffee&yandex_domain=yandex.com",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=yandex&lang=en&lr=84&p=1&text=Coffee&yandex_domain=yandex.com",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=yandex&lang=en&lr=84&p=1&text=Coffee&yandex_domain=yandex.com",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=yandex&lang=en&lr=84&p=2&text=Coffee&yandex_domain=yandex.com",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=yandex&lang=en&lr=84&p=3&text=Coffee&yandex_domain=yandex.com",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=yandex&lang=en&lr=84&p=4&text=Coffee&yandex_domain=yandex.com"
+    }
+  }
+}

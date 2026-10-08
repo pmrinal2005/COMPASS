@@ -1,0 +1,492 @@
+{
+  "search_metadata": {
+    "id": "695927578c24bd247f1be7d9",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/5ff82c1ff52f15e3/695927578c24bd247f1be7d9.json",
+    "created_at": "2026-01-03 14:27:35 UTC",
+    "processed_at": "2026-01-03 14:27:35 UTC",
+    "baidu_url": "https://www.baidu.com/s?wd=Coffee&oq=Coffee&tn=baidu&ie=utf-8&f=8",
+    "raw_html_file": "https://serpapi.com/searches/5ff82c1ff52f15e3/695927578c24bd247f1be7d9.html",
+    "total_time_taken": 0.94
+  },
+  "search_parameters": {
+    "q": "Coffee",
+    "f": "8",
+    "device": "desktop",
+    "engine": "baidu"
+  },
+  "search_information": {
+    "query_displayed": "Coffee"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "咖啡(英语名词，指咖啡类物... - 百度百科",
+      "link": "https://baike.baidu.com/item/%E5%92%96%E5%95%A1/16003673",
+      "snippet": "英语单词\"coffee\"作名词时包含多重语义维度：既指由咖啡豆制成的热饮（如\"a cup of coffee\"），也包含原料形态（如咖啡粉、咖啡豆）及其计量单位（如\"a bag of coffee\"表示咖啡豆/粉）。该词存在可数与不可数形态，复数形式\"coffees\"可表示不同品种或场合下的咖啡饮品（如\"Bra..."
+    },
+    {
+      "position": 2,
+      "title": "几点喝咖啡最佳?哈佛大学40万人研究,这个点之前喝,寿命更长,心...",
+      "link": "https://www.baidu.com/s?tn=news&rtt=1&bsst=1&wd=Coffee&cl=2"
+    },
+    {
+      "position": 3,
+      "title": "coffee - 搜索 词典",
+      "link": "https://cn.bing.com/dict/coffee",
+      "snippet": "coffee 显示所有例句 n. 1. [u][c] (烘烤过的)咖啡豆;咖啡粉the roasted seeds (calledcoffee beans) of a tropical bush; a powder made from them 2. [u] 咖啡(热饮料)a hot drink made from coffee powder and boiling water. It may be drunk with milk and/or sugar added. 3. [c] 一杯咖啡a cup of coffee 4. [u] 咖啡色;浅褐色;浅棕色the colour of coffee mixed with milk; ..."
+    },
+    {
+      "position": 4,
+      "title": "coffee是什么意思_ coffee的翻译_音标_读音_用法_例句_爱词霸在线...",
+      "link": "https://m.iciba.com/%20coffee",
+      "snippet": "Coffee is a fragrant beverage. 咖啡是一种香味浓郁的饮料. 来自《现代汉英综合大词典》 10. A quietly efficient manservant brought them coffee and brandy. 一个不起眼而能干的男仆给他们端来了咖啡和白兰地. 来自《简明英汉词典》 11. There's plenty of coffee in the kichen. 厨房里咖啡还多着呢. 来..."
+    },
+    {
+      "position": 5,
+      "title": "咖啡(世界三大饮料之一) - 百度百科",
+      "link": "https://baike.baidu.com/item/咖啡/29518",
+      "thumbnail": "https://t8.baidu.com/it/u=4215722837,801016221&fm=74&app=80&size=f256,256&n=0&f=JPEG&fmt=auto?s=710B915722A376A6BD258D5F0300C073&sec=1767546000&t=cd947cb721ae8c4c2311cc5604b41203",
+      "rich_snippet": [
+        {
+          "extensions": [
+            "咖啡（Coffee）是用经过烘焙并磨粉的咖啡豆制作出来的饮料。作为世界三大饮料之一，其与可可、茶同为流行于世界的主要饮品。咖啡的历史可追溯到1690年，一位荷兰船长在也门得到几棵咖啡苗，在印度尼西亚种植成功；1727年咖啡在巴西试种取得很好效果，并在南美洲迅速蔓延。咖啡树是属茜草科多年生常绿灌木或小乔木，日常饮用的咖啡是用咖啡豆配合各种不同的烹煮器具制作出来的，而咖啡豆就是指咖啡树果实里面的果仁，再用适当的方法烘焙而成。一杯标准的咖啡品尝起来的味道不应该只是苦涩的，一名合格的咖啡师在制作咖啡时会严谨地进行每一步操作，最后为客人呈上的咖啡在味觉上会呈现出不同程度的甜度、酸度、香醇度或是干净度。 常喝咖啡有助保持肌肉年轻，研究显示咖啡中的葫芦巴碱可以提高NAD+水平，增强肌肉力量。2023年12月，咖啡入选“2023年度十大营养热词”。2023-2024年度，中国成为世界第七大咖啡消费国。20"
+          ]
+        }
+      ],
+      "sitelinks": [
+        {
+          "title": "相关报道",
+          "link": "http://www.baidu.com/link?url=aC8KpUXiBczsknIzAlK7c2g39A1M5arbN2LpbCtDkT08qIO52e6SsuMvq63QpaR4sXHhXZ4d6Xh58r5zOAxUjI4BRIevgE1Kj6AfB13Ajsu"
+        },
+        {
+          "title": "发展历史",
+          "link": "http://www.baidu.com/link?url=aC8KpUXiBczsknIzAlK7c2g39A1M5arbN2LpbCtDkT08qIO52e6SsuMvq63QpaR4sXHhXZ4d6Xh58r5zOAxUj2dhpbJHZWJQS7ZWs4W9hMG"
+        },
+        {
+          "title": "常见分类",
+          "link": "http://www.baidu.com/link?url=aC8KpUXiBczsknIzAlK7c2g39A1M5arbN2LpbCtDkT08qIO52e6SsuMvq63QpaR4sXHhXZ4d6Xh58r5zOAxUjCh3vtRnzQHIV_fBcVUrRbK"
+        },
+        {
+          "title": "制作方法",
+          "link": "http://www.baidu.com/link?url=aC8KpUXiBczsknIzAlK7c2g39A1M5arbN2LpbCtDkT08qIO52e6SsuMvq63QpaR4sXHhXZ4d6Xh58r5zOAxUjI7Vxv_aUluuIF6dt-noVXW"
+        },
+        {
+          "title": "饮用选购",
+          "link": "http://www.baidu.com/link?url=aC8KpUXiBczsknIzAlK7c2g39A1M5arbN2LpbCtDkT08qIO52e6SsuMvq63QpaR4sXHhXZ4d6Xh58r5zOAxUjD68wXfRv3JxA3huMoDgjGC"
+        },
+        {
+          "title": "更多 >",
+          "link": "http://www.baidu.com/link?url=cGfT-GlkZqnm7om0iQyUcO0LEgTibXUL0LJ-zEetwWR-8f2SQg1S1SV4yqcwDNiO6G3i5dR-5jaP977_vpotIYYlJdk_EL7r6_zb-Wz4ZiW"
+        }
+      ],
+      "displayed_link": "百度百科"
+    },
+    {
+      "position": 6,
+      "title": "coffee是什么意思_coffee的中文翻译_音标_读音_用法_例句_在线...",
+      "link": "http://danci.gei6.com/coffee__oennfdgi.html",
+      "snippet": "coffee是什么意思、coffee怎么读 读音:美[´kɒfi]英[´kɔːfi] 英汉翻译近义词典英英词典发音词典 coffee中文翻译 n.咖啡豆;咖啡粉;(一杯)咖啡;非正式的社交集会 coffee是什么意思网络解释 咖啡茶; 喝咖啡; 咖啡馆 使用频率:星级词汇: CET4TEM4考研CET6 ..."
+    },
+    {
+      "position": 7,
+      "title": "coffee是什么意思|coffee的音标|coffee的用法 - 英语词典",
+      "link": "https://www.chazidian.com/dict/coffee/",
+      "snippet": "coffee的意思、解释 复数形式:coffees; coffee 基本解释 coffee什么意思 名词咖啡豆; 咖啡粉; (一杯)咖啡; 非正式的社交集会 coffee coffee 相关例句 名词 1. Two coffees, please. 请来两杯咖啡。 2. coffee的近义词 2. Two coffees, please!"
+    },
+    {
+      "position": 8,
+      "title": "词典",
+      "link": "https://m.yuedu.163.com/ext/youdao/dict.do?word=coffee",
+      "snippet": "coffee 英[ˈkɒfi] 美[ˈkɔːfi] n. 咖啡;咖啡豆;咖啡色 n. (Coffee)人名;(英)科菲 复数coffees 全部折叠 全部展开 柯林斯英汉双解大词典 coffee /ˈkɒfɪ/ CET4 TEM4 1 不可数名词 Coffee is a hot drink made with water and ground or powdered coffee beans. 咖啡 ..."
+    }
+  ],
+  "answer_box": [
+    {
+      "position": 1,
+      "title": "coffee - 百度翻译",
+      "link": "http://nourl.ubs.baidu.com/85",
+      "type": "dictionary_result",
+      "english_word": "coffee",
+      "common_definition": "咖啡",
+      "british": {
+        "chinese_character": "英",
+        "phonetic": "[ˈkɒfi]",
+        "audio_link": "https://sensearch.baidu.com/gettts?lan=uk&spd=3&source=alading&text=coffee"
+      },
+      "american": {
+        "chinese_character": "美",
+        "phonetic": "[ˈkɔːfi]",
+        "audio_link": "https://sensearch.baidu.com/gettts?lan=en&spd=3&source=alading&text=coffee"
+      },
+      "definitions": [
+        "n. 咖啡(热饮料);(烘烤过的)咖啡豆;咖啡粉;咖啡色;"
+      ],
+      "example_sentence": {
+        "text": "Have you tried this new coffee? It's very good.",
+        "audio_link": "https://sensearch.baidu.com/gettts?lan=en&spd=3&source=alading&text=Have%20you%20tried%20this%20new%20coffee%3F%20It%27s%20very%20good.",
+        "translation": "你尝过这种新咖啡吗？好极啦。"
+      },
+      "variations": [
+        {
+          "variation": "复数",
+          "word": "coffees",
+          "link": "https://www.baidu.com/s?wd=coffees%E7%BF%BB%E8%AF%91&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&sa=re_fy_huisou"
+        }
+      ],
+      "related_videos": [
+        {
+          "link": "http://www.baidu.com/link?url=Prwvq3LS0bX0TN0lO8AIv0j5H-1HAFcAZ70sl_uMZYOumh9xaiTtNxxci8qOeS3ljONHV5bwPKF8C0TEOfAm7cYZbFKE7_wmgeGt_FltK7y",
+          "thumbnail": "https://f7.baidu.com/it/u=1863621068,117580576&fm=222&app=106&size=w931&q=75&n=0&f=JPEG&fmt=auto&maxorilen2heic=2000000",
+          "title": "英文单词 coffee 的中文意思是什么"
+        },
+        {
+          "link": "http://www.baidu.com/link?url=nkoLz-6cM-KCFrC5sBWMuNcKnb_jYqs8DSWHG9bCwXzyYs0IkzhsyLTGYWzldTO9R9uKxsxPenZW-AnO4fL43RcBsYHgySbWeUvQtNQo40G",
+          "thumbnail": "https://f7.baidu.com/it/u=2062958112,2348988747&fm=222&app=108&size=w931&q=75&n=0&f=JPEG&fmt=auto&maxorilen2heic=2000000",
+          "title": "单词讲解coffee（发音、例句、短语、知识扩展、实用场景）"
+        }
+      ]
+    }
+  ],
+  "people_also_search_for": [
+    {
+      "text": "cafe和coffee的区别",
+      "link": "https://www.baidu.com/s?wd=cafe%E5%92%8Ccoffee%E7%9A%84%E5%8C%BA%E5%88%AB&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=e867ztgMucWZladUc8klQrlL7QkAIeE5FmYbq%2BuxZSRR%2B2F8U2bGUNugzQs&rsf=101631101&rsv_dl=0_prs_28608_1",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=cafe%E5%92%8Ccoffee%E7%9A%84%E5%8C%BA%E5%88%AB"
+    },
+    {
+      "text": "coffee音标",
+      "link": "https://www.baidu.com/s?wd=coffee%E9%9F%B3%E6%A0%87&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=e867ztgMucWZladUc8klQrlL7QkAIeE5FmYbq%2BuxZSRR%2B2F8U2bGUNugzQs&rsf=101631161&rsv_dl=0_prs_28608_2",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffee%E9%9F%B3%E6%A0%87"
+    },
+    {
+      "text": "coffee中文叫什么",
+      "link": "https://www.baidu.com/s?wd=coffee%E4%B8%AD%E6%96%87%E5%8F%AB%E4%BB%80%E4%B9%88&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101631151&rsv_dl=0_prs_28608_3",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffee%E4%B8%AD%E6%96%87%E5%8F%AB%E4%BB%80%E4%B9%88"
+    },
+    {
+      "text": "coffee中文意思",
+      "link": "https://www.baidu.com/s?wd=coffee%E4%B8%AD%E6%96%87%E6%84%8F%E6%80%9D&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101633403&rsv_dl=0_prs_28608_4",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffee%E4%B8%AD%E6%96%87%E6%84%8F%E6%80%9D"
+    },
+    {
+      "text": "cofe是coffee的缩写吗",
+      "link": "https://www.baidu.com/s?wd=cofe%E6%98%AFcoffee%E7%9A%84%E7%BC%A9%E5%86%99%E5%90%97&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101634503&rsv_dl=0_prs_28608_5",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=cofe%E6%98%AFcoffee%E7%9A%84%E7%BC%A9%E5%86%99%E5%90%97"
+    },
+    {
+      "text": "coffe还是coffee",
+      "link": "https://www.baidu.com/s?wd=coffe%E8%BF%98%E6%98%AFcoffee&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101634503&rsv_dl=0_prs_28608_6",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffe%E8%BF%98%E6%98%AFcoffee"
+    },
+    {
+      "text": "fk-coffee",
+      "link": "https://www.baidu.com/s?wd=fk-coffee&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101634503&rsv_dl=0_prs_28608_7",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=fk-coffee"
+    },
+    {
+      "text": "gridcoffee中文是什么",
+      "link": "https://www.baidu.com/s?wd=gridcoffee%E4%B8%AD%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101634504&rsv_dl=0_prs_28608_8",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=gridcoffee%E4%B8%AD%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88"
+    },
+    {
+      "text": "coffees",
+      "link": "https://www.baidu.com/s?wd=coffees&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=101633403&rsv_dl=0_prs_28608_9",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffees"
+    },
+    {
+      "text": "Cookie",
+      "link": "https://www.baidu.com/s?wd=Cookie&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=90ce%2BXVzJRvr7Sv9f2wAqOOWFFvGIgkEoUGjTqbfBIJVmzJH82Nap%2Br7Qx8&rsf=100631101&rsv_dl=0_prs_28608_10",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=Cookie"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "fk-coffee",
+      "link": "https://www.baidu.com/s?wd=fk-coffee&rsf=101634503&rsp=0&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_1",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=fk-coffee"
+    },
+    {
+      "query": "coffee音标",
+      "link": "https://www.baidu.com/s?wd=coffee%E9%9F%B3%E6%A0%87&rsf=101631161&rsp=1&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_2",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffee%E9%9F%B3%E6%A0%87"
+    },
+    {
+      "query": "cofe是coffee的缩写吗",
+      "link": "https://www.baidu.com/s?wd=cofe%E6%98%AFcoffee%E7%9A%84%E7%BC%A9%E5%86%99%E5%90%97&rsf=101634503&rsp=2&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_3",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=cofe%E6%98%AFcoffee%E7%9A%84%E7%BC%A9%E5%86%99%E5%90%97"
+    },
+    {
+      "query": "coffee中文叫什么",
+      "link": "https://www.baidu.com/s?wd=coffee%E4%B8%AD%E6%96%87%E5%8F%AB%E4%BB%80%E4%B9%88&rsf=101631151&rsp=3&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_4",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffee%E4%B8%AD%E6%96%87%E5%8F%AB%E4%BB%80%E4%B9%88"
+    },
+    {
+      "query": "gridcoffee中文是什么",
+      "link": "https://www.baidu.com/s?wd=gridcoffee%E4%B8%AD%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88&rsf=101634504&rsp=4&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_5",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=gridcoffee%E4%B8%AD%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88"
+    },
+    {
+      "query": "coffee中文意思",
+      "link": "https://www.baidu.com/s?wd=coffee%E4%B8%AD%E6%96%87%E6%84%8F%E6%80%9D&rsf=101633403&rsp=5&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_6",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffee%E4%B8%AD%E6%96%87%E6%84%8F%E6%80%9D"
+    },
+    {
+      "query": "coffe还是coffee",
+      "link": "https://www.baidu.com/s?wd=coffe%E8%BF%98%E6%98%AFcoffee&rsf=101634503&rsp=6&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_7",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffe%E8%BF%98%E6%98%AFcoffee"
+    },
+    {
+      "query": "coffees",
+      "link": "https://www.baidu.com/s?wd=coffees&rsf=101633403&rsp=7&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_8",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=coffees"
+    },
+    {
+      "query": "cafe和coffee的区别",
+      "link": "https://www.baidu.com/s?wd=cafe%E5%92%8Ccoffee%E7%9A%84%E5%8C%BA%E5%88%AB&rsf=101631101&rsp=8&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_9",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=cafe%E5%92%8Ccoffee%E7%9A%84%E5%8C%BA%E5%88%AB"
+    },
+    {
+      "query": "Cookie",
+      "link": "https://www.baidu.com/s?wd=Cookie&rsf=100631101&rsp=9&f=1&rs_src=0&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&rsv_dl=brs_28338_10",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=Cookie"
+    }
+  ],
+  "top_searches": [
+    {
+      "position": 1,
+      "text": "新年贺词里的中国信心",
+      "link": "https://www.baidu.com/s?wd=%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E9%87%8C%E7%9A%84%E4%B8%AD%E5%9B%BD%E4%BF%A1%E5%BF%83&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_1&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E9%87%8C%E7%9A%84%E4%B8%AD%E5%9B%BD%E4%BF%A1%E5%BF%83"
+    },
+    {
+      "position": 2,
+      "text": "数字人民币和微信支付宝的不同",
+      "link": "https://www.baidu.com/s?wd=%E6%95%B0%E5%AD%97%E4%BA%BA%E6%B0%91%E5%B8%81%E5%92%8C%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%AE%9D%E7%9A%84%E4%B8%8D%E5%90%8C&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_2&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E6%95%B0%E5%AD%97%E4%BA%BA%E6%B0%91%E5%B8%81%E5%92%8C%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%AE%9D%E7%9A%84%E4%B8%8D%E5%90%8C",
+      "tag": "热"
+    },
+    {
+      "position": 3,
+      "text": "2025年成史上最暖年",
+      "link": "https://www.baidu.com/s?wd=2025%E5%B9%B4%E6%88%90%E5%8F%B2%E4%B8%8A%E6%9C%80%E6%9A%96%E5%B9%B4&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_3&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=2025%E5%B9%B4%E6%88%90%E5%8F%B2%E4%B8%8A%E6%9C%80%E6%9A%96%E5%B9%B4",
+      "tag": "热"
+    },
+    {
+      "position": 4,
+      "text": "福建舰2026年任务清单来了",
+      "link": "https://www.baidu.com/s?wd=%E7%A6%8F%E5%BB%BA%E8%88%B02026%E5%B9%B4%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95%E6%9D%A5%E4%BA%86&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_4&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%A6%8F%E5%BB%BA%E8%88%B02026%E5%B9%B4%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95%E6%9D%A5%E4%BA%86"
+    },
+    {
+      "position": 5,
+      "text": "2026首个“超级月亮”现身夜空",
+      "link": "https://www.baidu.com/s?wd=2026%E9%A6%96%E4%B8%AA%E2%80%9C%E8%B6%85%E7%BA%A7%E6%9C%88%E4%BA%AE%E2%80%9D%E7%8E%B0%E8%BA%AB%E5%A4%9C%E7%A9%BA&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_5&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=2026%E9%A6%96%E4%B8%AA%E2%80%9C%E8%B6%85%E7%BA%A7%E6%9C%88%E4%BA%AE%E2%80%9D%E7%8E%B0%E8%BA%AB%E5%A4%9C%E7%A9%BA",
+      "tag": "新"
+    },
+    {
+      "position": 6,
+      "text": "入睡也有“黄金时间” 不是越快越好",
+      "link": "https://www.baidu.com/s?wd=%E5%85%A5%E7%9D%A1%E4%B9%9F%E6%9C%89%E2%80%9C%E9%BB%84%E9%87%91%E6%97%B6%E9%97%B4%E2%80%9D%20%E4%B8%8D%E6%98%AF%E8%B6%8A%E5%BF%AB%E8%B6%8A%E5%A5%BD&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_6&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%85%A5%E7%9D%A1%E4%B9%9F%E6%9C%89%E2%80%9C%E9%BB%84%E9%87%91%E6%97%B6%E9%97%B4%E2%80%9D+%E4%B8%8D%E6%98%AF%E8%B6%8A%E5%BF%AB%E8%B6%8A%E5%A5%BD",
+      "tag": "新"
+    },
+    {
+      "position": 7,
+      "text": "特朗普：已抓获委总统夫妇并带离",
+      "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E5%B7%B2%E6%8A%93%E8%8E%B7%E5%A7%94%E6%80%BB%E7%BB%9F%E5%A4%AB%E5%A6%87%E5%B9%B6%E5%B8%A6%E7%A6%BB&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_7&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E5%B7%B2%E6%8A%93%E8%8E%B7%E5%A7%94%E6%80%BB%E7%BB%9F%E5%A4%AB%E5%A6%87%E5%B9%B6%E5%B8%A6%E7%A6%BB",
+      "tag": "爆"
+    },
+    {
+      "position": 8,
+      "text": "凌晨3点手机竟然自动转账",
+      "link": "https://www.baidu.com/s?wd=%E5%87%8C%E6%99%A83%E7%82%B9%E6%89%8B%E6%9C%BA%E7%AB%9F%E7%84%B6%E8%87%AA%E5%8A%A8%E8%BD%AC%E8%B4%A6&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_8&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%87%8C%E6%99%A83%E7%82%B9%E6%89%8B%E6%9C%BA%E7%AB%9F%E7%84%B6%E8%87%AA%E5%8A%A8%E8%BD%AC%E8%B4%A6"
+    },
+    {
+      "position": 9,
+      "text": "黑龙江景区现3米高“冰封鱼墙”",
+      "link": "https://www.baidu.com/s?wd=%E9%BB%91%E9%BE%99%E6%B1%9F%E6%99%AF%E5%8C%BA%E7%8E%B03%E7%B1%B3%E9%AB%98%E2%80%9C%E5%86%B0%E5%B0%81%E9%B1%BC%E5%A2%99%E2%80%9D&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_9&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%BB%91%E9%BE%99%E6%B1%9F%E6%99%AF%E5%8C%BA%E7%8E%B03%E7%B1%B3%E9%AB%98%E2%80%9C%E5%86%B0%E5%B0%81%E9%B1%BC%E5%A2%99%E2%80%9D",
+      "tag": "热"
+    },
+    {
+      "position": 10,
+      "text": "五星红旗在台湾台南冉冉升起",
+      "link": "https://www.baidu.com/s?wd=%E4%BA%94%E6%98%9F%E7%BA%A2%E6%97%97%E5%9C%A8%E5%8F%B0%E6%B9%BE%E5%8F%B0%E5%8D%97%E5%86%89%E5%86%89%E5%8D%87%E8%B5%B7&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_10&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%BA%94%E6%98%9F%E7%BA%A2%E6%97%97%E5%9C%A8%E5%8F%B0%E6%B9%BE%E5%8F%B0%E5%8D%97%E5%86%89%E5%86%89%E5%8D%87%E8%B5%B7",
+      "tag": "热"
+    },
+    {
+      "position": 11,
+      "text": "零下30多度男子开窗冷空气瞬间现形",
+      "link": "https://www.baidu.com/s?wd=%E9%9B%B6%E4%B8%8B30%E5%A4%9A%E5%BA%A6%E7%94%B7%E5%AD%90%E5%BC%80%E7%AA%97%E5%86%B7%E7%A9%BA%E6%B0%94%E7%9E%AC%E9%97%B4%E7%8E%B0%E5%BD%A2&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_11&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%9B%B6%E4%B8%8B30%E5%A4%9A%E5%BA%A6%E7%94%B7%E5%AD%90%E5%BC%80%E7%AA%97%E5%86%B7%E7%A9%BA%E6%B0%94%E7%9E%AC%E9%97%B4%E7%8E%B0%E5%BD%A2",
+      "tag": "热"
+    },
+    {
+      "position": 12,
+      "text": "“喝酒吃辣可以祛寒御冷”不科学",
+      "link": "https://www.baidu.com/s?wd=%E2%80%9C%E5%96%9D%E9%85%92%E5%90%83%E8%BE%A3%E5%8F%AF%E4%BB%A5%E7%A5%9B%E5%AF%92%E5%BE%A1%E5%86%B7%E2%80%9D%E4%B8%8D%E7%A7%91%E5%AD%A6&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=c29dWg8vvQ2WfmgLuRnzPSAcOPv%2BC9IEDuetKNc6xOCsANV9as%2BswNIThrg&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_12&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E2%80%9C%E5%96%9D%E9%85%92%E5%90%83%E8%BE%A3%E5%8F%AF%E4%BB%A5%E7%A5%9B%E5%AF%92%E5%BE%A1%E5%86%B7%E2%80%9D%E4%B8%8D%E7%A7%91%E5%AD%A6"
+    },
+    {
+      "position": 13,
+      "text": "马杜罗被美军三角洲特种部队抓获",
+      "link": "https://www.baidu.com/s?wd=%E9%A9%AC%E6%9D%9C%E7%BD%97%E8%A2%AB%E7%BE%8E%E5%86%9B%E4%B8%89%E8%A7%92%E6%B4%B2%E7%89%B9%E7%A7%8D%E9%83%A8%E9%98%9F%E6%8A%93%E8%8E%B7&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_13&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%A9%AC%E6%9D%9C%E7%BD%97%E8%A2%AB%E7%BE%8E%E5%86%9B%E4%B8%89%E8%A7%92%E6%B4%B2%E7%89%B9%E7%A7%8D%E9%83%A8%E9%98%9F%E6%8A%93%E8%8E%B7",
+      "tag": "热"
+    },
+    {
+      "position": 14,
+      "text": "美方披露抓获马杜罗更多细节",
+      "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E6%96%B9%E6%8A%AB%E9%9C%B2%E6%8A%93%E8%8E%B7%E9%A9%AC%E6%9D%9C%E7%BD%97%E6%9B%B4%E5%A4%9A%E7%BB%86%E8%8A%82&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_14&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BE%8E%E6%96%B9%E6%8A%AB%E9%9C%B2%E6%8A%93%E8%8E%B7%E9%A9%AC%E6%9D%9C%E7%BD%97%E6%9B%B4%E5%A4%9A%E7%BB%86%E8%8A%82",
+      "tag": "热"
+    },
+    {
+      "position": 15,
+      "text": "美司法部长：马杜罗夫妇已在美被起诉",
+      "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E5%8F%B8%E6%B3%95%E9%83%A8%E9%95%BF%EF%BC%9A%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87%E5%B7%B2%E5%9C%A8%E7%BE%8E%E8%A2%AB%E8%B5%B7%E8%AF%89&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_1_15_15&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BE%8E%E5%8F%B8%E6%B3%95%E9%83%A8%E9%95%BF%EF%BC%9A%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87%E5%B7%B2%E5%9C%A8%E7%BE%8E%E8%A2%AB%E8%B5%B7%E8%AF%89",
+      "tag": "新"
+    },
+    {
+      "position": 16,
+      "text": "美国突袭抓获马杜罗 多国强烈谴责",
+      "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E5%9B%BD%E7%AA%81%E8%A2%AD%E6%8A%93%E8%8E%B7%E9%A9%AC%E6%9D%9C%E7%BD%97%20%E5%A4%9A%E5%9B%BD%E5%BC%BA%E7%83%88%E8%B0%B4%E8%B4%A3&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_16&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BE%8E%E5%9B%BD%E7%AA%81%E8%A2%AD%E6%8A%93%E8%8E%B7%E9%A9%AC%E6%9D%9C%E7%BD%97+%E5%A4%9A%E5%9B%BD%E5%BC%BA%E7%83%88%E8%B0%B4%E8%B4%A3"
+    },
+    {
+      "position": 17,
+      "text": "委内瑞拉首都街头几乎空无一人",
+      "link": "https://www.baidu.com/s?wd=%E5%A7%94%E5%86%85%E7%91%9E%E6%8B%89%E9%A6%96%E9%83%BD%E8%A1%97%E5%A4%B4%E5%87%A0%E4%B9%8E%E7%A9%BA%E6%97%A0%E4%B8%80%E4%BA%BA&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_17&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A7%94%E5%86%85%E7%91%9E%E6%8B%89%E9%A6%96%E9%83%BD%E8%A1%97%E5%A4%B4%E5%87%A0%E4%B9%8E%E7%A9%BA%E6%97%A0%E4%B8%80%E4%BA%BA"
+    },
+    {
+      "position": 18,
+      "text": "委内瑞拉要求美立即释放马杜罗夫妇",
+      "link": "https://www.baidu.com/s?wd=%E5%A7%94%E5%86%85%E7%91%9E%E6%8B%89%E8%A6%81%E6%B1%82%E7%BE%8E%E7%AB%8B%E5%8D%B3%E9%87%8A%E6%94%BE%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_18&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A7%94%E5%86%85%E7%91%9E%E6%8B%89%E8%A6%81%E6%B1%82%E7%BE%8E%E7%AB%8B%E5%8D%B3%E9%87%8A%E6%94%BE%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87",
+      "tag": "新"
+    },
+    {
+      "position": 19,
+      "text": "俄要求美立即澄清马杜罗情况",
+      "link": "https://www.baidu.com/s?wd=%E4%BF%84%E8%A6%81%E6%B1%82%E7%BE%8E%E7%AB%8B%E5%8D%B3%E6%BE%84%E6%B8%85%E9%A9%AC%E6%9D%9C%E7%BD%97%E6%83%85%E5%86%B5&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_19&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%BF%84%E8%A6%81%E6%B1%82%E7%BE%8E%E7%AB%8B%E5%8D%B3%E6%BE%84%E6%B8%85%E9%A9%AC%E6%9D%9C%E7%BD%97%E6%83%85%E5%86%B5"
+    },
+    {
+      "position": 20,
+      "text": "美发动快速打击3小时后称抓获马杜罗",
+      "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E5%8F%91%E5%8A%A8%E5%BF%AB%E9%80%9F%E6%89%93%E5%87%BB3%E5%B0%8F%E6%97%B6%E5%90%8E%E7%A7%B0%E6%8A%93%E8%8E%B7%E9%A9%AC%E6%9D%9C%E7%BD%97&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_20&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BE%8E%E5%8F%91%E5%8A%A8%E5%BF%AB%E9%80%9F%E6%89%93%E5%87%BB3%E5%B0%8F%E6%97%B6%E5%90%8E%E7%A7%B0%E6%8A%93%E8%8E%B7%E9%A9%AC%E6%9D%9C%E7%BD%97"
+    },
+    {
+      "position": 21,
+      "text": "一起看超级月亮和象限仪座流星雨",
+      "link": "https://www.baidu.com/s?wd=%E4%B8%80%E8%B5%B7%E7%9C%8B%E8%B6%85%E7%BA%A7%E6%9C%88%E4%BA%AE%E5%92%8C%E8%B1%A1%E9%99%90%E4%BB%AA%E5%BA%A7%E6%B5%81%E6%98%9F%E9%9B%A8&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_21&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%B8%80%E8%B5%B7%E7%9C%8B%E8%B6%85%E7%BA%A7%E6%9C%88%E4%BA%AE%E5%92%8C%E8%B1%A1%E9%99%90%E4%BB%AA%E5%BA%A7%E6%B5%81%E6%98%9F%E9%9B%A8"
+    },
+    {
+      "position": 22,
+      "text": "雷军直播现场拆解小米YU7",
+      "link": "https://www.baidu.com/s?wd=%E9%9B%B7%E5%86%9B%E7%9B%B4%E6%92%AD%E7%8E%B0%E5%9C%BA%E6%8B%86%E8%A7%A3%E5%B0%8F%E7%B1%B3YU7&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_22&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E9%9B%B7%E5%86%9B%E7%9B%B4%E6%92%AD%E7%8E%B0%E5%9C%BA%E6%8B%86%E8%A7%A3%E5%B0%8F%E7%B1%B3YU7",
+      "tag": "热"
+    },
+    {
+      "position": 23,
+      "text": "美议员称马杜罗将在美国接受审判",
+      "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E8%AE%AE%E5%91%98%E7%A7%B0%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%B0%86%E5%9C%A8%E7%BE%8E%E5%9B%BD%E6%8E%A5%E5%8F%97%E5%AE%A1%E5%88%A4&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_23&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E7%BE%8E%E8%AE%AE%E5%91%98%E7%A7%B0%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%B0%86%E5%9C%A8%E7%BE%8E%E5%9B%BD%E6%8E%A5%E5%8F%97%E5%AE%A1%E5%88%A4"
+    },
+    {
+      "position": 24,
+      "text": "委副总统：不知马杜罗夫妇现在何处",
+      "link": "https://www.baidu.com/s?wd=%E5%A7%94%E5%89%AF%E6%80%BB%E7%BB%9F%EF%BC%9A%E4%B8%8D%E7%9F%A5%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87%E7%8E%B0%E5%9C%A8%E4%BD%95%E5%A4%84&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_24&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A7%94%E5%89%AF%E6%80%BB%E7%BB%9F%EF%BC%9A%E4%B8%8D%E7%9F%A5%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87%E7%8E%B0%E5%9C%A8%E4%BD%95%E5%A4%84",
+      "tag": "热"
+    },
+    {
+      "position": 25,
+      "text": "委防长：已启动所有国家防御计划",
+      "link": "https://www.baidu.com/s?wd=%E5%A7%94%E9%98%B2%E9%95%BF%EF%BC%9A%E5%B7%B2%E5%90%AF%E5%8A%A8%E6%89%80%E6%9C%89%E5%9B%BD%E5%AE%B6%E9%98%B2%E5%BE%A1%E8%AE%A1%E5%88%92&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_25&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A7%94%E9%98%B2%E9%95%BF%EF%BC%9A%E5%B7%B2%E5%90%AF%E5%8A%A8%E6%89%80%E6%9C%89%E5%9B%BD%E5%AE%B6%E9%98%B2%E5%BE%A1%E8%AE%A1%E5%88%92"
+    },
+    {
+      "position": 26,
+      "text": "女子酒店房间拉开窗帘是泳池水底",
+      "link": "https://www.baidu.com/s?wd=%E5%A5%B3%E5%AD%90%E9%85%92%E5%BA%97%E6%88%BF%E9%97%B4%E6%8B%89%E5%BC%80%E7%AA%97%E5%B8%98%E6%98%AF%E6%B3%B3%E6%B1%A0%E6%B0%B4%E5%BA%95&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_26&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A5%B3%E5%AD%90%E9%85%92%E5%BA%97%E6%88%BF%E9%97%B4%E6%8B%89%E5%BC%80%E7%AA%97%E5%B8%98%E6%98%AF%E6%B3%B3%E6%B1%A0%E6%B0%B4%E5%BA%95",
+      "tag": "新"
+    },
+    {
+      "position": 27,
+      "text": "张伟丽首次回应能否被普通男性打过",
+      "link": "https://www.baidu.com/s?wd=%E5%BC%A0%E4%BC%9F%E4%B8%BD%E9%A6%96%E6%AC%A1%E5%9B%9E%E5%BA%94%E8%83%BD%E5%90%A6%E8%A2%AB%E6%99%AE%E9%80%9A%E7%94%B7%E6%80%A7%E6%89%93%E8%BF%87&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_27&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%BC%A0%E4%BC%9F%E4%B8%BD%E9%A6%96%E6%AC%A1%E5%9B%9E%E5%BA%94%E8%83%BD%E5%90%A6%E8%A2%AB%E6%99%AE%E9%80%9A%E7%94%B7%E6%80%A7%E6%89%93%E8%BF%87",
+      "tag": "热"
+    },
+    {
+      "position": 28,
+      "text": "外交部：中国公民暂勿前往委内瑞拉",
+      "link": "https://www.baidu.com/s?wd=%E5%A4%96%E4%BA%A4%E9%83%A8%EF%BC%9A%E4%B8%AD%E5%9B%BD%E5%85%AC%E6%B0%91%E6%9A%82%E5%8B%BF%E5%89%8D%E5%BE%80%E5%A7%94%E5%86%85%E7%91%9E%E6%8B%89&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_28&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A4%96%E4%BA%A4%E9%83%A8%EF%BC%9A%E4%B8%AD%E5%9B%BD%E5%85%AC%E6%B0%91%E6%9A%82%E5%8B%BF%E5%89%8D%E5%BE%80%E5%A7%94%E5%86%85%E7%91%9E%E6%8B%89",
+      "tag": "新"
+    },
+    {
+      "position": 29,
+      "text": "委前内政部长在美军事行动中身亡",
+      "link": "https://www.baidu.com/s?wd=%E5%A7%94%E5%89%8D%E5%86%85%E6%94%BF%E9%83%A8%E9%95%BF%E5%9C%A8%E7%BE%8E%E5%86%9B%E4%BA%8B%E8%A1%8C%E5%8A%A8%E4%B8%AD%E8%BA%AB%E4%BA%A1&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_29&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E5%A7%94%E5%89%8D%E5%86%85%E6%94%BF%E9%83%A8%E9%95%BF%E5%9C%A8%E7%BE%8E%E5%86%9B%E4%BA%8B%E8%A1%8C%E5%8A%A8%E4%B8%AD%E8%BA%AB%E4%BA%A1",
+      "tag": "热"
+    },
+    {
+      "position": 30,
+      "text": "“我是李白不是苏东坡”",
+      "link": "https://www.baidu.com/s?wd=%E2%80%9C%E6%88%91%E6%98%AF%E6%9D%8E%E7%99%BD%E4%B8%8D%E6%98%AF%E8%8B%8F%E4%B8%9C%E5%9D%A1%E2%80%9D&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=d1efVAGT02RNkYNGeLKlgymyfB2o2JHd6ZReZEv93k6RrXvvmdrFShXXGyI&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_16_30_30&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E2%80%9C%E6%88%91%E6%98%AF%E6%9D%8E%E7%99%BD%E4%B8%8D%E6%98%AF%E8%8B%8F%E4%B8%9C%E5%9D%A1%E2%80%9D"
+    },
+    {
+      "position": 31,
+      "text": "五角大楼附近披萨订单又升高了",
+      "link": "https://www.baidu.com/s?wd=%E4%BA%94%E8%A7%92%E5%A4%A7%E6%A5%BC%E9%99%84%E8%BF%91%E6%8A%AB%E8%90%A8%E8%AE%A2%E5%8D%95%E5%8F%88%E5%8D%87%E9%AB%98%E4%BA%86&usm=3&ie=utf-8&rsv_pq=d6dd646601684a67&oq=Coffee&rsv_t=ae2dynE%2BEVQZMQR84aNr8%2FrNDMsV4UrYl6hgIH%2BiuHIUu4dn6A3rJCPjAtM&rqid=d6dd646601684a67&rsf=204a6252ed91dfe29eee20454908130a_31_45_31&rsv_dl=0_right_fyb_pchot_20811&sa=0_right_fyb_pchot_20811",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&q=%E4%BA%94%E8%A7%92%E5%A4%A7%E6%A5%BC%E9%99%84%E8%BF%91%E6%8A%AB%E8%90%A8%E8%AE%A2%E5%8D%95%E5%8F%88%E5%8D%87%E9%AB%98%E4%BA%86"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=10&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=&rsv_page=1",
+    "other_pages": {
+      "2": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=10&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "3": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=20&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "4": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=30&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "5": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=40&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "6": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=50&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "7": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=60&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "8": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=70&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "9": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=80&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn=",
+      "10": "https://www.baidu.com/s?wd=Coffee&base_query=Coffee&pn=90&oq=Coffee&ie=utf-8&usm=3&rsv_pq=d6dd646601684a67&rsv_t=c4a366capGIiuoPupRBytY8uP3AnRFLllyfE3%2F4UE7P04puuqr97uQnjhG8&topic_pn="
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=10&q=Coffee",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=10&q=Coffee",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=10&q=Coffee",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=20&q=Coffee",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=30&q=Coffee",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=40&q=Coffee",
+      "6": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=50&q=Coffee",
+      "7": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=60&q=Coffee",
+      "8": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=70&q=Coffee",
+      "9": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=80&q=Coffee",
+      "10": "https://serpapi.com/search.json?device=desktop&engine=baidu&f=8&oq=Coffee&pn=90&q=Coffee"
+    }
+  }
+}

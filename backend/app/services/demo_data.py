@@ -346,6 +346,6 @@ def demo_response(engine: str, params: dict[str, Any], drift_bucket: int | None 
     drift_r = None if drift_bucket is None else _rng(engine + ":drift", params, drift_bucket)
     extra = demo_extra.demo_extra(engine, params, drift_r)
     body = extra if extra is not None else table.get(engine, lambda: {"organic_results": []})()
-    if engine == "google" and not any(w in _q(params, "q").lower() for w in ("wholesale", "supplier", "oem", "factory", "manufacturer")):
+    if engine == "google" and not _q(params, "q").lower().startswith("events in") and not any(w in _q(params, "q").lower() for w in ("wholesale", "supplier", "oem", "factory", "manufacturer")):
         body = demo_extra.serp("google", params, drift_r)
     return {**_meta(engine, params), **body}

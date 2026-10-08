@@ -1,0 +1,536 @@
+{
+  "search_metadata": {
+    "id": "6959275f8c24bd247f1be7db",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/4b2571f4ba3a510d/6959275f8c24bd247f1be7db.json",
+    "created_at": "2026-01-03 14:27:43 UTC",
+    "processed_at": "2026-01-03 14:27:43 UTC",
+    "yelp_url": "https://www.yelp.com/search?find_desc=Coffee&find_loc=Austin%2C+Texas%2C+United+States",
+    "raw_html_file": "https://serpapi.com/searches/4b2571f4ba3a510d/6959275f8c24bd247f1be7db.html",
+    "total_time_taken": 0.85
+  },
+  "search_parameters": {
+    "engine": "yelp",
+    "find_desc": "Coffee",
+    "find_loc": "Austin, Texas, United States"
+  },
+  "filters": {
+    "category": [
+      {
+        "text": "Gelato",
+        "value": "gelato"
+      },
+      {
+        "text": "Shaved Ice",
+        "value": "shavedice"
+      },
+      {
+        "text": "Cafeteria",
+        "value": "cafeteria"
+      },
+      {
+        "text": "Kombucha",
+        "value": "kombucha"
+      },
+      {
+        "text": "Cheese Shops",
+        "value": "cheese"
+      },
+      {
+        "text": "Tea Rooms",
+        "value": "tea"
+      },
+      {
+        "text": "Gift Shops",
+        "value": "giftshops"
+      },
+      {
+        "text": "Organic Stores",
+        "value": "organic_stores"
+      },
+      {
+        "text": "Breakfast & Brunch",
+        "value": "breakfast_brunch"
+      },
+      {
+        "text": "Food Trucks",
+        "value": "foodtrucks"
+      },
+      {
+        "text": "Beverage Store",
+        "value": "beverage_stores"
+      },
+      {
+        "text": "Chocolatiers & Shops",
+        "value": "chocolate"
+      },
+      {
+        "text": "Acai Bowls",
+        "value": "acaibowls"
+      },
+      {
+        "text": "Australian",
+        "value": "australian"
+      },
+      {
+        "text": "Empanadas",
+        "value": "empanadas"
+      },
+      {
+        "text": "Donuts",
+        "value": "donuts"
+      },
+      {
+        "text": "Bagels",
+        "value": "bagels"
+      },
+      {
+        "text": "Vegan",
+        "value": "vegan"
+      },
+      {
+        "text": "Food",
+        "value": "food"
+      },
+      {
+        "text": "Farmers Market",
+        "value": "farmersmarket"
+      },
+      {
+        "text": "Juice Bars & Smoothies",
+        "value": "juicebars"
+      },
+      {
+        "text": "Desserts",
+        "value": "desserts"
+      },
+      {
+        "text": "Patisserie/Cake Shop",
+        "value": "cakeshop"
+      },
+      {
+        "text": "Creperies",
+        "value": "creperies"
+      },
+      {
+        "text": "Specialty Food",
+        "value": "gourmet"
+      },
+      {
+        "text": "Tasting Classes",
+        "value": "tastingclasses"
+      },
+      {
+        "text": "Waffles",
+        "value": "waffles"
+      },
+      {
+        "text": "Sandwiches",
+        "value": "sandwiches"
+      },
+      {
+        "text": "Coffee Roasteries",
+        "value": "coffeeroasteries"
+      },
+      {
+        "text": "Bubble Tea",
+        "value": "bubbletea"
+      },
+      {
+        "text": "Bookstores",
+        "value": "bookstores"
+      },
+      {
+        "text": "Diners",
+        "value": "diners"
+      },
+      {
+        "text": "Pancakes",
+        "value": "pancakes"
+      },
+      {
+        "text": "Cupcakes",
+        "value": "cupcakes"
+      },
+      {
+        "text": "Ice Cream & Frozen Yogurt",
+        "value": "icecream"
+      },
+      {
+        "text": "Scandinavian",
+        "value": "scandinavian"
+      },
+      {
+        "text": "Bakeries",
+        "value": "bakeries"
+      },
+      {
+        "text": "Venezuelan",
+        "value": "venezuelan"
+      },
+      {
+        "text": "Candy Stores",
+        "value": "candy"
+      },
+      {
+        "text": "Books, Mags, Music & Video",
+        "value": "media"
+      },
+      {
+        "text": "Cafes",
+        "value": "cafes"
+      },
+      {
+        "text": "Water Stores",
+        "value": "waterstores"
+      },
+      {
+        "text": "Themed Cafes",
+        "value": "themedcafes"
+      },
+      {
+        "text": "Coffee & Tea",
+        "value": "coffee"
+      },
+      {
+        "text": "Caterers",
+        "value": "catering"
+      },
+      {
+        "text": "Herbs & Spices",
+        "value": "herbsandspices"
+      }
+    ],
+    "price": [
+      {
+        "text": "$",
+        "value": "RestaurantsPriceRange2.1"
+      },
+      {
+        "text": "$$",
+        "value": "RestaurantsPriceRange2.2"
+      },
+      {
+        "text": "$$$",
+        "value": "RestaurantsPriceRange2.3"
+      },
+      {
+        "text": "$$$$",
+        "value": "RestaurantsPriceRange2.4"
+      }
+    ],
+    "distance": [
+      {
+        "text": "Biking (2 mi.)",
+        "value": "g:-97.78329849243164,30.282936335784672,-97.73214340209961,30.327397491366572"
+      },
+      {
+        "text": "Bird's-eye View",
+        "value": "g:-97.86003112792969,30.21635515266855,-97.65541076660156,30.394199462058317"
+      },
+      {
+        "text": "Within 4 blocks",
+        "value": "g:-97.76091814041138,30.302372046570763,-97.75452375411987,30.307929692159156"
+      },
+      {
+        "text": "Walking (1 mi.)",
+        "value": "g:-97.77050971984863,30.294053515036044,-97.74493217468262,30.316284093102404"
+      },
+      {
+        "text": "Driving (5 mi.)",
+        "value": "g:-97.80887603759766,30.260549927069945,-97.7065658569336,30.349472368261814"
+      }
+    ]
+  },
+  "ads_results": [
+    {
+      "place_ids": [
+        "hug4QV-cEB6grXlPY2SBCA",
+        "cocos-cafe-austin"
+      ],
+      "title": "CoCo’s Cafe",
+      "link": "https://www.yelp.com/adredir?ad_business_id=hug4QV-cEB6grXlPY2SBCA&amp;campaign_id=103515798&amp;click_origin=search_results&amp;placement=vertical_0&amp;placement_slot=0&amp;redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Fcocos-cafe-austin&amp;request_id=f67458b90b9d9459&amp;signature=6207d9fd58aeb56a3d5183805a2dcf1e44df9bd909a8ed0b21536419a7393a4b&amp;slot=0",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=hug4QV-cEB6grXlPY2SBCA&start=0",
+      "categories": [
+        {
+          "title": "Bubble Tea",
+          "link": "https://www.yelp.com/search?find_desc=Bubble+Tea&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Taiwanese",
+          "link": "https://www.yelp.com/search?find_desc=Taiwanese&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "price": "$$",
+      "rating": 3.9,
+      "reviews": 633,
+      "highlights": [
+        "On their website: <b>latte</b>"
+      ],
+      "phone": "(512) 833-6588",
+      "snippet": "Coco's is one of the most reliable and consistent places on my will-always-come-back list of restaurants. I started with the Coco's on campus, but now…",
+      "button": {
+        "text": "Order",
+        "link": "https://www.yelp.com/adredir?ad_business_id=hug4QV-cEB6grXlPY2SBCA&amp;click_origin=search_results_platform&amp;placement=vertical_0&amp;placement_slot=0&amp;redirect_url=https%3A%2F%2Fwww.yelp.com%2Fbiz%2Fcocos-cafe-austin%3Fshow_platform_modal%3DTrue&amp;request_id=f67458b90b9d9459&amp;signature=3ad7943f89f3a2040f43a053cd71dcb89c52f7c78ef3672038816241d8daf71f&amp;slot=0"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/kDjI23eFLv6JlwPrsdtIIg/348s.jpg"
+    }
+  ],
+  "organic_results": [
+    {
+      "position": 1,
+      "place_ids": [
+        "oiJ7QuhhpsEpe9zFTZF0bA",
+        "desnudo-coffee-austin"
+      ],
+      "title": "Desnudo Coffee",
+      "link": "https://www.yelp.com/biz/desnudo-coffee-austin?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=oiJ7QuhhpsEpe9zFTZF0bA&start=0",
+      "categories": [
+        {
+          "title": "Coffee Roasteries",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+Roasteries&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.7,
+      "reviews": 314,
+      "neighborhoods": "East Austin",
+      "phone": "(424) 400-1857",
+      "snippet": "Great coffee, but I wish I could've ordered ahead (they turn it off when it gets busy, but staff...",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/DhaJI0qk_IEzyR175rK-oA/348s.jpg"
+    },
+    {
+      "position": 2,
+      "place_ids": [
+        "uyYG-z7yiSPhXmkauzb43Q",
+        "flora-coffee-austin"
+      ],
+      "title": "Flora Coffee",
+      "link": "https://www.yelp.com/biz/flora-coffee-austin?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=uyYG-z7yiSPhXmkauzb43Q&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Kombucha",
+          "link": "https://www.yelp.com/search?find_desc=Kombucha&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 46,
+      "snippet": "This place is beautiful, they also do yoga and have the most amazing green juice, great coffee...",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/8uqlBz0rSLl3f4PzwHCiFw/348s.jpg"
+    },
+    {
+      "position": 3,
+      "place_ids": [
+        "iKjyR3h75uII0gm9-wY5UQ",
+        "daydreamer-coffee-austin-2"
+      ],
+      "title": "Daydreamer Coffee",
+      "link": "https://www.yelp.com/biz/daydreamer-coffee-austin-2?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=iKjyR3h75uII0gm9-wY5UQ&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 6,
+      "snippet": "Very nice to find this new coffee shop on Rainey. The staff was super friendly, to coffee was great...",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/wXv6iE17S3KIBEjtPHauXQ/348s.jpg"
+    },
+    {
+      "position": 4,
+      "place_ids": [
+        "coNV-mKJqjtqmm5RBrAwMA",
+        "mazúr-coffee-austin"
+      ],
+      "title": "Mazúr Coffee",
+      "link": "https://www.yelp.com/biz/maz%C3%BAr-coffee-austin?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=coNV-mKJqjtqmm5RBrAwMA&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Desserts",
+          "link": "https://www.yelp.com/search?find_desc=Desserts&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "rating": 4.6,
+      "reviews": 9,
+      "neighborhoods": "Rosedale",
+      "phone": "(512) 956-7992",
+      "snippet": "Very cute and cozy coffee shop! Easy parking and the coffee entrance is in the back.",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/VoUclP0yEgO75q3O_l5vOw/348s.jpg"
+    },
+    {
+      "position": 5,
+      "place_ids": [
+        "88BXCKA2OKI1QkB4sbR9Qg",
+        "noble-joe-coffee-austin-4"
+      ],
+      "title": "Noble Joe Coffee",
+      "link": "https://www.yelp.com/biz/noble-joe-coffee-austin-4?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=88BXCKA2OKI1QkB4sbR9Qg&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Food Trucks",
+          "link": "https://www.yelp.com/search?find_desc=Food+Trucks&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.8,
+      "reviews": 85,
+      "snippet": "You'll feel like old friends at Noble Joe. They have great coffee, lattes, and tacos and even better...",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/JUQkfS0dy0MZe1JSXniR4w/348s.jpg"
+    },
+    {
+      "position": 6,
+      "place_ids": [
+        "c7aWDnjuBl3l_vraqKFjHA",
+        "terrible-love-austin"
+      ],
+      "title": "Terrible Love",
+      "link": "https://www.yelp.com/biz/terrible-love-austin?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=c7aWDnjuBl3l_vraqKFjHA&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Breakfast & Brunch",
+          "link": "https://www.yelp.com/search?find_desc=Breakfast+%26+Brunch&amp;find_loc=Austin%2C+TX"
+        },
+        {
+          "title": "Food Trucks",
+          "link": "https://www.yelp.com/search?find_desc=Food+Trucks&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "price": "$",
+      "rating": 4.7,
+      "reviews": 80,
+      "neighborhoods": "Hyde Park",
+      "snippet": "Great coffee and great space to hang out! They whipped out an amazing iced latte.",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/g73eqcPDv-0c8-TBjIJd4w/348s.jpg"
+    },
+    {
+      "position": 7,
+      "place_ids": [
+        "YAnvqg699tciMYsqQfqMjw",
+        "andersons-coffee-company-austin"
+      ],
+      "title": "Anderson’s Coffee Company",
+      "link": "https://www.yelp.com/biz/andersons-coffee-company-austin?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=YAnvqg699tciMYsqQfqMjw&start=0",
+      "categories": [
+        {
+          "title": "Coffee Roasteries",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+Roasteries&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.6,
+      "reviews": 194,
+      "highlights": [
+        "Locally owned & operated",
+        "50 years in business",
+        "Family-owned & operated",
+        "Free parking",
+        "7 Employees"
+      ],
+      "phone": "(512) 453-1533",
+      "snippet": "Amazing coffee. Exceptional service. It's not a coffee shop. Just great coffee.",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/bkbxYsziFL_yh61KO1lh6Q/348s.jpg"
+    },
+    {
+      "position": 8,
+      "place_ids": [
+        "1HQFQJ5s_qYLH8iNO9lAwQ",
+        "caphein-coffee-austin-2"
+      ],
+      "title": "CaPhein Coffee",
+      "link": "https://www.yelp.com/biz/caphein-coffee-austin-2?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=1HQFQJ5s_qYLH8iNO9lAwQ&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "rating": 4.2,
+      "reviews": 163,
+      "neighborhoods": "University of Texas",
+      "snippet": "Great coffee and very helpful and friendly staff! The coco ube was very tasty and had toasted...",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/fyv0QoO6sAXD-3Bh675PyQ/348s.jpg"
+    },
+    {
+      "position": 9,
+      "place_ids": [
+        "6oPSBvk1TS3uCGlyfYTheA",
+        "ghoul-coffee-austin-2"
+      ],
+      "title": "Ghoul Coffee",
+      "link": "https://www.yelp.com/biz/ghoul-coffee-austin-2?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=6oPSBvk1TS3uCGlyfYTheA&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "rating": 4.8,
+      "reviews": 68,
+      "neighborhoods": "East Austin",
+      "snippet": "Cute coffee shop! Love the Halloween vibe The girl was so sweet and very helpful The coffee was...",
+      "button": {
+        "text": "Order",
+        "link": "https://www.yelp.com/biz/6oPSBvk1TS3uCGlyfYTheA?show_platform_modal=True"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/5_77Do_m72K_guGucD-uWg/348s.jpg"
+    },
+    {
+      "position": 10,
+      "place_ids": [
+        "eXrdq56qaMGjRgPO5HZSEA",
+        "hecho-amano-coffee-pflugerville"
+      ],
+      "title": "Hecho Amano Coffee",
+      "link": "https://www.yelp.com/biz/hecho-amano-coffee-pflugerville?osq=Coffee",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&num=49&place_id=eXrdq56qaMGjRgPO5HZSEA&start=0",
+      "categories": [
+        {
+          "title": "Coffee & Tea",
+          "link": "https://www.yelp.com/search?find_desc=Coffee+%26+Tea&amp;find_loc=Austin%2C+TX"
+        }
+      ],
+      "rating": 4.9,
+      "reviews": 28,
+      "phone": "(512) 565-8188",
+      "snippet": "So impressed with this cute neighborhood coffee shop! I predict they're going to quickly outgrow...",
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/0SLk5kRPvNXnTeX2_ZCLJg/348s.jpg"
+    }
+  ],
+  "pagination": {
+    "next": "https://www.yelp.com/search?find_desc=Coffee&find_loc=Austin%2C+Texas%2C+United+States&start=10"
+  },
+  "serpapi_pagination": {
+    "next_link": "https://serpapi.com/search.json?engine=yelp&find_desc=Coffee&find_loc=Austin%2C+Texas%2C+United+States&start=10",
+    "next": "https://serpapi.com/search.json?engine=yelp&find_desc=Coffee&find_loc=Austin%2C+Texas%2C+United+States&start=10"
+  }
+}

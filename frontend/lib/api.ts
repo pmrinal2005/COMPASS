@@ -1,4 +1,4 @@
-import type { Account, ActionProposal, Lens, Playbook } from './types'
+import type { Account, ActionProposal, Lens, Playbook, WatchRecord, WatchTick } from './types'
 
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '')
 
@@ -41,8 +41,8 @@ export const api = {
   account: (force = false) => fetchJSON<Account>(`/api/account${force ? '?force=true' : ''}`, { timeoutMs: 15000 }),
   playbooks: () => fetchJSON<Playbook[]>('/api/playbooks', { timeoutMs: 15000 }),
   locations: (q: string, limit = 5) => fetchJSON<any[]>(`/api/locations?q=${encodeURIComponent(q)}&limit=${limit}`),
-  watches: () => fetchJSON<any[]>('/api/watches'),
-  tickWatch: (wid: string) => fetchJSON(`/api/watches/${wid}/check`, { method: 'POST', timeoutMs: 60000 }),
+  watches: () => fetchJSON<WatchRecord[]>('/api/watches'),
+  tickWatch: (wid: string) => fetchJSON<WatchTick>(`/api/watches/${wid}/check`, { method: 'POST', timeoutMs: 60000 }),
   health: (timeoutMs = 8000) => fetchJSON<Health>('/api/health', { timeoutMs }),
   createSession: (prompt: string, lens: Lens, priorities?: Record<string, number>) =>
     fetchJSON<{ session_id: string }>('/api/sessions', { method: 'POST', body: JSON.stringify({ prompt, lens, priorities }) }),
@@ -56,7 +56,6 @@ export const api = {
   modify: (aid: string, payload: Record<string, any>, note?: string) =>
     fetchJSON(`/api/actions/${aid}/modify`, { method: 'POST', body: JSON.stringify({ payload, note }) }),
   trace: (sid: string) => fetchJSON(`/api/sessions/${sid}/trace`),
-  checkWatch: (wid: string) => fetchJSON(`/api/watches/${wid}/check`, { method: 'POST' }),
   streamUrl: (sid: string) => `${API_URL}/api/sessions/${sid}/stream`,
 }
 

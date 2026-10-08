@@ -16,12 +16,13 @@ Field paths follow the official per-engine response docs:
   google_patents : organic_results[] -> publication_number, assignee, priority_date, patent_link
   google_finance : summary.extracted_price
   bing | duckduckgo | yahoo | yandex | baidu : organic_results[] -> position, title, link, displayed_link|displayed_brand, snippet
-  naver          : web_results[] -> position, title, link, displayed_link, snippet
+  naver          : web_results[] (where=nexearch) | organic_results[] (where=web) -> position, title, link, displayed_link, snippet
   google_ai_mode : text_blocks[], references[] -> title, link, source, index   (+ quick_results[])
   google_ai_overview / google.ai_overview : text_blocks[], references[]  (google.ai_overview.page_token -> follow-up call)
   yelp           : organic_results[] -> title, rating, reviews, price ("$$"), neighborhoods, categories[], place_ids[]
-  tripadvisor    : places[] -> place_type (RESTAURANT/HOTEL/GEO/…), title, rating, reviews, location, link
-  google_events  : events_results[] -> title, date{start_date,when}, address[], venue{name,rating,reviews}, link, ticket_info[]
+  tripadvisor    : places[] -> place_type (EATERY / ACCOMMODATION / ATTRACTION / ATTRACTION_PRODUCT / VACATION_RENTAL / AIRLINE / GEO), title, rating, reviews, location, link
+  google (events): events_results[] -> title, date{start_date,when}, address[], venue (str | {name,rating,reviews}), link, ticket_info[]
+                   (engine=google_events is DEPRECATED upstream -> use engine=google with q="Events in <city>")
   airbnb         : organic_results[] -> listing_id, name, rating, reviews, extracted_price (stay total), price_qualifier, badges[]
   google_maps    : local_results[] -> title, rating, reviews, price, type, address   (category=venue -> venue candidates)
 """
@@ -33,6 +34,8 @@ from typing import Any
 from ..models import Candidate
 from .entities import page_offset, price_level, serp_domain, venue_key
 
+# Tripadvisor documents `EATERY` for restaurants; legacy/other spellings are accepted too.
+EATERY_TYPES = ("EATERY", "RESTAURANT", "")
 _MONEY = re.compile(r"\$\s?([\d,]+(?:\.\d+)?)")
 
 
@@ -62,7 +65,9 @@ def _venue(engine: str, platform: str, title: str, rating, reviews, price, url, 
 
 
 def _serp_rows(engine: str, data: dict, params: dict | None) -> list[dict]:
-    rows = data.get("web_results") if engine == "naver" else data.get("organic_results")
+    # Naver: the default `where=nexearch` answers with `web_results`, but `where=web` (what our playbook sends) answers with `organic_results`
+    # (verified against the live API) -> accept both, otherwise every Naver ranking would silently be empty.
+    rows = (data.get("web_results") or data.get("organic_results")) if engine == "naver" else data.get("organic_results")
     off = page_offset(engine, params or data.get("search_parameters"))
     out = []
     for i, it in enumerate(rows or []):
@@ -227,15 +232,19 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
             ptype = (it.get("place_type") or "").upper()
             if ptype in ("GEO",) or not it.get("title"):
                 continue                      # destinations are context, not candidates
-            if category == "venue" and ptype not in ("RESTAURANT", ""):
+            if category == "venue" and ptype not in EATERY_TYPES:     # docs: GEO | ACCOMMODATION | AIRLINE | ATTRACTION | ATTRACTION_PRODUCT | EATERY | VACATION_RENTAL
                 continue
             out.append(_venue(engine, "Tripadvisor", it.get("title", ""), it.get("rating"), it.get("reviews"), None, it.get("link"),
                               location=it.get("location"), place_type=ptype, description=(it.get("description") or "")[:240]))
 
-    elif engine == "google_events":
+    elif engine in ("google_events", "google") and category == "event":
+        # `google_events` is DEPRECATED by SerpApi ("no longer accepts new requests"); events live in `events_results` of the Google Search API.
+        # `venue` is an object in the old shape and a plain string in the current docs example -> accept both.
         for it in data.get("events_results", []) or []:
             date = it.get("date") or {}
             venue = it.get("venue") or {}
+            if isinstance(venue, str):
+                venue = {"name": venue}
             out.append(Candidate(title=it.get("title", ""), category="event", engine=engine, source=venue.get("name") or ", ".join(it.get("address") or []),
                                  url=it.get("link"), rating=_num(venue.get("rating")), reviews=int(_num(venue.get("reviews")) or 0),
                                  attributes={"when": date.get("when"), "start": date.get("start_date"), "address": it.get("address"),

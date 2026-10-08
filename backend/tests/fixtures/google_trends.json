@@ -1,0 +1,662 @@
+{
+  "search_metadata": {
+    "id": "695928708c24bd247f1be805",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/7e338dcb660fd739/695928708c24bd247f1be805.json",
+    "created_at": "2026-01-03 14:32:16 UTC",
+    "processed_at": "2026-01-03 14:32:16 UTC",
+    "google_trends_url": "https://trends.google.com/trends/embed/explore/TIMESERIES?hl=en&tz=420&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22quantum+computing%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%22today+12-m%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D",
+    "raw_html_file": "https://serpapi.com/searches/7e338dcb660fd739/695928708c24bd247f1be805.html",
+    "prettify_html_file": "https://serpapi.com/searches/7e338dcb660fd739/695928708c24bd247f1be805.prettify",
+    "total_time_taken": 0.94
+  },
+  "search_parameters": {
+    "engine": "google_trends",
+    "q": "quantum computing",
+    "hl": "en",
+    "date": "today 12-m",
+    "tz": "420",
+    "data_type": "TIMESERIES"
+  },
+  "interest_over_time": {
+    "timeline_data": [
+      {
+        "date": "Dec 29, 2024 – Jan 4, 2025",
+        "timestamp": "1735430400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "8",
+            "extracted_value": 8
+          }
+        ]
+      },
+      {
+        "date": "Jan 5 – 11, 2025",
+        "timestamp": "1736035200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "11",
+            "extracted_value": 11
+          }
+        ]
+      },
+      {
+        "date": "Jan 12 – 18, 2025",
+        "timestamp": "1736640000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "10",
+            "extracted_value": 10
+          }
+        ]
+      },
+      {
+        "date": "Jan 19 – 25, 2025",
+        "timestamp": "1737244800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "7",
+            "extracted_value": 7
+          }
+        ]
+      },
+      {
+        "date": "Jan 26 – Feb 1, 2025",
+        "timestamp": "1737849600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "Feb 2 – 8, 2025",
+        "timestamp": "1738454400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Feb 9 – 15, 2025",
+        "timestamp": "1739059200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "Feb 16 – 22, 2025",
+        "timestamp": "1739664000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "11",
+            "extracted_value": 11
+          }
+        ]
+      },
+      {
+        "date": "Feb 23 – Mar 1, 2025",
+        "timestamp": "1740268800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "8",
+            "extracted_value": 8
+          }
+        ]
+      },
+      {
+        "date": "Mar 2 – 8, 2025",
+        "timestamp": "1740873600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Mar 9 – 15, 2025",
+        "timestamp": "1741478400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Mar 16 – 22, 2025",
+        "timestamp": "1742083200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "Mar 23 – 29, 2025",
+        "timestamp": "1742688000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Mar 30 – Apr 5, 2025",
+        "timestamp": "1743292800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Apr 6 – 12, 2025",
+        "timestamp": "1743897600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Apr 13 – 19, 2025",
+        "timestamp": "1744502400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Apr 20 – 26, 2025",
+        "timestamp": "1745107200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "4",
+            "extracted_value": 4
+          }
+        ]
+      },
+      {
+        "date": "Apr 27 – May 3, 2025",
+        "timestamp": "1745712000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "4",
+            "extracted_value": 4
+          }
+        ]
+      },
+      {
+        "date": "May 4 – 10, 2025",
+        "timestamp": "1746316800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "May 11 – 17, 2025",
+        "timestamp": "1746921600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "May 18 – 24, 2025",
+        "timestamp": "1747526400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "May 25 – 31, 2025",
+        "timestamp": "1748131200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "Jun 1 – 7, 2025",
+        "timestamp": "1748736000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "5",
+            "extracted_value": 5
+          }
+        ]
+      },
+      {
+        "date": "Jun 8 – 14, 2025",
+        "timestamp": "1749340800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "9",
+            "extracted_value": 9
+          }
+        ]
+      },
+      {
+        "date": "Jun 15 – 21, 2025",
+        "timestamp": "1749945600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "7",
+            "extracted_value": 7
+          }
+        ]
+      },
+      {
+        "date": "Jun 22 – 28, 2025",
+        "timestamp": "1750550400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "7",
+            "extracted_value": 7
+          }
+        ]
+      },
+      {
+        "date": "Jun 29 – Jul 5, 2025",
+        "timestamp": "1751155200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "Jul 6 – 12, 2025",
+        "timestamp": "1751760000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      },
+      {
+        "date": "Jul 13 – 19, 2025",
+        "timestamp": "1752364800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "7",
+            "extracted_value": 7
+          }
+        ]
+      },
+      {
+        "date": "Jul 20 – 26, 2025",
+        "timestamp": "1752969600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "7",
+            "extracted_value": 7
+          }
+        ]
+      },
+      {
+        "date": "Jul 27 – Aug 2, 2025",
+        "timestamp": "1753574400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "9",
+            "extracted_value": 9
+          }
+        ]
+      },
+      {
+        "date": "Aug 3 – 9, 2025",
+        "timestamp": "1754179200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "14",
+            "extracted_value": 14
+          }
+        ]
+      },
+      {
+        "date": "Aug 10 – 16, 2025",
+        "timestamp": "1754784000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "19",
+            "extracted_value": 19
+          }
+        ]
+      },
+      {
+        "date": "Aug 17 – 23, 2025",
+        "timestamp": "1755388800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "15",
+            "extracted_value": 15
+          }
+        ]
+      },
+      {
+        "date": "Aug 24 – 30, 2025",
+        "timestamp": "1755993600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "12",
+            "extracted_value": 12
+          }
+        ]
+      },
+      {
+        "date": "Aug 31 – Sep 6, 2025",
+        "timestamp": "1756598400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "12",
+            "extracted_value": 12
+          }
+        ]
+      },
+      {
+        "date": "Sep 7 – 13, 2025",
+        "timestamp": "1757203200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "13",
+            "extracted_value": 13
+          }
+        ]
+      },
+      {
+        "date": "Sep 14 – 20, 2025",
+        "timestamp": "1757808000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "16",
+            "extracted_value": 16
+          }
+        ]
+      },
+      {
+        "date": "Sep 21 – 27, 2025",
+        "timestamp": "1758412800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "25",
+            "extracted_value": 25
+          }
+        ]
+      },
+      {
+        "date": "Sep 28 – Oct 4, 2025",
+        "timestamp": "1759017600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "19",
+            "extracted_value": 19
+          }
+        ]
+      },
+      {
+        "date": "Oct 5 – 11, 2025",
+        "timestamp": "1759622400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "21",
+            "extracted_value": 21
+          }
+        ]
+      },
+      {
+        "date": "Oct 12 – 18, 2025",
+        "timestamp": "1760227200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "19",
+            "extracted_value": 19
+          }
+        ]
+      },
+      {
+        "date": "Oct 19 – 25, 2025",
+        "timestamp": "1760832000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "22",
+            "extracted_value": 22
+          }
+        ]
+      },
+      {
+        "date": "Oct 26 – Nov 1, 2025",
+        "timestamp": "1761436800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "19",
+            "extracted_value": 19
+          }
+        ]
+      },
+      {
+        "date": "Nov 2 – 8, 2025",
+        "timestamp": "1762041600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "16",
+            "extracted_value": 16
+          }
+        ]
+      },
+      {
+        "date": "Nov 9 – 15, 2025",
+        "timestamp": "1762646400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "23",
+            "extracted_value": 23
+          }
+        ]
+      },
+      {
+        "date": "Nov 16 – 22, 2025",
+        "timestamp": "1763251200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "78",
+            "extracted_value": 78
+          }
+        ]
+      },
+      {
+        "date": "Nov 23 – 29, 2025",
+        "timestamp": "1763856000",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "100",
+            "extracted_value": 100
+          }
+        ]
+      },
+      {
+        "date": "Nov 30 – Dec 6, 2025",
+        "timestamp": "1764460800",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "98",
+            "extracted_value": 98
+          }
+        ]
+      },
+      {
+        "date": "Dec 7 – 13, 2025",
+        "timestamp": "1765065600",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "79",
+            "extracted_value": 79
+          }
+        ]
+      },
+      {
+        "date": "Dec 14 – 20, 2025",
+        "timestamp": "1765670400",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "49",
+            "extracted_value": 49
+          }
+        ]
+      },
+      {
+        "date": "Dec 21 – 27, 2025",
+        "timestamp": "1766275200",
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "7",
+            "extracted_value": 7
+          }
+        ]
+      },
+      {
+        "date": "Dec 28, 2025 – Jan 3, 2026",
+        "timestamp": "1766880000",
+        "partial_data": true,
+        "values": [
+          {
+            "query": "quantum computing",
+            "query_index": 0,
+            "value": "6",
+            "extracted_value": 6
+          }
+        ]
+      }
+    ]
+  }
+}

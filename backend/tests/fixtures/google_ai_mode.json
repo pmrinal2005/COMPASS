@@ -1,0 +1,355 @@
+{
+  "search_metadata": {
+    "id": "6960ccebfe1c6b2c639194f3",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/eb1228e14de333cd/6960ccebfe1c6b2c639194f3.json",
+    "created_at": "2026-01-09 09:39:55 UTC",
+    "processed_at": "2026-01-09 09:39:55 UTC",
+    "google_ai_mode_url": "https://www.google.com/search?q=Coffee&oq=Coffee&udm=50&sourceid=chrome&ie=UTF-8&aep=1&ntc=1&sa=X",
+    "raw_html_file": "https://serpapi.com/searches/eb1228e14de333cd/6960ccebfe1c6b2c639194f3.html",
+    "prettify_html_file": "https://serpapi.com/searches/eb1228e14de333cd/6960ccebfe1c6b2c639194f3.prettify",
+    "total_time_taken": 0.88
+  },
+  "search_parameters": {
+    "engine": "google_ai_mode",
+    "q": "Coffee",
+    "device": "desktop"
+  },
+  "subsequent_request_token": "TdIeY3icPZRHzu0IEYUlJmzjHzYIdztcJz29gbOvc04TyzmH62zP2QhqgcQGWACraFbDawlRJZ3ZGXyndOqvfyuafxHqVSVJuwnrXaHaZEwFc7xM99eiX7Lf_s0M0xk6kZPxPO0H1mZ5FRi6KJ8ilmPC2p4L6FgE9a5Ckao7lhH2_LvwvdbxvCsc88d2pD3xIz4LwlcqaH4EWabidGfGa7MzRmLWu6jvSO98ICcPjPxIsE6N7f2c2yJ_rK3crW3PszjN4Z7Q4xGuzl5OUI-hz39yLn8KP4OcgTRT2GPz1rI8a1KsfgJTx2oS7kR1IfvnvhZLnFTFuP1WqNPT9H3yC_oz-PVTAEHfvpRm3K-vi8Bi7PWnL2qe-8IvUrnZfkER_GcE-_pJFh1V-ctX33TFl1Bk3fSnL6ZepqH4BULIn8Hf98tOymRp_mf5ezZNXVP8549_iGO7yPalAOwf2XynWIydqq0uiLMgxDsl4wKC3HIuMMLt9NyxeHTjIsRU_fvVAxv2OeHKww42NVFAfZcOoOhteZFum3UmF6fFvXOr0kApwlmIRr13r_r2RXHMdyqRhgQ9GptHG5WZs9wk2On0gQ4j56rnwxn3OxeJybsRM6dAZHx0UbLOmcz89qW92e8ojH__QBLuO7catsjisVz4VAjukZyNOh3dtM1Ru9u2l7enSyuWF-uu8tJQ4HAh0n7jvd81eH4Yp-s3qg8wP6NMs4oFh6tfmY-vgCK9Of4IV-XBbwPoak9-05QfAE3Ep-6O1nTplvdSHCyGxugLegwkyMZzwIIV1WFKRWDEKlUsS1ZwUl5WG14e-gZvumGe-qnt9U60OaXUS0p5d05wFAiTNvbt0XkvZ5jCxXpvB_2D9f_XoV1G5pzvjFIx375sIbbt738-YyCJsfKmqLS8_HGLCY_UnTy1QmPbu46jWJPmqCWCKD79iOLqX_w16yK-GOYLraIHWCwfGi8EJmRf-nif0WDoLkGgvG-2R2hcDHCXampxw6R-DLr9rlSf0TTIUVqglkH00a7yPe3ppAbjo6KctBKfl5RxkwXcnwzGuPT0lTkJMPJ8Sbt-FK5KQzzwslNHoU0Hmcy50koJnvWYjyS5VG4rYCLy4oLTrWlCxoBl53GcymWWkkxaH4vwKtKl2QpLXG51gevbrjxHXKD27N69rroP4gCEMJNvO1PbNFETr8C2Ndd6wspCtwiAyxMMTkRnoTZFyRqN9ngfVbgN79ZKgDC3kB98-4oj9ewPxA0Opt1wI8hgTw2fqt5eBkSPBnLHn0bO6z2AKKzovALycG7AapeTbhjmMzQ2Pz2cx-rC24ne8QG9YIp-2cqq5VtDTcjMfg5zk_2pHYWkPye7uIcBg084vgx_D3GPcC79hhh2kQVUvPVoyXjcN0Ah3M0CbRedG_h2GDoLEj0aaHd6uCUM5jpceJk3CoGZEWSGWX4cyg5nKQnrPEucQBAhviPWDK1O3XnV948SnPGIRBc7X6NQcsYaq9nAspsSK0e3jC6J5bKrSJCc7X293W6PThjUIKLJO7JOZh_skqPKtRUAbiu_UOKpmLuGpThjogA0Io9GGzomjl6BlEWylrTXA5RnbwXYnXtKuk9P7eMyboWvN1nhMBwD254vXDDbHTFqoXRO83KgiA-mp76UsIVsEibNaGa0CcwYfs36CXFQhiq_WIpI4ms-ieUs_Eo1hXhVHFKiWBtvmhg95dngAvKUwHA8yQv_eBhmNqBHWx0Ra7j3CXiW350VYn1YLlJ4l5mXwByRHT1mSLFec_J7QEBwQoZlpvoaWBbq7pHyp4phlaK1e7KtOYNwrhh5cKKv3hyk2dnbF27pQIG0EB8vew6KZTuRnz2_2eMRMnFYSgFicEhVGlQEVYWSNw5PieYl9fsAKWM3QELdXxCoVQbJpCfmkMK4vmDxmrvNRQ4iNaWnfRMf_8hrGwCyO8wzWenyKWkPzJUdjFJLID15jWfxWwiIWxxqRsBzkjozebVEUY5xLlZxrbkoPEYu-4NUJpG4S_8m85iqGCZzccabJ8ojBLyYYU6YKUcFOs5dIrc7lS52E-We2Vx7McQE97vNw5HjvrfE1epHBLct3LCQFPXx9o9H0WlsnGjfSSf2qHt5jiC97JjjNp5hVd3q5R0OCg3w_LwhOHiY2-q2E_HrynU1tFFqEDFDTTSRBOE76Z7zp01yxFsGfhlY9RBz9nyBWrNqFpsspo47PzJWZp5_Yw5vabC7xNdlTT2_m0LxOgbCbYwWcKrp12Hdut_-Qbkbd5UUEaofVfCzNrnoeLlQIYWZ4mXk9z0V7sNxjUv6K8_HxvTwRJqDqWihSssW5Dbut0x6o9ziDAJI4PXoQXOzN1Vb9sLTyzudOKxeAHoQrwAcSbwui2X58cnANNxwOfKPGRSDWWmdcoulBu3ybsiMzjtcFfEGuAY0HbiT7L8xvQ0M",
+  "shopping_results": [
+    {
+      "title": "Stumptown Coffee Roasters, Medium Roast Organic Whole Bean Coffee - Holler Mountain 12 Ounce Bag with Flavor Notes of Citrus Zest, Caramel and",
+      "product_link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,imageDocid:12869278968623821611,headlineOfferDocid:13625684045735528027,productDocid:13625684045735528027&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQ8ccPegQIBRAB",
+      "immersive_product_page_token": "eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiMTM2MjU2ODQwNDU3MzU1MjgwMjciLCJjYXRhbG9naWQiOm51bGwsImhlYWRsaW5lT2ZmZXJEb2NpZCI6IjEzNjI1Njg0MDQ1NzM1NTI4MDI3IiwiaW1hZ2VEb2NpZCI6IjEyODY5Mjc4OTY4NjIzODIxNjExIiwicmRzIjpudWxsLCJxdWVyeSI6IkNvZmZlZSIsImdwY2lkIjpudWxsLCJtaWQiOm51bGwsInB2dCI6ImhnIiwidXVsZSI6bnVsbCwiZ2wiOm51bGwsImhsIjpudWxsfQ==",
+      "serpapi_immersive_product_api": "https://serpapi.com/search.json?engine=google_immersive_product&page_token=eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiMTM2MjU2ODQwNDU3MzU1MjgwMjciLCJjYXRhbG9naWQiOm51bGwsImhlYWRsaW5lT2ZmZXJEb2NpZCI6IjEzNjI1Njg0MDQ1NzM1NTI4MDI3IiwiaW1hZ2VEb2NpZCI6IjEyODY5Mjc4OTY4NjIzODIxNjExIiwicmRzIjpudWxsLCJxdWVyeSI6IkNvZmZlZSIsImdwY2lkIjpudWxsLCJtaWQiOm51bGwsInB2dCI6ImhnIiwidXVsZSI6bnVsbCwiZ2wiOm51bGwsImhsIjpudWxsfQ%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/dd565051c1fa65bd411d702e33e8e743a0d86a8cff374c5b03c10f3bf97f1e97.jpeg",
+      "price": "$21.49",
+      "extracted_price": 21.49,
+      "old_price": "$24.98",
+      "extracted_old_price": 24.98,
+      "index": 0
+    },
+    {
+      "title": "ONYX Coffee Monarch Blend Coffee Beans",
+      "product_link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,imageDocid:14760833822932488324,headlineOfferDocid:1621222209587544194,productDocid:1621222209587544194&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQ8ccPegQIBRAH",
+      "immersive_product_page_token": "eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiMTYyMTIyMjIwOTU4NzU0NDE5NCIsImNhdGFsb2dpZCI6bnVsbCwiaGVhZGxpbmVPZmZlckRvY2lkIjoiMTYyMTIyMjIwOTU4NzU0NDE5NCIsImltYWdlRG9jaWQiOiIxNDc2MDgzMzgyMjkzMjQ4ODMyNCIsInJkcyI6bnVsbCwicXVlcnkiOiJDb2ZmZWUiLCJncGNpZCI6bnVsbCwibWlkIjpudWxsLCJwdnQiOiJoZyIsInV1bGUiOm51bGwsImdsIjpudWxsLCJobCI6bnVsbH0=",
+      "serpapi_immersive_product_api": "https://serpapi.com/search.json?engine=google_immersive_product&page_token=eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiMTYyMTIyMjIwOTU4NzU0NDE5NCIsImNhdGFsb2dpZCI6bnVsbCwiaGVhZGxpbmVPZmZlckRvY2lkIjoiMTYyMTIyMjIwOTU4NzU0NDE5NCIsImltYWdlRG9jaWQiOiIxNDc2MDgzMzgyMjkzMjQ4ODMyNCIsInJkcyI6bnVsbCwicXVlcnkiOiJDb2ZmZWUiLCJncGNpZCI6bnVsbCwibWlkIjpudWxsLCJwdnQiOiJoZyIsInV1bGUiOm51bGwsImdsIjpudWxsLCJobCI6bnVsbH0%3D",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/dd565051c1fa65bd411d702e33e8e743ece9657ba347b66dceb464ea748534ab.jpeg",
+      "price": "$21.50",
+      "extracted_price": 21.5,
+      "index": 1
+    },
+    {
+      "title": "Lavazza Ground Medium Roast Classico Coffee",
+      "product_link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462839934773082,imageDocid:10038547600247220762,gpcid:7198787514972584488,headlineOfferDocid:13780097028519287328,catalogid:6006811230412219036,productDocid:6378918724502722678,rds:PC_7198787514972584488%7CPROD_PC_7198787514972584488&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQ8ccPegQIBRAN",
+      "immersive_product_page_token": "eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiNjM3ODkxODcyNDUwMjcyMjY3OCIsImNhdGFsb2dpZCI6IjYwMDY4MTEyMzA0MTIyMTkwMzYiLCJoZWFkbGluZU9mZmVyRG9jaWQiOiIxMzc4MDA5NzAyODUxOTI4NzMyOCIsImltYWdlRG9jaWQiOiIxMDAzODU0NzYwMDI0NzIyMDc2MiIsInJkcyI6IlBDXzcxOTg3ODc1MTQ5NzI1ODQ0ODh8UFJPRF9QQ183MTk4Nzg3NTE0OTcyNTg0NDg4IiwicXVlcnkiOiJDb2ZmZWUiLCJncGNpZCI6IjcxOTg3ODc1MTQ5NzI1ODQ0ODgiLCJtaWQiOiI1NzY0NjI4Mzk5MzQ3NzMwODIiLCJwdnQiOiJoZyIsInV1bGUiOm51bGwsImdsIjpudWxsLCJobCI6bnVsbH0=",
+      "serpapi_immersive_product_api": "https://serpapi.com/search.json?engine=google_immersive_product&page_token=eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiNjM3ODkxODcyNDUwMjcyMjY3OCIsImNhdGFsb2dpZCI6IjYwMDY4MTEyMzA0MTIyMTkwMzYiLCJoZWFkbGluZU9mZmVyRG9jaWQiOiIxMzc4MDA5NzAyODUxOTI4NzMyOCIsImltYWdlRG9jaWQiOiIxMDAzODU0NzYwMDI0NzIyMDc2MiIsInJkcyI6IlBDXzcxOTg3ODc1MTQ5NzI1ODQ0ODh8UFJPRF9QQ183MTk4Nzg3NTE0OTcyNTg0NDg4IiwicXVlcnkiOiJDb2ZmZWUiLCJncGNpZCI6IjcxOTg3ODc1MTQ5NzI1ODQ0ODgiLCJtaWQiOiI1NzY0NjI4Mzk5MzQ3NzMwODIiLCJwdnQiOiJoZyIsInV1bGUiOm51bGwsImdsIjpudWxsLCJobCI6bnVsbH0%3D",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/dd565051c1fa65bd411d702e33e8e74390090084819577470600efe20df57dad.jpeg",
+      "price": "$9.12",
+      "extracted_price": 9.12,
+      "old_price": "$11.40",
+      "extracted_old_price": 11.4,
+      "rating": 4.6,
+      "reviews": 268,
+      "index": 2
+    },
+    {
+      "title": "Bones Coffee Company Ethiopia Single- Origin Ground Coffee Beans",
+      "product_link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462756501969670,imageDocid:3770410619347141353,gpcid:1266896045475292939,headlineOfferDocid:5403471687155570192,catalogid:12319697636941463588,productDocid:6125496110928313536,rds:PC_1266896045475292939%7CPROD_PC_1266896045475292939&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQ8ccPegQIBRAU",
+      "immersive_product_page_token": "eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiNjEyNTQ5NjExMDkyODMxMzUzNiIsImNhdGFsb2dpZCI6IjEyMzE5Njk3NjM2OTQxNDYzNTg4IiwiaGVhZGxpbmVPZmZlckRvY2lkIjoiNTQwMzQ3MTY4NzE1NTU3MDE5MiIsImltYWdlRG9jaWQiOiIzNzcwNDEwNjE5MzQ3MTQxMzUzIiwicmRzIjoiUENfMTI2Njg5NjA0NTQ3NTI5MjkzOXxQUk9EX1BDXzEyNjY4OTYwNDU0NzUyOTI5MzkiLCJxdWVyeSI6IkNvZmZlZSIsImdwY2lkIjoiMTI2Njg5NjA0NTQ3NTI5MjkzOSIsIm1pZCI6IjU3NjQ2Mjc1NjUwMTk2OTY3MCIsInB2dCI6ImhnIiwidXVsZSI6bnVsbCwiZ2wiOm51bGwsImhsIjpudWxsfQ==",
+      "serpapi_immersive_product_api": "https://serpapi.com/search.json?engine=google_immersive_product&page_token=eyJlaSI6bnVsbCwicHJvZHVjdGlkIjoiNjEyNTQ5NjExMDkyODMxMzUzNiIsImNhdGFsb2dpZCI6IjEyMzE5Njk3NjM2OTQxNDYzNTg4IiwiaGVhZGxpbmVPZmZlckRvY2lkIjoiNTQwMzQ3MTY4NzE1NTU3MDE5MiIsImltYWdlRG9jaWQiOiIzNzcwNDEwNjE5MzQ3MTQxMzUzIiwicmRzIjoiUENfMTI2Njg5NjA0NTQ3NTI5MjkzOXxQUk9EX1BDXzEyNjY4OTYwNDU0NzUyOTI5MzkiLCJxdWVyeSI6IkNvZmZlZSIsImdwY2lkIjoiMTI2Njg5NjA0NTQ3NTI5MjkzOSIsIm1pZCI6IjU3NjQ2Mjc1NjUwMTk2OTY3MCIsInB2dCI6ImhnIiwidXVsZSI6bnVsbCwiZ2wiOm51bGwsImhsIjpudWxsfQ%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/dd565051c1fa65bd411d702e33e8e743da2f8bfa3139cd4dc4242f513e61d45d.jpeg",
+      "price": "$17.99",
+      "extracted_price": 17.99,
+      "rating": 4.8,
+      "reviews": 72,
+      "index": 3
+    }
+  ],
+  "text_blocks": [
+    {
+      "type": "paragraph",
+      "snippet": "Coffee encompasses a wide range of beans, roasts, and flavor profiles, with top recommendations often depending on personal taste and brewing method. Popular brands in 2025 include both large commercial companies and smaller specialty roasters.",
+      "reference_indexes": [
+        3,
+        5,
+        15,
+        16
+      ]
+    },
+    {
+      "type": "heading",
+      "snippet": "Popular Coffee Brands & Beans"
+    },
+    {
+      "type": "list",
+      "list": [
+        {
+          "snippet": "Stumptown Coffee Roasters: Praised for consistent, classic flavors like caramel, stewed berries, and lemon in their Holler Mountain Medium Roast blend.",
+          "snippet_links": [
+            {
+              "text": "Stumptown Coffee Roasters",
+              "link": "https://www.stumptowncoffee.com/"
+            },
+            {
+              "text": "Holler Mountain Medium Roast",
+              "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,imageDocid:12869278968623821611,headlineOfferDocid:13625684045735528027,productDocid:13625684045735528027&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQxa4PegQIBBAD",
+              "shopping_results_reference_index": 0
+            }
+          ]
+        },
+        {
+          "snippet": "Onyx Coffee Lab: An award-winning roaster, their Monarch Blend is a versatile dark roast with notes of dark chocolate, red wine, and berries, suitable for both espresso and filter methods.",
+          "snippet_links": [
+            {
+              "text": "Monarch Blend",
+              "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,imageDocid:14760833822932488324,headlineOfferDocid:1621222209587544194,productDocid:1621222209587544194&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQxa4PegQIBBAG",
+              "shopping_results_reference_index": 1
+            }
+          ]
+        },
+        {
+          "snippet": "La Colombe Coffee Roasters: Offers various roast levels and is committed to ethical sourcing and recyclable packaging. Their Nizza medium roast features notes of brownies and honey.",
+          "snippet_links": [
+            {
+              "text": "La Colombe Coffee Roasters",
+              "link": "https://www.lacolombe.com/"
+            }
+          ]
+        },
+        {
+          "snippet": "Death Wish Coffee: Known for being \"fiercely caffeinated,\" their dark roast blend is full-bodied with notes of cocoa and cherry, but without the harsh acidity sometimes found in dark roasts."
+        },
+        {
+          "snippet": "Lavazza: An Italian classic, the Classico is a well-balanced medium roast blend of Arabica and Robusta beans, with notes of dried fruits and nuts.",
+          "snippet_links": [
+            {
+              "text": "Classico",
+              "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462839934773082,imageDocid:10038547600247220762,gpcid:7198787514972584488,headlineOfferDocid:13780097028519287328,catalogid:6006811230412219036,productDocid:6378918724502722678,rds:PC_7198787514972584488%7CPROD_PC_7198787514972584488&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQxa4PegQIBBAM",
+              "shopping_results_reference_index": 2
+            }
+          ]
+        },
+        {
+          "snippet": "Bones Coffee Company: Their Ethiopia Single-Origin Coffee is a light roast that highlights the bean's natural flavors, with notes of berries, citrus, and floral undertones, and is Rainforest Alliance certified.",
+          "snippet_links": [
+            {
+              "text": "Ethiopia Single-Origin Coffee",
+              "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462756501969670,imageDocid:3770410619347141353,gpcid:1266896045475292939,headlineOfferDocid:5403471687155570192,catalogid:12319697636941463588,productDocid:6125496110928313536,rds:PC_1266896045475292939%7CPROD_PC_1266896045475292939&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQxa4PegQIBBAP",
+              "shopping_results_reference_index": 3
+            }
+          ]
+        }
+      ],
+      "reference_indexes": [
+        1,
+        11,
+        3,
+        0,
+        12
+      ]
+    },
+    {
+      "type": "heading",
+      "snippet": "Factors to Consider"
+    },
+    {
+      "type": "list",
+      "list": [
+        {
+          "snippet": "Roast Level: Light roasts tend to have higher acidity and highlight the bean's origin flavors (fruit, floral). Dark roasts are bolder, smokier, with lower acidity and notes of dark chocolate and molasses. Medium roasts offer a balance of flavor, bitterness, and acidity."
+        },
+        {
+          "snippet": "Bean Origin: Different regions offer distinct flavor profiles. For example, Ethiopian coffees often have fruity and floral notes, while Colombian beans tend to have a rich, chocolatey, and caramel character."
+        },
+        {
+          "snippet": "Single-Origin vs. Blend: Single-origin coffees showcase specific regional characteristics, which can vary by harvest season. Blends are curated to provide a consistent, balanced flavor profile year-round."
+        },
+        {
+          "snippet": "Whole Bean vs. Ground: Grinding beans immediately before brewing ensures maximum freshness and flavor."
+        },
+        {
+          "snippet": "Brewing Method: Some coffees are better suited for specific methods; for instance, light roasts are often ideal for pour-over, while medium-dark roasts are very forgiving and work well for espresso."
+        }
+      ],
+      "reference_indexes": [
+        3,
+        0,
+        6,
+        4,
+        13,
+        14
+      ]
+    }
+  ],
+  "reconstructed_markdown": "Coffee recommendations span a range of beans, roasts, and brewing methods.\n\n### Popular coffee brands and beans\n\n- Stumptown Coffee Roasters – classic medium roasts like Holler Mountain with caramel and citrus notes.\n- Onyx Coffee Lab – darker blends such as Monarch with chocolate and red‑wine flavors.\n- Lavazza – Italian medium roasts that balance Arabica and Robusta beans.\n- Bones Coffee Company – single‑origin light roasts that highlight fruity and floral profiles.\n\n### Factors to consider\n\n- **Roast level**: light (bright, acidic), medium (balanced), dark (bold, smoky).\n- **Origin**: different regions (for example, Ethiopia vs. Colombia) emphasize different flavor notes.\n- **Brewing method**: some coffees work better for pour‑over, others for espresso or immersion methods.",
+  "references": [
+    {
+      "title": "10 Best Coffee Brands of 2025, Tested and Reviewed",
+      "link": "https://www.foodnetwork.com/how-to/packages/shopping/best-coffee-brands#:~:text=Best%20Overall,Coffee",
+      "snippet": "Sep 18, 2025 — Our Top Coffee Brand Picks * Best Overall. La Colombe. Read Review From $11 at Amazon. * Best Budget. Cafe Bustelo. Re...",
+      "source": "Food Network",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac543ea940219367b91b2d658f317c80d4c.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac52ebf3a06935729f779299e844115ed783423e5b931de614f.png",
+      "index": 0
+    },
+    {
+      "title": "5 Best Medium-Roast Coffee Beans of 2025 (We Tried 10!)",
+      "link": "https://www.thekitchn.com/best-coffee-beans-22972918#:~:text=Buy:%20Bulletproof%20Coffee%20Original%20Medium,acidic%2C%20and%20fruity%20top%20notes.",
+      "snippet": "Oct 25, 2025 — * Best Medium-Roast Coffee Beans: Bulletproof Coffee Original Medium Roast Coffee. * Runner-Up: Trader Joe's Wake-Up B...",
+      "source": "The Kitchn",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac573ac3fb25618eddffe0cd8088606ce5b.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac5f134b541d62a2d6d445a1343d5609a1c0a202ce076019924.png",
+      "index": 1
+    },
+    {
+      "title": "5 Best Medium-Roast Coffee Beans of 2025 (We Tried 10!)",
+      "link": "https://www.thekitchn.com/best-coffee-beans-22972918#:~:text=Honorable%20Mention:%20Stumptown%20Coffee%20Roasters,a%20lot%20of%20stiff%20competition.",
+      "snippet": "Oct 25, 2025 — * Best Medium-Roast Coffee Beans: Bulletproof Coffee Original Medium Roast Coffee. * Runner-Up: Trader Joe's Wake-Up B...",
+      "source": "The Kitchn",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac5c105796c9efe6bfaddc8c1e0e07608a2.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac56855ae5887a26a16dae94e83ee508011d5231fd13c8622d8.png",
+      "index": 2
+    },
+    {
+      "title": "The 7 Best Coffee Brands of 2025 - Taste of Home",
+      "link": "https://www.tasteofhome.com/collection/best-coffee-brands/#:~:text=BEST%20DARK%20ROAST,Shop%20on%20Walmart",
+      "snippet": "Oct 23, 2025 — Our team also tried all kinds of roasts ranging from light to the darkest dark. * BEST DARK ROAST. Copper Cow Classic.",
+      "source": "Taste of Home",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac51f74740a6cc9366588558acbdb79c34c.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac5e95a57ef07a506f1856ba9fe0e7ed9d65f06b60871e80405.png",
+      "index": 3
+    },
+    {
+      "title": "Best Coffee Beans for Espresso: Complete 2025 Expert Guide",
+      "link": "https://www.everydaypeoplecoffeeandtea.com/blogs/news/best-coffee-beans-for-espresso-complete-2025-guide#:~:text=Guatemala%20and%20Colombian%20medium%20roasts,sweetness%2C%20and%20brown%20sugar%20finish.",
+      "snippet": "Oct 30, 2025 — Best Roast Levels for Espresso * Medium Roast (City to Full City) Flavor Profile: Bright acidity, pronounced origin ch...",
+      "source": "Everyday People Coffee & Tea",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac5f222ff8926f7792faa0f1fcbe64c43d6.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac53fb0f00d7d41bd6933656b7cf7375cdbe544460c8682c8d8.png",
+      "index": 4
+    },
+    {
+      "title": "Best Coffee In The World 2025",
+      "link": "https://batchcoffee.co.uk/stories/best-coffee-in-the-world/",
+      "snippet": "Nov 2, 2025 — Best Coffee In The World 2025. ... After Tasting 1000s of Coffees. I have tried so many different coffees over the year...",
+      "source": "batchcoffee.co.uk",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac500b0e369cf9764d55157841b29026f7c.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac51d47131983f2849ff3bcff1a6280a558e58c49b4c0b3c1ee.png",
+      "index": 5
+    },
+    {
+      "title": "8 Best Coffee Beans for Pour-Over in 2025",
+      "link": "https://www.brewavenuecoffee.com/8-best-coffee-beans-for-pour-over-in-2025/",
+      "snippet": "Top 8 Best Coffee Beans for Pour-Over in 2025 * 1. Mother Tongue Coffee Mugshots – Best Blend. * 2. Noble Coffee Roasting Peruvian...",
+      "source": "Brew Avenue Coffee",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac50aa64d31a64a7da62513711c376c7448.png",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac52e3b6890c217ede9fc6de2d1440b9f01263e9bdcfd536e44.png",
+      "index": 6
+    },
+    {
+      "title": "Onyx Coffee Lab Monarch Whole Bean Coffee - 10 oz | Dark Roast, Notes of Dark Chocolate & Red Wine, Ideal for Espresso & Brew Methods",
+      "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:18446744073709551615,productDocid:4734611383364080150&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQvP0RegQIChAe",
+      "snippet": "Wake up to the bold, nostalgic aroma of a rich, full-bodied brew with Onyx Coffee Lab Monarch. Blending classic flavors and modern...",
+      "source": "Google",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac59e8e5d15a8dd4f04892465c2ad544a14.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac55de240b845d63608cff75346c18ec7ee399c38882142e56a.png",
+      "index": 7
+    },
+    {
+      "title": "Bones Coffee Company Ethiopia Single- Origin Ground Coffee Beans",
+      "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462756501969670,gpcid:1266896045475292939,catalogid:12479683044684423515,productDocid:7868258261805087432&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQvP0RegQIChAi",
+      "snippet": "From Bones Coffee Company’s curated collection comes our single-origin Ethiopian coffee. Sourced straight from the renowned Sidamo...",
+      "source": "Google",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac52e9b6c429464b953e7d68adae2e526cc.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac5ae45259762ec7609c4fd0996c2d49f2cf84aa1307158882c.png",
+      "index": 8
+    },
+    {
+      "title": "Grounds & Hounds Single Origin Colombian Whole Bean Coffee",
+      "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462855046544811,gpcid:841631383534705208,catalogid:8511286205209719928,productDocid:4123545179616880321&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQvP0RegQIChAm",
+      "snippet": "Grown in the historic Sierra Nevada de Santa Marta region of Colombia - this light roast coffee is well balanced - with a very ful...",
+      "source": "Google",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac5d1079e67e4adff02eb634567f1ca84c8.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac507da0a02ae3174f881ae263ae14e5bd8303a142894b6792d.png",
+      "index": 9
+    },
+    {
+      "title": "Dutch Bros Coffee Private Reserve Coffee Beans",
+      "link": "https://www.google.com/search?ibp=oshop&prds=pvt:hg,pvo:29,mid:576462459560490555,gpcid:8324658943833614734,catalogid:14669208757380058960,productDocid:4515823228859264744&q=product&sa=X&ved=2ahUKEwjcuIH5lP6RAxX8M1kFHbrZJ0EQvP0RegQIChAq",
+      "snippet": "Brew up the same Dutch Bros coffee you get at a stand, at home! Dutch Bros’s Private Reserve features an Arabica tri-blend of bean...",
+      "source": "Google",
+      "thumbnail": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac54176fb01ec008f0a43c095effa28e332.jpeg",
+      "source_icon": "https://serpapi.com/searches/6960ccebfe1c6b2c639194f3/images/a4695e99075b0ac56c459ef565d61ddbf2f2c0babd9d4d24ef23137bf1ad73c5.png",
+      "index": 10
+    },
+    {
+      "title": "Onyx Coffee Lab Monarch Whole Bean Coffee - 10 oz | Dark Roast, Notes of Dark Chocolate \\u0026 Red Wine, Ideal for Espresso \\u0026 Brew Methods",
+      "link": "https://www.google.com/search?q=product&prds=pvt:hg,productid:4734611383364080150,mid:18446744073709551615&ibp=oshop",
+      "snippet": "Wake up to the bold, nostalgic aroma of a rich, full-bodied brew with Onyx Coffee Lab Monarch. Blending classic flavors and modern...",
+      "source": "Google",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSklMVeS54K58juWyNKKn9XfHDRBlflrqc7ozjBREBVWIhx_jk-",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 11
+    },
+    {
+      "title": "Bones Coffee Company Ethiopia Single- Origin Ground Coffee Beans",
+      "link": "https://www.google.com/search?q=product&prds=pvt:hg,productid:7868258261805087432,catalogid:12479683044684423515,gpcid:1266896045475292939,mid:576462756501969670&ibp=oshop",
+      "snippet": "From Bones Coffee Company’s curated collection comes our single-origin Ethiopian coffee. Sourced straight from the renowned Sidamo...",
+      "source": "Google",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT6f3CV-JNmgK4IdYcDBfYUGgNi9reTvZxWHkX7QO6LFGq_Pbm_",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 12
+    },
+    {
+      "title": "Grounds \\u0026 Hounds Single Origin Colombian Whole Bean Coffee",
+      "link": "https://www.google.com/search?q=product&prds=pvt:hg,productid:4123545179616880321,catalogid:8511286205209719928,gpcid:841631383534705208,mid:576462855046544811&ibp=oshop",
+      "snippet": "Grown in the historic Sierra Nevada de Santa Marta region of Colombia - this light roast coffee is well balanced - with a very ful...",
+      "source": "Google",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQOCW8qIgNWvmmDl0P58pORZVKmKCUkTFsvUHUkTIjkYj6LSs9S",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 13
+    },
+    {
+      "title": "Dutch Bros Coffee Private Reserve Coffee Beans",
+      "link": "https://www.google.com/search?q=product&prds=pvt:hg,productid:4515823228859264744,catalogid:14669208757380058960,gpcid:8324658943833614734,mid:576462459560490555&ibp=oshop",
+      "snippet": "Brew up the same Dutch Bros coffee you get at a stand, at home! Dutch Bros’s Private Reserve features an Arabica tri-blend of bean...",
+      "source": "Google",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLlwB_azSvs7pWHyCgBJIGJTnt4rwaUIgWmvUfrXIR7KNkCYC",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 14
+    },
+    {
+      "title": "15 Types of Coffee Drinks You Should Be Serving",
+      "link": "https://www.hubert.com/resources/article/15-Coffee-Drinks-You-Should-Be-Serving#:~:text=Coffee%20is%20one%20of%20the%20most%20beloved,coffee%20drink%20to%20suit%20every%20taste%20preference.",
+      "snippet": "Coffee is one of the most beloved beverages globally, with a vast array of types of coffee drinks available, each with...",
+      "source": "Hubert US",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcScPtKj_wPQ-kP40BvfKls2cSRg9-ERwZq0FnAhFyCyYMhdyghV",
+      "source_icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.hubert.com&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 15
+    },
+    {
+      "title": "Coffee Knowledge",
+      "link": "https://www.lolacc.com/coffee-knowledge",
+      "snippet": "Do you consider yourself a coffee connoisseur? The world of coffee is quite extensive. From the different types of coffee beans an...",
+      "source": "Lola Savannah Coffee",
+      "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS2uB-uaKEfp4qLE-pBakWIX4TxZfCud65tryqgctsY1lY9j4U5",
+      "source_icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.lolacc.com&client=AIM&size=128&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+      "index": 16
+    }
+  ],
+  "related_questions": [
+    {
+      "question": "Compare Stumptown's Holler Mountain and Onyx Monarch blends",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_ai_mode&q=Compare+Stumptown%27s+Holler+Mountain+and+Onyx+Monarch+blends&subsequent_request_token=TdIeY3icPZRHzu0IEYUlJmzjHzYIdztcJz29gbOvc04TyzmH62zP2QhqgcQGWACraFbDawlRJZ3ZGXyndOqvfyuafxHqVSVJuwnrXaHaZEwFc7xM99eiX7Lf_s0M0xk6kZPxPO0H1mZ5FRi6KJ8ilmPC2p4L6FgE9a5Ckao7lhH2_LvwvdbxvCsc88d2pD3xIz4LwlcqaH4EWabidGfGa7MzRmLWu6jvSO98ICcPjPxIsE6N7f2c2yJ_rK3crW3PszjN4Z7Q4xGuzl5OUI-hz39yLn8KP4OcgTRT2GPz1rI8a1KsfgJTx2oS7kR1IfvnvhZLnFTFuP1WqNPT9H3yC_oz-PVTAEHfvpRm3K-vi8Bi7PWnL2qe-8IvUrnZfkER_GcE-_pJFh1V-ctX33TFl1Bk3fSnL6ZepqH4BULIn8Hf98tOymRp_mf5ezZNXVP8549_iGO7yPalAOwf2XynWIydqq0uiLMgxDsl4wKC3HIuMMLt9NyxeHTjIsRU_fvVAxv2OeHKww42NVFAfZcOoOhteZFum3UmF6fFvXOr0kApwlmIRr13r_r2RXHMdyqRhgQ9GptHG5WZs9wk2On0gQ4j56rnwxn3OxeJybsRM6dAZHx0UbLOmcz89qW92e8ojH__QBLuO7catsjisVz4VAjukZyNOh3dtM1Ru9u2l7enSyuWF-uu8tJQ4HAh0n7jvd81eH4Yp-s3qg8wP6NMs4oFh6tfmY-vgCK9Of4IV-XBbwPoak9-05QfAE3Ep-6O1nTplvdSHCyGxugLegwkyMZzwIIV1WFKRWDEKlUsS1ZwUl5WG14e-gZvumGe-qnt9U60OaXUS0p5d05wFAiTNvbt0XkvZ5jCxXpvB_2D9f_XoV1G5pzvjFIx375sIbbt738-YyCJsfKmqLS8_HGLCY_UnTy1QmPbu46jWJPmqCWCKD79iOLqX_w16yK-GOYLraIHWCwfGi8EJmRf-nif0WDoLkGgvG-2R2hcDHCXampxw6R-DLr9rlSf0TTIUVqglkH00a7yPe3ppAbjo6KctBKfl5RxkwXcnwzGuPT0lTkJMPJ8Sbt-FK5KQzzwslNHoU0Hmcy50koJnvWYjyS5VG4rYCLy4oLTrWlCxoBl53GcymWWkkxaH4vwKtKl2QpLXG51gevbrjxHXKD27N69rroP4gCEMJNvO1PbNFETr8C2Ndd6wspCtwiAyxMMTkRnoTZFyRqN9ngfVbgN79ZKgDC3kB98-4oj9ewPxA0Opt1wI8hgTw2fqt5eBkSPBnLHn0bO6z2AKKzovALycG7AapeTbhjmMzQ2Pz2cx-rC24ne8QG9YIp-2cqq5VtDTcjMfg5zk_2pHYWkPye7uIcBg084vgx_D3GPcC79hhh2kQVUvPVoyXjcN0Ah3M0CbRedG_h2GDoLEj0aaHd6uCUM5jpceJk3CoGZEWSGWX4cyg5nKQnrPEucQBAhviPWDK1O3XnV948SnPGIRBc7X6NQcsYaq9nAspsSK0e3jC6J5bKrSJCc7X293W6PThjUIKLJO7JOZh_skqPKtRUAbiu_UOKpmLuGpThjogA0Io9GGzomjl6BlEWylrTXA5RnbwXYnXtKuk9P7eMyboWvN1nhMBwD254vXDDbHTFqoXRO83KgiA-mp76UsIVsEibNaGa0CcwYfs36CXFQhiq_WIpI4ms-ieUs_Eo1hXhVHFKiWBtvmhg95dngAvKUwHA8yQv_eBhmNqBHWx0Ra7j3CXiW350VYn1YLlJ4l5mXwByRHT1mSLFec_J7QEBwQoZlpvoaWBbq7pHyp4phlaK1e7KtOYNwrhh5cKKv3hyk2dnbF27pQIG0EB8vew6KZTuRnz2_2eMRMnFYSgFicEhVGlQEVYWSNw5PieYl9fsAKWM3QELdXxCoVQbJpCfmkMK4vmDxmrvNRQ4iNaWnfRMf_8hrGwCyO8wzWenyKWkPzJUdjFJLID15jWfxWwiIWxxqRsBzkjozebVEUY5xLlZxrbkoPEYu-4NUJpG4S_8m85iqGCZzccabJ8ojBLyYYU6YKUcFOs5dIrc7lS52E-We2Vx7McQE97vNw5HjvrfE1epHBLct3LCQFPXx9o9H0WlsnGjfSSf2qHt5jiC97JjjNp5hVd3q5R0OCg3w_LwhOHiY2-q2E_HrynU1tFFqEDFDTTSRBOE76Z7zp01yxFsGfhlY9RBz9nyBWrNqFpsspo47PzJWZp5_Yw5vabC7xNdlTT2_m0LxOgbCbYwWcKrp12Hdut_-Qbkbd5UUEaofVfCzNrnoeLlQIYWZ4mXk9z0V7sNxjUv6K8_HxvTwRJqDqWihSssW5Dbut0x6o9ziDAJI4PXoQXOzN1Vb9sLTyzudOKxeAHoQrwAcSbwui2X58cnANNxwOfKPGRSDWWmdcoulBu3ybsiMzjtcFfEGuAY0HbiT7L8xvQ0M"
+    },
+    {
+      "question": "Tell me more about the flavor notes of the Ethiopia Single-Origin coffee",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_ai_mode&q=Tell+me+more+about+the+flavor+notes+of+the+Ethiopia+Single-Origin+coffee&subsequent_request_token=TdIeY3icPZRHzu0IEYUlJmzjHzYIdztcJz29gbOvc04TyzmH62zP2QhqgcQGWACraFbDawlRJZ3ZGXyndOqvfyuafxHqVSVJuwnrXaHaZEwFc7xM99eiX7Lf_s0M0xk6kZPxPO0H1mZ5FRi6KJ8ilmPC2p4L6FgE9a5Ckao7lhH2_LvwvdbxvCsc88d2pD3xIz4LwlcqaH4EWabidGfGa7MzRmLWu6jvSO98ICcPjPxIsE6N7f2c2yJ_rK3crW3PszjN4Z7Q4xGuzl5OUI-hz39yLn8KP4OcgTRT2GPz1rI8a1KsfgJTx2oS7kR1IfvnvhZLnFTFuP1WqNPT9H3yC_oz-PVTAEHfvpRm3K-vi8Bi7PWnL2qe-8IvUrnZfkER_GcE-_pJFh1V-ctX33TFl1Bk3fSnL6ZepqH4BULIn8Hf98tOymRp_mf5ezZNXVP8549_iGO7yPalAOwf2XynWIydqq0uiLMgxDsl4wKC3HIuMMLt9NyxeHTjIsRU_fvVAxv2OeHKww42NVFAfZcOoOhteZFum3UmF6fFvXOr0kApwlmIRr13r_r2RXHMdyqRhgQ9GptHG5WZs9wk2On0gQ4j56rnwxn3OxeJybsRM6dAZHx0UbLOmcz89qW92e8ojH__QBLuO7catsjisVz4VAjukZyNOh3dtM1Ru9u2l7enSyuWF-uu8tJQ4HAh0n7jvd81eH4Yp-s3qg8wP6NMs4oFh6tfmY-vgCK9Of4IV-XBbwPoak9-05QfAE3Ep-6O1nTplvdSHCyGxugLegwkyMZzwIIV1WFKRWDEKlUsS1ZwUl5WG14e-gZvumGe-qnt9U60OaXUS0p5d05wFAiTNvbt0XkvZ5jCxXpvB_2D9f_XoV1G5pzvjFIx375sIbbt738-YyCJsfKmqLS8_HGLCY_UnTy1QmPbu46jWJPmqCWCKD79iOLqX_w16yK-GOYLraIHWCwfGi8EJmRf-nif0WDoLkGgvG-2R2hcDHCXampxw6R-DLr9rlSf0TTIUVqglkH00a7yPe3ppAbjo6KctBKfl5RxkwXcnwzGuPT0lTkJMPJ8Sbt-FK5KQzzwslNHoU0Hmcy50koJnvWYjyS5VG4rYCLy4oLTrWlCxoBl53GcymWWkkxaH4vwKtKl2QpLXG51gevbrjxHXKD27N69rroP4gCEMJNvO1PbNFETr8C2Ndd6wspCtwiAyxMMTkRnoTZFyRqN9ngfVbgN79ZKgDC3kB98-4oj9ewPxA0Opt1wI8hgTw2fqt5eBkSPBnLHn0bO6z2AKKzovALycG7AapeTbhjmMzQ2Pz2cx-rC24ne8QG9YIp-2cqq5VtDTcjMfg5zk_2pHYWkPye7uIcBg084vgx_D3GPcC79hhh2kQVUvPVoyXjcN0Ah3M0CbRedG_h2GDoLEj0aaHd6uCUM5jpceJk3CoGZEWSGWX4cyg5nKQnrPEucQBAhviPWDK1O3XnV948SnPGIRBc7X6NQcsYaq9nAspsSK0e3jC6J5bKrSJCc7X293W6PThjUIKLJO7JOZh_skqPKtRUAbiu_UOKpmLuGpThjogA0Io9GGzomjl6BlEWylrTXA5RnbwXYnXtKuk9P7eMyboWvN1nhMBwD254vXDDbHTFqoXRO83KgiA-mp76UsIVsEibNaGa0CcwYfs36CXFQhiq_WIpI4ms-ieUs_Eo1hXhVHFKiWBtvmhg95dngAvKUwHA8yQv_eBhmNqBHWx0Ra7j3CXiW350VYn1YLlJ4l5mXwByRHT1mSLFec_J7QEBwQoZlpvoaWBbq7pHyp4phlaK1e7KtOYNwrhh5cKKv3hyk2dnbF27pQIG0EB8vew6KZTuRnz2_2eMRMnFYSgFicEhVGlQEVYWSNw5PieYl9fsAKWM3QELdXxCoVQbJpCfmkMK4vmDxmrvNRQ4iNaWnfRMf_8hrGwCyO8wzWenyKWkPzJUdjFJLID15jWfxWwiIWxxqRsBzkjozebVEUY5xLlZxrbkoPEYu-4NUJpG4S_8m85iqGCZzccabJ8ojBLyYYU6YKUcFOs5dIrc7lS52E-We2Vx7McQE97vNw5HjvrfE1epHBLct3LCQFPXx9o9H0WlsnGjfSSf2qHt5jiC97JjjNp5hVd3q5R0OCg3w_LwhOHiY2-q2E_HrynU1tFFqEDFDTTSRBOE76Z7zp01yxFsGfhlY9RBz9nyBWrNqFpsspo47PzJWZp5_Yw5vabC7xNdlTT2_m0LxOgbCbYwWcKrp12Hdut_-Qbkbd5UUEaofVfCzNrnoeLlQIYWZ4mXk9z0V7sNxjUv6K8_HxvTwRJqDqWihSssW5Dbut0x6o9ziDAJI4PXoQXOzN1Vb9sLTyzudOKxeAHoQrwAcSbwui2X58cnANNxwOfKPGRSDWWmdcoulBu3ybsiMzjtcFfEGuAY0HbiT7L8xvQ0M"
+    },
+    {
+      "question": "Describe the different roast levels and their impact on coffee flavor",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_ai_mode&q=Describe+the+different+roast+levels+and+their+impact+on+coffee+flavor&subsequent_request_token=TdIeY3icPZRHzu0IEYUlJmzjHzYIdztcJz29gbOvc04TyzmH62zP2QhqgcQGWACraFbDawlRJZ3ZGXyndOqvfyuafxHqVSVJuwnrXaHaZEwFc7xM99eiX7Lf_s0M0xk6kZPxPO0H1mZ5FRi6KJ8ilmPC2p4L6FgE9a5Ckao7lhH2_LvwvdbxvCsc88d2pD3xIz4LwlcqaH4EWabidGfGa7MzRmLWu6jvSO98ICcPjPxIsE6N7f2c2yJ_rK3crW3PszjN4Z7Q4xGuzl5OUI-hz39yLn8KP4OcgTRT2GPz1rI8a1KsfgJTx2oS7kR1IfvnvhZLnFTFuP1WqNPT9H3yC_oz-PVTAEHfvpRm3K-vi8Bi7PWnL2qe-8IvUrnZfkER_GcE-_pJFh1V-ctX33TFl1Bk3fSnL6ZepqH4BULIn8Hf98tOymRp_mf5ezZNXVP8549_iGO7yPalAOwf2XynWIydqq0uiLMgxDsl4wKC3HIuMMLt9NyxeHTjIsRU_fvVAxv2OeHKww42NVFAfZcOoOhteZFum3UmF6fFvXOr0kApwlmIRr13r_r2RXHMdyqRhgQ9GptHG5WZs9wk2On0gQ4j56rnwxn3OxeJybsRM6dAZHx0UbLOmcz89qW92e8ojH__QBLuO7catsjisVz4VAjukZyNOh3dtM1Ru9u2l7enSyuWF-uu8tJQ4HAh0n7jvd81eH4Yp-s3qg8wP6NMs4oFh6tfmY-vgCK9Of4IV-XBbwPoak9-05QfAE3Ep-6O1nTplvdSHCyGxugLegwkyMZzwIIV1WFKRWDEKlUsS1ZwUl5WG14e-gZvumGe-qnt9U60OaXUS0p5d05wFAiTNvbt0XkvZ5jCxXpvB_2D9f_XoV1G5pzvjFIx375sIbbt738-YyCJsfKmqLS8_HGLCY_UnTy1QmPbu46jWJPmqCWCKD79iOLqX_w16yK-GOYLraIHWCwfGi8EJmRf-nif0WDoLkGgvG-2R2hcDHCXampxw6R-DLr9rlSf0TTIUVqglkH00a7yPe3ppAbjo6KctBKfl5RxkwXcnwzGuPT0lTkJMPJ8Sbt-FK5KQzzwslNHoU0Hmcy50koJnvWYjyS5VG4rYCLy4oLTrWlCxoBl53GcymWWkkxaH4vwKtKl2QpLXG51gevbrjxHXKD27N69rroP4gCEMJNvO1PbNFETr8C2Ndd6wspCtwiAyxMMTkRnoTZFyRqN9ngfVbgN79ZKgDC3kB98-4oj9ewPxA0Opt1wI8hgTw2fqt5eBkSPBnLHn0bO6z2AKKzovALycG7AapeTbhjmMzQ2Pz2cx-rC24ne8QG9YIp-2cqq5VtDTcjMfg5zk_2pHYWkPye7uIcBg084vgx_D3GPcC79hhh2kQVUvPVoyXjcN0Ah3M0CbRedG_h2GDoLEj0aaHd6uCUM5jpceJk3CoGZEWSGWX4cyg5nKQnrPEucQBAhviPWDK1O3XnV948SnPGIRBc7X6NQcsYaq9nAspsSK0e3jC6J5bKrSJCc7X293W6PThjUIKLJO7JOZh_skqPKtRUAbiu_UOKpmLuGpThjogA0Io9GGzomjl6BlEWylrTXA5RnbwXYnXtKuk9P7eMyboWvN1nhMBwD254vXDDbHTFqoXRO83KgiA-mp76UsIVsEibNaGa0CcwYfs36CXFQhiq_WIpI4ms-ieUs_Eo1hXhVHFKiWBtvmhg95dngAvKUwHA8yQv_eBhmNqBHWx0Ra7j3CXiW350VYn1YLlJ4l5mXwByRHT1mSLFec_J7QEBwQoZlpvoaWBbq7pHyp4phlaK1e7KtOYNwrhh5cKKv3hyk2dnbF27pQIG0EB8vew6KZTuRnz2_2eMRMnFYSgFicEhVGlQEVYWSNw5PieYl9fsAKWM3QELdXxCoVQbJpCfmkMK4vmDxmrvNRQ4iNaWnfRMf_8hrGwCyO8wzWenyKWkPzJUdjFJLID15jWfxWwiIWxxqRsBzkjozebVEUY5xLlZxrbkoPEYu-4NUJpG4S_8m85iqGCZzccabJ8ojBLyYYU6YKUcFOs5dIrc7lS52E-We2Vx7McQE97vNw5HjvrfE1epHBLct3LCQFPXx9o9H0WlsnGjfSSf2qHt5jiC97JjjNp5hVd3q5R0OCg3w_LwhOHiY2-q2E_HrynU1tFFqEDFDTTSRBOE76Z7zp01yxFsGfhlY9RBz9nyBWrNqFpsspo47PzJWZp5_Yw5vabC7xNdlTT2_m0LxOgbCbYwWcKrp12Hdut_-Qbkbd5UUEaofVfCzNrnoeLlQIYWZ4mXk9z0V7sNxjUv6K8_HxvTwRJqDqWihSssW5Dbut0x6o9ziDAJI4PXoQXOzN1Vb9sLTyzudOKxeAHoQrwAcSbwui2X58cnANNxwOfKPGRSDWWmdcoulBu3ybsiMzjtcFfEGuAY0HbiT7L8xvQ0M"
+    }
+  ]
+}

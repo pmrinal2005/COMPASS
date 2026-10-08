@@ -29,39 +29,15 @@ PROMPTS = [
     ("Track SEO visibility of serpapi.com for \"google search api\" across search engines", "pro", "research_seo"),
 ]
 
-# Documented parameter names per engine (https://serpapi.com/<engine>-api) - every playbook call must stay inside this set.
-DOC_PARAMS = {
-    "yelp": "find_desc find_loc l yelp_domain cflt sortby attrs start",
-    "tripadvisor": "q lat lon tripadvisor_domain ssrc offset limit",
-    "google_events": "q location uule gl hl start htichips",
-    "airbnb": "q map_bounds airbnb_domain currency check_in_date check_out_date adults children infants pets room_type min_price max_price bedrooms beds "
-              "bathrooms property_types amenities accessibility_features host_languages instant_book self_check_in guest_favorite luxe page",
-    "bing": "q location lat lon mkt cc first filters device", "duckduckgo": "q kl search_assist safe df start m",
-    "yahoo": "p yahoo_domain vc vl b vm vs vf fr2 d device", "yandex": "text yandex_domain lang lr family_mode fix_typo groups_on_page sort_mode period p",
-    "baidu": "q ct pn rn gpc q5 q6 bs oq f device", "naver": "query start page num where sort_by period device",
-    "google_ai_mode": "q location uule gl hl continuable subsequent_request_token image_url device", "google_ai_overview": "page_token",
-    "google_flights": "departure_id arrival_id gl hl currency type outbound_date return_date travel_class multi_city_json show_hidden exclude_basic deep_search adults "
-                      "children infants_in_seat infants_on_lap sort_by stops exclude_airlines include_airlines bags max_price outbound_times return_times emissions "
-                      "layover_duration exclude_conns max_duration selected_flights_json departure_token booking_token",
-    "google_hotels": "q gl hl currency check_in_date check_out_date adults children children_ages sort_by min_price max_price property_types amenities rating brands "
-                     "hotel_class free_cancellation special_offers eco_certified vacation_rentals bedrooms bathrooms next_page_token property_token",
-    "google_maps": "q ll location lat lon z m nearby google_domain hl gl data place_id data_cid type min_price max_price min_rating open_state open_on_day open_at_hour start",
-    "google_flights_autocomplete": "q gl hl exclude_regions", "google_jobs": "q location uule google_domain gl hl next_page_token chips lrad ltype uds",
-    "google_finance": "q hl window",
-    "google_shopping": "q location uule google_domain gl hl shoprs min_price max_price sort_by free_shipping on_sale small_business safe start device",
-    "google_shopping_light": "q location uule google_domain gl hl shoprs min_price max_price sort_by free_shipping on_sale small_business safe start device",
-    "amazon": "k amazon_domain language delivery_zip shipping_location s node rh dc page device",
-    "walmart": "query walmart_domain sort soft_sort cat_id facet store_id min_price max_price spelling nd_en page device include_filters",
-    "ebay": "_nkw ebay_domain _salic _pgn _ipg _blrs show_only buying_format _sasl _saslop popular_filters _udlo _udhi _sop _dmd category_id _stpos",
-    "google_trends": "q hl geo region data_type tz cat gprop date csv include_low_search_volume",
-    "google_scholar": "q cites as_ylo as_yhi scisbd cluster hl lr start num as_sdt safe filter as_vis as_rr",
-    "google_patents": "q page num sort clustered dups patents scholar before after inventor assignee country language status type litigation",
-    "google_news": "q gl hl topic_token kgmid publication_token section_token story_token so",
-    "google": "q location uule lat lon radius ludocid lsig kgmid si ibp uds color_scheme google_domain gl hl cr lr tbs safe nfpr filter tbm start device",
-}
-REQUIRED = {"google_hotels": {"q", "check_in_date", "check_out_date"}, "google_maps": {"type"}, "yelp": {"find_loc"}, "tripadvisor": {"q"},
-            "bing": {"q"}, "duckduckgo": {"q"}, "yahoo": {"p"}, "yandex": {"text"}, "baidu": {"q"}, "naver": {"query"}, "google_ai_mode": {"q"},
-            "google_events": {"q"}, "google_jobs": {"q"}, "google_finance": {"q"}}
+# Documented parameters per engine: snapshot parsed from serpapi.com itself (refresh with `python scripts/docs_sync.py`).
+import json  # noqa: E402
+from pathlib import Path  # noqa: E402
+
+_SNAP = json.loads((Path(__file__).resolve().parents[1] / "app" / "docs" / "serpapi_params.json").read_text())["engines"]
+DOC_PARAMS = {e: " ".join(k for k in p if k not in ("engine", "api_key")) for e, p in _SNAP.items()}
+REQUIRED = {e: {k for k, v in p.items() if v} - {"engine", "api_key"} for e, p in _SNAP.items()}
+META = {"output", "device", "no_cache", "async", "zero_trace", "json_restrictor"}
+DEPRECATED = {"google_events"}      # docs: "deprecated and no longer accepts new requests" (HTTP 400 Unsupported search engine)
 
 
 def check_docs_compliance() -> None:
@@ -72,7 +48,8 @@ def check_docs_compliance() -> None:
             for sp in pb.get(grp, []):
                 e, ps = sp["engine"], set(sp["params"])
                 assert e in DOC_PARAMS, f"{pid}: engine {e} is not a documented SerpApi engine"
-                assert not (ps - set(DOC_PARAMS[e].split())), f"{pid}/{e}: undocumented params {ps - set(DOC_PARAMS[e].split())}"
+                assert e not in DEPRECATED, f"{pid}: engine {e} is deprecated upstream"
+                assert not (ps - set(DOC_PARAMS[e].split()) - META), f"{pid}/{e}: undocumented params {ps - set(DOC_PARAMS[e].split())}"
                 assert REQUIRED.get(e, set()) <= ps, f"{pid}/{e}: missing required {REQUIRED[e] - ps}"
                 n += 1
     c = SerpApiClient()

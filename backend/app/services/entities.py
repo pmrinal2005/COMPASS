@@ -71,14 +71,32 @@ def same_entity(a: str, b: str, threshold: float = 0.6) -> bool:
     return inter / len(ta | tb) >= threshold or inter / min(len(ta), len(tb)) >= 0.99 and min(len(ta), len(tb)) >= 2
 
 
+_RANGE = re.compile(r"\$\s?(\d+(?:\.\d+)?)\s*(?:[-\u2013\u2014]\s*\$?\s?(\d+(?:\.\d+)?)|(\+))?")
+
+
 def price_level(v: str | int | float | None) -> int | None:
-    """'$$' -> 2, '$$$$' -> 4. Ranges ('$$-$$$') -> upper bound. Numeric 1-4 passthrough."""
+    """Normalise a price signal to a 1-4 level.
+
+    * Yelp style symbols      '$' -> 1 ... '$$$$' -> 4 (ranges like '$$-$$$' -> upper bound)
+    * Google Maps style bands '$1-10' / '$10-20' / '$20-30' / '$30-50' / '$100+'  (documented as a *range*, not symbols)
+      -> per-person spend: <=10 : 1, <=30 : 2, <=60 : 3, above : 4
+    * Numeric 1-4 passes through.
+    """
     if v is None:
         return None
     if isinstance(v, (int, float)):
         return int(v) if 1 <= v <= 4 else None
-    m = re.findall(r"\${1,4}", str(v))
-    return max(len(x) for x in m) if m else None
+    s = str(v)
+    m = re.findall(r"\${1,4}(?!\s?\d)", s)                    # '$', '$$' ... but not the '$' of '$10'
+    if m:
+        return max(len(x) for x in m)
+    r = _RANGE.search(s)
+    if not r:
+        return None
+    hi = float(r.group(2) or r.group(1))
+    if r.group(3):                                              # '$100+' -> open ended
+        hi = max(hi, 61.0) if hi >= 50 else hi
+    return 1 if hi <= 10 else 2 if hi <= 30 else 3 if hi <= 60 else 4
 
 
 # ---------------------------------------------------------------- SEO model

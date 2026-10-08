@@ -1,0 +1,555 @@
+{
+  "search_metadata": {
+    "id": "695926d48c24bd247f1be7c3",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/b9e41b81fa80142f/695926d48c24bd247f1be7c3.json",
+    "created_at": "2026-01-03 14:25:24 UTC",
+    "processed_at": "2026-01-03 14:25:24 UTC",
+    "google_scholar_url": "https://scholar.google.com/scholar?q=machine+learning&hl=en",
+    "raw_html_file": "https://serpapi.com/searches/b9e41b81fa80142f/695926d48c24bd247f1be7c3.html",
+    "total_time_taken": 0.94
+  },
+  "search_parameters": {
+    "engine": "google_scholar",
+    "q": "machine learning",
+    "hl": "en"
+  },
+  "search_information": {
+    "organic_results_state": "Results for exact spelling",
+    "total_results": 6020000,
+    "time_taken_displayed": 0.06,
+    "query_displayed": "machine learning"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Machine learning",
+      "result_id": "EQ8shYj8Ai8J",
+      "type": "Book",
+      "link": "https://books.google.com/books?hl=en&lr=&id=ctM-EAAAQBAJ&oi=fnd&pg=PR6&dq=machine+learning&ots=o_OoX3Vx_t&sig=1DuT97LT8ZukXPk09u8CFJo4vWs",
+      "snippet": "… from data is called learning or training. The … machine learning is to find or approximate ground-truth. In this book, models are sometimes called learners, which are machine learning …",
+      "publication_info": {
+        "summary": "ZH Zhou - 2021 - books.google.com",
+        "authors": [
+          {
+            "name": "ZH Zhou",
+            "link": "https://scholar.google.com/citations?user=rSVIHasAAAAJ&hl=en&oi=sra",
+            "author_id": "rSVIHasAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=rSVIHasAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=EQ8shYj8Ai8J",
+        "cited_by": {
+          "total": 3318,
+          "link": "https://scholar.google.com/scholar?cites=3387547533016043281&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "3387547533016043281",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=3387547533016043281&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:EQ8shYj8Ai8J:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3AEQ8shYj8Ai8J%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 5,
+          "link": "https://scholar.google.com/scholar?cluster=3387547533016043281&hl=en&as_sdt=0,11",
+          "cluster_id": "3387547533016043281",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=3387547533016043281&engine=google_scholar&hl=en"
+        }
+      }
+    },
+    {
+      "position": 2,
+      "title": "Machine learning",
+      "result_id": "_zuqxloS2b0J",
+      "type": "Book",
+      "link": "https://books.google.com/books?hl=en&lr=&id=Eyk5EAAAQBAJ&oi=fnd&pg=PR9&dq=machine+learning&ots=WRyQfc_mqQ&sig=BF3HhENks7PwJa6IYczGmZHtU6Y",
+      "snippet": "MIT presents a concise primer on machine learning—computer programs that learn from data and the basis of applications like voice recognition and driverless cars. No in-depth …",
+      "publication_info": {
+        "summary": "E Alpaydin - 2021 - books.google.com",
+        "authors": [
+          {
+            "name": "E Alpaydin",
+            "link": "https://scholar.google.com/citations?user=lXYKgiYAAAAJ&hl=en&oi=sra",
+            "author_id": "lXYKgiYAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=lXYKgiYAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "pomona.edu",
+          "file_format": "PDF",
+          "link": "https://cs.pomona.edu/~dkauchak/classes/s16/cs30-s16/lectures/lecture12-NN-basics.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=_zuqxloS2b0J",
+        "cited_by": {
+          "total": 1565,
+          "link": "https://scholar.google.com/scholar?cites=13679985524203994111&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "13679985524203994111",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=13679985524203994111&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:_zuqxloS2b0J:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3A_zuqxloS2b0J%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 11,
+          "link": "https://scholar.google.com/scholar?cluster=13679985524203994111&hl=en&as_sdt=0,11",
+          "cluster_id": "13679985524203994111",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=13679985524203994111&engine=google_scholar&hl=en"
+        }
+      }
+    },
+    {
+      "position": 3,
+      "title": "Machine learning: Trends, perspectives, and prospects",
+      "result_id": "pdcI9r5sCJcJ",
+      "link": "https://www.science.org/doi/abs/10.1126/science.aaa8415",
+      "snippet": "… Machine learning addresses the question of how to build computers that improve … Recent progress in machine learning has been driven both by the development of new learning …",
+      "publication_info": {
+        "summary": "MI Jordan, TM Mitchell - Science, 2015 - science.org",
+        "authors": [
+          {
+            "name": "MI Jordan",
+            "link": "https://scholar.google.com/citations?user=yxUduqMAAAAJ&hl=en&oi=sra",
+            "author_id": "yxUduqMAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yxUduqMAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "TM Mitchell",
+            "link": "https://scholar.google.com/citations?user=MnfzuPYAAAAJ&hl=en&oi=sra",
+            "author_id": "MnfzuPYAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=MnfzuPYAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "cmu.edu",
+          "file_format": "PDF",
+          "link": "http://www.cs.cmu.edu/~tom/pubs/Science-ML-2015.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=pdcI9r5sCJcJ",
+        "cited_by": {
+          "total": 13581,
+          "link": "https://scholar.google.com/scholar?cites=10883068066968164261&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "10883068066968164261",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=10883068066968164261&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:pdcI9r5sCJcJ:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3ApdcI9r5sCJcJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 20,
+          "link": "https://scholar.google.com/scholar?cluster=10883068066968164261&hl=en&as_sdt=0,11",
+          "cluster_id": "10883068066968164261",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=10883068066968164261&engine=google_scholar&hl=en"
+        }
+      }
+    },
+    {
+      "position": 4,
+      "title": "What is machine learning?",
+      "result_id": "6uA6mpei2rcJ",
+      "link": "https://link.springer.com/chapter/10.1007/978-3-319-18305-3_1",
+      "snippet": "… A machine learning algorithm is a computational process that … This training is the “learning” part of machine learning. The … can practice “lifelong” learning as it processes new data and …",
+      "publication_info": {
+        "summary": "I El Naqa, MJ Murphy - Machine learning in radiation oncology: theory and …, 2015 - Springer",
+        "authors": [
+          {
+            "name": "I El Naqa",
+            "link": "https://scholar.google.com/citations?user=9Vdfc2sAAAAJ&hl=en&oi=sra",
+            "author_id": "9Vdfc2sAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=9Vdfc2sAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "MJ Murphy"
+          }
+        ]
+      },
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=6uA6mpei2rcJ",
+        "cited_by": {
+          "total": 2026,
+          "link": "https://scholar.google.com/scholar?cites=13248080025875046634&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "13248080025875046634",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=13248080025875046634&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:6uA6mpei2rcJ:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3A6uA6mpei2rcJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 5,
+          "link": "https://scholar.google.com/scholar?cluster=13248080025875046634&hl=en&as_sdt=0,11",
+          "cluster_id": "13248080025875046634",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=13248080025875046634&engine=google_scholar&hl=en"
+        }
+      }
+    },
+    {
+      "position": 5,
+      "title": "Machine learning",
+      "result_id": "sgzh8w-wKWIJ",
+      "type": "Ps",
+      "link": "https://web.engr.oregonstate.edu/~tgd/publications/arcs.ps.gz",
+      "snippet": "The study of machine learning methods has progressed greatly in the past few years. This progress has taken many directions. First, in the area of inductive learning, a new formal de …",
+      "publication_info": {
+        "summary": "TG Dietterich - Annual review of computer science, 1990 - engr.oregonstate.edu",
+        "authors": [
+          {
+            "name": "TG Dietterich",
+            "link": "https://scholar.google.com/citations?user=09kJn28AAAAJ&hl=en&oi=sra",
+            "author_id": "09kJn28AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=09kJn28AAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "oregonstate.edu",
+          "file_format": "PS",
+          "link": "https://web.engr.oregonstate.edu/~tgd/publications/arcs.ps.gz"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=sgzh8w-wKWIJ",
+        "cited_by": {
+          "total": 280,
+          "link": "https://scholar.google.com/scholar?cites=7073378272324684978&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "7073378272324684978",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=7073378272324684978&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:sgzh8w-wKWIJ:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3Asgzh8w-wKWIJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=7073378272324684978&hl=en&as_sdt=0,11",
+          "cluster_id": "7073378272324684978",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=7073378272324684978&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:sgzh8w-wKWIJ:scholar.google.com/+machine+learning&hl=en&as_sdt=0,11"
+      }
+    },
+    {
+      "position": 6,
+      "title": "Machine learning for microbiologists",
+      "result_id": "LyT44hZeFM0J",
+      "link": "https://www.nature.com/articles/s41579-023-00984-1",
+      "snippet": "… how to evaluate a machine learning model and how … machine learning-based work. The topics presented in this work will allow microbiologists to grasp the potential of machine learning …",
+      "publication_info": {
+        "summary": "F Asnicar, AM Thomas, A Passerini… - Nature Reviews …, 2024 - nature.com",
+        "authors": [
+          {
+            "name": "F Asnicar",
+            "link": "https://scholar.google.com/citations?user=ZbRfesUAAAAJ&hl=en&oi=sra",
+            "author_id": "ZbRfesUAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=ZbRfesUAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "AM Thomas",
+            "link": "https://scholar.google.com/citations?user=dMThjQ8AAAAJ&hl=en&oi=sra",
+            "author_id": "dMThjQ8AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=dMThjQ8AAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "A Passerini",
+            "link": "https://scholar.google.com/citations?user=IIXgkLoAAAAJ&hl=en&oi=sra",
+            "author_id": "IIXgkLoAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=IIXgkLoAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "nih.gov",
+          "file_format": "HTML",
+          "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11980903/"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=LyT44hZeFM0J",
+        "html_version": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11980903/",
+        "cited_by": {
+          "total": 210,
+          "link": "https://scholar.google.com/scholar?cites=14777539729699644463&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "14777539729699644463",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=14777539729699644463&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:LyT44hZeFM0J:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3ALyT44hZeFM0J%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 7,
+          "link": "https://scholar.google.com/scholar?cluster=14777539729699644463&hl=en&as_sdt=0,11",
+          "cluster_id": "14777539729699644463",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=14777539729699644463&engine=google_scholar&hl=en"
+        }
+      }
+    },
+    {
+      "position": 7,
+      "title": "Machine learning algorithms: a review",
+      "result_id": "TVVEPP7WNfUJ",
+      "type": "Pdf",
+      "link": "https://www.academia.edu/download/59817925/IRJET-V6I217620190621-73452-h5pwu7.pdf",
+      "snippet": "… There are a wide range of applications of machine learning methods … the overview of different machine learning approaches. … Unsupervised learning is a class of machine learning that …",
+      "publication_info": {
+        "summary": "D Pandey, K Niwaria, B Chourasia - Mach. Learn, 2019 - academia.edu",
+        "authors": [
+          {
+            "name": "D Pandey"
+          },
+          {
+            "name": "K Niwaria"
+          },
+          {
+            "name": "B Chourasia"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "academia.edu",
+          "file_format": "PDF",
+          "link": "https://www.academia.edu/download/59817925/IRJET-V6I217620190621-73452-h5pwu7.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=TVVEPP7WNfUJ",
+        "cited_by": {
+          "total": 5402,
+          "link": "https://scholar.google.com/scholar?cites=17669265100479157581&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "17669265100479157581",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=17669265100479157581&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:TVVEPP7WNfUJ:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3ATVVEPP7WNfUJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 5,
+          "link": "https://scholar.google.com/scholar?cluster=17669265100479157581&hl=en&as_sdt=0,11",
+          "cluster_id": "17669265100479157581",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=17669265100479157581&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:TVVEPP7WNfUJ:scholar.google.com/+machine+learning&hl=en&as_sdt=0,11"
+      }
+    },
+    {
+      "position": 8,
+      "title": "Machine learning basics",
+      "result_id": "p7YVSi5UNiMJ",
+      "type": "Pdf",
+      "link": "http://whdeng.cn/Teaching/PPT_01_Machine%20learning%20Basics.pdf",
+      "snippet": "… To obtain theoretical guarantees about generalization of a machine learning algorithm, we … Why does deep learning have different behavior than other machine learning methods for …",
+      "publication_info": {
+        "summary": "H Wang, Z Lei, X Zhang, B Zhou, J Peng - Deep learning, 2016 - whdeng.cn",
+        "authors": [
+          {
+            "name": "H Wang"
+          },
+          {
+            "name": "Z Lei"
+          },
+          {
+            "name": "X Zhang"
+          },
+          {
+            "name": "B Zhou"
+          },
+          {
+            "name": "J Peng"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "whdeng.cn",
+          "file_format": "PDF",
+          "link": "http://whdeng.cn/Teaching/PPT_01_Machine%20learning%20Basics.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=p7YVSi5UNiMJ",
+        "cited_by": {
+          "total": 2040,
+          "link": "https://scholar.google.com/scholar?cites=2537307997858018983&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "2537307997858018983",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=2537307997858018983&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:p7YVSi5UNiMJ:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3Ap7YVSi5UNiMJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 4,
+          "link": "https://scholar.google.com/scholar?cluster=2537307997858018983&hl=en&as_sdt=0,11",
+          "cluster_id": "2537307997858018983",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=2537307997858018983&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:p7YVSi5UNiMJ:scholar.google.com/+machine+learning&hl=en&as_sdt=0,11"
+      }
+    },
+    {
+      "position": 9,
+      "title": "What is machine learning? A primer for the epidemiologist",
+      "result_id": "LDE5SAcBB-gJ",
+      "link": "https://academic.oup.com/aje/article-abstract/188/12/2222/5567515",
+      "snippet": "… We provide a brief introduction to 5 common machine learning … of machine learning techniques in the published literature. We recommend approaches to incorporate machine learning …",
+      "publication_info": {
+        "summary": "Q Bi, KE Goodman, J Kaminsky… - American journal of …, 2019 - academic.oup.com",
+        "authors": [
+          {
+            "name": "Q Bi",
+            "link": "https://scholar.google.com/citations?user=xzss3t0AAAAJ&hl=en&oi=sra",
+            "author_id": "xzss3t0AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=xzss3t0AAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "KE Goodman"
+          },
+          {
+            "name": "J Kaminsky",
+            "link": "https://scholar.google.com/citations?user=BFdcm_gAAAAJ&hl=en&oi=sra",
+            "author_id": "BFdcm_gAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=BFdcm_gAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "umsha.ac.ir",
+          "file_format": "PDF",
+          "link": "https://sph.umsha.ac.ir/uploads/18/2023/May/22/kwz189.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=LDE5SAcBB-gJ",
+        "cited_by": {
+          "total": 836,
+          "link": "https://scholar.google.com/scholar?cites=16719333272424362284&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "16719333272424362284",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=16719333272424362284&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:LDE5SAcBB-gJ:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3ALDE5SAcBB-gJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 10,
+          "link": "https://scholar.google.com/scholar?cluster=16719333272424362284&hl=en&as_sdt=0,11",
+          "cluster_id": "16719333272424362284",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=16719333272424362284&engine=google_scholar&hl=en"
+        }
+      }
+    },
+    {
+      "position": 10,
+      "title": "On applied research in machine learning",
+      "result_id": "i7tgqUFf020J",
+      "type": "Pdf",
+      "link": "https://ai.stanford.edu/~ronnyk/editorial.pdf",
+      "snippet": "… Much of the \\science\" of Machine Learning is a … er learning research, that misclassi cation errors have equal costs. The vast majority of classi er learning research in Machine Learning …",
+      "publication_info": {
+        "summary": "F Provost, R Kohavi - MACHINE LEARNING-BOSTON-, 1998 - ai.stanford.edu",
+        "authors": [
+          {
+            "name": "F Provost",
+            "link": "https://scholar.google.com/citations?user=-Km63D4AAAAJ&hl=en&oi=sra",
+            "author_id": "-Km63D4AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=-Km63D4AAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "R Kohavi",
+            "link": "https://scholar.google.com/citations?user=O3RYHGwAAAAJ&hl=en&oi=sra",
+            "author_id": "O3RYHGwAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=O3RYHGwAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "stanford.edu",
+          "file_format": "PDF",
+          "link": "https://ai.stanford.edu/~ronnyk/editorial.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=i7tgqUFf020J",
+        "cited_by": {
+          "total": 365,
+          "link": "https://scholar.google.com/scholar?cites=7913773705839295371&as_sdt=80005&sciodt=0,11&hl=en",
+          "cites_id": "7913773705839295371",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=80005&cites=7913773705839295371&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:i7tgqUFf020J:scholar.google.com/&scioq=machine+learning&hl=en&as_sdt=0,11",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=related%3Ai7tgqUFf020J%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 10,
+          "link": "https://scholar.google.com/scholar?cluster=7913773705839295371&hl=en&as_sdt=0,11",
+          "cluster_id": "7913773705839295371",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C11&cluster=7913773705839295371&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:i7tgqUFf020J:scholar.google.com/+machine+learning&hl=en&as_sdt=0,11"
+      }
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "machine learning prediction",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=1&q=machine+learning+prediction&qst=ib"
+    },
+    {
+      "query": "machine learning algorithms",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=2&q=machine+learning+algorithms&qst=ib"
+    },
+    {
+      "query": "supervised machine learning",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=3&q=supervised+machine+learning&qst=ib"
+    },
+    {
+      "query": "interpretable machine learning",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=4&q=interpretable+machine+learning&qst=ib"
+    },
+    {
+      "query": "pattern recognition machine learning",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=5&q=pattern+recognition+machine+learning&qst=ib"
+    },
+    {
+      "query": "malware detection machine learning",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=6&q=malware+detection+machine+learning&qst=ib"
+    },
+    {
+      "query": "fake news detection machine learning",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=7&q=fake+news+detection+machine+learning&qst=ib"
+    },
+    {
+      "query": "physics informed machine learning",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,11&qsp=8&q=physics+informed+machine+learning&qst=ib"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://scholar.google.com/scholar?start=10&q=machine+learning&hl=en&as_sdt=0,11",
+    "other_pages": {
+      "2": "https://scholar.google.com/scholar?start=10&q=machine+learning&hl=en&as_sdt=0,11",
+      "3": "https://scholar.google.com/scholar?start=20&q=machine+learning&hl=en&as_sdt=0,11",
+      "4": "https://scholar.google.com/scholar?start=30&q=machine+learning&hl=en&as_sdt=0,11",
+      "5": "https://scholar.google.com/scholar?start=40&q=machine+learning&hl=en&as_sdt=0,11",
+      "6": "https://scholar.google.com/scholar?start=50&q=machine+learning&hl=en&as_sdt=0,11",
+      "7": "https://scholar.google.com/scholar?start=60&q=machine+learning&hl=en&as_sdt=0,11",
+      "8": "https://scholar.google.com/scholar?start=70&q=machine+learning&hl=en&as_sdt=0,11",
+      "9": "https://scholar.google.com/scholar?start=80&q=machine+learning&hl=en&as_sdt=0,11",
+      "10": "https://scholar.google.com/scholar?start=90&q=machine+learning&hl=en&as_sdt=0,11"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=10",
+    "next": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=10",
+      "3": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=20",
+      "4": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=30",
+      "5": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=40",
+      "6": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=50",
+      "7": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=60",
+      "8": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=70",
+      "9": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=80",
+      "10": "https://serpapi.com/search.json?as_sdt=0%2C11&engine=google_scholar&hl=en&q=machine+learning&start=90"
+    }
+  }
+}

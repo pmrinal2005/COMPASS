@@ -1,0 +1,276 @@
+{
+  "search_metadata": {
+    "id": "69c3a28e67a8a24a39c86ea0",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/b49IkAGDANxP5s79crJ8mA/69c3a28e67a8a24a39c86ea0.json",
+    "created_at": "2026-03-25 08:53:34 UTC",
+    "processed_at": "2026-03-25 08:53:34 UTC",
+    "bing_url": "https://www.bing.com/search?q=Coffee&cc=US",
+    "raw_html_file": "https://serpapi.com/searches/b49IkAGDANxP5s79crJ8mA/69c3a28e67a8a24a39c86ea0.html",
+    "total_time_taken": 0.93
+  },
+  "search_parameters": {
+    "q": "Coffee",
+    "cc": "US",
+    "device": "desktop",
+    "engine": "bing"
+  },
+  "search_information": {
+    "total_results": 94700
+  },
+  "ads": [
+    {
+      "position": 1,
+      "block_position": "top",
+      "title": "Coffee Makers & Coffee | Whole Latte Love",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8rlsRhKDqoDKmXodsHYaQ_TVUCUy2vc1P_MQTcNW8ZfDEGisYsbjturHwxSjMFY4Q0QrZ_zLRjSsZqgCV17lfiaWnlcOcUDCaJEZVmF4fQKDJqASqQmdoswYNFaRPtYOOuQVvj4vvnCrDjnAIZcYnfWdqxY17t8nGLb_cV7nhbRBkYrzZQa0LYhiV7WsZcrkPfiiLWK7M3bf1kctpUoW8LsY1W4E&u=aHR0cCUzYSUyZiUyZnd3dy53aG9sZWxhdHRlbG92ZS5jb20lM2Ztc2Nsa2lkJTNkYmQzODg0NDA2ZmZkMWU4MDJjNDRlZDgzY2Q2Y2M2ODclMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RKdXJhJTI1MjBQZXJmb3JtYW5jZSUyNTIwTWF4JTI2dXRtX3Rlcm0lM2R3d3cud2hvbGVsYXR0ZWxvdmUuY29tJTI2dXRtX2NvbnRlbnQlM2RKdXJhJTI1MjBCcmFuZA&rlid=bd3884406ffd1e802c44ed83cd6cc687&ntb=1",
+      "displayed_link": "http://www.wholelattelove.com",
+      "thumbnail": "data:image/svg+xml,%EF%BB%BF%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%202%2010%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M1%202a1%201%200%201%201%200-2%201%201%200%200%201%200%202m0%204a1%201%200%201%201%200-2%201%201%200%200%201%200%202M0%209a1%201%200%201%200%202%200%201%201%200%200%200-2%200%22%2F%3E%3C%2Fsvg%3E",
+      "description": "SponsoredShop WholeLatteLove's Coffee Makers. Espresso Machines, Coffee Makers & More.",
+      "details": "Types: Espresso Machines, Coffee Makers, Coffee & Espresso, Grinders, Tea",
+      "details_list": [
+        "Types: Espresso Machines, Coffee Makers, Coffee & Espresso, Grinders, Tea"
+      ]
+    },
+    {
+      "position": 2,
+      "block_position": "bottom",
+      "title": "Coffee Makers & Coffee | Whole Latte Love",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8AWjKnmdKVrIdnvcSAVT4EDVUCUxPFJP1WOIzfVZFQQcPSWkCRQ0pAMrFcdYMWWjOVCXWvi2PGw9vwejsPtGB6ZbBxRsZyvteJCBD0jeqJr5d24paVLYTfXVk4kk_aG8p1wZ7Bx0XgeIBzjal-W1Q8eguedrfnB-4T4lsJzaD3VwtKxP5j39ShPg4LujDKsOVjYVdnsQz0xaOFDbz57KSPwtvEnI&u=aHR0cCUzYSUyZiUyZnd3dy53aG9sZWxhdHRlbG92ZS5jb20lM2Ztc2Nsa2lkJTNkODAzNmY4OTdjNWRhMThhNDM4OTY5MTU0Njc0YjcyNjUlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RKdXJhJTI1MjBQZXJmb3JtYW5jZSUyNTIwTWF4JTI2dXRtX3Rlcm0lM2R3d3cud2hvbGVsYXR0ZWxvdmUuY29tJTI2dXRtX2NvbnRlbnQlM2RKdXJhJTI1MjBCcmFuZA&rlid=8036f897c5da18a438969154674b7265&ntb=1",
+      "displayed_link": "http://www.wholelattelove.com",
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "Shop Now Pay Later",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8hkA7x2D-FpQ8vQzvcKop4jVUCUxRJliDMF9yyZQ3y_vhFPAJ4s_69qJuhQEMl7fe0VwMR9G1nVeSFMoPmx5R3zHxecW2ZON4sdSXwb7Ylq7W9E1yU3Q06h6V1nlPRgi4tFH2pT2slCIIU80K8DoaIXwlI3LqDe9BPNLvyqenE9g1bs9pshb6-YtdHsyi63CBXITzKInDvnKHECDw94SfnvHpHWM5dYfXyteqTfuN7CWA1obU&u=aHR0cHMlM2ElMmYlMmZ3d3cud2hvbGVsYXR0ZWxvdmUuY29tJTJmcGFnZXMlMmZrbGFybmEtc3VwcG9ydCUzZm1zY2xraWQlM2RlZDc4MzQ4YjUyNjkxNjJlNzc5MTVkNDhmMGY4ZGVlMyUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEp1cmElMjUyMFBlcmZvcm1hbmNlJTI1MjBNYXglMjZ1dG1fdGVybSUzZHd3dy53aG9sZWxhdHRlbG92ZS5jb20lMjZ1dG1fY29udGVudCUzZEp1cmElMjUyMEJyYW5k&rlid=ed78348b5269162e77915d48f0f8dee3&ntb=1"
+          },
+          {
+            "title": "Coffee Cast",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8Ks7XwRqWsoQV0AWgzdw4nTVUCUwrXcO-Bs7iGptMt6U3lbdzQ6FnLJk3FnC2qwor5_KkeDwzwlvO2SrJX8PaXS5bgGPDjHl6MdD5xgr3ur5_0ryB5G4LjgwwRfjDmGk_rZYjJv_e-cmRrf-WaAFyMi73eObF33bIqDNqCfCQDSKkZrSlSYlfy7jyRINllBA0VuznxCA2kVnIwfHJMijc55VJsMcx26-hRkHyTPEQFpalf3uy&u=aHR0cHMlM2ElMmYlMmZ3d3cud2hvbGVsYXR0ZWxvdmUuY29tJTJmcGFnZXMlMmZjb2ZmZWVjYXN0JTNmbXNjbGtpZCUzZDgzYmUyNjM4N2Q2ZTFjNjQxMmU4NGZmYmRmZmY4MDg4JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkSnVyYSUyNTIwUGVyZm9ybWFuY2UlMjUyME1heCUyNnV0bV90ZXJtJTNkd3d3Lndob2xlbGF0dGVsb3ZlLmNvbSUyNnV0bV9jb250ZW50JTNkSnVyYSUyNTIwQnJhbmQ&rlid=83be26387d6e1c6412e84ffbdfff8088&ntb=1"
+          },
+          {
+            "title": "Gaggia Classic Evo Pro",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8q6rNejm3u_DPdaVhiOYp2TVUCUyUPsgW6-tIpUPzXc2Ak3DCuUpi8Cbm9Y2vft1RIUz45q5ycbDWJ77EU7YzARKpHomf8dgNSvaJLL5YypVgHpIoJch9oEhhlgBHAQwoTx7lbsHldvGa8UwKs1nWgRplwE1oeib4HmDu4Sf_cg1wU6eTPQEOe7qx1Wk42sWBZ9j2_QoX46t96mKw4ZNXaqojPXtTqLeNF5yNL-hzs9CdjdBU&u=aHR0cHMlM2ElMmYlMmZ3d3cud2hvbGVsYXR0ZWxvdmUuY29tJTJmcHJvZHVjdHMlMmZnYWdnaWEtY2xhc3NpYy1ldm8tcHJvLXNlbWktYXV0b21hdGljLWVzcHJlc3NvLW1hY2hpbmUlM2Ztc2Nsa2lkJTNkNDcwMGJmNjkyNDM3MWFhOGYxNDNkNmFhODZhNjkzYzUlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RKdXJhJTI1MjBQZXJmb3JtYW5jZSUyNTIwTWF4JTI2dXRtX3Rlcm0lM2R3d3cud2hvbGVsYXR0ZWxvdmUuY29tJTI2dXRtX2NvbnRlbnQlM2RKdXJhJTI1MjBCcmFuZA&rlid=4700bf6924371aa8f143d6aa86a693c5&ntb=1"
+          }
+        ]
+      },
+      "thumbnail": "data:image/svg+xml,%EF%BB%BF%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%202%2010%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M1%202a1%201%200%201%201%200-2%201%201%200%200%201%200%202m0%204a1%201%200%201%201%200-2%201%201%200%200%201%200%202M0%209a1%201%200%201%200%202%200%201%201%200%200%200-2%200%22%2F%3E%3C%2Fsvg%3E",
+      "description": "SponsoredShop WholeLatteLove's Coffee Makers. Espresso Machines, Coffee Makers & More.",
+      "details": "Earn Latte Rewards · Exclusive Deals · 7 days a week · 30 Day Return Policy",
+      "details_list": [
+        "Earn Latte Rewards · Exclusive Deals · 7 days a week · 30 Day Return Policy",
+        "Types: Espresso Machines, Coffee Makers, Coffee & Espresso, Grinders, Tea"
+      ]
+    },
+    {
+      "position": 3,
+      "block_position": "bottom",
+      "title": "Shop $200 Off TK-02 Now | Terra Kaffe Official Site",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8i_qdWqmKzXqgPDkr2vyp0zVUCUyINGnAWxAvvVlIJT9Vp3sJIZ1tNsEtbFmYvC8n6AXENscL6FPWrk7_lip8tuJ1axwNSCkhypc6K-fJwdJqhN4rDuVmVSbU_8UUOsqZDAOe9bBfZpuLaL59wUJUW7tiHka47MrlN0H3Ssht1DcsKCHb2zQp91uQ-yMN3lWCoPzUMn321ajs6qWRWsiVHVtPdE4&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmZwcm9kdWN0cyUyZnRrLTAyJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkcHBjJTI2dXRtX2NhbXBhaWduJTNkc2VhcmNoX2JyYW5kZWQlMjZtc2Nsa2lkJTNkYWRiMTljYjFjNWMxMWQ0NTBkMzdmNTcyNjc1MDJmMGYlMjZ1dG1fdGVybSUzZHRrMDIlMjUyMGNvZmZlZSUyNTIwbWFjaGluZSUyNnV0bV9jb250ZW50JTNkVEslMjUyMEJSQU5E&rlid=adb19cb1c5c11d450d37f57267502f0f&ntb=1",
+      "displayed_link": "https://www.terrakaffe.com",
+      "sitelinks": {
+        "inline": [
+          {
+            "title": "Shop All Products",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8VxBKSKuUktNVDymQYtqSBjVUCUwMJtEeeSqI0lbELoxMUoo1DAFGXzQrLbSkImdI-H_B_UctbCm4QaGKopEf8L88dS4TY90IC9kxweWRqI4FJGtzJz7QzoCoZQrmPqhbFnmlEyLc_HsDkjrITyHWk8yPLBRzW34OAJ4XBSYLrYcH7QmxWLkNQMMtghyGkYFndFzA8dIuISAVqhteA6R-vf3VPqzNP4iEDX0K--9XcuNjDPR1&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmZjb2xsZWN0aW9ucyUyZmFsbC1wcm9kdWN0cyUzZm1zY2xraWQlM2RiMzZhMjZkOTg4OWIxNmQ2MjM1ODRmMWEyYTBhNzM2NyUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZFRLMDIlMjUyMCUyNTdDJTI1MjBCUkFOREVEJTI1MjBTRUFSQ0glMjUyMCUyNTdDJTI1MjBJbXByZXNzaW9uJTI1MjBTaGFyZSUyNnV0bV90ZXJtJTNkdGswMiUyNTIwY29mZmVlJTI1MjBtYWNoaW5lJTI2dXRtX2NvbnRlbnQlM2RUSyUyNTIwQlJBTkQ&rlid=b36a26d9889b16d623584f1a2a0a7367&ntb=1"
+          },
+          {
+            "title": "Coffee Products",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8Vs_vAmyDf__LQDrPoG5UdDVUCUwTW1Bn2aS4qu8hsISsrMbCx5NgWV5ripqjrnkBnx4_XD38roJZD7ygeHJ1iVDVh1fzdjch6N6UrsvbqJUAr9fE47RmPcCK34FxrTP_IIlkx0PBxY6_TjrLEZvrT4_kQnj1iknRBkO2AQ0ys9vAPGrIuJLO_G7Kz6vLGV_J29-6Fd9sCPD85bYECjviNOqfqrFqYQGe9BzBNSfiEbvbgVb_&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmZjb2xsZWN0aW9ucyUyZmJlYW5z&rlid=f36002bece2e12f656356b7d6cbf4e3a&ntb=1"
+          },
+          {
+            "title": "All Products",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8IcrL0AmfxSrump1w1lFlsjVUCUy4J3HudIeew1cAPfG7QAtiViysgY05wUqi7sbxfyC2YLBIJRdtSngJoMKamCaI2TAlpQ_UeShEBNYwsjghdMZJMH0MT2tetZGuMzlBLlskliEZfCk2B8KA8-QHIkAFUwDHW_tPRJwKCSFMGcYDUX-I1QBv46HK5ktiarNT_amhMlmxMk05KSWrOR6UeyhRB__R2dhQhfKDClSr0NKiinjm&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmZjb2xsZWN0aW9ucyUyZmFsbC1wcm9kdWN0cw&rlid=e41f4edfbf8f1e287154271c1d1e63a8&ntb=1"
+          },
+          {
+            "title": "Coffee",
+            "tracking_link": "https://www.bing.com/aclk?ld=e87tGBZmgEJnM82Jy7lqJHKzVUCUwgUN9aRz5oB2kjY537kL_gV5YGL00ezsvBdUe7MwTBK28mGlQt_2vnQpEFyQpI1AZe5mKy-5cDNcNepbffRUv74Ir-3z-_Ij70siJdjejf6l5CpiT9bNiKJKDcQmdXO4JdM6U04A6m-uVkkFUpXF-qHu663aYEoy7-WfmAETlshLF53Y6Hx0Zh0WLNXqKyxrtwoZiIQlZRnenyvCxByJCT&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmZwYWdlcyUyZmNvZmZlZQ&rlid=2d114b571b6f1273bf462294b9fe3129&ntb=1"
+          },
+          {
+            "title": "Beans",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8Sxjyz4Dp9Q0HAUMvcpQEgjVUCUzgiK04_cFOX-9u2rdZ0fNmH8uKlePk-vCe0w0jS2e96qQD5ssjAJS3fBCjDQenDFOCY7X8Ff_1_FRX5wDxZjAUwUYPRpq8BRlD5OFNcqYV_7zcaC20q5-B1ZVMrfnZIAjK3D3e_CiY5TdinGPB6JX1Yu5mQOtB_bDKjE_MyWYM5wVT0-PoP8o49Dp0n2Th03csSLazgITzoob04oDte9nu&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmZjb2xsZWN0aW9ucyUyZmJlYW5zJTNmbXNjbGtpZCUzZDRjNzE5NjUxMDBhZDExMTRkNTAyZmY5MmEyM2NkM2I3JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkVEswMiUyNTIwJTI1N0MlMjUyMEJSQU5ERUQlMjUyMFNFQVJDSCUyNTIwJTI1N0MlMjUyMEltcHJlc3Npb24lMjUyMFNoYXJlJTI2dXRtX3Rlcm0lM2R0azAyJTI1MjBjb2ZmZWUlMjUyMG1hY2hpbmUlMjZ1dG1fY29udGVudCUzZFRLJTI1MjBCUkFORA&rlid=4c71965100ad1114d502ff92a23cd3b7&ntb=1"
+          },
+          {
+            "title": "Terra Kaffe vs. Jura",
+            "tracking_link": "https://www.bing.com/aclk?ld=e8-HkNDIApBfkVfqkCt37NETVUCUwDhEFcQBnUFvcl8ku7FK90S3-KIGPt_IIuAhi2CLvBarI7j6i084WplEvt-K_oBCxeFQNBunn-UXlHcjWhXBg3k34ZBTJFrJz0yLByYTHS-BH5qu11kRaeSwrtGXY7lIUk3193jRyCUFIfYF6lt5OH8sBvLCQ7z7FC2_ZWqt1_qUHg4XFnQS-BtTyPbvFv4OHqXPnTeABVVshavSRKmp9r&u=aHR0cHMlM2ElMmYlMmZ3d3cudGVycmFrYWZmZS5jb20lMmYlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RjYV9yX2FuZF9y&rlid=94897942a67011e8301b108104e16306&ntb=1"
+          }
+        ]
+      },
+      "thumbnail": "data:image/svg+xml,%EF%BB%BF%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%202%2010%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M1%202a1%201%200%201%201%200-2%201%201%200%200%201%200%202m0%204a1%201%200%201%201%200-2%201%201%200%200%201%200%202M0%209a1%201%200%201%200%202%200%201%201%200%200%200-2%200%22%2F%3E%3C%2Fsvg%3E",
+      "description": "SponsoredSave $200 on the TK-02 for smarter, easier, fully automatic coffee. Our Machine Gives Customers the Freedom To Brew Whole-Bean Coffee. Order Now.",
+      "details": "30-day Free Trial · Automated Milk Frothing · Brew From Beans Not Pods · Adjustable Bean Grinder",
+      "details_list": [
+        "30-day Free Trial · Automated Milk Frothing · Brew From Beans Not Pods · Adjustable Bean Grinder"
+      ]
+    },
+    {
+      "position": 4,
+      "block_position": "bottom",
+      "title": "Rich & Creamy | Taste All The Flavours",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8UoEGXcVTOdk1mjP98dJlQDVUCUzJYuGkXLaHoXUoccPfOPFJrT9H4PJeVaR0XUgWB5ZveqWARAgTUsm_JI6aN8Ryv1FhsUs229BVHamqU4wyoXro3mqI3TUF0XCrgx9q85c7XqcDHF6JZ3jutWDOfXMOmE-_dp8YwMiPKgAQzA8aGhF4u5bwPtPqACyhq-Gsvw0b4AreliDLCtFuzQ-2NQ3ACCY&u=aHR0cHMlM2ElMmYlMmZ3d3cuaW50ZXJuYXRpb25hbGRlbGlnaHQuY2ElMmZlbiUyZiUzZmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDg3NjdlOGNmODBhNzE4MWMzNjI0ODEwYzIyMzYzNjlkJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQ0FOX0VEUF9JTlRFUk5BVElPTkFMLURFTElHSFRfR0VORVJJQy1GTEFWT1VSRUQtQ09GRkVFX0VOX0JFVEElMjZ1dG1fdGVybSUzZEZsYXZvdXJlZCUyNTIwQ29mZmVlJTI2dXRtX2NvbnRlbnQlM2RGbGF2b3VyZWQlMjUyMENvZmZlZQ&rlid=8767e8cf80a7181c3624810c2236369d&ntb=1",
+      "displayed_link": "https://www.internationaldelight.ca › coffee › enhancer",
+      "thumbnail": "data:image/svg+xml,%EF%BB%BF%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%202%2010%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M1%202a1%201%200%201%201%200-2%201%201%200%200%201%200%202m0%204a1%201%200%201%201%200-2%201%201%200%200%201%200%202M0%209a1%201%200%201%200%202%200%201%201%200%200%200-2%200%22%2F%3E%3C%2Fsvg%3E",
+      "description": "SponsoredDiscover international delight coffee enhancers and live life to the flavourest. Relax and enjoy your coffee in your favourite taste: french vanilla, hazelnut & more!",
+      "details": "Lactose-Free · 1.89 L format · Decadent Flavours · Delightful Flavours",
+      "details_list": [
+        "Lactose-Free · 1.89 L format · Decadent Flavours · Delightful Flavours",
+        "Types: Chocolate Mint, Cinnabon, Double Double Delight, Caramel Macchiato, Hazelnut"
+      ]
+    },
+    {
+      "position": 5,
+      "block_position": "inline-side",
+      "title": {
+        "visible": "2Pack Ryze Mushroom",
+        "hidden": "Coffee. 6.35 Oz -30 Servings Each 60 Servings Total. Ryze. Percolators, Moka Pots & Turkish Coffee Pots."
+      },
+      "price": "$29.00",
+      "extracted_price": 29.0,
+      "shipping_cost": "Free shipping",
+      "store": "eBay",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8anjZj7VUHXPHfY5NfitZ-TVUCUwfSRPpMXO5qhd5nn2QdkfeqEga5N5pJVq8U7rQ5rcoKqTKClHaDCykXxGNrDN8P1U-aHrzxX7lPZ_ikF9Pw2MeYwJHTQQgpwBsmx9b5rL7GGM-a_ln9DlVXDev8mIRipRhsggmRiLUX0s9DXstUf1U77YUZ1fBsz6GJWc40jhdxJIhGw5Gfkz7lvyhRUC-C34&u=aHR0cHMlM2ElMmYlMmZ3d3cubG93ZXN0LXByaWNlLmNvbSUyZmNvJTNmdSUzZFpEMWlkWGxqYUdWaGNISXVZMjl0Sm1zOU1sQmhZMnNyVW5sNlpTdHRkWE5vY205dmJTdGpiMlptWldVdUt6WXVNelVyYjNvckxUTXdLM05sY25acGJtZHpLMlZoWTJnck5qQXJjMlZ5ZG1sdVozTXJkRzkwWVd3dUszSjVlbVV1SzFBbWN6MW5jeVpqUFdWaUpuQTlNQ1oxUFdoMGRIQnpKVE5CSlRKR0pUSkdkM2QzTG1WaVlYa3VZMjl0SlRKR2FYUnRKVEpHTXpZMk1EUXpORGMyTnpBd0pUTkdYM1ZzSlRORVZWTWxNalp0YTJWMmRDVXpSREVsTWpadGEyTnBaQ1V6UkRFbE1qWnRhM0pwWkNVelJEY3hNUzAxTXpJd01DMHhPVEkxTlMwd0pUSTJZMkZ0Y0dsa0pUTkVOVE16T1RBME5qWTBPQ1V5Tm5SdmIyeHBaQ1V6UkRFd01EQXhKVEkyWTNWemRHOXRhV1FsTTBRbE4wSkhRMHhKUkNVM1JDWmhQVEF1T0RjbVpUMTJiWE1sTTBGbFlpVXpRWEFsTTBFek5qWXdORE0wTnpZM01EQSUzZCUyNnJwZ2lkcyUzZGVmMzc0NDZlNmNkMjE2ZGM0ZGIwMmRhZGNlNDMwZjc1JTI1N0MlMjU3QyUyNmxvY19waHlzaWNhbF9tcyUzZDEyNDIzMCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNm1zY2xraWQlM2RlZjM3NDQ2ZTZjZDIxNmRjNGRiMDJkYWRjZTQzMGY3NQ&rlid=ef37446e6cd216dc4db02dadce430f75&ntb=1",
+      "link": "https://www.lowest-price.com/co?u=ZD1idXljaGVhcHIuY29tJms9MlBhY2srUnl6ZSttdXNocm9vbStjb2ZmZWUuKzYuMzUrb3orLTMwK3NlcnZpbmdzK2VhY2grNjArc2VydmluZ3MrdG90YWwuK3J5emUuK1Amcz1ncyZjPWViJnA9MCZ1PWh0dHBzJTNBJTJGJTJGd3d3LmViYXkuY29tJTJGaXRtJTJGMzY2MDQzNDc2NzAwJTNGX3VsJTNEVVMlMjZta2V2dCUzRDElMjZta2NpZCUzRDElMjZta3JpZCUzRDcxMS01MzIwMC0xOTI1NS0wJTI2Y2FtcGlkJTNENTMzOTA0NjY0OCUyNnRvb2xpZCUzRDEwMDAxJTI2Y3VzdG9taWQlM0QlN0JHQ0xJRCU3RCZhPTAuODcmZT12bXMlM0FlYiUzQXAlM0EzNjYwNDM0NzY3MDA=&rpgids=ef37446e6cd216dc4db02dadce430f75%7C%7C&loc_physical_ms=124230&loc_interest_ms=&msclkid=ef37446e6cd216dc4db02dadce430f75",
+      "details": "Free shipping",
+      "details_list": [
+        "Free shipping"
+      ],
+      "thumbnail": "https://th.bing.com/th?id=OPHS.%2fnoDui9NCabF2w474C474&w=146&h=140&c=17&pcl=f5f5f5&o=5&pid=21.1"
+    },
+    {
+      "position": 6,
+      "block_position": "inline-side",
+      "title": "Vinacafe Instant Coffee Mix",
+      "price": "$7.95",
+      "extracted_price": 7.95,
+      "store": "Kaimuki Crack Seed Store",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8j3Z1jSbAeKqfzFWNXCoAgzVUCUzRceWxfs7YyI6eu2VyR4lSpdr6Yq6G_LU0xUk1xdRq3AQJ-RDGHwqNVAiDeXTvFMPmSRHa7sI_50ovkajtDaqeJPl53f9dcAYkT9bKMkPX2uNdbIvAxQQGFq_16PXLK4oEyzt-uCoCkUHlnt-YPcCAzXhx4_86YcfJD9q37LULVuUQPjaUs-qwo1RiA94k8Yo&u=aHR0cHMlM2ElMmYlMmZjcmFja3NlZWRzdG9yZWhhd2FpaS5jb20lMmZwcm9kdWN0cyUyZnZpbmFjYWZlLWluc3RhbnQtY29mZmVlLW1peCUzZnZhcmlhbnQlM2QzMzgzOTgyMjk2MjgyMyUyNm1zY2xraWQlM2RjMzAwNjYyYTg3NTExYzkzNzc2ZjBmZTkyNWMwMDNlOCUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZFNob3BpZnlfYmluZy1zaG9wcGluZ185Nzc0NjU1MDk0MCUyNnV0bV90ZXJtJTNkNDU4NzM2ODY3MzM1MTExNCUyNnV0bV9jb250ZW50JTNkU2hvcGlmeUltcG9ydEFkR3JvdXA&rlid=c300662a87511c93776f0fe925c003e8&ntb=1",
+      "link": "https://crackseedstorehawaii.com/products/vinacafe-instant-coffee-mix?variant=33839822962823&msclkid=c300662a87511c93776f0fe925c003e8&utm_source=bing&utm_medium=cpc&utm_campaign=Shopify_bing-shopping_97746550940&utm_term=4587368673351114&utm_content=ShopifyImportAdGroup",
+      "thumbnail": "https://th.bing.com/th?id=OPHS.%2fWuUhXmhcGu%2fIw474C474&w=146&h=140&c=17&ustim=1&o=5&pid=21.1"
+    },
+    {
+      "position": 7,
+      "block_position": "inline-side",
+      "title": {
+        "visible": "Great Value Caramel",
+        "hidden": "Cappuccino Mix Coffee Pods, Medium Roast, 12 Count 6 Pack. Great Value. Coffee Pods. 0078742354811."
+      },
+      "price": "$52.99",
+      "extracted_price": 52.99,
+      "store": "eBay",
+      "tracking_link": "https://www.bing.com/aclk?ld=e8cU8ij4VG1OCAx4uS6m8t2DVUCUxgubASeSORYorMaHh1qtsAcwF8-oOQPYdVrTkr8Sl7E5aXtJy49E_kzv2alvdhSILcjFaXfnSkKgltunKYo3lgLB0ZO4afZ05H0frM_Sk4sUw4WPQAHlSjxWSXhz660TTKwVxKkXB1uxTNavhe-Ugh0xdGNhDl1q7z6l0omwq5QN_CaO4hxTLvBgCaajdr7a4&u=aHR0cHMlM2ElMmYlMmZ3d3cubG93ZXN0LXByaWNlLmNvbSUyZmNvJTNmdSUzZFpEMWlkWGxqYUdWaGNISXVZMjl0Sm1zOVIzSmxZWFFyVm1Gc2RXVXJRMkZ5WVcxbGJDdERZWEJ3ZFdOamFXNXZLMDFwZUN0RGIyWm1aV1VyVUc5a2N5VXlReXROWldScGRXMHJVbTloYzNRbE1rTXJNVElyUTI5MWJuUXJOaXRRWVdOckxpdEhKbk05WjNNbVl6MWxZaVp3UFRBbWRUMW9kSFJ3Y3lVelFTVXlSaVV5Um5kM2R5NWxZbUY1TG1OdmJTVXlSbWwwYlNVeVJqTTRPVFF4TlRZMk9UazVPQ1V6Umw5MWJDVXpSRlZUSlRJMmJXdGxkblFsTTBReEpUSTJiV3RqYVdRbE0wUXhKVEkyYld0eWFXUWxNMFEzTVRFdE5UTXlNREF0TVRreU5UVXRNQ1V5Tm1OaGJYQnBaQ1V6UkRVek16a3dORFkyTkRnbE1qWjBiMjlzYVdRbE0wUXhNREF3TVNVeU5tTjFjM1J2Yldsa0pUTkVKVGRDUjBOTVNVUWxOMFFsTWpaZmRISnJjR0Z5YlhNbE0wUnBjM0J5SlRJMU0wUXhKVEkyWVcxa1lYUmhKVE5FWlc1akpUSTFNMEV4TVd0dlVHZDVTaTFVTW1WdGVGSjVXVVJUUWpVelFUTXhKbUU5TXk0eE9DWmxQWFp0Y3lVelFXVmlKVE5CY0NVelFUTTRPVFF4TlRZMk9UazVPQSUzZCUzZCUyNnJwZ2lkcyUzZDFlYWFhZTZhYjU4YjFmMjViNjliYzdhOTE3MWFiMDZlJTI1N0MlMjU3QyUyNmxvY19waHlzaWNhbF9tcyUzZDEyNDIzMCUyNmxvY19pbnRlcmVzdF9tcyUzZCUyNm1zY2xraWQlM2QxZWFhYWU2YWI1OGIxZjI1YjY5YmM3YTkxNzFhYjA2ZQ&rlid=1eaaae6ab58b1f25b69bc7a9171ab06e&ntb=1",
+      "link": "https://www.lowest-price.com/co?u=ZD1idXljaGVhcHIuY29tJms9R3JlYXQrVmFsdWUrQ2FyYW1lbCtDYXBwdWNjaW5vK01peCtDb2ZmZWUrUG9kcyUyQytNZWRpdW0rUm9hc3QlMkMrMTIrQ291bnQrNitQYWNrLitHJnM9Z3MmYz1lYiZwPTAmdT1odHRwcyUzQSUyRiUyRnd3dy5lYmF5LmNvbSUyRml0bSUyRjM4OTQxNTY2OTk5OCUzRl91bCUzRFVTJTI2bWtldnQlM0QxJTI2bWtjaWQlM0QxJTI2bWtyaWQlM0Q3MTEtNTMyMDAtMTkyNTUtMCUyNmNhbXBpZCUzRDUzMzkwNDY2NDglMjZ0b29saWQlM0QxMDAwMSUyNmN1c3RvbWlkJTNEJTdCR0NMSUQlN0QlMjZfdHJrcGFybXMlM0Rpc3ByJTI1M0QxJTI2YW1kYXRhJTNEZW5jJTI1M0ExMWtvUGd5Si1UMmVteFJ5WURTQjUzQTMxJmE9My4xOCZlPXZtcyUzQWViJTNBcCUzQTM4OTQxNTY2OTk5OA==&rpgids=1eaaae6ab58b1f25b69bc7a9171ab06e%7C%7C&loc_physical_ms=124230&loc_interest_ms=&msclkid=1eaaae6ab58b1f25b69bc7a9171ab06e",
+      "rating": 5,
+      "reviews": "1",
+      "thumbnail": "https://th.bing.com/th?id=OPHS.ZsW%2bNquwqU%2bPsA474C474&w=146&h=140&o=5&pid=21.1"
+    }
+  ],
+  "inline_videos": {
+    "title": "Videos of Coffee",
+    "see_more_link": "https://www.bing.com/ck/a?!&&p=111b6fd428eb2169d1d37bb603aeaf296db445294e1dcfce43b1dbc6d7b5b7b8JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3ZpZGVvcy9zZWFyY2g_JnE9Y29mZmVlJnFmdD0rZmlsdGVydWklM2FmaWx0ZXJoaW50LXNob3J0dmlkZW8mdmlldz1zaG9ydHZpZGVvJkZPUk09U1ZSVFJU&ntb=1",
+    "items": [
+      {
+        "position": 1,
+        "link": "https://www.bing.com/ck/a?!&&p=1ce19d3a4b0c0d6ca805b7981f0f8b1f35720f64c7334bdcfb48f01ff83d9568JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9Q29mZmVlJm1pZD01MkU0N0Q5MzNFOTVGMjZEOTQzMjUyRTQ3RDkzM0U5NUYyNkQ5NDMyJm1jaWQ9NEZGNDRGNDc3RjEyNEQzRUI4OUY0NEIxMkU5NzE0NTMmRk9STT1WSVJF&ntb=1",
+        "source_link": "https://www.youtube.com/watch?v=rLaVDQy0q8Y",
+        "thumbnail": "https://th.bing.com/th/id/OVP.g80sy1qzgSts89sHSqU01AHgFo?w=233&h=131&c=7&rs=1&qlt=90&o=6&pid=1.7",
+        "duration": "16:49",
+        "title": "Coffee Menu Explained - What the most common coffees are and how to make them",
+        "views": "2.2M views",
+        "date": "Jul 15, 2021",
+        "channel": "YouTube"
+      },
+      {
+        "position": 2,
+        "link": "https://www.bing.com/ck/a?!&&p=314085b0717de78e73d1b23b33f0657f347a4778ccfc19e3206e019303934514JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9Q29mZmVlJm1pZD04NDQ1MENBMjlBM0EwMTk2MjdBNzg0NDUwQ0EyOUEzQTAxOTYyN0E3Jm1jaWQ9NEZGNDRGNDc3RjEyNEQzRUI4OUY0NEIxMkU5NzE0NTMmRk9STT1WSVJF&ntb=1",
+        "source_link": "https://www.youtube.com/watch?v=xUoFhcQBiZY",
+        "thumbnail": "https://th.bing.com/th/id/OVP.XZdoO4V2GZfevJbJpWCQQgHgFo?w=233&h=131&c=7&rs=1&qlt=90&o=6&pid=1.7",
+        "duration": "13:47",
+        "title": "How To Make The Best Coffee, According To Science",
+        "views": "1.7M views",
+        "date": "Sep 14, 2023",
+        "channel": "YouTube"
+      },
+      {
+        "position": 3,
+        "link": "https://www.bing.com/ck/a?!&&p=7edcbb4f27a3ee6748148ed47d90d16c2bdf594e104e8e0e3795be863f6b88daJmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9Q29mZmVlJm1pZD1EODg0RjdDOTM5QjQxMTY5NUIyOUQ4ODRGN0M5MzlCNDExNjk1QjI5Jm1jaWQ9NEZGNDRGNDc3RjEyNEQzRUI4OUY0NEIxMkU5NzE0NTMmRk9STT1WSVJF&ntb=1",
+        "source_link": "https://www.youtube.com/watch?v=YVOrDgtDYQ4",
+        "thumbnail": "https://th.bing.com/th/id/OVP.mb77PdbThboZ7g-OH_5tYwHgFo?w=233&h=131&c=7&rs=1&qlt=90&o=6&pid=1.7",
+        "duration": "2:29",
+        "title": "How To Make the Perfect Coffee",
+        "views": "5.3M views",
+        "date": "Mar 7, 2021",
+        "channel": "YouTube"
+      }
+    ]
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "THE 10 BEST Cafés in Langley (Updated 2026) - Tripadvisor",
+      "tracking_link": "https://www.bing.com/ck/a?!&&p=e1b1bc0f6b0c371debf05a063b89f565c87dc38f93ec0d090ba4b329d9950bedJmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&psq=Coffee&u=a1aHR0cHM6Ly93d3cudHJpcGFkdmlzb3IuY2EvUmVzdGF1cmFudHMtZzE5MDQ0MjMtYzgtTGFuZ2xleV9Ccml0aXNoX0NvbHVtYmlhLmh0bWw&ntb=1",
+      "link": "https://www.tripadvisor.ca/Restaurants-g1904423-c8-Langley_British_Columbia.html",
+      "displayed_link": "https://www.tripadvisor.ca",
+      "snippet": "Best Cafés in Langley, British Columbia: Find Tripadvisor traveller reviews of Langley Cafés and search by price, location, and more."
+    },
+    {
+      "position": 2,
+      "title": "TOP 10 BEST Langley Coffee Shop in Langley, BC, Canada - Yelp",
+      "tracking_link": "https://www.bing.com/ck/a?!&&p=dc4e455b5e3b04e66210c4d44bde48e5a228c38a91d950a25438abb3c5348242JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&psq=Coffee&u=a1aHR0cHM6Ly93d3cueWVscC5jb20vc2VhcmNoP2ZpbmRfZGVzYz1MYW5nbGV5K0NvZmZlZStTaG9wJmZpbmRfbG9jPUxhbmdsZXklMkMrQkMmbXNvY2tpZD0zYTczZjhjM2EwZmQ2ODFhMGY0M2VmZTRhMTQxNjlmMg&ntb=1",
+      "link": "https://www.yelp.com/search?find_desc=Langley+Coffee+Shop&find_loc=Langley%2C+BC&msockid=3a73f8c3a0fd681a0f43efe4a14169f2",
+      "displayed_link": "https://www.yelp.com › search",
+      "rich_snippet": {
+        "extensions": [
+          "Reviews: 104"
+        ]
+      },
+      "snippet": "Top 10 Best Langley Coffee Shop in Langley, BC, Canada - Last Updated February 2026 - Yelp - Airport Coffee Shop, Nargila Coffee Shop, Coastal Coffee, Creekside Coffee Factory, Porter's Bistro Coffee & …"
+    },
+    {
+      "position": 3,
+      "title": "TOP 10 BEST Coffee & Cafes in Langley, BC - Updated 2026 - Yelp",
+      "tracking_link": "https://www.bing.com/ck/a?!&&p=375f9d4cee646cbf65b0904b7d0a137a517425657a988c17c4b39c83df230d48JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&psq=Coffee&u=a1aHR0cHM6Ly93d3cueWVscC5jYS9zZWFyY2g_ZmluZF9kZXNjPUNvZmZlZSslMjYrQ2FmZXMmZmluZF9sb2M9TGFuZ2xleSUyQytCQw&ntb=1",
+      "link": "https://www.yelp.ca/search?find_desc=Coffee+%26+Cafes&find_loc=Langley%2C+BC",
+      "displayed_link": "https://www.yelp.ca › search",
+      "rich_snippet": {
+        "extensions": [
+          "Reviews: 341"
+        ]
+      },
+      "snippet": "Top 10 Best Coffee & Cafes in Langley, BC - Last Updated February 2026 - Yelp - Creekside Coffee Factory, Coastal Coffee, Projekt Blend, Cozy Bean Bakery & Cafe, Red Velvet Cafe and Gifts, …"
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "percent coffee",
+      "link": "https://www.bing.com/ck/a?!&&p=a0acef4b53580576b829a94abc4c77af7d4836fd9d771fd623eb064991751450JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPXBlcmNlbnQrY29mZmVlJkZPUk09UVNSRTE&ntb=1"
+    },
+    {
+      "query": "what is coffee called",
+      "link": "https://www.bing.com/ck/a?!&&p=b3c913fbfdbeb3435de92f1b5d4731b5e5c22e14c3a90b0a0825008635edc3bdJmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPXdoYXQraXMrY29mZmVlK2NhbGxlZCZGT1JNPVFTUkUy&ntb=1"
+    },
+    {
+      "query": "coffee & near me",
+      "link": "https://www.bing.com/ck/a?!&&p=11b9ec29d4326c36b0733d53fcb58d315e37887938ae40cc7413c72ca5536d14JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPWNvZmZlZSslMjYrbmVhcittZSZGT1JNPVFTUkUz&ntb=1"
+    },
+    {
+      "query": "where is coffee from originally",
+      "link": "https://www.bing.com/ck/a?!&&p=db26ce54cd88fd2ffbcce9ebf0fc2ab9baf5349573f619710dcbe31d1431eae5JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPXdoZXJlK2lzK2NvZmZlZStmcm9tK29yaWdpbmFsbHkmRk9STT1RU1JFNA&ntb=1"
+    },
+    {
+      "query": "why was coffee invented",
+      "link": "https://www.bing.com/ck/a?!&&p=16c33ed5548d492c6640db20adc7965fc3f82296b0f0a5e7de51256a2353e737JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPXdoeSt3YXMrY29mZmVlK2ludmVudGVkJkZPUk09UVNSRTU&ntb=1"
+    },
+    {
+      "query": "coffee invented in which country",
+      "link": "https://www.bing.com/ck/a?!&&p=4b7e64c707b4126a67f9867030981d64be4f59f6e07cd267925db477664a989cJmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPWNvZmZlZStpbnZlbnRlZCtpbit3aGljaCtjb3VudHJ5JkZPUk09UVNSRTY&ntb=1"
+    },
+    {
+      "query": "who founded coffee",
+      "link": "https://www.bing.com/ck/a?!&&p=ddf1cb99a8a029cb5238a9676d61bcb89adbfa66a574a53efc4214e57a8a2131JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPXdobytmb3VuZGVkK2NvZmZlZSZGT1JNPVFTUkU3&ntb=1"
+    },
+    {
+      "query": "who discovered coffee",
+      "link": "https://www.bing.com/ck/a?!&&p=808907223192b36bf622aba639cd4b00d9ea191df25a58f63619937e53c67c58JmltdHM9MTc3NDM5NjgwMA&ptn=3&ver=2&hsh=4&fclid=3a73f8c3-a0fd-681a-0f43-efe4a14169f2&u=a1L3NlYXJjaD9xPXdobytkaXNjb3ZlcmVkK2NvZmZlZSZGT1JNPVFTUkU4&ntb=1"
+    }
+  ]
+}
