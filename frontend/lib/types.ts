@@ -187,6 +187,7 @@ export interface SessionState {
   insights?: Insights | null
   prevInsights?: Insights | null
   prevOrder: string[]
+  baselined?: boolean   // true while a disruption/re-poll cycle keeps its pre-disruption baseline (prevOrder / prevInsights)
   confidence?: number
   threshold?: number
   reasons: string[]

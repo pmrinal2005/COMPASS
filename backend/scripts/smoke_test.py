@@ -135,6 +135,18 @@ async def main() -> None:
         lib = (await c.get("/api/playbooks")).json()
         assert len(lib) == len(PLAYBOOKS) == 7 and all(p["engine_list"] for p in lib)
         print(f"ok  /api/account (secrets stripped), /api/locations, /api/playbooks ({len(lib)} playbooks)")
+
+        # ---- frontend contract: the bundled offline library + recordings must match what this backend serves
+        import json as _json
+        from pathlib import Path as _P
+        demo = _P(__file__).resolve().parents[2] / "frontend" / "lib" / "demo"
+        bundled = {p["id"]: p for p in _json.loads((demo / "playbooks.json").read_text())}
+        assert set(bundled) == {p["id"] for p in lib}, "frontend/lib/demo/playbooks.json is stale -> run scripts/record_demo.py"
+        assert all(bundled[p["id"]]["engine_list"] == p["engine_list"] for p in lib)
+        rec = _json.loads((demo / "recordings.json").read_text())
+        assert {"tokyo", "tacos", "seo", "earbuds", "headphones", "jobs", "prior_art"} == set(rec), "7 offline scenarios expected"
+        assert all(r["events"] for r in rec.values()) and sum(1 for r in rec.values() if r.get("disruption")) == 4
+        print(f"ok  frontend contract: bundled library ({len(bundled)} playbooks) + {len(rec)} recorded scenarios (4 with disruption) match the backend")
     print("ALL SMOKE TESTS PASSED")
 
 

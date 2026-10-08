@@ -42,12 +42,15 @@ backend/                 FastAPI + LangGraph (Render, native Python buildpack, n
   scripts/smoke_test.py  end-to-end test (Demo Mode, 0 credits)
   scripts/record_demo.py regenerates frontend/lib/demo/recordings.json
 frontend/                Next.js 14 + React + Tailwind + framer-motion (Vercel Hobby)
-  app/page.tsx           Agent Command Center (Go/Pro toggle + split-screen)
-  components/            ThoughtTree · SerpLog · RetrievalHeatmap · DecisionMatrix · ActionCards (HITL) · RawCalls
-  lib/                   api · reducer (event → UI state) · useSession (SSE live / offline replay) · demo recordings
+  app/page.tsx           Agent Command Center (Go/Pro toggle + split-screen + Playbook library + account credits)
+  components/            PipelineStepper · IntentBars · ThoughtTree · SerpLog · RetrievalHeatmap · DecisionMatrix ·
+                         InsightsPanel (VenueConsensus · SeoGrid · trip stays/events) · WatchesPanel · PlaybookLibrary ·
+                         AccountMeter · ActionCards (HITL) · RawCalls · AnimatedNumber
+  lib/                   api · reducer (event → UI state) · pipeline (stepper derived from SSE) · useSession (SSE live / offline replay) ·
+                         useWatches (live ticks / offline simulation) · demo recordings (7 scenarios) + bundled Playbook library
 supabase/migrations/     0001_compass_schema.sql (tables, pgvector HNSW, FTS GIN, hybrid_search + match_playbooks RPCs)
 render.yaml              Render Blueprint (web service, free)
-.github/workflows/       watch-cron.yml: free scheduler hitting POST /api/watch/tick every 15 min
+.github/workflows/       watch-cron.yml (POST /api/watch/tick every 15 min) · keep-warm.yml (GET /api/health every 10 min)
 ecosystem.config.cjs     PM2 config for running both services in a local sandbox
 ```
 
@@ -80,6 +83,14 @@ ecosystem.config.cjs     PM2 config for running both services in a local sandbox
 - **Live edge-case injection:** `POST /api/sessions/{id}/disrupt?kind=price_spike|unavailable`. The top option spikes on the next fresh poll, the anomaly is detected, the engine re-plans (flexible dates and wider hotels), the old approvals are superseded and a new HITL card appears.
 - **Observability:** Langfuse Cloud ingestion REST API (no SDK, no self-hosting). The trace is read back for the "Raw calls" tab, and local spans are the fallback.
 - **Command Center UI:**
+  - **pipeline stepper** Plan → Search → Verify → Compare → Act, derived purely from the SSE `stage` events: per-step wall time, spinning `re-plan n/2` badge, `×n` revisit badges, a "waiting for budget" state and a progress bar
+  - **intent bars**: dense (cosine) ⊕ keyword score for every Playbook, winner highlighted
+  - **venue consensus** (Maps ⊕ Yelp ⊕ Tripadvisor bars with a consensus marker, spread, rating-drop deltas), **SEO grid** (7 engines, position heat-map, ±rank movement, AI-Mode/AI-Overview citation chips with the answer text, competitor leaderboard) and **trip extras** (Airbnb stays + events)
+  - **watches panel**: price / rating / rank watches with baseline → now, animated sparkline, "Check now" (`POST /api/watches/{id}/check`, a real fresh SerpApi poll) and threshold alerts. With no backend it runs a clearly-labelled deterministic *simulation*
+  - **Playbook library** (`GET /api/playbooks`, bundled copy offline): engines, re-plan fallback engines, decision dimensions + weights, action types, click-to-run examples
+  - **account meter**: real SerpApi plan credits and hourly throughput through the free Account API (`GET /api/account`; never exposes the key / e-mail)
+  - the disruption button adapts to the Playbook: *Price spike +45%* · *Rating drop −45%* · *Rank drop −8*
+  - every animation honours the OS `prefers-reduced-motion` setting
   - animated thought-tree / Decision Graph
   - live colour-coded SerpApi log with expandable raw JSON
   - retrieval heat-map (fresh vs cached cells, RRF hits with dense/keyword ranks)
@@ -128,10 +139,10 @@ npm run dev                                # http://localhost:3000
 ```
 
 ## Deployment
-1. **Supabase:** create a project, then paste `supabase/migrations/0001_compass_schema.sql` into the SQL editor and run it. Copy the project URL and the service-role key.
+1. **Supabase:** create a project, then run `supabase/migrations/0001_compass_schema.sql` **and** `0002_sessions_persistence.sql` in the SQL editor (0002 lets sessions survive a Render restart). Copy the project URL and the service-role key.
 2. **Render (backend):** New → Blueprint → this repo (`render.yaml`). Fill in the `sync:false` secrets (SerpApi, Groq, Gemini, Supabase, Upstash, Langfuse, Telegram, Resend). Note the generated `CRON_SECRET`. Set `FRONTEND_ORIGINS` to your Vercel URL.
 3. **Vercel (frontend):** Import the repo → **Root Directory = `frontend`** (Next.js is auto-detected, and `frontend/vercel.json` pins `npm ci` / `npm run build`). Set the environment variable `NEXT_PUBLIC_API_URL=https://compass-api.onrender.com`, or leave it empty for offline Demo Mode. Deploy.
-4. **Scheduler:** in GitHub repo → Settings → Secrets → Actions, add `COMPASS_API_URL` and `CRON_SECRET`. `.github/workflows/watch-cron.yml` then ticks every 15 min (and can also be run manually).
+4. **Scheduler + keep-warm:** in GitHub repo → Settings → Secrets → Actions, add `COMPASS_API_URL` and `CRON_SECRET`. `.github/workflows/watch-cron.yml` then ticks every 15 min (and can be run manually, optionally with `force`), and `keep-warm.yml` pings `/api/health` every 10 min so Render's free instance stays awake.
 5. **Demo day:** open the site 1–2 min early. The health ping wakes Render's free instance; the badge shows "waking backend…" until it's ready.
 
 ## How judges test it
@@ -142,10 +153,24 @@ npm run dev                                # http://localhost:3000
 5. Click **Approve** on the booking card to see the Action Receipt (Playwright steps / confirmation id).
 6. Open **Raw calls** to see every engine response plus Langfuse spans (and the "Open in Langfuse" link when configured).
 
+## Testing & verification
+```bash
+cd backend && pip install -r requirements-dev.txt
+python -m pytest -q                         # 110 tests, 0 credits: playbook params vs the SerpApi docs, every normalizer vs the
+                                            #   documented sample payload, async/Search-Archive/error-code transport, frontend contract
+PYTHONPATH=. python scripts/smoke_test.py   # end-to-end over the HTTP API in Demo Mode (7 playbooks, 4 disruptions, persistence)
+PYTHONPATH=. python scripts/live_check.py   # REAL serpapi.com: keyless doc-example engines + error contract + async→archive polling
+SERPAPI_KEY=… PYTHONPATH=. python scripts/live_check.py [--full]   # + Account API and one live call per playbook engine
+PYTHONPATH=. python scripts/docs_sync.py    # re-snapshot the documented parameters from serpapi.com (diff = docs drift)
+PYTHONPATH=. python scripts/record_demo.py  # regenerate frontend/lib/demo/{recordings,playbooks}.json after backend changes
+python scripts/ui_check.py http://localhost:3000   # Playwright browser E2E of the Command Center (live or offline)
+```
+`live_check.py` needs no key for its 28 checks (it uses the keyless doc-example queries serpapi.com answers itself). The keyed sweep is the only
+part that spends credits and needs your `SERPAPI_KEY`; **it has not been run against your account in this repo's CI**, so run it once before demo day.
+
 ## Not yet implemented / next steps
 - Supabase Auth per user (sessions are anonymous today; RLS policies for end users)
-- More Playbooks wired to further documented engines (Airbnb, Tripadvisor, Yelp, OpenTable, Google Scholar Author, Patents Details, multi-engine SEO fan-out across Bing/Baidu/Yandex/Naver/DuckDuckGo)
-- Persisting LangGraph state to Supabase so sessions survive a Render restart (in-memory runtime today; rows are persisted)
+- More Playbooks wired to further documented engines (OpenTable, Google Scholar Author, Patents Details)
 - Playbook Exchange marketplace and per-tenant enterprise Playbooks
 
 ## Status

@@ -19,3 +19,13 @@ body { @apply text-slate-200 antialiased; }
   .shimmer-text { background: linear-gradient(90deg,#a78bfa,#22d3ee,#34d399,#fbbf24,#a78bfa); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; @apply animate-shimmer; }
 }
 .grid-bg { background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: 32px 32px; }
+
+/* motion-safe: respect the OS reduced-motion setting everywhere (framer-motion honours it through MotionConfig in layout) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+.stagger > * { animation: fade-up .45s ease-out both; }
+.stagger > *:nth-child(2) { animation-delay: .05s } .stagger > *:nth-child(3) { animation-delay: .1s }
+.stagger > *:nth-child(4) { animation-delay: .15s } .stagger > *:nth-child(5) { animation-delay: .2s }
+.stagger > *:nth-child(6) { animation-delay: .25s } .stagger > *:nth-child(n+7) { animation-delay: .3s }
+@keyframes fade-up { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }

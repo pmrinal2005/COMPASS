@@ -1,8 +1,8 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Coins, Flame, Loader2, Play, RefreshCw, Sparkles, Zap, Ban } from 'lucide-react'
+import { Coins, Flame, Loader2, Play, RefreshCw, Sparkles, Zap, Ban, TrendingDown, ArrowDownWideNarrow } from 'lucide-react'
 import type { Lens } from '@/lib/types'
 import { SCENARIOS, useSession, type BackendMode } from '@/lib/useSession'
 import { cn } from '@/lib/utils'
@@ -12,13 +12,22 @@ import { RetrievalHeatmap } from './RetrievalHeatmap'
 import { DecisionMatrix } from './DecisionMatrix'
 import { ActionCards } from './ActionCards'
 import { RawCalls } from './RawCalls'
+import { PipelineStepper } from './PipelineStepper'
+import { IntentBars } from './IntentBars'
+import { InsightsPanel } from './InsightsPanel'
+import { WatchesPanel } from './WatchesPanel'
+import { AnimatedNumber } from './AnimatedNumber'
 
 const LENS_META: Record<Lens, { name: string; tagline: string; accent: string }> = {
   go: { name: 'COMPASS Go', tagline: 'Casual lens · trips, deals, jobs', accent: 'from-cyan-400 to-violet-500' },
   pro: { name: 'COMPASS Pro', tagline: 'Enterprise lens · procurement, prior-art, sourcing', accent: 'from-amber-300 to-pink-500' },
 }
 
-export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; backend: BackendMode; compact?: boolean }) {
+export interface Inject { prompt: string; n: number }
+
+export function CommandCenter({ lens, backend, compact = false, inject, onInjected, onCreditsChange }: {
+  lens: Lens; backend: BackendMode; compact?: boolean; inject?: Inject | null; onInjected?: () => void; onCreditsChange?: () => void
+}) {
   const ses = useSession(lens, backend)
   const s = ses.state
   const chips = useMemo(() => {
@@ -27,7 +36,23 @@ export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; 
     return [...own, ...other].slice(0, compact ? 3 : 5)
   }, [lens, compact])
   const [prompt, setPrompt] = useState(chips[0]?.prompt || '')
-  const [tab, setTab] = useState<'live' | 'raw'>('live')
+  const [tab, setTab] = useState<'live' | 'watches' | 'raw'>('live')
+  const handled = useRef(0)
+  // a prompt pushed from the Playbook library: fill the box and run it once
+  useEffect(() => {
+    if (!inject || inject.n === handled.current) return
+    handled.current = inject.n
+    setPrompt(inject.prompt)
+    setTab('live')
+    ses.start(inject.prompt)
+    onInjected?.()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inject?.n])
+  // refresh the header's real SerpApi credit meter whenever a live session settles
+  useEffect(() => {
+    if (s.status === 'done' && !s.replay) onCreditsChange?.()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [s.status])
   const running = s.status === 'running' || s.status === 'connecting' || s.status === 'awaiting_budget'
   const meta = LENS_META[lens]
   const RANK: Record<string, number> = { pending: 0, modified: 0, approved: 1, executed: 2, failed: 2, rejected: 3 }
@@ -49,7 +74,7 @@ export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; 
             {s.replay && <span className="chip text-amber-200">offline replay</span>}
             {s.credits && (
               <span className="chip font-mono" title="SerpApi credit meter (1 live search = 1 credit; cache hits are free)">
-                <Coins size={11} className="text-amber-300" /> {s.credits.spent}/{s.credits.budget} credits · {s.credits.cached} cached
+                <Coins size={11} className="text-amber-300" /> <AnimatedNumber value={s.credits.spent} duration={0.4} />/{s.credits.budget} credits · <AnimatedNumber value={s.credits.cached} duration={0.4} /> cached
               </span>
             )}
           </div>
@@ -83,9 +108,19 @@ export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; 
         </div>
         <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-white/5 pt-3">
           <span className="text-[10px] uppercase tracking-wider text-slate-500">Edge-case injection</span>
-          <button className="btn-ghost" disabled={!canDisrupt} onClick={() => ses.disrupt('price_spike')} title="Top option's price spikes on the next fresh poll">
-            <Flame size={12} className="text-rose-300" /> Price spike +45%
-          </button>
+          {(() => {
+            const pid = s.intent?.playbook_id
+            const d = pid === 'lifeops_local'
+              ? { kind: 'rating_drop' as const, label: 'Rating drop −45%', tip: "Top venue's rating falls on every platform at the next fresh poll", Icon: TrendingDown }
+              : pid === 'research_seo'
+                ? { kind: 'rank_drop' as const, label: 'Rank drop −8', tip: 'Tracked domain slips 8 positions in every search engine', Icon: ArrowDownWideNarrow }
+                : { kind: 'price_spike' as const, label: 'Price spike +45%', tip: "Top option's price spikes on the next fresh poll", Icon: Flame }
+            return (
+              <button className="btn-ghost" disabled={!canDisrupt} onClick={() => ses.disrupt(d.kind)} title={d.tip} id={`disrupt-${lens}`}>
+                <d.Icon size={12} className="text-rose-300" /> {d.label}
+              </button>
+            )
+          })()}
           {!s.replay && (
             <>
               <button className="btn-ghost" disabled={!canDisrupt} onClick={() => ses.disrupt('unavailable')}><Ban size={12} className="text-rose-300" /> Sold out</button>
@@ -97,6 +132,7 @@ export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; 
         {s.error && <p className="mt-2 text-[11px] text-amber-300">{s.error}</p>}
       </section>
 
+      <PipelineStepper s={s} />
       <AgentRail s={s} />
 
       {/* budget guard */}
@@ -115,15 +151,17 @@ export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; 
       </AnimatePresence>
 
       <div className="flex gap-1">
-        {(['live', 'raw'] as const).map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={cn('btn', tab === t ? 'bg-white/10 text-white' : 'text-slate-400 hover:text-slate-200')}>
-            {t === 'live' ? 'Live command center' : 'Raw calls'}
+        {(['live', 'watches', 'raw'] as const).map((t) => (
+          <button key={t} onClick={() => setTab(t)} id={`tab-${t}-${lens}`} className={cn('btn', tab === t ? 'bg-white/10 text-white' : 'text-slate-400 hover:text-slate-200')}>
+            {t === 'live' ? 'Live command center' : t === 'watches' ? 'Watches' : 'Raw calls'}
           </button>
         ))}
       </div>
 
       {tab === 'raw' ? (
         <RawCalls s={s} />
+      ) : tab === 'watches' ? (
+        <div className={compact ? 'h-[420px]' : 'h-[460px]'}><WatchesPanel s={s} live={backend === 'live' && !s.replay} /></div>
       ) : (
         <div className={cn('grid gap-3', compact ? 'grid-cols-1' : 'lg:grid-cols-3')}>
           <div className={cn(compact ? 'h-[360px]' : 'h-[400px] lg:col-span-1')}><ThoughtTree s={s} /></div>
@@ -133,17 +171,22 @@ export function CommandCenter({ lens, backend, compact = false }: { lens: Lens; 
           <div className={cn(compact ? 'h-[460px]' : 'h-[500px]')}>
             <ActionCards actions={actions} onApprove={ses.approve} onReject={ses.reject} onModify={ses.modify} icsUrl={ses.icsUrl} />
           </div>
+          <div className={cn(compact ? 'h-[380px]' : 'h-[460px]')}><IntentBars s={s} /></div>
+          <div className={cn(compact ? 'h-[500px]' : 'h-[460px] lg:col-span-2')}><InsightsPanel s={s} /></div>
         </div>
       )}
 
       {s.watchTicks.length > 0 && (
         <section className="panel p-3 text-[11px]" id={`watch-ticks-${lens}`}>
           <div className="panel-title mb-1">Watch polls</div>
-          {s.watchTicks.slice(-5).map((t, i) => (
-            <div key={i} className="font-mono text-slate-400">
-              {t.label}: ${t.price?.toFixed?.(0)} vs ${t.baseline?.toFixed?.(0)} ({t.change_pct > 0 ? '+' : ''}{t.change_pct}%) {t.triggered ? '⚠ triggered → re-plan' : 'ok'}
-            </div>
-          ))}
+          {s.watchTicks.slice(-5).map((t, i) => {
+            const f = (v?: number | null) => (v === null || v === undefined ? '—' : t.metric === 'rating' ? `★${v.toFixed(2)}` : t.metric === 'position' ? `#${Math.round(v)}` : `$${v.toFixed(0)}`)
+            return (
+              <div key={i} className="font-mono text-slate-400">
+                {t.label}: {f(t.price)} vs {f(t.baseline)} ({t.change_pct > 0 ? '+' : ''}{t.change_pct}%) {t.triggered ? '⚠ triggered → re-plan' : 'ok'}
+              </div>
+            )
+          })}
         </section>
       )}
     </div>

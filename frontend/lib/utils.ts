@@ -21,6 +21,10 @@ const ENGINE_COLORS: [RegExp, string][] = [
   [/scholar/, '#c084fc'],
   [/patents/, '#e879f9'],
   [/autocomplete/, '#94a3b8'],
+  [/airbnb/, '#fb7185'],
+  [/event/, '#f59e0b'],
+  [/ai_mode|ai_overview/, '#c4b5fd'],
+  [/bing|baidu|naver|yahoo|yandex|duckduckgo/, '#38bdf8'],
   [/^google$/, '#22d3ee'],
 ]
 export function engineColor(engine: string): string {
@@ -34,3 +38,22 @@ export const AGENT_META = {
   analyst: { label: 'Analyst', role: 'Decision matrix · anomalies', color: '#fbbf24' },
   actor: { label: 'Actor', role: 'HITL actions · receipts', color: '#34d399' },
 } as const
+
+/** Platform -> colour for the cross-platform venue consensus bars. */
+export const PLATFORM_COLORS: Record<string, string> = { 'Google Maps': '#34d399', Yelp: '#f43f5e', Tripadvisor: '#fbbf24' }
+export const platformColor = (p: string) => PLATFORM_COLORS[p] || '#94a3b8'
+
+/** Rank-position heat colour (SEO grid): top-3 green, page-1 cyan, page-2 amber, deeper rose, not found slate. */
+export function positionHeat(pos: number | null | undefined): string {
+  if (pos === null || pos === undefined) return '#334155'
+  if (pos <= 3) return '#10b981'
+  if (pos <= 10) return '#22d3ee'
+  if (pos <= 20) return '#f59e0b'
+  return '#f43f5e'
+}
+
+export const ago = (ts?: number | null) => {
+  if (!ts) return 'never'
+  const d = Math.max(0, Date.now() / 1000 - ts)
+  return d < 60 ? `${Math.round(d)}s ago` : d < 3600 ? `${Math.round(d / 60)}m ago` : `${Math.round(d / 3600)}h ago`
+}

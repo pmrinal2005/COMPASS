@@ -71,6 +71,8 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       if (d.stage === 'repoll') {
         n.disruption = d.disruption
         n.prevOrder = (s.matrix?.rows || []).map((r) => r.id)
+        n.prevInsights = s.insights ?? null
+        n.baselined = true            // keep THIS baseline through the re-plan that follows the disruption
         n.round = s.round + 1
       }
       if (d.stage === 'research' && typeof d.round === 'number' && d.round > 0) n.round = s.round + 1
@@ -110,7 +112,7 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
         calls,
         callOrder: order,
         replans: [...s.replans, { iteration: d.iteration, confidence: d.confidence, reasons: d.reasons, new_calls: d.new_calls, max: d.max }],
-        prevOrder: (s.matrix?.rows || []).map((r) => r.id),
+        ...(s.baselined ? {} : { prevOrder: (s.matrix?.rows || []).map((r) => r.id), prevInsights: s.insights ?? null }),
       }
     }
 
@@ -180,7 +182,6 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       return {
         ...n,
         matrix: d.matrix,
-        prevInsights: s.insights ?? null,
         insights: d.insights ?? null,
         confidence: d.confidence,
         reasons: d.reasons || [],
@@ -232,7 +233,7 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       return { ...n, rehydrated: true }
 
     case 'session.complete':
-      return { ...n, credits: d.credits ?? s.credits, caveat: d.caveat, status: 'done' }
+      return { ...n, credits: d.credits ?? s.credits, caveat: d.caveat, status: 'done', baselined: false }
     case 'session.error':
       return { ...n, status: 'error', error: d.error }
     default:

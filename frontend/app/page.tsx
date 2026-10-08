@@ -1,11 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Columns2, Compass, Square, Wifi, WifiOff, Loader2 } from 'lucide-react'
+import { BookOpen, Columns2, Compass, Square, Wifi, WifiOff, Loader2 } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { api, hasBackend, type Health } from '@/lib/api'
 import type { Lens } from '@/lib/types'
 import type { BackendMode } from '@/lib/useSession'
-import { CommandCenter } from '@/components/CommandCenter'
+import { CommandCenter, type Inject } from '@/components/CommandCenter'
+import { PlaybookLibrary } from '@/components/PlaybookLibrary'
+import { AccountMeter } from '@/components/AccountMeter'
 import { cn } from '@/lib/utils'
 
 export default function Page() {
@@ -13,6 +16,17 @@ export default function Page() {
   const [split, setSplit] = useState(false)
   const [backend, setBackend] = useState<BackendMode>(hasBackend() ? 'checking' : 'offline')
   const [health, setHealth] = useState<Health | null>(null)
+  const [library, setLibrary] = useState(false)
+  const [inject, setInject] = useState<(Inject & { lens: Lens }) | null>(null)
+  const [creditsKey, setCreditsKey] = useState(0)
+
+  /** Run a Playbook example: switch to the matching lens (single view) and push the prompt into that Command Center. */
+  const runExample = (prompt: string, forLens: Lens) => {
+    if (!split) setLens(forLens)
+    setInject({ prompt, lens: forLens, n: Date.now() })
+    setLibrary(false)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   useEffect(() => {
     if (!hasBackend()) return
@@ -65,6 +79,10 @@ export default function Page() {
                 ))}
               </div>
             )}
+            <AccountMeter live={backend === 'live'} refreshKey={creditsKey} />
+            <button className="btn-ghost" onClick={() => setLibrary((v) => !v)} id="library-toggle" aria-expanded={library} title="Browse the declarative Playbook library">
+              <BookOpen size={13} /> Playbooks
+            </button>
             <button className="btn-ghost" onClick={() => setSplit((v) => !v)} id="split-toggle" title="Split-screen: both lenses on the same backend">
               {split ? <Square size={13} /> : <Columns2 size={13} />} {split ? 'Single' : 'Split-screen'}
             </button>
@@ -74,13 +92,22 @@ export default function Page() {
       </header>
 
       <div className="mx-auto max-w-[1600px] px-4 py-4">
+        <AnimatePresence initial={false}>
+          {library && (
+            <motion.div key="lib" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mb-4 overflow-hidden">
+              <div className="h-[520px]">
+                <PlaybookLibrary live={backend === 'live'} lens={lens} onRun={runExample} />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         {split ? (
           <div className="grid gap-4 xl:grid-cols-2">
-            <CommandCenter key="go" lens="go" backend={backend} compact />
-            <CommandCenter key="pro" lens="pro" backend={backend} compact />
+            <CommandCenter key="go" lens="go" backend={backend} compact inject={inject?.lens === 'go' ? inject : null} onInjected={() => setInject(null)} onCreditsChange={() => setCreditsKey((k) => k + 1)} />
+            <CommandCenter key="pro" lens="pro" backend={backend} compact inject={inject?.lens === 'pro' ? inject : null} onInjected={() => setInject(null)} onCreditsChange={() => setCreditsKey((k) => k + 1)} />
           </div>
         ) : (
-          <CommandCenter key={lens} lens={lens} backend={backend} />
+          <CommandCenter key={lens} lens={lens} backend={backend} inject={inject?.lens === lens ? inject : null} onInjected={() => setInject(null)} onCreditsChange={() => setCreditsKey((k) => k + 1)} />
         )}
         <footer className="mt-8 pb-6 text-center text-[10.5px] text-slate-600">
           SerpApi async fan-out · LangGraph agents · Supabase pgvector hybrid RAG · Upstash dedupe · Langfuse traces · HITL actions.
