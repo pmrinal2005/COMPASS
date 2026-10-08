@@ -112,3 +112,37 @@ def page_offset(engine: str, params: dict | None) -> int:
     except (TypeError, ValueError):
         return 0
     return 0
+
+
+# ---------------------------------------------------------------- clustering
+def cluster_venues(venues: list) -> dict[str, list]:
+    """Union-find over fuzzy name matches so 'Casa Taqueria', 'Casa Taqueria - East Austin'
+    and 'Casa Taqueria Restaurant' (Maps / Yelp / Tripadvisor) become ONE entity.
+    Returns {cluster_id: [candidates]} and stamps ``attributes['cluster']`` on every member."""
+    parent = list(range(len(venues)))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    for i in range(len(venues)):
+        for j in range(i + 1, len(venues)):
+            if venues[i].engine == venues[j].engine:
+                continue                        # same platform never merges two listings
+            if same_entity(venues[i].title, venues[j].title):
+                parent[find(j)] = find(i)
+    groups: dict[str, list] = {}
+    for i, v in enumerate(venues):
+        root = find(i)
+        cid = venue_key(venues[root].title)
+        groups.setdefault(cid, []).append(v)
+    for cid, ms in groups.items():
+        for m in ms:
+            m.attributes["cluster"] = cid
+    return groups
+
+
+ENGINE_LABEL = {"google": "Google", "bing": "Bing", "duckduckgo": "DuckDuckGo", "yahoo": "Yahoo!", "yandex": "Yandex",
+                "baidu": "Baidu", "naver": "Naver", "google_ai_mode": "Google AI Mode", "google_ai_overview": "AI Overview"}

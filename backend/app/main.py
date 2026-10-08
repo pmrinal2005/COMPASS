@@ -13,14 +13,13 @@ from sse_starlette.sse import EventSourceResponse
 
 from . import graph as G
 from .agents import actor
-from .agents.researcher import candidate_key
 from .config import get_settings
 from .models import ModifyRequest, SessionRequest, WatchRequest, new_id
 from .playbooks import PLAYBOOKS
 from .services.cache import cache
 from .services.events import bus
 from .services.llm import embedder, llm
-from .services.serpapi import serp
+from .services.serpapi import SerpApiError, serp
 from .services.store import store
 from .services.tracing import tracer
 from .watch import check_watch, create_watch, tick
@@ -57,7 +56,33 @@ async def health():
 
 @app.get("/api/playbooks")
 async def playbooks():
-    return [{k: v for k, v in pb.items() if k not in ("fallback_engines",)} for pb in PLAYBOOKS.values()]
+    """Playbook library (declarative specs) + a flat engine summary for the UI's library panel."""
+    out = []
+    for pb in PLAYBOOKS.values():
+        item = {k: v for k, v in pb.items() if k not in ("fallback_engines",)}
+        item["engine_list"] = sorted({e["engine"] for e in pb["engines"]})
+        item["fallback_engine_list"] = sorted({e["engine"] for e in pb.get("fallback_engines", [])})
+        out.append(item)
+    return out
+
+
+@app.get("/api/account")
+async def account(force: bool = False):
+    """SerpApi Account API (https://serpapi.com/account-api) - free, not counted toward the quota.
+    api_key / e-mail / account id are stripped; in Demo Mode a placeholder is returned."""
+    try:
+        return await serp.account(force=force)
+    except SerpApiError as e:
+        raise HTTPException(e.status if e.status and 400 <= e.status < 600 else 502, str(e))
+
+
+@app.get("/api/locations")
+async def locations(q: str, limit: int = 5):
+    """SerpApi Locations API proxy (free): canonical location names for the `location` search parameter."""
+    try:
+        return await serp.locations(q, limit)
+    except SerpApiError as e:
+        raise HTTPException(e.status if e.status and 400 <= e.status < 600 else 502, str(e))
 
 
 # --------------------------------------------------------------- sessions
@@ -103,20 +128,24 @@ async def list_sessions():
 @app.get("/api/sessions/{sid}")
 async def get_session(sid: str):
     if sid not in G.RUNTIME:
-        row = await store.get("sessions", sid)
-        if not row:
-            raise HTTPException(404, "session not found")
-        return row
+        if await G.ensure(sid) is None:                      # process restarted -> resume from the Supabase snapshot
+            row = await store.get("sessions", sid)
+            if not row:
+                raise HTTPException(404, "session not found")
+            return row
     return _summary(sid, G.RUNTIME[sid].state)
 
 
 @app.get("/api/sessions/{sid}/events")
 async def session_events(sid: str, after: int = 0):
+    await G.ensure(sid)
     return bus.history(sid, after)
 
 
 @app.get("/api/sessions/{sid}/stream")
 async def stream(sid: str, request: Request, after: int = 0):
+    await G.ensure(sid)
+
     async def gen():
         q = bus.subscribe(sid)
         try:
@@ -143,6 +172,7 @@ async def stream(sid: str, request: Request, after: int = 0):
 
 @app.post("/api/sessions/{sid}/confirm")
 async def confirm(sid: str, choice: str = "all"):
+    await G.ensure(sid)
     r = G.rt(sid)
     r.confirm_choice = choice if choice in ("all", "essential") else "all"
     r.confirm.set()
@@ -150,26 +180,27 @@ async def confirm(sid: str, choice: str = "all"):
 
 
 @app.post("/api/sessions/{sid}/disrupt")
-async def disrupt(sid: str, kind: str = "price_spike", pct: float = 45.0):
-    """Live edge-case injection: the currently top-ranked option's price
-    spikes (or it disappears) on the next fresh poll -> anomaly -> re-plan."""
+async def disrupt(sid: str, kind: str = "price_spike", pct: float = 45.0, slip: int = 8):
+    """Live edge-case injection - the top-ranked option moves on the next fresh poll:
+       price_spike / unavailable   -> flights, hotels, products, suppliers (venues: 'fully booked', domains: 'de-indexed')
+       rating_drop                 -> a venue's rating falls on every platform
+       rank_drop                   -> the tracked domain slips `slip` positions in every search engine"""
+    if kind not in G.DISRUPTIONS:
+        raise HTTPException(400, f"kind must be one of {G.DISRUPTIONS}")
+    await G.ensure(sid)
     if sid not in G.RUNTIME or not G.RUNTIME[sid].state.get("analysis"):
         raise HTTPException(409, "session not ready")
-    ranked = G.RUNTIME[sid].state.get("_ranked") or []
-    if not ranked:
+    try:
+        disruption = G.make_disruption(sid, kind, pct, slip)
+    except ValueError:
         raise HTTPException(409, "nothing to disrupt")
-    top = ranked[0]
-    target = top.attributes.get("flight") if top.category == "bundle" else top.model_dump()
-    from .models import Candidate
-    tc = Candidate(**target)
-    disruption = {"kind": kind, "pct": pct, "target_key": candidate_key(tc), "target_title": tc.title}
     asyncio.create_task(G.repoll(sid, disruption))
-    return {"ok": True, "disruption": disruption}
+    return {"ok": True, "disruption": {k: v for k, v in disruption.items() if not k.startswith("_")}}
 
 
 @app.post("/api/sessions/{sid}/repoll")
 async def manual_repoll(sid: str):
-    if sid not in G.RUNTIME:
+    if sid not in G.RUNTIME and await G.ensure(sid) is None:
         raise HTTPException(404, "session not found")
     asyncio.create_task(G.repoll(sid))
     return {"ok": True}
@@ -183,36 +214,43 @@ async def trace(sid: str):
 
 
 # ------------------------------------------------------------ HITL actions
-def _find_action(aid: str):
+async def _find_action(aid: str):
     for r in G.RUNTIME.values():
         if aid in r.actions:
             return r.actions[aid]
+    row = await store.get("actions", aid)                    # after a restart: rehydrate the owning session first
+    if row and await G.ensure(row.get("session_id", "")) is not None:
+        for r in G.RUNTIME.values():
+            if aid in r.actions:
+                return r.actions[aid]
     raise HTTPException(404, "action not found")
 
 
 @app.post("/api/actions/{aid}/approve")
 async def approve(aid: str):
-    a = _find_action(aid)
+    a = await _find_action(aid)
     if a.status not in ("pending", "modified"):
         raise HTTPException(409, f"action is {a.status}")
     a.status = "approved"
     bus.publish(a.session_id, "actor.approved", {"action_id": aid}, agent="human")
     receipt = await actor.execute(a)
+    await G.snapshot(a.session_id)
     return {"ok": True, "action": a.model_dump(), "receipt": receipt}
 
 
 @app.post("/api/actions/{aid}/reject")
 async def reject(aid: str):
-    a = _find_action(aid)
+    a = await _find_action(aid)
     a.status = "rejected"
     await store.put("actions", {**a.model_dump(), "created_at": a.created_at})
+    await G.snapshot(a.session_id)
     bus.publish(a.session_id, "actor.rejected", {"action_id": aid}, agent="human")
     return {"ok": True, "action": a.model_dump()}
 
 
 @app.post("/api/actions/{aid}/modify")
 async def modify(aid: str, req: ModifyRequest):
-    a = _find_action(aid)
+    a = await _find_action(aid)
     if a.status not in ("pending", "modified"):
         raise HTTPException(409, f"action is {a.status}")
     a.payload = {**a.payload, **req.payload}
@@ -225,7 +263,7 @@ async def modify(aid: str, req: ModifyRequest):
 
 @app.get("/api/actions/{aid}/ics", response_class=PlainTextResponse)
 async def action_ics(aid: str):
-    a = _find_action(aid)
+    a = await _find_action(aid)
     if not a.receipt or "ics" not in a.receipt:
         raise HTTPException(404, "no calendar file")
     return PlainTextResponse(a.receipt["ics"], media_type="text/calendar",

@@ -255,6 +255,20 @@ class SerpApiClient:
                     {"status": (data.get("search_metadata") or {}).get("status"), "ms": ms})
         return {"data": data, "cached": False, "ms": ms, "mode": mode, "transport": transport}
 
+    # ------------------------------------------------------------ locations
+    async def locations(self, q: str, limit: int = 5) -> list[dict]:
+        """SerpApi Locations API (https://serpapi.com/locations-api) - free, needs no api_key, max 10 results.
+        Returns canonical names usable as the ``location`` parameter of the Search APIs."""
+        limit = max(1, min(int(limit), 10))
+        if self.s.is_demo:
+            demo = [{"id": "585069b8ee19ad271e9ba949", "name": "Austin", "canonical_name": "Austin,Texas,United States", "country_code": "US",
+                     "target_type": "City", "reach": 4870000, "gps": [-97.7430608, 30.267153]},
+                    {"id": "585069bdee19ad271e9bc072", "name": "Austin, TX", "canonical_name": "Austin, TX,Texas,United States", "country_code": "US",
+                     "target_type": "DMA Region", "reach": 5560000, "gps": [-97.7430608, 30.267153]}]
+            return [d for d in demo if q.lower() in d["name"].lower()][:limit] or demo[:limit]
+        r = await self._get("/locations.json", {"q": q, "limit": limit})
+        return r if isinstance(r, list) else []
+
     # -------------------------------------------------------------- account
     async def account(self, force: bool = False) -> dict:
         """SerpApi Account API (free, not counted toward the quota).

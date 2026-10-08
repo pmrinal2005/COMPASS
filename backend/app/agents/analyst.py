@@ -17,6 +17,7 @@ from typing import Any
 from ..config import get_settings
 from ..models import Candidate
 from ..playbooks import PLAYBOOKS
+from ..services.aggregate import build_insights, domain_entities, venue_entities
 from ..services.events import bus
 from ..services.llm import llm
 from ..services.store import store
@@ -35,6 +36,8 @@ def item_key(c: Candidate) -> str:
         return "bundle:" + str(c.attributes.get("flight_key", c.title)) + "|" + str((c.attributes.get("hotel") or {}).get("title", ""))[:40]
     if c.category == "flight":
         return "flight:" + c.attributes.get("match_key", c.title)
+    if c.category in ("venue_entity", "domain"):
+        return f"{c.category}:{c.attributes.get('cluster') or c.attributes.get('domain')}"
     return f"{c.category}:{c.engine}:{re.sub(r'[^a-z0-9]+', '-', c.title.lower())[:60]}:{c.source.lower()[:20]}"
 
 
@@ -67,6 +70,37 @@ async def detect_anomalies(session_id: str, cands: list[Candidate]) -> list[dict
     if flagged:
         bus.publish(session_id, "analyst.anomaly", {"anomalies": flagged[:12]}, agent="analyst")
     return flagged
+
+
+async def detect_entity_anomalies(session_id: str, pid: str, pool: list[Candidate], slots: dict) -> list[dict]:
+    """Rating / rank anomalies for the entity playbooks (no price involved):
+      venue  : blended rating fell >= 0.4 stars vs. the last stored observation (or the injected disruption)
+      domain : the tracked domain's CTR-weighted visibility fell >= 30 % vs. its last observation (or rank-drop disruption)"""
+    flagged = []
+    for c in pool:
+        if pid == "lifeops_local" and c.rating:
+            hist = await store.get_prices(f"venue:{c.attributes.get('cluster')}")
+            if hist and hist[-1] - c.rating >= 0.4 and not c.anomaly:
+                c.anomaly = f"rating fell {hist[-1]:.1f}→{c.rating:.1f} since last observation"
+        elif pid == "research_seo" and c.attributes.get("tracked"):
+            hist = await store.get_prices(f"seo:{c.attributes.get('domain')}:{slots.get('keyword')}:{slots.get('market')}")
+            vis = c.attributes.get("visibility", 0.0)
+            if hist and hist[-1] >= 0.05 and (hist[-1] - vis) / hist[-1] >= 0.30 and not c.anomaly:
+                c.anomaly = f"visibility fell {hist[-1]:.1f}→{vis:.1f} (−{100 * (hist[-1] - vis) / hist[-1]:.0f}%) since last poll"
+        if c.anomaly:
+            flagged.append({"id": c.id, "title": c.title, "price": None, "reason": c.anomaly})
+    if flagged:
+        bus.publish(session_id, "analyst.anomaly", {"anomalies": flagged[:12]}, agent="analyst")
+    return flagged
+
+
+async def record_entity_observations(pid: str, pool: list[Candidate], slots: dict) -> None:
+    for c in pool:
+        if pid == "lifeops_local" and c.rating:
+            await store.record_price(f"venue:{c.attributes.get('cluster')}", c.rating)
+        elif pid == "research_seo" and c.attributes.get("tracked"):
+            await store.record_price(f"seo:{c.attributes.get('domain')}:{slots.get('keyword')}:{slots.get('market')}",
+                                     max(float(c.attributes.get("visibility", 0.0)), 0.0))
 
 
 def _minmax(vals: list[float | None], direction: str) -> list[float]:
@@ -139,6 +173,14 @@ def dimension_values(pid: str, c: Candidate, slots: dict) -> dict[str, float | N
         age = a.get("age_days")
         return {"salary": c.price, "freshness": (-age if age is not None else None), "fit": a.get("relevance"),
                 "risk": risk + (0.0 if a.get("salary") else 0.2)}
+    if pid == "lifeops_local":
+        return {"reputation": _reputation(c.rating, c.reviews),
+                "consensus": float(a.get("consensus", 1)) - 0.5 * float(a.get("rating_spread") or 0),
+                "popularity": math.log1p(c.reviews or 0), "value": float(a["price_level"]) if a.get("price_level") else None,
+                "risk": risk + (0.35 if a.get("meets_filters") is False else 0.0)}
+    if pid == "research_seo":
+        return {"visibility": float(a.get("visibility", 0)), "coverage": float(a.get("coverage", 0)),
+                "rank": float(a["avg_position"]) if a.get("avg_position") else None, "ai": float(a.get("ai_count", 0)), "risk": risk}
     if pid == "research_ip":
         yr = a.get("year")
         return {"relevance": a.get("relevance"), "impact": math.log1p(a.get("cited_by", 0)) if c.category == "paper" else 1.5,
@@ -160,6 +202,10 @@ def decision_pool(pid: str, cands: list[Candidate], slots: dict) -> list[Candida
         return [c for c in base if c.category == "job"]
     if pid == "research_ip":
         return [c for c in base if c.category in ("paper", "patent")]
+    if pid == "lifeops_local":
+        return venue_entities(base, slots)
+    if pid == "research_seo":
+        return domain_entities(base, slots)[0]
     return base
 
 
@@ -176,6 +222,8 @@ def score(pid: str, pool: list[Candidate], weights: dict[str, float], slots: dic
         if c.anomaly:  # anomalies can never silently win
             c.score = round(c.score * 0.7, 4)
         if c.attributes.get("within_budget") is False:  # budget is a constraint, not just a preference
+            c.score = round(c.score * 0.8, 4)
+        if c.attributes.get("meets_filters") is False:  # rating / price-level filters are constraints too
             c.score = round(c.score * 0.8, 4)
     pool.sort(key=lambda c: -(c.score or 0))
     return pool
@@ -199,6 +247,9 @@ def confidence(ranked: list[Candidate], verification: dict, coverage: float) -> 
     if top.attributes.get("within_budget") is False:
         conf -= 0.25
         reasons.append("no option within budget")
+    if top.attributes.get("meets_filters") is False:
+        conf -= 0.15
+        reasons.append("top option misses the requested rating / price-level filters")
     if margin < 0.01:
         reasons.append("top options are nearly tied")
     return round(max(0.0, min(1.0, conf)), 3), reasons
@@ -218,6 +269,22 @@ async def rationale(session_id: str, pid: str, ranked: list[Candidate], slots: d
     if out:
         return out.strip()
     t = top[0]
+    if pid == "research_seo":
+        tr = next((c for c in ranked if c.attributes.get("tracked")), None)
+        lead = f"“{t.title}” leads the multi-engine visibility ranking (CTR-weighted score {t.attributes.get('visibility', 0):.1f}, found in {t.attributes.get('found_engines')}/{t.attributes.get('engines_polled')} engines)"
+        if tr and tr is not t:
+            where = f"#{ranked.index(tr) + 1} of {len(ranked)}"
+            mine = f"; tracked domain {tr.title} sits {where} with visibility {tr.attributes.get('visibility', 0):.1f}, avg position {tr.attributes.get('avg_position') or 'n/a'}, AI-cited by {tr.attributes.get('ai_count', 0)} engine(s)"
+        elif tr:
+            mine = f"; that is the tracked domain, AI-cited by {tr.attributes.get('ai_count', 0)} engine(s)"
+        else:
+            mine = "; the tracked domain does not appear in any polled engine"
+        return lead + mine + "."
+    if pid == "lifeops_local":
+        plats = t.attributes.get("platforms") or {}
+        return (f"“{t.title}” ranks #1 (score {t.score:.2f}): blended ★{t.rating} over {t.reviews:,} reviews, cross-verified on "
+                f"{len(plats)} platform(s) ({', '.join(plats)}), rating spread {t.attributes.get('rating_spread', 0)}"
+                f"{'' if t.attributes.get('meets_filters', True) else ' — note: misses your filters'}.")
     best_dims = sorted(t.breakdown.items(), key=lambda x: -x[1])[:2]
     parts = [f"“{t.title}” ranks #1 with score {t.score:.2f}"]
     if t.price:
@@ -234,7 +301,13 @@ async def analyze(session_id: str, pid: str, cands: list[Candidate], slots: dict
     s = get_settings()
     bus.publish(session_id, "agent.start", {"agent": "analyst", "label": "Building decision matrix"}, agent="analyst")
     anomalies = await detect_anomalies(session_id, cands)
-    pool = decision_pool(pid, cands, slots)
+    seo_ctx: dict = {}
+    if pid == "research_seo":
+        pool, seo_ctx = domain_entities([c for c in cands if not c.attributes.get("duplicate")], slots)
+    else:
+        pool = decision_pool(pid, cands, slots)
+    if pid in ("lifeops_local", "research_seo"):
+        anomalies += await detect_entity_anomalies(session_id, pid, pool, slots)
     ranked = score(pid, pool, weights, slots)
     # recommendations for supplier playbook: diversify vendors
     if pid == "pro_supplier":
@@ -258,17 +331,24 @@ async def analyze(session_id: str, pid: str, cands: list[Candidate], slots: dict
                                                        if k in ("stops", "nights", "flight_price", "hotel_total", "within_budget",
                                                                 "moq", "lot_size", "salary", "company", "location", "posted", "remote",
                                                                 "year", "cited_by", "number", "delivery", "condition", "snippet",
-                                                                "maps_rating", "departure", "arrival", "flight_numbers", "authors")}}
+                                                                "maps_rating", "departure", "arrival", "flight_numbers", "authors", "consensus", "platforms",
+                                                                "price_level", "rating_spread", "meets_filters", "address", "neighborhood",
+                                                                "positions", "ai_cited", "ai_count", "visibility", "coverage", "avg_position",
+                                                                "share_of_voice", "tracked", "best_position", "found_engines",
+                                                                "engines_polled", "domain")}}
                  for c in ranked[:12]],
     }
+    insights = build_insights(pid, ranked, cands, slots, {**ctx, **seo_ctx})
     result = {"matrix": matrix, "ranked": ranked, "confidence": conf, "low_confidence_reasons": reasons,
-              "rationale": why, "anomalies": anomalies, "threshold": s.confidence_threshold,
+              "rationale": why, "anomalies": anomalies, "threshold": s.confidence_threshold, "insights": insights,
               "context": {k: v for k, v in ctx.items() if k in ("price_insights", "fx", "trend", "news")}}
     bus.publish(session_id, "analyst.matrix", {"matrix": matrix, "confidence": conf, "reasons": reasons, "rationale": why,
-                                                "threshold": s.confidence_threshold, "context": result["context"]}, agent="analyst")
+                                                "threshold": s.confidence_threshold, "context": result["context"],
+                                                "insights": insights}, agent="analyst")
     # record observations -> future baselines for anomaly detection
+    await record_entity_observations(pid, ranked, slots)
     seen_keys: set[str] = set()
-    for c in [x for x in cands if x.category not in ("news", "place") and not x.attributes.get("duplicate")][:80] + ranked[:12]:
+    for c in [x for x in cands if x.category not in ("news", "place", "event", "stay", "venue", "serp", "ai_citation") and not x.attributes.get("duplicate")][:80] + ranked[:12]:
         k = item_key(c)
         if c.price and k not in seen_keys:
             seen_keys.add(k)

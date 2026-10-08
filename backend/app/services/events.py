@@ -39,6 +39,14 @@ class EventBus:
     def history(self, session_id: str, after: int = 0) -> list[dict]:
         return [e for e in self._history.get(session_id, []) if e["seq"] > after]
 
+    def has(self, session_id: str) -> bool:
+        return bool(self._history.get(session_id))
+
+    def load(self, session_id: str, events: list[dict]) -> None:
+        """Rehydrate a session's event history (e.g. after a Render restart) so late SSE clients can replay it."""
+        self._history[session_id] = list(events)[-self._max:]
+        self._seq[session_id] = max((e.get("seq", 0) for e in events), default=0)
+
     def subscribe(self, session_id: str) -> asyncio.Queue:
         q: asyncio.Queue = asyncio.Queue(maxsize=5000)
         self._subs[session_id].append(q)

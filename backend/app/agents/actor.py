@@ -9,6 +9,7 @@ docs) — no workflow server."""
 from __future__ import annotations
 
 import time
+from datetime import datetime, timedelta
 from typing import Any
 
 from ..models import ActionProposal, Candidate
@@ -25,12 +26,22 @@ def _c(c: Candidate) -> dict:
 
 
 def propose(session_id: str, pid: str, ranked: list[Candidate], slots: dict, prompt: str, rationale: str,
-            conf: float, matrix_rows: list[dict]) -> list[ActionProposal]:
+            conf: float, matrix_rows: list[dict], insights: dict | None = None) -> list[ActionProposal]:
     if not ranked:
         return []
     top = ranked[0]
     acts: list[ActionProposal] = []
-    report_md = docs.markdown_report(f"COMPASS decision — {pid}", prompt, rationale, matrix_rows, conf)
+    extra: list[str] = []
+    if insights and insights.get("kind") == "seo":
+        extra = ["## Engine grid", "", "| Engine | Position | Leader |", "|---|---|---|"] + \
+                [f"| {g['label']} | {('#' + str(g['position'])) if g['found'] else 'not in top results'} | {g.get('leader') or '—'} |" for g in insights["grid"]] + \
+                ["", "**AI citations:** " + (", ".join(f"{a['label']}: {'cited ✅' if a['cited'] else 'not cited'}" for a in insights["ai"]) or "n/a")]
+    elif insights and insights.get("kind") == "venues":
+        extra = ["## Platform consensus", ""] + [f"- **{v['title']}** — " + ", ".join(f"{k} ★{p.get('rating')}" for k, p in (v.get("platforms") or {}).items())
+                                                    for v in insights["venues"][:5]]
+        if insights.get("events"):
+            extra += ["", "## What's on", ""] + [f"- {e['title']} ({e.get('when') or 'soon'})" for e in insights["events"][:4]]
+    report_md = docs.markdown_report(f"COMPASS decision — {pid}", prompt, rationale, matrix_rows, conf, extra or None)
 
     if pid == "lifeops_trip":
         f = top.attributes.get("flight", {})
@@ -95,6 +106,35 @@ def propose(session_id: str, pid: str, ranked: list[Candidate], slots: dict, pro
                                    title="Block interview-prep time (.ics)", description="2 prep sessions in your calendar.",
                                    payload={"events": [{"title": f"Interview prep — {top.attributes.get('company')}",
                                                         "description": top.title}]}))
+    elif pid == "lifeops_local":
+        plats = top.attributes.get("platforms") or {}
+        sat = datetime.utcnow() + timedelta(days=(5 - datetime.utcnow().weekday()) % 7 or 7)
+        acts.append(ActionProposal(session_id=session_id, type="booking_flow", risk="high",
+                                   title=f"Reserve a table · {top.title}",
+                                   description=f"Cross-verified on {len(plats)} platform(s) ({', '.join(plats)}) · blended ★{top.rating}. "
+                                               "Playwright opens the listing, checks hours/availability, fills the party details and stops before confirming.",
+                                   payload={"candidate": _c(top), "url": top.url,
+                                            "steps": ["Open venue listing", "Verify rating & hours match the matrix", "Select party size & time",
+                                                      "Fill guest details (from profile)", "Stop before confirmation for human"]}))
+        acts.append(ActionProposal(session_id=session_id, type="calendar_invite", risk="low", requires_approval=False,
+                                   title="Add the table to calendar (.ics)", description="Saturday 19:00 hold with the address and platform links.",
+                                   payload={"events": [{"title": f"🍽 {top.title}", "start": sat.strftime("%Y-%m-%d") + " 19:00",
+                                                        "end": sat.strftime("%Y-%m-%d") + " 21:00", "location": top.attributes.get("address") or slots.get("city", ""),
+                                                        "description": f"{slots.get('query', '')} · ★{top.rating} on {', '.join(plats)}"}]}))
+        acts.append(ActionProposal(session_id=session_id, type="watch", risk="low", title="Watch this venue's rating",
+                                   description="Re-poll Google Maps on a schedule; alert + auto re-plan if the rating drops ≥ 8 %.",
+                                   payload={"engine": "google_maps", "label": f"{top.title} ★", "metric": "rating",
+                                            "params": {"q": f"{slots.get('query')} in {slots.get('city')}", "type": "search", "hl": "en", "gl": slots.get("gl", "us")},
+                                            "target_title": (plats.get("Google Maps") or {}).get("title") or top.title, "baseline_price": top.rating}))
+    elif pid == "research_seo":
+        dom = slots.get("domain")
+        tr = next((c for c in ranked if c.attributes.get("tracked")), top)       # the TRACKED domain, not the SERP leader
+        pos = (tr.attributes.get("positions") or {})
+        acts.append(ActionProposal(session_id=session_id, type="watch", risk="low", title=f"Watch {dom} rank on Google",
+                                   description="Poll Google organic on a schedule; alert + auto re-plan if the tracked domain slips ≥ 8 % (or ≥ 3 positions).",
+                                   payload={"engine": "google", "label": f"{dom} · {slots.get('keyword')}", "metric": "position", "target_domain": dom,
+                                            "params": {"q": slots.get("keyword"), "gl": slots.get("gl", "us"), "hl": slots.get("hl", "en")},
+                                            "target_title": dom, "baseline_price": float(pos.get("google")) if pos.get("google") else None}))
     elif pid == "research_ip":
         acts.append(ActionProposal(session_id=session_id, type="watch", risk="low", title="Weekly prior-art watch",
                                    description="Re-run Patents sweep weekly; notify on new filings.",
@@ -143,7 +183,8 @@ async def execute(action: ActionProposal) -> dict[str, Any]:
     elif action.type == "watch":
         from ..watch import create_watch  # local import avoids cycle
         w = await create_watch(session_id=sid, label=p.get("label") or "watch", engine=p["engine"], params=p["params"],
-                               target_title=p.get("target_title"), baseline_price=p.get("baseline_price"))
+                               target_title=p.get("target_title"), baseline_price=p.get("baseline_price"),
+                               metric=p.get("metric", "price"), target_domain=p.get("target_domain"))
         receipt["watch"] = w
     receipt["elapsed_s"] = round(time.time() - t0, 2)
     receipt["executed_at"] = time.time()

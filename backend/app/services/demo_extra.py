@@ -48,6 +48,9 @@ GENERIC_DOMAINS = [
     "quora.com", "linkedin.com", "amazon.com", "bbc.com", "theverge.com", "wired.com", "investopedia.com", "healthline.com",
 ]
 BRAND_DOMAINS = ["serpapi.com", "scrapingbee.com", "zenserp.com", "brightdata.com", "apify.com", "oxylabs.io"]
+# well-known brands a user is likely to track: always present in a demo SERP (at varying strength) so a tracked domain is findable
+COMMON_BRANDS = ["hubspot.com", "stripe.com", "salesforce.com", "shopify.com", "atlassian.com", "zendesk.com", "notion.so", "slack.com",
+                 "mailchimp.com", "semrush.com", "ahrefs.com", "moz.com", "openai.com", "vercel.com"]
 REGIONAL = {
     "baidu": ["baike.baidu.com", "zhihu.com", "csdn.net", "jianshu.com", "bilibili.com", "36kr.com"],
     "yandex": ["dzen.ru", "habr.com", "vc.ru", "kinopoisk.ru", "ru.wikipedia.org"],
@@ -56,16 +59,30 @@ REGIONAL = {
 PAGE_WORDS = ["Guide", "Overview", "Tutorial", "Pricing", "Documentation", "Review", "Comparison", "Best practices", "FAQ", "Examples"]
 
 
+# keyword -> brands that realistically own that topic (their strength is boosted so a tracked brand is findable in the demo SERPs)
+TOPIC_LEADERS = [
+    (("serp", "search api", "scrap", "google search"), ["serpapi.com", "scrapingbee.com", "zenserp.com", "brightdata.com"]),
+    (("crm", "sales", "marketing"), ["hubspot.com", "salesforce.com", "zendesk.com", "mailchimp.com"]),
+    (("payment", "checkout", "billing"), ["stripe.com", "shopify.com"]),
+    (("seo", "keyword", "backlink"), ["semrush.com", "ahrefs.com", "moz.com"]),
+    (("project", "wiki", "docs", "notes"), ["atlassian.com", "notion.so", "slack.com"]),
+    (("deploy", "hosting", "frontend"), ["vercel.com", "cloudflare.com", "github.com"]),
+    (("ai ", "llm", "gpt", "chatbot"), ["openai.com", "ibm.com", "medium.com"]),
+]
+
+
 def _universe(q: str) -> list[tuple[str, float]]:
-    """(domain, base_strength) for a keyword — shared by every engine."""
+    """(domain, base_strength) for a keyword - shared by every engine (so cross-engine corroboration is meaningful)."""
     r = seed("universe", q.lower())
+    qs = q.lower() + " "
     pool = r.sample(GENERIC_DOMAINS, 14)
-    qs = q.lower()
-    brands = list(BRAND_DOMAINS)
-    if not any(w in qs for w in ("serp", "scrap", "api", "search")):
-        brands = brands[:2]          # still present (the tracked brand must be findable), just weaker
-    items = [(d, r.uniform(0.35, 1.0)) for d in pool] + [(b, r.uniform(0.15, 0.95)) for b in brands]
-    return items
+    leaders = {d for keys, ds in TOPIC_LEADERS if any(k in qs for k in keys) for d in ds}
+    items: dict[str, float] = {d: r.uniform(0.35, 0.92) for d in pool}
+    for b in BRAND_DOMAINS + COMMON_BRANDS:
+        items.setdefault(b, r.uniform(0.18, 0.55))              # off-topic brands: present, but weak
+    for d in leaders:
+        items[d] = r.uniform(0.72, 1.0)                           # topic owners: strong in (almost) every engine
+    return list(items.items())
 
 
 def _serp_rows(engine: str, q: str, drift_r: random.Random | None, _offset: int = 0) -> list[tuple[str, int]]:
@@ -76,10 +93,10 @@ def _serp_rows(engine: str, q: str, drift_r: random.Random | None, _offset: int 
         extra = REGIONAL[engine]
         scored = [(d, s * 0.7) for d, s in scored if er.random() < 0.65] + [(d, er.uniform(0.55, 1.0)) for d in extra[:4]]
     scored.sort(key=lambda x: -x[1])
-    rows = [(d, i + 1) for i, (d, _) in enumerate(scored[:14])]
+    rows = [(d, i + 1) for i, (d, _) in enumerate(scored[:20])]
     off = _offset
     if off:                                    # pagination: the engine skips `off` results (start / first / b / pn / p)
-        rows = [(d, off + i + 1) for i, (d, _) in enumerate(scored[off:off + 14])]
+        rows = [(d, off + i + 1) for i, (d, _) in enumerate(scored[off:off + 20])]
     if drift_r is not None:  # watch drift: tracked domain wobbles by ±1 between polls
         rows = [(d, max(1, p + (drift_r.choice([-1, 0, 0, 1]) if d == "serpapi.com" else 0))) for d, p in rows]
         rows.sort(key=lambda x: x[1])

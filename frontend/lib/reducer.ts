@@ -180,6 +180,8 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       return {
         ...n,
         matrix: d.matrix,
+        prevInsights: s.insights ?? null,
+        insights: d.insights ?? null,
         confidence: d.confidence,
         reasons: d.reasons || [],
         rationale: d.rationale,
@@ -225,6 +227,9 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       return { ...n, watchTicks: [...s.watchTicks, d].slice(-30) }
     case 'watch.repoll':
       return { ...n, disruption: d.disruption ?? s.disruption }
+
+    case 'session.rehydrated':
+      return { ...n, rehydrated: true }
 
     case 'session.complete':
       return { ...n, credits: d.credits ?? s.credits, caveat: d.caveat, status: 'done' }

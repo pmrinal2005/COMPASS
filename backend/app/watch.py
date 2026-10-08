@@ -14,6 +14,7 @@ from typing import Any
 from .config import get_settings
 from .models import new_id
 from .services.demo_data import demo_response
+from .services.entities import registrable_domain, same_entity
 from .services.events import bus
 from .services.normalize import normalize
 from .services.notify import telegram
@@ -21,12 +22,18 @@ from .services.serpapi import CreditMeter, serp
 from .services.store import store
 
 CATEGORY = {"google_flights": "flight", "google_hotels": "hotel", "google_shopping": "product", "amazon": "product",
-            "walmart": "product", "ebay": "product", "google_patents": "patent", "google_jobs": "job"}
+            "walmart": "product", "ebay": "product", "google_patents": "patent", "google_jobs": "job",
+            "google_maps": "venue", "yelp": "venue", "tripadvisor": "venue", "google": "serp", "bing": "serp", "duckduckgo": "serp",
+            "yahoo": "serp", "yandex": "serp", "baidu": "serp", "naver": "serp"}
+METRICS = ("price", "rating", "position")
 
 
 async def create_watch(*, session_id: str | None, label: str, engine: str, params: dict, target_title: str | None,
-                       baseline_price: float | None, threshold_pct: float = 8.0, cadence_minutes: int = 30) -> dict:
-    w = {"id": new_id("w_"), "session_id": session_id, "label": label, "engine": engine, "params": params,
+                       baseline_price: float | None, threshold_pct: float = 8.0, cadence_minutes: int = 30,
+                       metric: str = "price", target_domain: str | None = None) -> dict:
+    """A watch tracks ONE number per poll: a price (default), a venue rating, or a domain's rank position."""
+    w = {"id": new_id("w_"), "session_id": session_id, "label": label, "engine": engine, "params": params, "metric": metric if metric in METRICS else "price",
+         "target_domain": target_domain,
          "target_title": target_title, "baseline_price": baseline_price, "last_price": baseline_price,
          "threshold_pct": threshold_pct, "cadence_minutes": cadence_minutes, "active": True,
          "last_checked": None, "created_at": time.time(), "history": [], "alerts": 0}
@@ -39,6 +46,14 @@ async def create_watch(*, session_id: str | None, label: str, engine: str, param
 def _match(cands, w) -> Any:
     if not cands:
         return None
+    if w.get("metric") == "position" and w.get("target_domain"):
+        dom = registrable_domain(w["target_domain"])
+        rows = [c for c in cands if registrable_domain(c.attributes.get("domain") or c.source) == dom]
+        return min(rows, key=lambda c: c.attributes.get("position") or 99) if rows else None
+    if w.get("metric") == "rating":
+        t = w.get("target_title") or ""
+        rows = [c for c in cands if t and same_entity(c.title, t)]
+        return max(rows, key=lambda c: c.reviews or 0) if rows else None
     t = (w.get("target_title") or "").lower()
     if t:
         for c in cands:
@@ -70,7 +85,16 @@ async def check_watch(w: dict, *, force: bool = False) -> dict:
         data = res["data"]
     cands, _ = normalize(w["engine"], data, CATEGORY.get(w["engine"], "generic"), w["params"])
     hit = _match(cands, w)
-    price = hit.price if hit else None
+    metric = w.get("metric", "price")
+    if metric == "rating":
+        value = hit.rating if hit else None
+    elif metric == "position":
+        value = float(hit.attributes.get("position")) if hit else None
+        if value is None and not hit and cands:
+            value = 31.0                                   # tracked domain fell out of the top 30 -> worst observable rank
+    else:
+        value = hit.price if hit else None
+    price = value
     hist = [h["price"] for h in w.get("history", []) if h.get("price")]
     base = w.get("baseline_price") or (hist[0] if hist else price)
     change_pct = ((price - base) / base * 100) if (price and base) else 0.0
@@ -79,16 +103,23 @@ async def check_watch(w: dict, *, force: bool = False) -> dict:
         med = statistics.median(hist)
         mad = statistics.median([abs(x - med) for x in hist]) or 0.05 * med
         z = 0.6745 * (price - med) / mad
-    triggered = bool(price and (abs(change_pct) >= w.get("threshold_pct", 8.0) or abs(z) >= 3.0))
+    if metric == "rating":                                  # only a *drop* is bad news for a venue
+        bad = change_pct <= -w.get("threshold_pct", 8.0) or z <= -3.0
+    elif metric == "position":                              # a higher number = worse rank
+        bad = change_pct >= w.get("threshold_pct", 8.0) or (price and base and price - base >= 3) or z >= 3.0
+    else:
+        bad = abs(change_pct) >= w.get("threshold_pct", 8.0) or abs(z) >= 3.0
+    triggered = bool(price and bad)
     w["history"] = (w.get("history", []) + [{"ts": now, "price": price}])[-60:]
     w["last_price"] = price
     w["last_checked"] = now
-    out = {"id": w["id"], "label": w["label"], "price": price, "baseline": base, "change_pct": round(change_pct, 2),
+    out = {"id": w["id"], "label": w["label"], "metric": metric, "price": price, "baseline": base, "change_pct": round(change_pct, 2),
            "z": round(z, 2), "triggered": triggered, "matched": hit.title if hit else None}
     if triggered:
         w["alerts"] = w.get("alerts", 0) + 1
+        fmt = (lambda v: f"${v:,.0f}") if metric == "price" else ((lambda v: f"★{v:.1f}") if metric == "rating" else (lambda v: f"#{v:.0f}"))
         out["notify"] = await telegram(f"<b>COMPASS watch</b> · {w['label']}\n{hit.title if hit else ''}\n"
-                                       f"${base:,.0f} → ${price:,.0f} ({change_pct:+.1f}%)")
+                                       f"{fmt(base)} → {fmt(price)} ({change_pct:+.1f}%)")
     await store.put("watches", w)
     if w.get("session_id"):
         bus.publish(w["session_id"], "watch.tick", out, agent="researcher")

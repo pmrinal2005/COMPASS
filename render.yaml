@@ -10,6 +10,8 @@ services:
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
     autoDeploy: true
+    # NOTE: free web services sleep after ~15 min idle (cold start <= 60 s). .github/workflows/keep-warm.yml pings
+    # /api/health every 10 min; run migrations 0001 + 0002 in Supabase BEFORE the first deploy.
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.7
@@ -21,6 +23,10 @@ services:
         value: "*"            # tighten to https://<your-app>.vercel.app
       - key: SERPAPI_KEY
         sync: false           # empty => Demo Mode (zero credits)
+      - key: SESSION_CREDIT_BUDGET
+        value: "30"           # per-session SerpApi credit meter (1 live search = 1 credit)
+      - key: MAX_REPLANS
+        value: "2"            # hard cap on bounded re-planning loops
       - key: GROQ_API_KEY
         sync: false
       - key: GEMINI_API_KEY

@@ -121,6 +121,33 @@ export interface RagHit {
   candidate_id?: string
 }
 
+export interface VenuePlatform { title: string; rating?: number | null; reviews?: number | null; price_level?: number | null; url?: string | null }
+export interface VenueInsight {
+  id: string; title: string; rating?: number | null; reviews?: number | null; verified: boolean; anomaly?: string | null
+  price_level?: number | null; spread?: number; meets_filters?: boolean; platforms: Record<string, VenuePlatform>; score?: number
+}
+export interface EventInsight { title: string; when?: string | null; venue?: string | null; url?: string | null; tickets?: string[] }
+export interface SeoGridCell { engine: string; label: string; weight: number; position: number | null; found: boolean; ctr: number; leader?: string | null; leader_pos?: number | null }
+export type Insights =
+  | { kind: 'venues'; city?: string; query?: string; platforms: string[]; yelp_supported: boolean; min_rating?: number; price_cap?: number; venues: VenueInsight[]; events: EventInsight[] }
+  | {
+      kind: 'seo'; domain?: string; keyword?: string; market?: string; grid: SeoGridCell[]; ai: { engine: string; label: string; cited: boolean }[]
+      rank_of: number | null; total_domains: number; visibility: number; share_of_voice: number; coverage: number; avg_position: number | null
+      anomaly?: string | null; leaders: { domain: string; visibility: number; found: number }[]; ai_text?: Record<string, string>
+    }
+  | { kind: 'trip'; events: EventInsight[]; stays: { title: string; price?: number | null; rating?: number | null; reviews?: number | null; url?: string | null; verified: boolean; qualifier?: string }[] }
+
+export interface Playbook {
+  id: string; name: string; ecosystem: string; lens: Lens; description: string; keywords: string[]; examples: string[]
+  engine_list: string[]; fallback_engine_list: string[]; dimensions: Record<string, { weight: number; direction: 'min' | 'max'; label: string }>; actions: string[]
+}
+
+export interface Account {
+  demo: boolean; account_status?: string; plan_name?: string; plan_monthly_price?: number | null; plan_renewal_date?: string | null
+  searches_per_month?: number; plan_searches_left?: number; extra_credits?: number; total_searches_left?: number; this_month_usage?: number
+  this_hour_searches?: number; last_hour_searches?: number; account_rate_limit_per_hour?: number
+}
+
 export interface Credits {
   budget: number
   spent: number
@@ -145,6 +172,8 @@ export interface SessionState {
   rag?: { indexed: number; backend: string; embedder: string; hits: RagHit[] }
   verification?: { total: number; verified: number; ratio: number; flagged: any[] }
   matrix?: Matrix
+  insights?: Insights | null
+  prevInsights?: Insights | null
   prevOrder: string[]
   confidence?: number
   threshold?: number
@@ -161,6 +190,7 @@ export interface SessionState {
   disruption?: any
   watches: any[]
   watchTicks: any[]
+  rehydrated?: boolean
   error?: string
   events: CompassEvent[]
   round: number

@@ -1,4 +1,4 @@
-import type { ActionProposal, Lens } from './types'
+import type { Account, ActionProposal, Lens, Playbook } from './types'
 
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '')
 
@@ -35,12 +35,19 @@ export interface Health {
   live_serpapi_calls: number
 }
 
+export type DisruptKind = 'price_spike' | 'unavailable' | 'rating_drop' | 'rank_drop'
+
 export const api = {
+  account: (force = false) => fetchJSON<Account>(`/api/account${force ? '?force=true' : ''}`, { timeoutMs: 15000 }),
+  playbooks: () => fetchJSON<Playbook[]>('/api/playbooks', { timeoutMs: 15000 }),
+  locations: (q: string, limit = 5) => fetchJSON<any[]>(`/api/locations?q=${encodeURIComponent(q)}&limit=${limit}`),
+  watches: () => fetchJSON<any[]>('/api/watches'),
+  tickWatch: (wid: string) => fetchJSON(`/api/watches/${wid}/check`, { method: 'POST', timeoutMs: 60000 }),
   health: (timeoutMs = 8000) => fetchJSON<Health>('/api/health', { timeoutMs }),
   createSession: (prompt: string, lens: Lens, priorities?: Record<string, number>) =>
     fetchJSON<{ session_id: string }>('/api/sessions', { method: 'POST', body: JSON.stringify({ prompt, lens, priorities }) }),
   confirm: (sid: string, choice: 'all' | 'essential') => fetchJSON(`/api/sessions/${sid}/confirm?choice=${choice}`, { method: 'POST' }),
-  disrupt: (sid: string, kind: 'price_spike' | 'unavailable', pct = 45) =>
+  disrupt: (sid: string, kind: DisruptKind, pct = 45) =>
     fetchJSON(`/api/sessions/${sid}/disrupt?kind=${kind}&pct=${pct}`, { method: 'POST' }),
   repoll: (sid: string) => fetchJSON(`/api/sessions/${sid}/repoll`, { method: 'POST' }),
   approve: (aid: string) =>

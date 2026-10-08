@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useReducer, useRef } from 'react'
-import { api, API_URL, hasBackend } from './api'
+import { api, API_URL, hasBackend, type DisruptKind } from './api'
 import { initialState, reduce } from './reducer'
 import type { ActionProposal, CompassEvent, Lens, SessionState } from './types'
 import recordings from './demo/recordings.json'
@@ -15,7 +15,7 @@ interface Recording {
   lens: Lens
   events: RecEvent[]
   receipts: Record<string, any>
-  disruption?: { events: RecEvent[]; receipts: Record<string, any> }
+  disruption?: { kind?: string; events: RecEvent[]; receipts: Record<string, any> }
 }
 const REC = recordings as unknown as Record<string, Recording>
 
@@ -23,6 +23,8 @@ const REC = recordings as unknown as Record<string, Recording>
 export function pickScenario(prompt: string, lens: Lens): string {
   const p = prompt.toLowerCase()
   const rules: [string, RegExp][] = [
+    ['seo', /\bseo\b|serp|rank(ing)?|visibility|keyword|backlink|search engines?|ai mode|ai overview|cited|share of voice|\b[a-z0-9-]+\.(com|io|ai|org|net)\b/],
+    ['tacos', /restaurant|taco|ramen|pizza|sushi|brunch|dinner|lunch|coffee|cafe|bbq|burger|yelp|tripadvisor|eat\b|food|near me|nearby|table/],
     ['tokyo', /trip|flight|hotel|travel|vacation|itinerary|getaway|weekend|fly/],
     ['earbuds', /supplier|bulk|wholesale|moq|rfq|vendor|procure|sourc|oem|manufactur/],
     ['prior_art', /patent|prior art|research|paper|scholar|landscape|literature|novelty/],
@@ -31,6 +33,14 @@ export function pickScenario(prompt: string, lens: Lens): string {
   ]
   for (const [k, re] of rules) if (re.test(p) && REC[k]) return k
   return lens === 'pro' ? 'earbuds' : 'tokyo'
+}
+
+/** Which injected failure fits the active scenario (offline replay + live backend map it the same way). */
+export const DISRUPTION_FOR: Record<string, { kind: DisruptKind; label: string }> = {
+  tokyo: { kind: 'price_spike', label: 'Price spike +45%' },
+  headphones: { kind: 'price_spike', label: 'Price spike +45%' },
+  tacos: { kind: 'rating_drop', label: 'Rating drop −45%' },
+  seo: { kind: 'rank_drop', label: 'Rank drop −8 positions' },
 }
 
 export const SCENARIOS = Object.entries(REC).map(([key, r]) => ({ key, prompt: r.prompt, lens: r.lens }))
@@ -128,13 +138,13 @@ export function useSession(lens: Lens, backend: BackendMode) {
   )
 
   const disrupt = useCallback(
-    async (kind: 'price_spike' | 'unavailable' = 'price_spike') => {
+    async (kind: DisruptKind = 'price_spike') => {
       const s = stateRef.current
       if (!s.sessionId) return
       if (s.replay) {
         const rec = scenario.current ? REC[scenario.current] : null
         if (!rec?.disruption) {
-          dispatch({ kind: 'patch', patch: { error: 'This offline scenario has no recorded disruption — try the Tokyo trip or headphones deal.' } })
+          dispatch({ kind: 'patch', patch: { error: 'This offline scenario has no recorded disruption — try the Tokyo trip, headphones deal, tacos or SEO scenario.' } })
           return
         }
         play(rec.disruption.events)
@@ -197,7 +207,9 @@ export function useSession(lens: Lens, backend: BackendMode) {
     if (!stateRef.current.replay) await api.modify(a.id, payload, note).catch(() => {})
   }, [])
 
+  const scenarioKey = () => scenario.current
+
   const icsUrl = (a: ActionProposal) => (!state.replay && API_URL ? `${API_URL}/api/actions/${a.id}/ics` : null)
 
-  return { state, start, disrupt, repoll, confirmBudget, approve, reject, modify, icsUrl, stop }
+  return { state, start, disrupt, repoll, confirmBudget, approve, reject, modify, icsUrl, stop, scenarioKey }
 }

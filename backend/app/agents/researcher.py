@@ -14,7 +14,7 @@ from typing import Any
 
 from ..config import get_settings
 from ..models import Candidate, EngineCall
-from ..services.entities import registrable_domain, same_entity
+from ..services.entities import cluster_venues, registrable_domain, same_entity
 from ..services.events import bus
 from ..services.llm import embedder
 from ..services.normalize import normalize
@@ -80,6 +80,7 @@ def apply_disruption(session_id: str, cands: list[Candidate], disruption: dict |
                 c.price = round(old * (1 + pct / 100), 2)
                 c.attributes["disrupted"] = {"kind": kind, "old_price": old, "new_price": c.price}
         out.append(c)
+    disruption["_hit"] = hit
     if hit:
         bus.publish(session_id, "watch.disruption_detected", {"kind": kind, "target": disruption.get("target_title") or disruption.get("target_domain")
                                                                or disruption.get("target_key"), "pct": pct, "matches": hit}, agent="researcher")
@@ -295,13 +296,36 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
             src.append("google_scholar")
         p.corroborating_sources = src
 
+    # ---- venues: the SAME place must be seen on >=2 independent platforms (Google Maps / Yelp / Tripadvisor)
+    #      with ratings that agree (|delta| <= 0.8 stars) - fuzzy-name clustering handles per-platform naming noise
+    venues = by_cat.get("venue", [])
+    if venues:
+        for members in cluster_venues(venues).values():
+            plats = {m.attributes.get("platform") or m.source for m in members}
+            ratings = [m.rating for m in members if m.rating]
+            agree = len(ratings) < 2 or (max(ratings) - min(ratings)) <= 0.8
+            for m in members:
+                m.corroborating_sources = sorted(plats) if agree else [m.attributes.get("platform") or m.source]
+                m.attributes["platform_consensus"] = len(plats)
+
+    # ---- SERP: a domain is a *verified* ranking only when >=2 independent engines list it (AI citations count too)
+    serp_rows = by_cat.get("serp", []) + by_cat.get("ai_citation", [])
+    if serp_rows:
+        seen_in: dict[str, set[str]] = {}
+        for r_ in serp_rows:
+            d = registrable_domain(r_.attributes.get("domain") or r_.source)
+            seen_in.setdefault(d, set()).add(r_.engine)
+        for r_ in serp_rows:
+            d = registrable_domain(r_.attributes.get("domain") or r_.source)
+            r_.corroborating_sources = sorted(seen_in.get(d, {r_.engine}))
+
     for c in cands:
-        if c.category in ("news", "place"):
-            c.verified = True  # context signals, not decision facts
+        if c.category in ("news", "place", "event", "stay"):
+            c.verified = True  # context signals (news / map listings / events / alternative stays), not decision facts
             continue
         c.verified = len(set(c.corroborating_sources)) >= min_sources
 
-    decision = [c for c in cands if c.category not in ("news", "place") and not c.attributes.get("duplicate")]
+    decision = [c for c in cands if c.category not in ("news", "place", "event", "stay") and not c.attributes.get("duplicate")]
     verified = [c for c in decision if c.verified]
     return {"total": len(decision), "verified": len(verified),
             "flagged": [{"id": c.id, "title": c.title, "sources": c.corroborating_sources} for c in decision if not c.verified][:20],

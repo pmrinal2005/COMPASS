@@ -11,6 +11,7 @@ results are surfaced with a confidence caveat instead."""
 from __future__ import annotations
 
 import asyncio
+import json
 import time
 from typing import TypedDict
 
@@ -122,7 +123,8 @@ async def node_research(state: State) -> State:
     ctx = {**state.get("context", {}), **ctx}
     await researcher.index_and_retrieve(sid, state["prompt"], merged)
     slim_log = [{k: v for k, v in l.items() if k != "raw"} for l in log]
-    disrupted = any(c.attributes.get("disrupted") for c in cands) or bool(state.get("disrupted"))
+    disrupted = any(c.attributes.get("disrupted") for c in cands) or bool(state.get("disrupted")) \
+        or bool((rt(sid).disruption or {}).get("_hit"))      # e.g. kind=unavailable removes the evidence entirely
     return {"disrupted": disrupted,"candidates": [c.model_dump() for c in merged], "context": ctx,
             "call_log": state.get("call_log", []) + slim_log,
             "coverage": max(coverage, state.get("coverage", 0) if state.get("replans", 0) > 0 else coverage), "fresh": False}
@@ -199,7 +201,7 @@ async def node_act(state: State) -> State:
     if state.get("confidence", 0) < get_settings().confidence_threshold:
         caveat = f"Partial result: confidence {state.get('confidence', 0):.0%} after {state.get('replans', 0)} re-plan(s) (cap reached)."
     proposals = actor.propose(sid, g.playbook_id, ranked, g.slots, state["prompt"], an["rationale"], an["confidence"],
-                              an["matrix"]["rows"])
+                              an["matrix"]["rows"], an.get("insights"))
     for p in proposals:
         r.actions[p.id] = p
         await store.put("actions", {**p.model_dump(), "created_at": p.created_at})
@@ -259,6 +261,7 @@ async def run_session(session_id: str, prompt: str, lens: str, forced: str | Non
                                      "replans": final.get("replans", 0), "created_at": time.time(),
                                      "summary": {"top": (final["analysis"]["matrix"]["rows"] or [None])[0],
                                                  "credits": r.meter.as_dict()}})
+        await snapshot(session_id)
         return final
     except Exception as e:
         bus.publish(session_id, "session.error", {"error": repr(e)[:300]})
@@ -284,4 +287,77 @@ async def repoll(session_id: str, disruption: dict | None = None) -> State:
     final = await COMPILED.ainvoke(init, {"recursion_limit": 40})
     r.state.update(final)
     r.disruption = None
+    await snapshot(session_id)
     return final
+
+
+
+# ----------------------------------------------------------- persistence
+def _jsonable(x):
+    return json.loads(json.dumps(x, default=str))
+
+
+async def snapshot(session_id: str) -> bool:
+    """Persist everything needed to resume a session after a process restart (Render free tier sleeps / redeploys):
+    LangGraph state, ranked candidates, HITL actions + receipts, credit meter and the SSE event history.
+    Stored in Supabase table ``session_snapshots`` (migration 0002); in Demo Mode it lands in the in-memory store."""
+    r = RUNTIME.get(session_id)
+    if not r or not r.state.get("graph"):
+        return False
+    state = {k: v for k, v in r.state.items() if not k.startswith("_")}
+    row = {"id": session_id, "session_id": session_id, "updated_at": time.time(),
+           "snapshot": _jsonable({"state": state, "ranked": [c.model_dump() for c in r.state.get("_ranked", [])],
+                                  "actions": [a.model_dump() for a in r.actions.values()],
+                                  "credits": r.meter.as_dict(), "events": bus.history(session_id)[-1500:]})}
+    await store.put("session_snapshots", row)
+    return True
+
+
+async def ensure(session_id: str) -> SessionRuntime | None:
+    """Return the live runtime for a session, rehydrating it from its snapshot if the process restarted."""
+    if session_id in RUNTIME:
+        return RUNTIME[session_id]
+    row = await store.get("session_snapshots", session_id)
+    if not row or not row.get("snapshot"):
+        return None
+    snap = row["snapshot"]
+    r = SessionRuntime(get_settings().session_credit_budget)
+    cr = snap.get("credits") or {}
+    r.meter.spent, r.meter.cached = int(cr.get("spent", 0)), int(cr.get("cached", 0))
+    r.state = snap.get("state") or {}
+    r.state["_ranked"] = [Candidate(**c) for c in snap.get("ranked", [])]
+    r.actions = {a["id"]: ActionProposal(**a) for a in snap.get("actions", [])}
+    RUNTIME[session_id] = r
+    if not bus.has(session_id):
+        bus.load(session_id, snap.get("events", []))
+    bus.publish(session_id, "session.rehydrated", {"events": len(snap.get("events", [])), "actions": len(r.actions)}, agent="orchestrator")
+    return r
+
+
+DISRUPTIONS = ("price_spike", "unavailable", "rating_drop", "rank_drop")
+
+
+def make_disruption(session_id: str, kind: str = "price_spike", pct: float = 45.0, slip: int = 8) -> dict:
+    """Build the edge-case injection for the CURRENT top option of a session (used by the API and the demo recorder).
+         price_spike / unavailable : flights, hotels, products, suppliers (venues: 'fully booked', domains: 'de-indexed')
+         rating_drop               : a venue's rating falls on every platform  (generic 'price_spike' maps onto this for venues)
+         rank_drop                 : the TRACKED domain slips `slip` positions in every engine (maps from 'price_spike' for SEO)"""
+    from .agents.researcher import candidate_key
+    ranked = RUNTIME[session_id].state.get("_ranked") or []
+    if not ranked:
+        raise ValueError("nothing to disrupt")
+    top = ranked[0]
+    d: dict = {"kind": kind, "pct": pct, "rank_slip": slip}
+    if top.category == "venue_entity":
+        d.update(target_title=top.title, target_key=top.attributes.get("cluster"))
+        if kind == "price_spike":
+            d["kind"] = "rating_drop"
+    elif top.category == "domain":
+        top = next((c for c in ranked if c.attributes.get("tracked")), top)
+        d.update(target_domain=top.attributes.get("domain"), target_title=top.title)
+        if kind == "price_spike":
+            d["kind"] = "rank_drop"
+    else:
+        tc = Candidate(**top.attributes["flight"]) if top.category == "bundle" else top
+        d.update(target_key=candidate_key(tc), target_title=tc.title)
+    return d
