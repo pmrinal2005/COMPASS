@@ -17,6 +17,34 @@ CITIES: dict[str, tuple[str, str]] = {
 }
 
 
+# country codes (Google `gl`, Bing `cc`, DuckDuckGo `kl`) for city -> market derivation
+COUNTRY: dict[str, str] = {
+    "JPY": "jp", "KRW": "kr", "EUR": "fr", "GBP": "gb", "CAD": "ca", "MXN": "mx", "THB": "th", "SGD": "sg", "IDR": "id", "AED": "ae",
+    "AUD": "au", "INR": "in", "HKD": "hk", "TRY": "tr", "ISK": "is", "USD": "us",
+}
+US_STATES = {"al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "hi", "id", "il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "mi",
+             "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd", "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn", "tx", "ut",
+             "vt", "va", "wa", "wv", "wi", "wy", "dc"}
+# Yelp's search is only meaningful for the markets it operates in (US/CA + a few others)
+YELP_COUNTRIES = {"us", "ca", "gb", "au", "fr", "de", "es", "it", "jp"}
+_CITY_COUNTRY = {"paris": "fr", "rome": "it", "barcelona": "es", "madrid": "es", "berlin": "de", "amsterdam": "nl", "lisbon": "pt"}
+
+
+def country_for(city: str | None) -> str:
+    """Best-effort ISO-3166 alpha-2 (lower) for a free-text city, offline."""
+    if not city:
+        return "us"
+    c = city.strip().lower()
+    last = c.split(",")[-1].strip()
+    if len(c.split(",")) > 1 and last in US_STATES:
+        return "us"
+    for k, v in _CITY_COUNTRY.items():
+        if k in c:
+            return v
+    code, cur = lookup(city) if (c in CITIES or any(k in c for k in CITIES)) else ("", "USD")
+    return COUNTRY.get(cur, "us")
+
+
 def lookup(city: str | None) -> tuple[str, str]:
     if not city:
         return ("JFK", "USD")

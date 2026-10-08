@@ -15,6 +15,15 @@ Field paths follow the official per-engine response docs:
   google_scholar : organic_results[] -> publication_info.summary, inline_links.cited_by.total
   google_patents : organic_results[] -> publication_number, assignee, priority_date, patent_link
   google_finance : summary.extracted_price
+  bing | duckduckgo | yahoo | yandex | baidu : organic_results[] -> position, title, link, displayed_link|displayed_brand, snippet
+  naver          : web_results[] -> position, title, link, displayed_link, snippet
+  google_ai_mode : text_blocks[], references[] -> title, link, source, index   (+ quick_results[])
+  google_ai_overview / google.ai_overview : text_blocks[], references[]  (google.ai_overview.page_token -> follow-up call)
+  yelp           : organic_results[] -> title, rating, reviews, price ("$$"), neighborhoods, categories[], place_ids[]
+  tripadvisor    : places[] -> place_type (RESTAURANT/HOTEL/GEO/…), title, rating, reviews, location, link
+  google_events  : events_results[] -> title, date{start_date,when}, address[], venue{name,rating,reviews}, link, ticket_info[]
+  airbnb         : organic_results[] -> listing_id, name, rating, reviews, extracted_price (stay total), price_qualifier, badges[]
+  google_maps    : local_results[] -> title, rating, reviews, price, type, address   (category=venue -> venue candidates)
 """
 from __future__ import annotations
 
@@ -22,6 +31,7 @@ import re
 from typing import Any
 
 from ..models import Candidate
+from .entities import page_offset, price_level, serp_domain, venue_key
 
 _MONEY = re.compile(r"\$\s?([\d,]+(?:\.\d+)?)")
 
@@ -45,9 +55,29 @@ def _days_ago(s: str | None) -> float | None:
     return n / 24 if unit == "hour" else n * {"day": 1, "week": 7, "month": 30}[unit]
 
 
-def normalize(engine: str, data: dict, category: str) -> tuple[list[Candidate], dict]:
+def _venue(engine: str, platform: str, title: str, rating, reviews, price, url, **attrs) -> Candidate:
+    return Candidate(title=title, category="venue", engine=engine, source=platform, url=url, rating=_num(rating),
+                     reviews=int(_num(reviews) or 0),
+                     attributes={"platform": platform, "price_level": price_level(price), "match_key": venue_key(title), **attrs})
+
+
+def _serp_rows(engine: str, data: dict, params: dict | None) -> list[dict]:
+    rows = data.get("web_results") if engine == "naver" else data.get("organic_results")
+    off = page_offset(engine, params or data.get("search_parameters"))
+    out = []
+    for i, it in enumerate(rows or []):
+        pos = it.get("position")
+        pos = int(pos) if isinstance(pos, (int, float)) and pos >= 1 else i + 1
+        if off and pos <= off:          # engines that restart numbering on every page
+            pos += off
+        out.append({"position": pos, "title": it.get("title", ""), "link": it.get("link"), "snippet": it.get("snippet", ""),
+                    "domain": serp_domain(it)})
+    return out
+
+
+def normalize(engine: str, data: dict, category: str, params: dict | None = None) -> tuple[list[Candidate], dict]:
     """Returns (candidates, context) where context holds non-candidate signals
-    (price_insights, fx rate, trend series, news) used by the Analyst."""
+    (price_insights, fx rate, trend series, news, serp rows, ai text) used by the Analyst."""
     out: list[Candidate] = []
     ctx: dict[str, Any] = {}
 
@@ -88,6 +118,13 @@ def normalize(engine: str, data: dict, category: str) -> tuple[list[Candidate], 
                             "property_token": h.get("property_token"), "gps": h.get("gps_coordinates"),
                             "match_key": h.get("name", "").lower()},
             ))
+
+    elif engine == "google_maps" and category == "venue":
+        results = data.get("local_results") or ([data["place_results"]] if data.get("place_results") else [])
+        for p in results:
+            out.append(_venue(engine, "Google Maps", p.get("title", ""), p.get("rating"), p.get("reviews"), p.get("price"),
+                              p.get("link") or (f"https://www.google.com/maps/place/?q=place_id:{p['place_id']}" if p.get("place_id") else None),
+                              address=p.get("address"), place_id=p.get("place_id"), kind=p.get("type"), gps=p.get("gps_coordinates")))
 
     elif engine == "google_maps":
         results = data.get("local_results") or ([data["place_results"]] if data.get("place_results") else [])
@@ -148,6 +185,75 @@ def normalize(engine: str, data: dict, category: str) -> tuple[list[Candidate], 
                                  rating=round(fb / 20, 2) if fb else None, reviews=int(seller.get("reviews") or 0),
                                  attributes={"condition": it.get("condition"), "shipping": it.get("shipping"),
                                              "lot_size": int(lot.group(1)) if lot else None}))
+
+    elif engine == "google" and category == "serp":
+        for r in _serp_rows(engine, data, params)[:20]:
+            out.append(Candidate(title=r["title"], category="serp", engine=engine, source=r["domain"], url=r["link"],
+                                 attributes={"position": r["position"], "domain": r["domain"], "snippet": r["snippet"]}))
+        aio = data.get("ai_overview") or {}
+        if aio.get("page_token") and not aio.get("text_blocks"):
+            ctx["ai_overview_token"] = aio["page_token"]          # expires within 1 minute -> follow-up call right away
+        for i, ref in enumerate(aio.get("references") or []):
+            out.append(Candidate(title=ref.get("title", ""), category="ai_citation", engine="google_ai_overview", source=serp_domain(ref),
+                                 url=ref.get("link"), attributes={"domain": serp_domain(ref), "index": ref.get("index", i), "via": "ai_overview"}))
+        if aio.get("text_blocks"):
+            ctx["ai_overview_text"] = " ".join(b.get("snippet", "") for b in aio["text_blocks"] if b.get("snippet"))[:600]
+
+    elif engine in ("bing", "duckduckgo", "yahoo", "yandex", "baidu", "naver"):
+        for r in _serp_rows(engine, data, params)[:20]:
+            out.append(Candidate(title=r["title"], category="serp", engine=engine, source=r["domain"], url=r["link"],
+                                 attributes={"position": r["position"], "domain": r["domain"], "snippet": r["snippet"]}))
+
+    elif engine in ("google_ai_mode", "google_ai_overview"):
+        block = data.get("ai_overview") if engine == "google_ai_overview" else data
+        block = block or {}
+        refs = block.get("references") or []
+        for i, ref in enumerate(refs):
+            out.append(Candidate(title=ref.get("title", ""), category="ai_citation", engine=engine, source=serp_domain(ref), url=ref.get("link"),
+                                 attributes={"domain": serp_domain(ref), "index": ref.get("index", i), "via": engine,
+                                             "snippet": ref.get("snippet", "")}))
+        txt = block.get("reconstructed_markdown") or " ".join(b.get("snippet", "") for b in (block.get("text_blocks") or []) if b.get("snippet"))
+        if txt:
+            ctx.setdefault("ai_text", {})[engine] = txt[:600]
+
+    elif engine == "yelp":
+        for it in data.get("organic_results", []) or []:
+            out.append(_venue(engine, "Yelp", it.get("title", ""), it.get("rating"), it.get("reviews"), it.get("price"), it.get("link"),
+                              neighborhood=it.get("neighborhoods"), categories=[c.get("title") for c in it.get("categories", [])],
+                              snippet=it.get("snippet", ""), place_ids=it.get("place_ids")))
+
+    elif engine == "tripadvisor":
+        for it in data.get("places", []) or []:
+            ptype = (it.get("place_type") or "").upper()
+            if ptype in ("GEO",) or not it.get("title"):
+                continue                      # destinations are context, not candidates
+            if category == "venue" and ptype not in ("RESTAURANT", ""):
+                continue
+            out.append(_venue(engine, "Tripadvisor", it.get("title", ""), it.get("rating"), it.get("reviews"), None, it.get("link"),
+                              location=it.get("location"), place_type=ptype, description=(it.get("description") or "")[:240]))
+
+    elif engine == "google_events":
+        for it in data.get("events_results", []) or []:
+            date = it.get("date") or {}
+            venue = it.get("venue") or {}
+            out.append(Candidate(title=it.get("title", ""), category="event", engine=engine, source=venue.get("name") or ", ".join(it.get("address") or []),
+                                 url=it.get("link"), rating=_num(venue.get("rating")), reviews=int(_num(venue.get("reviews")) or 0),
+                                 attributes={"when": date.get("when"), "start": date.get("start_date"), "address": it.get("address"),
+                                             "venue": venue.get("name"), "description": (it.get("description") or "")[:240],
+                                             "tickets": [t.get("source") for t in it.get("ticket_info", [])][:3],
+                                             "match_key": venue_key(venue.get("name") or it.get("title", ""))}))
+
+    elif engine == "airbnb":
+        for it in data.get("organic_results", []) or []:
+            total = _num(it.get("extracted_price"))
+            if total is None:
+                continue
+            out.append(Candidate(title=it.get("name") or it.get("title", "Airbnb stay"), category="stay", engine=engine, source="Airbnb",
+                                 url=it.get("link"), price=total, rating=_num(it.get("rating")), reviews=int(_num(it.get("reviews")) or 0),
+                                 attributes={"listing_id": it.get("listing_id"), "qualifier": it.get("price_qualifier"),
+                                             "badges": it.get("badges", []), "bedrooms": it.get("bedrooms"), "beds": it.get("beds"),
+                                             "free_cancellation": it.get("free_cancellation"), "gps": it.get("gps_coordinates"),
+                                             "match_key": "airbnb:" + str(it.get("listing_id"))}))
 
     elif engine == "google":
         for it in data.get("organic_results", []) or []:

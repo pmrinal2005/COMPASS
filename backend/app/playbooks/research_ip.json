@@ -4,22 +4,97 @@
   "ecosystem": "C",
   "lens": "pro",
   "description": "Prior-art and landscape scan across Scholar, Patents and News; ranked evidence brief with citations.",
-  "keywords": ["patent", "patents", "prior art", "research", "paper", "papers", "scholar", "landscape", "study", "ip", "novelty", "literature", "brief"],
-  "examples": ["Prior art for solid-state battery dendrite suppression", "Research landscape on CRISPR delivery nanoparticles"],
-  "slots": {"topic": {"type": "text", "default": "solid-state battery dendrite suppression"}},
+  "keywords": [
+    "patent",
+    "patents",
+    "prior art",
+    "research",
+    "paper",
+    "papers",
+    "scholar",
+    "landscape",
+    "study",
+    "ip",
+    "novelty",
+    "literature"
+  ],
+  "examples": [
+    "Prior art for solid-state battery dendrite suppression",
+    "Research landscape on CRISPR delivery nanoparticles"
+  ],
+  "slots": {
+    "topic": {
+      "type": "text",
+      "default": "solid-state battery dendrite suppression"
+    }
+  },
   "engines": [
-    {"engine": "google_scholar", "category": "paper", "purpose": "Peer-reviewed literature", "params": {"q": "{topic}", "hl": "en"}},
-    {"engine": "google_patents", "category": "patent", "purpose": "Patent prior art", "params": {"q": "{topic}"}},
-    {"engine": "google_news", "category": "news", "purpose": "Commercial / competitive signals", "essential": false, "params": {"q": "{topic}", "gl": "us", "hl": "en"}}
+    {
+      "engine": "google_scholar",
+      "category": "paper",
+      "purpose": "Peer-reviewed literature",
+      "params": {
+        "q": "{topic}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_patents",
+      "category": "patent",
+      "purpose": "Patent prior art",
+      "params": {
+        "q": "{topic}"
+      }
+    },
+    {
+      "engine": "google_news",
+      "category": "news",
+      "purpose": "Commercial / competitive signals",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "gl": "us",
+        "hl": "en"
+      }
+    }
   ],
   "fallback_engines": [
-    {"engine": "google_scholar", "category": "paper", "purpose": "Re-plan: recent work only", "params": {"q": "{topic}", "hl": "en", "as_ylo": "{recent_year}"}}
+    {
+      "engine": "google_scholar",
+      "category": "paper",
+      "purpose": "Re-plan: recent work only",
+      "params": {
+        "q": "{topic}",
+        "hl": "en",
+        "as_ylo": "{recent_year}"
+      }
+    }
   ],
   "dimensions": {
-    "relevance": {"weight": 0.40, "direction": "max", "label": "Relevance"},
-    "impact": {"weight": 0.30, "direction": "max", "label": "Citations / impact"},
-    "freshness": {"weight": 0.20, "direction": "max", "label": "Recency"},
-    "risk": {"weight": 0.10, "direction": "min", "label": "Risk"}
+    "relevance": {
+      "weight": 0.4,
+      "direction": "max",
+      "label": "Relevance"
+    },
+    "impact": {
+      "weight": 0.3,
+      "direction": "max",
+      "label": "Citations / impact"
+    },
+    "freshness": {
+      "weight": 0.2,
+      "direction": "max",
+      "label": "Recency"
+    },
+    "risk": {
+      "weight": 0.1,
+      "direction": "min",
+      "label": "Risk"
+    }
   },
-  "actions": ["document", "watch", "notify"]
+  "actions": [
+    "document",
+    "watch",
+    "notify"
+  ]
 }

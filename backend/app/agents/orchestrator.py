@@ -14,7 +14,7 @@ from typing import Any
 from ..models import DecisionGraph, DecisionNode, EngineCall
 from ..playbooks import PLAYBOOKS, playbook_text
 from ..services.events import bus
-from ..services.geo import resolve
+from ..services.geo import YELP_COUNTRIES, country_for, resolve
 from ..services.llm import embedder, llm
 from ..services.serpapi import CreditMeter
 from ..services.store import store
@@ -55,6 +55,67 @@ async def classify(prompt: str, lens: str, forced: str | None = None) -> tuple[s
 
 _NUM_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
               "a week": 7, "weekend": 3}
+
+
+_Q_STRIP = re.compile(r"(?i)\b(?:find|get|show|give|recommend|suggest|look(?:ing)?\s+for|me|the|an?|some|good|great|nice|best|top[- ]rated|highly[- ]rated|"
+                      r"well[- ]rated|top|cheap|spot|spots|place|places|for|to|eat|at|any|please|i|want|need|where|can|go|would|like|tonight|"
+                      r"today|tomorrow|saturday|sunday|friday|weekend|dinner|lunch)\b")
+_CITY_RE = re.compile(r"\b(?:in|near|around|nearby)\s+((?:[A-Za-z][A-Za-z.'-]*)(?:\s+[A-Za-z][A-Za-z.'-]*){0,3}?(?:,\s*[A-Za-z]{2}\b)?)"
+                      r"(?=\s+(?i:under|with|for|that|rated|open|on|at|and|before|after|below|over|from|to)\b|\s*[.!?]?\s*$|\s*,)")
+
+
+def _local_slots(p: str) -> dict[str, Any]:
+    out: dict[str, Any] = {}
+    pl = p.lower()
+    m = _CITY_RE.search(p)
+    before = p
+    if m:
+        city = re.sub(r"(?i)^(?:downtown|central|old|midtown|uptown|the)\s+", "", m.group(1)).strip(" ,.")
+        if city:
+            out["city"] = city
+        before = p[: m.start()]
+    q = _Q_STRIP.sub(" ", before)
+    q = re.sub(r"[^A-Za-z0-9&' -]+", " ", q)
+    q = " ".join(w for w in q.replace(" - ", " ").split() if w not in ("-",)).strip(" -.")
+    q = re.sub(r"(?i)\b(restaurants?|spot|place)s?\b", "", q).strip() or ("restaurants" if re.search(r"(?i)restaurant", p) else "")
+    if q:
+        out["query"] = q.lower()
+    r = re.search(r"(\d(?:\.\d)?)\s*(?:\+|stars?\b|-star)", pl) or re.search(r"rated\s+(?:at least\s+|over\s+|above\s+)?(\d(?:\.\d)?)", pl) \
+        or re.search(r"(?:rating|stars?)\s*(?:of|>=|≥|over|above)?\s*(\d(?:\.\d)?)", pl)
+    if r and 1 <= float(r.group(1)) <= 5:
+        out["min_rating"] = float(r.group(1))
+    pc = re.search(r"(?:under|below|max|up to|<=?)\s*(\${1,4})(?!\d)", pl)
+    if pc:
+        out["price_cap"] = len(pc.group(1))
+    elif re.search(r"\b(cheap|budget|inexpensive)\b", pl):
+        out["price_cap"] = 2
+    return out
+
+
+_DOMAIN_RE = re.compile(r"(?<![@\w/.-])((?:[a-z0-9][a-z0-9-]*\.)+(?:com|org|net|io|co|ai|dev|app|edu|gov|uk|de|fr|jp|cn|ru|kr|in|ca|au|us|info|tech|xyz))\b", re.I)
+
+
+def _seo_slots(p: str) -> dict[str, Any]:
+    out: dict[str, Any] = {}
+    p = re.sub(r"(?i)\bhttps?://(?:www\.)?", "", p)                 # accept pasted URLs
+    p = re.sub(r"(?i)(?<![\w.-])www\.(?=[a-z0-9-]+\.)", "", p)
+    d = _DOMAIN_RE.search(p)
+    rest = p
+    if d:
+        out["domain"] = d.group(1).lower()
+        rest = p.replace(d.group(0), " ", 1).replace("/", " ")
+    q = re.search(r"[\"“”‘’']([^\"“”‘’']{2,80})[\"“”‘’']", rest)
+    if q:
+        out["keyword"] = q.group(1).strip()
+    else:
+        k = re.search(r"(?i)\b(?:for|keyword|query|on)\s+(?:the\s+)?(?:keyword\s+)?([a-z0-9][a-z0-9 +&-]{2,60}?)(?=\s+(?:across|on|in|and|with|using|from|vs|against)\b|[.?!]?\s*$)", rest)
+        if k:
+            out["keyword"] = k.group(1).strip()
+    mk = re.search(r"(?i)\b(?:in|for|market)\s+(?:the\s+)?(us|usa|uk|united kingdom|germany|france|japan|india|canada|australia)\b", p)
+    if mk:
+        out["market"] = {"usa": "us", "uk": "gb", "united kingdom": "gb", "germany": "de", "france": "fr", "japan": "jp", "india": "in",
+                         "canada": "ca", "australia": "au"}.get(mk.group(1).lower(), mk.group(1).lower())
+    return out
 
 
 def _heuristic_slots(pid: str, prompt: str) -> dict[str, Any]:
@@ -99,6 +160,12 @@ def _heuristic_slots(pid: str, prompt: str) -> dict[str, Any]:
         q = re.search(r"([\d,]+)\s*(?:units|pcs|pieces)", pl)
         if q:
             slots["quantity"] = int(q.group(1).replace(",", ""))
+    elif pid == "lifeops_local":
+        slots.update(_local_slots(p))
+        slots.pop("budget", None)          # "$$" is a Yelp price level here, never a dollar budget
+    elif pid == "research_seo":
+        slots.update(_seo_slots(p))
+        slots.pop("budget", None)
     elif pid == "career_jobs":
         loc = re.search(r"\b(?:in|near|at)\s+([A-Za-z][A-Za-z ,]+)$", p)
         role = re.sub(r"(?i)\b(jobs?|openings?|positions?|roles?|find|me|hiring|for)\b", " ", p)
@@ -143,6 +210,15 @@ async def _derive(pid: str, slots: dict[str, Any], session_id: str = "", meter: 
         d["outbound_date_flex"] = (out + timedelta(days=2)).isoformat()
         d["return_date_flex"] = (out + timedelta(days=days + 2)).isoformat()
         d["nights"] = days
+    if pid in ("lifeops_local", "research_seo"):
+        gl = country_for(slots.get("city")) if pid == "lifeops_local" else str(slots.get("market") or "us").lower()
+        d["gl"], d["hl"] = gl, "en"
+        d["kl"] = f"{'uk' if gl == 'gb' else gl}-en"            # DuckDuckGo region code (us-en, uk-en, fr-fr …)
+        d["mkt"] = f"en-{gl.upper()}"                             # Bing market (en-US, en-GB …)
+        d["yelp_supported"] = gl in YELP_COUNTRIES
+        if pid == "lifeops_local":
+            d["min_rating"] = float(slots.get("min_rating") or 0)
+            d["price_cap"] = int(slots.get("price_cap") or 4)
     if pid == "career_jobs":
         d["role_keyword"] = " ".join(str(slots.get("role", "")).split()[-2:]) or "developer"
     if pid == "research_ip":
@@ -165,8 +241,9 @@ def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0) -> lis
     specs = pb["engines"] if fallback_round == 0 else pb.get("fallback_engines", [])
     if fallback_round > 1:  # second re-plan widens to all fallbacks + essentials again (fresh)
         specs = pb.get("fallback_engines", [])[::-1]
-    return [EngineCall(engine=s["engine"], params=_render(s["params"], vars_), purpose=s.get("purpose", ""),
-                       category=s.get("category", "generic"), essential=s.get("essential", True)) for s in specs]
+    specs = [sp for sp in specs if not sp.get("when") or vars_.get(sp["when"])]   # e.g. Yelp only where it operates
+    return [EngineCall(engine=sp["engine"], params=_render(sp["params"], vars_), purpose=sp.get("purpose", ""),
+                       category=sp.get("category", "generic"), essential=sp.get("essential", True)) for sp in specs]
 
 
 async def plan(prompt: str, lens: str, session_id: str, forced: str | None = None,

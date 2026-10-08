@@ -14,6 +14,7 @@ from typing import Any
 
 from ..config import get_settings
 from ..models import Candidate, EngineCall
+from ..services.entities import registrable_domain, same_entity
 from ..services.events import bus
 from ..services.llm import embedder
 from ..services.normalize import normalize
@@ -38,28 +39,50 @@ def candidate_key(c: Candidate) -> str:
     return c.attributes.get("match_key") or f"{c.title.lower()}|{c.source.lower()}"
 
 
+def _is_target(c: Candidate, d: dict) -> bool:
+    """Does this raw observation belong to the disrupted entity?
+    venues -> fuzzy name match across platforms; SERP rows -> same domain; everything else -> exact key."""
+    if c.category == "venue":
+        return bool(d.get("target_title")) and same_entity(c.title, d["target_title"])
+    if c.category in ("serp", "ai_citation"):
+        return bool(d.get("target_domain")) and registrable_domain(c.attributes.get("domain") or c.source) == d["target_domain"]
+    return candidate_key(c) == d.get("target_key")
+
+
 def apply_disruption(session_id: str, cands: list[Candidate], disruption: dict | None) -> list[Candidate]:
-    """Edge-case injection used by the live demo / chaos testing: the
-    targeted option's price spikes or it disappears from the fresh poll."""
+    """Edge-case injection used by the live demo / chaos testing.
+      price_spike  : the targeted option's price jumps by pct %
+      unavailable  : it disappears from the fresh poll (sold out / fully booked / de-indexed)
+      rating_drop  : a venue's rating falls by pct % on every platform
+      rank_drop    : a tracked domain slips `rank_slip` positions in every engine"""
     if not disruption:
         return cands
-    target = disruption.get("target_key")
     kind = disruption.get("kind", "price_spike")
     pct = float(disruption.get("pct", 45))
+    slip = int(disruption.get("rank_slip", 8))
     out = []
     hit = 0
     for c in cands:
-        if candidate_key(c) == target:
+        if _is_target(c, disruption):
             hit += 1
             if kind == "unavailable":
                 continue
-            old = c.price
-            c.price = round((c.price or 0) * (1 + pct / 100), 2)
-            c.attributes["disrupted"] = {"kind": kind, "old_price": old, "new_price": c.price}
+            if kind == "rating_drop" and c.rating:
+                old = c.rating
+                c.rating = round(max(1.0, old * (1 - pct / 100)), 1)
+                c.attributes["disrupted"] = {"kind": kind, "old_rating": old, "new_rating": c.rating}
+            elif kind == "rank_drop" and c.attributes.get("position"):
+                old = int(c.attributes["position"])
+                c.attributes["position"] = old + slip
+                c.attributes["disrupted"] = {"kind": kind, "old_position": old, "new_position": old + slip}
+            elif kind == "price_spike" and c.price:
+                old = c.price
+                c.price = round(old * (1 + pct / 100), 2)
+                c.attributes["disrupted"] = {"kind": kind, "old_price": old, "new_price": c.price}
         out.append(c)
     if hit:
-        bus.publish(session_id, "watch.disruption_detected", {"kind": kind, "target_key": target, "pct": pct, "matches": hit},
-                    agent="researcher")
+        bus.publish(session_id, "watch.disruption_detected", {"kind": kind, "target": disruption.get("target_title") or disruption.get("target_domain")
+                                                               or disruption.get("target_key"), "pct": pct, "matches": hit}, agent="researcher")
     return out
 
 
@@ -74,13 +97,31 @@ async def fan_out(session_id: str, calls: list[EngineCall], meter: CreditMeter, 
         try:
             res = await serp.search(call.engine, call.params, session_id=session_id, call_id=call.id, sem=sem,
                                     meter=meter, purpose=call.purpose, fresh=fresh)
-            cands, ctx = normalize(call.engine, res["data"], call.category)
+            cands, ctx = normalize(call.engine, res["data"], call.category, call.params)
+            tok = ctx.pop("ai_overview_token", None)
+            if tok and meter.remaining > 0:
+                # Google AI Overview API: ai_overview.page_token "expires within 1 minute" -> follow up immediately
+                try:
+                    ares = await serp.search("google_ai_overview", {"page_token": tok}, session_id=session_id, call_id=call.id + "_aio",
+                                             sem=sem, meter=meter, purpose="AI Overview citations (page_token follow-up)", fresh=False)
+                    a_c, a_x = normalize("google_ai_overview", ares["data"], "ai_citation", {"page_token": tok})
+                    for x in a_c:
+                        x.attributes["call_id"] = call.id + "_aio"
+                    cands += a_c
+                    ctx.update(a_x)
+                    bus.publish(session_id, "serp.response", {"call_id": call.id + "_aio", "engine": "google_ai_overview", "cached": ares["cached"],
+                                                              "ms": ares["ms"], "mode": ares["mode"], "transport": ares.get("transport"),
+                                                              "results": len(a_c), "status": "Success", "search_id": (ares["data"].get("search_metadata") or {}).get("id"),
+                                                              "raw": _brief(ares["data"]), "credits": meter.as_dict()}, agent="researcher")
+                except SerpApiError as e:       # optional enrichment: never fail the main call
+                    bus.publish(session_id, "serp.error", {"call_id": call.id + "_aio", "engine": "google_ai_overview", "error": str(e),
+                                                           "status": e.status, "essential": False}, agent="researcher")
             for c in cands:
                 c.attributes["call_id"] = call.id
                 c.attributes["call_variant"] = call.params.get("sort_by", "default")
             bus.publish(session_id, "serp.response", {
                 "call_id": call.id, "engine": call.engine, "cached": res["cached"], "ms": res["ms"], "mode": res["mode"],
-                "results": len(cands), "status": res["data"].get("search_metadata", {}).get("status", "Success"),
+                "transport": res.get("transport"), "results": len(cands), "status": res["data"].get("search_metadata", {}).get("status", "Success"),
                 "search_id": res["data"].get("search_metadata", {}).get("id"), "raw": _brief(res["data"]),
                 "credits": meter.as_dict()}, agent="researcher")
             return {"call": call, "cands": cands, "ctx": ctx, "ok": True, "cached": res["cached"], "raw": res["data"]}
@@ -99,7 +140,12 @@ async def fan_out(session_id: str, calls: list[EngineCall], meter: CreditMeter, 
     for r in results:
         cands.extend(r["cands"])
         for k, v in r["ctx"].items():
-            ctx.setdefault(k, v)
+            if isinstance(v, list) and isinstance(ctx.get(k), list):
+                ctx[k] = ctx[k] + v                       # e.g. events from several calls
+            elif isinstance(v, dict) and isinstance(ctx.get(k), dict):
+                ctx[k] = {**v, **ctx[k]}
+            else:
+                ctx.setdefault(k, v)
     cands = apply_disruption(session_id, cands, disruption)
     log = [{"call_id": r["call"].id, "engine": r["call"].engine, "params": r["call"].params, "ok": r["ok"],
             "cached": r.get("cached", False), "error": r.get("error"), "purpose": r["call"].purpose,
@@ -113,7 +159,8 @@ async def index_and_retrieve(session_id: str, query: str, cands: list[Candidate]
     for c in cands:
         content = " ".join(str(x) for x in [c.title, c.source, c.category, c.price and f"${c.price}",
                                             c.attributes.get("snippet", ""), c.attributes.get("description", ""),
-                                            c.attributes.get("company", ""), c.attributes.get("location", "")] if x)
+                                            c.attributes.get("company", ""), c.attributes.get("location", ""), c.attributes.get("address") or "",
+                                            c.attributes.get("neighborhood") or "", c.attributes.get("domain") or ""] if x)
         docs.append({"id": f"{session_id}:{c.id}", "session_id": session_id, "engine": c.engine, "category": c.category,
                      "title": c.title, "content": content, "url": c.url, "price": c.price,
                      "metadata": {"candidate_id": c.id, "source": c.source}})

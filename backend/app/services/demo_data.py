@@ -14,6 +14,8 @@ import random
 from datetime import datetime, timedelta
 from typing import Any
 
+from . import demo_extra
+
 AIRLINES = [("ANA", "NH"), ("Japan Airlines", "JL"), ("United", "UA"), ("Delta", "DL"), ("American", "AA"),
             ("Air Canada", "AC"), ("Korean Air", "KE"), ("Lufthansa", "LH"), ("Air France", "AF"), ("Emirates", "EK")]
 HUBS = [("Haneda Airport", "HND"), ("San Francisco International", "SFO"), ("Seoul Incheon", "ICN"),
@@ -127,6 +129,9 @@ def _hotels(p: dict, r: random.Random, drift: float) -> dict:
 
 
 def _maps(p: dict, r: random.Random) -> dict:
+    q = _q(p, "q", default="")
+    if "hotel" not in q.lower() and demo_extra.is_food(q):  # venue search (LifeOps local playbook), not hotels
+        return demo_extra.maps_venues(p)
     city = _q(p, "q", default="hotels in City").split(" in ")[-1]
     seeded = _base_rng("hotelnames", {"city": city.lower()})
     names = list({f"{seeded.choice(HOTEL_PREFIX)} {city.split()[0]} {seeded.choice(HOTEL_SUFFIX)}" for _ in range(14)})[:10]
@@ -338,5 +343,9 @@ def demo_response(engine: str, params: dict[str, Any], drift_bucket: int | None 
         "google_scholar": lambda: _scholar(params, r),
         "google_patents": lambda: _patents(params, r),
     }
-    body = table.get(engine, lambda: {"organic_results": []})()
+    drift_r = None if drift_bucket is None else _rng(engine + ":drift", params, drift_bucket)
+    extra = demo_extra.demo_extra(engine, params, drift_r)
+    body = extra if extra is not None else table.get(engine, lambda: {"organic_results": []})()
+    if engine == "google" and not any(w in _q(params, "q").lower() for w in ("wholesale", "supplier", "oem", "factory", "manufacturer")):
+        body = demo_extra.serp("google", params, drift_r)
     return {**_meta(engine, params), **body}

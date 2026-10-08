@@ -1,0 +1,39 @@
+{
+  "id": "lifeops_local",
+  "name": "LifeOps · Local Discovery (cross-platform)",
+  "ecosystem": "A",
+  "lens": "go",
+  "description": "Find the best restaurants/venues in a city by cross-checking Google Maps, Yelp and Tripadvisor (same venue must be seen on ≥2 platforms) and pairing them with live local events.",
+  "keywords": ["restaurant", "restaurants", "tacos", "taco", "pizza", "ramen", "sushi", "bbq", "burger", "brunch", "coffee", "cafe", "dinner", "lunch", "eat", "food", "foodie", "bar", "near", "nearby", "venue", "yelp", "tripadvisor", "reservation", "book a table", "top-rated", "rated"],
+  "examples": ["Best tacos in Austin, TX under $$ with 4.5+ rating", "Top-rated ramen near downtown Seattle", "Find a good brunch spot in Chicago for Saturday"],
+  "slots": {
+    "query": {"type": "text", "default": "tacos"},
+    "city": {"type": "city", "default": "Austin, TX"},
+    "min_rating": {"type": "float", "default": 4.0},
+    "price_cap": {"type": "int", "default": 3}
+  },
+  "engines": [
+    {"engine": "google_maps", "category": "venue", "purpose": "Google Maps local results (rating, reviews, price level)",
+     "params": {"q": "{query} in {city}", "type": "search", "hl": "en", "gl": "{gl}"}},
+    {"engine": "yelp", "category": "venue", "purpose": "Yelp search (independent rating + review volume)", "when": "yelp_supported",
+     "params": {"find_desc": "{query}", "find_loc": "{city}"}},
+    {"engine": "tripadvisor", "category": "venue", "purpose": "Tripadvisor restaurants (third platform for corroboration)",
+     "params": {"q": "{query} {city}", "ssrc": "r", "limit": "15"}},
+    {"engine": "google_events", "category": "event", "purpose": "What's on in town (pair the venue with a plan)", "essential": false,
+     "params": {"q": "Events in {city}", "hl": "en", "gl": "{gl}"}}
+  ],
+  "fallback_engines": [
+    {"engine": "yelp", "category": "venue", "purpose": "Re-plan: Yelp sorted by highest rating", "when": "yelp_supported",
+     "params": {"find_desc": "{query}", "find_loc": "{city}", "sortby": "rating"}},
+    {"engine": "google_maps", "category": "venue", "purpose": "Re-plan: Google Maps restricted to well-rated places",
+     "params": {"q": "best {query} in {city}", "type": "search", "hl": "en", "gl": "{gl}", "min_rating": "4.5"}}
+  ],
+  "dimensions": {
+    "reputation": {"weight": 0.38, "direction": "max", "label": "Blended rating"},
+    "consensus": {"weight": 0.20, "direction": "max", "label": "Platform consensus"},
+    "popularity": {"weight": 0.17, "direction": "max", "label": "Review volume"},
+    "value": {"weight": 0.15, "direction": "min", "label": "Price level"},
+    "risk": {"weight": 0.10, "direction": "min", "label": "Risk (single-source / anomalies)"}
+  },
+  "actions": ["booking_flow", "calendar_invite", "watch", "document", "notify"]
+}

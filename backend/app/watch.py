@@ -68,7 +68,7 @@ async def check_watch(w: dict, *, force: bool = False) -> dict:
         res = await serp.search(w["engine"], w["params"], session_id=sid, call_id=new_id("wcall_"), sem=sem, meter=meter,
                                 purpose=f"watch:{w['label']}", fresh=True)
         data = res["data"]
-    cands, _ = normalize(w["engine"], data, CATEGORY.get(w["engine"], "generic"))
+    cands, _ = normalize(w["engine"], data, CATEGORY.get(w["engine"], "generic"), w["params"])
     hit = _match(cands, w)
     price = hit.price if hit else None
     hist = [h["price"] for h in w.get("history", []) if h.get("price")]
