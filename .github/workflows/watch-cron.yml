@@ -1,0 +1,28 @@
+# Free scheduler (replaces n8n / paid Render cron): re-polls every due COMPASS watch.
+# Repo secrets required: COMPASS_API_URL (e.g. https://compass-api.onrender.com) and CRON_SECRET.
+name: watch-cron
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Poll every watch now, ignoring its cadence"
+        type: boolean
+        default: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: POST /api/watch/tick
+        env:
+          COMPASS_API_URL: ${{ secrets.COMPASS_API_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: |
+          set -euo pipefail
+          url="${COMPASS_API_URL%/}/api/watch/tick"
+          [ "${FORCE:-false}" = "true" ] && url="${url}?force=true"
+          curl --fail-with-body -sS -X POST --max-time 120 --retry 3 --retry-delay 20 \
+            -H "x-cron-secret: ${CRON_SECRET}" "$url"
