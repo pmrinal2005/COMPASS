@@ -130,7 +130,7 @@ def _reputation(rating: float | None, reviews: int | None) -> float | None:
 
 def build_bundles(cands: list[Candidate], slots: dict) -> list[Candidate]:
     flights = sorted([c for c in cands if c.category == "flight" and not c.attributes.get("duplicate")], key=lambda c: c.price or 1e9)[:7]
-    hotels = sorted([c for c in cands if c.category == "hotel"], key=lambda c: c.price or 1e9)[:8]
+    hotels = sorted([c for c in cands if c.category == "hotel" and not c.attributes.get("duplicate")], key=lambda c: c.price or 1e9)[:8]
     nights = int(slots.get("nights") or slots.get("days") or 4)
     budget = float(slots.get("budget") or 0) or None
     out = []
@@ -145,7 +145,8 @@ def build_bundles(cands: list[Candidate], slots: dict) -> list[Candidate]:
                 anomaly=f.anomaly or h.anomaly,
                 attributes={"flight": f.model_dump(), "hotel": h.model_dump(), "flight_key": f.attributes.get("match_key"),
                             "flight_price": f.price, "hotel_total": hotel_total, "nights": nights,
-                            "stops": f.attributes.get("stops", 0), "within_budget": (total <= budget) if budget else True,
+                            "stops": f.attributes.get("stops", 0), "flight_numbers": f.attributes.get("flight_numbers"),
+                            "departure": f.attributes.get("departure"), "arrival": f.attributes.get("arrival"), "within_budget": (total <= budget) if budget else True,
                             "relevance": max(f.attributes.get("relevance", 0), h.attributes.get("relevance", 0))}))
     return out
 

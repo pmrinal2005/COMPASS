@@ -229,15 +229,37 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
         seen.add(k)
         dedup_flights.append(f)
 
+    # ---- hotels: the same property returned by several passes (base + re-plan sweeps) is ONE option.
+    # Keep the cheapest observation, flag the rest as duplicates so flight x hotel bundles are never repeated.
+    hotels_by_key: dict[str, list[Candidate]] = {}
+    for h in by_cat.get("hotel", []):
+        h.attributes.pop("duplicate", None)
+        hotels_by_key.setdefault(h.attributes.get("match_key") or h.title.lower(), []).append(h)
+    for grp in hotels_by_key.values():
+        grp.sort(key=lambda x: x.price if x.price is not None else 1e12)
+        # the same property surfaced by >=2 independent Google Hotels queries at a consistent nightly rate
+        # (same logic as the flight two-pass check) is an extra corroborating observation
+        calls = {g.attributes.get("call_id") for g in grp if g.attributes.get("call_id")}
+        ps = [g.price for g in grp if g.price]
+        grp[0].attributes["hotel_passes"] = len(calls)
+        grp[0].attributes["hotel_pass_consistent"] = bool(len(calls) >= 2 and ps and (max(ps) - min(ps)) / max(ps) <= 0.15)
+        for extra in grp[1:]:
+            extra.attributes["duplicate"] = True
+
     # ---- hotels: Google Hotels rating corroborated by Google Maps listing
     places = {p.attributes.get("match_key"): p for p in by_cat.get("place", [])}
+    place_list = [p for p in by_cat.get("place", []) if p.title]
     for h in by_cat.get("hotel", []):
         src = ["google_hotels"]
         p = places.get(h.attributes.get("match_key"))
+        if p is None:   # live names differ between engines ("HOTEL OWL TOKYO NIPPORI" vs "Hotel Owl Tokyo Nippori by ...") -> fuzzy match
+            p = next((q for q in place_list if same_entity(q.title, h.title)), None)
         if p and p.rating and h.rating and abs(p.rating - h.rating) <= 0.6:
             src.append("google_maps")
             h.attributes["maps_rating"] = p.rating
             h.attributes["maps_reviews"] = p.reviews
+        if h.attributes.get("hotel_pass_consistent"):
+            src.append("google_hotels:2nd_query")
         h.corroborating_sources = src
 
     # ---- products: price consensus across independent engines (±18% of cross-engine median)
@@ -267,6 +289,24 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
 
     # ---- jobs: salary consistent with peer postings; posting freshness stated
     jobs = by_cat.get("job", [])
+    # Google Jobs returns one row per hosting board (+ the re-plan pass repeats them): collapse to ONE posting per
+    # (title, company) and keep every board that lists it - several independent boards = independent corroboration.
+    _co = re.compile(r"\b(inc|llc|ltd|corp|co|gmbh|plc|incorporated|limited)\b\.?", re.I)
+    posting: dict[str, Candidate] = {}
+    for j in jobs:
+        j.attributes.pop("duplicate", None)
+        title = j.title.split(" · ")[0].lower()
+        comp = _co.sub("", (j.attributes.get("company") or "").lower())
+        key = re.sub(r"[^a-z0-9]+", " ", f"{title}|{comp}").strip()
+        boards = {b for b in ([j.source] + list(j.attributes.get("boards") or [])) if b}
+        first = posting.get(key)
+        if first is None:
+            j.attributes["boards"] = sorted(boards)
+            posting[key] = j
+        else:
+            first.attributes["boards"] = sorted(set(first.attributes.get("boards") or []) | boards)
+            j.attributes["duplicate"] = True
+    jobs = [j for j in jobs if not j.attributes.get("duplicate")]
     sal = [j.price for j in jobs if j.price]
     med_s = statistics.median(sal) if sal else None
     news_titles = " ".join(n.title.lower() for n in by_cat.get("news", []))
@@ -276,6 +316,8 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
             src.append("peer_salary_band")
         if (j.attributes.get("company") or "").lower() in news_titles:
             src.append("google_news")
+        if len(j.attributes.get("boards") or []) >= 2:
+            src.append("job_boards:" + str(len(j.attributes["boards"])))
         j.corroborating_sources = src
 
     # ---- research: paper has citation graph; patent has publication record + cross-topic match

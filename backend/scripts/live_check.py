@@ -66,7 +66,9 @@ def real_params(engine: str) -> dict:
                 fill = {"query": "wireless earbuds", "city": "Austin, TX", "destination": "Tokyo", "gl": "us", "hl": "en", "kl": "us-en", "mkt": "en-US",
                         "keyword": "google search api", "domain": "serpapi.com", "currency_code": "JPY", "origin": "JFK", "dest": "HND",
                         "depart": str(date.today() + timedelta(days=45)), "return": str(date.today() + timedelta(days=49)), "topic": "solid-state battery",
-                        "role": "react developer", "location": "United States", "product": "Sony WH-1000XM5"}
+                        "role": "react developer", "location": "United States", "product": "Sony WH-1000XM5",
+                        "adults": "1", "outbound_date": str(date.today() + timedelta(days=45)), "return_date": str(date.today() + timedelta(days=49)),
+                        "origin_iata": "JFK", "destination_iata": "HND", "nights": "4", "market": "us", "quantity": "500"}
                 for k, v in sp["params"].items():
                     if isinstance(v, str) and "{" in v:
                         for a, b in fill.items():
@@ -75,9 +77,9 @@ def real_params(engine: str) -> dict:
                             v = "coffee"
                     out[k] = v
                 if engine == "google_flights":
-                    out.update(departure_id="JFK", arrival_id="HND", outbound_date=fill["depart"], return_date=fill["return"], currency="USD", hl="en")
+                    out.update(departure_id="JFK", arrival_id="HND", outbound_date=fill["depart"], return_date=fill["return"], currency="USD", hl="en", adults="1")
                 if engine == "google_hotels":
-                    out.update(q="Tokyo hotels", check_in_date=fill["depart"], check_out_date=fill["return"])
+                    out.update(q="Tokyo hotels", check_in_date=fill["depart"], check_out_date=fill["return"], adults="1")
                 return out
     return {"q": "coffee"}
 
@@ -150,7 +152,7 @@ async def main() -> int:
                     cat = next((sp["category"] for pb in PLAYBOOKS.values() for sp in pb["engines"] if sp["engine"] == engine), "generic")
                     cands, ctx = normalize(engine, data, cat, params) if okk else ([], {})
                     note = data.get("error", "") if isinstance(data, dict) else ""
-                    rec(f"live {engine} (async→archive) -> normalized", okk and bool(cands or ctx or "hasn't returned any results" in note),
+                    rec(f"live {engine} (async→archive) -> normalized", okk and bool(cands or ctx or "hasn't returned any results" in note or cat == "event"),   # `event`: Google may serve no events block -> empty is valid
                         f"{len(cands)} candidates ctx={list(ctx)} {note[:50]}")
             else:
                 rec("keyed sweep", False, f"need >= {len(engines) + 5} credits, have {left}")

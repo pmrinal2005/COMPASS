@@ -295,7 +295,8 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
                                  attributes={"company": j.get("company_name"), "location": j.get("location"),
                                              "salary": sal, "posted": ext.get("posted_at"), "age_days": _days_ago(ext.get("posted_at")),
                                              "remote": bool(ext.get("work_from_home")), "schedule": ext.get("schedule_type"),
-                                             "description": (j.get("description") or "")[:400], "job_id": j.get("job_id")}))
+                                             "description": (j.get("description") or "")[:400], "job_id": j.get("job_id"),
+                                             "boards": [a.get("title") for a in (j.get("apply_options") or []) if a.get("title")]}))
 
     elif engine == "google_trends":
         series = []
