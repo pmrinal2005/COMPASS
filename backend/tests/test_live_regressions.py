@@ -56,3 +56,40 @@ def test_google_jobs_boards_collapse_and_corroborate():
     react = next(c for c in live if c.title.startswith("Senior React"))
     assert react.verified and set(react.attributes["boards"]) >= {"Monster", "Mediabistro", "Indeed", "Dice"}
     assert not next(c for c in live if c.title.startswith("Solo")).verified
+
+
+# ---- events: Google Search API stopped returning events_results for "Events in <city>" -------------------------------
+LIVE_EVENTS = {"events_results": [  # shape copied from a real engine=google response for "events in Tokyo this weekend"
+    {"title": "Sonar Pocket", "type": "J-pop concert", "date": "Oct 12", "time": "5:00 PM",
+     "address": ["SWU Hitomi Memorial Hall", "Setagaya City, Japan"], "thumbnail": "https://serpapi.com/x.jpeg"},
+    {"title": "Shomyo Chant", "type": "Buddhist vocal music", "date": "Oct 17", "address": ["Kotoku Bunka Center Hall", "Koto City, Japan"]}]}
+
+
+def test_live_events_shape_with_string_date_does_not_crash():
+    """`date` is a plain string live (it was a dict in the docs sample) -> used to raise AttributeError and empty the panel."""
+    c, _ = normalize("google", LIVE_EVENTS, "event", {"q": "events in Tokyo this weekend"})
+    assert [x.title for x in c] == ["Sonar Pocket", "Shomyo Chant"]
+    assert c[0].attributes["when"] == "Oct 12 · 5:00 PM" and c[0].attributes["venue"] == "SWU Hitomi Memorial Hall"
+    assert c[1].attributes["when"] == "Oct 17" and c[0].attributes["kind"] == "J-pop concert"
+
+
+def test_events_fall_back_to_top_sights_when_google_shows_no_events_block():
+    data = {"top_sights": {"sights": [{"title": "Barton Springs Pool", "description": "Open", "rating": 4.6, "reviews": 11000,
+                                         "price": "$9.00", "link": "https://g.test/1"}]}}
+    c, _ = normalize("google", data, "event", {"q": "things to do in Austin"})
+    assert len(c) == 1 and c[0].category == "event" and c[0].rating == 4.6 and c[0].attributes["kind"] == "Attraction"
+    assert normalize("google", {}, "event", {})[0] == []
+
+
+def test_event_playbook_queries_are_the_ones_google_renders_events_for():
+    from app.playbooks import PLAYBOOKS
+    for pid, key in (("lifeops_trip", "destination"), ("lifeops_local", "city")):
+        sp = next(s for s in PLAYBOOKS[pid]["engines"] if s["category"] == "event")
+        assert sp["params"]["q"].endswith("this weekend") and "{" + key + "}" in sp["params"]["q"], sp
+
+
+def test_demo_mode_serves_events_for_the_new_query_shape():
+    from app.services.demo_data import demo_response
+    d = demo_response("google", {"q": "events in Tokyo this weekend"})
+    assert d.get("events_results") and "Tokyo" in d["events_results"][0]["title"]
+    assert not demo_response("google", {"q": "google search api"}).get("events_results")

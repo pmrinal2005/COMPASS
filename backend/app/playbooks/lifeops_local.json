@@ -20,7 +20,7 @@
     {"engine": "tripadvisor", "category": "venue", "purpose": "Tripadvisor restaurants (third platform for corroboration)",
      "params": {"q": "{query} {city}", "ssrc": "r", "limit": "15"}},
     {"engine": "google", "category": "event", "purpose": "What's on in town: events_results of the Google Search API (google_events is deprecated)", "essential": false,
-     "params": {"q": "Events in {city}", "hl": "en", "gl": "{gl}"}}
+     "params": {"q": "events in {city} this weekend", "hl": "en", "gl": "{gl}"}}
   ],
   "fallback_engines": [
     {"engine": "yelp", "category": "venue", "purpose": "Re-plan: Yelp sorted by highest rating", "when": "yelp_supported",

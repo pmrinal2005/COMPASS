@@ -26,7 +26,7 @@ USER PROMPT (Go / Pro lens)
 | | |
 |---|---|
 | Frontend (Vercel) | deploy `frontend/` (see below). With no backend it runs **offline Demo Mode** |
-| Backend (Render) | `https://compass-api.onrender.com` (deploy via `render.yaml`) · docs at `/docs` |
+| Backend (Render) | `https://compass-api-w9dp.onrender.com` (deploy via `render.yaml`) · docs at `/docs` |
 | GitHub | https://github.com/pmrinal2005/COMPASS |
 
 ## Repository layout
@@ -141,7 +141,7 @@ npm run dev                                # http://localhost:3000
 ## Deployment
 1. **Supabase:** create a project, then run `supabase/migrations/0001_compass_schema.sql` **and** `0002_sessions_persistence.sql` in the SQL editor (0002 lets sessions survive a Render restart). Copy the project URL and the service-role key.
 2. **Render (backend):** New → Blueprint → this repo (`render.yaml`). Fill in the `sync:false` secrets (SerpApi, Groq, Gemini, Supabase, Upstash, Langfuse, Telegram, Resend). Note the generated `CRON_SECRET`. Set `FRONTEND_ORIGINS` to your Vercel URL.
-3. **Vercel (frontend):** Import the repo → **Root Directory = `frontend`** (Next.js is auto-detected, and `frontend/vercel.json` pins `npm ci` / `npm run build`). Set the environment variable `NEXT_PUBLIC_API_URL=https://compass-api.onrender.com`, or leave it empty for offline Demo Mode. Deploy.
+3. **Vercel (frontend):** Import the repo → **Root Directory = `frontend`** (Next.js is auto-detected, and `frontend/vercel.json` pins `npm ci` / `npm run build`). Set `NEXT_PUBLIC_API_URL=https://compass-api-w9dp.onrender.com` and **redeploy** (NEXT_PUBLIC_* values are inlined at build time). If unset, the frontend now defaults to that Render backend; set it to `offline` to force the recorded Demo Mode.
 4. **Scheduler + keep-warm:** in GitHub repo → Settings → Secrets → Actions, add `COMPASS_API_URL` and `CRON_SECRET`. `.github/workflows/watch-cron.yml` then ticks every 15 min (and can be run manually, optionally with `force`), and `keep-warm.yml` pings `/api/health` every 10 min so Render's free instance stays awake.
 5. **Demo day:** open the site 1–2 min early. The health ping wakes Render's free instance; the badge shows "waking backend…" until it's ready.
 
@@ -177,3 +177,13 @@ part that spends credits and needs your `SERPAPI_KEY`; **it has not been run aga
 - **Platform:** Vercel (frontend) + Render (backend) + Supabase + Upstash + Langfuse Cloud. All free tiers; **no Cloudflare/Hono**.
 - **Verified:** backend smoke test passes for all 5 playbooks (HITL, watch/cron auth, disruption → re-plan). `npm ci && npm run build` passes (type-check + lint). The UI was exercised in a headless browser in both live-backend and offline modes with zero console errors.
 - **Last updated:** 2026-10-06
+
+
+## Testing (live, real SerpApi key)
+```bash
+cd backend && SERPAPI_KEY=... python scripts/live_check.py          # 53 checks: every playbook engine via async -> Search Archive
+python scripts/e2e_http.py [backend_url] [--readonly]               # 48 checks: every HTTP endpoint, SSE, HITL, watches, disruption, CORS
+python scripts/ui_live_check.py <frontend_url> [--run]              # Playwright: UI really talks to the live backend (no offline replay)
+python -m pytest -q                                                 # 118 unit tests
+```
+Events: Google no longer renders `events_results` for "Events in <city>"; the playbooks now query "events in <city> this weekend" (Local) / "things to do in <city> this weekend" (Trip), the live item shape is parsed defensively, and `top_sights` is the fallback.

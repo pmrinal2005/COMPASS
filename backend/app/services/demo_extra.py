@@ -19,6 +19,8 @@ that is what makes cross-source corroboration meaningful in Demo Mode.
 """
 from __future__ import annotations
 
+import re
+
 import base64
 import hashlib
 import random
@@ -304,9 +306,15 @@ def tripadvisor(p: dict, drift_r: random.Random | None = None) -> dict:
     return {"places": places}
 
 
+def is_events_query(q: str) -> bool:
+    """Queries that make the live Google Search API render `events_results` (see normalize.py)."""
+    q = (q or "").lower()
+    return q.startswith("events in") or (" this weekend" in q and ("events in " in q or "things to do in " in q))
+
+
 def events(p: dict, drift_r: random.Random | None = None) -> dict:
     q = _q(p, "q", default="Events in Austin")
-    city = q.split(" in ")[-1].strip() or "the city"
+    city = re.sub(r"(?i)\s+this weekend$", "", q.split(" in ")[-1]).strip() or "the city"
     r = seed("events", q.lower())
     kinds = ["Live Jazz Night", "Food Truck Festival", "Comedy Showcase", "Street Art Walk", "Night Market", "Indie Film Screening",
              "Open-Air Concert", "Craft Beer Fest", "Sunrise Yoga in the Park", "Tech Meetup"]
@@ -352,7 +360,7 @@ def airbnb(p: dict) -> dict:
 
 def demo_extra(engine: str, p: dict, drift_r: random.Random | None) -> dict | None:
     """Return a payload for an engine handled here, else None."""
-    if engine == "google" and _q(p, "q").lower().startswith("events in"):
+    if engine == "google" and is_events_query(_q(p, "q")):
         return events(p, drift_r)                        # events_results block of the Google Search API (google_events is deprecated)
     if engine in ("bing", "duckduckgo", "yahoo", "yandex", "baidu", "naver"):
         return serp(engine, p, drift_r)

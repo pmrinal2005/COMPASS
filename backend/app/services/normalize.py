@@ -22,13 +22,14 @@ Field paths follow the official per-engine response docs:
   yelp           : organic_results[] -> title, rating, reviews, price ("$$"), neighborhoods, categories[], place_ids[]
   tripadvisor    : places[] -> place_type (EATERY / ACCOMMODATION / ATTRACTION / ATTRACTION_PRODUCT / VACATION_RENTAL / AIRLINE / GEO), title, rating, reviews, location, link
   google (events): events_results[] -> title, date{start_date,when}, address[], venue (str | {name,rating,reviews}), link, ticket_info[]
-                   (engine=google_events is DEPRECATED upstream -> use engine=google with q="Events in <city>")
+                   (engine=google_events is DEPRECATED upstream -> use engine=google with q="events in <city> this weekend")
   airbnb         : organic_results[] -> listing_id, name, rating, reviews, extracted_price (stay total), price_qualifier, badges[]
   google_maps    : local_results[] -> title, rating, reviews, price, type, address   (category=venue -> venue candidates)
 """
 from __future__ import annotations
 
 import re
+from urllib.parse import urlencode
 from typing import Any
 
 from ..models import Candidate
@@ -238,19 +239,42 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
                               location=it.get("location"), place_type=ptype, description=(it.get("description") or "")[:240]))
 
     elif engine in ("google_events", "google") and category == "event":
-        # `google_events` is DEPRECATED by SerpApi ("no longer accepts new requests"); events live in `events_results` of the Google Search API.
-        # `venue` is an object in the old shape and a plain string in the current docs example -> accept both.
+        # `google_events` is DEPRECATED upstream. Events live in `events_results` of the Google Search API, but Google only renders the block
+        # for "...this weekend" style queries, and the LIVE item shape differs from the old docs sample:
+        #   live  : {title, type, date:"Oct 12", time:"4:00 PM", address:[venue, "City, Country"], thumbnail}   (no venue/link/ticket_info)
+        #   older : {title, date:{start_date, when}, address[], venue:{name,rating,reviews}|str, link, ticket_info[]}
+        # -> every field is read defensively (a crash here used to be swallowed and silently emptied the panel).
         for it in data.get("events_results", []) or []:
-            date = it.get("date") or {}
-            venue = it.get("venue") or {}
+            if not isinstance(it, dict) or not it.get("title"):
+                continue
+            date = it.get("date")
+            if isinstance(date, dict):
+                start, when = date.get("start_date"), date.get("when")
+            else:
+                start = date if isinstance(date, str) else None
+                when = " · ".join(x for x in (start, it.get("time") if isinstance(it.get("time"), str) else None) if x) or None
+            venue = it.get("venue")
             if isinstance(venue, str):
                 venue = {"name": venue}
-            out.append(Candidate(title=it.get("title", ""), category="event", engine=engine, source=venue.get("name") or ", ".join(it.get("address") or []),
-                                 url=it.get("link"), rating=_num(venue.get("rating")), reviews=int(_num(venue.get("reviews")) or 0),
-                                 attributes={"when": date.get("when"), "start": date.get("start_date"), "address": it.get("address"),
-                                             "venue": venue.get("name"), "description": (it.get("description") or "")[:240],
-                                             "tickets": [t.get("source") for t in it.get("ticket_info", [])][:3],
-                                             "match_key": venue_key(venue.get("name") or it.get("title", ""))}))
+            venue = venue if isinstance(venue, dict) else {}
+            addr = it.get("address") if isinstance(it.get("address"), list) else ([it["address"]] if it.get("address") else [])
+            vname = venue.get("name") or (addr[0] if addr else None)
+            link = it.get("link") or ("https://www.google.com/search?" + urlencode({"q": f"{it['title']} {addr[-1] if addr else ''}".strip()}))
+            out.append(Candidate(title=it.get("title", ""), category="event", engine=engine, source=vname or ", ".join(addr),
+                                 url=link, rating=_num(venue.get("rating")), reviews=int(_num(venue.get("reviews")) or 0),
+                                 attributes={"when": when, "start": start, "address": addr, "venue": vname, "kind": it.get("type"),
+                                             "description": (it.get("description") or "")[:240], "thumbnail": it.get("thumbnail"),
+                                             "tickets": [t.get("source") for t in (it.get("ticket_info") or []) if isinstance(t, dict)][:3],
+                                             "match_key": venue_key(vname or it.get("title", ""))}))
+        if not out:
+            # Replacement when Google shows no events block: `top_sights.sights[]` ("things to do" carousel) -> attractions worth visiting.
+            ts = data.get("top_sights")
+            for it in ((ts.get("sights") if isinstance(ts, dict) else ts) or []):
+                if isinstance(it, dict) and it.get("title"):
+                    out.append(Candidate(title=it["title"], category="event", engine=engine, source="Top sights", url=it.get("link"),
+                                         rating=_num(it.get("rating")), reviews=int(_num(it.get("reviews")) or 0),
+                                         attributes={"when": it.get("description"), "venue": None, "kind": "Attraction", "thumbnail": it.get("thumbnail"),
+                                                     "price": it.get("price"), "match_key": venue_key(it["title"])}))
 
     elif engine == "airbnb":
         for it in data.get("organic_results", []) or []:

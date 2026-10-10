@@ -143,7 +143,7 @@ async def main() -> int:
                         rec(f"live {engine}", False, f"HTTP {st} {str(sub)[:90]}")
                         continue
                     sid, data = (sub.get("search_metadata") or {}).get("id"), sub
-                    for _ in range(25):
+                    for _ in range(70):                      # Google Shopping can take > 60 s on slow queries
                         if (data.get("search_metadata") or {}).get("status") in ("Success", "Error"):
                             break
                         await asyncio.sleep(1.5)
@@ -152,7 +152,7 @@ async def main() -> int:
                     cat = next((sp["category"] for pb in PLAYBOOKS.values() for sp in pb["engines"] if sp["engine"] == engine), "generic")
                     cands, ctx = normalize(engine, data, cat, params) if okk else ([], {})
                     note = data.get("error", "") if isinstance(data, dict) else ""
-                    rec(f"live {engine} (async→archive) -> normalized", okk and bool(cands or ctx or "hasn't returned any results" in note or cat == "event"),   # `event`: Google may serve no events block -> empty is valid
+                    rec(f"live {engine} (async→archive) -> normalized", okk and bool(cands or ctx or "hasn't returned any results" in note),   # events used to be exempt here, which hid the 'no events block' bug
                         f"{len(cands)} candidates ctx={list(ctx)} {note[:50]}")
             else:
                 rec("keyed sweep", False, f"need >= {len(engines) + 5} credits, have {left}")

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { BookOpen, Columns2, Compass, Square, Wifi, WifiOff, Loader2 } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { api, hasBackend, type Health } from '@/lib/api'
+import { api, API_URL, hasBackend, type Health } from '@/lib/api'
 import type { Lens } from '@/lib/types'
 import type { BackendMode } from '@/lib/useSession'
 import { CommandCenter, type Inject } from '@/components/CommandCenter'
@@ -28,27 +28,33 @@ export default function Page() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const [pingNonce, setPingNonce] = useState(0)
+
+  // Health check + auto-reconnect. Render's free tier cold-starts in up to ~60 s, so a few quick failures must NOT lock the page into the
+  // offline demo: after the first rounds fail we keep probing every 15 s and flip to "live" the moment the backend answers.
   useEffect(() => {
     if (!hasBackend()) return
     let alive = true
-    // Render free tier cold-starts in up to ~60s: this request also warms it up.
+    let timer: ReturnType<typeof setTimeout> | undefined
     const ping = async (attempt = 0) => {
       try {
-        const h = await api.health(attempt === 0 ? 8000 : 25000)
+        const h = await api.health(attempt === 0 ? 8000 : 30000)
         if (!alive) return
         setHealth(h)
         setBackend('live')
       } catch {
         if (!alive) return
-        if (attempt < 3) setTimeout(() => ping(attempt + 1), 4000)
-        else setBackend('offline')
+        if (attempt >= 2) setBackend('offline')
+        timer = setTimeout(() => ping(attempt + 1), attempt < 2 ? 3000 : 15000)
       }
     }
+    setBackend((b) => (b === 'live' ? b : 'checking'))
     ping()
     return () => {
       alive = false
+      if (timer) clearTimeout(timer)
     }
-  }, [])
+  }, [pingNonce])
 
   return (
     <main className="relative min-h-screen overflow-x-hidden">
@@ -86,7 +92,7 @@ export default function Page() {
             <button className="btn-ghost" onClick={() => setSplit((v) => !v)} id="split-toggle" title="Split-screen: both lenses on the same backend">
               {split ? <Square size={13} /> : <Columns2 size={13} />} {split ? 'Single' : 'Split-screen'}
             </button>
-            <BackendBadge mode={backend} health={health} />
+            <BackendBadge mode={backend} health={health} onRetry={() => setPingNonce((n) => n + 1)} />
           </nav>
         </div>
       </header>
@@ -118,11 +124,16 @@ export default function Page() {
   )
 }
 
-function BackendBadge({ mode, health }: { mode: BackendMode; health: Health | null }) {
+function BackendBadge({ mode, health, onRetry }: { mode: BackendMode; health: Health | null; onRetry: () => void }) {
   if (mode === 'checking')
     return <span className="chip"><Loader2 size={11} className="animate-spin" /> waking backend…</span>
   if (mode === 'offline')
-    return <span className="chip text-amber-200" title="Set NEXT_PUBLIC_API_URL to a running backend"><WifiOff size={11} /> offline demo</span>
+    return (
+      <button type="button" onClick={onRetry} className="chip cursor-pointer text-amber-200 hover:border-amber-300/40"
+        title={hasBackend() ? `Backend ${API_URL} is unreachable - still retrying every 15 s. Click to retry now.` : 'NEXT_PUBLIC_API_URL is set to "offline" - showing recorded sessions'}>
+        <WifiOff size={11} /> offline demo{hasBackend() ? ' · retry' : ''}
+      </button>
+    )
   const i = health?.integrations || {}
   const live = Object.entries(i).filter(([k, v]) => k !== 'serpapi' && v === true).map(([k]) => k)
   return (

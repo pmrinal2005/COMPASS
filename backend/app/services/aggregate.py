@@ -136,7 +136,7 @@ def build_insights(pid: str, ranked: list[Candidate], cands: list[Candidate], sl
                             "meets_filters": c.attributes.get("meets_filters"), "platforms": c.attributes.get("platforms"), "score": c.score}
                            for c in ranked[:8]],
                 "events": [{"title": e.title, "when": e.attributes.get("when"), "venue": e.attributes.get("venue"), "url": e.url,
-                            "tickets": e.attributes.get("tickets")} for e in ev]}
+                            "tickets": e.attributes.get("tickets"), "kind": e.attributes.get("kind"), "thumbnail": e.attributes.get("thumbnail")} for e in ev]}
     if pid == "research_seo":
         pool = ranked
         tr = next((c for c in pool if c.attributes.get("tracked")), None)
@@ -162,7 +162,8 @@ def build_insights(pid: str, ranked: list[Candidate], cands: list[Candidate], sl
         stays = sorted([c for c in cands if c.category == "stay"], key=lambda c: c.price or 1e9)[:3]
         if not ev and not stays:
             return None
-        return {"kind": "trip", "events": [{"title": e.title, "when": e.attributes.get("when"), "venue": e.attributes.get("venue"), "url": e.url} for e in ev],
+        return {"kind": "trip", "events": [{"title": e.title, "when": e.attributes.get("when"), "venue": e.attributes.get("venue"), "url": e.url, "kind": e.attributes.get("kind"),
+                            "thumbnail": e.attributes.get("thumbnail")} for e in ev],
                 "stays": [{"title": s.title, "price": s.price, "rating": s.rating, "reviews": s.reviews, "url": s.url, "verified": s.verified,
                            "qualifier": s.attributes.get("qualifier")} for s in stays]}
     return None

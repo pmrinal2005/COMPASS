@@ -126,7 +126,7 @@ export interface VenueInsight {
   id: string; title: string; rating?: number | null; reviews?: number | null; verified: boolean; anomaly?: string | null
   price_level?: number | null; spread?: number; meets_filters?: boolean; platforms: Record<string, VenuePlatform>; score?: number
 }
-export interface EventInsight { title: string; when?: string | null; venue?: string | null; url?: string | null; tickets?: string[] }
+export interface EventInsight { title: string; when?: string | null; venue?: string | null; url?: string | null; tickets?: string[]; kind?: string | null; thumbnail?: string | null }
 export interface SeoGridCell { engine: string; label: string; weight: number; position: number | null; found: boolean; ctr: number; leader?: string | null; leader_pos?: number | null }
 export type Insights =
   | { kind: 'venues'; city?: string; query?: string; platforms: string[]; yelp_supported: boolean; min_rating?: number; price_cap?: number; venues: VenueInsight[]; events: EventInsight[] }

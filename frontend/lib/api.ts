@@ -1,6 +1,22 @@
 import type { Account, ActionProposal, Lens, Playbook, WatchRecord, WatchTick } from './types'
 
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '')
+/**
+ * Backend resolution (NEXT_PUBLIC_* values are inlined at BUILD time -> after changing it in Vercel you must REDEPLOY):
+ *   - unset / empty            -> the deployed Render backend below (so a forgotten env var no longer silently ships the demo)
+ *   - "offline" | "demo"       -> force the pre-recorded offline Demo Mode
+ *   - "my-api.onrender.com"    -> https:// is added automatically; trailing slashes / whitespace / a pasted "/api" suffix are stripped
+ */
+export const DEFAULT_API_URL = 'https://compass-api-w9dp.onrender.com'
+
+export function resolveApiUrl(raw: string | undefined | null): string {
+  const v = (raw ?? '').trim()
+  if (!v) return DEFAULT_API_URL
+  if (/^(offline|demo|none|off|false)$/i.test(v)) return ''
+  const withProto = /^https?:\/\//i.test(v) ? v : `${/^(localhost|127\.|0\.0\.0\.0)/.test(v) ? 'http' : 'https'}://${v}`
+  return withProto.replace(/\/+$/, '').replace(/\/api$/i, '')
+}
+
+export const API_URL = resolveApiUrl(process.env.NEXT_PUBLIC_API_URL)
 
 export async function fetchJSON<T = any>(path: string, init?: RequestInit & { timeoutMs?: number }): Promise<T> {
   const ctrl = new AbortController()
@@ -45,7 +61,7 @@ export const api = {
   tickWatch: (wid: string) => fetchJSON<WatchTick>(`/api/watches/${wid}/check`, { method: 'POST', timeoutMs: 60000 }),
   health: (timeoutMs = 8000) => fetchJSON<Health>('/api/health', { timeoutMs }),
   createSession: (prompt: string, lens: Lens, priorities?: Record<string, number>) =>
-    fetchJSON<{ session_id: string }>('/api/sessions', { method: 'POST', body: JSON.stringify({ prompt, lens, priorities }) }),
+    fetchJSON<{ session_id: string }>('/api/sessions', { method: 'POST', timeoutMs: 75000, body: JSON.stringify({ prompt, lens, priorities }) }),
   confirm: (sid: string, choice: 'all' | 'essential') => fetchJSON(`/api/sessions/${sid}/confirm?choice=${choice}`, { method: 'POST' }),
   disrupt: (sid: string, kind: DisruptKind, pct = 45) =>
     fetchJSON(`/api/sessions/${sid}/disrupt?kind=${kind}&pct=${pct}`, { method: 'POST' }),

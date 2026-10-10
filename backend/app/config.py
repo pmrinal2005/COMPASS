@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     serpapi_base: str = "https://serpapi.com"
     serp_concurrency: int = 4            # semaphore: max in-flight SerpApi calls per session
     serp_poll_interval: float = 1.2      # seconds between async archive polls
-    serp_poll_timeout: float = 45.0      # give up on a queued async search after this
+    serp_poll_timeout: float = 100.0     # give up on a queued async search after this (live: Google Shopping took 62 s on a slow query)
     serp_max_retries: int = 3            # exponential backoff retries on 429 (throughput) / 5xx
     serp_sync_timeout: float = 70.0      # HTTP timeout for a blocking (non-async) search
     serp_async: bool = True              # use async=true + Search Archive for non-fresh searches

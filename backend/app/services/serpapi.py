@@ -182,6 +182,10 @@ class SerpApiClient:
             if st == "Error":
                 raise SerpApiError(res.get("error", "search error"), 503)
             # Queued / Processing -> keep polling
+        # The credit is already spent: take one last look at the archive before giving up (the search may have finished during the last sleep).
+        res = await self._get(f"/searches/{sid}.json", {"api_key": self.s.serpapi_key})
+        if (res.get("search_metadata") or {}).get("status") == "Success":
+            return self._finalize(res)
         raise SerpApiError(f"async search {sid} still not finished after {self.s.serp_poll_timeout:.0f}s", 504, retryable=False)
 
     @staticmethod

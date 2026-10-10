@@ -1,12 +1,40 @@
 'use client'
 
 import { motion, LayoutGroup } from 'framer-motion'
-import { AlertTriangle, ExternalLink, MapPin, ShieldCheck, TrendingDown, TrendingUp } from 'lucide-react'
-import type { Insights, VenueInsight } from '@/lib/types'
+import { AlertTriangle, CalendarDays, ExternalLink, MapPin, ShieldCheck, Ticket, TrendingDown, TrendingUp } from 'lucide-react'
+import type { EventInsight, Insights, VenueInsight } from '@/lib/types'
 import { cn, platformColor } from '@/lib/utils'
 import { AnimatedNumber } from './AnimatedNumber'
 
 type VenueIns = Extract<Insights, { kind: 'venues' }>
+
+/** "What's on in town": live `events_results` of the Google Search API (query "events in <city> this weekend"). */
+function WhatsOn({ events, city }: { events: EventInsight[]; city?: string }) {
+  return (
+    <section className="mt-2 border-t border-white/5 pt-2" id="whats-on" aria-label="events in town">
+      <div className="mb-1 flex items-center gap-1 text-[10px] uppercase tracking-wider text-slate-500">
+        <CalendarDays size={11} className="text-amber-300" /> What&apos;s on in {city || 'town'} <span className="chip ml-auto normal-case">Google events</span>
+      </div>
+      {events.length === 0 ? (
+        <p className="text-[11px] text-slate-600">Google returned no events block for this city right now.</p>
+      ) : (
+        <ul className="stagger grid gap-1.5 sm:grid-cols-2">
+          {events.slice(0, 6).map((e, i) => (
+            <motion.li key={e.title + (e.when || '')} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 * i }}
+              whileHover={{ y: -2 }} className="rounded-lg border border-white/5 bg-white/[0.02] px-2.5 py-1.5 text-[11px]">
+              <div className="flex items-center gap-1.5">
+                <Ticket size={11} className="shrink-0 text-amber-300" />
+                <span className="min-w-0 flex-1 truncate text-slate-200" title={e.title}>{e.title}</span>
+                {e.url && <a href={e.url} target="_blank" rel="noreferrer" aria-label={`open ${e.title}`} className="text-slate-500 hover:text-slate-200"><ExternalLink size={10} /></a>}
+              </div>
+              <div className="truncate text-[10px] text-slate-500">{[e.when, e.venue].filter(Boolean).join(' · ')}</div>
+            </motion.li>
+          ))}
+        </ul>
+      )}
+    </section>
+  )
+}
 
 /** Cross-platform consensus: the same venue's rating on Google Maps / Yelp / Tripadvisor, merged by entity resolution. */
 export function VenueConsensus({ ins, prev }: { ins: VenueIns; prev?: Insights | null }) {
@@ -77,6 +105,7 @@ export function VenueConsensus({ ins, prev }: { ins: VenueIns; prev?: Insights |
             })}
           </ol>
         </LayoutGroup>
+        <WhatsOn events={ins.events || []} city={ins.city} />
       </div>
     </div>
   )

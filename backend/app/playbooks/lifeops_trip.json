@@ -140,7 +140,7 @@
       "purpose": "Events during the stay: events_results of the Google Search API (google_events is deprecated)",
       "essential": false,
       "params": {
-        "q": "Events in {destination}",
+        "q": "things to do in {destination} this weekend",
         "hl": "en",
         "gl": "us"
       }

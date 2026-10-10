@@ -113,10 +113,12 @@ export function useSession(lens: Lens, backend: BackendMode) {
   const start = useCallback(
     async (prompt: string, priorities?: Record<string, number>) => {
       stop()
-      if (backend !== 'live' || !hasBackend()) return startReplay(prompt)
+      // Only a missing backend URL (NEXT_PUBLIC_API_URL=offline) forces the recordings. If the health badge is still "waking"/"offline"
+      // (Render cold start) we STILL try the live API - createSession waits up to 75 s - and only then fall back to the recording.
+      if (!hasBackend()) return startReplay(prompt)
       dispatch({ kind: 'reset', prompt, lens, replay: false })
       try {
-        const { session_id } = await api.createSession(prompt, lens, priorities)
+        const { session_id } = await api.createSession(prompt, lens, priorities)  // 75 s timeout (cold start)
         dispatch({ kind: 'patch', patch: { sessionId: session_id } })
         const es = new EventSource(api.streamUrl(session_id))
         esRef.current = es
@@ -134,7 +136,7 @@ export function useSession(lens: Lens, backend: BackendMode) {
         dispatch({ kind: 'patch', patch: { error: `Backend unreachable (${err?.message || err}); showing offline recording.` } })
       }
     },
-    [backend, lens, startReplay, stop],
+    [lens, startReplay, stop],
   )
 
   const disrupt = useCallback(
