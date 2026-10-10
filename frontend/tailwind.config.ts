@@ -7,6 +7,8 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
         mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular'],
+        heading: ['var(--font-instrument)', 'Instrument Serif', 'serif'],
+        body: ['var(--font-barlow)', 'Barlow', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
         ink: { 950: '#05060b', 900: '#090b14', 850: '#0d1020', 800: '#121630', 700: '#1b2042' },

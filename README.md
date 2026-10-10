@@ -25,6 +25,8 @@ USER PROMPT (Go / Pro lens)
 ## URLs
 | | |
 |---|---|
+| Landing page | `/` — cinematic product-demo landing (liquid-glass design, ported from VAANI-RAKSHAK, rewritten for COMPASS) |
+| Dashboard | `/dashboard` — the Agent Command Center (reached from every landing CTA; has a back-arrow to `/`) |
 | Frontend (Vercel) | deploy `frontend/` (see below). With no backend it runs **offline Demo Mode** |
 | Backend (Render) | `https://compass-api-w9dp.onrender.com` (deploy via `render.yaml`) · docs at `/docs` |
 | GitHub | https://github.com/pmrinal2005/COMPASS |
@@ -42,7 +44,9 @@ backend/                 FastAPI + LangGraph (Render, native Python buildpack, n
   scripts/smoke_test.py  end-to-end test (Demo Mode, 0 credits)
   scripts/record_demo.py regenerates frontend/lib/demo/recordings.json
 frontend/                Next.js 14 + React + Tailwind + framer-motion (Vercel Hobby)
-  app/page.tsx           Agent Command Center (Go/Pro toggle + split-screen + Playbook library + account credits)
+  app/page.tsx           Landing page (renders components/landing/LandingPage)
+  app/dashboard/page.tsx Agent Command Center (Go/Pro toggle + split-screen + Playbook library + account credits)
+  components/landing/    LandingPage · PitchDeck (7-slide snap deck) · slides · BlurText · HlsVideo · SlideControls
   components/            PipelineStepper · IntentBars · ThoughtTree · SerpLog · RetrievalHeatmap · DecisionMatrix ·
                          InsightsPanel (VenueConsensus · SeoGrid · trip stays/events) · WatchesPanel · PlaybookLibrary ·
                          AccountMeter · ActionCards (HITL) · RawCalls · AnimatedNumber
@@ -187,3 +191,10 @@ python scripts/ui_live_check.py <frontend_url> [--run]              # Playwright
 python -m pytest -q                                                 # 118 unit tests
 ```
 Events: Google no longer renders `events_results` for "Events in <city>"; the playbooks now query "events in <city> this weekend" (Local) / "things to do in <city> this weekend" (Trip), the live item shape is parsed defensively, and `top_sights` is the fallback.
+
+
+## Landing page
+`/` is a full-bleed cinematic product demo: preloader → floating glass navbar → hero (blur-in headline *"Stop Searching. Start Deciding."*, KPI glass cards) → "The Four Agents" section → a 7-slide horizontal pitch deck (intro · how a decision happens · two lenses · why COMPASS · by the numbers · prompts to try · CTA). Hero clips are served from `frontend/public/` (same-origin); slide backgrounds stream from CDN/HLS (`hls.js`). Every CTA routes to `/dashboard` via `next/link`. The e2e scripts in `backend/scripts/ui_*check.py` automatically target `/dashboard`.
+
+## Vercel deploy
+Import the repo, set **Root Directory = `frontend`**, framework auto-detects Next.js (`frontend/vercel.json` pins `npm ci` / `npm run build`). Optionally set `NEXT_PUBLIC_API_URL` to your Render backend.

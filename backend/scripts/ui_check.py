@@ -10,7 +10,8 @@ import sys
 
 import asyncio
 from playwright.async_api import async_playwright
-URL=(sys.argv[1] if len(sys.argv) > 1 else "http://localhost:3000")
+URL=(sys.argv[1] if len(sys.argv) > 1 else "http://localhost:3000").rstrip("/")
+if not URL.endswith("/dashboard"): URL += "/dashboard"   # the Command Center lives at /dashboard (landing page is /)
 async def run(pg, lens, text, wait="complete"):
     await pg.fill(f"#prompt-input-{lens}", text); await pg.press(f"#prompt-input-{lens}", "Enter")
     await pg.wait_for_selector(f"#pipeline-{lens} >> text=complete", timeout=120000); await pg.wait_for_timeout(1200)

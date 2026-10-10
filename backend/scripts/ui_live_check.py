@@ -12,7 +12,8 @@ import sys
 
 from playwright.async_api import async_playwright
 
-URL = next((a for a in sys.argv[1:] if a.startswith("http")), "http://localhost:3000")
+URL = next((a for a in sys.argv[1:] if a.startswith("http")), "http://localhost:3000").rstrip("/")
+if not URL.endswith("/dashboard"): URL += "/dashboard"   # the Command Center lives at /dashboard (landing page is /)
 RUN = "--run" in sys.argv
 OUT = "/home/user/pw/shots"
 R = []
