@@ -2,23 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
-html, body { background: #05060b; }
-body { @apply text-slate-200 antialiased; }
+:root {
+  color-scheme: dark;
+  /* ── theme tokens (R G B). Defaults == Tailwind stock values, i.e. the original dark look. ── */
+  --white: 255 255 255; --black: 0 0 0;
+  --canvas: 5 6 11; --surface: 9 11 20; --node: 13 16 32;
+  --slate-100: 241 245 249; --slate-200: 226 232 240; --slate-300: 203 213 225; --slate-400: 148 163 184; --slate-600: 71 85 105;
+  --violet-100: 237 233 254; --violet-200: 221 214 254; --violet-300: 196 181 253;
+  --cyan-200: 165 243 252; --cyan-300: 103 232 249;
+  --amber-50: 255 251 235; --amber-200: 253 230 138; --amber-300: 252 211 77;
+  --emerald-200: 167 243 208; --emerald-300: 110 231 183;
+  --rose-200: 254 205 211; --rose-300: 253 164 175;
+  --pink-100: 252 231 243; --pink-200: 251 207 232; --pink-300: 249 168 212;
+  --grid-line: rgba(255,255,255,.025);
+  --scroll-thumb: rgba(148,163,184,.25);
+}
+/* Light theme: applied to <html data-theme="light"> by the dashboard only (the landing page never sets it). */
+html[data-theme='light'] {
+  color-scheme: light;
+  --white: 15 23 42; --black: 226 232 240;                 /* "white" overlays become slate-900 tints, "black" wells become slate-200 tints */
+  --canvas: 241 245 249; --surface: 255 255 255; --node: 255 255 255;
+  --slate-100: 15 23 42; --slate-200: 30 41 59; --slate-300: 51 65 85; --slate-400: 71 85 105; --slate-600: 148 163 184;
+  --violet-100: 76 29 149; --violet-200: 91 33 182; --violet-300: 109 40 217;
+  --cyan-200: 21 94 117; --cyan-300: 14 116 144;
+  --amber-50: 120 53 15; --amber-200: 146 64 14; --amber-300: 180 83 9;
+  --emerald-200: 6 95 70; --emerald-300: 4 120 87;
+  --rose-200: 159 18 57; --rose-300: 190 18 60;
+  --pink-100: 131 24 67; --pink-200: 157 23 77; --pink-300: 190 24 93;
+  --grid-line: rgba(15,23,42,.05);
+  --scroll-thumb: rgba(71,85,105,.35);
+}
+html, body { background: rgb(var(--canvas)); }
+body { @apply text-slate-200 antialiased; transition: background-color .25s ease, color .25s ease; }
 
 @layer components {
-  .panel { @apply relative rounded-2xl border border-white/[0.07] bg-ink-900/70 backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_20px_60px_-30px_rgba(0,0,0,0.8)]; }
+  .panel { @apply relative rounded-2xl border border-white/[0.07] bg-surface/70 backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_20px_60px_-30px_rgba(0,0,0,0.8)]; }
   .panel-title { @apply flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400; }
   .chip { @apply inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-slate-300; }
   .btn { @apply inline-flex items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-40; }
-  .btn-primary { @apply btn bg-gradient-to-r from-violet-500 to-cyan-500 text-white shadow-lg shadow-violet-500/20 hover:brightness-110; }
+  .btn-primary { @apply btn bg-gradient-to-r from-violet-500 to-cyan-500 text-[#fff] shadow-lg shadow-violet-500/20 hover:brightness-110; }
   .btn-ghost { @apply btn border border-white/10 bg-white/[0.03] text-slate-200 hover:bg-white/[0.08]; }
   .btn-ok { @apply btn bg-emerald-500/90 text-emerald-950 hover:bg-emerald-400; }
   .btn-bad { @apply btn border border-rose-500/40 bg-rose-500/10 text-rose-300 hover:bg-rose-500/20; }
-  .scroll-thin { scrollbar-width: thin; scrollbar-color: rgba(148,163,184,.25) transparent; }
+  .scroll-thin { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; }
+  /* animated skeleton block (theme-aware) used while vector searches are in flight */
+  .skeleton { background: linear-gradient(90deg, rgb(var(--white) / .04) 0%, rgb(var(--white) / .14) 50%, rgb(var(--white) / .04) 100%); background-size: 200% 100%; @apply animate-shimmer rounded-md; }
   .shimmer-text { background: linear-gradient(90deg,#a78bfa,#22d3ee,#34d399,#fbbf24,#a78bfa); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; @apply animate-shimmer; }
 }
-.grid-bg { background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: 32px 32px; }
+.grid-bg { background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 32px 32px; }
 
 /* motion-safe: respect the OS reduced-motion setting everywhere (framer-motion honours it through MotionConfig in layout) */
 @media (prefers-reduced-motion: reduce) {
@@ -340,3 +371,9 @@ html { scroll-behavior: smooth; }
     height: 58px;
   }
 }
+
+/* ───────── Light-theme refinements (dashboard only) ───────── */
+html[data-theme='light'] .panel { box-shadow: 0 1px 2px rgba(15,23,42,.06), 0 14px 34px -20px rgba(15,23,42,.22); }
+html[data-theme='light'] .btn-ok { color: #022c22; }
+html[data-theme='light'] .aurora-blob { opacity: .55; }
+@media (prefers-reduced-motion: reduce) { body { transition: none; } }

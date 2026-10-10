@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Coins, Flame, Loader2, Play, RefreshCw, Sparkles, Zap, Ban, TrendingDown, ArrowDownWideNarrow } from 'lucide-react'
+import { Coins, Flame, Loader2, Mic, MicOff, Play, RefreshCw, Sparkles, Zap, Ban, TrendingDown, ArrowDownWideNarrow } from 'lucide-react'
 import type { Lens } from '@/lib/types'
 import { SCENARIOS, useSession, type BackendMode } from '@/lib/useSession'
 import { cn } from '@/lib/utils'
@@ -17,6 +17,7 @@ import { IntentBars } from './IntentBars'
 import { InsightsPanel } from './InsightsPanel'
 import { WatchesPanel } from './WatchesPanel'
 import { AnimatedNumber } from './AnimatedNumber'
+import { useSpeechToText } from '@/lib/useSpeechToText'
 
 const LENS_META: Record<Lens, { name: string; tagline: string; accent: string }> = {
   go: { name: 'COMPASS Go', tagline: 'Casual lens · trips, deals, jobs', accent: 'from-cyan-400 to-violet-500' },
@@ -38,6 +39,8 @@ export function CommandCenter({ lens, backend, compact = false, inject, onInject
   const [prompt, setPrompt] = useState(chips[0]?.prompt || '')
   const [tab, setTab] = useState<'live' | 'watches' | 'raw'>('live')
   const handled = useRef(0)
+  // native Web Speech API dictation: finalised phrases are appended to the prompt box (interim words are previewed live)
+  const speech = useSpeechToText((text) => setPrompt((p) => (p && !/\s$/.test(p) ? `${p} ${text}` : `${p}${text}`)))
   // a prompt pushed from the Playbook library: fill the box and run it once
   useEffect(() => {
     if (!inject || inject.n === handled.current) return
@@ -83,20 +86,42 @@ export function CommandCenter({ lens, backend, compact = false, inject, onInject
           className="flex gap-2"
           onSubmit={(e) => {
             e.preventDefault()
+            speech.stop()
             if (prompt.trim()) ses.start(prompt.trim())
           }}
         >
-          <input
-            id={`prompt-input-${lens}`}
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-            placeholder={lens === 'go' ? 'Plan a 4-day Tokyo trip under $1,200, flights + hotel' : 'Source 3 reliable suppliers for bulk Bluetooth earbuds…'}
-            className="min-w-0 flex-1 rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-sm outline-none placeholder:text-slate-600 focus:border-violet-400/50"
-          />
+          <div className="relative min-w-0 flex-1">
+            <input
+              id={`prompt-input-${lens}`}
+              value={prompt}
+              onChange={(e) => setPrompt(e.target.value)}
+              placeholder={speech.listening ? 'Listening… speak your request' : lens === 'go' ? 'Plan a 4-day Tokyo trip under $1,200, flights + hotel' : 'Source 3 reliable suppliers for bulk Bluetooth earbuds…'}
+              className={cn('w-full rounded-xl border bg-black/30 py-2 pl-3 text-sm outline-none placeholder:text-slate-600 focus:border-violet-400/50', 'pr-11', speech.listening ? 'border-rose-400/60' : 'border-white/10')}
+            />
+            <button
+                type="button"
+                id={`mic-${lens}`}
+                onClick={speech.toggle}
+                aria-pressed={speech.listening}
+                aria-label={speech.listening ? 'Stop voice input' : 'Start voice input'}
+                title={!speech.supported ? 'Voice input is not supported in this browser' : speech.listening ? 'Listening… click to stop' : 'Speak your request (browser speech recognition)'}
+                className={cn('absolute right-1.5 top-1/2 grid h-7 w-7 -translate-y-1/2 place-items-center rounded-lg transition',
+                  speech.listening ? 'bg-rose-500 text-[#fff]' : 'text-slate-400 hover:bg-white/10 hover:text-white')}
+              >
+                {speech.listening && <span className="absolute inset-0 animate-pulse-ring rounded-lg" style={{ boxShadow: '0 0 0 2px rgb(244 63 94)' }} />}
+                {speech.listening ? <Mic size={14} className="relative animate-pulse" /> : (speech.error || !speech.supported) ? <MicOff size={14} /> : <Mic size={14} />}
+              </button>
+          </div>
           <button className="btn-primary px-4" disabled={running || !prompt.trim()}>
             {running ? <Loader2 size={14} className="animate-spin" /> : <Play size={14} />} {running ? 'Running' : 'Run'}
           </button>
         </form>
+        {(speech.listening || speech.error || speech.interim) && (
+          <p role="status" aria-live="polite" className={cn('mt-1.5 flex items-center gap-1.5 text-[11px]', speech.error ? 'text-amber-300' : 'text-rose-300')} id={`speech-status-${lens}`}>
+            {speech.error ? <MicOff size={11} /> : <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-rose-400" />}
+            {speech.error ? speech.error : speech.interim ? <>Hearing: <i className="text-slate-300">{speech.interim}</i></> : 'Listening… speak now, click the mic to stop.'}
+          </p>
+        )}
         <div className="mt-2 flex flex-wrap gap-1.5">
           {chips.map((c) => (
             <button key={c.key} type="button" disabled={running}

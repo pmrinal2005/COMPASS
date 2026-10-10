@@ -10,6 +10,7 @@ import type { BackendMode } from '@/lib/useSession'
 import { CommandCenter, type Inject } from '@/components/CommandCenter'
 import { PlaybookLibrary } from '@/components/PlaybookLibrary'
 import { AccountMeter } from '@/components/AccountMeter'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { cn } from '@/lib/utils'
 
 export default function Page() {
@@ -60,14 +61,14 @@ export default function Page() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
       <div className="pointer-events-none fixed inset-0 -z-10 grid-bg" />
-      <div className="pointer-events-none fixed -left-40 -top-40 -z-10 h-[520px] w-[520px] animate-aurora rounded-full bg-violet-600/20 blur-[120px]" />
-      <div className="pointer-events-none fixed -right-40 top-40 -z-10 h-[480px] w-[480px] animate-aurora rounded-full bg-cyan-500/10 blur-[120px]" />
+      <div className="pointer-events-none fixed -left-40 -top-40 -z-10 h-[520px] w-[520px] aurora-blob animate-aurora rounded-full bg-violet-600/20 blur-[120px]" />
+      <div className="pointer-events-none fixed -right-40 top-40 -z-10 h-[480px] w-[480px] aurora-blob animate-aurora rounded-full bg-cyan-500/10 blur-[120px]" />
 
-      <header className="sticky top-0 z-20 border-b border-white/5 bg-ink-950/70 backdrop-blur-xl" id="top-bar">
+      <header className="sticky top-0 z-20 border-b border-white/5 bg-canvas/70 backdrop-blur-xl" id="top-bar">
         <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-3 px-4 py-3">
           <div className="flex items-center gap-2">
             <Link href="/" id="back-to-landing" aria-label="Back to the COMPASS landing page" title="Back to landing page" className="btn-ghost !px-2"><ArrowLeft size={13} /></Link>
-            <span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 text-white shadow-lg shadow-violet-500/30">
+            <span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-cyan-500 text-[#fff] shadow-lg shadow-violet-500/30">
               <Compass size={17} />
             </span>
             <div>
@@ -94,6 +95,7 @@ export default function Page() {
             <button className="btn-ghost" onClick={() => setSplit((v) => !v)} id="split-toggle" title="Split-screen: both lenses on the same backend">
               {split ? <Square size={13} /> : <Columns2 size={13} />} {split ? 'Single' : 'Split-screen'}
             </button>
+            <ThemeToggle />
             <BackendBadge mode={backend} health={health} onRetry={() => setPingNonce((n) => n + 1)} />
           </nav>
         </div>

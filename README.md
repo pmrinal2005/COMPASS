@@ -198,3 +198,13 @@ Events: Google no longer renders `events_results` for "Events in <city>"; the pl
 
 ## Vercel deploy
 Import the repo, set **Root Directory = `frontend`**, framework auto-detects Next.js (`frontend/vercel.json` pins `npm ci` / `npm run build`). Optionally set `NEXT_PUBLIC_API_URL` to your Render backend.
+
+## Command Center UX upgrades (frontend)
+| Feature | Where | Notes |
+|---|---|---|
+| **Voice input** | mic button inside the prompt bar (`CommandCenter.tsx`, `lib/useSpeechToText.ts`) | Native `window.SpeechRecognition` / `webkitSpeechRecognition` only (no service, no key). Click toggles listening (pulsing red state + live "Hearing: ..." preview); final phrases are appended to the prompt. Permission denied / no mic / unsupported browser show a friendly inline message instead of throwing. |
+| **Full-screen Decision Graph** | expand button in the "Decision graph · thought-tree" header (`ThoughtTree.tsx`, `PanZoom.tsx`) | Portal modal showing the **live-updating** graph (inputs, Orchestrator, SerpApi calls, Analyst, weighted dimensions, Actor). Drag to pan, wheel / pinch / `+` `-` buttons to zoom at the cursor, double-click to zoom in, arrow keys to move, `0` or the fit button to re-fit, `Esc` to close. |
+| **Retrieval Heat-Map** | `RetrievalHeatmap.tsx` | Idle explainer, animated skeleton loaders + live counters while indexing, then chunks indexed / top + avg similarity, dense vs full-text vs both breakdown, engine x cosine-similarity density matrix, per-engine index composition, hybrid hit list and indexed-chunk preview chips. |
+| **Light / Dark mode** | toggle in the dashboard top bar (`ThemeToggle.tsx`, `lib/theme.tsx`) | CSS-variable theme tokens (`globals.css` + `tailwind.config.ts`) flip every panel, text tier, border and SVG node. Persisted in `localStorage`, applied before first paint, scoped to `/dashboard` (the landing page always stays dark). |
+
+Frontend verification: `cd frontend && npx tsc --noEmit && npm run lint && npm run build` (all clean); backend `pytest` (118 passed) is untouched.

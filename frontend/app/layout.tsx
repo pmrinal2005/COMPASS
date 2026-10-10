@@ -16,7 +16,11 @@ export const viewport: Viewport = { themeColor: '#05060b' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable} ${barlow.variable} ${instrument.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${sans.variable} ${mono.variable} ${barlow.variable} ${instrument.variable}`}>
+      <head>
+        {/* apply the saved Light/Dark choice before first paint, on the dashboard only (the landing page stays dark) */}
+        <script dangerouslySetInnerHTML={{ __html: "try{if(location.pathname.indexOf('/dashboard')===0&&localStorage.getItem('compass-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}" }} />
+      </head>
       <body className="min-h-screen font-sans"><Providers>{children}</Providers></body>
     </html>
   )

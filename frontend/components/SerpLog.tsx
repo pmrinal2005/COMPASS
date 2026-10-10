@@ -61,7 +61,7 @@ export function SerpLog({ s }: { s: SessionState }) {
                 {l.raw && <ChevronRight size={11} className={cn('mt-0.5 shrink-0 text-slate-500 transition', isOpen && 'rotate-90')} />}
               </button>
               {isOpen && (
-                <pre className="scroll-thin my-1 max-h-56 overflow-auto rounded border border-white/5 bg-ink-950 p-2 text-[10px] text-slate-300">
+                <pre className="scroll-thin my-1 max-h-56 overflow-auto rounded border border-white/5 bg-canvas p-2 text-[10px] text-slate-300">
                   {JSON.stringify(l.raw, null, 2)}
                 </pre>
               )}

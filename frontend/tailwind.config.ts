@@ -1,4 +1,13 @@
 import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
+
+/** Theme-aware colour: reads an `R G B` triplet from a CSS variable so the dashboard can flip Light/Dark at runtime.
+ *  The :root defaults in globals.css equal Tailwind's stock values, so the dark UI and the landing page are unchanged. */
+const v = (name: string) => `rgb(var(--${name}) / <alpha-value>)`
+const themed = <K extends keyof typeof colors>(family: K, shades: number[]) => ({
+  ...(colors[family] as unknown as Record<string, string>),
+  ...Object.fromEntries(shades.map((s) => [String(s), v(`${family}-${s}`)])),
+})
 
 const config: Config = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './lib/**/*.{ts,tsx}'],
@@ -11,6 +20,18 @@ const config: Config = {
         body: ['var(--font-barlow)', 'Barlow', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
+        white: v('white'),
+        black: v('black'),
+        canvas: v('canvas'),
+        surface: v('surface'),
+        node: v('node'),
+        slate: themed('slate', [100, 200, 300, 400, 600]),
+        violet: themed('violet', [100, 200, 300]),
+        cyan: themed('cyan', [200, 300]),
+        amber: themed('amber', [50, 200, 300]),
+        emerald: themed('emerald', [200, 300]),
+        rose: themed('rose', [200, 300]),
+        pink: themed('pink', [100, 200, 300]),
         ink: { 950: '#05060b', 900: '#090b14', 850: '#0d1020', 800: '#121630', 700: '#1b2042' },
         orchestrator: '#a78bfa',
         researcher: '#22d3ee',
