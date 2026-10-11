@@ -28,6 +28,11 @@ _TOPIC_HEADS = [
 ]
 _ANGLES = ["Official video", "explained in 10 minutes", "top 10 moments", "live performance", "the full story",
            "review", "best of", "behind the scenes", "reaction", "first listen", "remix", "lyrics breakdown"]
+def _shared_angles(topic: str) -> list[str]:
+    """Deterministic per-topic angle order so the same videos recur across engines (like live YouTube / Google Videos)."""
+    return random.Random(topic).sample(_ANGLES, len(_ANGLES))
+
+
 _CHANNELS = ["Music Hub", "Daily Culture", "Global Beats", "Chart Check", "Screen Dive", "Night Session", "Trend Lab", "Studio Mix"]
 _PUBLISHERS = ["Reuters", "Bloomberg", "The Verge", "Financial Times", "Nikkei Asia", "Al Jazeera", "BBC News", "Associated Press"]
 
@@ -39,7 +44,7 @@ def _topic(p: dict, default: str = "trending topic") -> str:
 def youtube(p: dict, r: random.Random) -> dict:
     t = _topic(p, "trending songs")
     rows = []
-    for i, ang in enumerate(r.sample(_ANGLES, 8)):
+    for i, ang in enumerate(_shared_angles(t)[:8]):
         head = f"{t.title()}: {ang}"
         rows.append({"position_on_page": i + 1, "title": head, "link": f"https://www.youtube.com/watch?v=demo{i:03d}",
                      "video_id": f"demo{i:03d}", "channel": {"name": r.choice(_CHANNELS), "verified": r.random() < 0.5},
@@ -51,7 +56,7 @@ def youtube(p: dict, r: random.Random) -> dict:
 def google_videos(p: dict, r: random.Random) -> dict:
     t = _topic(p, "trending songs")
     rows = []
-    for i, ang in enumerate(r.sample(_ANGLES, 8)):
+    for i, ang in enumerate(_shared_angles(t)[:8]):
         rows.append({"position": i + 1, "title": f"{t.title()}: {ang}", "link": f"https://www.youtube.com/watch?v=gv{i:03d}",
                      "duration": f"{r.randint(2, 14)}:{r.randint(10, 59)}",
                      "rich_snippet": {"top": {"extensions": ["YouTube", r.choice(_CHANNELS), r.choice(["2 days ago", "1 week ago"])]}},
@@ -62,7 +67,7 @@ def google_videos(p: dict, r: random.Random) -> dict:
 def google_short_videos(p: dict, r: random.Random) -> dict:
     t = _topic(p, "trending songs")
     rows = []
-    for i, ang in enumerate(r.sample(_ANGLES, 10)):
+    for i, ang in enumerate(_shared_angles(t)[:10]):
         rows.append({"position": i + 1, "title": f"{t.title()} {ang} #shorts", "link": f"https://www.youtube.com/shorts/sh{i:03d}",
                      "channel": r.choice(_CHANNELS), "duration": f"0:{r.randint(15, 59)}", "source": "YouTube"})
     return {"search_information": {"organic_results_state": "Results for exact spelling"}, "short_video_results": rows}

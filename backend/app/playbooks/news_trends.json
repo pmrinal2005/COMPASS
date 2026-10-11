@@ -53,6 +53,19 @@
       }
     },
     {
+      "engine": "google_trends",
+      "category": "trend",
+      "purpose": "Search-interest momentum over the last 7 days (always included for news briefs)",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "geo": "{geo}",
+        "data_type": "TIMESERIES",
+        "date": "now 7-d",
+        "hl": "en"
+      }
+    },
+    {
       "engine": "google",
       "category": "serp",
       "purpose": "Wider web coverage of the same topic (independent corroboration)",
@@ -65,20 +78,6 @@
     }
   ],
   "optional_engines": [
-    {
-      "engine": "google_trends",
-      "category": "trend",
-      "purpose": "Search-interest momentum over the last 7 days",
-      "essential": false,
-      "params": {
-        "q": "{topic}",
-        "geo": "{geo}",
-        "data_type": "TIMESERIES",
-        "date": "now 7-d",
-        "hl": "en"
-      },
-      "when": "wants_trending"
-    },
     {
       "engine": "google_trends_trending_now",
       "category": "trend",

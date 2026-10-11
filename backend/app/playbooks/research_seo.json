@@ -4,6 +4,7 @@
   "ecosystem": "C",
   "lens": "pro",
   "intent_category": "SEO_AND_VISIBILITY",
+  "max_calls": 8,
   "description": "Track where a domain ranks for a keyword across Google, Bing, DuckDuckGo, Yahoo, Yandex, Baidu and Naver, and whether it is cited by Google AI Mode / AI Overview; flags rank-drop anomalies.",
   "keywords": [
     "seo",

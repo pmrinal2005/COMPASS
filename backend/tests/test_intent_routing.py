@@ -106,9 +106,10 @@ def _engines(pid: str, prompt: str) -> list[str]:
     return [c.engine for c in o.build_calls(pid, dict(VARS), triggers=o.triggers_for(prompt))]
 
 
-def test_latest_news_does_not_call_trends_or_light_sweep():
+def test_latest_news_selects_news_trends_and_search_only():
     eng = _engines("news_trends", "latest news in india")
-    assert eng == ["google_news", "google"], eng            # no unnecessary Trends / light calls
+    assert eng == ["google_news", "google_trends", "google"], eng   # TODO s6: News + Trends (+ Search)
+    assert "google_trends_trending_now" not in eng and "google_news_light" not in eng   # no unnecessary calls
 
 
 def test_trending_news_adds_trends_engines_only_when_asked():
@@ -124,7 +125,7 @@ def test_quick_news_adds_light_sweep_only_when_asked():
 def test_optional_engines_never_exceed_per_playbook_cap():
     for pid in PLAYBOOKS:
         for prompt in ("trending quick brief news", "latest trends viral popular", "x"):
-            assert len(_engines(pid, prompt)) <= o.MAX_CALLS_PER_PLAYBOOK, (pid, prompt)
+            assert len(_engines(pid, prompt)) <= o.call_cap(pid), (pid, prompt)
 
 
 def test_no_playbook_fans_out_to_the_whole_catalogue():
@@ -220,3 +221,55 @@ def test_demo_video_titles_are_unique_so_analyst_does_not_collapse_them():
     rows = youtube({"search_query": "trending songs in india"}, random.Random(1))["video_results"]
     titles = [r["title"] for r in rows]
     assert len(set(titles)) == len(titles)
+
+
+def test_wide_fanout_playbooks_declare_their_own_cap_and_are_not_truncated():
+    assert o.call_cap("lifeops_trip") == len(PLAYBOOKS["lifeops_trip"]["engines"])
+    assert o.call_cap("research_seo") == len(PLAYBOOKS["research_seo"]["engines"])
+    assert _engines("lifeops_trip", "plan a trip")[:2] != []
+    assert len(_engines("research_seo", "seo rank")) == 8
+    # every other playbook keeps the default lean cap of 4
+    assert all(o.call_cap(p) == o.MAX_CALLS_PER_PLAYBOOK for p in PLAYBOOKS if p not in ("lifeops_trip", "research_seo"))
+
+
+# ------------------------------------------- media corroboration (same video on >=2 engines)
+def _media(engine, title, url, **a):
+    from app.models import Candidate
+    return Candidate(title=title, category="media", engine=engine, source="ch", url=url, attributes={"views": 10, **a})
+
+
+def test_same_video_on_two_engines_is_verified_by_video_id():
+    from app.agents.researcher import corroborate
+    a = _media("youtube", "Song X (Official Video)", "https://www.youtube.com/watch?v=abcDEF12345")
+    b = _media("google_videos", "Totally different caption", "https://www.youtube.com/watch?v=abcDEF12345")
+    lone = _media("youtube", "Unrelated clip", "https://www.youtube.com/watch?v=zzzzzzzzzzz")
+    corroborate([a, b, lone], {})
+    assert a.verified and b.verified and set(a.corroborating_sources) == {"youtube", "google_videos"}
+    assert not lone.verified                       # single-source video stays flagged, never silently trusted
+
+
+def test_shorts_url_and_near_identical_title_corroborate():
+    from app.agents.researcher import corroborate
+    a = _media("youtube", "Arijit Singh live performance", "https://www.youtube.com/watch?v=aaaaaaaaaaa")
+    b = _media("google_short_videos", "Arijit Singh live performance #shorts", "https://www.youtube.com/shorts/bbbbbbbbbbb")
+    corroborate([a, b], {})
+    assert a.verified and b.verified
+
+
+def test_same_engine_alone_never_self_corroborates():
+    from app.agents.researcher import corroborate
+    a = _media("youtube", "Song X", "https://www.youtube.com/watch?v=abcDEF12345")
+    b = _media("youtube", "Song X", "https://www.youtube.com/watch?v=abcDEF12345")
+    corroborate([a, b], {})
+    assert not a.verified and not b.verified
+
+
+def test_trending_songs_demo_session_needs_no_replan_and_few_calls():
+    import asyncio
+    from app import graph as G
+    from app.services.events import bus
+    sid = "t_media_noreplan"
+    asyncio.run(G.run_session(sid, "trending songs in india", "go", None, None, True))
+    types = [e["type"] for e in bus.history(sid)]
+    assert "orchestrator.replan" not in types
+    assert types.count("serp.response") <= 4

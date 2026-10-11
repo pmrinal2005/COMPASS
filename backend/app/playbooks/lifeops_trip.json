@@ -4,6 +4,7 @@
   "ecosystem": "A",
   "lens": "go",
   "intent_category": "TRAVEL_AND_ACCOMMODATION",
+  "max_calls": 7,
   "description": "Plan a multi-day trip under a budget: flights + hotels + local context, then watch prices and re-plan when they move.",
   "keywords": [
     "trip",

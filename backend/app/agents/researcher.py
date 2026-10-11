@@ -350,6 +350,32 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
                 m.corroborating_sources = sorted(plats) if agree else [m.attributes.get("platform") or m.source]
                 m.attributes["platform_consensus"] = len(plats)
 
+    # ---- media: the SAME video must surface on >=2 independent engines (YouTube / Google Videos / Google Shorts).
+    #      Identity = the YouTube video id parsed from the link, else a near-identical title (token Jaccard >= 0.6).
+    media = [m for m in by_cat.get("media", []) if not m.attributes.get("duplicate")]
+    if media:
+        _vid = re.compile(r"(?:v=|youtu\.be/|/shorts/)([A-Za-z0-9_-]{6,})")
+        _noise = {"shorts", "short", "official", "video", "youtube", "reels"}
+
+        def _vkey(m: Candidate) -> str | None:
+            mt = _vid.search(m.url or "")
+            return (mt.group(1) if mt else m.attributes.get("video_id")) or None
+
+        def _toks(m: Candidate) -> set[str]:
+            return {w for w in _norm_title(m.title) if w not in _noise}
+
+        for m in media:
+            seen = {m.engine}
+            k, tk = _vkey(m), _toks(m)
+            for o_ in media:
+                if o_ is m or o_.engine == m.engine:
+                    continue
+                ok, ot = _vkey(o_), _toks(o_)
+                if (k and ok and k == ok) or (tk and ot and len(tk & ot) / len(tk | ot) >= 0.6):
+                    seen.add(o_.engine)
+            m.corroborating_sources = sorted(seen)
+            m.attributes["engine_consensus"] = len(seen)
+
     # ---- SERP: a domain is a *verified* ranking only when >=2 independent engines list it (AI citations count too)
     serp_rows = by_cat.get("serp", []) + by_cat.get("ai_citation", [])
     if serp_rows:

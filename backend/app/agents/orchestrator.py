@@ -301,6 +301,12 @@ def triggers_for(prompt: str) -> dict[str, bool]:
     return {name: bool(rx.search(prompt or "")) for name, rx in _TRIGGER_RE.items()}
 
 
+def call_cap(pid: str) -> int:
+    """Per-session SerpApi call cap: default 4; a playbook whose purpose is wide fan-out (multi-leg trip,
+    7-engine SEO rank grid) declares its own `max_calls` so the cap never truncates its core engines."""
+    return int(PLAYBOOKS[pid].get("max_calls", MAX_CALLS_PER_PLAYBOOK))
+
+
 def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0, triggers: dict[str, bool] | None = None) -> list[EngineCall]:
     pb = PLAYBOOKS[pid]
     specs = pb["engines"] if fallback_round == 0 else pb.get("fallback_engines", [])
@@ -312,7 +318,7 @@ def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0, trigge
         flags = {**(triggers or {}), **{k: v for k, v in vars_.items() if isinstance(v, bool)}}
         extra = [sp for sp in pb["optional_engines"] if flags.get(sp.get("when", ""), False)]
         specs = specs + extra
-    specs = specs[:MAX_CALLS_PER_PLAYBOOK] if fallback_round == 0 else specs
+    specs = specs[:call_cap(pid)] if fallback_round == 0 else specs
     return [EngineCall(engine=sp["engine"], params=_render(sp["params"], vars_), purpose=sp.get("purpose", ""),
                        category=sp.get("category", "generic"), essential=sp.get("essential", True)) for sp in specs]
 
@@ -341,7 +347,7 @@ async def plan(prompt: str, lens: str, session_id: str, forced: str | None = Non
         "intent_category": PLAYBOOKS[pid].get("intent_category", "GENERAL_SEARCH"), "playbook_id": pid,
         "routed_by": (scores[0] or {}).get("routed_by"), "reason": (scores[0] or {}).get("reason"),
         "triggers": triggers, "engines": [c.engine for c in calls], "skipped_optional": skipped,
-        "calls": len(calls), "max_calls": MAX_CALLS_PER_PLAYBOOK}, agent="orchestrator")
+        "calls": len(calls), "max_calls": call_cap(pid)}, agent="orchestrator")
 
     nodes: list[DecisionNode] = []
     for k, v in slots.items():
