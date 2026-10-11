@@ -124,6 +124,56 @@ def domain_entities(cands: list[Candidate], slots: dict) -> tuple[list[Candidate
 
 
 # ------------------------------------------------------------------ insights (panel payloads for the UI)
+_FEED_TITLES = {
+    "news_trends": "Top stories", "media_video": "Top videos", "finance_markets": "Quote & movers",
+    "travel_explore": "Routes & destinations", "general_search": "Top results", "media_images": "Images",
+    "apps_store": "Apps",
+}
+
+
+def _feed_item(c: Candidate) -> dict:
+    a = c.attributes
+    meta: dict[str, Any] = {}
+    for k in ("published", "age_days", "date", "views", "length", "channel_handle", "publishers", "story_consensus",
+              "engine_consensus", "change_pct", "movement", "stock", "exchange", "region", "discount_pct",
+              "average_price", "stops", "airport", "airline_code", "is_deal", "thumbnail", "width", "height",
+              "megapixels", "downloads", "downloads_raw", "author", "developer", "genres", "price_text",
+              "category_name", "version", "snippet", "description", "position", "duration_min"):
+        if a.get(k) is not None:
+            meta[k] = a[k]
+    item = {"id": c.id, "title": c.title, "category": c.category, "engine": c.engine, "source": c.source,
+            "url": c.url, "price": c.price, "rating": c.rating, "reviews": c.reviews, "score": c.score,
+            "verified": c.verified, "sources": c.corroborating_sources, "anomaly": c.anomaly, "meta": meta}
+    # flattened display fields for the feed panel (the full attribute set stays in `meta`)
+    item["date"] = a.get("published") or a.get("date")
+    item["age_days"] = a.get("age_days")
+    item["views"] = a.get("views")
+    item["length"] = a.get("length") or (f"{a['duration_min']} min" if a.get("duration_min") else None)
+    item["channel"] = a.get("channel") or a.get("author") or a.get("developer")
+    item["snippet"] = a.get("snippet") or a.get("description")
+    return item
+
+
+def _feed_insights(pid: str, ranked: list[Candidate], cands: list[Candidate], slots: dict, ctx: dict) -> dict:
+    out: dict[str, Any] = {"kind": "feed", "vertical": pid, "title": _FEED_TITLES.get(pid, "Results"),
+                           "items": [_feed_item(c) for c in ranked[:10]]}
+    if pid == "media_video" and ctx.get("channel"):
+        ch = ctx["channel"]
+        out["channel"] = {"title": ch.get("title"), "handle": ch.get("handle"),
+                          "subscribers": ch.get("subscribers"), "video_count": ch.get("video_count")}
+    if pid == "finance_markets":
+        out["movers"] = [{"name": m.get("name"), "stock": m.get("stock"), "price": m.get("price"),
+                          "change_pct": m.get("change_pct"), "movement": m.get("movement"), "region": m.get("region")}
+                         for m in (ctx.get("markets") or [])[:8]]
+        if ctx.get("fx"):
+            out["fx"] = ctx["fx"]
+    if pid == "news_trends" and ctx.get("trend"):
+        out["momentum"] = (ctx["trend"] or [])[-12:]
+    if pid == "travel_explore" and ctx.get("deals_origin"):
+        out["deals_origin"] = ctx["deals_origin"]
+    return out
+
+
 def build_insights(pid: str, ranked: list[Candidate], cands: list[Candidate], slots: dict, ctx: dict) -> dict | None:
     if pid == "lifeops_local":
         ev = [c for c in cands if c.category == "event"][:6]
@@ -166,4 +216,6 @@ def build_insights(pid: str, ranked: list[Candidate], cands: list[Candidate], sl
                             "thumbnail": e.attributes.get("thumbnail")} for e in ev],
                 "stays": [{"title": s.title, "price": s.price, "rating": s.rating, "reviews": s.reviews, "url": s.url, "verified": s.verified,
                            "qualifier": s.attributes.get("qualifier")} for s in stays]}
+    if pid in _FEED_TITLES:
+        return _feed_insights(pid, ranked, cands, slots, ctx)
     return None

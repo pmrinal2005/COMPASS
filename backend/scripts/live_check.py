@@ -44,8 +44,12 @@ async def j(c: httpx.AsyncClient, path: str, **params) -> tuple[int, dict | list
 
 
 # Doc-example queries (the ones serpapi.com itself answers without a key) per normalizer category.
+# Verified 2026-10-11: youtube_channel / google_flights_deals / google_play / google_finance_markets /
+# google_travel_explore answer 401 keyless, so they are covered by the keyed sweep + docs-sample tests instead.
 CAT = {"google_maps": "venue", "yelp": "venue", "tripadvisor": "venue", "google": "serp", "bing": "serp", "duckduckgo": "serp", "yahoo": "serp",
-       "yandex": "serp", "baidu": "serp", "naver": "serp", "google_ai_mode": "ai_citation"}
+       "yandex": "serp", "baidu": "serp", "naver": "serp", "google_ai_mode": "ai_citation", "youtube": "media", "google_videos": "media",
+       "google_short_videos": "media", "bing_videos": "media", "yahoo_videos": "media", "bing_news": "news", "duckduckgo_news": "news",
+       "google_news_light": "news", "google_images": "image", "apple_app_store": "app", "google_trends_trending_now": "trend"}
 KEYLESS = {
     "bing": {"q": "Coffee"}, "duckduckgo": {"q": "Coffee"}, "yahoo": {"p": "Coffee"}, "yandex": {"text": "Coffee"}, "baidu": {"q": "Coffee"},
     "naver": {"query": "Coffee", "where": "web"}, "google": {"q": "Coffee"}, "yelp": {"find_desc": "Coffee", "find_loc": "Austin, Texas, United States"},
@@ -54,6 +58,10 @@ KEYLESS = {
     "google_patents": {"q": "coffee"}, "walmart": {"query": "coffee"}, "amazon": {"k": "Coffee"}, "ebay": {"_nkw": "Coffee"},
     "google_finance": {"q": "GOOGL:NASDAQ"}, "google_trends": {"q": "Coffee"}, "google_flights_autocomplete": {"q": "New"},
     "google_hotels": {"q": "Bali Resorts", "check_in_date": "2026-11-07", "check_out_date": "2026-11-11"},
+    "youtube": {"search_query": "Coffee"}, "google_videos": {"q": "Coffee"}, "google_short_videos": {"q": "Coffee"},
+    "bing_videos": {"q": "Coffee"}, "yahoo_videos": {"p": "Coffee"}, "bing_news": {"q": "Coffee"}, "duckduckgo_news": {"q": "Coffee"},
+    "google_images": {"q": "Coffee"}, "apple_app_store": {"term": "instagram"}, "google_news_light": {"q": "Coffee"},
+    "google_trends_trending_now": {"geo": "US"},
 }
 
 

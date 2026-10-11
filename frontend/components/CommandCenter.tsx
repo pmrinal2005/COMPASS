@@ -14,6 +14,7 @@ import { ActionCards } from './ActionCards'
 import { RawCalls } from './RawCalls'
 import { PipelineStepper } from './PipelineStepper'
 import { IntentBars } from './IntentBars'
+import { RoutingPanel } from './RoutingPanel'
 import { InsightsPanel } from './InsightsPanel'
 import { WatchesPanel } from './WatchesPanel'
 import { AnimatedNumber } from './AnimatedNumber'
@@ -196,7 +197,10 @@ export function CommandCenter({ lens, backend, compact = false, inject, onInject
           <div className={cn(compact ? 'h-[460px]' : 'h-[500px]')}>
             <ActionCards actions={actions} onApprove={ses.approve} onReject={ses.reject} onModify={ses.modify} icsUrl={ses.icsUrl} />
           </div>
-          <div className={cn(compact ? 'h-[380px]' : 'h-[460px]')}><IntentBars s={s} /></div>
+          <div className={cn('flex flex-col gap-3 overflow-auto', compact ? 'max-h-[380px]' : 'max-h-[460px]')}>
+            <RoutingPanel s={s} />
+            <div className="min-h-[240px] flex-1"><IntentBars s={s} /></div>
+          </div>
           <div className={cn(compact ? 'h-[500px]' : 'h-[460px] lg:col-span-2')}><InsightsPanel s={s} /></div>
         </div>
       )}

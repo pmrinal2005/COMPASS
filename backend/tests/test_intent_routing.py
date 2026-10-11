@@ -32,14 +32,16 @@ def _classify(prompt: str):
 # ---------------------------------------------------------------- taxonomy
 def test_every_playbook_declares_a_taxonomy_category():
     allowed = {"NEWS_AND_TRENDS", "MEDIA_AND_ENTERTAINMENT", "LOCAL_DISCOVERY", "SHOPPING_AND_PRODUCTS", "TRAVEL_AND_ACCOMMODATION",
-               "FINANCE_AND_MARKETS", "GENERAL_SEARCH", "JOBS_AND_CAREERS", "RESEARCH_AND_IP", "SEO_AND_VISIBILITY"}
+               "FINANCE_AND_MARKETS", "GENERAL_SEARCH", "JOBS_AND_CAREERS", "RESEARCH_AND_IP", "SEO_AND_VISIBILITY",
+               "APPS_AND_SOFTWARE"}
     for pid, pb in PLAYBOOKS.items():
         assert pb.get("intent_category") in allowed, pid
 
 
 def test_new_vertical_playbooks_exist_with_expected_categories():
     expected = {"news_trends": "NEWS_AND_TRENDS", "media_video": "MEDIA_AND_ENTERTAINMENT", "finance_markets": "FINANCE_AND_MARKETS",
-                "travel_explore": "TRAVEL_AND_ACCOMMODATION", "general_search": "GENERAL_SEARCH"}
+                "travel_explore": "TRAVEL_AND_ACCOMMODATION", "general_search": "GENERAL_SEARCH",
+                "media_images": "MEDIA_AND_ENTERTAINMENT", "apps_store": "APPS_AND_SOFTWARE"}
     for pid, cat in expected.items():
         assert pid in PLAYBOOKS and PLAYBOOKS[pid]["intent_category"] == cat
 
@@ -57,6 +59,11 @@ def test_new_vertical_playbooks_exist_with_expected_categories():
     ("Find the best deal on Sony WH-1000XM5 headphones", "lifeops_deals"),
     ("Prior art for solid-state battery dendrite suppression", "research_ip"),
     ("Plan a 4-day Tokyo trip under $1,200, flights + hotel", "lifeops_trip"),
+    ("latest Techno Gamerz videos", "media_video"),
+    ("sunset landscape wallpaper images", "media_images"),
+    ("show me pictures of the Eiffel Tower", "media_images"),
+    ("best meditation apps", "apps_store"),
+    ("photo editor app for android vs iphone", "apps_store"),
 ])
 def test_routing_acceptance(prompt, expected):
     pid, scores = _classify(prompt)
@@ -108,8 +115,9 @@ def _engines(pid: str, prompt: str) -> list[str]:
 
 def test_latest_news_selects_news_trends_and_search_only():
     eng = _engines("news_trends", "latest news in india")
-    assert eng == ["google_news", "google_trends", "google"], eng   # TODO s6: News + Trends (+ Search)
+    assert eng == ["google_news", "google_trends", "google", "bing_news"], eng   # News + Trends + Search + 2nd index
     assert "google_trends_trending_now" not in eng and "google_news_light" not in eng   # no unnecessary calls
+    assert "duckduckgo_news" not in eng
 
 
 def test_trending_news_adds_trends_engines_only_when_asked():
@@ -226,10 +234,11 @@ def test_demo_video_titles_are_unique_so_analyst_does_not_collapse_them():
 def test_wide_fanout_playbooks_declare_their_own_cap_and_are_not_truncated():
     assert o.call_cap("lifeops_trip") == len(PLAYBOOKS["lifeops_trip"]["engines"])
     assert o.call_cap("research_seo") == len(PLAYBOOKS["research_seo"]["engines"])
+    assert o.call_cap("news_trends") == 5   # 4 core engines + room for one triggered optional (trending/light/broad)
     assert _engines("lifeops_trip", "plan a trip")[:2] != []
     assert len(_engines("research_seo", "seo rank")) == 8
     # every other playbook keeps the default lean cap of 4
-    assert all(o.call_cap(p) == o.MAX_CALLS_PER_PLAYBOOK for p in PLAYBOOKS if p not in ("lifeops_trip", "research_seo"))
+    assert all(o.call_cap(p) == o.MAX_CALLS_PER_PLAYBOOK for p in PLAYBOOKS if p not in ("lifeops_trip", "research_seo", "news_trends"))
 
 
 # ------------------------------------------- media corroboration (same video on >=2 engines)

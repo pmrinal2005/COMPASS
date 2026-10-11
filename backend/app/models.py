@@ -23,6 +23,8 @@ class EngineCall(BaseModel):
     purpose: str = ""
     category: str = "generic"
     essential: bool = True
+    fresh: bool = False        # recency-critical call: bypass the dedupe cache (no_cache=true, blocking)
+    follow: str | None = None  # follow-up policy fired from the response ("channel" = YouTube channel drill-down)
 
 
 class Candidate(BaseModel):

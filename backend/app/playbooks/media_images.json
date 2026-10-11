@@ -1,0 +1,109 @@
+{
+  "id": "media_images",
+  "name": "Media Desk · Images & Photos",
+  "ecosystem": "B",
+  "lens": "go",
+  "intent_category": "MEDIA_AND_ENTERTAINMENT",
+  "description": "Find images and photos on a topic: Google Images results ranked by source relevance and resolution, with the hosting pages for licensing context.",
+  "keywords": [
+    "image",
+    "images",
+    "picture",
+    "pictures",
+    "photo",
+    "photos",
+    "pic",
+    "pics",
+    "wallpaper",
+    "wallpapers",
+    "poster",
+    "posters",
+    "logo",
+    "thumbnail",
+    "photography",
+    "gallery",
+    "show me"
+  ],
+  "strong_keywords": [
+    "images",
+    "photos",
+    "pictures",
+    "wallpaper",
+    "wallpapers",
+    "photography"
+  ],
+  "examples": [
+    "sunset landscape wallpaper images",
+    "show me pictures of the Eiffel Tower"
+  ],
+  "slots": {
+    "query": {
+      "type": "text",
+      "default": "sunset landscape"
+    },
+    "market": {
+      "type": "country",
+      "default": "us"
+    }
+  },
+  "engines": [
+    {
+      "engine": "google_images",
+      "category": "image",
+      "purpose": "Google Images results (title, source page, original file, resolution)",
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "optional_engines": [
+    {
+      "engine": "google",
+      "category": "serp",
+      "purpose": "Hosting pages on the web (licensing / context for the top images)",
+      "when": "wants_broad",
+      "essential": false,
+      "params": {
+        "q": "{query} images",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "fallback_engines": [
+    {
+      "engine": "google_images",
+      "category": "image",
+      "purpose": "Re-plan: Google Images page 2",
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en",
+        "ijn": "1"
+      }
+    }
+  ],
+  "dimensions": {
+    "relevance": {
+      "weight": 0.45,
+      "direction": "max",
+      "label": "Topic relevance"
+    },
+    "quality": {
+      "weight": 0.35,
+      "direction": "max",
+      "label": "Resolution quality"
+    },
+    "risk": {
+      "weight": 0.2,
+      "direction": "min",
+      "label": "Risk (single-source / unverified)"
+    }
+  },
+  "actions": [
+    "document",
+    "notify"
+  ]
+}

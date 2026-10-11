@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import random
+import re
 from datetime import datetime, timedelta
 from typing import Any
 
@@ -144,7 +145,25 @@ def _maps(p: dict, r: random.Random) -> dict:
 
 
 def _finance(p: dict, r: random.Random) -> dict:
-    pair = _q(p, "q", default="USD-JPY")
+    q = _q(p, "q", default="USD-JPY")
+    if ":" in q or not re.match(r"(?i)^[A-Z]{3}-[A-Z]{3}$", q.strip()):
+        # stock / index quote shape (docs: summary + price_movement + news_results)
+        sym, exch = (q.split(":") + ["NASDAQ"])[:2]
+        sym, exch = sym.strip().upper() or "GOOGL", exch.strip().upper()
+        base = {"AAPL": 232.0, "TSLA": 248.0, "GOOGL": 385.0, "MSFT": 428.0, "AMZN": 205.0, "NVDA": 138.0,
+                "META": 585.0, "BTC-USD": 97000.0}.get(sym, 120.0)
+        chg = round(r.uniform(-2.4, 2.4), 3)
+        px = round(base * (1 + chg / 100), 3)
+        pubs = ["Reuters", "Bloomberg", "CNBC", "MarketWatch", "Financial Times"]
+        return {"summary": {"title": f"{sym} {exch.title()} quote", "stock": f"{sym}:{exch}", "exchange": exch,
+                            "price": px, "extracted_price": px, "currency": "USD",
+                            "price_movement": {"percentage": chg, "value": round(px - base, 3), "movement": "Up" if chg >= 0 else "Down"},
+                            "date": "today"},
+                "news_results": [{"title": f"{sym} shares move as analysts update outlook", "link": "https://news.example.com/f1",
+                                  "source": {"name": r.choice(pubs)}, "date": "5 hours ago"},
+                                 {"title": f"What to watch in {sym} earnings", "link": "https://news.example.com/f2",
+                                  "source": {"name": r.choice(pubs)}, "date": "1 day ago"}]}
+    pair = q
     rates = {"JPY": 149.3, "EUR": 0.92, "GBP": 0.79, "INR": 83.4, "THB": 35.6, "KRW": 1345.0, "SGD": 1.35, "AUD": 1.52, "CAD": 1.37, "MXN": 17.1}
     cur = pair.split("-")[-1].upper()
     px = rates.get(cur, 1.0) * (1 + r.uniform(-0.004, 0.004))

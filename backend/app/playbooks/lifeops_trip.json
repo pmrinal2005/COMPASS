@@ -8,6 +8,7 @@
   "description": "Plan a multi-day trip under a budget: flights + hotels + local context, then watch prices and re-plan when they move.",
   "keywords": [
     "trip",
+    "trips",
     "travel",
     "flight",
     "flights",
@@ -214,5 +215,12 @@
     "document",
     "watch",
     "notify"
+  ],
+  "strong_keywords": [
+    "itinerary",
+    "round trip",
+    "flights + hotel",
+    "plan a trip",
+    "trip under"
   ]
 }

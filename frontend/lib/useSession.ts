@@ -25,6 +25,9 @@ export function pickScenario(prompt: string, lens: Lens): string {
   const rules: [string, RegExp][] = [
     ['seo', /\bseo\b|serp|rank(ing)?|visibility|keyword|backlink|search engines?|ai mode|ai overview|cited|share of voice|\b[a-z0-9-]+\.(com|io|ai|org|net)\b/],
     ['tacos', /restaurant|taco|ramen|pizza|sushi|brunch|dinner|lunch|coffee|cafe|bbq|burger|yelp|tripadvisor|eat\b|food|near me|nearby|table/],
+    ['creator', /video|song|music|youtube|playlist|album|track|artist|band|singer|podcast|creator|channel|watch|listen|stream|tunes|anthem/],
+    ['apps', /\bapps?\b|play store|app store|\bapk\b|\bios\b|android|download/],
+    ['news', /news|headline|breaking|trending|viral|happening/],
     ['tokyo', /trip|flight|hotel|travel|vacation|itinerary|getaway|weekend|fly/],
     ['earbuds', /supplier|bulk|wholesale|moq|rfq|vendor|procure|sourc|oem|manufactur/],
     ['prior_art', /patent|prior art|research|paper|scholar|landscape|literature|novelty/],

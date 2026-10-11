@@ -222,6 +222,7 @@ const PROMPTS = [
   { lens: 'Go', tag: 'LifeOps', q: 'Plan a 4-day Tokyo trip under $1,200, flights + hotel.', out: 'Ranked flight + stay combos, FX-aware budget, price watch, .ics itinerary.' },
   { lens: 'Pro', tag: 'Procurement', q: 'Source 3 reliable suppliers for bulk Bluetooth earbuds — compare price, MOQ and reviews.', out: 'Vendor decision matrix, risk news scan, RFQ email draft queued for approval.' },
   { lens: 'Pro', tag: 'Research & IP', q: 'Prior-art brief on solid-state battery electrolytes.', out: 'Scholar + Patents + News cross-check with a citation-backed summary report.' },
+  { lens: 'Go', tag: 'News & Media', q: 'Latest news in India — and what songs are trending right now?', out: 'Fresh-first news feed + media blend across 9 engines; recency beats popularity.' },
 ]
 
 export function PromptsSlide() {
@@ -232,9 +233,9 @@ export function PromptsSlide() {
       <div className="relative z-10 flex h-full flex-col px-10 py-12 pb-20 lg:px-20">
         <motion.span className={`mb-4 ${eyebrow}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>Try these prompts</motion.span>
         <motion.h2 className="mb-auto font-heading text-3xl italic leading-[0.9] tracking-tight text-white md:text-4xl lg:text-5xl" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          Three questions.<br />Three finished decisions.
+          Four questions.<br />Four finished decisions.
         </motion.h2>
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {PROMPTS.map((t, i) => (
             <motion.div key={t.q} className="liquid-glass flex flex-col justify-between rounded-2xl p-8 lg:p-10" initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.12 }}>
               <div className="mb-8">

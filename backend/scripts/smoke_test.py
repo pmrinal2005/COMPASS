@@ -1,5 +1,5 @@
 """End-to-end smoke test (Demo Mode, zero credits, no network):
-all 7 playbooks -> HITL approve -> metric-aware watches -> cron tick auth -> live disruption
+all 15 prompt/playbook routes -> HITL approve -> metric-aware watches -> cron tick auth -> live disruption
 (price_spike / rating_drop / rank_drop / unavailable) -> bounded re-plan -> session persistence
 (snapshot + rehydrate) -> Account / Locations / Playbook-library endpoints -> SerpApi docs compliance.
 
@@ -27,6 +27,14 @@ PROMPTS = [
     ("Prior art for solid-state battery dendrite suppression", "pro", "research_ip"),
     ("Best tacos in Austin, TX under $$ with 4.5+ rating", "go", "lifeops_local"),
     ("Track SEO visibility of serpapi.com for \"google search api\" across search engines", "pro", "research_seo"),
+    ("latest news in india", "go", "news_trends"),
+    ("latest Techno Gamerz videos", "go", "media_video"),
+    ("trending songs in india", "go", "media_video"),
+    ("sunset wallpaper 4k", "go", "media_images"),
+    ("best meditation apps", "go", "apps_store"),
+    ("Apple stock price today", "go", "finance_markets"),
+    ("nonstop flights JFK to LHR next Friday", "go", "travel_explore"),
+    ("cheap weekend getaways from NYC in November", "go", "travel_explore"),
 ]
 
 # Documented parameters per engine: snapshot parsed from serpapi.com itself (refresh with `python scripts/docs_sync.py`).
@@ -133,7 +141,7 @@ async def main() -> None:
         locs = (await c.get("/api/locations?q=Austin&limit=3")).json()
         assert locs and "canonical_name" in locs[0]
         lib = (await c.get("/api/playbooks")).json()
-        assert len(lib) == len(PLAYBOOKS) == 7 and all(p["engine_list"] for p in lib)
+        assert len(lib) == len(PLAYBOOKS) == 14 and all(p["engine_list"] for p in lib)
         print(f"ok  /api/account (secrets stripped), /api/locations, /api/playbooks ({len(lib)} playbooks)")
 
         # ---- frontend contract: the bundled offline library + recordings must match what this backend serves
@@ -144,7 +152,7 @@ async def main() -> None:
         assert set(bundled) == {p["id"] for p in lib}, "frontend/lib/demo/playbooks.json is stale -> run scripts/record_demo.py"
         assert all(bundled[p["id"]]["engine_list"] == p["engine_list"] for p in lib)
         rec = _json.loads((demo / "recordings.json").read_text())
-        assert {"tokyo", "tacos", "seo", "earbuds", "headphones", "jobs", "prior_art"} == set(rec), "7 offline scenarios expected"
+        assert {"tokyo", "tacos", "seo", "earbuds", "headphones", "jobs", "prior_art", "news", "creator", "apps"} == set(rec), "10 offline scenarios expected"
         assert all(r["events"] for r in rec.values()) and sum(1 for r in rec.values() if r.get("disruption")) == 4
         print(f"ok  frontend contract: bundled library ({len(bundled)} playbooks) + {len(rec)} recorded scenarios (4 with disruption) match the backend")
     print("ALL SMOKE TESTS PASSED")

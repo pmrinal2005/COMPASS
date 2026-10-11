@@ -115,12 +115,14 @@ export function RetrievalHeatmap({ s }: { s: SessionState }) {
             key={c.id}
             initial={{ scale: 0.6, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            title={`${c.engine} · ${c.status}${c.ms ? ` · ${c.ms}ms` : ''}`}
+            title={`${c.engine} · ${c.status}${c.ms ? ` · ${c.ms}ms` : ''}${c.fresh ? ' · FRESH (cache bypassed)' : ''}`}
             className={`h-4 w-4 rounded ${c.status === 'inflight' ? 'animate-pulse' : ''}`}
             style={{
               background:
                 c.status === 'cached' ? '#fbbf24' : c.status === 'done' ? '#22d3ee' : c.status === 'error' ? '#f43f5e' : c.status === 'inflight' ? '#22d3ee55' : '#64748b55',
               boxShadow: c.status === 'inflight' ? '0 0 10px #22d3ee' : undefined,
+              outline: c.fresh && c.status !== 'cached' ? '2px solid #34d399' : undefined,
+              outlineOffset: c.fresh && c.status !== 'cached' ? '1px' : undefined,
             }}
           />
         ))}

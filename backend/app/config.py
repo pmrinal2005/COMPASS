@@ -23,6 +23,9 @@ class Settings(BaseSettings):
     serpapi_zero_trace: bool = False     # Enterprise only: ZeroTrace (no search files stored => forces sync mode)
     account_cache_seconds: int = 60      # Account API is free, but still cache it
     cache_ttl_seconds: int = 900         # dedupe window (15 min)
+    cache_ttl_fresh_seconds: int = 120   # short TTL for freshness-critical pulls (news / latest videos)
+    cache_ttl_static_seconds: int = 3600  # long TTL for slow-moving verticals (apps, patents, hotels)
+    recency_bypass_cache: bool = True    # queries with latest/newest/today/etc. always hit the live API
 
     # --- Demo / safety -----------------------------------------------------
     demo_mode: bool | None = None        # None => auto (on when no SERPAPI_KEY)
@@ -35,6 +38,8 @@ class Settings(BaseSettings):
     # --- LLM / embeddings (free tiers) -------------------------------------
     groq_api_key: str = ""
     groq_model: str = "llama-3.3-70b-versatile"
+    groq_router_enabled: bool = True     # Groq LLM router refines intent classification when a key is set
+    groq_router_model: str = ""          # override model for the router (defaults to groq_model)
     gemini_api_key: str = ""
     gemini_model: str = "gemini-2.0-flash"
     gemini_embed_model: str = "gemini-embedding-001"

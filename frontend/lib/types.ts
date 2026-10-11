@@ -46,6 +46,7 @@ export interface CallState {
   results?: number
   round: number
   error?: string
+  fresh?: boolean   // recency-critical call: bypassed the dedupe cache and went live
 }
 
 export interface LogEntry {
@@ -63,6 +64,7 @@ export interface LogEntry {
   searchId?: string
   raw?: any
   error?: string
+  fresh?: boolean   // live fetch forced by a recency flag (bypassed dedupe)
 }
 
 export interface MatrixRow {
@@ -136,6 +138,19 @@ export type Insights =
       anomaly?: string | null; leaders: { domain: string; visibility: number; found: number }[]; ai_text?: Record<string, string>
     }
   | { kind: 'trip'; events: EventInsight[]; stays: { title: string; price?: number | null; rating?: number | null; reviews?: number | null; url?: string | null; verified: boolean; qualifier?: string }[] }
+  | {
+      kind: 'feed'; vertical: string; title: string; items: FeedItem[]
+      channel?: { title?: string; handle?: string | null; subscribers?: string | number | null; video_count?: string | number | null } | null
+      movers?: { name?: string; stock?: string; price?: number | null; change_pct?: number | null; movement?: string | null; region?: string | null }[] | null
+      fx?: { pair?: string; rate?: number | null; currency?: string | null } | null
+      momentum?: number | number[] | null; deals_origin?: string | null
+    }
+
+export interface FeedItem {
+  title: string; url?: string | null; source?: string | null; date?: string | null; score?: number | null
+  views?: string | number | null; length?: string | null; channel?: string | null; verified?: boolean
+  price?: number | null; rating?: number | null; age_days?: number | null; snippet?: string | null
+}
 
 export interface Playbook {
   id: string; name: string; ecosystem: string; lens: Lens; description: string; keywords: string[]; examples: string[]
@@ -148,7 +163,18 @@ export interface Account {
   this_hour_searches?: number; last_hour_searches?: number; account_rate_limit_per_hour?: number
 }
 
-export interface IntentScore { id: string; name: string; score: number; cosine: number; keyword_hits: number; vector_backend?: string }
+export interface IntentScore { id: string; name: string; score: number; cosine: number; keyword_hits: number; vector_backend?: string; routed_by?: string; confidence?: number }
+
+/** Orchestrator `orchestrator.routing` event: why this prompt landed on this Playbook. */
+export interface RoutingInfo {
+  intent_category: string; playbook_id: string; playbook: string
+  routed_by?: string; reason?: string; confidence?: number; strong_hits?: number; weak_hits?: number
+  llm_router?: { used?: boolean; agree?: boolean; verdict?: any; latency_ms?: number; [k: string]: any } | null
+  analysis?: { recency?: string | null; fresh_strong?: boolean; entity?: string | null; market?: string | null; media_kind?: string | null; travel_origin?: string | null; app_query?: string | null; [k: string]: any }
+  triggers?: Record<string, boolean>; engines?: string[]; fresh?: string[]; skipped_optional?: string[]
+  weight_override?: { dimension: string; from: number; to: number; reason: string } | null
+  weights?: Record<string, number>; calls?: number; max_calls?: number
+}
 
 export interface WatchRecord {
   id: string; label: string; engine: string; metric?: 'price' | 'rating' | 'position'; target_title?: string | null; target_domain?: string | null
@@ -177,6 +203,7 @@ export interface SessionState {
   agents: Record<AgentName, AgentStatus>
   agentLabel: Partial<Record<AgentName, string>>
   intent?: { playbook_id: string; playbook: string; scores: IntentScore[] }
+  routing?: RoutingInfo
   graph?: DecisionGraph
   calls: Record<string, CallState>
   callOrder: string[]

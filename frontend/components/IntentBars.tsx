@@ -38,6 +38,8 @@ export function IntentBars({ s }: { s: SessionState }) {
                 <div className="mt-0.5 flex gap-3 font-mono text-[9.5px] text-slate-500">
                   <span title="embedding cosine similarity">cos {x.cosine.toFixed(2)}</span>
                   <span title="keyword hits in the prompt">{x.keyword_hits} kw</span>
+                  {win && x.routed_by && <span title="which router stage picked this Playbook">via {x.routed_by}</span>}
+                  {win && x.confidence != null && <span title="routing confidence">conf {Number(x.confidence).toFixed(2)}</span>}
                 </div>
               </li>
             )

@@ -25,6 +25,14 @@ PAGES = {
     "yelp": "yelp-search-api", "tripadvisor": "tripadvisor-search-api", "airbnb": "airbnb-search-api", "amazon": "amazon-search-api",
     "walmart": "walmart-search-api", "ebay": "ebay-search-api", "bing": "bing-search-api", "duckduckgo": "duckduckgo-search-api",
     "yahoo": "yahoo-search-api", "yandex": "yandex-search-api", "baidu": "baidu-search-api", "naver": "naver-search-api",
+    "youtube": "youtube-search-api", "youtube_channel": "youtube-channel-api",
+    "google_videos": "google-videos-api", "google_short_videos": "google-short-videos-api",
+    "bing_videos": "bing-videos-api", "yahoo_videos": "yahoo-videos-api",
+    "bing_news": "bing-news-api", "duckduckgo_news": "duckduckgo-news-api",
+    "google_news_light": "google-news-light-api", "google_trends_trending_now": "google-trends-trending-now",
+    "google_finance_markets": "google-finance-markets", "google_travel_explore": "google-travel-explore-api",
+    "google_flights_deals": "google-flights-deals-api", "google_images": "google-images-api",
+    "google_light": "google-light-api", "google_play": "google-play-api", "apple_app_store": "apple-app-store",
 }
 ITEM = re.compile(r'<p class="param-name"><span class="parameter-highlight">([^<]+)</span></p>\s*<p class="param-req([^"]*)">([^<]+)</p>')
 
@@ -45,12 +53,20 @@ def main() -> None:
             print(f"{e:30s} {len(p):3d} params  required={[k for k, v in p.items() if v]}")
         return
     snap = {"source": "https://serpapi.com/<engine>-api", "engines": {}}
+    prev = json.loads(OUT.read_text())["engines"] if OUT.exists() else {}
     with httpx.Client(timeout=40, follow_redirects=True, headers={"User-Agent": "Mozilla/5.0"}) as c:
         for engine, page in PAGES.items():
-            r = c.get(f"https://serpapi.com/{page}")
-            r.raise_for_status()
-            params = parse(r.text)
-            assert params, f"no parameters parsed for {engine} ({page})"
+            try:
+                r = c.get(f"https://serpapi.com/{page}")
+                r.raise_for_status()
+                params = parse(r.text)
+                assert params, f"no parameters parsed for {engine} ({page})"
+            except Exception as e:
+                if engine in prev:  # docs page moved/failed -> keep the last good snapshot, never crash the sync
+                    snap["engines"][engine] = prev[engine]
+                    print(f"{engine:30s} KEEP {len(prev[engine]):3d} params (fetch failed: {e})")
+                    continue
+                raise
             snap["engines"][engine] = params
             print(f"{engine:30s} {len(params):3d} params  required={[k for k, v in params.items() if v]}")
     OUT.write_text(json.dumps(snap, indent=1, sort_keys=True))

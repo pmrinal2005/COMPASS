@@ -35,7 +35,7 @@ from typing import Any
 import httpx
 
 from ..config import get_settings
-from .cache import cache, call_fingerprint
+from .cache import cache, call_fingerprint, ttl_for
 from .demo_data import demo_response
 from .events import bus
 from .tracing import tracer
@@ -222,10 +222,12 @@ class SerpApiClient:
         meter: CreditMeter,
         purpose: str = "",
         fresh: bool = False,
+        cache_ttl: int | None = None,
     ) -> dict:
         """Returns {"data": <serpapi json>, "cached": bool, "ms": int, "mode": live|demo|cache, "transport": async|sync|demo}."""
         key = call_fingerprint(engine, params)
-        if not fresh:
+        bypass = fresh and self.s.recency_bypass_cache
+        if not bypass:
             hit = await cache.get(key)
             if hit is not None:
                 meter.cached += 1
@@ -254,7 +256,9 @@ class SerpApiClient:
                 mode = "live"
         ms = int((time.perf_counter() - t0) * 1000)
         meter.spent += 1
-        await cache.set(key, data)
+        # Fresh pulls are still cached, but only briefly (freshness TTL), so back-to-back
+        # "latest X" polls stay live while accidental double-fires stay deduplicated.
+        await cache.set(key, data, ttl=cache_ttl or ttl_for(engine, fresh=fresh))
         tracer.span(session_id, f"serpapi:{engine}", {"params": params, "cached": False, "transport": transport},
                     {"status": (data.get("search_metadata") or {}).get("status"), "ms": ms})
         return {"data": data, "cached": False, "ms": ms, "mode": mode, "transport": transport}

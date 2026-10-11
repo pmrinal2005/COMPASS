@@ -89,6 +89,9 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
     case 'orchestrator.intent':
       return { ...n, intent: d }
 
+    case 'orchestrator.routing':
+      return { ...n, routing: d }
+
     case 'orchestrator.graph': {
       const g = d.graph
       const calls = { ...s.calls }
@@ -120,14 +123,14 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       const prev = s.calls[d.call_id]
       const calls = {
         ...s.calls,
-        [d.call_id]: { ...(prev || { id: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose, round: s.round }), status: 'inflight' as const },
+        [d.call_id]: { ...(prev || { id: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose, round: s.round }), status: 'inflight' as const, fresh: d.fresh ?? prev?.fresh },
       }
       const order = s.callOrder.includes(d.call_id) ? s.callOrder : [...s.callOrder, d.call_id]
       return {
         ...n,
         calls,
         callOrder: order,
-        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'request' as const, callId: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose }].slice(-200),
+        logs: [...s.logs, { seq: e.seq, ts: e.ts, kind: 'request' as const, callId: d.call_id, engine: d.engine, params: d.params, purpose: d.purpose, fresh: d.fresh }].slice(-200),
       }
     }
 
@@ -151,13 +154,13 @@ export function reduce(s: SessionState, e: CompassEvent): SessionState {
       const prev = s.calls[d.call_id]
       return {
         ...n,
-        calls: prev ? { ...s.calls, [d.call_id]: { ...prev, status: d.cached ? 'cached' : 'done', ms: d.ms, results: d.results } } : s.calls,
+        calls: prev ? { ...s.calls, [d.call_id]: { ...prev, status: d.cached ? 'cached' : 'done', ms: d.ms, results: d.results, fresh: d.fresh ?? prev.fresh } } : s.calls,
         credits: d.credits ?? s.credits,
         logs: [
           ...s.logs,
           {
             seq: e.seq, ts: e.ts, kind: 'response' as const, callId: d.call_id, engine: d.engine, ms: d.ms, results: d.results,
-            status: d.status, mode: d.mode, searchId: d.search_id, raw: d.raw,
+            status: d.status, mode: d.mode, searchId: d.search_id, raw: d.raw, fresh: d.fresh ?? prev?.fresh,
           },
         ].slice(-200),
       }

@@ -13,11 +13,41 @@ from ..config import get_settings
 
 
 def call_fingerprint(engine: str, params: dict[str, Any]) -> str:
-    """Hash of normalized engine + params (api_key / async flags excluded)."""
+    """Hash of normalized engine + params (api_key / async flags excluded).
+
+    Param VALUES stay case-sensitive: "Techno Gamerz" and "techno gamerz" are different
+    dedupe keys, so a creator-specific query can never collide with a generic one that only
+    differs in casing. Keys and the engine name are lowercased (SerpApi treats them as such)."""
     skip = {"api_key", "async", "no_cache", "output"}
-    norm = {k: str(v).strip().lower() for k, v in sorted(params.items()) if k not in skip and v not in (None, "")}
-    raw = json.dumps({"engine": engine, "params": norm}, sort_keys=True)
+    norm = {str(k).strip().lower(): str(v).strip() for k, v in sorted(params.items(), key=lambda kv: str(kv[0]))
+            if k not in skip and v not in (None, "")}
+    raw = json.dumps({"engine": str(engine).strip().lower(), "params": norm}, sort_keys=True)
     return "serp:" + hashlib.sha256(raw.encode()).hexdigest()[:32]
+
+
+# Per-engine cache TTLs (seconds). Freshness-critical verticals expire fast so "latest X"
+# can never be served a stale dedupe hit; slow-moving catalogues stay cached longer.
+ENGINE_TTL: dict[str, int] = {
+    "google_news": 300, "google_news_light": 300, "bing_news": 300, "duckduckgo_news": 300,
+    "youtube": 600, "youtube_channel": 600, "google_videos": 600, "google_short_videos": 600,
+    "bing_videos": 600, "yahoo_videos": 600,
+    "google_trends": 1800, "google_trends_trending_now": 900,
+    "google_finance": 300, "google_finance_markets": 300,
+    "google_flights": 600, "google_flights_deals": 900, "google_travel_explore": 1800, "google_hotels": 1800,
+}
+
+
+def ttl_for(engine: str, *, fresh: bool) -> int:
+    """TTL for a call: fresh pulls are cached only briefly, static catalogues longer."""
+    from ..config import get_settings
+    s = get_settings()
+    if fresh:
+        return s.cache_ttl_fresh_seconds
+    if engine in ENGINE_TTL:
+        return ENGINE_TTL[engine]
+    if engine in ("google_play", "apple_app_store", "google_scholar", "google_patents", "google_images"):
+        return s.cache_ttl_static_seconds
+    return s.cache_ttl_seconds
 
 
 class Cache:

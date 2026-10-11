@@ -21,6 +21,9 @@ SCENARIOS = [
     ("prior_art", "Prior art for solid-state battery dendrite suppression", "pro", None),
     ("tacos", "Best tacos in Austin, TX under $$ with 4.5+ rating", "go", "rating_drop"),
     ("seo", "Track SEO visibility of serpapi.com for \"google search api\" across search engines", "pro", "rank_drop"),
+    ("news", "latest news in india", "go", None),
+    ("creator", "latest Techno Gamerz videos", "go", None),
+    ("apps", "best meditation apps", "go", None),
 ]
 
 

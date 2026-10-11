@@ -47,11 +47,11 @@ frontend/                Next.js 14 + React + Tailwind + framer-motion (Vercel H
   app/page.tsx           Landing page (renders components/landing/LandingPage)
   app/dashboard/page.tsx Agent Command Center (Go/Pro toggle + split-screen + Playbook library + account credits)
   components/landing/    LandingPage · PitchDeck (7-slide snap deck) · slides · BlurText · HlsVideo · SlideControls
-  components/            PipelineStepper · IntentBars · ThoughtTree · SerpLog · RetrievalHeatmap · DecisionMatrix ·
-                         InsightsPanel (VenueConsensus · SeoGrid · trip stays/events) · WatchesPanel · PlaybookLibrary ·
+  components/            PipelineStepper · IntentBars · RoutingPanel · ThoughtTree · SerpLog · RetrievalHeatmap · DecisionMatrix ·
+                         InsightsPanel (VenueConsensus · SeoGrid · trip stays/events · FeedExtras) · WatchesPanel · PlaybookLibrary ·
                          AccountMeter · ActionCards (HITL) · RawCalls · AnimatedNumber
   lib/                   api · reducer (event → UI state) · pipeline (stepper derived from SSE) · useSession (SSE live / offline replay) ·
-                         useWatches (live ticks / offline simulation) · demo recordings (7 scenarios) + bundled Playbook library
+                         useWatches (live ticks / offline simulation) · demo recordings (10 scenarios) + bundled Playbook library
 supabase/migrations/     0001_compass_schema.sql (tables, pgvector HNSW, FTS GIN, hybrid_search + match_playbooks RPCs)
 render.yaml              Render Blueprint (web service, free)
 .github/workflows/       watch-cron.yml (POST /api/watch/tick every 15 min) · keep-warm.yml (GET /api/health every 10 min)
@@ -59,13 +59,17 @@ ecosystem.config.cjs     PM2 config for running both services in a local sandbox
 ```
 
 ## Implemented features
-- **Playbooks (5):** `lifeops_trip` (Flights ×2 for corroboration, Hotels, Maps, Finance FX), `lifeops_deals` (Shopping, Amazon, Walmart, eBay), `pro_supplier` (Google, Shopping, Amazon, eBay, News risk), `career_jobs` (Jobs, News, Trends), `research_ip` (Scholar, Patents, News). Each one also has targeted **fallback engines** for re-planning.
-- **Orchestrator:** embedding + keyword intent classification against the Playbook library. Uses the Supabase `match_playbooks` pgvector RPC when configured, otherwise in-process cosine. Slot filling uses an LLM in JSON mode, with a regex fallback. Unknown cities resolve through SerpApi **`google_flights_autocomplete`** (`suggestions[].airports[].id`). The output is a typed Decision Graph (entities / dimensions / constraints / sources / actions).
+- **Playbooks (14)** across 11 intent taxonomies, each with targeted **fallback engines** for re-planning and a per-playbook call cap:
+  - `lifeops_trip` (Flights ×2 for corroboration, Hotels, Maps, Airbnb, Finance FX), `lifeops_deals` (Shopping, Amazon, Walmart, eBay), `lifeops_local` (Maps, Yelp, Tripadvisor, Events)
+  - `pro_supplier` (Google, Shopping, Amazon, eBay, News risk), `career_jobs` (Jobs, News, Trends), `research_ip` (Scholar, Patents, News), `research_seo` (7 search engines + AI Mode / AI Overview)
+  - `news_trends` (News, Trends, Trending-Now, News-Light, Bing News, DuckDuckGo News), `media_video` (YouTube + channel follow-ups, Google/Bing/Yahoo Videos, Shorts), `media_images` (Images), `finance_markets` (Finance quote, Finance Markets movers, News), `travel_explore` (Flights, Travel-Explore, Deals, Hotels), `apps_store` (Google Play, App Store), `general_search` (multi-engine fallback)
+- **Orchestrator:** dynamic intent→Playbook routing in four stages — strong keyword → weak keyword → Groq LLM router (validated against the real catalogue, agreement-gated) → `general_search` fallback whenever confidence < 0.50. Embeddings come from the Supabase `match_playbooks` pgvector RPC when configured, otherwise in-process cosine. Every prompt is analysed once (`analyze_prompt`: recency strength, entity, market, media kind, trip origin, deals/shorts/trending flags) and the full routing rationale streams to the UI as `orchestrator.routing`. Slot filling uses an LLM in JSON mode, with a regex fallback. Unknown cities resolve through SerpApi **`google_flights_autocomplete`** (`suggestions[].airports[].id`). The output is a typed Decision Graph (entities / dimensions / constraints / sources / actions).
 - **Researcher:** follows the SerpApi documented contract: `GET /search.json?engine=…&async=true`, then polls the Search Archive `GET /searches/{id}.json` until `Success`/`Error`. Other details:
   - 429/5xx get exponential backoff; 4xx are not retried.
   - Fresh polls use `no_cache=true`.
   - A per-session semaphore bounds concurrency.
-  - Calls are deduplicated by SHA-256 fingerprint through **Upstash Redis**, so repeat calls cost no credits.
+  - Calls are deduplicated by SHA-256 fingerprint through **Upstash Redis**, so repeat calls cost no credits — except **fresh** calls: recency-critical engines (`google_news`, `youtube`, …) bypass the cache entirely when the prompt demands freshness ("latest / breaking / today"), so a recency query can never be served a stale dedupe hit. Fresh calls are tagged `fresh:true` on `serp.request` / `serp.response` and get a green FRESH badge in the UI.
+  - Follow-up fan-out: YouTube channel uploads for creator queries, AI-Overview citation pages (`page_token`) for SEO.
 - **Hybrid RAG:** results are embedded with the Gemini free-tier embedding API and stored in **Supabase pgvector**. Retrieval fuses cosine rank and Postgres full-text rank with Reciprocal Rank Fusion. An in-memory fallback uses the identical cosine + BM25 RRF algorithm.
 - **Hallucination filter:** a fact is "verified" only when ≥2 independent sources agree:
   - flight itinerary seen in two independent result sets plus the price-insights band
@@ -76,7 +80,7 @@ ecosystem.config.cjs     PM2 config for running both services in a local sandbox
   - citation graph / patent publication record
 
   Single-source facts are flagged, never passed on silently.
-- **Analyst:** min-max, direction-aware weighted matrix with user priority overrides. Reputation uses a Bayesian-smoothed rating. Anomaly detection uses robust z-scores (median/MAD) against both the stored price history baseline and the peer group. Anomalies and budget breaches are penalized. The confidence score combines verification ratio, margin, coverage and anomalies, and comes with an LLM or template rationale.
+- **Analyst:** min-max, direction-aware weighted matrix with user priority overrides. Recency queries trigger a **freshness weight override** (freshness → 0.45 strong / 0.35 weak, renormalised) so "latest" beats "most popular". Reputation uses a Bayesian-smoothed rating. Anomaly detection uses robust z-scores (median/MAD) against both the stored price history baseline and the peer group. Anomalies and budget breaches are penalized. The confidence score combines verification ratio, margin, coverage and anomalies, and comes with an LLM or template rationale. Vertical playbooks emit ranked **feed insights** (stories / videos / quotes + movers / images / apps) alongside the venues / SEO / trip panels.
 - **Bounded re-planning:** LangGraph conditional edge with a hard cap (`MAX_REPLANS=2`). Once the cap is hit it returns partial results with a confidence caveat.
 - **Actor + HITL:**
   - Playwright booking/application flows run inside Render only. They capture a screenshot and stop at payment/submit.
@@ -88,16 +92,17 @@ ecosystem.config.cjs     PM2 config for running both services in a local sandbox
 - **Observability:** Langfuse Cloud ingestion REST API (no SDK, no self-hosting). The trace is read back for the "Raw calls" tab, and local spans are the fallback.
 - **Command Center UI:**
   - **pipeline stepper** Plan → Search → Verify → Compare → Act, derived purely from the SSE `stage` events: per-step wall time, spinning `re-plan n/2` badge, `×n` revisit badges, a "waiting for budget" state and a progress bar
-  - **intent bars**: dense (cosine) ⊕ keyword score for every Playbook, winner highlighted
-  - **venue consensus** (Maps ⊕ Yelp ⊕ Tripadvisor bars with a consensus marker, spread, rating-drop deltas), **SEO grid** (7 engines, position heat-map, ±rank movement, AI-Mode/AI-Overview citation chips with the answer text, competitor leaderboard) and **trip extras** (Airbnb stays + events)
+  - **intent bars**: dense (cosine) ⊕ keyword score for every Playbook, winner highlighted (with router stage + confidence)
+  - **routing panel**: intent category → Playbook, router stage (strong / weak / LLM / fallback), recency + entity + market + origin signals, planned engine fan-out with FRESH flags, skipped optionals, and any recency weight override
+  - **venue consensus** (Maps ⊕ Yelp ⊕ Tripadvisor bars with a consensus marker, spread, rating-drop deltas), **SEO grid** (7 engines, position heat-map, ±rank movement, AI-Mode/AI-Overview citation chips with the answer text, competitor leaderboard), **trip extras** (Airbnb stays + events) and **feed insights** (ranked stories / videos / quotes + market movers / images / apps, with dates, views, channel and mover chips)
   - **watches panel**: price / rating / rank watches with baseline → now, animated sparkline, "Check now" (`POST /api/watches/{id}/check`, a real fresh SerpApi poll) and threshold alerts. With no backend it runs a clearly-labelled deterministic *simulation*
   - **Playbook library** (`GET /api/playbooks`, bundled copy offline): engines, re-plan fallback engines, decision dimensions + weights, action types, click-to-run examples
   - **account meter**: real SerpApi plan credits and hourly throughput through the free Account API (`GET /api/account`; never exposes the key / e-mail)
   - the disruption button adapts to the Playbook: *Price spike +45%* · *Rating drop −45%* · *Rank drop −8*
   - every animation honours the OS `prefers-reduced-motion` setting
   - animated thought-tree / Decision Graph
-  - live colour-coded SerpApi log with expandable raw JSON
-  - retrieval heat-map (fresh vs cached cells, RRF hits with dense/keyword ranks)
+  - live colour-coded SerpApi log with expandable raw JSON and FRESH badges on cache-bypassing calls
+  - retrieval heat-map (fresh vs cached cells, green ring on FRESH calls, RRF hits with dense/keyword ranks)
   - animated decision matrix with confidence gauge, rank-movement arrows and anomaly flags
   - HITL cards with receipts (screenshot, steps, .ics / .md download, RFQ drafts, delivery status)
   - raw-calls trace viewer
@@ -160,16 +165,17 @@ npm run dev                                # http://localhost:3000
 ## Testing & verification
 ```bash
 cd backend && pip install -r requirements-dev.txt
-python -m pytest -q                         # 110 tests, 0 credits: playbook params vs the SerpApi docs, every normalizer vs the
-                                            #   documented sample payload, async/Search-Archive/error-code transport, frontend contract
-PYTHONPATH=. python scripts/smoke_test.py   # end-to-end over the HTTP API in Demo Mode (7 playbooks, 4 disruptions, persistence)
+python -m pytest -q                         # 296 tests, 0 credits: playbook params vs the SerpApi docs, every normalizer vs the
+                                            #   documented sample payload, async/Search-Archive/error-code transport, frontend contract,
+                                            #   routing/freshness regressions (intent taxonomy, recency override, cache bypass, new verticals)
+PYTHONPATH=. python scripts/smoke_test.py   # end-to-end over the HTTP API in Demo Mode (15 prompt routes, 4 disruptions, persistence)
 PYTHONPATH=. python scripts/live_check.py   # REAL serpapi.com: keyless doc-example engines + error contract + async→archive polling
 SERPAPI_KEY=… PYTHONPATH=. python scripts/live_check.py [--full]   # + Account API and one live call per playbook engine
 PYTHONPATH=. python scripts/docs_sync.py    # re-snapshot the documented parameters from serpapi.com (diff = docs drift)
 PYTHONPATH=. python scripts/record_demo.py  # regenerate frontend/lib/demo/{recordings,playbooks}.json after backend changes
 python scripts/ui_check.py http://localhost:3000   # Playwright browser E2E of the Command Center (live or offline)
 ```
-`live_check.py` needs no key for its 28 checks (it uses the keyless doc-example queries serpapi.com answers itself). The keyed sweep is the only
+`live_check.py` needs no key for its 39 checks (it uses the keyless doc-example queries serpapi.com answers itself). The keyed sweep is the only
 part that spends credits and needs your `SERPAPI_KEY`; **it has not been run against your account in this repo's CI**, so run it once before demo day.
 
 ## Not yet implemented / next steps
@@ -179,8 +185,8 @@ part that spends credits and needs your `SERPAPI_KEY`; **it has not been run aga
 
 ## Status
 - **Platform:** Vercel (frontend) + Render (backend) + Supabase + Upstash + Langfuse Cloud. All free tiers; **no Cloudflare/Hono**.
-- **Verified:** backend smoke test passes for all 5 playbooks (HITL, watch/cron auth, disruption → re-plan). `npm ci && npm run build` passes (type-check + lint). The UI was exercised in a headless browser in both live-backend and offline modes with zero console errors.
-- **Last updated:** 2026-10-06
+- **Verified:** backend smoke test passes for all 15 prompt routes (HITL, watch/cron auth, disruption → re-plan). `npm ci && npm run build` passes (type-check + lint). The UI was exercised in a headless browser in both live-backend and offline modes with zero console errors.
+- **Last updated:** 2026-10-11
 
 
 ## Testing (live, real SerpApi key)
@@ -188,7 +194,7 @@ part that spends credits and needs your `SERPAPI_KEY`; **it has not been run aga
 cd backend && SERPAPI_KEY=... python scripts/live_check.py          # 53 checks: every playbook engine via async -> Search Archive
 python scripts/e2e_http.py [backend_url] [--readonly]               # 48 checks: every HTTP endpoint, SSE, HITL, watches, disruption, CORS
 python scripts/ui_live_check.py <frontend_url> [--run]              # Playwright: UI really talks to the live backend (no offline replay)
-python -m pytest -q                                                 # 118 unit tests
+python -m pytest -q                                                 # 296 unit tests
 ```
 Events: Google no longer renders `events_results` for "Events in <city>"; the playbooks now query "events in <city> this weekend" (Local) / "things to do in <city> this weekend" (Trip), the live item shape is parsed defensively, and `top_sights` is the fallback.
 
@@ -207,4 +213,4 @@ Import the repo, set **Root Directory = `frontend`**, framework auto-detects Nex
 | **Retrieval Heat-Map** | `RetrievalHeatmap.tsx` | Idle explainer, animated skeleton loaders + live counters while indexing, then chunks indexed / top + avg similarity, dense vs full-text vs both breakdown, engine x cosine-similarity density matrix, per-engine index composition, hybrid hit list and indexed-chunk preview chips. |
 | **Light / Dark mode** | toggle in the dashboard top bar (`ThemeToggle.tsx`, `lib/theme.tsx`) | CSS-variable theme tokens (`globals.css` + `tailwind.config.ts`) flip every panel, text tier, border and SVG node. Persisted in `localStorage`, applied before first paint, scoped to `/dashboard` (the landing page always stays dark). |
 
-Frontend verification: `cd frontend && npx tsc --noEmit && npm run lint && npm run build` (all clean); backend `pytest` (118 passed) is untouched.
+Frontend verification: `cd frontend && npx tsc --noEmit && npm run lint && npm run build` (all clean); backend `pytest` (296 passed) is untouched.

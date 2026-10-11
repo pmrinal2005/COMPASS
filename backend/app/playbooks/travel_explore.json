@@ -25,8 +25,13 @@
     "explore",
     "cheap flights",
     "getaway",
+    "getaways",
     "vacation",
-    "holiday"
+    "holiday",
+    "trips",
+    "flying",
+    "nonstop",
+    "layover"
   ],
   "examples": [
     "flights from Delhi to NYC",
@@ -156,5 +161,49 @@
     "watch",
     "document",
     "notify"
+  ],
+  "strong_keywords": [
+    "flight",
+    "flights",
+    "fly",
+    "airfare",
+    "hotel",
+    "hotels",
+    "airbnb",
+    "resort",
+    "resorts",
+    "destinations",
+    "getaway",
+    "getaways",
+    "weekend getaway",
+    "cheap flights",
+    "nonstop",
+    "non-stop",
+    "one-way",
+    "one way",
+    "roundtrip",
+    "round-trip",
+    "layover",
+    "layovers",
+    "stopover",
+    "airline",
+    "airlines",
+    "direct flight",
+    "direct flights"
+  ],
+  "optional_engines": [
+    {
+      "engine": "google_flights_deals",
+      "category": "destination",
+      "purpose": "Discounted fares from the origin airport (deal discovery)",
+      "when": "wants_deals",
+      "essential": false,
+      "params": {
+        "departure_id": "{origin_iata}",
+        "gl": "us",
+        "hl": "en",
+        "currency": "USD"
+      }
+    }
   ]
 }

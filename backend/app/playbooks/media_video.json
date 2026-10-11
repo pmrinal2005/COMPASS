@@ -4,36 +4,178 @@
   "ecosystem": "B",
   "lens": "go",
   "intent_category": "MEDIA_AND_ENTERTAINMENT",
-  "description": "Find what is popular in music, video and entertainment: YouTube search, short-form video and video results from Google, cross-checked on views and recency.",
-  "keywords": ["song", "songs", "music", "track", "tracks", "playlist", "album", "albums", "video", "videos", "youtube", "clip", "clips", "shorts", "short videos", "reels", "tiktok", "movie", "movies", "trailer", "trailers", "show", "series", "entertainment", "podcast", "podcasts", "channel", "watch", "viral", "trending songs", "hit songs"],
-  "examples": ["trending songs in india", "best new music this week", "funny cat videos"],
+  "description": "Find what is popular in music, video and entertainment: YouTube search (with an automatic channel drill-down for creator queries), short-form video and cross-platform video results, ranked by views and recency.",
+  "keywords": [
+    "song",
+    "songs",
+    "music",
+    "track",
+    "tracks",
+    "playlist",
+    "album",
+    "albums",
+    "video",
+    "videos",
+    "youtube",
+    "clip",
+    "clips",
+    "shorts",
+    "short videos",
+    "reels",
+    "tiktok",
+    "movie",
+    "movies",
+    "trailer",
+    "trailers",
+    "show",
+    "series",
+    "entertainment",
+    "podcast",
+    "podcasts",
+    "channel",
+    "watch",
+    "viral",
+    "trending songs",
+    "hit songs"
+  ],
+  "examples": [
+    "trending songs in india",
+    "best new music this week",
+    "funny cat videos"
+  ],
   "slots": {
-    "topic": {"type": "text", "default": "trending songs"},
-    "market": {"type": "country", "default": "us"}
+    "topic": {
+      "type": "text",
+      "default": "trending songs"
+    },
+    "market": {
+      "type": "country",
+      "default": "us"
+    }
   },
   "engines": [
-    {"engine": "youtube", "category": "media", "purpose": "YouTube search results (views, channel, length, publish recency)",
-     "params": {"search_query": "{topic}", "gl": "{gl}", "hl": "en"}},
-    {"engine": "google_short_videos", "category": "media", "purpose": "Short-form video results (Shorts / Reels style) for the same topic",
-     "essential": false, "params": {"q": "{topic}", "gl": "{gl}", "hl": "en"}},
-    {"engine": "google_videos", "category": "media", "purpose": "Google Videos aggregator (cross-platform corroboration)", "essential": false,
-     "params": {"q": "{topic}", "gl": "{gl}", "hl": "en"}}
+    {
+      "engine": "youtube",
+      "category": "media",
+      "purpose": "YouTube search results (views, channel, length, publish recency)",
+      "follow": "channel",
+      "params": {
+        "search_query": "{topic}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_short_videos",
+      "category": "media",
+      "purpose": "Short-form video results (Shorts / Reels style)",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_videos",
+      "category": "media",
+      "purpose": "Google Videos aggregator (cross-platform corroboration)",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
   ],
   "optional_engines": [
-    {"engine": "google_trends", "category": "trend", "purpose": "Search-interest momentum for the topic", "when": "wants_trending", "essential": false,
-     "params": {"q": "{topic}", "geo": "{geo}", "data_type": "TIMESERIES", "date": "now 7-d", "hl": "en"}}
+    {
+      "engine": "bing_videos",
+      "category": "media",
+      "purpose": "Bing Videos (independent video index, broad compare)",
+      "when": "wants_broad",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "mkt": "{mkt}"
+      }
+    },
+    {
+      "engine": "google_trends",
+      "category": "trend",
+      "purpose": "Search-interest momentum for the topic",
+      "when": "wants_trending",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "geo": "{geo}",
+        "data_type": "TIMESERIES",
+        "date": "now 7-d",
+        "hl": "en"
+      }
+    }
   ],
   "fallback_engines": [
-    {"engine": "youtube", "category": "media", "purpose": "Re-plan: YouTube sorted to the most recent uploads",
-     "params": {"search_query": "{topic} this week", "gl": "{gl}", "hl": "en"}},
-    {"engine": "google_videos", "category": "media", "purpose": "Re-plan: Google Videos, page 2",
-     "params": {"q": "{topic}", "gl": "{gl}", "hl": "en", "start": "10"}}
+    {
+      "engine": "youtube",
+      "category": "media",
+      "purpose": "Re-plan: YouTube restricted to this week's uploads",
+      "params": {
+        "search_query": "{topic} this week",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "bing_videos",
+      "category": "media",
+      "purpose": "Re-plan: Bing Videos as an independent index",
+      "params": {
+        "q": "{topic}",
+        "mkt": "{mkt}"
+      }
+    }
   ],
   "dimensions": {
-    "popularity": {"weight": 0.35, "direction": "max", "label": "Views / popularity"},
-    "freshness": {"weight": 0.25, "direction": "max", "label": "Freshness (publish recency)"},
-    "relevance": {"weight": 0.25, "direction": "max", "label": "Topic relevance"},
-    "risk": {"weight": 0.15, "direction": "min", "label": "Risk (single-source / unverified)"}
+    "popularity": {
+      "weight": 0.35,
+      "direction": "max",
+      "label": "Views / popularity"
+    },
+    "freshness": {
+      "weight": 0.25,
+      "direction": "max",
+      "label": "Freshness (publish recency)"
+    },
+    "relevance": {
+      "weight": 0.25,
+      "direction": "max",
+      "label": "Topic relevance"
+    },
+    "risk": {
+      "weight": 0.15,
+      "direction": "min",
+      "label": "Risk (single-source / unverified)"
+    }
   },
-  "actions": ["document", "watch", "notify"]
+  "actions": [
+    "document",
+    "watch",
+    "notify"
+  ],
+  "strong_keywords": [
+    "youtube",
+    "video",
+    "videos",
+    "song",
+    "songs",
+    "music",
+    "shorts",
+    "channel",
+    "watch",
+    "playlist",
+    "movie",
+    "movies",
+    "trailer"
+  ]
 }

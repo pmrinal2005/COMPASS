@@ -186,6 +186,31 @@ def dimension_values(pid: str, c: Candidate, slots: dict) -> dict[str, float | N
         yr = a.get("year")
         return {"relevance": a.get("relevance"), "impact": math.log1p(a.get("cited_by", 0)) if c.category == "paper" else 1.5,
                 "freshness": float(yr) if yr else None, "risk": risk}
+    if pid == "news_trends":
+        age = a.get("age_days")
+        return {"freshness": (-age if age is not None else None), "coverage": float(a.get("publishers") or 1),
+                "momentum": float(a.get("story_consensus") or 1), "risk": risk}
+    if pid == "media_video":
+        age = a.get("age_days")
+        views = a.get("views")
+        return {"popularity": math.log1p(views) if views else None, "freshness": (-age if age is not None else None),
+                "relevance": a.get("relevance"), "risk": risk}
+    if pid == "finance_markets":
+        chg = a.get("change_pct")
+        return {"price": c.price, "momentum": (chg if chg is not None else None),
+                "coverage": float(len(c.corroborating_sources)), "risk": risk}
+    if pid == "travel_explore":
+        return {"price": c.price, "time": c.duration_min, "reputation": _reputation(c.rating, c.reviews), "risk": risk}
+    if pid == "general_search":
+        age = a.get("age_days")
+        return {"relevance": a.get("relevance"), "coverage": float(len(c.corroborating_sources)),
+                "freshness": (-age if age is not None else None), "risk": risk}
+    if pid == "media_images":
+        return {"relevance": a.get("relevance"), "quality": a.get("megapixels"), "risk": risk}
+    if pid == "apps_store":
+        pop = a.get("downloads") or c.reviews
+        return {"rating": _reputation(c.rating, c.reviews), "popularity": math.log1p(pop) if pop else None,
+                "relevance": a.get("relevance"), "risk": risk}
     return {"price": c.price, "risk": risk}
 
 
@@ -207,6 +232,20 @@ def decision_pool(pid: str, cands: list[Candidate], slots: dict) -> list[Candida
         return venue_entities(base, slots)
     if pid == "research_seo":
         return domain_entities(base, slots)[0]
+    if pid == "news_trends":
+        return [c for c in base if c.category == "news"]
+    if pid == "media_video":
+        return [c for c in base if c.category == "media"]
+    if pid == "finance_markets":
+        return [c for c in base if c.category in ("quote", "index")]
+    if pid == "travel_explore":
+        return [c for c in base if c.category in ("flight", "hotel", "destination")]
+    if pid == "general_search":
+        return [c for c in base if c.category in ("serp", "ai_citation")]
+    if pid == "media_images":
+        return [c for c in base if c.category == "image"]
+    if pid == "apps_store":
+        return [c for c in base if c.category == "app"]
     return base
 
 
@@ -336,7 +375,16 @@ async def analyze(session_id: str, pid: str, cands: list[Candidate], slots: dict
                                                                 "price_level", "rating_spread", "meets_filters", "address", "neighborhood",
                                                                 "positions", "ai_cited", "ai_count", "visibility", "coverage", "avg_position",
                                                                 "share_of_voice", "tracked", "best_position", "found_engines",
-                                                                "engines_polled", "domain")}}
+                                                                "engines_polled", "domain", "views", "length", "published", "age_days",
+                                                                "video_id", "channel_handle", "engine_consensus", "verified_channel",
+                                                                "date", "publishers", "story_consensus", "thumbnail", "stock", "exchange",
+                                                                "currency", "change_pct", "change_value", "movement", "as_of", "region",
+                                                                "discount_pct", "average_price", "start_date", "end_date", "airport",
+                                                                "airline_code", "is_deal", "country", "width", "height", "megapixels",
+                                                                "page_url", "is_product", "downloads", "downloads_raw", "author",
+                                                                "category_name", "product_id", "developer", "bundle_id", "genres",
+                                                                "price_text", "version", "age_rating", "release_date", "match_key",
+                                                                "description", "via_followup")}}
                  for c in ranked[:12]],
     }
     insights = build_insights(pid, ranked, cands, slots, {**ctx, **seo_ctx})

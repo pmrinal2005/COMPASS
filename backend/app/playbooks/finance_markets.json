@@ -4,7 +4,7 @@
   "ecosystem": "A",
   "lens": "go",
   "intent_category": "FINANCE_AND_MARKETS",
-  "description": "Brief a stock, index or market: live quote and summary from Google Finance, the market movers and index overview from Google Finance Markets, and the related headlines from Google News.",
+  "description": "Brief a stock, index or market: the live quote (price + intraday change) from Google Finance, the market movers from Google Finance Markets, and the headlines from Google News that explain the move.",
   "keywords": [
     "stock",
     "stocks",
@@ -129,5 +129,22 @@
     "document",
     "watch",
     "notify"
+  ],
+  "strong_keywords": [
+    "stock",
+    "stocks",
+    "share price",
+    "stock price",
+    "ticker",
+    "nasdaq",
+    "nyse",
+    "nifty",
+    "sensex",
+    "etf",
+    "crypto",
+    "bitcoin",
+    "forex",
+    "earnings",
+    "ipo"
   ]
 }

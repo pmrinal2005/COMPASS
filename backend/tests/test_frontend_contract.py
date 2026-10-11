@@ -18,7 +18,7 @@ DEMO = ROOT / "frontend" / "lib" / "demo"
 REC = json.loads((DEMO / "recordings.json").read_text())
 LIB = json.loads((DEMO / "playbooks.json").read_text())
 
-SCENARIO_INSIGHT = {"tacos": "venues", "seo": "seo", "tokyo": "trip"}
+SCENARIO_INSIGHT = {"tacos": "venues", "seo": "seo", "tokyo": "trip", "news": "feed", "creator": "feed", "apps": "feed"}
 STAGES = {"plan", "research", "verify", "analyze", "act", "done"}       # the stepper's Plan/Search/Verify/Compare/Act + terminal
 DISRUPTION = {"tokyo": "price_spike", "headphones": "price_spike", "tacos": "rating_drop", "seo": "rank_drop"}
 
@@ -70,6 +70,12 @@ def test_insight_payload_shapes():
     assert {"id", "title", "rating", "platforms", "verified", "spread"} <= set(v) and len(v["platforms"]) >= 2
     trip = next(e for e in REC["tokyo"]["events"] if e["type"] == "analyst.matrix")["data"]["insights"]
     assert trip["stays"] and trip["events"]
+    for key in ("news", "creator", "apps"):
+        feed = next(e for e in REC[key]["events"] if e["type"] == "analyst.matrix")["data"]["insights"]
+        assert feed["kind"] == "feed" and feed["items"], key
+        assert {"title", "url", "source", "score", "date", "views", "length", "channel", "snippet"} <= set(feed["items"][0]), key
+        rt = next(e for e in REC[key]["events"] if e["type"] == "orchestrator.routing")["data"]
+        assert {"intent_category", "playbook_id", "routed_by", "confidence", "analysis", "engines", "fresh"} <= set(rt), key
 
 
 @pytest.mark.parametrize("key,kind", sorted(DISRUPTION.items()))

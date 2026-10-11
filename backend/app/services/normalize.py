@@ -14,7 +14,16 @@ Field paths follow the official per-engine response docs:
   google_trends  : interest_over_time.timeline_data[].values[].extracted_value
   google_scholar : organic_results[] -> publication_info.summary, inline_links.cited_by.total
   google_patents : organic_results[] -> publication_number, assignee, priority_date, patent_link
-  google_finance : summary.extracted_price
+  google_finance : summary.extracted_price -> quote candidate (price, change %) + news_results[] -> news
+  youtube_channel: channel_results{} + videos_results[]/shorts_results[] -> media (channel drill-down)
+  bing_news      : organic_results[] -> title, link, snippet, source, date ("21h")
+  duckduckgo_news: news_results[] -> title, link, snippet, source, date
+  google_images  : images_results[] -> title, original, thumbnail, source, width/height
+  bing_videos    : video_results[] -> title, link, duration, views
+  yahoo_videos   : videos_results[] -> title, link, source, duration, views
+  google_flights_deals: deals[] -> destination + discount_percentage, average_price
+  google_play    : organic_results[].items[] -> title, rating, author, downloads
+  apple_app_store: organic_results[] -> title, rating[{type,rating,count}], developer, genres
   bing | duckduckgo | yahoo | yandex | baidu : organic_results[] -> position, title, link, displayed_link|displayed_brand, snippet
   naver          : web_results[] (where=nexearch) | organic_results[] (where=web) -> position, title, link, displayed_link, snippet
   google_ai_mode : text_blocks[], references[] -> title, link, source, index   (+ quick_results[])
@@ -29,6 +38,7 @@ Field paths follow the official per-engine response docs:
 from __future__ import annotations
 
 import re
+from datetime import datetime, timezone
 from urllib.parse import urlencode
 from typing import Any
 
@@ -49,14 +59,79 @@ def _num(v: Any) -> float | None:
     return float(m.group().replace(",", "")) if m else None
 
 
-def _days_ago(s: str | None) -> float | None:
-    if not s:
+def _count(v: Any) -> int | None:
+    """Parse a human count: 471000000, "500,000,000+", "1.2M views", "28.5M subscribers", "3.4K"."""
+    if v is None:
         return None
-    m = re.search(r"(\d+)\s*(hour|day|week|month)", s)
-    if not m:
-        return 0.0 if "just" in s.lower() or "today" in s.lower() else None
-    n, unit = int(m.group(1)), m.group(2)
-    return n / 24 if unit == "hour" else n * {"day": 1, "week": 7, "month": 30}[unit]
+    if isinstance(v, (int, float)):
+        return int(v)
+    s = str(v).replace(",", "").strip()
+    m = re.search(r"([\d.]+)\s*([KMB])\b", s, re.I)
+    if m:
+        return int(float(m.group(1)) * {"K": 1e3, "M": 1e6, "B": 1e9}[m.group(2).upper()])
+    m = re.search(r"[\d.]+", s)
+    return int(float(m.group())) if m else None
+
+
+_REL_AGE = re.compile(r"(\d+(?:\.\d+)?)\s*(second|sec|minute|min|month|mo|hour|hr|year|yr|week|wk|day|s|m|h|d|w|y)\w*", re.I)
+_ABS_FMTS = ("%b %d %Y", "%B %d %Y", "%Y-%m-%d", "%d %b %Y", "%Y/%m/%d", "%m/%d/%Y",
+             "%b %d %Y, %I:%M:%S %p", "%B %d %Y, %I:%M:%S %p", "%b %d, %Y", "%B %d, %Y")
+
+
+def _days_ago(s: str | None) -> float | None:
+    """Robust publish-age parser across every SerpApi date flavour.
+
+    Handles relative labels ("21h", "14 hours ago", "5 minutes ago", "3 weeks ago", "2 yr"),
+    words ("just now", "today", "yesterday"), absolute dates ("May 22 2026, ...", "2026-09-21",
+    "Oct 12" → assumed current year) and ISO datetimes. Returns fractional days, or None
+    when the string carries no parseable age."""
+    if not s or not isinstance(s, str):
+        return None
+    t = s.strip()
+    low = t.lower()
+    if re.search(r"\bjust\s+now\b|\bstreamed\b|\blive\b", low) or low in ("today",):
+        return 0.0
+    if "today" in low:
+        return 0.0
+    if "yesterday" in low:
+        return 1.0
+    m = _REL_AGE.search(t)
+    if m:
+        n, unit = float(m.group(1)), m.group(2).lower()
+        scale = {"second": 1 / 86400, "sec": 1 / 86400, "s": 1 / 86400, "minute": 1 / 1440, "min": 1 / 1440,
+                 "m": 1 / 1440, "hour": 1 / 24, "hr": 1 / 24, "h": 1 / 24, "day": 1, "d": 1,
+                 "week": 7, "wk": 7, "w": 7, "month": 30, "mo": 30, "year": 365, "yr": 365, "y": 365}
+        # guard: bare "m" after a year-like number ("May 22 2026") is not "minutes"
+        if unit in ("m", "s", "h", "d", "w", "y") and not re.search(r"\b(ago|old|last|past)\b", low) and re.search(r"\d{4}", t):
+            pass
+        else:
+            return round(n * scale[unit], 4)
+    # strip time-of-day / timezone tails, then try absolute formats ("May 22 2026, 12:44:24 PM UTC-04:00" → "May 22 2026")
+    core = re.split(r",\s*\d{1,2}:\d{2}", t)[0].strip().rstrip(",")
+    core = re.sub(r"\s+(UTC|GMT)([+-]\d+(:\d+)?)?$", "", core, flags=re.I).strip()
+    for fmt in _ABS_FMTS:
+        try:
+            dt = datetime.strptime(core, fmt)
+            return round(max(0.0, (datetime.now(timezone.utc).replace(tzinfo=None) - dt).total_seconds() / 86400), 2)
+        except ValueError:
+            continue
+    m = re.match(r"(?i)^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{1,2})$", t)  # "Oct 12"
+    if m:
+        try:
+            dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {datetime.now().year}", "%b %d %Y")
+            now = datetime.now()
+            if dt > now:  # December query in January → last year
+                dt = dt.replace(year=dt.year - 1)
+            return round(max(0.0, (now - dt).total_seconds() / 86400), 2)
+        except ValueError:
+            return None
+    try:  # ISO-8601 fallback
+        dt = datetime.fromisoformat(t.replace("Z", "+00:00"))
+        if dt.tzinfo:
+            dt = dt.astimezone(timezone.utc).replace(tzinfo=None)
+        return round(max(0.0, (datetime.now(timezone.utc).replace(tzinfo=None) - dt).total_seconds() / 86400), 2)
+    except ValueError:
+        return None
 
 
 def _venue(engine: str, platform: str, title: str, rating, reviews, price, url, **attrs) -> Candidate:
@@ -141,9 +216,36 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
                                              "type": p.get("type"), "match_key": p.get("title", "").lower()}))
 
     elif engine == "google_finance":
+        # docs: summary{title, stock, exchange, price, extracted_price, currency, price_movement{percentage,value,movement}, date}
+        # + news_results[] (headlines about the instrument) + graph[] (intraday series).
         s = data.get("summary") or {}
-        ctx["fx"] = {"pair": s.get("stock") or s.get("title"), "rate": _num(s.get("extracted_price") or s.get("price")),
-                     "currency": s.get("currency")}
+        rate = _num(s.get("extracted_price") or s.get("price"))
+        ctx["fx"] = {"pair": s.get("stock") or s.get("title"), "rate": rate, "currency": s.get("currency")}
+        if rate is not None:
+            pm = s.get("price_movement") or {}
+            pct = _num(pm.get("percentage"))
+            out.append(Candidate(
+                title=s.get("title") or s.get("stock") or "Quote", category="quote", engine=engine,
+                source=s.get("exchange") or "", url=f"https://www.google.com/finance/quote/{s.get('stock', '')}",
+                price=rate, attributes={
+                    "stock": s.get("stock"), "exchange": s.get("exchange"), "currency": s.get("currency"),
+                    "change_pct": round(pct, 4) if pct is not None else None,   # docs: percentage already in %
+                    "change_value": _num(pm.get("value")), "movement": pm.get("movement"),
+                    "as_of": s.get("date"), "age_days": _days_ago(s.get("date")),
+                    "match_key": "quote:" + str(s.get("stock") or s.get("title", "")).lower()}))
+            graph = data.get("graph") or []
+            if graph:
+                ctx["intraday"] = [{"price": _num(p.get("price")), "date": p.get("date")} for p in graph[:40]]
+        for n in (data.get("news_results") or [])[:8]:
+            # finance news items carry the headline in `snippet` (no `title` key) — accept both
+            head = n.get("title") or n.get("snippet")
+            if not isinstance(n, dict) or not head:
+                continue
+            src = n.get("source")
+            src_name = (src.get("name") if isinstance(src, dict) else src) or ""
+            out.append(Candidate(title=head, category="news", engine=engine, source=str(src_name), url=n.get("link"),
+                                 attributes={"date": n.get("date"), "age_days": _days_ago(n.get("date")),
+                                             "snippet": n.get("snippet", "") if n.get("title") else ""}))
 
     elif engine in ("google_shopping", "google_shopping_light"):
         for it in (data.get("shopping_results") or []) + (data.get("inline_shopping_results") or []):
@@ -361,6 +463,19 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
             rows = data.get("short_video_results") or []
         elif engine == "youtube":
             rows = (data.get("video_results") or []) + [it for s in (data.get("shorts_results") or []) for it in (s.get("shorts") or [])]
+            # channel_results[] carries the creator behind an entity query ("latest Techno Gamerz videos"):
+            # the Researcher drills into it with a youtube_channel follow-up (sorted by recency).
+            chs = [c for c in (data.get("channel_results") or []) if isinstance(c, dict) and (c.get("handle") or c.get("link"))]
+            if chs:
+                chs.sort(key=lambda c: -(_count(c.get("subscribers")) or 0))
+                top = chs[0]
+                handle = (top.get("handle") or "").lstrip("@") or (top.get("link") or "").rstrip("/").split("/")[-1].lstrip("@")
+                if handle and not handle.startswith("channel"):
+                    ctx["channel_followup"] = {"channel_id": handle, "title": top.get("title"),
+                                               "subscribers": _count(top.get("subscribers"))}
+                elif (top.get("link") or ""):
+                    ctx["channel_followup"] = {"channel_id": top.get("link"), "title": top.get("title"),
+                                               "subscribers": _count(top.get("subscribers"))}
         else:
             rows = data.get("video_results") or []
         for i, v in enumerate(rows[:20]):
@@ -434,5 +549,157 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
                                  attributes={"number": it.get("publication_number"), "priority_date": pd,
                                              "year": int(pd[:4]) if pd[:4].isdigit() else None,
                                              "inventor": it.get("inventor"), "snippet": it.get("snippet", "")}))
+
+    # ------------------------------------------------ second-wave vertical engines
+    elif engine == "youtube_channel":
+        # docs: channel_results{title,handle,subscribers,video_count,description,link} (+ tab=videos default)
+        # videos_results[{title,link,video_id,channel{name},views,published_date,length}] and shorts_results[].
+        ch = data.get("channel_results") or {}
+        ch_name = ch.get("title") or ch.get("handle") or ""
+        ctx["channel"] = {"title": ch_name, "handle": ch.get("handle"), "subscribers": _count(ch.get("subscribers")),
+                          "video_count": _count(ch.get("video_count")), "description": (ch.get("description") or "")[:240],
+                          "link": ch.get("link")}
+        rows: list[dict] = list(data.get("videos_results") or [])
+        for s in data.get("shorts_results") or []:
+            rows += s.get("shorts") or []
+        for i, v in enumerate(rows[:20]):
+            if not isinstance(v, dict) or not v.get("title"):
+                continue
+            c = v.get("channel")
+            cname = (c.get("name") if isinstance(c, dict) else c) or ch_name
+            pub = v.get("published_date") or v.get("date")
+            out.append(Candidate(title=v["title"], category="media", engine=engine, source=str(cname), url=v.get("link"),
+                                 attributes={"views": _count(v.get("views") or v.get("extracted_views")),
+                                             "length": v.get("length") or v.get("duration"), "published": pub,
+                                             "age_days": _days_ago(pub) if pub else None,
+                                             "position": v.get("position_on_page") or v.get("position") or i + 1,
+                                             "video_id": v.get("video_id"),
+                                             "channel_handle": ch.get("handle"),
+                                             "match_key": "video:" + str(v.get("video_id") or v["title"].lower())[:60]}))
+
+    elif engine == "bing_news":
+        # docs: organic_results[{title,link,snippet,source,date,thumbnail}] (date like "21h").
+        for n in data.get("organic_results", []) or []:
+            if not isinstance(n, dict) or not n.get("title"):
+                continue
+            out.append(Candidate(title=n["title"], category="news", engine=engine, source=str(n.get("source") or ""),
+                                 url=n.get("link"),
+                                 attributes={"date": n.get("date"), "age_days": _days_ago(n.get("date")),
+                                             "snippet": n.get("snippet", ""), "thumbnail": n.get("thumbnail")}))
+
+    elif engine == "duckduckgo_news":
+        # docs: news_results[{position,title,link,snippet,source,date,thumbnail}].
+        for n in data.get("news_results", []) or []:
+            if not isinstance(n, dict) or not n.get("title"):
+                continue
+            out.append(Candidate(title=n["title"], category="news", engine=engine, source=str(n.get("source") or ""),
+                                 url=n.get("link"),
+                                 attributes={"date": n.get("date"), "age_days": _days_ago(n.get("date")),
+                                             "snippet": n.get("snippet", ""), "thumbnail": n.get("thumbnail")}))
+
+    elif engine == "google_images":
+        # docs: images_results[{position,thumbnail,source,title,link,original,original_height,original_width,is_product}].
+        for it in data.get("images_results", []) or []:
+            if not isinstance(it, dict) or not (it.get("title") or it.get("original")):
+                continue
+            w, h = _num(it.get("original_width")), _num(it.get("original_height"))
+            out.append(Candidate(title=it.get("title") or it.get("source") or "Image", category="image", engine=engine,
+                                 source=str(it.get("source") or ""), url=it.get("original") or it.get("link"),
+                                 attributes={"position": it.get("position"), "thumbnail": it.get("thumbnail"),
+                                             "page_url": it.get("link"), "width": int(w) if w else None,
+                                             "height": int(h) if h else None,
+                                             "megapixels": round(w * h / 1e6, 2) if w and h else None,
+                                             "is_product": bool(it.get("is_product")),
+                                             "match_key": "img:" + str(it.get("original") or it.get("link") or it.get("title"))[:80]}))
+
+    elif engine == "bing_videos":
+        # docs: video_results[{title,link,duration,views,extracted_views,source,thumbnail}].
+        for i, v in enumerate(data.get("video_results", []) or []):
+            if not isinstance(v, dict) or not v.get("title"):
+                continue
+            pub = v.get("published_date") or v.get("date") or v.get("uploaded")
+            out.append(Candidate(title=v["title"], category="media", engine=engine,
+                                 source=str(v.get("source") or v.get("channel") or ""), url=v.get("link"),
+                                 attributes={"views": _count(v.get("extracted_views") or v.get("views")),
+                                             "length": v.get("duration") or v.get("length"), "published": pub,
+                                             "age_days": _days_ago(pub) if pub else None,
+                                             "position": v.get("position") or i + 1, "thumbnail": v.get("thumbnail"),
+                                             "match_key": "video:" + str(v.get("link") or v["title"].lower())[:60]}))
+
+    elif engine == "yahoo_videos":
+        # docs: videos_results[{thumbnail,link,original,position,title,source,preview,duration,views,extracted_views}].
+        for i, v in enumerate(data.get("videos_results", []) or []):
+            if not isinstance(v, dict) or not v.get("title"):
+                continue
+            pub = v.get("published_date") or v.get("date")
+            out.append(Candidate(title=v["title"], category="media", engine=engine, source=str(v.get("source") or ""),
+                                 url=v.get("link"),
+                                 attributes={"views": _count(v.get("extracted_views") or v.get("views")),
+                                             "length": v.get("duration"), "published": pub,
+                                             "age_days": _days_ago(pub) if pub else None,
+                                             "position": v.get("position") or i + 1, "thumbnail": v.get("thumbnail"),
+                                             "match_key": "video:" + str(v.get("link") or v["title"].lower())[:60]}))
+
+    elif engine == "google_flights_deals":
+        # docs: departure_informations{airport_code,...} + deals[{name,country,price,average_price,discount_percentage,
+        # flight_link,thumbnail,start_date,end_date,departure_airport_code,arrival_airport_code,flight_duration,stops,airline}].
+        ctx["deals_origin"] = (data.get("departure_informations") or {}).get("airport_code")
+        for d in data.get("deals", []) or []:
+            if not isinstance(d, dict) or not d.get("name") or d.get("price") is None:
+                continue
+            out.append(Candidate(title=d["name"], category="destination", engine=engine, source=d.get("airline") or "",
+                                 url=d.get("flight_link"), price=_num(d.get("price")),
+                                 duration_min=_num(d.get("flight_duration")),
+                                 attributes={"country": d.get("country"), "airport": d.get("arrival_airport_code"),
+                                             "average_price": _num(d.get("average_price")),
+                                             "discount_pct": _num(d.get("discount_percentage")),
+                                             "stops": int(d.get("stops") or 0), "start_date": d.get("start_date"),
+                                             "end_date": d.get("end_date"), "airline_code": d.get("airline_code"),
+                                             "thumbnail": d.get("thumbnail"), "is_deal": True,
+                                             "match_key": "dest:" + str(d.get("arrival_airport_code") or d["name"]).lower()}))
+
+    elif engine == "google_play":
+        # docs: organic_results[{items:[{title,link,product_id,rating,author,category,downloads,thumbnail,description}]}]
+        # (some responses flatten items one level up — both shapes are accepted).
+        groups = data.get("organic_results") or []
+        items: list[dict] = []
+        for g in groups:
+            if not isinstance(g, dict):
+                continue
+            items += [x for x in (g.get("items") or []) if isinstance(x, dict)]
+            if g.get("title") and not g.get("items"):  # flattened shape
+                items.append(g)
+        for it in items[:25]:
+            dl = _count(it.get("downloads"))
+            out.append(Candidate(title=it.get("title", "App"), category="app", engine=engine, source="Google Play",
+                                 url=it.get("link"), rating=_num(it.get("rating")),
+                                 attributes={"author": it.get("author"), "category_name": it.get("category"),
+                                             "downloads": dl, "downloads_raw": it.get("downloads"),
+                                             "product_id": it.get("product_id"), "thumbnail": it.get("thumbnail"),
+                                             "description": (it.get("description") or "")[:300],
+                                             "match_key": "app:" + str(it.get("product_id") or it.get("title", "")).lower()}))
+
+    elif engine == "apple_app_store":
+        # docs: organic_results[{title,link,bundle_id,price{type},rating:[{type,rating,count}],genres[],developer{name},description}].
+        for it in data.get("organic_results", []) or []:
+            if not isinstance(it, dict) or not it.get("title"):
+                continue
+            ratings = it.get("rating") or []
+            best = next((r for r in ratings if isinstance(r, dict) and r.get("type") == "All Times"), None) \
+                or next((r for r in ratings if isinstance(r, dict)), None) or {}
+            dev = it.get("developer")
+            dev_name = (dev.get("name") if isinstance(dev, dict) else dev) or ""
+            price = it.get("price")
+            price_txt = (price.get("type") if isinstance(price, dict) else price) or ""
+            out.append(Candidate(title=it.get("title", "App"), category="app", engine=engine, source="App Store",
+                                 url=it.get("link"), rating=_num(best.get("rating")),
+                                 reviews=_count(best.get("count")),
+                                 attributes={"developer": dev_name, "bundle_id": it.get("bundle_id"),
+                                             "price_text": str(price_txt),
+                                             "genres": [g.get("name") for g in (it.get("genres") or []) if isinstance(g, dict)],
+                                             "version": it.get("version"), "age_rating": it.get("age_rating"),
+                                             "release_date": it.get("release_date"),
+                                             "description": (it.get("description") or "")[:300],
+                                             "match_key": "app:" + str(it.get("bundle_id") or it.get("title", "")).lower()}))
 
     return out, ctx

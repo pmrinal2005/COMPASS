@@ -48,12 +48,13 @@ export function SerpLog({ s }: { s: SessionState }) {
                 <span className={cn('w-7 shrink-0', k.cls)}>{k.tag}</span>
                 <span className="shrink-0 font-semibold" style={{ color: engineColor(l.engine) }}>{l.engine}</span>
                 <span className="min-w-0 flex-1 truncate text-slate-400">
-                  {l.kind === 'request' && <>/search.json?engine={l.engine}&{qs(l.params)}</>}
+                  {l.kind === 'request' && <>/search.json?engine={l.engine}&{qs(l.params)}{l.fresh && <span className="text-emerald-300"> · fresh</span>}</>}
                   {l.kind === 'cached' && <>dedupe hit · no credit spent · {l.purpose}</>}
                   {l.kind === 'response' && (
                     <>
                       {l.status} · {l.results} results · {l.ms}ms · {l.mode}
                       {l.searchId ? ` · id ${l.searchId.slice(0, 10)}` : ''}
+                      {l.fresh && <span className="text-emerald-300"> · FRESH</span>}
                     </>
                   )}
                   {l.kind === 'error' && <span className="text-rose-300">{l.error}</span>}

@@ -1,0 +1,116 @@
+{
+  "id": "apps_store",
+  "name": "App Finder · Play Store vs App Store",
+  "ecosystem": "B",
+  "lens": "go",
+  "intent_category": "APPS_AND_SOFTWARE",
+  "description": "Find and compare mobile apps across both stores: Google Play results side-by-side with Apple App Store results, ranked by rating, popularity and relevance.",
+  "keywords": [
+    "app",
+    "apps",
+    "play store",
+    "app store",
+    "download",
+    "apk",
+    "ios",
+    "android",
+    "iphone",
+    "mobile",
+    "application"
+  ],
+  "strong_keywords": [
+    "app",
+    "apps",
+    "play store",
+    "app store",
+    "apk"
+  ],
+  "examples": [
+    "best meditation apps",
+    "photo editor app for android vs iphone"
+  ],
+  "slots": {
+    "query": {
+      "type": "text",
+      "default": "meditation"
+    },
+    "market": {
+      "type": "country",
+      "default": "us"
+    }
+  },
+  "engines": [
+    {
+      "engine": "google_play",
+      "category": "app",
+      "purpose": "Google Play Store results (rating, downloads, category)",
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "apple_app_store",
+      "category": "app",
+      "purpose": "Apple App Store results (rating, review count, genres)",
+      "params": {
+        "term": "{query}",
+        "country": "{gl}",
+        "lang": "en-us",
+        "device": "mobile",
+        "num": "10"
+      }
+    }
+  ],
+  "fallback_engines": [
+    {
+      "engine": "apple_app_store",
+      "category": "app",
+      "purpose": "Re-plan: App Store deeper shelf (top 20)",
+      "params": {
+        "term": "{query}",
+        "country": "{gl}",
+        "lang": "en-us",
+        "device": "mobile",
+        "num": "20"
+      }
+    },
+    {
+      "engine": "google",
+      "category": "serp",
+      "purpose": "Re-plan: web reviews of the top apps",
+      "params": {
+        "q": "{query} app review",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "dimensions": {
+    "rating": {
+      "weight": 0.35,
+      "direction": "max",
+      "label": "Store rating"
+    },
+    "popularity": {
+      "weight": 0.3,
+      "direction": "max",
+      "label": "Downloads / reviews"
+    },
+    "relevance": {
+      "weight": 0.2,
+      "direction": "max",
+      "label": "Query relevance"
+    },
+    "risk": {
+      "weight": 0.15,
+      "direction": "min",
+      "label": "Risk (single-store / unverified)"
+    }
+  },
+  "actions": [
+    "document",
+    "notify"
+  ]
+}

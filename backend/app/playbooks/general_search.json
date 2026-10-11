@@ -116,5 +116,14 @@
   "actions": [
     "document",
     "notify"
+  ],
+  "strong_keywords": [
+    "what",
+    "who",
+    "why",
+    "how",
+    "explain",
+    "define",
+    "meaning"
   ]
 }

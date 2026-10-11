@@ -15,6 +15,7 @@ from ..models import DecisionGraph, DecisionNode, EngineCall
 from ..playbooks import PLAYBOOKS, playbook_text
 from ..services.events import bus
 from ..services.geo import YELP_COUNTRIES, country_for, resolve
+from ..services.intent import TICKER_MAP, PromptAnalysis, analyze_prompt, route_with_llm
 from ..services.llm import embedder, llm
 from ..services.serpapi import CreditMeter
 from ..services.store import store
@@ -46,26 +47,58 @@ def intent_category(pid: str) -> str:
     return PLAYBOOKS[pid].get("intent_category", "GENERAL_SEARCH")
 
 
-def _intent_confidence(top: dict, runner_up: dict | None) -> float:
+def _kw_hits(terms: list[str], words: set[str], pl: str) -> int:
+    return sum(1 for k in terms if (k in words if " " not in k else k in pl))
+
+
+def _intent_confidence(top: dict, runner_up: dict | None, analysis: PromptAnalysis | None = None) -> float:
     """Normalized confidence in [0, 1] that the TOP playbook really matches the prompt.
 
-    Built from *evidence*, not from the blended ranking score: a playbook gets credit only for
-    keyword hits (strong, explicit signal) and for cosine similarity above the noise floor.
-    The margin over the runner-up is a third, weaker signal. A prompt with no keyword hit and
-    weak cosine (e.g. "latest news in india" matching local discovery at 0.14) scores near 0."""
-    # one explicit, playbook-specific keyword is a clear signal (e.g. "flights", "prior art");
-    # two or more are conclusive. Stop-word-like hits were removed from the playbook lists instead.
-    kw = 0.0 if top["keyword_hits"] == 0 else (0.75 if top["keyword_hits"] == 1 else 1.0)
+    Built from *evidence*, not from the blended ranking score: one STRONG keyword hit
+    (an unambiguous intent marker like "flights", "prior art", "youtube") is conclusive;
+    weak (topical) hits need corroboration, and cosine above the noise floor is a third,
+    weaker signal. A prompt with no strong hit, one weak hit and weak cosine
+    (e.g. "latest news in india" matching local discovery at 0.14) scores near 0."""
+    strong = top.get("strong_hits", 0)
+    weak = top.get("keyword_hits", 0)
+    if strong >= 1:
+        kw = 1.0
+    elif weak >= 2:
+        kw = 0.85
+    elif weak == 1:
+        kw = 0.55
+    else:
+        kw = 0.0
+    # an explicit trip origin ("from NYC", "JFK to LHR") corroborates flight intent
+    # even when the wording is vague ("cheap trips from NYC")
+    if analysis is not None and top.get("id") == "travel_explore" and analysis.travel_origin:
+        kw = max(kw, 0.85)
     sem = max(0.0, min(1.0, (top["cosine"] - COSINE_FLOOR) / (COSINE_CEIL - COSINE_FLOOR)))
     gap = top["score"] - (runner_up["score"] if runner_up else 0.0)
     margin = max(0.0, min(1.0, gap / 0.25))
     return round(0.6 * kw + 0.25 * sem + 0.15 * margin, 4)
 
 
+# Priors: per-playbook score adjustments applied BEFORE the confidence floor.
+# LOCAL_DISCOVERY is the historical misroute magnet (the bug report's "Latest Recipe" match):
+# without an explicit venue/food marker it is penalized so generic prompts fall through to
+# GENERAL_SEARCH instead of guessing a restaurant route.
+def _prior(pid: str, strong_hits: int, analysis: PromptAnalysis) -> float:
+    if pid == "lifeops_local" and strong_hits == 0:
+        return -0.20
+    # an explicit trip origin ("from NYC", "JFK to LHR") is flight intent even when the
+    # wording is vague ("cheap weekend getaways from NYC") — boost past the confidence floor
+    if pid == "travel_explore" and analysis.travel_origin:
+        return 0.15
+    return 0.0
+
+
 async def classify(prompt: str, lens: str, forced: str | None = None) -> tuple[str, list[dict]]:
+    analysis = analyze_prompt(prompt)
     if forced and forced in PLAYBOOKS:
         return forced, [{"id": forced, "score": 1.0, "name": PLAYBOOKS[forced]["name"],
-                         "intent_category": intent_category(forced), "confidence": 1.0, "routed_by": "forced"}]
+                         "intent_category": intent_category(forced), "confidence": 1.0, "routed_by": "forced",
+                         "analysis": analysis.as_dict(), "llm_router": None}]
     qv = (await embedder.embed([prompt], task="RETRIEVAL_QUERY"))[0]
     vecs = await _pb_vectors()
     # Supabase pgvector similarity (match_playbooks RPC) when available, else in-process cosine
@@ -75,26 +108,48 @@ async def classify(prompt: str, lens: str, forced: str | None = None) -> tuple[s
     scores = []
     for pid, pb in PLAYBOOKS.items():
         cos = remote[pid] if remote and pid in remote else sum(a * b for a, b in zip(qv, vecs[pid]))
-        kw = sum(1 for k in pb["keywords"] if (k in words if " " not in k else k in pl))
+        strong = _kw_hits(pb.get("strong_keywords", []), words, pl)
+        weak = _kw_hits(pb.get("keywords", []), words, pl)
         lens_bias = 0.08 if pb["lens"] == lens else 0.0
-        scores.append({"id": pid, "name": pb["name"], "score": round(cos * 0.5 + min(kw, 5) * 0.16 + lens_bias, 4),
-                       "cosine": round(cos, 4), "keyword_hits": kw, "vector_backend": "pgvector" if remote else "local",
+        prior = _prior(pid, strong, analysis)
+        score = (cos * 0.5 + (0.55 if strong >= 1 else 0.0) + min(weak, 5) * 0.16 + lens_bias + prior)
+        scores.append({"id": pid, "name": pb["name"], "score": round(score, 4),
+                       "cosine": round(cos, 4), "keyword_hits": weak, "strong_hits": strong,
+                       "vector_backend": "pgvector" if remote else "local",
                        "intent_category": intent_category(pid)})
     # The GENERAL_SEARCH fallback is a route, not a competitor: it is excluded from the ranking
     # so it can never be mis-ranked above a real playbook.
     scores = [s for s in scores if s["id"] != GENERAL_FALLBACK] + [s for s in scores if s["id"] == GENERAL_FALLBACK]
     ranked = sorted([s for s in scores if s["id"] != GENERAL_FALLBACK], key=lambda x: -x["score"])
     top = ranked[0]
-    conf = _intent_confidence(top, ranked[1] if len(ranked) > 1 else None)
+    conf = _intent_confidence(top, ranked[1] if len(ranked) > 1 else None, analysis)
+
+    # Groq LLM router (validated): a high-confidence verdict overrides a weak classifier top,
+    # and agreement with the top boosts confidence. Offline / keyless -> None (no-op).
+    llm_verdict = await route_with_llm(prompt, lens, analysis)
+    if llm_verdict and llm_verdict["playbook_id"] != GENERAL_FALLBACK:
+        cand = next((s for s in ranked if s["id"] == llm_verdict["playbook_id"]), None)
+        if cand is not None:
+            if llm_verdict["confidence"] >= 0.70 and (cand is not top or conf < INTENT_CONFIDENCE_FLOOR):
+                top = cand
+                conf = max(conf, round(0.5 * conf + 0.5 * llm_verdict["confidence"], 4))
+                top["llm_boost"] = True
+            elif cand is top:
+                conf = min(1.0, round(conf + 0.10 * llm_verdict["confidence"], 4))
+
     for s in ranked:
         s["confidence"] = conf if s is top else round(_intent_confidence(s, None), 4)
+    for s in ranked:
+        s["analysis"] = analysis.as_dict()
+        s["llm_router"] = llm_verdict
     if conf < INTENT_CONFIDENCE_FLOOR:
         # low confidence -> GENERAL_SEARCH, never a guessed local-discovery route
         gen = next(s for s in scores if s["id"] == GENERAL_FALLBACK)
         gen.update({"score": 0.0, "confidence": conf, "routed_by": "confidence_floor",
-                    "reason": f"confidence {conf:.2f} < {INTENT_CONFIDENCE_FLOOR:.2f}; closest playbook was {top['id']}"})
+                    "reason": f"confidence {conf:.2f} < {INTENT_CONFIDENCE_FLOOR:.2f}; closest playbook was {top['id']}",
+                    "analysis": analysis.as_dict(), "llm_router": llm_verdict})
         return GENERAL_FALLBACK, [gen] + ranked
-    top["routed_by"] = "classifier"
+    top["routed_by"] = "llm_router" if top.get("llm_boost") else "classifier"
     return top["id"], ranked
 
 
@@ -163,7 +218,37 @@ def _seo_slots(p: str) -> dict[str, Any]:
     return out
 
 
-def _heuristic_slots(pid: str, prompt: str) -> dict[str, Any]:
+_TICKER_MAP = {**TICKER_MAP, "s&p": ".INX:INDEXSP"}
+_LEAD_STRIP = re.compile(r"(?i)^\s*(?:latest|newest|most\s+recent|recent|breaking|today'?s?|this\s+week'?s?)\s+")
+_MARKET_STRIP_FMT = r"\s*\b(?:in|for|from|across)\s+{m}\b\s*"
+
+
+def _topic_text(prompt: str, analysis: PromptAnalysis | None) -> str:
+    """Topic/query text for the vertical playbooks: the raw prompt minus the market span
+    ("trending songs in india" -> "trending songs") and leading recency adjectives."""
+    t = prompt.strip().rstrip(".?!")
+    if analysis and analysis.market_text:
+        t = re.sub(_MARKET_STRIP_FMT.format(m=re.escape(analysis.market_text)), " ", t, flags=re.I)
+    t = _LEAD_STRIP.sub("", t).strip()
+    t = re.sub(r"\s{2,}", " ", t).strip(" -,.?")
+    return t or prompt.strip()
+
+
+def _ticker_text(prompt: str, analysis: PromptAnalysis | None) -> str | None:
+    if analysis and analysis.entity_kind == "ticker" and analysis.entity:
+        ent = analysis.entity
+        return ent if ":" in ent else f"{ent}:NASDAQ"
+    pl = prompt.lower()
+    for name, sym in sorted(_TICKER_MAP.items(), key=lambda kv: -len(kv[0])):
+        if re.search(rf"\b{re.escape(name)}\b", pl):
+            return sym
+    m = re.search(r"\b([A-Z]{2,5})(?::(NASDAQ|NYSE|NSE|BSE|LSE))?\b", prompt)
+    if m and m.group(1) not in {"NEWS", "TODAY", "LATEST", "TRENDING"}:
+        return f"{m.group(1)}:{m.group(2) or 'NASDAQ'}"
+    return None
+
+
+def _heuristic_slots(pid: str, prompt: str, analysis: PromptAnalysis | None = None) -> dict[str, Any]:
     p = prompt.strip()
     pl = p.lower()
     slots: dict[str, Any] = {}
@@ -223,13 +308,31 @@ def _heuristic_slots(pid: str, prompt: str) -> dict[str, Any]:
     elif pid == "research_ip":
         topic = re.sub(r"(?i)^(prior art|research landscape|landscape|research|brief|papers|patents)\s*(for|on|about|of)?\s*", "", p)
         slots["topic"] = topic.strip(" .") or p
+    elif pid in ("news_trends", "media_video"):
+        t = _topic_text(p, analysis)
+        if t:
+            slots["topic"] = t
+        if analysis and analysis.market:
+            slots["market"] = analysis.market
+    elif pid == "finance_markets":
+        tick = _ticker_text(p, analysis)
+        if tick:
+            slots["ticker"] = tick
+        if analysis and analysis.market:
+            slots["market"] = analysis.market
+    elif pid in ("general_search", "media_images", "apps_store"):
+        t = _topic_text(p, analysis)
+        if t:
+            slots["query"] = t
+        if analysis and analysis.market:
+            slots["market"] = analysis.market
     return slots
 
 
-async def fill_slots(pid: str, prompt: str, session_id: str) -> dict[str, Any]:
+async def fill_slots(pid: str, prompt: str, session_id: str, analysis: PromptAnalysis | None = None) -> dict[str, Any]:
     pb = PLAYBOOKS[pid]
     slots = {k: v.get("default") for k, v in pb["slots"].items()}
-    slots.update({k: v for k, v in _heuristic_slots(pid, prompt).items() if v not in (None, "")})
+    slots.update({k: v for k, v in _heuristic_slots(pid, prompt, analysis).items() if v not in (None, "")})
     extracted = await llm.complete_json(
         "You extract structured slots for a decision engine. Reply ONLY with JSON containing exactly these keys "
         f"(use null if unknown): {list(pb['slots'].keys())}. Money as a plain number in USD. Cities as plain city names.",
@@ -255,11 +358,14 @@ async def _derive(pid: str, slots: dict[str, Any], session_id: str = "", meter: 
         d["outbound_date_flex"] = (out + timedelta(days=2)).isoformat()
         d["return_date_flex"] = (out + timedelta(days=days + 2)).isoformat()
         d["nights"] = days
-    if pid in ("news_trends", "media_video", "finance_markets", "general_search"):
+    if pid in ("news_trends", "media_video", "finance_markets", "general_search", "media_images", "apps_store"):
         # market-scoped vertical playbooks: country from the slot (default us), with the Trends geo code
+        # plus the Bing (mkt) and DuckDuckGo (kl) locale codes their news/video engines need
         mk = str(slots.get("market") or "us").lower()
         d["gl"], d["hl"] = mk, "en"
         d["geo"] = mk.upper()
+        d["kl"] = f"{'uk' if mk == 'gb' else mk}-en"
+        d["mkt"] = f"en-{mk.upper()}"
     if pid in ("lifeops_local", "research_seo"):
         gl = country_for(slots.get("city")) if pid == "lifeops_local" else str(slots.get("market") or "us").lower()
         d["gl"], d["hl"] = gl, "en"
@@ -290,15 +396,16 @@ def _render(params: dict[str, Any], vars_: dict[str, Any]) -> dict[str, Any]:
 # Optional engines only run when the prompt asks for them (trigger flags derived from the prompt),
 # and every playbook is capped so a single prompt can never fan out to the whole catalogue.
 MAX_CALLS_PER_PLAYBOOK = 4
-_TRIGGER_RE = {
-    "wants_trending": re.compile(r"\b(trend|trends|trending|viral|popular|buzz|momentum|interest)\b", re.I),
-    "wants_light": re.compile(r"\b(quick|fast|light|brief|summary|overview)\b", re.I),
-}
 
 
-def triggers_for(prompt: str) -> dict[str, bool]:
-    """Boolean intent flags read from the raw prompt (used by optional_engines[].when)."""
-    return {name: bool(rx.search(prompt or "")) for name, rx in _TRIGGER_RE.items()}
+def triggers_for(prompt: str, analysis: PromptAnalysis | None = None) -> dict[str, bool]:
+    """Boolean intent flags read from the raw prompt (used by optional_engines[].when).
+
+    Single source of truth is intent.PromptAnalysis, so the flags the UI shows in the routing
+    panel are exactly the flags the engine selection used."""
+    a = analysis or analyze_prompt(prompt or "")
+    return {"wants_trending": a.wants_trending, "wants_light": a.wants_light, "wants_broad": a.wants_broad,
+            "wants_shorts": a.wants_shorts, "wants_deals": a.wants_deals, "wants_images": a.wants_images}
 
 
 def call_cap(pid: str) -> int:
@@ -307,7 +414,18 @@ def call_cap(pid: str) -> int:
     return int(PLAYBOOKS[pid].get("max_calls", MAX_CALLS_PER_PLAYBOOK))
 
 
-def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0, triggers: dict[str, bool] | None = None) -> list[EngineCall]:
+# Engines whose results decay within hours: a recency-flagged prompt marks their calls fresh
+# (cache bypass + no_cache) even when the weaker recency wording ("recent", "this week") is used.
+FRESH_SENSITIVE_ENGINES = {
+    "google_news", "google_news_light", "bing_news", "duckduckgo_news", "youtube", "youtube_channel",
+    "google_videos", "google_short_videos", "bing_videos", "yahoo_videos",
+    "google_trends", "google_trends_trending_now", "google_finance", "google_finance_markets",
+    "google_flights", "google_flights_deals",
+}
+
+
+def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0, triggers: dict[str, bool] | None = None,
+                analysis: PromptAnalysis | None = None) -> list[EngineCall]:
     pb = PLAYBOOKS[pid]
     specs = pb["engines"] if fallback_round == 0 else pb.get("fallback_engines", [])
     if fallback_round > 1:  # second re-plan widens to all fallbacks + essentials again (fresh)
@@ -319,8 +437,38 @@ def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0, trigge
         extra = [sp for sp in pb["optional_engines"] if flags.get(sp.get("when", ""), False)]
         specs = specs + extra
     specs = specs[:call_cap(pid)] if fallback_round == 0 else specs
-    return [EngineCall(engine=sp["engine"], params=_render(sp["params"], vars_), purpose=sp.get("purpose", ""),
-                       category=sp.get("category", "generic"), essential=sp.get("essential", True)) for sp in specs]
+    a = analysis
+    out = []
+    for sp in specs:
+        # freshness: re-polls are always live; "latest/breaking/today" makes every call live;
+        # weaker recency wording only forces the freshness-sensitive engines live.
+        fresh = fallback_round > 0 or (bool(a and a.fresh_strong) if a else False) or \
+            (bool(a and a.recency) and sp["engine"] in FRESH_SENSITIVE_ENGINES if a else False)
+        out.append(EngineCall(engine=sp["engine"], params=_render(sp["params"], vars_), purpose=sp.get("purpose", ""),
+                              category=sp.get("category", "generic"), essential=sp.get("essential", True),
+                              fresh=fresh, follow=sp.get("follow")))
+    return out
+
+
+def apply_recency_weights(pid: str, weights: dict[str, float], analysis: PromptAnalysis | None) -> tuple[dict[str, float], dict | None]:
+    """Recency weight override (the "Top Hits 2026" fix): when the prompt demands freshness,
+    the freshness dimension is raised to 0.45 (strong: latest/breaking/today) or 0.35 (weak),
+    taking the delta proportionally from the other dimensions. Returns (weights, override|None)."""
+    if not analysis or not analysis.recency or "freshness" not in weights:
+        return weights, None
+    target = 0.45 if analysis.fresh_strong else 0.35
+    if weights["freshness"] >= target:
+        return weights, None
+    diff = target - weights["freshness"]
+    rest = {k: v for k, v in weights.items() if k != "freshness"}
+    tot = sum(rest.values()) or 1.0
+    new_w = {"freshness": target}
+    for k, v in rest.items():
+        new_w[k] = round(max(0.01, v - diff * v / tot), 4)
+    s = sum(new_w.values()) or 1.0
+    new_w = {k: round(v / s, 4) for k, v in new_w.items()}
+    return new_w, {"dimension": "freshness", "from": weights["freshness"], "to": new_w["freshness"],
+                   "reason": "recency override (fresh_strong)" if analysis.fresh_strong else "recency override"}
 
 
 async def plan(prompt: str, lens: str, session_id: str, forced: str | None = None,
@@ -329,24 +477,31 @@ async def plan(prompt: str, lens: str, session_id: str, forced: str | None = Non
     pid, scores = await classify(prompt, lens, forced)
     bus.publish(session_id, "orchestrator.intent", {"playbook_id": pid, "playbook": PLAYBOOKS[pid]["name"],
                                                      "scores": scores[:5]}, agent="orchestrator")
-    slots = await fill_slots(pid, prompt, session_id)
+    top = scores[0] or {}
+    analysis = PromptAnalysis(**(top.get("analysis") or {})) if top.get("analysis") else analyze_prompt(prompt)
+    slots = await fill_slots(pid, prompt, session_id, analysis)
     vars_ = await _derive(pid, slots, session_id, meter)
     pb = PLAYBOOKS[pid]
     weights = {k: v["weight"] for k, v in pb["dimensions"].items()}
+    weights, recency_override = apply_recency_weights(pid, weights, analysis)
     if priorities:
         for k, v in priorities.items():
             if k in weights:
                 weights[k] = max(0.0, float(v))
         tot = sum(weights.values()) or 1
         weights = {k: round(v / tot, 4) for k, v in weights.items()}
-    triggers = triggers_for(prompt)
-    calls = build_calls(pid, vars_, triggers=triggers)
+    triggers = triggers_for(prompt, analysis)
+    calls = build_calls(pid, vars_, triggers=triggers, analysis=analysis)
     skipped = [sp["engine"] for sp in pb.get("optional_engines", [])
                if not triggers.get(sp.get("when", ""), False)]
     bus.publish(session_id, "orchestrator.routing", {
         "intent_category": PLAYBOOKS[pid].get("intent_category", "GENERAL_SEARCH"), "playbook_id": pid,
-        "routed_by": (scores[0] or {}).get("routed_by"), "reason": (scores[0] or {}).get("reason"),
-        "triggers": triggers, "engines": [c.engine for c in calls], "skipped_optional": skipped,
+        "playbook": pb["name"], "routed_by": top.get("routed_by"), "reason": top.get("reason"),
+        "confidence": top.get("confidence"), "strong_hits": top.get("strong_hits"), "weak_hits": top.get("keyword_hits"),
+        "llm_router": top.get("llm_router"), "analysis": analysis.as_dict(),
+        "triggers": triggers, "engines": [c.engine for c in calls],
+        "fresh": [c.engine for c in calls if c.fresh], "skipped_optional": skipped,
+        "weight_override": recency_override, "weights": weights,
         "calls": len(calls), "max_calls": call_cap(pid)}, agent="orchestrator")
 
     nodes: list[DecisionNode] = []

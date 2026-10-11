@@ -1,0 +1,80 @@
+{
+  "search_metadata": {
+    "id": "697a1b2c3d4e5f6a7b8c9d00",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/youtube_channel_demo.json",
+    "created_at": "2026-10-11 12:00:00 UTC",
+    "processed_at": "2026-10-11 12:00:02 UTC",
+    "total_time_taken": 2.1
+  },
+  "search_parameters": {
+    "engine": "youtube_channel",
+    "channel_id": "MrBeast"
+  },
+  "channel_results": {
+    "title": "MrBeast",
+    "handle": "@MrBeast",
+    "link": "https://www.youtube.com/@MrBeast",
+    "verified": true,
+    "subscribers": 471000000,
+    "video_count": 900,
+    "description": "SUBSCRIBE FOR A COOKIE! New video every single Saturday at noon eastern time!"
+  },
+  "videos_results": [
+    {
+      "position_on_page": 1,
+      "title": "I Spent 50 Hours Buried Alive",
+      "link": "https://www.youtube.com/watch?v=SeIJmciN8mo",
+      "video_id": "SeIJmciN8mo",
+      "channel": {"name": "MrBeast", "verified": true},
+      "published_date": "2 days ago",
+      "views": 84200000,
+      "length": "18:42",
+      "thumbnail": "https://i.ytimg.com/vi/SeIJmciN8mo/hqdefault.jpg"
+    },
+    {
+      "position_on_page": 2,
+      "title": "$1 vs $1,000,000 Hotel Room!",
+      "link": "https://www.youtube.com/watch?v=HTjA7n2UHYQ",
+      "video_id": "HTjA7n2UHYQ",
+      "channel": {"name": "MrBeast", "verified": true},
+      "published_date": "1 week ago",
+      "views": 156000000,
+      "length": "14:05",
+      "thumbnail": "https://i.ytimg.com/vi/HTjA7n2UHYQ/hqdefault.jpg"
+    },
+    {
+      "position_on_page": 3,
+      "title": "Last To Leave $800,000 Island Keeps It",
+      "link": "https://www.youtube.com/watch?v=v7ayTKr8kug",
+      "video_id": "v7ayTKr8kug",
+      "channel": {"name": "MrBeast", "verified": true},
+      "published_date": "2 weeks ago",
+      "views": 98000000,
+      "length": "21:33",
+      "thumbnail": "https://i.ytimg.com/vi/v7ayTKr8kug/hqdefault.jpg"
+    },
+    {
+      "position_on_page": 4,
+      "title": "I Built A Real Life Squid Game",
+      "link": "https://www.youtube.com/watch?v=2ruQ8h0yeyo",
+      "video_id": "2ruQ8h0yeyo",
+      "channel": {"name": "MrBeast", "verified": true},
+      "published_date": "3 weeks ago",
+      "views": 210000000,
+      "length": "16:57",
+      "thumbnail": "https://i.ytimg.com/vi/2ruQ8h0yeyo/hqdefault.jpg"
+    },
+    {
+      "position_on_page": 5,
+      "title": "Giving Away A Private Jet",
+      "link": "https://www.youtube.com/watch?v=5r6V0j5eK2s",
+      "video_id": "5r6V0j5eK2s",
+      "channel": {"name": "MrBeast", "verified": true},
+      "published_date": "1 month ago",
+      "views": 74000000,
+      "length": "12:19",
+      "thumbnail": "https://i.ytimg.com/vi/5r6V0j5eK2s/hqdefault.jpg"
+    }
+  ]
+}

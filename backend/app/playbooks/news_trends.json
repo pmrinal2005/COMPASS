@@ -4,7 +4,7 @@
   "ecosystem": "B",
   "lens": "go",
   "intent_category": "NEWS_AND_TRENDS",
-  "description": "Brief the latest news and what is trending on a topic: live headlines from Google News, the wider web from Google Search, and search-interest momentum from Google Trends. Sources are corroborated across independent publishers.",
+  "description": "Brief the latest news and what is trending on a topic: live headlines from Google News, Bing News and the wider web, with search-interest momentum from Google Trends. Stories are corroborated across independent publishers.",
   "keywords": [
     "news",
     "headline",
@@ -55,7 +55,7 @@
     {
       "engine": "google_trends",
       "category": "trend",
-      "purpose": "Search-interest momentum over the last 7 days (always included for news briefs)",
+      "purpose": "Search-interest momentum over the last 7 days",
       "essential": false,
       "params": {
         "q": "{topic}",
@@ -75,13 +75,35 @@
         "gl": "{gl}",
         "hl": "en"
       }
+    },
+    {
+      "engine": "bing_news",
+      "category": "news",
+      "purpose": "Bing News headlines (second independent news index)",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "cc": "{gl}",
+        "mkt": "{mkt}"
+      }
     }
   ],
   "optional_engines": [
     {
+      "engine": "duckduckgo_news",
+      "category": "news",
+      "purpose": "DuckDuckGo News headlines (third index, broad compare)",
+      "when": "wants_broad",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "kl": "{kl}"
+      }
+    },
+    {
       "engine": "google_trends_trending_now",
       "category": "trend",
-      "purpose": "What is trending right now in the market (Google Trends Trending Now)",
+      "purpose": "What is trending right now in the market",
       "when": "wants_trending",
       "essential": false,
       "params": {
@@ -92,7 +114,7 @@
     {
       "engine": "google_news_light",
       "category": "news",
-      "purpose": "Lightweight headline sweep (cheap cross-check of Google News)",
+      "purpose": "Lightweight headline sweep (cheap cross-check)",
       "when": "wants_light",
       "essential": false,
       "params": {
@@ -114,13 +136,12 @@
       }
     },
     {
-      "engine": "google",
-      "category": "serp",
-      "purpose": "Re-plan: Bing-style fallback web sweep",
+      "engine": "duckduckgo_news",
+      "category": "news",
+      "purpose": "Re-plan: DuckDuckGo News as an independent index",
       "params": {
-        "q": "{topic} latest news",
-        "gl": "{gl}",
-        "hl": "en"
+        "q": "{topic}",
+        "kl": "{kl}"
       }
     }
   ],
@@ -150,5 +171,14 @@
     "document",
     "watch",
     "notify"
-  ]
+  ],
+  "strong_keywords": [
+    "news",
+    "headlines",
+    "headline",
+    "breaking",
+    "top stories",
+    "happening"
+  ],
+  "max_calls": 5
 }

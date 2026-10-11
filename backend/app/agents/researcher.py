@@ -96,8 +96,11 @@ async def fan_out(session_id: str, calls: list[EngineCall], meter: CreditMeter, 
 
     async def one(call: EngineCall) -> dict:
         try:
+            # per-call freshness: the Orchestrator flags recency-critical calls (EngineCall.fresh);
+            # session-level fresh (re-polls) still forces every call live.
+            live = fresh or call.fresh
             res = await serp.search(call.engine, call.params, session_id=session_id, call_id=call.id, sem=sem,
-                                    meter=meter, purpose=call.purpose, fresh=fresh)
+                                    meter=meter, purpose=call.purpose, fresh=live)
             cands, ctx = normalize(call.engine, res["data"], call.category, call.params)
             tok = ctx.pop("ai_overview_token", None)
             if tok and meter.remaining > 0:
@@ -117,11 +120,33 @@ async def fan_out(session_id: str, calls: list[EngineCall], meter: CreditMeter, 
                 except SerpApiError as e:       # optional enrichment: never fail the main call
                     bus.publish(session_id, "serp.error", {"call_id": call.id + "_aio", "engine": "google_ai_overview", "error": str(e),
                                                            "status": e.status, "essential": False}, agent="researcher")
+            chf = ctx.pop("channel_followup", None)
+            if chf and call.follow == "channel" and meter.remaining > 0:
+                # YouTube channel drill-down: a creator query ("latest Techno Gamerz videos") resolves
+                # channel_results[] -> one youtube_channel call pulls that channel's latest uploads.
+                try:
+                    cres = await serp.search("youtube_channel", {"channel_id": chf["channel_id"]}, session_id=session_id,
+                                             call_id=call.id + "_ch", sem=sem, meter=meter,
+                                             purpose=f"Channel uploads: {chf.get('title') or chf['channel_id']} (follow-up)", fresh=live)
+                    c_c, c_x = normalize("youtube_channel", cres["data"], "media", {"channel_id": chf["channel_id"]})
+                    for x in c_c:
+                        x.attributes["call_id"] = call.id + "_ch"
+                        x.attributes["via_followup"] = "youtube_channel"
+                    cands += c_c
+                    ctx.update(c_x)
+                    bus.publish(session_id, "serp.response", {"call_id": call.id + "_ch", "engine": "youtube_channel", "cached": cres["cached"],
+                                                              "ms": cres["ms"], "mode": cres["mode"], "transport": cres.get("transport"),
+                                                              "results": len(c_c), "status": "Success", "search_id": (cres["data"].get("search_metadata") or {}).get("id"),
+                                                              "raw": _brief(cres["data"]), "credits": meter.as_dict()}, agent="researcher")
+                except SerpApiError as e:       # optional enrichment: never fail the main call
+                    bus.publish(session_id, "serp.error", {"call_id": call.id + "_ch", "engine": "youtube_channel", "error": str(e),
+                                                           "status": e.status, "essential": False}, agent="researcher")
             for c in cands:
                 c.attributes["call_id"] = call.id
                 c.attributes["call_variant"] = call.params.get("sort_by", "default")
             bus.publish(session_id, "serp.response", {
                 "call_id": call.id, "engine": call.engine, "cached": res["cached"], "ms": res["ms"], "mode": res["mode"],
+                "fresh": live, "follow": call.follow,
                 "transport": res.get("transport"), "results": len(cands), "status": res["data"].get("search_metadata", {}).get("status", "Success"),
                 "search_id": res["data"].get("search_metadata", {}).get("id"), "raw": _brief(res["data"]),
                 "credits": meter.as_dict()}, agent="researcher")
@@ -350,8 +375,10 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
                 m.corroborating_sources = sorted(plats) if agree else [m.attributes.get("platform") or m.source]
                 m.attributes["platform_consensus"] = len(plats)
 
-    # ---- media: the SAME video must surface on >=2 independent engines (YouTube / Google Videos / Google Shorts).
+    # ---- media: the SAME video must surface on >=2 independent engines (YouTube / Google Videos / Google Shorts / Bing).
     #      Identity = the YouTube video id parsed from the link, else a near-identical title (token Jaccard >= 0.6).
+    #      After consensus is computed, exact duplicates (same video id seen twice, e.g. search + channel follow-up)
+    #      are collapsed so the decision matrix never ranks the same upload twice.
     media = [m for m in by_cat.get("media", []) if not m.attributes.get("duplicate")]
     if media:
         _vid = re.compile(r"(?:v=|youtu\.be/|/shorts/)([A-Za-z0-9_-]{6,})")
@@ -375,6 +402,67 @@ def corroborate(cands: list[Candidate], ctx: dict, min_sources: int = 2) -> dict
                     seen.add(o_.engine)
             m.corroborating_sources = sorted(seen)
             m.attributes["engine_consensus"] = len(seen)
+        seen_ids: set[str] = set()
+        for m in sorted(media, key=lambda x: -((x.attributes.get("views") or 0) or 0)):
+            k = _vkey(m)
+            if k and k in seen_ids:
+                m.attributes["duplicate"] = True
+            elif k:
+                seen_ids.add(k)
+
+    # ---- news: the SAME story covered by >=2 independent publishers is corroborated.
+    #      Identity = title token Jaccard >= 0.4 (headlines differ per outlet). Single-publisher
+    #      stories stay visible (news are observations, not decision facts) but carry their
+    #      publisher count so the Analyst's coverage dimension can rank corroborated stories first.
+    news = [n for n in by_cat.get("news", []) if not n.attributes.get("duplicate")]
+    if news:
+        for n in news:
+            pubs = {n.source} if n.source else set()
+            engs = {n.engine}
+            nt = _norm_title(n.title)
+            for o_ in news:
+                if o_ is n:
+                    continue
+                ot = _norm_title(o_.title)
+                if nt and ot and len(nt & ot) / len(nt | ot) >= 0.4:
+                    if o_.source:
+                        pubs.add(o_.source)
+                    engs.add(o_.engine)
+            n.corroborating_sources = sorted(pubs | engs)
+            n.attributes["publishers"] = len(pubs)
+            n.attributes["story_consensus"] = len(engs)
+
+    # ---- apps: the SAME app listed in BOTH stores (Google Play + App Store) is verified.
+    #      Identity = near-identical title (token Jaccard >= 0.6); bundle ids differ per store by design.
+    apps = [a for a in by_cat.get("app", []) if not a.attributes.get("duplicate")]
+    if apps:
+        for a in apps:
+            seen = {a.engine}
+            at = _norm_title(a.title)
+            for o_ in apps:
+                if o_ is a or o_.engine == a.engine:
+                    continue
+                ot = _norm_title(o_.title)
+                if at and ot and len(at & ot) / len(at | ot) >= 0.6:
+                    seen.add(o_.engine)
+            a.corroborating_sources = sorted(seen)
+            a.attributes["store_consensus"] = len(seen)
+
+    # ---- finance quotes: the quote is corroborated when independent signals agree —
+    #      market-index coverage and/or news headlines about the same instrument.
+    quotes = by_cat.get("quote", [])
+    if quotes:
+        has_markets = bool(by_cat.get("index"))
+        news_blob = " ".join(n.title.lower() for n in by_cat.get("news", []))
+        for q in quotes:
+            src = [q.engine]
+            if has_markets:
+                src.append("google_finance_markets")
+            sym = str(q.attributes.get("stock") or "").split(":")[0].lower()
+            name_bits = [w for w in _norm_title(q.title) if len(w) > 3]
+            if (sym and len(sym) >= 2 and sym in news_blob) or any(w in news_blob for w in name_bits[:3]):
+                src.append("google_news")
+            q.corroborating_sources = sorted(set(src))
 
     # ---- SERP: a domain is a *verified* ranking only when >=2 independent engines list it (AI citations count too)
     serp_rows = by_cat.get("serp", []) + by_cat.get("ai_citation", [])
