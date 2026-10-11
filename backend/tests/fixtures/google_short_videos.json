@@ -1,0 +1,156 @@
+{
+ "search_metadata": {
+  "id": "695927778c24bd247f1be7de",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/0173cf3b41d253c1/695927778c24bd247f1be7de.json",
+  "created_at": "2026-01-03 14:28:07 UTC",
+  "processed_at": "2026-01-03 14:28:07 UTC",
+  "google_short_videos_url": "https://www.google.com/search?q=iPhone&hl=en&gl=us&udm=39",
+  "raw_html_file": "https://serpapi.com/searches/0173cf3b41d253c1/695927778c24bd247f1be7de.html",
+  "total_time_taken": 0.95
+ },
+ "search_parameters": {
+  "engine": "google_short_videos",
+  "q": "iPhone",
+  "google_domain": "google.com",
+  "hl": "en",
+  "gl": "us",
+  "device": "desktop"
+ },
+ "search_information": {
+  "short_video_results_state": "Results for exact spelling"
+ },
+ "short_video_results": [
+  {
+   "position": 1,
+   "title": "The iPhone AIR",
+   "link": "https://www.youtube.com/shorts/_yOTYsFlRQY",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4018330d4110616a0a1232a555732deeb.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQybU8Hwbh31hBlQr0jQV9LWnpTcx7WulpVMQ",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c49ba24f935640270410f09d703e75d3206c72db027e13894b.png",
+   "channel": "Marques Brownlee",
+   "duration": "0:53"
+  },
+  {
+   "position": 2,
+   "title": "iPhone 17 24 Hours Later - AMAZING!!",
+   "link": "https://www.youtube.com/shorts/ROuxiR9RVGc",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c44f54bb8552e85305f84c1fb2d134bfe2.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRRb_75BRuPKZFlFhw26EpWXA2S036lfBqVQQ",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4bba35e00682c307f70d46c7a9e003d1e1893de66299c9848.png",
+   "channel": "JSL Review",
+   "duration": "0:57"
+  },
+  {
+   "position": 3,
+   "title": "Good phone to own. Different question if you’re buying ...",
+   "link": "https://www.tiktok.com/@hitomidocameraroll/video/7590444953780751630",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4e5a30b4b4adb174904c62e9d47b01be3.jpeg",
+   "source": "TikTok",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c449e2c83f67e3324f5c8a51a4c1d3de74653ceebac96e1b61.png",
+   "channel": "hitomidocameraroll",
+   "duration": "1:03"
+  },
+  {
+   "position": 4,
+   "title": "I tested the Apple iPhone 17 for a week. | CNN Underscored : r ...",
+   "link": "https://www.reddit.com/r/apple/comments/1ns3oxe/i_tested_the_apple_iphone_17_for_a_week_cnn/",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4fe61c72ddb4316fd1d04d389b5d49157.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQm1XNAw-HuQ1JNhhjzztbX74CJ54DBEfEI6w",
+   "source": "Reddit",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4cf111da1c1066d0a58fc96c8b90cbe8077b7a9c0ecde8ec1.png",
+   "channel": "CNN",
+   "duration": "2:28"
+  },
+  {
+   "position": 5,
+   "title": "iPhone 17 Series Simplified Buyers Guide | Which iPhone ...",
+   "link": "https://www.youtube.com/shorts/kUVpnB42j_s",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4f608865ff11c62af00ca637e027866c6.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcT15aJ4vRF0RbiEPv5Uy2TxF3Em-esh_168_A",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4a72ac36423de2cdd141dde7ad94ef2b9372f3e3187f793a9.png",
+   "channel": "Andrew Clare",
+   "duration": "1:48"
+  },
+  {
+   "position": 6,
+   "title": "iPhone 17 Pro",
+   "link": "https://www.instagram.com/reel/DS-Bd-fk1u3/",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4dacaa9c74b255ce175df9ee513040181.jpeg",
+   "source": "Instagram",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4f45d5ba88142f47f2c3d4c40b69920029150b4b6c1767604.png",
+   "channel": "Surbhi Aaditva",
+   "duration": "0:27"
+  },
+  {
+   "position": 7,
+   "title": "Here’s what you get with the new iPhone 16 series! | MKBHD",
+   "link": "https://www.facebook.com/MKBHD/videos/iphone-16-and-16-pro-unboxing-worth-the-upgrade/837907455607894/",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c40225f1363af4a7bb6e5b8b9a585e1858.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQ489yfwmkHwLpMj4aHheLsNXPVIDwL72ZoLw",
+   "source": "Here&#39;s what you get with the new iPhone 16 series! | MKBHD ...",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c410c62cd57165edd5fa3541570cb850d85337bfd54881a63a.png",
+   "channel": "MKBHD",
+   "duration": "2:13"
+  },
+  {
+   "position": 8,
+   "title": "This iPhone 18 design makes so much sense #apple #iphone18",
+   "link": "https://www.tiktok.com/@gregsgadgets/video/7590914522412633374",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4bc734781074091ffbb35a96c0ce22fbb.jpeg",
+   "source": "TikTok",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4233ace86dd2a0f533a998c9c78f19080f02aa8a676b5a82a.png",
+   "channel": "gregsgadgets",
+   "duration": "1:26"
+  },
+  {
+   "position": 9,
+   "title": "iPhone 18 Pro Max Battery Upgrade Confirmed! #apple ...",
+   "link": "https://www.youtube.com/shorts/WDAr4LvfzcY",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4ad7fceab67accfd98277a49183a93662.jpeg",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c43d81c7cabfb150aa79a66c239eabe9024655e894660608dc.png",
+   "channel": "Matt Talks Tech",
+   "duration": "1:31"
+  },
+  {
+   "position": 10,
+   "title": "Why I'm Switching to iPhone Air!!",
+   "link": "https://www.youtube.com/shorts/6g_j2ldy9ws",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c41be696d19ac74cf43e2271d3405ba9ba.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTww5QaJxgIrFBOOkhJQvxUMC27uoUPNtDfJA",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c48583449968e58429008788fa1b7bd74e088448f5efba9837.png",
+   "channel": "JSL Review",
+   "duration": "0:59"
+  },
+  {
+   "position": 11,
+   "title": "iPhones NEW CRAZY customization feature!",
+   "link": "https://www.youtube.com/shorts/suX6DGJkOAk",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4f6c608c6161d985f6a6ea307acbfdfbc63a065eff5454320.jpeg",
+   "clip": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSghY7CyHlnPuogdv0d5jb7AlLZK2D3fsPS9g",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c493dfd1045314318b5cb82a16b3d4936de6088f49ead952a5.png",
+   "channel": "Hayls World",
+   "duration": "0:54"
+  },
+  {
+   "position": 12,
+   "title": "iPhone evolution 2010 - 2025 #iphone #iphones #iphone17 ...",
+   "link": "https://www.youtube.com/shorts/tEyDSrA3mTs",
+   "thumbnail": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c4ebc038c8a8d3b4cc96e6a77b6b033d8fac72c98f3047f210.jpeg",
+   "source": "YouTube",
+   "source_icon": "https://serpapi.com/searches/695927778c24bd247f1be7de/images/ec6e61c0d301a8ab4cafef4e396961c44bdb43398a7ba35e1f8dd2351fb04a470167f60b50345c5d.png",
+   "channel": "TechLunar",
+   "duration": "1:16"
+  }
+ ],
+ "serpapi_pagination": {
+  "current": 1,
+  "next": "https://serpapi.com/search.json?device=desktop&engine=google_short_videos&gl=us&google_domain=google.com&hl=en&q=iPhone&start=12"
+ }
+}

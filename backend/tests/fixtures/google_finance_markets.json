@@ -1,0 +1,523 @@
+{
+ "search_metadata": {
+  "id": "6a1d41a0a3f4831324afa99f",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/6bWMmtBE5PzwEU7aWd1IUg/6a1d41a0a3f4831324afa99f.json",
+  "created_at": "2026-06-01 08:24:00 UTC",
+  "processed_at": "2026-06-01 08:24:00 UTC",
+  "google_finance_markets_url": "https://www.google.com/finance/markets/indexes?hl=en",
+  "raw_html_file": "https://serpapi.com/searches/6bWMmtBE5PzwEU7aWd1IUg/6a1d41a0a3f4831324afa99f.html",
+  "total_time_taken": 0.84
+ },
+ "search_parameters": {
+  "engine": "google_finance_markets",
+  "trend": "indexes",
+  "hl": "en"
+ },
+ "markets": {
+  "us": [
+   {
+    "stock": ".DJI:INDEXDJX",
+    "link": "https://www.google.com/finance/quote/.DJI:INDEXDJX",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=.DJI%3AINDEXDJX",
+    "name": "Dow Jones",
+    "price": 51032.46,
+    "price_movement": {
+     "percentage": 0.7173862,
+     "value": 363.4922,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": ".INX:INDEXSP",
+    "link": "https://www.google.com/finance/quote/.INX:INDEXSP",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=.INX%3AINDEXSP",
+    "name": "S&P 500",
+    "price": 7580.06,
+    "price_movement": {
+     "percentage": 0.21722607,
+     "value": 16.430176,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": ".IXIC:INDEXNASDAQ",
+    "link": "https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=.IXIC%3AINDEXNASDAQ",
+    "name": "Nasdaq",
+    "price": 26972.62,
+    "price_movement": {
+     "percentage": 0.20487972,
+     "value": 55.148438,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "RUT:INDEXRUSSELL",
+    "link": "https://www.google.com/finance/quote/RUT:INDEXRUSSELL",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=RUT%3AINDEXRUSSELL",
+    "name": "Russell",
+    "price": 2919.3384,
+    "price_movement": {
+     "percentage": 0.5867882,
+     "value": 17.231445,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "VIX:INDEXCBOE",
+    "link": "https://www.google.com/finance/quote/VIX:INDEXCBOE",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=VIX%3AINDEXCBOE",
+    "name": "VIX",
+    "price": 15.93,
+    "price_movement": {
+     "percentage": 1.207119,
+     "value": 0.19000053,
+     "movement": "Up"
+    }
+   }
+  ],
+  "europe": [
+   {
+    "stock": "DAX:INDEXDB",
+    "link": "https://www.google.com/finance/quote/DAX:INDEXDB",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=DAX%3AINDEXDB",
+    "name": "DAX",
+    "price": 25165.12,
+    "price_movement": {
+     "percentage": 0.24067177,
+     "value": 60.41992,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "UKX:INDEXFTSE",
+    "link": "https://www.google.com/finance/quote/UKX:INDEXFTSE",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=UKX%3AINDEXFTSE",
+    "name": "FTSE 100",
+    "price": 10380.68,
+    "price_movement": {
+     "percentage": 0.27476045,
+     "value": 28.600586,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "PX1:INDEXEURO",
+    "link": "https://www.google.com/finance/quote/PX1:INDEXEURO",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=PX1%3AINDEXEURO",
+    "name": "CAC 40",
+    "price": 8187.18,
+    "price_movement": {
+     "percentage": 0.046928663,
+     "value": 3.840332,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "I:INDEXBME",
+    "link": "https://www.google.com/finance/quote/I:INDEXBME",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=I%3AINDEXBME",
+    "name": "IBEX 35",
+    "price": 18352.1,
+    "price_movement": {
+     "percentage": 0.058818493,
+     "value": 10.800781,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "SX5E:INDEXSTOXX",
+    "link": "https://www.google.com/finance/quote/SX5E:INDEXSTOXX",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=SX5E%3AINDEXSTOXX",
+    "name": "STOXX 50",
+    "price": 6058.01,
+    "price_movement": {
+     "percentage": 0.12345553,
+     "value": 7.4697266,
+     "movement": "Up"
+    }
+   }
+  ],
+  "asia": [
+   {
+    "stock": "NI225:INDEXNIKKEI",
+    "link": "https://www.google.com/finance/quote/NI225:INDEXNIKKEI",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=NI225%3AINDEXNIKKEI",
+    "name": "Nikkei 225",
+    "price": 66934.33,
+    "price_movement": {
+     "percentage": 0.9118539,
+     "value": 604.8281,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "000001:SHA",
+    "link": "https://www.google.com/finance/quote/000001:SHA",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=000001%3ASHA",
+    "name": "SSE",
+    "price": 4057.74,
+    "price_movement": {
+     "percentage": 0.26616487,
+     "value": 10.829102,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "HSI:INDEXHANGSENG",
+    "link": "https://www.google.com/finance/quote/HSI:INDEXHANGSENG",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=HSI%3AINDEXHANGSENG",
+    "name": "HSI",
+    "price": 25398.18,
+    "price_movement": {
+     "percentage": 0.85690457,
+     "value": 215.78906,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "SENSEX:INDEXBOM",
+    "link": "https://www.google.com/finance/quote/SENSEX:INDEXBOM",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=SENSEX%3AINDEXBOM",
+    "name": "SENSEX",
+    "price": 74502.66,
+    "price_movement": {
+     "percentage": 0.3652066,
+     "value": 273.08594,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "NIFTY_50:INDEXNSE",
+    "link": "https://www.google.com/finance/quote/NIFTY_50:INDEXNSE",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=NIFTY_50%3AINDEXNSE",
+    "name": "NIFTY 50",
+    "price": 23452.1,
+    "price_movement": {
+     "percentage": 0.40619758,
+     "value": 95.65039,
+     "movement": "Down"
+    }
+   }
+  ],
+  "currencies": [
+   {
+    "stock": "EUR-USD",
+    "link": "https://www.google.com/finance/quote/EUR-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=EUR-USD",
+    "name": "EUR / USD",
+    "price": 1.16570496,
+    "price_movement": {
+     "percentage": 0.06523569,
+     "value": 0.00075996,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "USD-JPY",
+    "link": "https://www.google.com/finance/quote/USD-JPY",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=USD-JPY",
+    "name": "USD / JPY",
+    "price": 159.455504,
+    "price_movement": {
+     "percentage": 0.06149945,
+     "value": 0.098004,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "GBP-USD",
+    "link": "https://www.google.com/finance/quote/GBP-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=GBP-USD",
+    "name": "GBP / USD",
+    "price": 1.34671973,
+    "price_movement": {
+     "percentage": 0.1044164,
+     "value": 0.00140473,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "USD-CAD",
+    "link": "https://www.google.com/finance/quote/USD-CAD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=USD-CAD",
+    "name": "USD / CAD",
+    "price": 1.381805,
+    "price_movement": {
+     "percentage": 0.1616439,
+     "value": 0.00223,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "AUD-USD",
+    "link": "https://www.google.com/finance/quote/AUD-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=AUD-USD",
+    "name": "AUD / USD",
+    "price": 0.71816,
+    "price_movement": {
+     "percentage": 0.0,
+     "value": 0.0
+    }
+   }
+  ],
+  "crypto": [
+   {
+    "stock": "BTC-USD",
+    "link": "https://www.google.com/finance/quote/BTC-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=BTC-USD",
+    "name": "Bitcoin",
+    "price": 72784.42,
+    "price_movement": {
+     "percentage": 1.081524,
+     "value": 795.7878,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "ETH-USD",
+    "link": "https://www.google.com/finance/quote/ETH-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=ETH-USD",
+    "name": "Ethereum",
+    "price": 1975.7554,
+    "price_movement": {
+     "percentage": 1.410685,
+     "value": 28.2705,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "SOL-USD",
+    "link": "https://www.google.com/finance/quote/SOL-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=SOL-USD",
+    "name": "Solana",
+    "price": 80.6648,
+    "price_movement": {
+     "percentage": 1.984614,
+     "value": 1.6333,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "XRP-USD",
+    "link": "https://www.google.com/finance/quote/XRP-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=XRP-USD",
+    "name": "XRP",
+    "price": 1.3034,
+    "price_movement": {
+     "percentage": 2.095695,
+     "value": 0.0279,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "DOGE-USD",
+    "link": "https://www.google.com/finance/quote/DOGE-USD",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=DOGE-USD",
+    "name": "Dogecoin",
+    "price": 0.099281541,
+    "price_movement": {
+     "percentage": 1.150415,
+     "value": 0.0011554426,
+     "movement": "Down"
+    }
+   }
+  ],
+  "futures": [
+   {
+    "stock": "YMW00:CBOT",
+    "link": "https://www.google.com/finance/quote/YMW00:CBOT",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=YMW00%3ACBOT",
+    "name": "Dow Futures",
+    "price": 51154.0,
+    "currency": "USD",
+    "price_movement": {
+     "percentage": 0.15075278,
+     "value": 77.0,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "ESW00:CME_EMINIS",
+    "link": "https://www.google.com/finance/quote/ESW00:CME_EMINIS",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=ESW00%3ACME_EMINIS",
+    "name": "S&P Futures",
+    "price": 7610.0,
+    "currency": "USD",
+    "price_movement": {
+     "percentage": 0.19418754,
+     "value": 14.25,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "NQW00:CME_EMINIS",
+    "link": "https://www.google.com/finance/quote/NQW00:CME_EMINIS",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=NQW00%3ACME_EMINIS",
+    "name": "Nasdaq Futures",
+    "price": 30481.0,
+    "currency": "USD",
+    "price_movement": {
+     "percentage": 0.2491346,
+     "value": 75.75,
+     "movement": "Up"
+    }
+   },
+   {
+    "stock": "GCW00:COMEX",
+    "link": "https://www.google.com/finance/quote/GCW00:COMEX",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=GCW00%3ACOMEX",
+    "name": "Gold",
+    "price": 4528.5,
+    "currency": "USD",
+    "price_movement": {
+     "percentage": 1.404311,
+     "value": 64.5,
+     "movement": "Down"
+    }
+   },
+   {
+    "stock": "CLW00:NYMEX",
+    "link": "https://www.google.com/finance/quote/CLW00:NYMEX",
+    "serpapi_link": "https://serpapi.com/search.json?engine=google_finance&hl=en&q=CLW00%3ANYMEX",
+    "name": "Crude Oil",
+    "price": 90.58999633789062,
+    "currency": "USD",
+    "price_movement": {
+     "percentage": 3.6973393,
+     "value": 3.2299957,
+     "movement": "Up"
+    }
+   }
+  ]
+ },
+ "news_results": [
+  {
+   "snippet": "G-Dragon Effect? \"Capital of 1 million won → Corporate Valuation of 1 Trillion\": Galaxy CEO Interview at New York Stock Exchange",
+   "link": "https://www.starnewskorea.com/en/star/2026/06/01/2026060116455452063",
+   "source": "스타뉴스",
+   "date": "20 minutes ago",
+   "thumbnail": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.starnewskorea.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Analysts at UBS just set a jaw-dropping price target for Nasdaq stock Micron",
+   "link": "https://www.twelfthmagpie.com/2026/06/01/analysts-at-ubs-just-set-a-jaw-dropping-price-target-for-nasdaq-stock-micron/",
+   "source": "Motley Fool UK",
+   "date": "46 minutes ago",
+   "thumbnail": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.twelfthmagpie.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Market concentration is creating 'fragility': Only 60% of S&P 500 stocks are above their 200-day average",
+   "link": "https://finance.yahoo.com/markets/article/market-concentration-is-creating-fragility-only-60-of-sp-500-stocks-are-above-their-200-day-average-135336513.html",
+   "source": "Yahoo Finance",
+   "date": "17 hours ago",
+   "thumbnail": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://finance.yahoo.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "It’s not just tech stocks: The broad-based strength of the market right now gives investors reason to stay the course",
+   "link": "https://www.marketwatch.com/story/its-not-just-tech-stocks-the-broad-based-strength-of-the-market-right-now-gives-investors-reason-to-stay-the-course-4ef65de3",
+   "source": "MarketWatch",
+   "date": "16 hours ago",
+   "thumbnail": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.marketwatch.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "BofA doubles down on cautious S&P 500 view for rest of 2026",
+   "link": "https://www.thestreet.com/investing/stocks/bofa-doubles-down-on-cautious-sp-500-view-for-rest-of-2026-fund",
+   "source": "TheStreet",
+   "date": "7 hours ago",
+   "thumbnail": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.thestreet.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "SPYM: S&P 500 Dashboard For June",
+   "link": "https://seekingalpha.com/article/4910520-spym-s-and-p-500-dashboard-for-june",
+   "source": "Seeking Alpha",
+   "date": "1 hour ago",
+   "thumbnail": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://seekingalpha.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Assessing News Corp (NWSA) Valuation As Media And Data Businesses Draw Fresh Investor Attention",
+   "link": "https://simplywall.st/stocks/us/media/nasdaq-nwsa/news/news/assessing-news-corp-nwsa-valuation-as-media-and-data-busines",
+   "source": "Simply Wall Street",
+   "date": "3 hours ago",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://simplywall.st&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Nasdaq, Inc. $NDAQ Shares Acquired by BNP Paribas Financial Markets",
+   "link": "https://www.marketbeat.com/instant-alerts/filing-nasdaq-inc-ndaq-shares-acquired-by-bnp-paribas-financial-markets-2026-06-01/",
+   "source": "MarketBeat",
+   "date": "1 hour ago",
+   "thumbnail": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.marketbeat.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Nasdaq, S&P 500, Dow Futures Edge Higher Even As Trump Keeps Iran Deal In Limbo: BBAI, SPCE, SOFI, IBM In Focus",
+   "link": "https://stocktwits.com/news-articles/markets/equity/nasdaq-sp500-dow-futures-edge-higher-even-as-trump-keeps-iran-deal-in-limbo/cZ0gadJReu0",
+   "source": "Stocktwits",
+   "date": "8 hours ago",
+   "thumbnail": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://stocktwits.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "US stocks gain ground, adding to their records, as Dell soars",
+   "link": "https://apnews.com/article/stocks-markets-oil-iran-trump-hormuz-68f9166e428621a5b3349d2d2aea34b5",
+   "source": "AP News",
+   "date": "2 days ago",
+   "thumbnail": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://apnews.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "S&P 500 Powers Historic Weekly Run on US-Iran Bets: Markets Wrap",
+   "link": "https://www.bloomberg.com/news/articles/2026-05-28/asian-stocks-to-rise-on-firming-us-iran-sentiment-markets-wrap",
+   "source": "Bloomberg.com",
+   "date": "3 days ago",
+   "thumbnail": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.bloomberg.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Trump’s Bull Market is Over? Not a Chance! JPM Says S&P Can Rally 22% From Here",
+   "link": "https://247wallst.com/investing/2026/05/27/trumps-bull-market-is-over-not-a-chance-jpm-says-sp-can-rally-22-from-here/",
+   "source": "24/7 Wall St.",
+   "date": "4 days ago",
+   "thumbnail": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://247wallst.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "New York Stock Exchange to open private members’ club on Wall Street",
+   "link": "https://www.ft.com/content/d8e49edb-feb9-4bfb-9f91-f10169c0961d?syn-25a6b1a6=1",
+   "source": "Financial Times",
+   "date": "3 weeks ago",
+   "thumbnail": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.ft.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Hoth Therapeutics Becomes Rocket One Inc. (Nasdaq: RKTO), Targeting the Space Economy with Next-Generation Nanomagnetic AI Chip Technology and Ultra-Low-Power, Radiation-Tolerant Computing for Space and Defense Applications",
+   "link": "https://www.prnewswire.com/news-releases/hoth-therapeutics-becomes-rocket-one-inc-nasdaq-rkto-targeting-the-space-economy-with-next-generation-nanomagnetic-ai-chip-technology-and-ultra-low-power-radiation-tolerant-computing-for-space-and-defense-applications-302782323.html",
+   "source": "PR Newswire",
+   "date": "4 days ago",
+   "thumbnail": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.prnewswire.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "How People Actually Get to the C-Suite in S&P 500 Companies",
+   "link": "https://hbr.org/2026/05/how-people-actually-get-to-the-c-suite-in-sp-500-companies",
+   "source": "Harvard Business Review",
+   "date": "1 week ago",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://hbr.org&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "“Mag 7” and Other 493 S&P 500 Companies Are Reporting Highest Earnings Growth Since 2021",
+   "link": "https://insight.factset.com/mag-7-and-other-493-sp-500-companies-are-reporting-highest-earnings-growth-since-2021",
+   "source": "FactSet Insight",
+   "date": "1 week ago",
+   "thumbnail": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://insight.factset.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Exclusive: SpaceX accelerates IPO timeline, targets June 12 listing on Nasdaq, sources say",
+   "link": "https://www.reuters.com/world/spacex-accelerates-ipo-timeline-targets-june-11-pricing-nasdaq-2026-05-15/",
+   "source": "Reuters",
+   "date": "2 weeks ago",
+   "thumbnail": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.reuters.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  },
+  {
+   "snippet": "Should You Buy the Dip on Gold as the S&P 500 and Nasdaq Hit All-Time Highs?",
+   "link": "https://www.fool.com/investing/2026/05/28/buy-dip-gold-stock-market-all-time-highs/",
+   "source": "The Motley Fool",
+   "date": "3 days ago",
+   "thumbnail": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.fool.com&client=FINANCE_HUB&size=32&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+  }
+ ]
+}

@@ -1,0 +1,613 @@
+{
+ "search_metadata": {
+  "id": "695926838c24bd247f1be7ad",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/0530116f3aa877e0/695926838c24bd247f1be7ad.json",
+  "created_at": "2026-01-03 14:24:03 UTC",
+  "processed_at": "2026-01-03 14:24:03 UTC",
+  "duckduckgo_news_url": "https://duckduckgo.com/?q=Coffee&kl=us-en&iar=news&ia=news",
+  "raw_html_file": "https://serpapi.com/searches/0530116f3aa877e0/695926838c24bd247f1be7ad.html",
+  "prettify_html_file": "https://serpapi.com/searches/0530116f3aa877e0/695926838c24bd247f1be7ad.prettify",
+  "total_time_taken": 0.92
+ },
+ "search_parameters": {
+  "engine": "duckduckgo_news",
+  "q": "Coffee",
+  "kl": "us-en"
+ },
+ "search_information": {
+  "news_results_state": "Results for exact spelling"
+ },
+ "news_results": [
+  {
+   "position": 1,
+   "title": "These three discoveries change how we understand coffee and the heart",
+   "link": "https://newatlas.com/diet-nutrition/three-huge-discoveries-coffee/",
+   "snippet": "Coffee is one of the most widely consumed psychoactive substances on the planet, yet despite more than two billion cups being drunk each day, its impact on heart health remains surprisingly complex - and often misunderstood.",
+   "source": "New Atlas",
+   "date": "14 hours ago",
+   "thumbnail": "https://assets.newatlas.com/dims4/default/8d4a89d/2147483647/strip/true/crop/2600x1365+0+184/resize/1200x630!/quality/90/?url=https%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Fb0%2Fbb%2F2d30bd6848d796f03cfb0ac5700f%2Fjonas-jacobsson-rfhfv7lvqby-unsplash.jpg&na.image_optimisation=0"
+  },
+  {
+   "position": 2,
+   "title": "Longevity: Here's how coffee may benefit healthy aging",
+   "link": "https://www.medicalnewstoday.com/articles/roundup-coffee-and-longevity-3-studies-explore-how-coffee-may-benefit-healthy-aging",
+   "snippet": "Coffee may boost longevity and lower diabetes risk according to the latest research. Here is what the evidence tells us.",
+   "source": "Medical News Today",
+   "date": "2 days ago",
+   "thumbnail": "https://media.post.rvohealth.io/wp-content/uploads/sites/3/2026/01/empty-coffee-mugs-1200-628-facebook.jpg"
+  },
+  {
+   "position": 3,
+   "title": "4 Reasons 'Coffee Badging' Is Making A Comeback In 2026",
+   "link": "https://www.forbes.com/sites/bryanrobinson/2026/01/03/4-reasons-coffee-badging-is-making-a-comeback-in-2026/",
+   "snippet": "Learn the reasons office \"coffee badging\" is making a comeback as we head into 2026 and what the future holds for this controversial trend.",
+   "source": "Forbes",
+   "date": "4 hours ago",
+   "thumbnail": "https://imageio.forbes.com/specials-images/imageserve/694870d887061c096aed6298/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds"
+  },
+  {
+   "position": 4,
+   "title": "This Is the Best Time of Day to Drink Coffee to Boost Longevity, Scientists Find",
+   "link": "https://www.msn.com/en-us/health/other/this-is-the-best-time-of-day-to-drink-coffee-according-to-scientists/ar-AA1TapMJ",
+   "snippet": "There is a strong link between the time of day that people drink coffee and their longevity, according to one study. Researchers found that morning coffee drinkers had a lower all-cause mortality risk and a lower risk of heart disease compared to people who drank coffee all day or didn't drink it at all.",
+   "source": "Prevention",
+   "date": "6 days ago",
+   "thumbnail": "https://hips.hearstapps.com/hmg-prod/images/contemplative-mature-woman-looking-through-the-royalty-free-image-1766869237.pjpeg?crop=1.00xw:0.751xh;0,0.163xh&resize=1200:*"
+  },
+  {
+   "position": 5,
+   "title": "Coffee lovers with tiny kitchens are rushing to get Keurig's new compact coffee maker while it's on sale",
+   "link": "https://www.masslive.com/shopping-deals/2025/12/coffee-lovers-with-tiny-kitchens-are-rushing-to-get-keurigs-new-compact-coffee-maker-while-its-on-sale.html",
+   "snippet": "Keurig has introduced the K-Mini Mate Coffee Maker, marking the company's most compact single-serve brewer to date. At just 4 inches wide, the new machine aims to solve space constraints for coffee drinkers in small kitchens, dorm rooms, and offices.",
+   "source": "MassLive",
+   "date": "3 days ago",
+   "thumbnail": "https://www.masslive.com/resizer/v2/ZIXHMOGBGRBSFEOC3VSNLEE6IA.png?auth=4d628fd6570f12755f7645ed933348d7481fe473956431e9074b670ab07016ad&width=1280&smart=true&quality=90"
+  },
+  {
+   "position": 6,
+   "title": "Montgomery veteran launches coffee brand to pay homage to his neighborhood",
+   "link": "https://www.msn.com/en-us/money/other/montgomery-veteran-launches-coffee-brand-to-pay-homage-to-his-neighborhood/ar-AA1T8zGh",
+   "snippet": "A Montgomery-born veteran and former firefighter has launched Southlawn Coffee Company, an online specialty-coffee start-up that aims to honor the West Montgomery neighborhood where he grew up and support local programs.",
+   "source": "WSFA 12 News",
+   "date": "6 days ago",
+   "thumbnail": "https://gray-wsfa-prod.gtv-cdn.com/resizer/v2/L7KYWECNY5GP7H2LXDZNBKBGXY.bmp?auth=6ebdbc25ce12613e181719e310f1337e2cce99cb57249131727b69ef3bbccced&width=1200&height=600&smart=true"
+  },
+  {
+   "position": 7,
+   "title": "Is It Ever OK To Reheat Coffee? A Coffee Expert Weighs In",
+   "link": "https://www.msn.com/en-us/foodanddrink/foodnews/is-it-ever-ok-to-reheat-coffee-a-coffee-expert-weighs-in/ar-AA1TtcbF",
+   "snippet": "\"Heating in the microwave has one benefit: It is fast. Heating your coffee causes all the good tasting and smelling compounds in the brew to escape faster. If you heat over a long period of time on the stove, you'll lose more of that good stuff. So if you must reheat, the microwave is probably the better option,\" says Ludwig.",
+   "source": "Southern Living",
+   "date": "16 hours ago",
+   "thumbnail": "https://s.yimg.com/ny/api/res/1.2/plDBeo9e5NFVqty.KEHzHA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_southern_living_articles_226/34bb422b60fce6562a5be3304ba8f355"
+  },
+  {
+   "position": 8,
+   "title": "Beijing-based Luckin Coffee eyes Starbucks' shuttered NYC stores — as even more could be closing: sources",
+   "link": "https://www.msn.com/en-us/money/companies/beijing-based-luckin-coffee-eyes-starbucks-shuttered-nyc-stores-as-even-more-could-be-closing-sources/ar-AA1TiNSY",
+   "snippet": "We are hearing rumbling in the market that there will more Starbucks closures,\" early next year, The Post has been told.",
+   "source": "New York Post",
+   "date": "4 days ago",
+   "thumbnail": "https://nypost.com/wp-content/uploads/sites/2/2025/12/118028797.jpg?quality=75&strip=all&w=1200"
+  },
+  {
+   "position": 9,
+   "title": "Scientists Find Drinking Coffee Every Day Could Add Up to 2 Years to Your Life",
+   "link": "https://www.msn.com/en-us/health/other/scientists-find-drinking-coffee-every-day-could-add-up-to-2-years-to-your-life/ar-AA1Tsb1X",
+   "snippet": "According to one study, drinking coffee could extend your life up to two years. Here, experts explain how the popular sip influences longevity.",
+   "source": "Prevention",
+   "date": "23 hours ago"
+  },
+  {
+   "position": 10,
+   "title": "Brian Niccol said he wants Starbucks to feel like the coffee shop from 'Friends'",
+   "link": "https://www.msn.com/en-us/money/companies/brian-niccol-said-he-wants-starbucks-to-feel-like-the-coffee-shop-from-friends/ar-AA1Tgz5i",
+   "snippet": "Central Perk from \"Friends\" — guided his vision of what his stores should look like.",
+   "source": "Insider",
+   "date": "4 days ago",
+   "thumbnail": "https://i.insider.com/69537ac0832e0ef1ead6eeb5?width=1200&format=jpeg"
+  },
+  {
+   "position": 11,
+   "title": "Spanish Coffee",
+   "link": "https://www.foodandwine.com/spanish-coffee-cocktail-recipe-11874789",
+   "snippet": "A showstopping Spanish Coffee recipe inspired by Portland's Huber's Café, combining ignited rum, citrus liqueur, Kahlúa, hot coffee, and lightly sweetened whipped cream.",
+   "source": "Food & Wine",
+   "date": "1 day ago"
+  },
+  {
+   "position": 12,
+   "title": "Drinking Tea (But Not Coffee) Might Actually Be Good for Your Bones",
+   "link": "https://www.msn.com/en-us/health/other/drinking-tea-but-not-coffee-might-actually-be-good-for-your-bones/ar-AA1TiOGq",
+   "snippet": "A new study suggests that drinking tea regularly may protect bone health. Experts explain the link, and reveal whether you should drink more tea to support your bones.",
+   "source": "Health",
+   "date": "4 days ago"
+  },
+  {
+   "position": 13,
+   "title": "Art Cafe to open in N.J. town with children's studio and coffee bar",
+   "link": "https://www.msn.com/en-us/foodanddrink/foodnews/art-cafe-to-open-in-nj-town-with-children-s-studio-and-coffee-bar/ar-AA1Tt98F",
+   "snippet": "Art Cafe, a combination process-art studio and coffee bar, will open Jan. 13 in Westfield. The space is designed for children and their caregivers to explore art while enjoying coffee and pastries, according to a recent statement by Cory Dimitrakopoulos, the art cafe's co-founder.",
+   "source": "NJ.com",
+   "date": "18 hours ago",
+   "thumbnail": "https://www.nj.com/resizer/v2/EBQ4Q3O475D3BMVDVWVZUK2FOQ.jpeg?auth=258ed3294ae4d460d01ad55d667720b33748eba49dbdb08763cbe8d8c7c6ea67&width=1280&smart=true&quality=90"
+  },
+  {
+   "position": 14,
+   "title": "New coffee shop opens in West Michigan, offers week of deals in January",
+   "link": "https://www.msn.com/en-us/foodanddrink/foodnews/new-coffee-shop-opens-in-west-michigan-offers-week-of-deals-in-january/ar-AA1Tj3rW",
+   "snippet": "Ziggi's Coffee, which opened its newest location on Dec. 30 at 3830 32nd St., Suite 100, in Hudsonville, will offer daily deals at the new cafe from Jan. 5 to 11.",
+   "source": "mlive",
+   "date": "4 days ago",
+   "thumbnail": "https://www.mlive.com/resizer/v2/2SG6LBLKAZENDMHMDGAI6P2R2E.png?auth=d84f431ec87cb995064d2dc9405fab09bb3503a43a539a8a2510983d6d7db0ea&width=1280&smart=true&quality=90"
+  },
+  {
+   "position": 15,
+   "title": "Second-oldest Sarasota County home welcomes guests as coffee shop",
+   "link": "https://www.usatoday.com/story/entertainment/dining/2025/12/29/second-oldest-sarasota-county-home-coffee-shop/87715784007/",
+   "snippet": "The second-oldest house in Sarasota County is now open as a coffee shop, operated by locally owned Black Gold Coffee Roasters as Lord-Higel's Coffee House in Venice.",
+   "source": "USA TODAY",
+   "date": "5 days ago",
+   "thumbnail": "https://www.usatoday.com/gcdn/authoring/authoring-images/2025/12/13/NSHT/87743305007-sar-lord-higel-01.jpg?crop=3996,2250,x0,y413&width=3200&height=1802&format=pjpg&auto=webp"
+  },
+  {
+   "position": 16,
+   "title": "A cozy CT specialty cafe has a handmade food and coffee mission. 'Human touch makes things great'",
+   "link": "https://www.courant.com/2025/12/29/a-cozy-ct-specialty-cafe-has-a-handmade-food-and-coffee-mission-human-touch-makes-things-great/",
+   "snippet": "Everything is baked from scratch, including the hand-rolled bagels made fresh daily and the in-house roasted coffee.",
+   "source": "Hartford Courant",
+   "date": "5 days ago",
+   "thumbnail": "https://www.courant.com/wp-content/uploads/2025/12/thc-l-twostopcafe-1225-05.jpg?w=1024&h=683"
+  },
+  {
+   "position": 17,
+   "title": "This Saline cafe's creative coffee, sandwiches have delighted eaters for a decade",
+   "link": "https://www.mlive.com/news/2025/05/this-saline-cafes-creative-coffee-sandwiches-have-delighted-eaters-for-a-decade.html",
+   "snippet": "SALINE, MI - A downtown Saline coffeeshop known for its eclectic sandwiches, creative espresso drinks and welcoming vibe is going strong after more than a decade in business. Owners Karen and Jason Carrigan opened Carrigan Cafe in September 2014 in the ...",
+   "source": "MLive",
+   "date": "231 days ago"
+  },
+  {
+   "position": 18,
+   "title": "UPDATE - Coffee mogul's estate fetches $66M on Palm Beach's lakefront",
+   "link": "https://www.desmoinesregister.com/story/business/real-estate/2025/12/30/coffee-moguls-estate-fetches-66-14-million-on-palm-beach-florida-lakefront/87950328007/",
+   "snippet": "Coffee tycoon Robert Stiller and wife Christine renovated their lakefront house at 1350 N. Lake Way. A trust just bought it for $66.14 million.",
+   "source": "The Des Moines Register",
+   "date": "5 days ago",
+   "thumbnail": "https://www.desmoinesregister.com/gcdn/authoring/authoring-images/2025/05/13/NPBD/83608010007-pbn-pool-2-1350-n-lake-way-2025-d-petroni.jpg?crop=1199,675,x0,y71&width=1199&height=675&format=pjpg&auto=webp"
+  },
+  {
+   "position": 19,
+   "title": "THUMP X BACKPORCH: Two big Central Oregon coffee names announce merger",
+   "link": "https://ktvz.com/news/2025/12/29/thump-x-backporch-two-big-central-oregon-coffee-names-announce-merger/",
+   "snippet": "Thump Coffee and Backporch Coffee Roasters will soon join forces. The companies announced they will merge in 2026. Thump says this merger isn't about becoming something different, it's about strengthening what both companies already care deeply about: craft,",
+   "source": "KTVZ",
+   "date": "5 days ago",
+   "thumbnail": "https://ktvz.b-cdn.net/2025/12/Screenshot-2025-12-29-at-7.26.55-AM.png"
+  },
+  {
+   "position": 20,
+   "title": "Can Coffee Help You with the Winter Blues?",
+   "link": "https://www.psychologytoday.com/us/blog/emotional-behavior-behavioral-emotions/202512/can-coffee-help-you-with-the-winter-blues",
+   "snippet": "As a stimulant, caffeine and caffeinated drinks hold promise to help people fight off the natural slow down that descends during the winter months. Coffee can provide a cognitive boost, behavioral fuel, and can warm up mood. As a stimulant, caffeine can also increase feelings of anxiety, and it can make sleeping more difficult.",
+   "source": "Psychology Today",
+   "date": "6 days ago",
+   "thumbnail": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/teaser_image/blog_entry/2025-12/nikita-kachanovsky-457TEA4YU5U-unsplash.jpg?itok=uffqn1aE"
+  },
+  {
+   "position": 21,
+   "title": "Popular coastal NC coffee shop opens first Durham location soon",
+   "link": "https://www.newsobserver.com/living/food-drink/article312856673.html",
+   "snippet": "AI-generated summary reviewed by our newsroom. Read our AI Policy. Drift expands in Triangle, opens Durham cafe at Horseshoe at Hub RTP this week. Its menu offers espresso-based drinks alongside sandwiches, bowls and salads. The development will also ...",
+   "source": "Raleigh News & Observer",
+   "date": "53 days ago"
+  },
+  {
+   "position": 22,
+   "title": "Every Knoxville coffee shop that opened in 2025, from Camp Honey to Velocity",
+   "link": "https://theeagleswire.usatoday.com/story/entertainment/dining/2025/12/31/knoxville-coffee-shops-new-opened-2025-camp-honey-velocity/87275325007/",
+   "snippet": "Knoxville just can't have enough! There were 14 coffee shops that opened or announced expansion plans in 2025.",
+   "source": "Eagles Wire",
+   "date": "3 days ago",
+   "thumbnail": "https://theeagleswire.usatoday.com/gcdn/authoring/authoring-images/2025/11/03/PKNS/87059224007-tree-top-1030-00807.jpg?crop=10246,5764,x0,y0&width=3200&height=1801&format=pjpg&auto=webp"
+  },
+  {
+   "position": 23,
+   "title": "Looking for a good RI coffee shop? Here are 7 reader-favorite spots to order a warm drink",
+   "link": "https://www.providencejournal.com/story/lifestyle/food/recipes/2024/01/03/the-7-best-coffee-spots-in-ri-to-cozy-up-at-according-to-readers/72082967007/",
+   "snippet": "Rhode Island is full of coffee shops - beyond the beloved Dunkin' - where you can get a cup of joe as well as hang out or sit down to do some work. In fact, Providence was named one of the best coffee cities in the country, in part because of how ...",
+   "source": "The Providence Journal",
+   "date": "2 years ago"
+  },
+  {
+   "position": 24,
+   "title": "Locally owned 1418 Coffee sells specialty coffee, fresh baked pastries in Prosper",
+   "link": "https://communityimpact.com/dallas-fort-worth/prosper-celina/dining/2025/12/31/locally-owned-1418-coffee-sells-specialty-coffee-fresh-baked-pastries-in-prosper/",
+   "snippet": "As the third owners of 1418 Coffee, a business that was established in Plano in 2013, Celina residents LeeAnne and David Bryant not only run the flagship store in Plano, they opened a Prosper location in 2022 and estimate a Celina location will open in the first half of 2026.",
+   "source": "Community Impact",
+   "date": "3 days ago",
+   "thumbnail": "https://cdn2.communityimpact.com/?url=https://communityimpact.com/uploads/images/2025/12/31/402722.jpg&w=400&q=72&f=jpg"
+  },
+  {
+   "position": 25,
+   "title": "Totally Tea and Coffee of Dover sold. Owner unveils menu, new name.",
+   "link": "https://www.fosters.com/story/news/local/2026/01/02/totally-tea-coffee-dover-sold-fresh-af-bakeshop-owner-bad-batch/87944597007/",
+   "snippet": "Emmett Soldati is selling Totally Tea + Coffee's Dover location to Taryn Merrill of Fresh AF Bakeshop. Here's what will be on menu and the new name.",
+   "source": "Foster's Daily Democrat",
+   "date": "1 day ago",
+   "thumbnail": "https://www.fosters.com/gcdn/authoring/authoring-images/2025/12/31/NFDD/87965932007-emmett-and-taryn.png?crop=518,291,x0,y289&width=518&height=291&format=pjpg&auto=webp"
+  },
+  {
+   "position": 26,
+   "title": "Coffee shop, nonprofit that hires adults with disabilities struggling with business",
+   "link": "https://www.abc15.com/news/region-west-valley/surprise/coffee-shop-nonprofit-that-hires-adults-with-disabilities-struggling-with-business",
+   "snippet": "Spencer's Place, a nonprofit and coffee shop that employs people with disabilities, is having a difficult time with one of its locations in Surprise.",
+   "source": "ABC15 Arizona",
+   "date": "4 days ago",
+   "thumbnail": "https://ewscripps.brightspotcdn.com/dims4/default/dc2a88a/2147483647/strip/true/crop/1280x672+0+24/resize/1200x630!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F11%2Fe2%2F5c20c1b141aea4fe6730b711a638%2F054-1733.jpg"
+  },
+  {
+   "position": 27,
+   "title": "Grounds for Giving: 2026 Coffee Club Trail rewards coffee donations",
+   "link": "https://www.wfmj.com/story/53349896/grounds-for-giving-2026-coffee-club-trail-rewards-coffee-donations",
+   "snippet": "Nine coffee shops in Lawrence County are represented on the 2026 Coffee Club Trail and will have coffee donation bins available for customers to drop off or buy ground coffee to donate.",
+   "source": "WFMJ",
+   "date": "2 days ago",
+   "thumbnail": "https://wfmj.images.worldnow.com/images/19928668_G.jpg"
+  },
+  {
+   "position": 28,
+   "title": "The 20 Best Coffee Table Books for 2026",
+   "link": "https://www.wsj.com/arts-culture/books/best-coffee-table-books-2026-gift-guide-e8ae58c0",
+   "snippet": "For those who resolve to read more in the new year.",
+   "source": "The Wall Street Journal",
+   "date": "6 days ago",
+   "thumbnail": "https://images.wsj.net/im-88297565/social"
+  },
+  {
+   "position": 29,
+   "title": "Mokas Coffee & Eatery Builds Franchise Model Around Connection",
+   "link": "https://www.qsrmagazine.com/story/mokas-coffee-eatery-builds-franchise-model-around-connection/",
+   "snippet": "When Mokas Coffee & Eatery began 20 years ago, food was an afterthought. The concept, born in Salina, Kansas, specialized in high-quality specialty beverages and coffee. But as most brands do to thrive and survive,",
+   "source": "QSR magazine",
+   "date": "5 days ago",
+   "thumbnail": "https://www.qsrmagazine.com/wp-content/uploads/2025/12/mokascoffeeeaterycatering.jpg"
+  },
+  {
+   "position": 30,
+   "title": "The 4 most common types of coffee beans and how they differ",
+   "link": "https://www.msn.com/en-us/health/nutrition/the-4-most-common-types-of-coffee-beans-and-how-they-differ/ar-AA1TtGcw",
+   "snippet": "Of the 130-plus types of coffee beans out there, only four are commonly used or commercially grown, and between those four, two dominate production.",
+   "source": "Food Republic",
+   "date": "14 hours ago",
+   "thumbnail": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1TtPZ8.img?w=780&h=438&m=4&q=91"
+  },
+  {
+   "position": 31,
+   "title": "10 Benefits Of Consuming Black Coffee First Thing In The Morning",
+   "link": "https://www.ndtv.com/health/10-benefits-of-consuming-black-coffee-first-thing-in-the-morning-4530902",
+   "snippet": "Coffee is one of the commonly consumed beverage thanks to its immense popularity. Caffeine may enhance your mood, cognitive function, and athletic performance in addition to making you feel less fatigued and more alert. Additionally, it might promote ...",
+   "source": "NDTV",
+   "date": "2 years ago"
+  },
+  {
+   "position": 32,
+   "title": "The Best Keurig Coffee Makers for Fresh, Hot Coffee—Fast",
+   "link": "https://www.popularmechanics.com/home/food-drink/g45248785/best-keurig-coffee-makers/",
+   "snippet": "It's fair to say that opinions about Keurig-style coffee machines are generally on polar ends of the love-hate spectrum. Fans tend to like the convenience and satisfaction of a single cup of joe on demand—there's a wide variety of pods available, and ...",
+   "source": "Popular Mechanics",
+   "date": "2 years ago"
+  },
+  {
+   "position": 33,
+   "title": "Best Keurig Coffee Makers for 2025",
+   "link": "https://www.cnet.com/home/kitchen-and-household/best-keurig-coffee-makers/",
+   "snippet": "Andrew Blok covered home energy, with a focus on solar, and navigated the changing energy landscape to help people make smart energy decisions. He's a graduate of the Knight Center for Environmental Journalism at Michigan State and has written for several ...",
+   "source": "CNET",
+   "date": "28 days ago"
+  },
+  {
+   "position": 34,
+   "title": "Bitty & Beau's Coffee teases return to Pittsburgh with food truck after Strip District store closure",
+   "link": "https://www.msn.com/en-us/foodanddrink/foodnews/bitty-beau-s-coffee-teases-return-to-pittsburgh-with-food-truck-after-strip-district-store-closure/ar-AA1Tpv8R",
+   "snippet": "\"Pittsburgh, something special is rolling your way,\" reads the social media announcement. \"Our Bitty & Beau's Coffee Cruiser is officially coming to the Steel City — bringing great coffee, meaningful jobs, and a whole lot of belonging with it.\"",
+   "source": "WPXI",
+   "date": "2 days ago"
+  },
+  {
+   "position": 35,
+   "title": "Youngstown organization hosts '2026 Coffee Tour' to connect with Valley families",
+   "link": "https://www.wfmj.com/story/53351659/youngstown-organization-hopes-to-connect-valley-families-with-2026-coffee-tour",
+   "snippet": "Operation Search & Help works with families in Mahoning and Trumbull Counties to help with medical, treatment and medication costs.",
+   "source": "WFMJ",
+   "date": "15 hours ago",
+   "thumbnail": "https://wfmj.images.worldnow.com/images/19928668_G.jpg?lastEditedDate=1601384607000"
+  },
+  {
+   "position": 36,
+   "title": "The best coffee makers of 2025, approved by experts and editors",
+   "link": "https://www.nbcnews.com/select/shopping/best-coffee-makers-brewers-grinders-ncna1172991",
+   "snippet": "For our editors (and many others), there's nothing better than waking up and enjoying freshly brewed coffee — our staffers are also big fans of the midday caffeine run. Finding the best coffee maker for your routine will ensure your mornings go ...",
+   "source": "NBC News",
+   "date": "332 days ago"
+  },
+  {
+   "position": 37,
+   "title": "The 5 Best Coffee Makers with Grinders We Tested for a Fresher, Tastier Brew",
+   "link": "https://people.com/home/best-coffee-makers-with-grinders/",
+   "snippet": "We independently evaluate all of our recommendations. If you click on links we provide, we may receive compensation. Breville's Grind Control Coffee Maker is our top pick Alyssa Brascia is a staff shopping writer for PEOPLE with two years of experience in ...",
+   "source": "People",
+   "date": "3 years ago"
+  },
+  {
+   "position": 38,
+   "title": "The 16 Best Coffee Shops Around D.C.",
+   "link": "https://dc.eater.com/maps/essential-coffee-shops-dc-virginia-best-latte",
+   "snippet": "In a city that seems to never stop working, it's important to know where to get your next caffeine fix. The area's independent coffee shops are always ready to dispense fruit-forward pour-overs, flavored lattes, nitro cold brews, and pastries to their ...",
+   "source": "Eater",
+   "date": "39 days ago"
+  },
+  {
+   "position": 39,
+   "title": "5 Reasons Why You Should Drink Black Coffee For Weight Loss",
+   "link": "https://food.ndtv.com/food-drinks/5-reasons-why-you-should-drink-black-coffee-for-weight-loss-2582992",
+   "snippet": "According to studies, black coffee can help you lose weight and also has tons of benefits that can aid your health Read Time: 3 min If you are one of those who work late till night or probably are up till dawn, then we are sure that coffee is an ultimate ...",
+   "source": "NDTV",
+   "date": "4 years ago"
+  },
+  {
+   "position": 40,
+   "title": "Espresso Cola: Give Your Soda the Coffee Treatment It Deserves",
+   "link": "https://www.bonappetit.com/drinks/article/espresso-cola",
+   "snippet": "There's caffeine and then there's the kind of big-time caffeine boost you'll get from topping off a bottle of Coca-Cola with two shots of espresso. But that's sort of the point, according to Mike Haft and Harrison Suarez, the owners of Compass Coffee in ...",
+   "source": "Bon Appétit",
+   "date": "10 years ago"
+  },
+  {
+   "position": 41,
+   "title": "Coffee vs. cold brew vs. espresso: Which has the most caffeine?",
+   "link": "https://www.cnet.com/home/smart-home/coffee-vs-cold-brew-vs-espresso-which-has-the-most-caffeine/",
+   "snippet": "No matter how you take your coffee in the morning, it's sure to get you going. But which between drip, cold brew and espresso packs the biggest caffeine punch? Taylor Martin CNET Contributor Taylor Martin has covered technology online for over six years.",
+   "source": "CNET",
+   "date": "9 years ago"
+  },
+  {
+   "position": 42,
+   "title": "The Price of Coffee the Year You Were Born",
+   "link": "https://finance.yahoo.com/news/price-coffee-were-born-090000198.html",
+   "snippet": "Your daily coffee habit might be costing you just under $3 a cup, depending on where you get your caffeine fix. This means you could easily be spending about $100 or more a month to fuel your days. Just 20 years ago, that same cup would have cost you $1.79.",
+   "source": "Yahoo Finance",
+   "date": "6 years ago"
+  },
+  {
+   "position": 43,
+   "title": "Why is Preservation Coffee closing? What's next for the downtown Modesto space",
+   "link": "https://www.msn.com/en-us/money/companies/why-is-preservation-coffee-closing-whats-next-for-the-downtown-modesto-space/ar-AA1T89x7",
+   "snippet": "Preservation Coffee & Tea announced Tuesday, Dec. 23, that it would be closing for good after nearly 13 years of business in downtown Modesto.",
+   "source": "Modesto Bee",
+   "date": "7 days ago",
+   "thumbnail": "https://www.modbee.com/public/latest-news/o3y4o4/picture313993466/alternates/LANDSCAPE_1140/DW%20Preservation"
+  },
+  {
+   "position": 44,
+   "title": "10 Best Coffee Stocks to Invest In",
+   "link": "https://finance.yahoo.com/news/10-best-coffee-stocks-invest-140002788.html",
+   "snippet": "In this article, we will take a look at the 10 best coffee stocks to invest in. You can skip our comprehensive analysis of the coffee industry, and go directly to the 5 Best Coffee Stocks to Invest In. The $100 billion coffee industry was one of the ...",
+   "source": "Yahoo Finance",
+   "date": "4 years ago"
+  },
+  {
+   "position": 45,
+   "title": "What is the healthiest coffee creamer? A dietitian shares her No. 1 pick",
+   "link": "https://www.today.com/health/diet-fitness/healthiest-coffee-creamer-rcna148273",
+   "snippet": "Coffee itself is a delicious beverage that's even packing a few benefits. If you drink it black, that's great, but for some, it's a bit plain or bitter. Thankfully, there's a host of additives you can use to up the flavor profile. Thing is, the one you ...",
+   "source": "Today",
+   "date": "2 years ago"
+  },
+  {
+   "position": 46,
+   "title": "The 6 best coffee thermoses to take on the go",
+   "link": "https://www.businessinsider.com/guides/kitchen/best-coffee-thermos",
+   "snippet": "On-the-move coffee drinking is a tricky proposition, which is why we tested 20 coffee thermoses. The first thing a coffee thermos has to do is keep coffee from the best coffee maker hot or cold, as you like. The best coffee thermoses are easy to open and ...",
+   "source": "Business Insider",
+   "date": "318 days ago"
+  },
+  {
+   "position": 47,
+   "title": "A new coffee shop near Columbia in a trendy shopping area sets an opening date",
+   "link": "https://www.thestate.com/news/local/article310380310.html",
+   "snippet": "Lazy Daisy Coffee Co. will have a grand opening July 21, 2025 at the Cardinal Crossing development in Forest Acres. Photo from Lazy Daisy's Facebook. A trendy development in Forest Acres is getting a new locally owned coffee shop. Lazy Daisy Coffee Co ...",
+   "source": "The State",
+   "date": "177 days ago"
+  },
+  {
+   "position": 48,
+   "title": "cold brew coffee makers",
+   "link": "https://www.wired.com/story/best-cold-brew-coffee-makers/",
+   "snippet": "The Best Cold brew coffee makers are a little like kindergarten art teachers for coffee. Cold brew mostly requires a whole lot of patience—and really the point is to let the coffee just express itself. The result is a refreshing and low-acidity brew that ...",
+   "source": "Wired",
+   "date": "8 years ago"
+  },
+  {
+   "position": 49,
+   "title": "Coffee pods generate thousands of tonnes of waste in Australia. Here's what is being done about it",
+   "link": "https://www.msn.com/en-au/news/brisbane/coffee-pods-generate-thousands-of-tonnes-of-waste-in-australia-here-s-what-is-being-done-about-it/ar-AA1TtnI6",
+   "snippet": "Between 10 and 20 per cent of the 3 million coffee pods Australians consume daily are actually recycled. Here's what's being done to change that.",
+   "source": "ABC (Australian Broadcasting Corporation)",
+   "date": "17 hours ago",
+   "thumbnail": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1TtgVm.img?w=1200&h=675&m=4&q=91"
+  },
+  {
+   "position": 50,
+   "title": "Looking for a new study spot? Check out 5 highly-rated coffee shops in Macon",
+   "link": "https://www.macon.com/living/food-drink/article311633568.html",
+   "snippet": "Taste & See Coffee Shop in downtown Macon roasts its coffee in-house and also makes all its sauces and syrups in-house. Courtesy Taste & See Coffee Shop As the school year ramps up again, people might need a little caffeine to get them going. Looking to ...",
+   "source": "The Telegraph",
+   "date": "148 days ago"
+  },
+  {
+   "position": 51,
+   "title": "The Best Coffee Makers, Based On Testing 30-Plus Top Models",
+   "link": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-coffee-makers/",
+   "snippet": "A good coffee maker is a kitchen workhorse, designed to yield flavorful, full-bodied cups of joe. Over the past year-plus, we set out to determine the very best coffee makers by putting more than 30 models to the test. Based on rigorous testing, the OXO ...",
+   "source": "Forbes",
+   "date": "1 year ago"
+  },
+  {
+   "position": 52,
+   "title": "What to know about chicory coffee",
+   "link": "https://www.medicalnewstoday.com/articles/chicory-coffee",
+   "snippet": "Chicory coffee comes from the roasted and ground root of the chicory plant. It has a coffee-like taste but contains no caffeine. In this article, we will discuss the possible health benefits and side effects of chicory coffee, as well as how to drink it.",
+   "source": "Medical News Today",
+   "date": "5 years ago"
+  },
+  {
+   "position": 53,
+   "title": "The Best Cheap Coffee Maker",
+   "link": "https://www.nytimes.com/wirecutter/reviews/best-cheap-coffee-maker/",
+   "snippet": "We independently review everything we recommend. We may get paid to link out to retailer sites, and when you buy through our links, we may earn a commission. Learn more› By Ever Meister and Justin Vassallo When it comes to brewing good coffee, even an ...",
+   "source": "The New York Times",
+   "date": "1 year ago"
+  },
+  {
+   "position": 54,
+   "title": "Butter Coffee: Is It Good for You?",
+   "link": "https://www.webmd.com/diet/butter-coffee-good-for-you",
+   "snippet": "While people have been adding butter to their coffee for hundreds of years, today's \"butter coffee\" refers to bulletproof coffee, which is also known as keto coffee. Dave Asprey published his recipe for butter coffee in 2011, promoting it as a ...",
+   "source": "WebMD",
+   "date": "1 year ago"
+  },
+  {
+   "position": 55,
+   "title": "Best Coffee Makers of 2025",
+   "link": "https://www.consumerreports.org/appliances/coffee-makers/best-coffee-makers-of-the-year-a9612622702/",
+   "snippet": "Making coffee at home instead of paying for it at a coffee shop is likely to save you money. But that's only if the coffee your home machine brews is satisfying enough to keep you from covering your face in your hands and sneaking back to your local barista.",
+   "source": "Consumer Reports",
+   "date": "1 year ago"
+  },
+  {
+   "position": 56,
+   "title": "A new coffee shop opened in the Triangle and immediately caused a traffic jam",
+   "link": "https://www.heraldsun.com/living/food-drink/article313647354.html",
+   "snippet": "Dutch Bros opened Morrisville location Dec. 11, attracting long drive‑thru lines. Queue spilled onto Morrisville Parkway, blocking right lane and slowing traffic. Grand opening offered $3 medium drinks. Dutch Bros, a popular West Coast coffee chain with ...",
+   "source": "The Herald-Sun",
+   "date": "22 days ago"
+  },
+  {
+   "position": 57,
+   "title": "Coffee and Atrial Fibrillation: Is There a Link?",
+   "link": "https://www.webmd.com/heart-disease/atrial-fibrillation/coffee-atrial-fibrillation-link",
+   "snippet": "Is There a Link Between Coffee and AFib? Many studies have been done, and it does not seem that there's a link between drinking coffee and getting AFib. One large study of data on hundreds of thousands of people found that drinking coffee was not ...",
+   "source": "WebMD",
+   "date": "2 years ago"
+  },
+  {
+   "position": 58,
+   "title": "The Very Best Coffee-Subscription Clubs",
+   "link": "https://nymag.com/strategist/article/best-coffee-subscription.html",
+   "snippet": "I brew my coffee at home every day, and while I'm not greatly picky about my beans, I do know what a pain it can be to run out of a fresh stash. (This is usually when I find myself at my local shop, annoyed to be spending $6 on a large to-go cup.",
+   "source": "New York Magazine",
+   "date": "256 days ago"
+  },
+  {
+   "position": 59,
+   "title": "Best Single-Serve Coffee Makers of 2025",
+   "link": "https://www.consumerreports.org/appliances/coffee-makers/best-pod-coffee-makers-a3468890273/",
+   "snippet": "A single-serve coffee maker is a quick way to start your morning. Switch on the machine, add fresh water, pop in a pod, and press start. In a minute or two, you have a piping hot cup of joe. But the coffee you get from a pod most likely won't match that ...",
+   "source": "Consumer Reports",
+   "date": "1 year ago"
+  },
+  {
+   "position": 60,
+   "title": "How to Make Better Coffee at Home",
+   "link": "https://www.wired.com/story/how-to-make-better-coffee-at-home/",
+   "snippet": "The C. Arabica plant is a gift to the world from Ethiopia, and making coffee at home is a centuries-old practice that's now enjoyed on every continent on Earth. At one point or another, everyone who has ever made their own coffee has wondered: How can I ...",
+   "source": "Wired",
+   "date": "6 years ago"
+  },
+  {
+   "position": 61,
+   "title": "Is Mushroom Coffee Worth the Hype? An Expert's Take",
+   "link": "https://www.healthline.com/nutrition/mushroom-coffee",
+   "snippet": "Mushroom coffee is lauded as a healthier alternative to regular coffee, boasting medicinal mushroom extracts and added health benefits. Although it's currently a trending coffee blend, this concept is far from new. According to online sources, mushrooms ...",
+   "source": "Healthline",
+   "date": "5 years ago"
+  },
+  {
+   "position": 62,
+   "title": "Instant Coffee: Good or Bad?",
+   "link": "https://www.healthline.com/nutrition/instant-coffee-good-or-bad",
+   "snippet": "Instant coffee is very popular in many areas of the world. It may even account for more than 50% of all coffee consumption in some countries. Instant coffee is also faster, cheaper, and easier to make than regular coffee. Instant coffee is a type of coffee ...",
+   "source": "Healthline",
+   "date": "6 years ago"
+  },
+  {
+   "position": 63,
+   "title": "The 18 Best Coffee Brands for the Perfect Morning Brew",
+   "link": "https://www.townandcountrymag.com/leisure/drinks/g38416612/best-coffee-brands/",
+   "snippet": "Every item on this page was chosen by a Town & Country editor. We may earn commission on some of the items you choose to buy. Coffee has come a long way in the last few decades. Once simply a warm jolt of caffeine to get you going for the day, the good old ...",
+   "source": "Town & Country",
+   "date": "4 years ago"
+  },
+  {
+   "position": 64,
+   "title": "Is coffee good or bad for me?",
+   "link": "https://www.bbc.co.uk/programmes/articles/33ZMcgqDsFpvCBvPHlYDcNT/is-coffee-good-or-bad-for-me",
+   "snippet": "We drink an estimated 70 million cups of coffee in the UK every single day - but is this a good thing or bad thing for our health? ﻿There's a constant barrage of health reports that seem to contradict each other, and the reason is that it's quite a ...",
+   "source": "BBC",
+   "date": "12 years ago"
+  },
+  {
+   "position": 65,
+   "title": "How much coffee is too much? What experts and research say about where to draw the line",
+   "link": "https://www.nbcnews.com/health/health-news/much-coffee-much-four-experts-weigh-rcna99847",
+   "snippet": "As summer iced coffees turn into seasonal fall lattes, it can be easy to reach for an extra cup of coffee throughout the day for a jolt of energy, a mood boost or a sugary afternoon treat. Along with a temporary pick-me-up, research has continued to show ...",
+   "source": "NBC News",
+   "date": "2 years ago"
+  },
+  {
+   "position": 66,
+   "title": "Why Is Coffee Called a 'Cup of Joe'?",
+   "link": "https://www.snopes.com/fact-check/cup-of-joe/",
+   "snippet": "While those of the Starbucks generation may almost think they discovered the drink, coffee, that enticing hot brew, has been part of everyday experience in Western society for a number of generations. It has fueled the productivity of countless offices and ...",
+   "source": "Snopes.com",
+   "date": "17 years ago"
+  },
+  {
+   "position": 67,
+   "title": "The Top 12 Ways Coffee Benefits Your Health",
+   "link": "https://www.menshealth.com/health/a19546477/health-benefits-coffee/",
+   "snippet": "For many people, the idea of starting your day without guzzling that first cup of coffee is unfathomable. The promise of a strong cup of Joe is likely what gets you to pry yourself out of bed and ready to tackle whatever's next, from a morning workout to a ...",
+   "source": "Men's Health",
+   "date": "3 years ago"
+  },
+  {
+   "position": 68,
+   "title": "The Best Coffee Shops in Every State",
+   "link": "https://www.foodandwine.com/coffee/best-coffee-shops-in-america",
+   "snippet": "From South Dakota to New York, we've got you covered on the best coffee shops to find the ideal cup to joe to start your day. As the contributor of many of Food & Wine's comprehensive Best Of lists, designed to highlight and celebrate all aspects of ...",
+   "source": "Food & Wine",
+   "date": "4 years ago"
+  },
+  {
+   "position": 69,
+   "title": "Kansas City coffee shop closed in March. Here's what's moving in",
+   "link": "https://www.kansascity.com/news/business/openings-closings/article305481181.html",
+   "snippet": "A Hyde Park coffee spot will get a new lease on life later this spring. 1888 Coffee is planning a May 24 opening in the former Mother Earth Coffee space at 3504 Gillham Road. After Mother Earth Coffee closed in March, Chrissy and Robert Kehoe, who live in ...",
+   "source": "Kansas City Star",
+   "date": "247 days ago"
+  },
+  {
+   "position": 70,
+   "title": "How Coffee Influenced The Course Of History",
+   "link": "https://www.npr.org/sections/thesalt/2013/04/24/178625554/how-coffee-influenced-the-course-of-history",
+   "snippet": "Coffee is a powerful beverage. On a personal level, it helps keep us awake and active. On a much broader level, it has helped shape our history and continues to shape our culture. By the 1500s, he says, the drink had spread to coffeehouses across the Arab ...",
+   "source": "NPR",
+   "date": "13 years ago"
+  }
+ ],
+ "serpapi_pagination": {
+  "next": "https://serpapi.com/search.json?engine=duckduckgo_news&kl=us-en&q=Coffee&start=70"
+ }
+}

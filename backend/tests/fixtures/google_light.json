@@ -1,0 +1,305 @@
+{
+ "search_metadata": {
+  "id": "695926b48c24bd247f1be7b9",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/2900da53caa1eb48/695926b48c24bd247f1be7b9.json",
+  "created_at": "2026-01-03 14:24:52 UTC",
+  "processed_at": "2026-01-03 14:24:52 UTC",
+  "google_light_url": "https://www.google.com/search?q=Coffee&oq=Coffee&uule=w+CAIQICIaQXVzdGluLFRleGFzLFVuaXRlZCBTdGF0ZXM&sourceid=chrome&ie=UTF-8&gbv=1",
+  "raw_html_file": "https://serpapi.com/searches/2900da53caa1eb48/695926b48c24bd247f1be7b9.html",
+  "total_time_taken": 0.58
+ },
+ "search_parameters": {
+  "engine": "google_light",
+  "q": "Coffee",
+  "location_requested": "Austin, Texas, United States",
+  "location_used": "Austin,Texas,United States",
+  "google_domain": "google.com",
+  "device": "desktop"
+ },
+ "search_information": {
+  "query_displayed": "Coffee",
+  "organic_results_state": "Results for exact spelling"
+ },
+ "organic_results": [
+  {
+   "position": 1,
+   "title": "Coffee - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Coffee",
+   "displayed_link": "en.wikipedia.org › wiki › Coffee",
+   "snippet": "Coffee is a beverage brewed from roasted, ground coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans",
+   "sitelinks": {
+    "inline": [
+     {
+      "title": "History of coffee",
+      "link": "https://en.wikipedia.org/wiki/History_of_coffee"
+     },
+     {
+      "title": "Coffee bean",
+      "link": "https://en.wikipedia.org/wiki/Coffee_bean"
+     },
+     {
+      "title": "Coffee production",
+      "link": "https://en.wikipedia.org/wiki/List_of_countries_by_coffee_production"
+     },
+     {
+      "title": "Coffee preparation",
+      "link": "https://en.wikipedia.org/wiki/Coffee_preparation"
+     }
+    ]
+   }
+  },
+  {
+   "position": 2,
+   "title": "Fara Coffee - Austin",
+   "link": "https://www.faracoffee.com/?srsltid=AfmBOopGd357-l59oYFgivqJzUxEnpSMyFQ9uTPl5L4geVJ3p8kpwVUC",
+   "displayed_link": "www.faracoffee.com",
+   "snippet": "Through the Fara Foundation, we give part of our proceeds back to the people of Nicaragua in four ways: Healthcare, Food Assistance, Education and Eldercare.",
+   "extensions": [
+    "Free delivery",
+    "30-day returns"
+   ],
+   "sitelinks": {
+    "inline": [
+     {
+      "title": "Shop",
+      "link": "https://www.faracoffee.com/collections/coffee"
+     },
+     {
+      "title": "Coffee farms",
+      "link": "https://www.faracoffee.com/pages/faracoffeefarms"
+     },
+     {
+      "title": "Store Locator",
+      "link": "https://www.faracoffee.com/pages/stores"
+     },
+     {
+      "title": "Special Blend",
+      "link": "https://www.faracoffee.com/products/special-blend"
+     }
+    ]
+   }
+  },
+  {
+   "position": 3,
+   "title": "Austin Coffee Shops, Cafes, Tea Houses & Local Roasters",
+   "link": "https://www.austintexas.org/food-and-drink/coffee-and-tea/",
+   "displayed_link": "www.austintexas.org › food-and-drink › coffee-and-tea",
+   "snippet": "Austin's coffee shops feature gourmet coffee and rotating selections of roasters in unique settings. Shops like Sa-Ten Coffee and Eats and Wright Bros. Brew & ..."
+  },
+  {
+   "position": 4,
+   "title": "Starbucks Coffee Company",
+   "link": "https://www.starbucks.com/",
+   "displayed_link": "www.starbucks.com",
+   "snippet": "More than just great coffee. Explore the menu, sign up for Starbucks® Rewards, manage your gift card and more.",
+   "sitelinks": {
+    "inline": [
+     {
+      "title": "Coffee Our coffee story",
+      "link": "https://about.starbucks.com/stories/category/coffee-craft/coffee/"
+     },
+     {
+      "title": "Store Locator",
+      "link": "https://www.starbucks.com/store-locator"
+     },
+     {
+      "title": "Menu",
+      "link": "https://www.starbucks.com/menu"
+     },
+     {
+      "title": "Cold Coffee",
+      "link": "https://www.starbucks.com/menu/drinks/cold-coffee"
+     }
+    ]
+   }
+  },
+  {
+   "position": 5,
+   "title": "Coffee - Reddit",
+   "link": "https://www.reddit.com/r/Coffee/",
+   "displayed_link": "www.reddit.com › Coffee",
+   "snippet": "Hey everyone! Welcome back to the weekly · r/Coffee. thread where you can share what you are brewing or ask for bean recommendations. This is a place to ..."
+  },
+  {
+   "position": 6,
+   "title": "Scooter's Coffee | Be Amazing",
+   "link": "https://www.scooterscoffee.com/",
+   "displayed_link": "www.scooterscoffee.com",
+   "snippet": "Wake up to the ahhh-mazing aroma of quality. Subscribe to Scooter's Coffee® delivery and enjoy 100% Arabica beans, sourced directly from farmers.",
+   "extensions": [
+    "Free delivery over $39"
+   ]
+  },
+  {
+   "position": 7,
+   "title": "THE BEST Coffee & Tea in Austin - Tripadvisor",
+   "link": "https://www.tripadvisor.com/Restaurants-g30196-zfg9900-Austin_Texas.html",
+   "displayed_link": "www.tripadvisor.com › ... › Texas (TX) › Austin › Austin Restaurants",
+   "snippet": "Epoch did not disappoint. The coffee and snacks were very good in a coffee shop... Needed some caffeine · 16. Starbucks. 3.5. (15 reviews)."
+  },
+  {
+   "position": 8,
+   "title": "Cuvée Coffee: Always Something Brewing. Austin, TX",
+   "link": "https://cuveecoffee.com/?srsltid=AfmBOooJHDkS4NhSjX-zeGzkZSARIOK_SeTiEZxBcWy_wog6nZLYVwjH",
+   "displayed_link": "cuveecoffee.com",
+   "snippet": "At Cuvée, coffee isn't a job, it's a passion. Since 1998, we've become known for roasting exceptional, ethically sourced, sustainable coffee.",
+   "sitelinks": {
+    "inline": [
+     {
+      "title": "All Coffee",
+      "link": "https://cuveecoffee.com/collections/all-coffee"
+     },
+     {
+      "title": "Coffee Bar",
+      "link": "https://cuveecoffee.com/pages/about-coffee-bar"
+     },
+     {
+      "title": "About",
+      "link": "https://cuveecoffee.com/pages/about-us"
+     },
+     {
+      "title": "Roastery",
+      "link": "https://cuveecoffee.com/pages/about-roastery"
+     }
+    ]
+   }
+  },
+  {
+   "position": 9,
+   "title": "Bennu Coffee: Austin's Premier 24-Hour Coffee Shop - Austin",
+   "link": "https://www.bennucoffee.com/",
+   "displayed_link": "www.bennucoffee.com",
+   "snippet": "Bennu Coffee is an independently owned 24-hour coffee shop with locations in east and central Austin. We offer high-quality, fair-trade coffee, locally sourced ...",
+   "sitelinks": {
+    "inline": [
+     {
+      "title": "Menu",
+      "link": "https://www.bennucoffee.com/menu"
+     },
+     {
+      "title": "Bennu Coffee Highland",
+      "link": "https://www.bennucoffee.com/109-jacob-fontaine"
+     },
+     {
+      "title": "Bennu Coffee East",
+      "link": "https://www.bennucoffee.com/2001-e-mlk-blvd"
+     },
+     {
+      "title": "Bennu Coffee, ATX",
+      "link": "https://shop.bennucoffee.com/"
+     }
+    ]
+   }
+  },
+  {
+   "position": 10,
+   "title": "Buy Freshly Roasted Coffee Online - Free Shipping over $40",
+   "link": "https://www.verenastreet.com/collections/coffee?srsltid=AfmBOoraIY4nbObJXCAJLVxwgBlNw9B-MVzjXKqvh86YK3Wed9NW1FeU",
+   "displayed_link": "www.verenastreet.com › collections › coffee",
+   "snippet": "Whole bean or ground coffee. Craft blends, unique flavors. Light roast w/out the bite, dark roast w/out the burn. Skip the bitter, boring life. Shop now!",
+   "extensions": [
+    "4.9 1.4K",
+    "Free delivery over $40"
+   ],
+   "sitelinks": {
+    "inline": [
+     {
+      "title": "Coffee Storage",
+      "link": "https://www.verenastreet.com/collections/coffee-gear"
+     },
+     {
+      "title": "Coffee Pod Subscriptions",
+      "link": "https://www.verenastreet.com/collections/coffee-pod-subscriptions"
+     },
+     {
+      "title": "Decaf Coffee Subscriptions",
+      "link": "https://www.verenastreet.com/collections/decaf-coffee-subscriptions"
+     }
+    ]
+   },
+   "rating": 4.9,
+   "reviews": 1400
+  }
+ ],
+ "related_questions": [
+  {
+   "question": "What is the 80/20 rule for coffee?",
+   "snippet": "The 80/20 rule for coffee states that 20% of the brewing variables contribute to 80% of the final flavour quality. Focus on water temperature and grind size because these primary factors dictate the success of your extraction process.",
+   "snippet_highlighted_words": [
+    "20% of the brewing variables contribute to 80% of the final flavour quality"
+   ],
+   "title": "What Is The 80/20 Rule For Coffee?",
+   "link": "https://www.tankcoffee.com/what-is-the-80-20-rule-for-coffee/",
+   "displayed_link": "www.tankcoffee.com › what-is-the-80-20-rule-for-coffee",
+   "more_results_link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&ei=tSZZaZSBKbfQ5NoPvrWtqAw&q=What+is+the+80/20+rule+for+coffee?&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQzmd6BAgYEAc"
+  },
+  {
+   "question": "What are the top 10 best coffees?",
+   "rich_snippet": {
+    "lists": [
+     "The top 10 best coffees in the world are listed below.",
+     "Panama Geisha Coffee.",
+     "Jamaican Blue Mountain Coffee.",
+     "Kona Coffee.",
+     "Ethiopian Yirgacheffe Coffee.",
+     "Kenya AA Coffee.",
+     "Tanzanian Peaberry Coffee.",
+     "Kopi Luwak Coffee.",
+     "Sumatra Mandheling Coffee."
+    ]
+   },
+   "snippet": "The top 10 best coffees in the world are listed below.\nPanama Geisha Coffee.\nJamaican Blue Mountain Coffee.\nKona Coffee.\nEthiopian Yirgacheffe Coffee.\nKenya AA Coffee.\nTanzanian Peaberry Coffee.\nKopi Luwak Coffee.\nSumatra Mandheling Coffee.",
+   "title": "Top 10 Best Coffee in The World – Colipse",
+   "link": "https://colipsecoffee.com/blogs/coffee/best-coffee-in-the-world",
+   "displayed_link": "colipsecoffee.com › blogs › coffee › best-coffee-in-the-world",
+   "more_results_link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&ei=tSZZaZSBKbfQ5NoPvrWtqAw&q=What+are+the+top+10+best+coffees?&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQzmd6BAgYEBA"
+  }
+ ],
+ "related_searches": [
+  {
+   "query": "Coffee nearby",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+nearby&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEAI",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+nearby"
+  },
+  {
+   "query": "Coffee brands",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+brands&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEAQ",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+brands"
+  },
+  {
+   "query": "Coffee types",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+types&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEAY",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+types"
+  },
+  {
+   "query": "Coffee beans",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+beans&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEAg",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+beans"
+  },
+  {
+   "query": "Coffee Walmart",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+Walmart&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEAo",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+Walmart"
+  },
+  {
+   "query": "Coffee benefits",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+benefits&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEAw",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+benefits"
+  },
+  {
+   "query": "Coffee powder",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+powder&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEA4",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+powder"
+  },
+  {
+   "query": "Coffee name",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gbv=1&q=Coffee+name&sa=X&ved=2ahUKEwjUr6a3ye-RAxU3KFkFHb5aC8UQ1QJ6BAgHEBA",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee+name"
+  }
+ ],
+ "serpapi_pagination": {
+  "current": 1,
+  "next": "https://serpapi.com/search.json?device=desktop&engine=google_light&google_domain=google.com&location=Austin%2C+Texas%2C+United+States&q=Coffee&start=10"
+ }
+}

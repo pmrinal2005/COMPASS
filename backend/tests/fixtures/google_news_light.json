@@ -1,0 +1,134 @@
+{
+ "search_metadata": {
+  "id": "695926808c24bd247f1be7ac",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/cf2492b0a7afb599/695926808c24bd247f1be7ac.json",
+  "created_at": "2026-01-03 14:24:00 UTC",
+  "processed_at": "2026-01-03 14:24:00 UTC",
+  "google_news_light_url": "https://www.google.com/search?q=Coffee&oq=Coffee&sourceid=chrome&ie=UTF-8&gbv=1&tbm=nws",
+  "raw_html_file": "https://serpapi.com/searches/cf2492b0a7afb599/695926808c24bd247f1be7ac.html",
+  "total_time_taken": 0.85
+ },
+ "search_parameters": {
+  "engine": "google_news_light",
+  "q": "Coffee",
+  "google_domain": "google.com",
+  "device": "desktop"
+ },
+ "search_information": {
+  "query_displayed": "Coffee",
+  "news_results_state": "Results for exact spelling"
+ },
+ "news_results": [
+  {
+   "position": 1,
+   "title": "I Asked 3 Coffee Experts To Name the Best Grocery Store Coffee Beans, and They All Said the Same Thing",
+   "link": "https://www.aol.com/articles/asked-3-coffee-experts-name-120100406.html",
+   "source": "AOL.com",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9nJ9aik4r0DRoGTIWqs7IRnOijwC7J1OlTfbm2OXWMqquhC76pZidvxnNdw&s",
+   "snippet": "After a long iced matcha latte kick, my brain has decided we're ready to return to coffee. Suddenly, the other day, I had a strong craving...",
+   "date": "1 day ago"
+  },
+  {
+   "position": 2,
+   "title": "Fiddleheads Coffee acquired by FairWave Collective, owners of Anodyne",
+   "link": "https://www.jsonline.com/story/money/business/2026/01/02/fiddleheads-coffee-acquired-by-fairwave-collective-owners-of-anodyne/87794098007/",
+   "source": "Milwaukee Journal Sentinel",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDW_5HSC72K4ktdQuwivnaB_VBiOpQTXOsJvB4XMw_U8cR_xfV5TxU8yW2sg&s",
+   "snippet": "FairWave Specialty Coffee Collective, which owns Anodyne Coffee Roasting Co., has acquired another Milwaukee-area coffee company.",
+   "date": "17 hours ago"
+  },
+  {
+   "position": 3,
+   "title": "Grounds for Celebration gets new owners after 30 years in Des Moines",
+   "link": "https://www.desmoinesregister.com/story/entertainment/dining/2026/01/02/coffee-des-moines-grounds-for-celebration-new-owners/87993398007/",
+   "source": "The Des Moines Register",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUaXsrygsejdC1Ny5ifAmjRah9sX74b8ldKoUtw24yfAHIEgiD8GISgLkg8A&s",
+   "snippet": "Grounds for Celebration, a Des Moines coffee icon for 30 years, has new owners committed to preserving its neighborhood charm,...",
+   "date": "20 hours ago"
+  },
+  {
+   "position": 4,
+   "title": "Super popular coffee chain closed hundreds of locations",
+   "link": "https://www.al.com/business/2025/12/super-popular-coffee-chain-closing-hundreds-of-locations.html",
+   "source": "AL.com",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDiEG_WQ8KwWCA8-kCiRK1zhDsTIIx3tDcS3NDAs91J4LDow4HSdj0LMCxjA&s",
+   "snippet": "Starbucks closed about 400 stores across the country in 2025, per media reports. The coffee chain is scaling back from its previous push to...",
+   "date": "2 days ago"
+  },
+  {
+   "position": 5,
+   "title": "Sawyer Yards cafe closes as Astro-owned Houston coffee brand pivots",
+   "link": "https://houston.culturemap.com/news/restaurants-bars/maven-coffee-sawyer-yards-slowpokes/",
+   "source": "CultureMap Houston",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY12xW_B8CfjDeRcqbFGZoY3D50P4Z2mC0i3Gj1jYoV7JVVDg20CBhuKf29g&s",
+   "snippet": "A Houston hospitality group is shifting from operating cafes to selling coffee products to as many people as possible.",
+   "date": "17 hours ago"
+  },
+  {
+   "position": 6,
+   "title": "Weekly Coffee News: Stolen Coffee in Chicagoland + Oregon Roasters Merging",
+   "link": "https://dailycoffeenews.com/2026/01/02/weekly-coffee-news-stolen-coffee-in-chicagoland-oregon-roasters-merging/",
+   "source": "Daily Coffee News by Roast Magazine",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI8bd_97yDIuOn-KBW31gTM3gd22BIyWm1efAdreIcoqqYZEU9PYUHQHQ83Q&s",
+   "snippet": "Daily Coffee News by Roast magazine provides essential only news and resources for specialty coffee professionals. Daily Coffee News covers...",
+   "date": "23 hours ago"
+  },
+  {
+   "position": 7,
+   "title": "Millions of coffee pods go to landfill. Here's what is being done about it",
+   "link": "https://www.abc.net.au/news/2026-01-03/qld-australia-coffee-pod-waste-upcycled-schemes-recycling/106149492",
+   "source": "Australian Broadcasting Corporation",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI8Rp-MFRIu-RIZWJcCmIvit18KxUQLjIHfUEci2ik5eDcDj4v37U-KZUuTQ&s",
+   "snippet": "Between 10 and 20 per cent of the 3 million coffee pods Australians consume daily are actually recycled. Here's what's being done to change...",
+   "date": "17 hours ago"
+  },
+  {
+   "position": 8,
+   "title": "New coffee shop open in Spokane Valley",
+   "link": "https://www.kxly.com/features/new-coffee-shop-open-in-spokane-valley/article_2b863544-2dd2-4300-9ae6-dda57b0da345.html",
+   "source": "KXLY.com",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNaZiF2Bl5nr3gOIjGhgwQsipg1wEz4fMKvyI_gAtj-gGggRcf_UgNxGEb3g&s",
+   "snippet": "SPOKANE VALLEY, Wash. — A new coffee shop is open in Spokane Valley. Bluebird's Cottage is half a block off Sprague Avenue on Bowdish.",
+   "date": "17 hours ago"
+  },
+  {
+   "position": 9,
+   "title": "Heroes Rise Coffee expands with second location in Great Falls",
+   "link": "https://www.krtv.com/news/great-falls-news/heroes-rise-coffee-expands-with-second-location-in-great-falls",
+   "source": "KRTV",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkYjyU6mbO7tPNrXj0Sab3Nw5LEgkJCcsfH-L_d2cY0OQHqy51iqb_DYV6cg&s",
+   "snippet": "Less than a year after opening its first location, Heroes Rise Coffee Company is expanding, this time to The Station District.",
+   "date": "14 hours ago"
+  }
+ ],
+ "top_stories": [
+  {
+   "title": "News about Caffeine",
+   "stories": [
+    {
+     "title": "How much coffee should you drink for a long, healthy life?",
+     "link": "https://www.medicalnewstoday.com/articles/roundup-coffee-and-longevity-3-studies-explore-how-coffee-may-benefit-healthy-aging",
+     "source": "Medical News Today",
+     "date": "2 days ago"
+    },
+    {
+     "title": "These three discoveries change how we understand coffee and the heart",
+     "link": "https://newatlas.com/diet-nutrition/three-huge-discoveries-coffee/",
+     "source": "New Atlas",
+     "date": "14 hours ago"
+    },
+    {
+     "title": "Science Says It’s Okay to Drink Your First Cup of Coffee Right Away",
+     "link": "https://www.inc.com/jeff-haden/science-says-its-okay-to-drink-your-first-cup-of-coffee-right-away/91283122",
+     "source": "Inc.com",
+     "date": "2 days ago"
+    }
+   ]
+  }
+ ],
+ "serpapi_pagination": {
+  "current": 1,
+  "next": "https://serpapi.com/search.json?device=desktop&engine=google_news_light&gl=us&google_domain=google.com&hl=en&q=Coffee&start=10&location=Austin%2C+TX%2C+Texas%2C+United+States"
+ }
+}

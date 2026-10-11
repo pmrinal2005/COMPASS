@@ -1,0 +1,628 @@
+{
+ "search_metadata": {
+  "id": "695926918c24bd247f1be7b0",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/10e38af379db5bd3/695926918c24bd247f1be7b0.json",
+  "created_at": "2026-01-03 14:24:17 UTC",
+  "processed_at": "2026-01-03 14:24:17 UTC",
+  "google_videos_url": "https://www.google.com/search?q=travel&hl=en&gl=us&udm=7",
+  "raw_html_file": "https://serpapi.com/searches/10e38af379db5bd3/695926918c24bd247f1be7b0.html",
+  "total_time_taken": 0.95
+ },
+ "search_parameters": {
+  "engine": "google_videos",
+  "q": "travel",
+  "google_domain": "google.com",
+  "hl": "en",
+  "gl": "us",
+  "device": "desktop"
+ },
+ "search_information": {
+  "video_results_state": "Results for exact spelling",
+  "query_displayed": "travel",
+  "total_results": 606000000,
+  "time_taken_displayed": 0.22
+ },
+ "video_results": [
+  {
+   "position": 1,
+   "title": "Top 10 Places To Visit in 2026 (Year of Travel)",
+   "link": "https://www.youtube.com/watch?v=pZ7WLQbLDn8",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfa526243429ea75d5922a227d40639e296cf77eeb07c50bb9f.jpeg",
+   "snippet": "With tourism back to normal, 2026 is going to be a year full of travel. Enjoy this travel guide featuring some of the best places to visit ...",
+   "duration": "12:42",
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "day_ago": 1
+     },
+     "extensions": [
+      "YouTube",
+      "Ryan Shirley",
+      "1 day ago"
+     ]
+    }
+   }
+  },
+  {
+   "position": 2,
+   "title": "Rick Steves' Europe - Why We Travel",
+   "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfa872c90178d1694458ccb6df2c018ef037b187c3a17ab6d9d.jpeg",
+   "snippet": "Rick Steves' Europe Travel Guide © 2020 | In times of crisis and challenge, we ask ourselves: What is the true value of travel?",
+   "duration": "26:48",
+   "key_moments": [
+    {
+     "time": "00:02",
+     "title": "Intro",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=2",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_7qh4oPidDWeDjSGp2qPaPHczU1hQZMeiSGIxid6ORg&s"
+    },
+    {
+     "time": "01:28",
+     "title": "Travel is a Mindset",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=88",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXg1HUIrN5Pmy297k53C_d0_4lf7Cj7X1vfwUZJPLCeQ&s"
+    },
+    {
+     "time": "03:14",
+     "title": "Travel is about People",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=194",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeycmVAuXAD8eN7DPj9LNTxQJT7anzqUD8R4dy4aEb9A&s"
+    },
+    {
+     "time": "04:41",
+     "title": "Travel can change our perspective",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=281",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRL56vp2DRVERfLTNlCF_LuJgRZ4ljLKcYjnvrwr6ZLA&s"
+    },
+    {
+     "time": "13:04",
+     "title": "Art Captures Triumph",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=784",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcdNdrR49HTrR5DpqHYnqfW9uLu_J3ZmDyAcnHMoxXwA&s"
+    },
+    {
+     "time": "15:02",
+     "title": "Dance is Art",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=902",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NcPgZ93ghLy1dwv1EhHJPWlGb1P5orQo4iAPVS2MZA&s"
+    },
+    {
+     "time": "16:27",
+     "title": "Cultural Chameleons",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=987",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7J_52C-nu0KRVf5o3e8Yj_NK0eARMr9J_y06kBY2oKw&s"
+    },
+    {
+     "time": "23:25",
+     "title": "Travel forces us to bend and to flex",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=1405",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmw9DW-aXsu57JvVHfjOuk4AaOQZmwcRljdhH_iKTSEg&s"
+    },
+    {
+     "time": "25:50",
+     "title": "Travel makes us more comfortable with the world",
+     "link": "https://www.youtube.com/watch?v=W9bprJ6V_4c&t=1550",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScAteCXTgOLS8CZ2OI7XhV_Ga-omyKN1Qo8ZM5blpDWQ&s"
+    }
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Apr 15, 2021"
+     },
+     "extensions": [
+      "YouTube",
+      "Rick Steves' Europe",
+      "Apr 15, 2021"
+     ]
+    }
+   }
+  },
+  {
+   "position": 3,
+   "title": "The Hardest Part of Travel (And How to Fix It)",
+   "link": "https://www.youtube.com/watch?v=lhtWhlsj90U",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfa99e26ba68713d942f81949451d7be5f3dd8880fcb4e119fb.jpeg",
+   "snippet": "With some back and forth we have a great outline of where we will go in each year and as we get closer to each year we are refining the details ...",
+   "duration": "10:29",
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Sep 28, 2025"
+     },
+     "extensions": [
+      "YouTube",
+      "Finding Gina Marie – Travel the World",
+      "Sep 28, 2025"
+     ]
+    }
+   },
+   "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSAM-1aRA2qIHAZS2pgbgY01blaa3rjVKrdTA"
+  },
+  {
+   "position": 4,
+   "title": "Top 10 Places To Visit in 2025 (Year of Travel)",
+   "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfa6f7c4d37f46169883da31cd5d47733a5b779cf602ba6c986.jpeg",
+   "snippet": "With tourism back to normal, 2025 is going to be a year full of travel. Enjoy this travel guide featuring some of the best places to visit ...",
+   "duration": "15:29",
+   "key_moments": [
+    {
+     "time": "00:00",
+     "title": "2025 Intro",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=0",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8qaur0IjVi0wma3TvECFnvjaJ8rybubIYLFAPr9_QcQ&s"
+    },
+    {
+     "time": "00:28",
+     "title": "Slovenia",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=28",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo21LAGUtjG7nCnPPWImfF2wIbhIBS_Jc9dfoRJLNuuA&s"
+    },
+    {
+     "time": "01:38",
+     "title": "Austria",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=98",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNdogSyH8YqfCmsM0pPkoMRFwh0SXJZgTb8_KHm4C3WA&s"
+    },
+    {
+     "time": "02:52",
+     "title": "Namibia",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=172",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw19x_WbeyqFpY_I9eSt8rypa5I9b8Vu6cXXqG1aSsZA&s"
+    },
+    {
+     "time": "04:43",
+     "title": "Vietnam",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=283",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5rP9jqicRpSLJeSU9hbWIj09MIupMKbl9lIAjV8WOTA&s"
+    },
+    {
+     "time": "05:47",
+     "title": "El Salvador",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=347",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnCArQ2muhpmx9y_WaGJpBqPX67tviH07mdwyXiC5lg&s"
+    },
+    {
+     "time": "06:36",
+     "title": "Lofoten Islands",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=396",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwdqRRe_qEPR5DGdefitdhIhR2bvJTsG9rLSpw6GEVAg&s"
+    },
+    {
+     "time": "07:37",
+     "title": "Greek Islands (Santorini, Milos, Zakynthos)",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=457",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIV1FFPWUPk1jdvxwy-kkME0VZ2WPdUUEpELnsVxp4sA&s"
+    },
+    {
+     "time": "09:35",
+     "title": "Mo'orea",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=575",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwnfvShyp_Bphw_8DhtChKSPHQSUIc-KYmtcTdVV-iiw&s"
+    },
+    {
+     "time": "10:45",
+     "title": "New Zealand",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=645",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo4T9gMrmojg1wk6mF9CnenviKJDF_PIcOW8_5Kq7tVA&s"
+    },
+    {
+     "time": "12:51",
+     "title": "Australia",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=771",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPuztDpAcVfo_NBmF2C4xEBy00TYQzSduKunhzJp5oSw&s"
+    },
+    {
+     "time": "15:06",
+     "title": "Outro",
+     "link": "https://www.youtube.com/watch?v=eLPVDaaQybY&vl=en&t=906",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaHq6zfV8GbroEuvPARaClI3C-YBfLaaLXFsEeTIoOXQ&s"
+    }
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Jan 1, 2025"
+     },
+     "extensions": [
+      "YouTube",
+      "Ryan Shirley",
+      "Jan 1, 2025"
+     ]
+    }
+   },
+   "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcTCPaQWLWmcCck_PqEltJzJvuKDjqPJtw_HSw"
+  },
+  {
+   "position": 5,
+   "title": "9 INSANELY Cheap Places to Travel in 2026 ($50 per day)",
+   "link": "https://www.youtube.com/watch?v=UA4zK9AdPIA",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfa7d22650d3620958278b7dd8687f97925984f2d2c9bd32153.jpeg",
+   "snippet": "10 AMAZING and Shockingly Affordable Bucket List Budget Travel Destinations for 2026. Thanks to Holafly for sponsoring this video!",
+   "duration": "16:54",
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "weeks_ago": 2
+     },
+     "extensions": [
+      "YouTube",
+      "Away Together w/ Nik and Allie",
+      "2 weeks ago"
+     ]
+    }
+   },
+   "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQXo01VV0467kNmVoYRFbI87-eaEoT6hAilig"
+  },
+  {
+   "position": 6,
+   "title": "10 Travel Tips I Wish I Learned Earlier",
+   "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfacff91c9839d2e35fc4757564ba50d726f5bbd8f8f249bb4f.jpeg",
+   "snippet": "Every Tuesday, I share a travel tip you'll actually use — like advice from a friend who travels nonstop ...",
+   "duration": "9:34",
+   "key_moments": [
+    {
+     "time": "00:00",
+     "title": "Tip #1",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=0",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJUgeTfr1NOSa_lMDSm2mhPfBU3SknhR7qeP4eCGsY5w&s"
+    },
+    {
+     "time": "00:53",
+     "title": "Tip #2",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=53",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFg_JjIubZbdJWUqHJ1NpAyylhxikxpXyFqIWLDhEt0g&s"
+    },
+    {
+     "time": "01:26",
+     "title": "Tip #3",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=86",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQckhXGWH3WW63qvBWBX2vYqxrTtvM-u2TpzpVRDJuX1w&s"
+    },
+    {
+     "time": "02:04",
+     "title": "Where to get more tips",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=124",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZd52x3depobNVs_yjBfLPXS5PcVq00pJyHZyXob1VA&s"
+    },
+    {
+     "time": "02:20",
+     "title": "Tip #4",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=140",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0tkJu-FJKV-yeK1yLIG1iuqXe3g72l5nsbPIpS0wtHQ&s"
+    },
+    {
+     "time": "02:53",
+     "title": "Tip #5",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=173",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRh-Tp3pxdGSnDjYA1E6mOA-7vFziy-9nS-4ZUESz1xw&s"
+    },
+    {
+     "time": "03:59",
+     "title": "Tip #6",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=239",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVDGc_WDTov-4X5fhDZJgndU4CdVrpojtc6mgekTBT0w&s"
+    },
+    {
+     "time": "04:32",
+     "title": "Tip #7",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=272",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0eqm93gDsWFtRVzIMTWq6o28hFfxm2ibhCmdHvjvKFw&s"
+    },
+    {
+     "time": "05:13",
+     "title": "Tip #8",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=313",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeoA16JeKDMSpIGfiQIIB5Q6yPSx1cHABd-ZqBEMPyrQ&s"
+    },
+    {
+     "time": "06:33",
+     "title": "Tip #9",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=393",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTreLoh8OukOJZyXiusqiR8owyg0CqPjxmbW1y7UpzKg&s"
+    },
+    {
+     "time": "08:01",
+     "title": "Tip #10",
+     "link": "https://www.youtube.com/watch?v=TtTUIt2wmwk&t=481",
+     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVFcOP3Sp-P8WGJ8c--DOvIocrAloTDEsKSvK_kS6HOA&s"
+    }
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Sep 28, 2024"
+     },
+     "extensions": [
+      "YouTube",
+      "Camden David",
+      "Sep 28, 2024"
+     ]
+    }
+   },
+   "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQ8BWlNrZqdY5jUHhylHVgnRzQL3ipO9vwAMQ"
+  },
+  {
+   "position": 7,
+   "title": "How To Travel the World For Cheap! (21 Money Saving Tips)",
+   "link": "https://www.youtube.com/watch?v=OBm90ArCRdo",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://serpapi.com/searches/695926918c24bd247f1be7b0/images/d600cb2aeb01cdfa96f0036671f3a1731bd582944888045a65858d1b23162e51.jpeg",
+   "snippet": "Want to travel more while spending less money?? Watch this video!! In this video, we share all the tips and tricks we learned when traveling ...",
+   "duration": "20:54",
+   "key_moments": [
+    {
+     "time": "00:00",
+     "title": "Intro",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=0"
+    },
+    {
+     "time": "01:06",
+     "title": "Flexibility",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=66"
+    },
+    {
+     "time": "01:37",
+     "title": "Time Of Year",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=97"
+    },
+    {
+     "time": "01:57",
+     "title": "Day Flexibility",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=117"
+    },
+    {
+     "time": "03:13",
+     "title": "Destination Flexibility",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=193"
+    },
+    {
+     "time": "04:35",
+     "title": "Date Flexibility",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=275"
+    },
+    {
+     "time": "05:34",
+     "title": "Flight Deal Service",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=334"
+    },
+    {
+     "time": "06:16",
+     "title": "Slow Travel",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=376"
+    },
+    {
+     "time": "06:37",
+     "title": "Walking",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=397"
+    },
+    {
+     "time": "07:08",
+     "title": "Public Transportation",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=428"
+    },
+    {
+     "time": "07:34",
+     "title": "Travel Credit Cards",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=454"
+    },
+    {
+     "time": "08:42",
+     "title": "eSIM",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=522"
+    },
+    {
+     "time": "10:00",
+     "title": "Food",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=600"
+    },
+    {
+     "time": "10:27",
+     "title": "Water",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=627"
+    },
+    {
+     "time": "11:15",
+     "title": "Meals Out",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=675"
+    },
+    {
+     "time": "11:55",
+     "title": "Street Food",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=715"
+    },
+    {
+     "time": "12:27",
+     "title": "Ask the Locals",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=747"
+    },
+    {
+     "time": "13:09",
+     "title": "Accommodations",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=789"
+    },
+    {
+     "time": "15:13",
+     "title": "Excursions",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=913"
+    },
+    {
+     "time": "15:34",
+     "title": "Free Stuff",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=934"
+    },
+    {
+     "time": "16:04",
+     "title": "Shop Local",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=964"
+    },
+    {
+     "time": "16:46",
+     "title": "Discounted Days",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=1006"
+    },
+    {
+     "time": "17:33",
+     "title": "Pack Less",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=1053"
+    },
+    {
+     "time": "17:59",
+     "title": "Group Travel",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=1079"
+    },
+    {
+     "time": "18:20",
+     "title": "Networking",
+     "link": "https://www.youtube.com/watch?v=OBm90ArCRdo&t=1100"
+    }
+   ],
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Mar 22, 2024"
+     },
+     "extensions": [
+      "YouTube",
+      "The Travel Coaches",
+      "Mar 22, 2024"
+     ]
+    }
+   }
+  },
+  {
+   "position": 8,
+   "title": "NEW Airport Rules in 2026 That Will Change How You Travel ...",
+   "link": "https://www.youtube.com/watch?v=2tPY95Lo4Zw",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0mwq-Mpn_Dm8fie3n7C-NbNd-K3KXwUrJzvxXe6E1JSEzBojzT3Om0w&s",
+   "snippet": "New airport rules in 2026 are catching travelers off guard and causing a lot of confusion at the airport. Show up with the wrong ID and you ...",
+   "duration": "12:43",
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "hours_ago": 24
+     },
+     "extensions": [
+      "YouTube",
+      "Portable Professional (Travel Tips with Megan)",
+      "24 hours ago"
+     ]
+    }
+   }
+  },
+  {
+   "position": 9,
+   "title": "We've Forgotten how to Travel",
+   "link": "https://www.youtube.com/watch?v=FjV3tkrCYIY",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY6zMF9INWkts7xpTtiZxwCvtSZfsuEppLJzfXk9foSgqz_TvIPef9sw&s",
+   "snippet": "He said he is taking more people than ever, but they are staying far fewer days in the backcountry. He said they are in a hurry to get back to ...",
+   "duration": "32:21",
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Oct 18, 2025"
+     },
+     "extensions": [
+      "YouTube",
+      "Like Stories of Old",
+      "Oct 18, 2025"
+     ]
+    }
+   },
+   "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcQ3O8Z9h51GgClyMElkVBw-QHBGZh24-HK9vA"
+  },
+  {
+   "position": 10,
+   "title": "AVOID These Brutal Travel Mistakes in 2026 (I Wish We Had)",
+   "link": "https://www.youtube.com/watch?v=bIFEczZPhnU",
+   "displayed_link": "www.youtube.com › watch",
+   "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDWPWRCsi3VuvCCiSHZAsAxcRkSR774krpozv8B3jT8EulL2SWHCShw&s",
+   "snippet": "After a decade of travel (including six months full-time on the road), we're sharing our 15 biggest travel mishaps—plus the hard-earned ...",
+   "duration": "15:53",
+   "rich_snippet": {
+    "top": {
+     "detected_extensions": {
+      "date": "Oct 25, 2025"
+     },
+     "extensions": [
+      "YouTube",
+      "Away Together w/ Nik and Allie",
+      "Oct 25, 2025"
+     ]
+    }
+   },
+   "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcSZgwmBHa_Ikv9h2FGwxhup0TYtRFEO4QRDcQ"
+  }
+ ],
+ "related_searches": [
+  {
+   "block_position": 1,
+   "query": "europe travel videos",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Europe+travel+videos&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAgbEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Europe+travel+videos"
+  },
+  {
+   "block_position": 1,
+   "query": "travel on youtube",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Travel+on+youtube&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAgfEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Travel+on+youtube"
+  },
+  {
+   "block_position": 1,
+   "query": "best travel video",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Best+travel+video&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAghEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Best+travel+video"
+  },
+  {
+   "block_position": 1,
+   "query": "travel and tourism videos",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Travel+and+tourism+videos&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAgiEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Travel+and+tourism+videos"
+  },
+  {
+   "block_position": 1,
+   "query": "how to make travel videos",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=How+to+make+travel+videos&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAggEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=How+to+make+travel+videos"
+  },
+  {
+   "block_position": 1,
+   "query": "travel lord on location",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Travel+Lord+On+Location&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAgeEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Travel+Lord+On+Location"
+  },
+  {
+   "block_position": 1,
+   "query": "youtube travel videos amazing places playlist",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Youtube+Travel+videos+Amazing+Places+Playlist&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAgdEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Youtube+Travel+videos+Amazing+Places+Playlist"
+  },
+  {
+   "block_position": 1,
+   "query": "travelogue videos",
+   "link": "https://www.google.com/search?sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&q=Travelogue+videos&sa=X&ved=2ahUKEwi3v-Omye-RAxXWQjABHS5LCa4Q1QJ6BAgcEAE",
+   "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=Travelogue+videos"
+  }
+ ],
+ "pagination": {
+  "current": 1,
+  "next": "https://www.google.com/search?q=travel&sca_esv=82729a62d7e47fe1&gl=us&udm=7&hl=en&ei=kyZZafepAdaFwbkPrpal8Ao&start=10&sa=N"
+ },
+ "serpapi_pagination": {
+  "current": 1,
+  "next_link": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=travel&start=10",
+  "next": "https://serpapi.com/search.json?device=desktop&engine=google_videos&gl=us&google_domain=google.com&hl=en&q=travel&start=10"
+ }
+}

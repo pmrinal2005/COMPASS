@@ -1,0 +1,114 @@
+{
+ "search_metadata": {
+  "id": "6959270e8c24bd247f1be7cc",
+  "status": "Success",
+  "json_endpoint": "https://serpapi.com/searches/51007f3048bc7b4a/6959270e8c24bd247f1be7cc.json",
+  "created_at": "2026-01-03 14:26:22 UTC",
+  "processed_at": "2026-01-03 14:26:22 UTC",
+  "bing_news_url": "https://www.bing.com/news/search?q=Coffee",
+  "raw_html_file": "https://serpapi.com/searches/51007f3048bc7b4a/6959270e8c24bd247f1be7cc.html",
+  "total_time_taken": 0.93
+ },
+ "search_parameters": {
+  "engine": "bing_news",
+  "q": "Coffee",
+  "device": "desktop"
+ },
+ "organic_results": [
+  {
+   "title": "Instant coffee sales are spiking — here are the best after testing 10 brands",
+   "link": "https://www.yahoo.com/lifestyle/home-garden/kitchen/article/best-instant-coffee-170135186.html",
+   "snippet": "We sipped options from Starbucks, Illy, Verve Coffee Roasters and more, and found some strong contenders for busy mornings.",
+   "source": "Yahoo",
+   "date": "21h",
+   "thumbnail": "https://th.bing.com/th?id=OVFT.Jstmx3e53ZToL_E0MkJGDy&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "These three discoveries change how we understand coffee and the heart",
+   "link": "https://newatlas.com/diet-nutrition/three-huge-discoveries-coffee/",
+   "snippet": "Coffee is one of the most widely consumed psychoactive substances on the planet, yet despite more than two billion cups being ...",
+   "source": "New Atlas",
+   "date": "13h",
+   "thumbnail": "https://th.bing.com/th?id=OVFT.g7ofPgI4uEf5fD9TsoRF4y&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Longevity: Here's how coffee may benefit healthy aging",
+   "link": "https://www.medicalnewstoday.com/articles/roundup-coffee-and-longevity-3-studies-explore-how-coffee-may-benefit-healthy-aging",
+   "snippet": "Coffee may boost longevity and lower diabetes risk according to the latest research. Here is what the evidence tells us.",
+   "source": "Medical News Today",
+   "date": "2d",
+   "thumbnail": "https://th.bing.com/th?id=OVFT.Zd60lMX1ziLrwQOnfSEJwC&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "The 4 most common types of coffee beans and how they differ",
+   "link": "https://www.msn.com/en-us/health/nutrition/the-4-most-common-types-of-coffee-beans-and-how-they-differ/ar-AA1TtGcw?ocid=BingNewsVerp",
+   "snippet": "Of the 130-plus types of coffee beans out there, only four are commonly used or commercially grown, and between those four, ...",
+   "source": "Food Republic on MSN",
+   "date": "14h",
+   "thumbnail": "https://th.bing.com/th?id=OVFT.wRLMvGs5ZEvXayp26yVCny&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "4 Reasons ‘Coffee Badging’ Is Making A Comeback In 2026",
+   "link": "https://www.forbes.com/sites/bryanrobinson/2026/01/03/4-reasons-coffee-badging-is-making-a-comeback-in-2026/",
+   "snippet": "Learn the reasons office \"coffee badging\" is making a comeback as we head into 2026 and what the future holds for this ...",
+   "source": "Forbes",
+   "date": "4h",
+   "thumbnail": "https://th.bing.com/th?id=OVFT.ee5hYUB8CUPhFc6xm0di4i&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Deadstock isn’t done with Old Town — a new sneaker-themed coffee shop is on the way",
+   "link": "https://www.msn.com/en-us/foodanddrink/foodnews/deadstock-isn-t-done-with-old-town-a-new-sneaker-themed-coffee-shop-is-on-the-way/ar-AA1TmQeu?ocid=BingNewsVerp",
+   "snippet": "The sneaker culture-inspired coffee shop announced earlier this month that it would close its original storefront by 2026.",
+   "source": "OregonLive.com on MSN",
+   "date": "2d",
+   "thumbnail": "https://th.bing.com/th?id=OVFT.tfOhH5krRPEdFiD4Hz8DAi&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Drinking Coffee Every Day Could Add Up to 2 Years to Your Life, Study Finds",
+   "link": "https://www.msn.com/en-us/health/other/scientists-find-drinking-coffee-every-day-could-add-up-to-2-years-to-your-life/ar-AA1Tsb1X?ocid=BingNewsVerp",
+   "snippet": "Researchers say the popular drink may boost longevity. Regular coffee consumption of two to three cups per day was associated ...",
+   "source": "Prevention on MSN",
+   "date": "1d",
+   "thumbnail": "https://www.bing.com/th?id=OVFT.YexOSE3K3OSV2-SWUX8rrC&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Coffee lovers with tiny kitchens are rushing to get Keurig’s new compact coffee maker while it’s on sale",
+   "link": "https://www.masslive.com/shopping-deals/2025/12/coffee-lovers-with-tiny-kitchens-are-rushing-to-get-keurigs-new-compact-coffee-maker-while-its-on-sale.html",
+   "snippet": "Keurig has introduced the K-Mini Mate Coffee Maker, marking the company’s most compact single-serve brewer to date. At just 4 ...",
+   "source": "MassLive",
+   "date": "2d",
+   "thumbnail": "https://www.bing.com/th?id=OVFT.Zs9Mi1-JzT-zCl3r9DwEYi&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Montgomery veteran launches coffee brand to pay homage to his neighborhood",
+   "link": "https://www.msn.com/en-us/money/other/montgomery-veteran-launches-coffee-brand-to-pay-homage-to-his-neighborhood/ar-AA1T8zGh?ocid=BingNewsVerp",
+   "snippet": "A Montgomery-born veteran and former firefighter has launched Southlawn Coffee Company, an online specialty-coffee start-up ...",
+   "source": "WSFA 12 News on MSN",
+   "date": "6d",
+   "thumbnail": "https://www.bing.com/th?id=OVFT.wmHItQVlZJmUhIYs3kCLoy&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Coffee pods generate thousands of tonnes of waste in Australia. Here's what is being done about it",
+   "link": "https://www.msn.com/en-au/news/brisbane/coffee-pods-generate-thousands-of-tonnes-of-waste-in-australia-here-s-what-is-being-done-about-it/ar-AA1TtnI6?ocid=BingNewsVerp",
+   "snippet": "Between 10 and 20 per cent of the 3 million coffee pods Australians consume daily are actually recycled. Here's what's being ...",
+   "source": "ABC (Australian Broadcasting Corporation) on MSN",
+   "date": "17h",
+   "thumbnail": "https://www.bing.com/th?id=OVFT.OedBoMVBOnNcpdXcvFEEeC&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  },
+  {
+   "title": "Spanish Coffee",
+   "link": "https://www.foodandwine.com/spanish-coffee-cocktail-recipe-11874789",
+   "snippet": "A showstopping Spanish Coffee recipe inspired by Portland’s Huber’s Café, combining ignited rum, citrus liqueur, Kahlúa, hot coffee, and lightly sweetened whipped cream.",
+   "source": "Food & Wine",
+   "date": "1d"
+  },
+  {
+   "title": "The 20 Best Coffee Table Books for 2026",
+   "link": "https://www.wsj.com/arts-culture/books/best-coffee-table-books-2026-gift-guide-e8ae58c0",
+   "snippet": "For those who resolve to read more in the new year.",
+   "source": "The Wall Street Journal",
+   "date": "6d",
+   "thumbnail": "https://www.bing.com/th?id=OVFT.QMYce5Ss7T_mTyefjezaTi&pid=News&w=234&h=132&c=14&rs=2&qlt=90"
+  }
+ ]
+}
