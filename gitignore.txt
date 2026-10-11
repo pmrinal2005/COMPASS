@@ -1,0 +1,41 @@
+# ---- Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.vercel
+
+# ---- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# ---- env / secrets
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ---- logs / pm2
+logs/
+*.log
+npm-debug.log*
+.pm2/
+pids/
+*.pid
+
+# ---- misc
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/launch.json
+*.tar.gz
+*.zip
+*.bak
+
+# ---- build / cache
+.next/
+.wrangler/

@@ -3,6 +3,7 @@
   "name": "LifeOps · Deal Hunter",
   "ecosystem": "A",
   "lens": "go",
+  "intent_category": "SHOPPING_AND_PRODUCTS",
   "description": "Find the best verified price for a product across Google Shopping, Amazon, Walmart and eBay; watch for drops.",
   "keywords": [
     "buy",

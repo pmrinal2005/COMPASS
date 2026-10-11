@@ -1,0 +1,133 @@
+{
+  "id": "finance_markets",
+  "name": "Markets Desk · Finance & Stock Brief",
+  "ecosystem": "A",
+  "lens": "go",
+  "intent_category": "FINANCE_AND_MARKETS",
+  "description": "Brief a stock, index or market: live quote and summary from Google Finance, the market movers and index overview from Google Finance Markets, and the related headlines from Google News.",
+  "keywords": [
+    "stock",
+    "stocks",
+    "share",
+    "shares",
+    "market",
+    "markets",
+    "nasdaq",
+    "nyse",
+    "sensex",
+    "nifty",
+    "index",
+    "etf",
+    "ticker",
+    "crypto",
+    "bitcoin",
+    "forex",
+    "currency",
+    "exchange rate",
+    "price of",
+    "earnings",
+    "dividend",
+    "ipo",
+    "invest",
+    "investing",
+    "portfolio",
+    "price",
+    "quote",
+    "shares price",
+    "stock price"
+  ],
+  "examples": [
+    "Apple stock price today",
+    "how are the markets doing in india",
+    "Tesla shares news"
+  ],
+  "slots": {
+    "ticker": {
+      "type": "text",
+      "default": "GOOGL:NASDAQ"
+    },
+    "market": {
+      "type": "country",
+      "default": "us"
+    }
+  },
+  "engines": [
+    {
+      "engine": "google_finance",
+      "category": "finance",
+      "purpose": "Live quote, price change and summary for the instrument",
+      "params": {
+        "q": "{ticker}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_finance_markets",
+      "category": "finance",
+      "purpose": "Market overview: movers and indexes for the region",
+      "essential": false,
+      "params": {
+        "trend": "indexes",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_news",
+      "category": "news",
+      "purpose": "Headlines explaining the move (corroborates the price signal)",
+      "essential": false,
+      "params": {
+        "q": "{ticker} stock",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "fallback_engines": [
+    {
+      "engine": "google_finance",
+      "category": "finance",
+      "purpose": "Re-plan: quote from the second listing venue",
+      "params": {
+        "q": "{ticker}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_finance_markets",
+      "category": "finance",
+      "purpose": "Re-plan: most-active movers",
+      "params": {
+        "trend": "most-active",
+        "hl": "en"
+      }
+    }
+  ],
+  "dimensions": {
+    "price": {
+      "weight": 0.3,
+      "direction": "min",
+      "label": "Price"
+    },
+    "momentum": {
+      "weight": 0.25,
+      "direction": "max",
+      "label": "Price change"
+    },
+    "coverage": {
+      "weight": 0.25,
+      "direction": "max",
+      "label": "Corroboration (news + quote)"
+    },
+    "risk": {
+      "weight": 0.2,
+      "direction": "min",
+      "label": "Risk (volatility / unverified)"
+    }
+  },
+  "actions": [
+    "document",
+    "watch",
+    "notify"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "id": "travel_explore",
+  "name": "Travel Explorer · Flights & Hotels Discovery",
+  "ecosystem": "A",
+  "lens": "go",
+  "intent_category": "TRAVEL_AND_ACCOMMODATION",
+  "description": "Discover where to fly and stay: Google Flights for the route, Google Travel Explore for cheap destinations from your airport, and Google Hotels for accommodation at the chosen destination.",
+  "keywords": [
+    "flight",
+    "flights",
+    "fly",
+    "airfare",
+    "airline",
+    "airlines",
+    "ticket",
+    "tickets",
+    "hotel",
+    "hotels",
+    "stay",
+    "resort",
+    "resorts",
+    "airbnb",
+    "destination",
+    "destinations",
+    "explore",
+    "cheap flights",
+    "getaway",
+    "vacation",
+    "holiday"
+  ],
+  "examples": [
+    "flights from Delhi to NYC",
+    "where can I fly cheaply from Austin this winter",
+    "Bali resorts for 2 adults"
+  ],
+  "slots": {
+    "origin": {
+      "type": "city",
+      "default": "New York"
+    },
+    "destination": {
+      "type": "city",
+      "default": "Bali"
+    },
+    "days": {
+      "type": "int",
+      "default": 5
+    },
+    "adults": {
+      "type": "int",
+      "default": 2
+    }
+  },
+  "engines": [
+    {
+      "engine": "google_flights",
+      "category": "flight",
+      "purpose": "Round-trip fares for the route (best + other flights, price insights)",
+      "params": {
+        "departure_id": "{origin_iata}",
+        "arrival_id": "{destination_iata}",
+        "outbound_date": "{outbound_date}",
+        "return_date": "{return_date}",
+        "currency": "USD",
+        "hl": "en",
+        "adults": "{adults}",
+        "type": "1"
+      }
+    },
+    {
+      "engine": "google_travel_explore",
+      "category": "destination",
+      "purpose": "Cheapest destinations reachable from the origin (price discovery)",
+      "essential": false,
+      "params": {
+        "departure_id": "{origin_iata}",
+        "gl": "us",
+        "hl": "en",
+        "currency": "USD"
+      }
+    },
+    {
+      "engine": "google_hotels",
+      "category": "hotel",
+      "purpose": "Stays at the destination for the same dates",
+      "essential": false,
+      "params": {
+        "q": "{destination} resorts",
+        "gl": "us",
+        "hl": "en",
+        "currency": "USD",
+        "check_in_date": "{outbound_date}",
+        "check_out_date": "{return_date}",
+        "adults": "{adults}"
+      }
+    }
+  ],
+  "fallback_engines": [
+    {
+      "engine": "google_flights",
+      "category": "flight",
+      "purpose": "Re-plan: same route sorted by price (independent corroboration pass)",
+      "params": {
+        "departure_id": "{origin_iata}",
+        "arrival_id": "{destination_iata}",
+        "outbound_date": "{outbound_date_flex}",
+        "return_date": "{return_date_flex}",
+        "currency": "USD",
+        "hl": "en",
+        "adults": "{adults}",
+        "type": "1",
+        "sort_by": "2"
+      }
+    },
+    {
+      "engine": "google_hotels",
+      "category": "hotel",
+      "purpose": "Re-plan: stays restricted to 4+ rated properties",
+      "params": {
+        "q": "{destination} resorts",
+        "gl": "us",
+        "hl": "en",
+        "currency": "USD",
+        "check_in_date": "{outbound_date_flex}",
+        "check_out_date": "{return_date_flex}",
+        "adults": "{adults}",
+        "rating": "8"
+      }
+    }
+  ],
+  "dimensions": {
+    "price": {
+      "weight": 0.35,
+      "direction": "min",
+      "label": "Price"
+    },
+    "time": {
+      "weight": 0.2,
+      "direction": "min",
+      "label": "Travel time"
+    },
+    "reputation": {
+      "weight": 0.25,
+      "direction": "max",
+      "label": "Reputation"
+    },
+    "risk": {
+      "weight": 0.2,
+      "direction": "min",
+      "label": "Risk"
+    }
+  },
+  "actions": [
+    "booking_flow",
+    "calendar_invite",
+    "watch",
+    "document",
+    "notify"
+  ]
+}

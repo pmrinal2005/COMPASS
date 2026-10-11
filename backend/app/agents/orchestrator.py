@@ -33,9 +33,39 @@ async def _pb_vectors() -> dict[str, list[float]]:
     return _PB_VECS
 
 
+# ---------------------------------------------------------------- intent routing
+# Intent confidence below this value never routes to a specialised (e.g. local-discovery) playbook:
+# the prompt is handled by GENERAL_SEARCH instead (Google Search + Google News).
+INTENT_CONFIDENCE_FLOOR = 0.50
+GENERAL_FALLBACK = "general_search"
+COSINE_FLOOR, COSINE_CEIL = 0.15, 0.50       # cosine below the floor carries no semantic evidence
+
+
+def intent_category(pid: str) -> str:
+    """Taxonomy bucket of a playbook (NEWS_AND_TRENDS, MEDIA_AND_ENTERTAINMENT, LOCAL_DISCOVERY, ...)."""
+    return PLAYBOOKS[pid].get("intent_category", "GENERAL_SEARCH")
+
+
+def _intent_confidence(top: dict, runner_up: dict | None) -> float:
+    """Normalized confidence in [0, 1] that the TOP playbook really matches the prompt.
+
+    Built from *evidence*, not from the blended ranking score: a playbook gets credit only for
+    keyword hits (strong, explicit signal) and for cosine similarity above the noise floor.
+    The margin over the runner-up is a third, weaker signal. A prompt with no keyword hit and
+    weak cosine (e.g. "latest news in india" matching local discovery at 0.14) scores near 0."""
+    # one explicit, playbook-specific keyword is a clear signal (e.g. "flights", "prior art");
+    # two or more are conclusive. Stop-word-like hits were removed from the playbook lists instead.
+    kw = 0.0 if top["keyword_hits"] == 0 else (0.75 if top["keyword_hits"] == 1 else 1.0)
+    sem = max(0.0, min(1.0, (top["cosine"] - COSINE_FLOOR) / (COSINE_CEIL - COSINE_FLOOR)))
+    gap = top["score"] - (runner_up["score"] if runner_up else 0.0)
+    margin = max(0.0, min(1.0, gap / 0.25))
+    return round(0.6 * kw + 0.25 * sem + 0.15 * margin, 4)
+
+
 async def classify(prompt: str, lens: str, forced: str | None = None) -> tuple[str, list[dict]]:
     if forced and forced in PLAYBOOKS:
-        return forced, [{"id": forced, "score": 1.0, "name": PLAYBOOKS[forced]["name"]}]
+        return forced, [{"id": forced, "score": 1.0, "name": PLAYBOOKS[forced]["name"],
+                         "intent_category": intent_category(forced), "confidence": 1.0, "routed_by": "forced"}]
     qv = (await embedder.embed([prompt], task="RETRIEVAL_QUERY"))[0]
     vecs = await _pb_vectors()
     # Supabase pgvector similarity (match_playbooks RPC) when available, else in-process cosine
@@ -48,9 +78,24 @@ async def classify(prompt: str, lens: str, forced: str | None = None) -> tuple[s
         kw = sum(1 for k in pb["keywords"] if (k in words if " " not in k else k in pl))
         lens_bias = 0.08 if pb["lens"] == lens else 0.0
         scores.append({"id": pid, "name": pb["name"], "score": round(cos * 0.5 + min(kw, 5) * 0.16 + lens_bias, 4),
-                       "cosine": round(cos, 4), "keyword_hits": kw, "vector_backend": "pgvector" if remote else "local"})
-    scores.sort(key=lambda x: -x["score"])
-    return scores[0]["id"], scores
+                       "cosine": round(cos, 4), "keyword_hits": kw, "vector_backend": "pgvector" if remote else "local",
+                       "intent_category": intent_category(pid)})
+    # The GENERAL_SEARCH fallback is a route, not a competitor: it is excluded from the ranking
+    # so it can never be mis-ranked above a real playbook.
+    scores = [s for s in scores if s["id"] != GENERAL_FALLBACK] + [s for s in scores if s["id"] == GENERAL_FALLBACK]
+    ranked = sorted([s for s in scores if s["id"] != GENERAL_FALLBACK], key=lambda x: -x["score"])
+    top = ranked[0]
+    conf = _intent_confidence(top, ranked[1] if len(ranked) > 1 else None)
+    for s in ranked:
+        s["confidence"] = conf if s is top else round(_intent_confidence(s, None), 4)
+    if conf < INTENT_CONFIDENCE_FLOOR:
+        # low confidence -> GENERAL_SEARCH, never a guessed local-discovery route
+        gen = next(s for s in scores if s["id"] == GENERAL_FALLBACK)
+        gen.update({"score": 0.0, "confidence": conf, "routed_by": "confidence_floor",
+                    "reason": f"confidence {conf:.2f} < {INTENT_CONFIDENCE_FLOOR:.2f}; closest playbook was {top['id']}"})
+        return GENERAL_FALLBACK, [gen] + ranked
+    top["routed_by"] = "classifier"
+    return top["id"], ranked
 
 
 _NUM_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
@@ -199,7 +244,7 @@ async def fill_slots(pid: str, prompt: str, session_id: str) -> dict[str, Any]:
 async def _derive(pid: str, slots: dict[str, Any], session_id: str = "", meter: CreditMeter | None = None) -> dict[str, Any]:
     d = dict(slots)
     today = datetime.utcnow().date()
-    if pid == "lifeops_trip":
+    if pid in ("lifeops_trip", "travel_explore"):
         # offline table first; unknown cities resolved via SerpApi google_flights_autocomplete (live mode)
         d["origin_iata"], _ = await resolve(slots.get("origin"), session_id, meter)
         d["destination_iata"], d["currency_code"] = await resolve(slots.get("destination"), session_id, meter)
@@ -210,6 +255,11 @@ async def _derive(pid: str, slots: dict[str, Any], session_id: str = "", meter: 
         d["outbound_date_flex"] = (out + timedelta(days=2)).isoformat()
         d["return_date_flex"] = (out + timedelta(days=days + 2)).isoformat()
         d["nights"] = days
+    if pid in ("news_trends", "media_video", "finance_markets", "general_search"):
+        # market-scoped vertical playbooks: country from the slot (default us), with the Trends geo code
+        mk = str(slots.get("market") or "us").lower()
+        d["gl"], d["hl"] = mk, "en"
+        d["geo"] = mk.upper()
     if pid in ("lifeops_local", "research_seo"):
         gl = country_for(slots.get("city")) if pid == "lifeops_local" else str(slots.get("market") or "us").lower()
         d["gl"], d["hl"] = gl, "en"
@@ -236,12 +286,33 @@ def _render(params: dict[str, Any], vars_: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0) -> list[EngineCall]:
+# Dynamic API selection -------------------------------------------------------
+# Optional engines only run when the prompt asks for them (trigger flags derived from the prompt),
+# and every playbook is capped so a single prompt can never fan out to the whole catalogue.
+MAX_CALLS_PER_PLAYBOOK = 4
+_TRIGGER_RE = {
+    "wants_trending": re.compile(r"\b(trend|trends|trending|viral|popular|buzz|momentum|interest)\b", re.I),
+    "wants_light": re.compile(r"\b(quick|fast|light|brief|summary|overview)\b", re.I),
+}
+
+
+def triggers_for(prompt: str) -> dict[str, bool]:
+    """Boolean intent flags read from the raw prompt (used by optional_engines[].when)."""
+    return {name: bool(rx.search(prompt or "")) for name, rx in _TRIGGER_RE.items()}
+
+
+def build_calls(pid: str, vars_: dict[str, Any], fallback_round: int = 0, triggers: dict[str, bool] | None = None) -> list[EngineCall]:
     pb = PLAYBOOKS[pid]
     specs = pb["engines"] if fallback_round == 0 else pb.get("fallback_engines", [])
     if fallback_round > 1:  # second re-plan widens to all fallbacks + essentials again (fresh)
         specs = pb.get("fallback_engines", [])[::-1]
     specs = [sp for sp in specs if not sp.get("when") or vars_.get(sp["when"])]   # e.g. Yelp only where it operates
+    if fallback_round == 0 and pb.get("optional_engines"):
+        # optional engines are added only when the prompt's triggers ask for them (dynamic selection)
+        flags = {**(triggers or {}), **{k: v for k, v in vars_.items() if isinstance(v, bool)}}
+        extra = [sp for sp in pb["optional_engines"] if flags.get(sp.get("when", ""), False)]
+        specs = specs + extra
+    specs = specs[:MAX_CALLS_PER_PLAYBOOK] if fallback_round == 0 else specs
     return [EngineCall(engine=sp["engine"], params=_render(sp["params"], vars_), purpose=sp.get("purpose", ""),
                        category=sp.get("category", "generic"), essential=sp.get("essential", True)) for sp in specs]
 
@@ -262,7 +333,15 @@ async def plan(prompt: str, lens: str, session_id: str, forced: str | None = Non
                 weights[k] = max(0.0, float(v))
         tot = sum(weights.values()) or 1
         weights = {k: round(v / tot, 4) for k, v in weights.items()}
-    calls = build_calls(pid, vars_)
+    triggers = triggers_for(prompt)
+    calls = build_calls(pid, vars_, triggers=triggers)
+    skipped = [sp["engine"] for sp in pb.get("optional_engines", [])
+               if not triggers.get(sp.get("when", ""), False)]
+    bus.publish(session_id, "orchestrator.routing", {
+        "intent_category": PLAYBOOKS[pid].get("intent_category", "GENERAL_SEARCH"), "playbook_id": pid,
+        "routed_by": (scores[0] or {}).get("routed_by"), "reason": (scores[0] or {}).get("reason"),
+        "triggers": triggers, "engines": [c.engine for c in calls], "skipped_optional": skipped,
+        "calls": len(calls), "max_calls": MAX_CALLS_PER_PLAYBOOK}, agent="orchestrator")
 
     nodes: list[DecisionNode] = []
     for k, v in slots.items():

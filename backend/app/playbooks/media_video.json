@@ -1,0 +1,39 @@
+{
+  "id": "media_video",
+  "name": "Media Desk · Songs, Videos & Entertainment",
+  "ecosystem": "B",
+  "lens": "go",
+  "intent_category": "MEDIA_AND_ENTERTAINMENT",
+  "description": "Find what is popular in music, video and entertainment: YouTube search, short-form video and video results from Google, cross-checked on views and recency.",
+  "keywords": ["song", "songs", "music", "track", "tracks", "playlist", "album", "albums", "video", "videos", "youtube", "clip", "clips", "shorts", "short videos", "reels", "tiktok", "movie", "movies", "trailer", "trailers", "show", "series", "entertainment", "podcast", "podcasts", "channel", "watch", "viral", "trending songs", "hit songs"],
+  "examples": ["trending songs in india", "best new music this week", "funny cat videos"],
+  "slots": {
+    "topic": {"type": "text", "default": "trending songs"},
+    "market": {"type": "country", "default": "us"}
+  },
+  "engines": [
+    {"engine": "youtube", "category": "media", "purpose": "YouTube search results (views, channel, length, publish recency)",
+     "params": {"search_query": "{topic}", "gl": "{gl}", "hl": "en"}},
+    {"engine": "google_short_videos", "category": "media", "purpose": "Short-form video results (Shorts / Reels style) for the same topic",
+     "essential": false, "params": {"q": "{topic}", "gl": "{gl}", "hl": "en"}},
+    {"engine": "google_videos", "category": "media", "purpose": "Google Videos aggregator (cross-platform corroboration)", "essential": false,
+     "params": {"q": "{topic}", "gl": "{gl}", "hl": "en"}}
+  ],
+  "optional_engines": [
+    {"engine": "google_trends", "category": "trend", "purpose": "Search-interest momentum for the topic", "when": "wants_trending", "essential": false,
+     "params": {"q": "{topic}", "geo": "{geo}", "data_type": "TIMESERIES", "date": "now 7-d", "hl": "en"}}
+  ],
+  "fallback_engines": [
+    {"engine": "youtube", "category": "media", "purpose": "Re-plan: YouTube sorted to the most recent uploads",
+     "params": {"search_query": "{topic} this week", "gl": "{gl}", "hl": "en"}},
+    {"engine": "google_videos", "category": "media", "purpose": "Re-plan: Google Videos, page 2",
+     "params": {"q": "{topic}", "gl": "{gl}", "hl": "en", "start": "10"}}
+  ],
+  "dimensions": {
+    "popularity": {"weight": 0.35, "direction": "max", "label": "Views / popularity"},
+    "freshness": {"weight": 0.25, "direction": "max", "label": "Freshness (publish recency)"},
+    "relevance": {"weight": 0.25, "direction": "max", "label": "Topic relevance"},
+    "risk": {"weight": 0.15, "direction": "min", "label": "Risk (single-source / unverified)"}
+  },
+  "actions": ["document", "watch", "notify"]
+}

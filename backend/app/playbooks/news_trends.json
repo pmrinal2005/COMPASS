@@ -1,0 +1,155 @@
+{
+  "id": "news_trends",
+  "name": "Newsroom · News & Trends Brief",
+  "ecosystem": "B",
+  "lens": "go",
+  "intent_category": "NEWS_AND_TRENDS",
+  "description": "Brief the latest news and what is trending on a topic: live headlines from Google News, the wider web from Google Search, and search-interest momentum from Google Trends. Sources are corroborated across independent publishers.",
+  "keywords": [
+    "news",
+    "headline",
+    "headlines",
+    "latest",
+    "breaking",
+    "trending",
+    "trend",
+    "trends",
+    "today",
+    "update",
+    "updates",
+    "happening",
+    "viral",
+    "current",
+    "report",
+    "reports",
+    "story",
+    "stories",
+    "top stories"
+  ],
+  "examples": [
+    "latest news in india",
+    "what's trending in the US today",
+    "top headlines about AI regulation"
+  ],
+  "slots": {
+    "topic": {
+      "type": "text",
+      "default": "world news"
+    },
+    "market": {
+      "type": "country",
+      "default": "us"
+    }
+  },
+  "engines": [
+    {
+      "engine": "google_news",
+      "category": "news",
+      "purpose": "Live headlines from publishers (Top stories, per-publisher grouping)",
+      "params": {
+        "q": "{topic}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google",
+      "category": "serp",
+      "purpose": "Wider web coverage of the same topic (independent corroboration)",
+      "essential": false,
+      "params": {
+        "q": "{topic} news",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "optional_engines": [
+    {
+      "engine": "google_trends",
+      "category": "trend",
+      "purpose": "Search-interest momentum over the last 7 days",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "geo": "{geo}",
+        "data_type": "TIMESERIES",
+        "date": "now 7-d",
+        "hl": "en"
+      },
+      "when": "wants_trending"
+    },
+    {
+      "engine": "google_trends_trending_now",
+      "category": "trend",
+      "purpose": "What is trending right now in the market (Google Trends Trending Now)",
+      "when": "wants_trending",
+      "essential": false,
+      "params": {
+        "geo": "{geo}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_news_light",
+      "category": "news",
+      "purpose": "Lightweight headline sweep (cheap cross-check of Google News)",
+      "when": "wants_light",
+      "essential": false,
+      "params": {
+        "q": "{topic}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "fallback_engines": [
+    {
+      "engine": "google_news",
+      "category": "news",
+      "purpose": "Re-plan: same topic restricted to the last hour of coverage",
+      "params": {
+        "q": "{topic} when:1h",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google",
+      "category": "serp",
+      "purpose": "Re-plan: Bing-style fallback web sweep",
+      "params": {
+        "q": "{topic} latest news",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "dimensions": {
+    "freshness": {
+      "weight": 0.35,
+      "direction": "max",
+      "label": "Freshness (recency of coverage)"
+    },
+    "coverage": {
+      "weight": 0.3,
+      "direction": "max",
+      "label": "Independent publishers"
+    },
+    "momentum": {
+      "weight": 0.2,
+      "direction": "max",
+      "label": "Search-interest momentum"
+    },
+    "risk": {
+      "weight": 0.15,
+      "direction": "min",
+      "label": "Risk (single-source / unverified)"
+    }
+  },
+  "actions": [
+    "document",
+    "watch",
+    "notify"
+  ]
+}

@@ -3,6 +3,7 @@
   "name": "Research & IP Fabric · Prior-Art Brief",
   "ecosystem": "C",
   "lens": "pro",
+  "intent_category": "RESEARCH_AND_IP",
   "description": "Prior-art and landscape scan across Scholar, Patents and News; ranked evidence brief with citations.",
   "keywords": [
     "patent",

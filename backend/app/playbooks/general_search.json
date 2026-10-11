@@ -1,0 +1,120 @@
+{
+  "id": "general_search",
+  "name": "General Search · Web & News Overview",
+  "ecosystem": "B",
+  "lens": "go",
+  "intent_category": "GENERAL_SEARCH",
+  "description": "Fallback for any prompt that does not clearly match a specialised domain: a general web search (Google Search) corroborated by Google News. Used whenever the intent classifier's confidence is below 0.50, instead of guessing a local-discovery route.",
+  "keywords": [
+    "what",
+    "who",
+    "why",
+    "how",
+    "explain",
+    "define",
+    "meaning",
+    "facts",
+    "overview",
+    "background"
+  ],
+  "examples": [
+    "what is quantum computing",
+    "who won the last world cup",
+    "explain inflation simply"
+  ],
+  "slots": {
+    "query": {
+      "type": "text",
+      "default": "latest news"
+    },
+    "market": {
+      "type": "country",
+      "default": "us"
+    }
+  },
+  "engines": [
+    {
+      "engine": "google",
+      "category": "serp",
+      "purpose": "General web search (organic results + answer box)",
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    },
+    {
+      "engine": "google_news",
+      "category": "news",
+      "purpose": "Related news coverage (corroboration of the web results)",
+      "essential": false,
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "optional_engines": [
+    {
+      "engine": "google_light",
+      "category": "serp",
+      "purpose": "Fast compact web sweep (cheap second query path)",
+      "when": "wants_light",
+      "essential": false,
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en"
+      }
+    }
+  ],
+  "fallback_engines": [
+    {
+      "engine": "google",
+      "category": "serp",
+      "purpose": "Re-plan: second page of web results",
+      "params": {
+        "q": "{query}",
+        "gl": "{gl}",
+        "hl": "en",
+        "start": "10"
+      }
+    },
+    {
+      "engine": "bing",
+      "category": "serp",
+      "purpose": "Re-plan: Bing as an independent web index",
+      "params": {
+        "q": "{query}",
+        "cc": "{gl}"
+      }
+    }
+  ],
+  "dimensions": {
+    "relevance": {
+      "weight": 0.4,
+      "direction": "max",
+      "label": "Relevance"
+    },
+    "coverage": {
+      "weight": 0.3,
+      "direction": "max",
+      "label": "Independent sources"
+    },
+    "freshness": {
+      "weight": 0.15,
+      "direction": "max",
+      "label": "Freshness"
+    },
+    "risk": {
+      "weight": 0.15,
+      "direction": "min",
+      "label": "Risk (single-source)"
+    }
+  },
+  "actions": [
+    "document",
+    "notify"
+  ]
+}

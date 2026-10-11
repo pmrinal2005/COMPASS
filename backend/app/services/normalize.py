@@ -205,7 +205,7 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
         if aio.get("text_blocks"):
             ctx["ai_overview_text"] = " ".join(b.get("snippet", "") for b in aio["text_blocks"] if b.get("snippet"))[:600]
 
-    elif engine in ("bing", "duckduckgo", "yahoo", "yandex", "baidu", "naver"):
+    elif engine in ("bing", "duckduckgo", "yahoo", "yandex", "baidu", "naver", "google_light"):   # google_light: same organic_results shape
         for r in _serp_rows(engine, data, params)[:20]:
             out.append(Candidate(title=r["title"], category="serp", engine=engine, source=r["domain"], url=r["link"],
                                  attributes={"position": r["position"], "domain": r["domain"], "snippet": r["snippet"]}))
@@ -328,6 +328,93 @@ def normalize(engine: str, data: dict, category: str, params: dict | None = None
             vals = pt.get("values") or [{}]
             series.append(_num(vals[0].get("extracted_value")) or 0)
         ctx["trend"] = series
+
+    # ------------------------------------------------ news / trends / media (vertical playbooks)
+    elif engine == "google_trends_trending_now":
+        # docs: trending_searches[] -> query, search_volume, increase_percentage, categories[], active
+        rows = [t for t in (data.get("trending_searches") or []) if isinstance(t, dict) and t.get("query")]
+        for t in rows[:25]:
+            out.append(Candidate(
+                title=str(t["query"]).title(), category="trend", engine=engine, source="Google Trends",
+                url=t.get("serpapi_google_trends_link") or None, price=None,
+                attributes={"search_volume": int(_num(t.get("search_volume")) or 0),
+                            "increase_pct": _num(t.get("increase_percentage")) or 0.0,
+                            "active": bool(t.get("active")),
+                            "categories": [c.get("name") for c in (t.get("categories") or []) if isinstance(c, dict)][:3],
+                            "related": (t.get("trend_breakdown") or [])[:4], "match_key": "trend:" + str(t["query"]).lower()}))
+        ctx["trending_now"] = [c.title for c in out][:10]
+
+    elif engine == "google_news_light":
+        # same article shape as google_news (documented `news_results`, flat source/date fields)
+        for i, n in enumerate((data.get("news_results") or [])[:12]):
+            if not isinstance(n, dict) or not n.get("title"):
+                continue
+            src = n.get("source")
+            src_name = (src.get("name") if isinstance(src, dict) else src) or ""
+            out.append(Candidate(title=n["title"], category="news", engine=engine, source=str(src_name), url=n.get("link"),
+                                 attributes={"date": n.get("date"), "age_days": _days_ago(n.get("date")), "snippet": n.get("snippet", "")}))
+
+    elif engine in ("google_videos", "google_short_videos", "youtube"):
+        # docs: google_videos -> video_results[]; google_short_videos -> short_video_results[]; youtube -> video_results[] (+ shorts_results[])
+        rows: list[dict] = []
+        if engine == "google_short_videos":
+            rows = data.get("short_video_results") or []
+        elif engine == "youtube":
+            rows = (data.get("video_results") or []) + [it for s in (data.get("shorts_results") or []) for it in (s.get("shorts") or [])]
+        else:
+            rows = data.get("video_results") or []
+        for i, v in enumerate(rows[:20]):
+            if not isinstance(v, dict) or not v.get("title"):
+                continue
+            ch = v.get("channel")
+            # google_videos documents the channel and age inside rich_snippet.top.extensions (e.g. ['YouTube', 'Ryan Shirley', '1 day ago'])
+            ext = (((v.get("rich_snippet") or {}).get("top") or {}).get("extensions") or []) if isinstance(v.get("rich_snippet"), dict) else []
+            channel = (ch.get("name") if isinstance(ch, dict) else ch) or v.get("source") or (ext[1] if len(ext) > 1 else "") or ""
+            views = _num(v.get("views"))
+            published = v.get("published_date") or v.get("date") or (ext[2] if len(ext) > 2 else None)
+            out.append(Candidate(title=v["title"], category="media", engine=engine, source=str(channel),
+                                 url=v.get("link"), rating=None,
+                                 attributes={"views": int(views) if views is not None else None, "length": v.get("length") or v.get("duration"),
+                                             "published": published, "age_days": _days_ago(published) if published else None,
+                                             "verified": bool(ch.get("verified")) if isinstance(ch, dict) else False,
+                                             "position": v.get("position_on_page") or v.get("position") or i + 1,
+                                             "video_id": v.get("video_id"), "match_key": "video:" + str(v.get("video_id") or v["title"].lower())[:60]}))
+
+    elif engine == "google_finance_markets":
+        # docs: markets{ us|europe|asia|crypto|currencies|futures : [ {name, stock, price, price_movement{percentage,value,movement}} ] }
+        mk = data.get("markets") or {}
+        movers = []
+        for region, items in (mk.items() if isinstance(mk, dict) else []):
+            for it in (items if isinstance(items, list) else [])[:5]:
+                if not isinstance(it, dict) or not it.get("name"):
+                    continue
+                pm = it.get("price_movement") or {}
+                pct = _num(pm.get("percentage"))
+                movers.append({"region": region, "name": it["name"], "stock": it.get("stock"), "price": _num(it.get("price")),
+                               "change_pct": round(pct, 3) if pct is not None else None,   # verified: percentage is already in % (0.717 = +0.717%)
+                               "movement": pm.get("movement")})
+        ctx["markets"] = movers
+        for m in movers:
+            out.append(Candidate(title=m["name"], category="index", engine=engine, source=m["region"], price=m["price"],
+                                 attributes={"change_pct": m["change_pct"], "movement": m["movement"], "stock": m["stock"],
+                                             "region": m["region"], "match_key": "index:" + str(m["stock"] or m["name"]).lower()}))
+
+    elif engine == "google_travel_explore":
+        # docs: destinations[] -> name, destination_airport{code}, flight_price, hotel_price (totals), flight_duration (min), number_of_stops, airline
+        for d in (data.get("destinations") or [])[:30]:
+            if not isinstance(d, dict) or not d.get("name"):
+                continue
+            fp = _num(d.get("flight_price"))
+            hp = _num(d.get("hotel_price"))
+            if fp is None:
+                continue
+            out.append(Candidate(title=d["name"], category="destination", engine=engine, source=d.get("airline") or "",
+                                 url=d.get("link"), price=fp, duration_min=_num(d.get("flight_duration")),
+                                 attributes={"country": d.get("country"), "airport": (d.get("destination_airport") or {}).get("code"),
+                                             "hotel_price": hp, "stops": int(d.get("number_of_stops") or 0),
+                                             "start_date": d.get("start_date"), "end_date": d.get("end_date"),
+                                             "airline_code": d.get("airline_code"), "gps": d.get("gps_coordinates"),
+                                             "match_key": "dest:" + str((d.get("destination_airport") or {}).get("code") or d["name"]).lower()}))
 
     elif engine == "google_scholar":
         for it in data.get("organic_results", []) or []:

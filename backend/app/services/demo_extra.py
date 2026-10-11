@@ -360,6 +360,10 @@ def airbnb(p: dict) -> dict:
 
 def demo_extra(engine: str, p: dict, drift_r: random.Random | None) -> dict | None:
     """Return a payload for an engine handled here, else None."""
+    from .demo_vertical import vertical_demo          # vertical engines (news / media / finance / travel explore)
+    vd = vertical_demo(engine, p, drift_r)
+    if vd is not None:
+        return vd
     if engine == "google" and is_events_query(_q(p, "q")):
         return events(p, drift_r)                        # events_results block of the Google Search API (google_events is deprecated)
     if engine in ("bing", "duckduckgo", "yahoo", "yandex", "baidu", "naver"):
