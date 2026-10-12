@@ -51,6 +51,24 @@ IMAGE_RE = re.compile(r"\b(image|images|picture|pictures|photo|photos|pic|pics|w
 APP_RE_KIND = re.compile(r"\b(apps?|play\s*store|app\s*store|apk|ios|android|download)\b", re.I)
 NEWS_RE_KIND = re.compile(r"\b(news|headlines?|breaking|update|updates|happening|report|reports|story|stories|bulletin|press)\b", re.I)
 
+# --- domain disambiguation (fixes the "ticket fares for trip" -> shopping bug) ---
+TRAVEL_WORDS_RE = re.compile(
+    r"\b(flight|flights|fly|flying|airfare|airline|airlines|airport|airports|"
+    r"hotel|hotels|resort|resorts|airbnb|stay\b|destination|destinations|"
+    r"trip|trips|travel|travelling|traveling|journey|vacation|holiday|getaway|getaways|"
+    r"fare|fares|train|trains|railway|rail|bus|buses|coach|transit|transport|"
+    r"itinerary|layover|stopover|nonstop|non-stop|departure|arrival|booking)\b", re.I)
+PRODUCT_WORDS_RE = re.compile(
+    r"\b(buy|order|purchase|laptop|headphones?|phone|tv|camera|shoes|shirt|dress|"
+    r"electronics|refurbished|bluetooth|usb|hdmi|ssd|gpu|cpu|shipping|deliver(?:y|ed))\b", re.I)
+# Destination hint — requires a travel-motion word nearby. Plain "in <country>"
+# (market context like "news in india") must NOT match as a travel destination.
+TO_DEST_RE = re.compile(
+    r"\b(?:trip|travel(?:ling|ing)?|journey|fly(?:ing)?|go(?:ing)?|headed|heading|visit(?:ing)?|tour(?:ing)?|way)\s+(?:to\s+)?"
+    r"(?:the\s+)?([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){0,2})"
+    r"|\bto\s+(?:the\s+)?([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){0,2})"
+    r"(?=\s*(?:$|[,.!?]|\s+(?:on|at|by|for|from|in|with|under|budget|trip|travel|fare|ticket|hotel)))", re.I)
+
 
 @dataclass
 class PromptAnalysis:
@@ -68,6 +86,8 @@ class PromptAnalysis:
     wants_deals: bool = False           # cheap/deals/discount -> deals engines
     wants_images: bool = False          # image/picture/photo -> image engines
     travel_origin: str | None = None    # explicit trip origin ("from NYC", "JFK to LHR")
+    is_travel_context: bool = False     # true when travel words dominate (deals -> flights_deals, not shopping)
+    is_product_context: bool = False    # true when product words dominate
 
     def as_dict(self) -> dict[str, Any]:
         return {k: v for k, v in self.__dict__.items()}
@@ -163,6 +183,12 @@ def analyze_prompt(prompt: str, playbook_id: str | None = None) -> PromptAnalysi
     pl = prompt.lower()
     market, market_text = extract_market(prompt)
     entity, entity_kind = extract_entity(prompt, playbook_id)
+    # Domain context — resolves "ticket fares trip to X at minimal budget, best deals"
+    is_travel = bool(TRAVEL_WORDS_RE.search(prompt)) or bool(TO_DEST_RE.search(prompt))
+    is_product = bool(PRODUCT_WORDS_RE.search(prompt))
+    # "deals/budget/cheap" is context-sensitive: in travel it means flight_deals (good),
+    # NOT shopping — so suppress shopping interpretation when travel words co-occur.
+    deal_words_present = bool(re.search(r"\b(cheap|cheapest|deal|deals|discount|discounts|sale|offer|offers|budget|minimal|lowest|affordable)\b", pl))
     a = PromptAnalysis(
         recency=bool(RECENCY_RE.search(prompt)),
         fresh_strong=bool(STRONG_FRESH_RE.search(prompt)),
@@ -173,9 +199,11 @@ def analyze_prompt(prompt: str, playbook_id: str | None = None) -> PromptAnalysi
         wants_light=bool(re.search(r"\b(quick|fast|light|brief|summary|overview|tl;dr)\b", pl)),
         wants_trending=bool(re.search(r"\b(trend|trends|trending|viral|popular|buzz|momentum|interest)\b", pl)),
         wants_shorts=bool(re.search(r"\b(shorts|reels?|tiktok|short[\s-]?form|short\s+videos?)\b", pl)),
-        wants_deals=bool(re.search(r"\b(cheap|cheapest|deal|deals|discount|discounts|sale|offer|offers|budget)\b", pl)),
+        wants_deals=deal_words_present,
         wants_images=bool(IMAGE_RE.search(prompt)),
         travel_origin=extract_travel_origin(prompt),
+        is_travel_context=is_travel and not (is_product and not is_travel),
+        is_product_context=is_product and not is_travel,
     )
     return a
 

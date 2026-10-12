@@ -13,6 +13,7 @@ from typing import Any
 
 from ..models import DecisionGraph, DecisionNode, EngineCall
 from ..playbooks import PLAYBOOKS, playbook_text
+from ..services.api_selector import KNOWN_ENGINES, select_apis
 from ..services.events import bus
 from ..services.geo import YELP_COUNTRIES, country_for, resolve
 from ..services.intent import TICKER_MAP, PromptAnalysis, analyze_prompt, route_with_llm
@@ -80,16 +81,29 @@ def _intent_confidence(top: dict, runner_up: dict | None, analysis: PromptAnalys
 
 
 # Priors: per-playbook score adjustments applied BEFORE the confidence floor.
-# LOCAL_DISCOVERY is the historical misroute magnet (the bug report's "Latest Recipe" match):
-# without an explicit venue/food marker it is penalized so generic prompts fall through to
-# GENERAL_SEARCH instead of guessing a restaurant route.
+# LOCAL_DISCOVERY is the historical misroute magnet; without an explicit venue/food
+# marker it is penalized so generic prompts fall through to GENERAL_SEARCH.
+# SHOPPING is penalized heavily when travel-context words co-occur with deal words —
+# this fixes the "ticket fares for trip to Odisha ... best deals" misroute.
 def _prior(pid: str, strong_hits: int, analysis: PromptAnalysis) -> float:
     if pid == "lifeops_local" and strong_hits == 0:
         return -0.20
     # an explicit trip origin ("from NYC", "JFK to LHR") is flight intent even when the
     # wording is vague ("cheap weekend getaways from NYC") — boost past the confidence floor
-    if pid == "travel_explore" and analysis.travel_origin:
+    if pid in ("travel_explore", "lifeops_trip") and analysis.travel_origin:
         return 0.15
+    # travel context detected and no product words: boost travel playbooks, PENALIZE shopping
+    if analysis.is_travel_context:
+        if pid in ("travel_explore", "lifeops_trip"):
+            return 0.25
+        if pid in ("lifeops_deals", "pro_supplier"):
+            return -0.55
+    # product words only (no travel): small boost to shopping, minor penalty to travel
+    if analysis.is_product_context:
+        if pid in ("lifeops_deals", "pro_supplier"):
+            return 0.15
+        if pid in ("travel_explore", "lifeops_trip"):
+            return -0.25
     return 0.0
 
 
@@ -256,7 +270,7 @@ def _heuristic_slots(pid: str, prompt: str, analysis: PromptAnalysis | None = No
     if money:
         v = float(money.group(1).replace(",", ""))
         slots["budget"] = v * 1000 if money.group(2) else v
-    if pid == "lifeops_trip":
+    if pid in ("lifeops_trip", "travel_explore"):
         d = re.search(r"(\d+)[\s-]*(?:day|night)", pl)
         if d:
             slots["days"] = int(d.group(1))
@@ -265,15 +279,33 @@ def _heuristic_slots(pid: str, prompt: str, analysis: PromptAnalysis | None = No
                 if re.search(rf"\b{w}[\s-]*(?:day|night)", pl) or (w == "weekend" and "weekend" in pl) or (w == "a week" and "a week" in pl):
                     slots["days"] = n
                     break
-        frm = re.search(r"\bfrom\s+([a-z][a-z .]+?)(?:\s+(?:to|under|for|in|on|with|,)|$)", pl)
-        to = re.search(r"\b(?:to|in|visit|trip to)\s+([a-z][a-z .]+?)(?:\s+(?:from|under|for|on|with|trip|,)|[,.]|$)", pl)
+        frm = re.search(r"\bfrom\s+([a-z][a-z .]+?)(?:\s+(?:to|under|for|on|with|,)|$)", pl)
+        # Match "to <place>", "visit(ing) <place>", "trip/travel/journey to <place>".
+        # Strip the motion verb (trip/travel/flight/etc.) so we get clean "Odisha", not "trip to odisha".
+        # Deliberately excludes plain "in <country>" which is a market signal ("news in india").
+        to = re.search(
+            r"\b(?:trip\s+to|travel(?:ling)?\s+to|journey\s+to|go(?:ing)?\s+to|fly(?:ing)?\s+to|"
+            r"headed\s+to|heading\s+to|flight\s+to|visit(?:ing)?\s+|to\s+|for\s+)"
+            r"([a-z][a-z .]+?)"
+            r"(?=\s+(?:from|under|for|on|with|at|by|via|fare|ticket|hotel|flight|so|find|best|cheap|budget|minimal|deals?)|"
+            r"[,.?!]|$)", pl)
         dest_hint = re.search(r"(?:\d+[\s-]*day\s+)([a-z][a-z ]+?)\s+trip", pl)
         if frm:
             slots["origin"] = frm.group(1).strip().title()
         if dest_hint:
             slots["destination"] = dest_hint.group(1).strip().title()
         elif to:
-            slots["destination"] = to.group(1).strip().title()
+            dest_name = to.group(1).strip().strip(".,!?")
+            # strip leading motion/filler words that the regex may have captured
+            dest_name = re.sub(
+                r"^(?:trip\s+to|travel(?:ling)?\s+to|journey\s+to|go(?:ing)?\s+to|fly(?:ing)?\s+to|"
+                r"flight\s+to|headed\s+to|heading\s+to|visit(?:ing)?\s+|to\s+|for\s+)+",
+                "", dest_name, flags=re.I).strip()
+            # filter out common false-positives
+            bad = {"the", "a", "an", "find", "get", "go", "see", "me", "best", "deal", "deals",
+                   "cheap", "budget", "minimal", "lowest"}
+            if dest_name.lower() not in bad and len(dest_name) >= 2:
+                slots["destination"] = dest_name.title()
         a = re.search(r"(\d+)\s*(?:adults|people|travel+ers|persons)", pl)
         if a:
             slots["adults"] = int(a.group(1))
@@ -377,8 +409,20 @@ async def _derive(pid: str, slots: dict[str, Any], session_id: str = "", meter: 
             d["price_cap"] = int(slots.get("price_cap") or 4)
     if pid == "career_jobs":
         d["role_keyword"] = " ".join(str(slots.get("role", "")).split()[-2:]) or "developer"
+    if pid in ("travel_explore",):
+        mk = str(slots.get("market") or "us").lower()
+        d.setdefault("gl", mk)
+        d.setdefault("hl", "en")
     if pid == "research_ip":
         d["recent_year"] = today.year - 3
+    # Provide a generic "query" default so injected google/google_light engines always work
+    if "query" not in d:
+        d["query"] = slots.get("query") or slots.get("topic") or slots.get("product") or \
+                     slots.get("destination") or slots.get("role") or ""
+    if "gl" not in d:
+        d["gl"] = str(slots.get("market") or "us").lower()
+    if "hl" not in d:
+        d["hl"] = "en"
     return d
 
 
@@ -471,14 +515,164 @@ def apply_recency_weights(pid: str, weights: dict[str, float], analysis: PromptA
                    "reason": "recency override (fresh_strong)" if analysis.fresh_strong else "recency override"}
 
 
+# Map api_selector engines to a default playbook (used to cross-route when the
+# classifier picks the wrong playbook but the API selector strongly disagrees).
+_ENGINE_TO_PLAYBOOK: dict[str, str] = {
+    # travel
+    "google_flights": "travel_explore", "google_flights_deals": "travel_explore",
+    "google_hotels": "travel_explore", "google_travel_explore": "travel_explore",
+    "airbnb": "lifeops_trip",
+    # shopping
+    "google_shopping": "lifeops_deals", "google_shopping_light": "lifeops_deals",
+    "amazon": "lifeops_deals", "walmart": "lifeops_deals", "ebay": "lifeops_deals",
+    "home_depot": "pro_supplier",
+    # news/trends
+    "google_news": "news_trends", "google_news_light": "news_trends",
+    "google_trends": "news_trends", "google_trends_trending_now": "news_trends",
+    "bing_news": "news_trends", "duckduckgo_news": "news_trends",
+    # media
+    "youtube": "media_video", "youtube_channel": "media_video",
+    "google_videos": "media_video", "google_short_videos": "media_video",
+    "bing_videos": "media_video", "yahoo_videos": "media_video",
+    "google_images": "media_images",
+    # local
+    "google_maps": "lifeops_local", "yelp": "lifeops_local", "tripadvisor": "lifeops_local",
+    # finance
+    "google_finance": "finance_markets", "google_finance_markets": "finance_markets",
+    # apps/scholar/patents
+    "google_play": "apps_store", "apple_app_store": "apps_store",
+    "google_scholar": "research_ip", "google_patents": "research_ip",
+    # jobs/events
+    "google_jobs": "career_jobs", "google_events": "lifeops_local",
+    # generic
+    "google": "general_search", "google_light": "general_search",
+    "google_ai_mode": "research_seo", "bing": "general_search",
+    "duckduckgo": "general_search", "yahoo": "general_search",
+}
+
+# Default param templates for engines injected by the API selector that aren't
+# already in the chosen playbook's engine list. Keeps cross-category injection safe.
+_EXTRA_ENGINE_TEMPLATES: dict[str, dict[str, Any]] = {
+    "google_flights": {"engine": "google_flights", "category": "flight",
+                        "purpose": "API selector: round-trip fares (cross-verify)",
+                        "params": {"departure_id": "{origin_iata}", "arrival_id": "{destination_iata}",
+                                   "outbound_date": "{outbound_date}", "return_date": "{return_date}",
+                                   "currency": "USD", "hl": "en", "adults": "{adults}", "type": "1"}},
+    "google_flights_deals": {"engine": "google_flights_deals", "category": "destination",
+                              "purpose": "API selector: discounted fares from origin",
+                              "essential": False,
+                              "params": {"departure_id": "{origin_iata}", "gl": "{gl}", "hl": "en",
+                                         "currency": "USD"}},
+    "google_hotels": {"engine": "google_hotels", "category": "hotel",
+                       "purpose": "API selector: stays at destination",
+                       "essential": False,
+                       "params": {"q": "{destination} hotels", "gl": "{gl}", "hl": "en",
+                                  "currency": "USD", "check_in_date": "{outbound_date}",
+                                  "check_out_date": "{return_date}", "adults": "{adults}"}},
+    "google_travel_explore": {"engine": "google_travel_explore", "category": "destination",
+                               "purpose": "API selector: cheap destinations from origin",
+                               "essential": False,
+                               "params": {"departure_id": "{origin_iata}", "gl": "{gl}", "hl": "en",
+                                          "currency": "USD"}},
+    "airbnb": {"engine": "airbnb", "category": "stay",
+                "purpose": "API selector: alternative stays", "essential": False,
+                "params": {"q": "{destination}", "check_in_date": "{outbound_date}",
+                           "check_out_date": "{return_date}", "adults": "{adults}", "currency": "USD"}},
+    "google_maps": {"engine": "google_maps", "category": "place",
+                     "purpose": "API selector: local context at destination", "essential": False,
+                     "params": {"q": "hotels in {destination}", "type": "search", "hl": "en"}},
+    "google": {"engine": "google", "category": "web",
+                "purpose": "API selector: general web cross-check", "essential": False,
+                "params": {"q": "{query}", "hl": "en", "gl": "{gl}"}},
+    "google_light": {"engine": "google_light", "category": "web",
+                      "purpose": "API selector: fast web overview", "essential": False,
+                      "params": {"q": "{query}", "hl": "en", "gl": "{gl}"}},
+}
+
+
+def _augment_calls(pid: str, calls: list[EngineCall], vars_: dict[str, Any],
+                   api_selection: dict | None, analysis: PromptAnalysis,
+                   triggers: dict[str, bool]) -> list[EngineCall]:
+    """Inject engines requested by the API selector that the playbook missed."""
+    if not api_selection:
+        return calls
+    selected = api_selection.get("engines") or []
+    if not selected:
+        return calls     # selector deferred to playbook defaults; nothing to inject
+    already = {c.engine for c in calls}
+    desired = [e for e in selected if e in KNOWN_ENGINES and e not in already]
+    pb = PLAYBOOKS[pid]
+    # Build a quick lookup of param specs in the playbook
+    specs_by_engine = {sp["engine"]: sp for sp in pb.get("engines", []) + pb.get("optional_engines", [])
+                       if not sp.get("when") or triggers.get(sp.get("when", ""), False)}
+    added = 0
+    cap = call_cap(pid) + 2  # allow a couple extra cross-category calls, but stay bounded
+    for engine in desired:
+        if len(calls) >= cap:
+            break
+        sp = specs_by_engine.get(engine) or _EXTRA_ENGINE_TEMPLATES.get(engine)
+        if not sp:
+            continue
+        # Render params safely — fill missing vars with empty string
+        params = _render({**sp.get("params", {})}, vars_)
+        calls.append(EngineCall(engine=engine, params=params,
+                                purpose=sp.get("purpose", f"API selector: {engine}"),
+                                category=sp.get("category", "generic"),
+                                essential=sp.get("essential", False),
+                                fresh=False, follow=sp.get("follow")))
+        added += 1
+    return calls
+
+
 async def plan(prompt: str, lens: str, session_id: str, forced: str | None = None,
                priorities: dict[str, float] | None = None, meter: CreditMeter | None = None) -> DecisionGraph:
     bus.publish(session_id, "agent.start", {"agent": "orchestrator", "label": "Classifying intent"}, agent="orchestrator")
+
+    # ---------- Stage 0: API selector (Groq/Gemini) runs FIRST ----------
+    # Returns the exact SerpApi engines the prompt needs, possibly across categories.
+    # This is the primary defence against the "ticket fares for trip..." misroute bug.
+    api_sel = await select_apis(prompt, session_id=session_id)
+    api_sel_dict = api_sel.as_dict()
+    bus.publish(session_id, "orchestrator.api_select", api_sel_dict, agent="orchestrator")
+
     pid, scores = await classify(prompt, lens, forced)
+
+    # Cross-route override: switch playbook only if the classifier's chosen playbook
+    # contains NONE of the selected engines AND another playbook clearly dominates.
+    # This keeps e.g. lifeops_trip (which uses google_flights + google_hotels + airbnb + ...)
+    # from being demoted to travel_explore just because most selected engines are flight-shaped.
+    if not forced and api_sel.engines and api_sel.routed_by != "playbook_default":
+        pid_engines_set = {sp["engine"] for sp in PLAYBOOKS[pid].get("engines", [])} | \
+                          {sp["engine"] for sp in PLAYBOOKS[pid].get("optional_engines", [])} | \
+                          {sp["engine"] for sp in PLAYBOOKS[pid].get("fallback_engines", [])}
+        current_overlap = len(set(api_sel.engines) & pid_engines_set)
+        votes: dict[str, int] = {}
+        for e in api_sel.engines:
+            pb_vote = _ENGINE_TO_PLAYBOOK.get(e)
+            if pb_vote:
+                votes[pb_vote] = votes.get(pb_vote, 0) + 1
+        if votes and api_sel.confidence >= 0.6:
+            voted_pid = max(votes, key=votes.get)
+            # Only override when the current playbook has ZERO overlap with selected engines
+            # (meaning the classifier picked the wrong category entirely)
+            if current_overlap == 0 and voted_pid != pid and voted_pid in PLAYBOOKS and votes[voted_pid] >= 2:
+                # strong cross-route signal from the API selector
+                pid = voted_pid
+                for s in scores:
+                    s["api_selector_override"] = (voted_pid != s["id"])
+                bus.publish(session_id, "orchestrator.reroute",
+                            {"from": scores[0]["id"] if scores else None, "to": pid,
+                             "reason": api_sel.reason, "confidence": api_sel.confidence},
+                            agent="orchestrator")
+
     bus.publish(session_id, "orchestrator.intent", {"playbook_id": pid, "playbook": PLAYBOOKS[pid]["name"],
                                                      "scores": scores[:5]}, agent="orchestrator")
-    top = scores[0] or {}
+    top = next((s for s in scores if s["id"] == pid), scores[0] or {})
     analysis = PromptAnalysis(**(top.get("analysis") or {})) if top.get("analysis") else analyze_prompt(prompt)
+    # make sure the analysis has the new fields if it came from a pre-fix score dict
+    if not hasattr(analysis, "is_travel_context"):
+        analysis.is_travel_context = False
+        analysis.is_product_context = False
     slots = await fill_slots(pid, prompt, session_id, analysis)
     vars_ = await _derive(pid, slots, session_id, meter)
     pb = PLAYBOOKS[pid]
@@ -492,17 +686,20 @@ async def plan(prompt: str, lens: str, session_id: str, forced: str | None = Non
         weights = {k: round(v / tot, 4) for k, v in weights.items()}
     triggers = triggers_for(prompt, analysis)
     calls = build_calls(pid, vars_, triggers=triggers, analysis=analysis)
+    # Augment calls with any cross-category engines the API selector asked for
+    calls = _augment_calls(pid, calls, vars_, api_sel_dict, analysis, triggers)
     skipped = [sp["engine"] for sp in pb.get("optional_engines", [])
                if not triggers.get(sp.get("when", ""), False)]
     bus.publish(session_id, "orchestrator.routing", {
         "intent_category": PLAYBOOKS[pid].get("intent_category", "GENERAL_SEARCH"), "playbook_id": pid,
         "playbook": pb["name"], "routed_by": top.get("routed_by"), "reason": top.get("reason"),
         "confidence": top.get("confidence"), "strong_hits": top.get("strong_hits"), "weak_hits": top.get("keyword_hits"),
-        "llm_router": top.get("llm_router"), "analysis": analysis.as_dict(),
+        "llm_router": top.get("llm_router"), "api_selector": api_sel_dict,
+        "analysis": analysis.as_dict(),
         "triggers": triggers, "engines": [c.engine for c in calls],
         "fresh": [c.engine for c in calls if c.fresh], "skipped_optional": skipped,
         "weight_override": recency_override, "weights": weights,
-        "calls": len(calls), "max_calls": call_cap(pid)}, agent="orchestrator")
+        "calls": len(calls), "max_calls": call_cap(pid) + 2}, agent="orchestrator")
 
     nodes: list[DecisionNode] = []
     for k, v in slots.items():

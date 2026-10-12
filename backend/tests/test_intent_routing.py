@@ -64,6 +64,13 @@ def test_new_vertical_playbooks_exist_with_expected_categories():
     ("show me pictures of the Eiffel Tower", "media_images"),
     ("best meditation apps", "apps_store"),
     ("photo editor app for android vs iphone", "apps_store"),
+    # --- BUG REPORT REGRESSIONS: travel-context keywords with deals/budget MUST NOT route to shopping ---
+    ("ticket fares for trip to Odisha at minimal budget so find the best deals", "travel_explore"),
+    ("cheap train tickets to Mumbai", "travel_explore"),
+    ("best deals on flights to Bali", "travel_explore"),
+    ("budget bus tickets from Delhi to Jaipur", "travel_explore"),
+    ("cheapest fares for journey to Kerala", "travel_explore"),
+    ("affordable flight tickets for Goa trip", "travel_explore"),
 ])
 def test_routing_acceptance(prompt, expected):
     pid, scores = _classify(prompt)

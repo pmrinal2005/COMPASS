@@ -13,6 +13,9 @@ CITIES: dict[str, tuple[str, str]] = {
     "toronto": ("YYZ", "CAD"), "vancouver": ("YVR", "CAD"), "mexico city": ("MEX", "MXN"), "cancun": ("CUN", "MXN"),
     "bangkok": ("BKK", "THB"), "singapore": ("SIN", "SGD"), "bali": ("DPS", "IDR"), "dubai": ("DXB", "AED"),
     "sydney": ("SYD", "AUD"), "delhi": ("DEL", "INR"), "mumbai": ("BOM", "INR"), "bangalore": ("BLR", "INR"),
+    "kolkata": ("CCU", "INR"), "chennai": ("MAA", "INR"), "hyderabad": ("HYD", "INR"), "goa": ("GOI", "INR"),
+    "bhubaneswar": ("BBI", "INR"), "odisha": ("BBI", "INR"), "kochi": ("COK", "INR"), "kerala": ("COK", "INR"),
+    "jaipur": ("JAI", "INR"), "pune": ("PNQ", "INR"), "ahmedabad": ("AMD", "INR"),
     "hong kong": ("HKG", "HKD"), "istanbul": ("IST", "TRY"), "reykjavik": ("KEF", "ISK"),
 }
 
