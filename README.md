@@ -21,8 +21,7 @@
 
 <br/>
 
-**🌐 Frontend** · [`compass-rosy.vercel.app`](https://compass-rosy.vercel.app/)
-**🔧 Backend** · [`compass-api-w9dp.onrender.com`](https://compass-api-w9dp.onrender.com)
+**🌐 Frontend** · [`compassbymrinal.vercel.app`](https://compassbymrinal.vercel.app/)
 **📦 Repository** · [`github.com/pmrinal2005/COMPASS`](https://github.com/pmrinal2005/COMPASS)
 
 ---
