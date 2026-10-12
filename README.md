@@ -22,6 +22,7 @@
 <br/>
 
 **🌐 Frontend** · [`compassbymrinal.vercel.app`](https://compassbymrinal.vercel.app/)
+
 **📦 Repository** · [`github.com/pmrinal2005/COMPASS`](https://github.com/pmrinal2005/COMPASS)
 
 ---
