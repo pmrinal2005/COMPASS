@@ -493,7 +493,7 @@ Specifically engineered to run on free tiers with minimal resource consumption.
 
 ### 🚀 Getting Started
 
-1. **Open the Vercel link** — [`compass-rosy.vercel.app`](https://compass-rosy.vercel.app/) — no login needed, sample prompt chips are preloaded.
+1. **Open the Vercel link** — [`compassbymrinal.vercel.app`](https://compassbymrinal.vercel.app/) — no login needed, sample prompt chips are preloaded.
 2. **Toggle lenses** — Switch between **Go · casual** and **Pro · enterprise**, or **Split-screen** to run both on one backend.
 3. **Try a sample prompt** — Click a chip, e.g. *"Plan a 4-day Tokyo trip under $1,200, flights + hotel"*.
 4. **Watch the pipeline** — See the thought-tree, SerpApi log, heatmap, and matrix update in real-time.
@@ -655,7 +655,7 @@ npx tsc --noEmit && npm run lint && npm run build   # all clean
 | **UI verification** | ✅ | Exercised in headless browser in both live-backend and offline modes with zero console errors |
 | **Demo Mode** | ✅ | Works offline with pre-recorded real sessions including disruption testing |
 | **Public repository** | ✅ | [`github.com/pmrinal2005/COMPASS`](https://github.com/pmrinal2005/COMPASS) |
-| **Public deployment** | ✅ | [`compass-rosy.vercel.app`](https://compass-rosy.vercel.app/) — no authentication required |
+| **Public deployment** | ✅ | [`compassbymrinal.vercel.app`](https://compassbymrinal.vercel.app/) — no authentication required |
 | **Last updated** | ✅ | 2026-10-11 |
 
 </div>
