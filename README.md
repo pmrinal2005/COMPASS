@@ -21,7 +21,9 @@
 
 <br/>
 
-**🌐 Frontend** · [`compassbymrinal.vercel.app`](https://compassbymrinal.vercel.app/)
+**🌐 Live Project:** · [`compassbymrinal.vercel.app`](https://compassbymrinal.vercel.app/)
+
+Note: Once the dashboard opens, please wait up to 1 minute for the backend to load and also fetch your live SerpApi credits balance.
 
 **📦 Repository** · [`github.com/pmrinal2005/COMPASS`](https://github.com/pmrinal2005/COMPASS)
 
